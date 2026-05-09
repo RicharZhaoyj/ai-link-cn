@@ -323,11 +323,12 @@
         
         <div class="pricing-container">
             <!-- 免费版 -->
-            <div class="pricing-card">
+            <div class="pricing-card popular">
+                <div class="popular-badge">当前可用</div>
                 <div class="plan-header">
                     <div class="plan-name">免费版</div>
                     <div class="plan-price">¥0 <span>/月</span></div>
-                    <div class="plan-description">体验基础功能</div>
+                    <div class="plan-description">完整功能体验</div>
                 </div>
                 
                 <div class="features">
@@ -348,29 +349,28 @@
                         <span class="feature-text">基础技术指标</span>
                     </div>
                     <div class="feature-item">
-                        <span class="feature-icon">✗</span>
-                        <span class="feature-text unavailable">实时数据</span>
+                        <span class="feature-icon">✓</span>
+                        <span class="feature-text">实时数据预览</span>
                     </div>
                     <div class="feature-item">
-                        <span class="feature-icon">✗</span>
-                        <span class="feature-text unavailable">高级分析</span>
+                        <span class="feature-icon">✓</span>
+                        <span class="feature-text">基础分析功能</span>
                     </div>
                     <div class="feature-item">
-                        <span class="feature-icon">✗</span>
-                        <span class="feature-text unavailable">投资组合优化</span>
+                        <span class="feature-icon">✓</span>
+                        <span class="feature-text">投资组合演示</span>
                     </div>
                 </div>
                 
-                <a href="/auth.html" class="cta-button btn-secondary">免费开始</a>
+                <a href="/auth.html" class="cta-button btn-primary">立即开始</a>
             </div>
             
-            <!-- 专业版（推荐） -->
-            <div class="pricing-card popular">
-                <div class="popular-badge">最受欢迎</div>
+            <!-- 专业版（即将推出） -->
+            <div class="pricing-card">
                 <div class="plan-header">
                     <div class="plan-name">专业版</div>
-                    <div class="plan-price">¥99 <span>/月</span></div>
-                    <div class="plan-description">适合活跃的个人投资者</div>
+                    <div class="plan-price">即将推出</div>
+                    <div class="plan-description">高级功能预览</div>
                 </div>
                 
                 <div class="features">
@@ -399,55 +399,21 @@
                         <span class="feature-text">API访问权限</span>
                     </div>
                     <div class="feature-item">
-                        <span class="feature-icon">✗</span>
-                        <span class="feature-text unavailable">自定义算法策略</span>
+                        <span class="feature-icon">✓</span>
+                        <span class="feature-text">数据导出功能</span>
                     </div>
                 </div>
                 
-                <a href="#" class="cta-button btn-primary" onclick="showPaymentModal('pro')">立即订阅</a>
+                <a href="javascript:void(0)" class="cta-button btn-secondary" onclick="showComingSoonModal()">敬请期待</a>
             </div>
-            
-            <!-- 商业版 -->
-            <div class="pricing-card">
-                <div class="plan-header">
-                    <div class="plan-name">商业版</div>
-                    <div class="plan-price">¥999 <span>/月</span></div>
-                    <div class="plan-description">适合机构和企业用户</div>
-                </div>
-                
-                <div class="features">
-                    <div class="feature-item">
-                        <span class="feature-icon">✓</span>
-                        <span class="feature-text">无限API调用</span>
-                    </div>
-                    <div class="feature-item">
-                        <span class="feature-icon">✓</span>
-                        <span class="feature-text">毫秒级实时数据</span>
-                    </div>
-                    <div class="feature-item">
-                        <span class="feature-icon">✓</span>
-                        <span class="feature-text">自定义算法策略</span>
-                    </div>
-                    <div class="feature-item">
-                        <span class="feature-icon">✓</span>
-                        <span class="feature-text">白标解决方案</span>
-                    </div>
-                    <div class="feature-item">
-                        <span class="feature-icon">✓</span>
-                        <span class="feature-text">优先技术支持</span>
-                    </div>
-                    <div class="feature-item">
-                        <span class="feature-icon">✓</span>
-                        <span class="feature-text">私有部署选项</span>
-                    </div>
-                    <div class="feature-item">
-                        <span class="feature-icon">✓</span>
-                        <span class="feature-text">专属客户经理</span>
-                    </div>
-                </div>
-                
-                <a href="#" class="cta-button btn-primary" onclick="showPaymentModal('business')">联系销售</a>
-            </div>
+        </div>
+        
+        <div style="text-align: center; margin: 3rem 0; padding: 2rem; background: rgba(102, 126, 234, 0.1); border-radius: 10px;">
+            <h3 style="color: var(--primary); margin-bottom: 1rem;">🚧 支付功能正在开发中</h3>
+            <p style="color: #666; max-width: 800px; margin: 0 auto;">
+                目前我们提供完整的免费版功能供您体验。专业版和企业版功能正在完善中，支付系统也在同步开发。
+                您可以先注册免费账户，体验所有基础功能。待支付系统上线后，我们会第一时间通知您。
+            </p>
         </div>
         
         <!-- 功能对比表 -->
@@ -458,82 +424,74 @@
                     <tr>
                         <th class="feature-cell">功能</th>
                         <th class="plan-cell">免费版</th>
-                        <th class="plan-cell">专业版</th>
-                        <th class="plan-cell">商业版</th>
+                        <th class="plan-cell">专业版<br><small>(即将推出)</small></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>API调用次数/日</td>
-                        <td class="plan-cell">10</td>
-                        <td class="plan-cell">1000</td>
-                        <td class="plan-cell">无限</td>
+                        <td class="plan-cell">10次</td>
+                        <td class="plan-cell">1000次</td>
                     </tr>
                     <tr>
                         <td>数据延迟</td>
                         <td class="plan-cell">15分钟</td>
                         <td class="plan-cell">&lt;1分钟</td>
-                        <td class="plan-cell">毫秒级</td>
                     </tr>
                     <tr>
                         <td>实时数据</td>
-                        <td class="plan-cell unavailable">✗</td>
-                        <td class="plan-cell available">✓</td>
-                        <td class="plan-cell available">✓</td>
+                        <td class="plan-cell available">✓ 预览版</td>
+                        <td class="plan-cell available">✓ 完整版</td>
                     </tr>
                     <tr>
                         <td>历史数据范围</td>
                         <td class="plan-cell">30天</td>
                         <td class="plan-cell">1年</td>
-                        <td class="plan-cell">10年+</td>
                     </tr>
                     <tr>
                         <td>技术指标</td>
                         <td class="plan-cell">基础5种</td>
                         <td class="plan-cell">高级20+种</td>
-                        <td class="plan-cell">全部50+种</td>
                     </tr>
                     <tr>
                         <td>投资组合优化</td>
-                        <td class="plan-cell unavailable">✗</td>
-                        <td class="plan-cell available">✓</td>
-                        <td class="plan-cell available">✓</td>
+                        <td class="plan-cell available">✓ 演示版</td>
+                        <td class="plan-cell available">✓ 完整版</td>
                     </tr>
                     <tr>
                         <td>市场警报</td>
                         <td class="plan-cell unavailable">✗</td>
                         <td class="plan-cell available">✓</td>
-                        <td class="plan-cell available">✓</td>
                     </tr>
                     <tr>
                         <td>API访问</td>
+                        <td class="plan-cell available">✓ 基础</td>
+                        <td class="plan-cell available">✓ 完整</td>
+                    </tr>
+                    <tr>
+                        <td>数据导出</td>
                         <td class="plan-cell unavailable">✗</td>
-                        <td class="plan-cell available">✓</td>
                         <td class="plan-cell available">✓</td>
                     </tr>
                     <tr>
                         <td>自定义策略</td>
                         <td class="plan-cell unavailable">✗</td>
                         <td class="plan-cell unavailable">✗</td>
-                        <td class="plan-cell available">✓</td>
                     </tr>
                     <tr>
                         <td>白标解决方案</td>
                         <td class="plan-cell unavailable">✗</td>
                         <td class="plan-cell unavailable">✗</td>
-                        <td class="plan-cell available">✓</td>
                     </tr>
                     <tr>
                         <td>技术支持</td>
                         <td class="plan-cell">社区支持</td>
                         <td class="plan-cell">邮件支持</td>
-                        <td class="plan-cell">专属客户经理</td>
                     </tr>
                     <tr>
                         <td>SLA保证</td>
-                        <td class="plan-cell unavailable">✗</td>
+                        <td class="plan-cell">无</td>
                         <td class="plan-cell">99%</td>
-                        <td class="plan-cell">99.9%</td>
                     </tr>
                 </tbody>
             </table>
@@ -558,25 +516,27 @@
             
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFAQ(this)">
-                    支持哪些支付方式？
+                    何时可以付费订阅？
                     <span class="faq-toggle">+</span>
                 </div>
                 <div class="faq-answer" style="display: none;">
-                    目前支持：<br>
-                    - 支付宝<br>
-                    - 微信支付<br>
-                    - 银行转账（企业用户）<br>
-                    国际支付正在开发中
+                    我们正在积极开发支付系统和高级功能，预计在1-2个月内推出付费订阅。
+                    在此期间，您可以免费使用所有基础功能。支付系统上线后，我们会通过邮件通知所有注册用户。
                 </div>
             </div>
             
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFAQ(this)">
-                    可以退款吗？
+                    免费版有哪些限制？
                     <span class="faq-toggle">+</span>
                 </div>
                 <div class="faq-answer" style="display: none;">
-                    我们提供7天无理由退款保证。如果您对服务不满意，可在订阅后7天内申请全额退款。
+                    免费版目前提供完整的功能体验，但有一些使用限制：<br>
+                    - 每日最多10次API调用<br>
+                    - 数据延迟15分钟<br>
+                    - 基础技术指标分析<br>
+                    - 历史数据范围为30天<br>
+                    这些限制足以满足大部分个人投资者的日常需求。
                 </div>
             </div>
             
@@ -592,26 +552,26 @@
             
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFAQ(this)">
-                    是否有试用期？
+                    可以申请提高免费额度吗？
                     <span class="faq-toggle">+</span>
                 </div>
                 <div class="faq-answer" style="display: none;">
-                    专业版提供14天免费试用期，试用期间可体验所有专业功能。试用期结束后如不订阅将自动降级为免费版。
+                    如果您是开发者、研究机构或教育机构，有特殊需求需要提高免费额度，可以发送邮件到 ai@link.cn 说明您的使用场景和需求。
+                    我们会根据具体情况评估并提供适当的支持。
                 </div>
             </div>
             
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFAQ(this)">
-                    企业用户有什么特殊服务？
+                    数据来源和准确性如何？
                     <span class="faq-toggle">+</span>
                 </div>
                 <div class="faq-answer" style="display: none;">
-                    企业用户享受：<br>
-                    - 专属客户经理<br>
-                    - 定制化数据解决方案<br>
-                    - 私有化部署选项<br>
-                    - 发票和合同支持<br>
-                    - 培训和技术支持
+                    我们的数据来自多家权威数据源：<br>
+                    - 股票数据：yfinance API（雅虎财经）<br>
+                    - 数字货币：ccxt 支持的交易所<br>
+                    - 期货数据：专业数据供应商<br>
+                    所有数据都经过多重验证，确保准确性。专业版将提供更低延迟和更多数据源。
                 </div>
             </div>
         </div>
@@ -622,56 +582,34 @@
         </div>
     </div>
     
-    <!-- 支付模态框 -->
-    <div id="paymentModal" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 1000; justify-content: center; align-items: center;">
-        <div style="background: white; padding: 2rem; border-radius: 10px; max-width: 500px; width: 90%;">
-            <h2 style="margin-bottom: 1rem;">订阅确认</h2>
-            <p id="modalText" style="margin-bottom: 1.5rem;"></p>
+    <!-- 即将推出模态框 -->
+    <div id="comingSoonModal" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 1000; justify-content: center; align-items: center;">
+        <div style="background: white; padding: 2rem; border-radius: 10px; max-width: 500px; width: 90%; text-align: center;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">🚀</div>
+            <h2 style="margin-bottom: 1rem; color: var(--primary);">专业版即将推出</h2>
+            <p style="margin-bottom: 1.5rem; color: #666; line-height: 1.6;">
+                我们正在积极开发专业版的各项高级功能，包括：<br><br>
+                ✅ 实时市场数据（&lt;1分钟延迟）<br>
+                ✅ 高级技术指标分析<br>
+                ✅ 投资组合优化工具<br>
+                ✅ 邮件/微信市场警报<br>
+                ✅ 完整API访问权限<br><br>
+                支付系统也在同步开发中。届时我们会通过邮件通知所有注册用户。
+            </p>
             <div style="display: flex; gap: 1rem; justify-content: center;">
-                <button onclick="proceedToPayment()" style="padding: 0.8rem 2rem; background: var(--primary); color: white; border: none; border-radius: 5px; cursor: pointer;">确认支付</button>
-                <button onclick="closePaymentModal()" style="padding: 0.8rem 2rem; background: #e2e8f0; color: var(--dark); border: none; border-radius: 5px; cursor: pointer;">取消</button>
+                <button onclick="closeComingSoonModal()" style="padding: 0.8rem 2rem; background: var(--primary); color: white; border: none; border-radius: 5px; cursor: pointer;">好的，明白了</button>
             </div>
         </div>
     </div>
     
     <script>
-        let selectedPlan = '';
-        
-        function showPaymentModal(plan) {
-            selectedPlan = plan;
-            const modal = document.getElementById('paymentModal');
-            const modalText = document.getElementById('modalText');
-            
-            const plans = {
-                'pro': {
-                    name: '专业版',
-                    price: '¥99/月',
-                    features: '实时数据、高级分析、API访问等'
-                },
-                'business': {
-                    name: '商业版',
-                    price: '¥999/月',
-                    features: '无限API、毫秒级数据、专属支持等'
-                }
-            };
-            
-            const planInfo = plans[plan];
-            modalText.innerHTML = `您选择了 <strong>${planInfo.name}</strong><br>
-                                  价格: <strong>${planInfo.price}</strong><br>
-                                  包含: ${planInfo.features}<br><br>
-                                  确认后将跳转到支付页面。`;
-            
+        function showComingSoonModal() {
+            const modal = document.getElementById('comingSoonModal');
             modal.style.display = 'flex';
         }
         
-        function closePaymentModal() {
-            document.getElementById('paymentModal').style.display = 'none';
-        }
-        
-        function proceedToPayment() {
-            // 这里应该跳转到实际的支付页面
-            alert('支付功能正在开发中...\n\n在实际应用中，这里会跳转到支付宝/微信支付页面。\n\n您可以通过以下方式临时测试：\n1. 创建测试用户\n2. 手动修改用户订阅状态\n3. 测试API权限控制');
-            closePaymentModal();
+        function closeComingSoonModal() {
+            document.getElementById('comingSoonModal').style.display = 'none';
         }
         
         function toggleFAQ(element) {
@@ -688,16 +626,16 @@
         }
         
         // 关闭模态框点击背景
-        document.getElementById('paymentModal').addEventListener('click', function(e) {
+        document.getElementById('comingSoonModal').addEventListener('click', function(e) {
             if (e.target === this) {
-                closePaymentModal();
+                closeComingSoonModal();
             }
         });
         
         // ESC键关闭模态框
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
-                closePaymentModal();
+                closeComingSoonModal();
             }
         });
     </script>
