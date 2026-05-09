@@ -1,8 +1,69 @@
-# 全方位投资分析系统
+# 🔥 AI.link.cn - 全方位智能投资分析系统
 
-🌐 **在线演示**: [ai.link.cn](https://ai.link.cn) | 📁 **GitHub**: [RicharZhaoyj/ai-link-cn](https://github.com/RicharZhaoyj/ai-link-cn)
+[![GitHub Stars](https://img.shields.io/github/stars/RicharZhaoyj/ai-link-cn?style=for-the-badge&logo=github)](https://github.com/RicharZhaoyj/ai-link-cn/stargazers)
+[![Vercel](https://img.shields.io/badge/Vercel-Deployed-black?style=for-the-badge&logo=vercel)](https://ai.link.cn)
+[![Python](https://img.shields.io/badge/Python-3.8+-blue?style=for-the-badge&logo=python)](https://www.python.org)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+[![API Status](https://img.shields.io/badge/API-Online-brightgreen?style=for-the-badge)](https://ai.link.cn/api/hello)
 
-🚀 **Vercel 自动部署**: 每次推送到 `main` 分支会自动部署到 [ai.link.cn](https://ai.link.cn)
+🌐 **在线演示**: [ai.link.cn](https://ai.link.cn) | 📁 **源码**: [GitHub](https://github.com/RicharZhaoyj/ai-link-cn) | 📚 **文档**: [查看完整文档](#)
+
+> 🚀 **完全开源** · **多市场支持** · **实时分析** · **自动部署**
+
+**一个完整的、开源的智能投资分析平台，支持港股、美股、新加坡股市、基金、ETF、期货和数字货币的全面分析和实时监控。**
+
+## ✨ 核心特性
+
+- **📊 多市场覆盖** - 港股、美股、新加坡股市、数字货币等
+- **🚀 实时分析** - 技术指标计算、投资组合优化
+- **🔧 完整API** - RESTful API接口，开发者友好
+- **🌐 现代技术栈** - Python + Vercel + GitHub Actions
+- **🎯 开源免费** - MIT许可证，完全透明可定制
+
+## 🚀 快速开始
+
+### 1. 在线体验（无需安装）
+访问 [ai.link.cn](https://ai.link.cn) 立即体验完整功能。
+
+### 2. 本地运行
+```bash
+# 克隆项目
+git clone https://github.com/RicharZhaoyj/ai-link-cn.git
+cd ai-link-cn
+
+# 安装依赖
+pip install -r requirements.txt
+
+# 运行完整分析
+python multi_market_analysis_system.py run
+```
+
+### 3. API使用
+```python
+import requests
+
+# 获取系统信息
+response = requests.get("https://ai.link.cn/api/hello")
+print(response.json())
+
+# 注册用户（示例）
+# response = requests.post("https://ai.link.cn/api/auth/register", 
+#                         json={"email": "your@email.com", "password": "yourpassword"})
+```
+
+## 📈 功能概览
+
+| 功能模块 | 描述 | 状态 |
+|---------|------|------|
+| **市场数据收集** | 多市场实时数据获取 | ✅ 已完成 |
+| **技术分析** | RSI、MACD、移动平均线等指标 | ✅ 已完成 |
+| **投资组合优化** | 自动权重分配和风险控制 | ✅ 已完成 |
+| **实时监控** | 价格和技术指标警报 | 🚧 开发中 |
+| **Web API** | 完整的RESTful API接口 | ✅ 已完成 |
+| **用户认证** | 注册/登录/权限管理 | ✅ 已完成 |
+
+---
+
 
 这是一个完整的投资分析系统，支持港股、美股、新加坡股市、基金、ETF、期货和数字货币的分析和监控。
 
