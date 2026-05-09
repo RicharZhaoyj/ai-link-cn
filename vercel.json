@@ -1,7 +1,7 @@
 {
   "builds": [
     {
-      "src": "**/*.py",
+      "src": "api/**/*.py",
       "use": "@vercel/python"
     },
     {
@@ -19,16 +19,28 @@
   ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/",
       "dest": "/index.html"
     },
     {
+      "src": "/pricing",
+      "dest": "/pricing.html"
+    },
+    {
+      "src": "/api/auth",
+      "dest": "/api/auth.py"
+    },
+    {
+      "src": "/api/auth/(.*)",
+      "dest": "/api/auth.py"
+    },
+    {
+      "src": "/api/premium/market/(.*)",
+      "dest": "/api/premium/market.py"
+    },
+    {
       "src": "/api/(.*)",
-      "dest": "/api/$1.py",
-      "methods": ["GET", "POST"],
-      "headers": {
-        "Cache-Control": "public, max-age=0, must-revalidate"
-      }
+      "dest": "/api/$1.py"
     }
   ],
   "env": {
