@@ -40,7 +40,21 @@ class handler(BaseHTTPRequestHandler):
             self.wfile.write(json.dumps({"error": "无效的JSON数据"}).encode())
             return
         
-        if self.path == '/api/auth/register':
+        # 处理API路径
+        if self.path == '/api/auth' or self.path == '/api/auth/':
+            # 如果是根路径，显示API信息
+            self._set_headers(200)
+            self.wfile.write(json.dumps({
+                "api": "AI.link.cn 认证系统",
+                "endpoints": {
+                    "POST /api/auth/register": "用户注册",
+                    "POST /api/auth/login": "用户登录",
+                    "POST /api/auth/logout": "用户登出",
+                    "POST /api/auth/status": "认证状态检查",
+                    "GET /api/auth/plans": "获取订阅计划"
+                }
+            }, ensure_ascii=False).encode())
+        elif self.path == '/api/auth/register':
             self.register(data)
         elif self.path == '/api/auth/login':
             self.login(data)
