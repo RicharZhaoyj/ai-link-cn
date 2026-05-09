@@ -1,5 +1,9 @@
 # 全方位投资分析系统
 
+🌐 **在线演示**: [ai.link.cn](https://ai.link.cn) | 📁 **GitHub**: [RicharZhaoyj/ai-link-cn](https://github.com/RicharZhaoyj/ai-link-cn)
+
+🚀 **Vercel 自动部署**: 每次推送到 `main` 分支会自动部署到 [ai.link.cn](https://ai.link.cn)
+
 这是一个完整的投资分析系统，支持港股、美股、新加坡股市、基金、ETF、期货和数字货币的分析和监控。
 
 ## 系统架构
@@ -293,6 +297,32 @@ portfolio = optimizer.run_optimization()
    - 自动化订单执行
    - 风险管理自动化
 
+## Vercel 部署
+
+本项目已配置 Vercel 自动部署，支持以下功能：
+
+### API 接口
+- `GET /api/hello` - 欢迎页面和系统信息
+- 更多 API 接口正在开发中...
+
+### 静态页面
+- `GET /` - 项目首页
+- `GET /index.html` - 项目详细介绍页面
+
+### 自动部署
+每次推送到 `main` 分支会自动触发 Vercel 部署，更新 [ai.link.cn](https://ai.link.cn)
+
+### 环境变量
+在 Vercel 项目中可配置以下环境变量：
+- `PYTHON_VERSION`: Python 版本（默认 3.9）
+- `MARKET_API_KEY`: 市场数据 API 密钥（可选）
+- `CRYPTO_API_KEY`: 数字货币 API 密钥（可选）
+
 ## 联系作者
 
 如果有问题或建议，请联系Richard Zhao。
+
+## 在线资源
+- 🌐 **网站**: [ai.link.cn](https://ai.link.cn)
+- 📁 **源码**: [github.com/RicharZhaoyj/ai-link-cn](https://github.com/RicharZhaoyj/ai-link-cn)
+- 🔗 **API**: [ai.link.cn/api/hello](https://ai.link.cn/api/hello)

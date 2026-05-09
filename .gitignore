@@ -93,6 +93,9 @@ trading_strategy_*.txt
 *.cfg
 *.conf
 
+# Important configuration files (do NOT ignore these)
+!vercel.json
+
 # OpenClaw
 .openclaw/
 .clawhub/

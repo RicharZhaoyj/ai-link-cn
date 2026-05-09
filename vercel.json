@@ -1,0 +1,47 @@
+{
+  "builds": [
+    {
+      "src": "**/*.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "**/*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "**/*.sh",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "**/*.md",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1.py",
+      "methods": ["GET", "POST"],
+      "headers": {
+        "Cache-Control": "public, max-age=0, must-revalidate"
+      }
+    }
+  ],
+  "env": {
+    "PYTHONPATH": "/var/task"
+  },
+  "build": {
+    "env": {
+      "PYTHON_VERSION": "3.9"
+    }
+  },
+  "github": {
+    "silent": false,
+    "enabled": true,
+    "autoAlias": true
+  }
+}
