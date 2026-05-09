@@ -72,10 +72,14 @@ unified_analysis/
 *.gif
 
 # Data files
-*.txt
 *.json
 *.csv
 *.xlsx
+
+# Important text files (do NOT ignore these)
+!requirements.txt
+!README.md
+!QUICK_START.md
 
 # Reports
 *_report_*.txt
