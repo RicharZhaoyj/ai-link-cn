@@ -1,0 +1,114 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+svelte/
+share/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+.env
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+logs/
+ai_coin_logs/
+ai_coin_integrated_logs/
+bnb_execution_logs/
+bnb_real_time_logs/
+buy_strategy_logs/
+consolidation_logs/
+consolidation_reports/
+enhanced_analysis/
+live_analysis_logs/
+live_monitoring/
+memory/
+monitoring_logs/
+optimization_results/
+real_data_logs/
+real_time_data/
+simulation_results/
+trade_analysis/
+unified_analysis/
+
+# Images
+*.png
+*.jpg
+*.jpeg
+*.gif
+
+# Data files
+*.txt
+*.json
+*.csv
+*.xlsx
+
+# Reports
+*_report_*.txt
+price_analysis_*.txt
+quick_strategy_report_*.txt
+simplified_report_*.txt
+trading_strategy_*.txt
+
+# Configurations
+*.config.json
+*.cfg
+*.conf
+
+# OpenClaw
+.openclaw/
+.clawhub/
+memory/
+
+# Personal files
+USER.md
+SOUL.md
+IDENTITY.md
+AGENTS.md
+HEARTBEAT.md
+MEMORY.md
+TOOLS.md
+BOOTSTRAP.md
+
+# Other
+network_solution.md
+singapore_trip_guide.md
+bash_quick_guide.md
+wsl_guide.md
+windows_guide.md
+Windows_to_WSL.md
+python_install_guide.md
