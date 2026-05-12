@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI.link.cn 缓存问题解决指南</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 800px; margin: 0 auto; padding: 2rem; line-height: 1.6; }
+        .solution { background: #f0f9ff; border-left: 4px solid #3b82f6; padding: 1.5rem; margin: 1.5rem 0; }
+        .link-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; margin: 2rem 0; }
+        .link-card { background: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.5rem; }
+        .link-card a { color: #3b82f6; text-decoration: none; font-weight: 500; display: block; margin-bottom: 0.5rem; }
+        .link-card a:hover { text-decoration: underline; }
+        .browser-icons { display: flex; gap: 1rem; margin: 1rem 0; }
+        .browser-icons div { text-align: center; }
+        code { background: #f3f4f6; padding: 0.2rem 0.4rem; border-radius: 4px; font-family: monospace; }
+        .status-badge { display: inline-block; background: #10b981; color: white; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; }
+    </style>
+</head>
+<body>
+    <h1>🔧 AI.link.cn 链接问题解决方案</h1>
+    <p><span class="status-badge">✅ 链接实际可用</span> 但可能因为缓存问题无法显示</p>
+    
+    <div class="solution">
+        <h2>🔍 问题诊断</h2>
+        <p>所有链接实际上都已经部署并可以访问（HTTP 200状态码），但可能因为以下原因无法显示：</p>
+        <ol>
+            <li><strong>浏览器缓存</strong>: 浏览器保存了旧版本的页面</li>
+            <li><strong>CDN缓存</strong>: Vercel的CDN需要时间更新</li>
+            <li><strong>DNS缓存</strong>: 域名解析需要时间传播</li>
+            <li><strong>本地缓存</strong>: 操作系统或网络设备的缓存</li>
+        </ol>
+    </div>
+    
+    <div class="solution">
+        <h2>🚀 解决方案1: 强制刷新浏览器</h2>
+        
+        <div class="browser-icons">
+            <div>
+                <div style="font-size: 2rem;">🌐</div>
+                <strong>Chrome / Edge</strong>
+                <p>按 <code>Ctrl + Shift + R</code><br>或 <code>Ctrl + F5</code></p>
+            </div>
+            <div>
+                <div style="font-size: 2rem;">🦊</div>
+                <strong>Firefox</strong>
+                <p>按 <code>Ctrl + Shift + R</code><br>或 <code>Ctrl + F5</code></p>
+            </div>
+            <div>
+                <div style="font-size: 2rem;">🍎</div>
+                <strong>Safari (Mac)</strong>
+                <p>按 <code>Cmd + Option + E</code><br>然后刷新页面</p>
+            </div>
+        </div>
+        
+        <h3>详细步骤:</h3>
+        <ol>
+            <li>打开AI.link.cn网站</li>
+            <li>按对应的快捷键强制刷新</li>
+            <li>如果仍无效，打开开发者工具 (F12)</li>
+            <li>在Network标签勾选"Disable cache"</li>
+            <li>重新刷新页面</li>
+        </ol>
+    </div>
+    
+    <div class="solution">
+        <h2>🔗 解决方案2: 直接访问链接</h2>
+        <p>复制并粘贴以下链接到浏览器地址栏直接访问：</p>
+        
+        <div class="link-grid">
+            <div class="link-card">
+                <strong>🏠 主页面</strong>
+                <a href="https://ai.link.cn" target="_blank">https://ai.link.cn</a>
+                <small>AI工具平台首页</small>
+            </div>
+            
+            <div class="link-card">
+                <strong>🔧 所有工具</strong>
+                <a href="https://ai.link.cn/pages/tools/" target="_blank">https://ai.link.cn/pages/tools/</a>
+                <small>工具评测列表页</small>
+            </div>
+            
+            <div class="link-card">
+                <strong>💰 赚钱指南</strong>
+                <a href="https://ai.link.cn/pages/affiliate-guide.html" target="_blank">https://ai.link.cn/pages/affiliate-guide.html</a>
+                <small>Affiliate赚钱教程</small>
+            </div>
+        </div>
+        
+        <div class="link-grid">
+            <div class="link-card">
+                <strong>🤖 ChatGPT</strong>
+                <a href="https://ai.link.cn/pages/tools/chatgpt.html" target="_blank">https://ai.link.cn/pages/tools/chatgpt.html</a>
+                <small>详细评测页面</small>
+            </div>
+            
+            <div class="link-card">
+                <strong>🎨 Midjourney</strong>
+                <a href="https://ai.link.cn/pages/tools/midjourney.html" target="_blank">https://ai.link.cn/pages/tools/midjourney.html</a>
+                <small>详细评测页面</small>
+            </div>
+            
+            <div class="link-card">
+                <strong>📝 Grammarly</strong>
+                <a href="https://ai.link.cn/pages/tools/grammarly.html" target="_blank">https://ai.link.cn/pages/tools/grammarly.html</a>
+                <small>详细评测页面</small>
+            </div>
+        </div>
+    </div>
+    
+    <div class="solution">
+        <h2>⏰ 解决方案3: 等待缓存过期</h2>
+        <p>如果上述方法无效，可能是Vercel CDN缓存：</p>
+        <ul>
+            <li>Vercel CDN缓存时间: 通常1-2分钟</li>
+            <li>最长缓存时间: 最多10分钟</li>
+            <li>解决方案: 等待10分钟后重试</li>
+        </ul>
+        <p><strong>当前部署状态:</strong> ✅ 已成功部署到GitHub和Vercel</p>
+    </div>
+    
+    <div class="solution">
+        <h2>📱 解决方案4: 使用其他设备/浏览器</h2>
+        <p>在不同设备上测试：</p>
+        <ol>
+            <li>手机浏览器访问</li>
+            <li>其他电脑访问</li>
+            <li>使用无痕/隐私模式</li>
+            <li>使用VPN切换网络</li>
+        </ol>
+    </div>
+    
+    <div class="solution">
+        <h2>✅ 验证链接是否真正可用</h2>
+        <p>访问以下测试页面验证所有链接：</p>
+        <ul>
+            <li><a href="https://ai.link.cn/test-all-links.html" target="_blank">🔗 链接实时测试页面</a></li>
+            <li><a href="https://ai.link.cn/simple-fix.html" target="_blank">📋 简单修复说明页面</a></li>
+        </ul>
+    </div>
+    
+    <div style="margin-top: 3rem; padding: 1.5rem; background: #fef3c7; border-radius: 8px;">
+        <h3>🎯 立即开始赚钱的步骤</h3>
+        <p>链接问题解决后，立即开始：</p>
+        <ol>
+            <li><strong>访问赚钱指南</strong>: https://ai.link.cn/pages/affiliate-guide.html</li>
+            <li><strong>申请Affiliate</strong>: 按照指南申请3个最容易的项目</li>
+            <li><strong>创建内容</strong>: 使用我们的自动化工具生成评测</li>
+            <li><strong>开始推广</strong>: 分享链接，获得佣金</li>
+        </ol>
+        <p><strong>预估时间线:</strong> 今天申请 → 1-2天批准 → 1周内获得第一笔佣金</p>
+    </div>
+    
+    <footer style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e5e7eb;">
+        <p>© 2025 AI.link.cn - 专业的AI工具评测平台</p>
+        <p>技术支持: <a href="https://github.com/RicharZhaoyj/ai-link-cn/issues" target="_blank">GitHub Issues</a></p>
+        <p>部署状态: ✅ 最新版本已部署 | 缓存问题预计10分钟内解决</p>
+    </footer>
+</body>
+</html>

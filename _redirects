@@ -1,0 +1,31 @@
+# Netlify/Vercel 重定向规则
+# 确保所有链接都能正确访问
+
+# 首页
+/           /index.html   200
+
+# 主要页面
+/tools      /pages/tools/index.html  200
+/affiliate-guide  /pages/affiliate-guide.html  200
+/navigation /pages/navigation.html  200
+
+# AI工具评测页面
+/chatgpt    /pages/tools/chatgpt.html  200
+/midjourney /pages/tools/midjourney.html  200
+/grammarly  /pages/tools/grammarly.html  200
+/notion-ai  /pages/tools/notion_ai.html  200
+/canva      /pages/tools/canva.html  200
+/jasper     /pages/tools/jasper.html  200
+/convertkit /pages/tools/convertkit.html  200
+/hostinger  /pages/tools/hostinger.html  200
+
+# 测试页面
+/test-links /test-all-links.html  200
+/cache-fix  /cache-fix.html  200
+/simple-fix /simple-fix.html  200
+
+# API端点
+/api/*      /api/:splat  200
+
+# 所有其他页面 - 直接访问
+/*          /:splat  200

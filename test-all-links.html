@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI.link.cn 链接测试</title>
+    <style>
+        body { font-family: monospace; max-width: 1000px; margin: 0 auto; padding: 2rem; }
+        .test-result { padding: 1rem; margin: 0.5rem 0; border-radius: 4px; }
+        .success { background: #d1fae5; }
+        .error { background: #fee2e2; }
+        .pending { background: #fef3c7; }
+        button { margin: 1rem 0; padding: 0.5rem 1rem; background: #3b82f6; color: white; border: none; border-radius: 4px; cursor: pointer; }
+        .timestamp { color: #6b7280; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <h1>🔗 AI.link.cn 链接实时测试</h1>
+    <p class="timestamp">测试时间: <span id="time"></span></p>
+    
+    <button onclick="runAllTests()">🚀 运行所有链接测试</button>
+    
+    <div id="results">
+        <h2>测试结果:</h2>
+        <div id="test-results"></div>
+    </div>
+    
+    <script>
+        function updateTime() {
+            document.getElementById('time').textContent = new Date().toLocaleString('zh-CN');
+        }
+        updateTime();
+        setInterval(updateTime, 1000);
+        
+        const linksToTest = [
+            { name: '🏠 首页', url: '/' },
+            { name: '🔧 工具列表页', url: '/pages/tools/' },
+            { name: '💰 赚钱指南', url: '/pages/affiliate-guide.html' },
+            { name: '🗺️ 网站导航', url: '/pages/navigation.html' },
+            { name: '🤖 ChatGPT评测', url: '/pages/tools/chatgpt.html' },
+            { name: '🎨 Midjourney评测', url: '/pages/tools/midjourney.html' },
+            { name: '📝 Grammarly评测', url: '/pages/tools/grammarly.html' },
+            { name: '📓 Notion AI评测', url: '/pages/tools/notion_ai.html' },
+            { name: '🎨 Canva AI评测', url: '/pages/tools/canva.html' },
+            { name: '✍️ Jasper AI评测', url: '/pages/tools/jasper.html' }
+        ];
+        
+        async function testLink(link) {
+            const resultDiv = document.createElement('div');
+            resultDiv.className = 'test-result pending';
+            resultDiv.innerHTML = `<strong>${link.name}</strong><br>${link.url}<br><span class="status">测试中...</span>`;
+            document.getElementById('test-results').prepend(resultDiv);
+            
+            try {
+                const response = await fetch(link.url, { method: 'HEAD' });
+                if (response.ok) {
+                    resultDiv.className = 'test-result success';
+                    resultDiv.innerHTML = `<strong>✅ ${link.name}</strong><br>
+                                          <a href="${link.url}" target="_blank">${link.url}</a><br>
+                                          <span>状态码: ${response.status} | 状态: 可访问</span>`;
+                } else {
+                    resultDiv.className = 'test-result error';
+                    resultDiv.innerHTML = `<strong>❌ ${link.name}</strong><br>
+                                          ${link.url}<br>
+                                          <span>状态码: ${response.status} | 状态: 错误</span>`;
+                }
+            } catch (error) {
+                resultDiv.className = 'test-result error';
+                resultDiv.innerHTML = `<strong>❌ ${link.name}</strong><br>
+                                      ${link.url}<br>
+                                      <span>错误: ${error.message}</span>`;
+            }
+        }
+        
+        function runAllTests() {
+            document.getElementById('test-results').innerHTML = '';
+            linksToTest.forEach(link => testLink(link));
+        }
+        
+        // 自动运行测试
+        setTimeout(runAllTests, 500);
+    </script>
+    
+    <div style="margin-top: 3rem; padding: 1.5rem; background: #f8fafc; border-radius: 8px;">
+        <h3>💡 如果链接测试失败，可能是:</h3>
+        <ol>
+            <li><strong>浏览器缓存问题</strong>: 按 Ctrl+F5 强制刷新页面</li>
+            <li><strong>Vercel部署延迟</strong>: 等待1-2分钟再试</li>
+            <li><strong>网络问题</strong>: 检查网络连接</li>
+            <li><strong>路径问题</strong>: 确认URL是否正确</li>
+        </ol>
+        
+        <h3>🔧 手动测试链接:</h3>
+        <ul>
+            <li><a href="/" target="_blank">首页</a></li>
+            <li><a href="/pages/tools/" target="_blank">工具列表页</a></li>
+            <li><a href="/pages/affiliate-guide.html" target="_blank">赚钱指南</a></li>
+            <li><a href="/pages/tools/chatgpt.html" target="_blank">ChatGPT评测</a></li>
+        </ul>
+    </div>
+    
+    <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #e5e7eb;">
+        <p><strong>当前部署状态:</strong> ✅ 已推送到GitHub，Vercel自动部署中</p>
+        <p><strong>GitHub提交:</strong> <a href="https://github.com/RicharZhaoyj/ai-link-cn/commit/85b0e91" target="_blank">85b0e91 - 最终修复</a></p>
+        <p><strong>Vercel部署:</strong> 通常需要1-2分钟同步</p>
+        <p><strong>测试说明:</strong> 这个页面会实时测试所有链接的可访问性</p>
+    </div>
+</body>
+</html>
