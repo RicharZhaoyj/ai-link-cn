@@ -1,0 +1,188 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-05-12T02:30:00.000Z",
+  "categories": {
+    "writing": {
+      "name": "写作与内容创作",
+      "description": "AI写作工具、文案生成、内容创作助手",
+      "tools": [
+        "ChatGPT",
+        "Jasper AI",
+        "Copy.ai",
+        "Writesonic",
+        "Rytr",
+        "Anyword",
+        "Wordtune",
+        "ProWritingAid",
+        "Grammarly",
+        "QuillBot"
+      ]
+    },
+    "image": {
+      "name": "图像与设计",
+      "description": "AI图像生成、图片编辑、设计工具",
+      "tools": [
+        "Midjourney",
+        "DALL-E 3",
+        "Stable Diffusion",
+        "Leonardo AI",
+        "Runway ML",
+        "Canva AI",
+        "Adobe Firefly",
+        "Clipdrop",
+        "DreamStudio",
+        "NightCafe"
+      ]
+    },
+    "video": {
+      "name": "视频与动画",
+      "description": "AI视频生成、视频编辑、动画制作",
+      "tools": [
+        "Runway ML",
+        "Pika Labs",
+        "Synthesia",
+        "HeyGen",
+        "InVideo AI",
+        "Pictory",
+        "Lumen5",
+        "Steve AI",
+        "FlexClip AI",
+        "VEED.io"
+      ]
+    },
+    "audio": {
+      "name": "音频与音乐",
+      "description": "AI语音合成、音乐生成、声音编辑",
+      "tools": [
+        "ElevenLabs",
+        "Murf AI",
+        "Play.ht",
+        "Descript",
+        "Soundraw",
+        "AIVA",
+        "Boomy",
+        "LALAL.AI",
+        "Vocal Remover",
+        "Krisp"
+      ]
+    },
+    "code": {
+      "name": "编程与开发",
+      "description": "AI代码生成、开发辅助、编程助手",
+      "tools": [
+        "GitHub Copilot",
+        "Amazon CodeWhisperer",
+        "Tabnine",
+        "Replit Ghostwriter",
+        "Sourcegraph Cody",
+        "Codiga",
+        "Mintlify",
+        "Phind",
+        "Codeium",
+        "AskCodi"
+      ]
+    },
+    "productivity": {
+      "name": "生产力与办公",
+      "description": "AI办公助手、会议记录、任务管理",
+      "tools": [
+        "Notion AI",
+        "Microsoft Copilot",
+        "Google Duet AI",
+        "Otter.ai",
+        "Fireflies.ai",
+        "MeetGeek",
+        "Claude",
+        "Mem.ai",
+        "Motion",
+        "Reclaim.ai"
+      ]
+    },
+    "research": {
+      "name": "研究与分析",
+      "description": "AI研究助手、数据分析、市场调研",
+      "tools": [
+        "Consensus",
+        "Elicit",
+        "Scite",
+        "ChatPDF",
+        "Humata",
+        "Paperpile",
+        "ResearchRabbit",
+        "Litmaps",
+        "Inciteful",
+        "Connected Papers"
+      ]
+    },
+    "business": {
+      "name": "商业与营销",
+      "description": "AI营销工具、客户服务、商业分析",
+      "tools": [
+        "Jasper for Business",
+        "Copy.ai for Teams",
+        "HubSpot AI",
+        "Salesforce Einstein",
+        "Zapier AI",
+        "ManyChat",
+        "Landbot",
+        "Drift",
+        "Intercom",
+        "Crisp"
+      ]
+    }
+  },
+  "top_tools": [
+    {
+      "name": "ChatGPT",
+      "category": "writing",
+      "description": "OpenAI的对话式AI，最流行的AI助手",
+      "rating": 4.8,
+      "pricing": "免费版可用，Plus版$20/月",
+      "affiliate_available": true
+    },
+    {
+      "name": "Midjourney",
+      "category": "image",
+      "description": "高质量的AI图像生成工具，通过Discord使用",
+      "rating": 4.7,
+      "pricing": "$10-60/月，按GPU时间计费",
+      "affiliate_available": true
+    },
+    {
+      "name": "Notion AI",
+      "category": "productivity",
+      "description": "集成在Notion中的AI写作和摘要工具",
+      "rating": 4.6,
+      "pricing": "$10/月（附加在Notion订阅上）",
+      "affiliate_available": true
+    },
+    {
+      "name": "GitHub Copilot",
+      "category": "code",
+      "description": "AI代码补全和编程助手",
+      "rating": 4.7,
+      "pricing": "$10/月（个人），$19/月（商业）",
+      "affiliate_available": false
+    },
+    {
+      "name": "ElevenLabs",
+      "category": "audio",
+      "description": "高质量的AI语音合成和克隆",
+      "rating": 4.5,
+      "pricing": "$5-330/月，按字符数计费",
+      "affiliate_available": true
+    }
+  ],
+  "priority_list": [
+    "ChatGPT",
+    "Midjourney",
+    "Notion AI",
+    "Jasper AI",
+    "Grammarly",
+    "Copy.ai",
+    "Runway ML",
+    "ElevenLabs",
+    "GitHub Copilot",
+    "Canva AI"
+  ]
+}

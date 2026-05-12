@@ -1,389 +1,196 @@
-# 🔥 AI.link.cn - 全方位智能投资分析系统
+# AI.link.cn - AI工具推荐平台
 
-[![GitHub Stars](https://img.shields.io/github/stars/RicharZhaoyj/ai-link-cn?style=for-the-badge&logo=github)](https://github.com/RicharZhaoyj/ai-link-cn/stargazers)
-[![Vercel](https://img.shields.io/badge/Vercel-Deployed-black?style=for-the-badge&logo=vercel)](https://ai.link.cn)
-[![Python](https://img.shields.io/badge/Python-3.8+-blue?style=for-the-badge&logo=python)](https://www.python.org)
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
-[![API Status](https://img.shields.io/badge/API-Online-brightgreen?style=for-the-badge)](https://ai.link.cn/api/hello)
+一个专注于AI工具评测、推荐和教学的平台，通过Affiliate佣金和广告实现盈利。
 
-🌐 **在线演示**: [ai.link.cn](https://ai.link.cn) | 📁 **源码**: [GitHub](https://github.com/RicharZhaoyj/ai-link-cn) | 📚 **文档**: [查看完整文档](#)
+## 🚀 项目目标
 
-> 🚀 **完全开源** · **多市场支持** · **实时分析** · **自动部署**
+1. **为中文用户**提供最全面的AI工具评测和使用指南
+2. **帮助用户**选择最适合的AI工具，提高工作效率
+3. **通过Affiliate佣金**和广告实现可持续盈利
+4. **成为中文AI工具领域的权威信息来源**
 
-**一个完整的、开源的智能投资分析平台，支持港股、美股、新加坡股市、基金、ETF、期货和数字货币的全面分析和实时监控。**
+## 📊 核心功能
 
-## ✨ 核心特性
+### 1. AI工具评测系统
+- 深度评测50+个主流AI工具
+- 实时价格和使用成本对比
+- 用户评分和评价系统
 
-- **📊 多市场覆盖** - 港股、美股、新加坡股市、数字货币等
-- **🚀 实时分析** - 技术指标计算、投资组合优化
-- **🔧 完整API** - RESTful API接口，开发者友好
-- **🌐 现代技术栈** - Python + Vercel + GitHub Actions
-- **🎯 开源免费** - MIT许可证，完全透明可定制
+### 2. Affiliate管理系统
+- 自动化跟踪Affiliate链接
+- 佣金收益统计和分析
+- 转化率优化工具
+
+### 3. 内容生成系统
+- 基于模板的内容创作
+- SEO优化内容生成
+- 定期内容更新
+
+### 4. SEO优化系统
+- 关键词研究和优化
+- 网站性能监控
+- 竞争分析
+
+## 📁 项目结构
+
+```
+ai-link-platform/
+├── src/              # 源代码
+├── content/          # 内容文件
+├── docs/             # 文档
+├── scripts/          # 实用脚本
+├── config/           # 配置文件
+├── templates/        # HTML模板
+└── tests/            # 测试文件
+```
+
+## 🛠️ 技术栈
+
+### 前端
+- **框架**: Next.js 14 + React
+- **样式**: Tailwind CSS + Shadcn UI
+- **状态管理**: Zustand
+- **图表**: Recharts
+
+### 后端
+- **API框架**: FastAPI (Python)
+- **数据库**: PostgreSQL + Redis
+- **缓存**: Redis
+- **搜索**: Algolia/Elasticsearch
+
+### 部署
+- **托管**: Vercel (前端) + Railway (后端)
+- **CDN**: Cloudflare
+- **监控**: Sentry + LogRocket
+
+## 📈 收入模型
+
+1. **Affiliate佣金** (主要收入)
+   - ChatGPT Plus: $20-50/新用户
+   - Midjourney: 20-30%月费分成
+   - Notion AI: $10-20/新用户
+   - 其他AI工具: 15-50%佣金
+
+2. **广告收入** (次要收入)
+   - Google AdSense
+   - 直接广告合作
+   - 赞助内容
+
+3. **增值服务** (未来扩展)
+   - 付费会员
+   - AI工具咨询服务
+   - 定制化AI解决方案
 
 ## 🚀 快速开始
 
-### 1. 在线体验（无需安装）
-访问 [ai.link.cn](https://ai.link.cn) 立即体验完整功能。
-
-### 2. 本地运行
+### 1. 环境准备
 ```bash
 # 克隆项目
-git clone https://github.com/RicharZhaoyj/ai-link-cn.git
-cd ai-link-cn
+git clone https://github.com/yourusername/ai-link-platform.git
+cd ai-link-platform
 
 # 安装依赖
+npm install
 pip install -r requirements.txt
-
-# 运行完整分析
-python multi_market_analysis_system.py run
 ```
 
-### 3. API使用
-```python
-import requests
+### 2. 配置环境
+```bash
+# 复制配置文件
+cp config/.env.example config/.env
 
-# 获取系统信息
-response = requests.get("https://ai.link.cn/api/hello")
-print(response.json())
-
-# 注册用户（示例）
-# response = requests.post("https://ai.link.cn/api/auth/register", 
-#                         json={"email": "your@email.com", "password": "yourpassword"})
+# 编辑配置文件
+# 设置Affiliate链接、API密钥等
 ```
 
-## 📈 功能概览
+### 3. 启动开发环境
+```bash
+# 启动前端
+npm run dev
 
-| 功能模块 | 描述 | 状态 |
-|---------|------|------|
-| **市场数据收集** | 多市场实时数据获取 | ✅ 已完成 |
-| **技术分析** | RSI、MACD、移动平均线等指标 | ✅ 已完成 |
-| **投资组合优化** | 自动权重分配和风险控制 | ✅ 已完成 |
-| **实时监控** | 价格和技术指标警报 | 🚧 开发中 |
-| **Web API** | 完整的RESTful API接口 | ✅ 已完成 |
-| **用户认证** | 注册/登录/权限管理 | ✅ 已完成 |
+# 启动后端
+python src/api/main.py
+```
+
+## 📊 关键指标
+
+| 指标 | 目标 (第1年) | 目标 (第2年) |
+|------|-------------|-------------|
+| 月访问量 | 50,000 | 200,000 |
+| 邮件订阅者 | 10,000 | 50,000 |
+| Affiliate转化率 | 1.0% | 1.5% |
+| 月收入 | $5,000 | $20,000 |
+| SEO排名 (关键词) | 100个Top10 | 500个Top10 |
+
+## 📚 内容策略
+
+### 第一阶段 (1-3个月)
+1. **基础评测**: 20个核心AI工具的深度评测
+2. **入门教程**: 针对新手的入门指南
+3. **比较文章**: AI工具对比分析
+
+### 第二阶段 (4-6个月)
+1. **高级教程**: 针对专业人士的高级使用技巧
+2. **案例研究**: 真实使用案例分享
+3. **行业分析**: AI工具市场趋势分析
+
+### 第三阶段 (7-12个月)
+1. **工具集成**: 多个工具组合使用的工作流
+2. **企业方案**: 企业级AI工具解决方案
+3. **社区内容**: 用户生成内容和问答
+
+## 🔧 自动化工具
+
+### 1. 内容更新自动化
+- 每周自动检查AI工具更新
+- 自动更新价格和功能信息
+- 生成更新报告
+
+### 2. Affiliate管理自动化
+- 自动检查Affiliate链接有效性
+- 佣金收入自动统计
+- 转化率优化建议
+
+### 3. SEO自动化
+- 关键词排名自动监控
+- 内容SEO评分
+- 竞争对手分析
+
+## 🎯 成功标准
+
+### 短期成功 (3个月)
+- ✅ 网站上线并运行
+- ✅ 50篇高质量内容
+- ✅ 开始产生Affiliate收入
+- ✅ 建立基本SEO基础
+
+### 中期成功 (6个月)
+- 📈 月访问量达到10,000
+- 📈 月收入达到$1,000
+- 📈 建立邮件列表 (5,000订阅者)
+- 📈 建立社交媒体影响力
+
+### 长期成功 (12个月)
+- 🏆 月访问量达到50,000
+- 🏆 月收入达到$5,000
+- 🏆 成为中文AI工具领域知名平台
+- 🏆 开始提供增值服务
+
+## 🤝 贡献指南
+
+欢迎贡献！请查看[贡献指南](docs/CONTRIBUTING.md)了解如何参与项目开发。
+
+## 📄 许可证
+
+MIT License - 详见 [LICENSE](LICENSE)
+
+## 📞 联系
+
+- **网站**: https://ai.link.cn
+- **邮箱**: contact@ai.link.cn
+- **GitHub**: https://github.com/yourusername/ai-link-platform
+- **Twitter**: @ailinkcn
 
 ---
 
-
-这是一个完整的投资分析系统，支持港股、美股、新加坡股市、基金、ETF、期货和数字货币的分析和监控。
-
-## 系统架构
-
-```
-系统包含三个主要模块：
-
-1. **MarketDataCollector** - 市场数据收集器
-   - 从yfinance获取股票、ETF、期货、基金数据
-   - 从ccxt获取数字货币数据
-   - 支持港股、美股、新加坡股市
-   - 实时价格、成交量、技术指标计算
-
-2. **MarketMonitor** - 实时监控系统
-   - 价格警报：突破买入/卖出价位时报警
-   - 技术指标警报：RSI超买/超卖、MACD信号
-   - 成交量警报：成交量放大超过50%
-   - 市场健康度评分
-   - 定时监控（可选每30分钟）
-
-3. **PortfolioOptimizer** - 投资组合优化器
-   - 投资组合配置（总投资额、风险级别、市场权重）
-   - 相关性分析
-   - 回报率计算
-   - 风险指标评估
-   - 自动优化投资组合权重
-   - 图表展示投资组合构成
-```
-
-## 安装依赖
-
-```bash
-pip install pandas numpy matplotlib yfinance ccxt schedule
-```
-
-## 使用方法
-
-### 1. 运行完整分析
-
-```bash
-python multi_market_analysis_system.py run
-```
-
-这会执行：
-- 获取所有市场数据
-- 监控市场状态
-- 优化投资组合
-- 生成综合报告
-
-### 2. 启动实时监控
-
-```bash
-python multi_market_analysis_system.py monitor [interval]
-```
-
-示例：
-```bash
-python multi_market_analysis_system.py monitor 30  # 每30分钟监控一次
-python multi_market_analysis_system.py monitor 60  # 每60分钟监控一次
-```
-
-### 3. 仅运行投资组合优化
-
-```bash
-python multi_market_analysis_system.py optimize
-```
-
-### 4. 生成每日报告
-
-```bash
-python multi_market_analysis_system.py daily
-```
-
-### 5. 更新系统配置
-
-```bash
-python multi_market_analysis_system.py config total_investment risk_level
-```
-
-示例：
-```bash
-python multi_market_analysis_system.py config 1000000 moderate
-python multi_market_analysis_system.py config 500000 conservative
-```
-
-## 配置参数
-
-### 总投资额
-默认：`$1,000,000`
-
-修改总投资额会影响：
-- 每个品种的投资金额
-- 价格警报阈值
-- 投资组合权重
-
-### 风险级别
-- `conservative`（保守型）
-  - 单个品种最大权重：10%
-  - 最大亏损容忍度：5%
-  - 最小相关系数：0.3
-  - 再平衡频率：每月
-
-- `moderate`（平衡型）
-  - 单个品种最大权重：15%
-  - 最大亏损容忍度：10%
-  - 最小相关系数：0.2
-  - 再平衡频率：每周
-
-- `aggressive`（激进型）
-  - 单个品种最大权重：25%
-  - 最大亏损容忍度：20%
-  - 最小相关系数：0.1
-  - 再平衡频率：每天
-
-### 各市场最大权重
-默认配置：
-- 港股：30%
-- 美股：35%
-- 新加坡股市：10%
-- ETF：15%
-- 期货：5%
-- 基金：10%
-- 数字货币：20%
-
-## 主要功能
-
-### 市场数据收集
-支持的市场：
-1. **港股** - 主要港股（腾讯、建设银行、汇丰控股等）
-2. **美股** - 美股大盘股（苹果、微软、谷歌等）
-3. **新加坡股市** - SGX主要股票（DBS、UOB、Singtel等）
-4. **ETF** - 主要ETF（SPY、QQQ、VTI等）
-5. **期货** - 大宗商品期货（黄金、原油、大豆等）
-6. **基金** - Vanguard系列基金（VOO、VGK、VPL等）
-7. **数字货币** - 主要加密货币（BTC、ETH、SOL等）
-
-### 技术分析指标
-1. **RSI**（相对强度指数）
-   - 14天周期
-   - RSI < 30：超卖，买入信号
-   - RSI > 70：超买，卖出信号
-
-2. **MACD**（移动平均收敛发散）
-   - EMA12和EMA26
-   - MACD柱状图 > 0：买入信号
-   - MACD柱状图 < 0：卖出信号
-
-3. **移动平均线**
-   - MA7（7日平均）
-   - MA30（30日平均）
-   - MA7 > MA30：上涨趋势
-
-4. **布林带**
-   - 20日标准差
-   - 价格突破上轨：上涨信号
-   - 价格跌破下轨：下跌信号
-
-### 监控警报系统
-
-1. **价格警报**
-   - 当价格突破预设的买入/卖出价位时报警
-   - 示例：
-     ```
-     BTC/USDT > 75000 → 卖出警报
-     BTC/USDT < 65000 → 买入警报
-     ```
-
-2. **技术指标警报**
-   - RSI低于30（超卖买入）
-   - RSI高于70（超买卖出）
-   - MACD柱状图转正（买入信号）
-
-3. **成交量警报**
-   - 成交量放大超过50%（可能有突破）
-
-### 投资组合优化
-
-1. **评分系统**
-   - 回报率评分
-   - 技术指标评分
-   - 风险调整评分
-   - 相关性调整评分
-
-2. **自动优化**
-   - 基于评分分配权重
-   - 确保不超过市场权重上限
-   - 确保不超过单个品种权重上限
-
-3. **风险管理**
-   - 止损位设置
-   - 仓位管理
-   - 分批建仓建议
-   - 定期再平衡
-
-## 输出文件
-
-### 市场数据
-- `market_data_YYYYMMDD_HHMMSS.json` - 原始市场数据
-- `market_report_YYYYMMDD_HHMMSS.txt` - 市场报告
-
-### 监控结果
-- `market_alerts_YYYYMMDD.txt` - 警报日志
-- `monitor_results_YYYYMMDD_HHMMSS.json` - 监控结果
-
-### 投资组合
-- `portfolio_optimization_YYYYMMDD.txt` - 投资组合优化报告
-- `portfolio_composition_YYYYMMDD.png` - 投资组合构成图
-- `portfolio_weights_YYYYMMDD.png` - 投资组合权重图
-
-### 综合报告
-- `comprehensive_report_YYYYMMDD_HHMMSS.txt` - 综合分析报告
-
-## 自定义配置
-
-### 修改市场品种列表
-在 `market_data_collector.py` 中修改：
-- `self.stock_markets`：股票市场配置
-- `self.etf_symbols`：ETF列表
-- `self.futures_symbols`：期货列表
-- `self.fund_symbols`：基金列表
-- `self.crypto_symbols`：数字货币列表
-
-### 修改价格警报阈值
-在 `market_monitor.py` 中修改：
-- `self.price_alerts_config`：价格警报配置
-- `self.alert_thresholds`：技术指标阈值
-
-### 修改投资组合配置
-在 `portfolio_optimizer.py` 中修改：
-- `self.portfolio_config`：投资组合配置
-- `self.risk_params`：风险参数
-
-## 示例运行
-
-```python
-# 导入模块
-from market_data_collector import MarketDataCollector
-from market_monitor import MarketMonitor
-from portfolio_optimizer import PortfolioOptimizer
-
-# 数据收集
-collector = MarketDataCollector()
-all_data = collector.get_all_market_data()
-
-# 实时监控
-monitor = MarketMonitor()
-monitor.monitor_once()  # 运行一次监控
-monitor.start_monitoring(30)  # 每30分钟监控一次
-
-# 投资组合优化
-optimizer = PortfolioOptimizer()
-portfolio = optimizer.run_optimization()
-```
-
-## 注意事项
-
-1. **数据准确性**
-   - yfinance API可能延迟或中断
-   - ccxt需要API密钥（如果需要交易）
-   - 建议使用自己的API密钥提高数据准确性
-
-2. **风险评估**
-   - 系统仅提供分析建议，不构成投资建议
-   - 实际投资需要综合判断
-   - 高风险品种（期货、数字货币）需要谨慎
-
-3. **实时监控**
-   - 定时监控会消耗网络资源
-   - 建议工作时间使用，避免夜间频繁监控
-   - 可以调整监控频率
-
-4. **投资组合调整**
-   - 建议定期（每周）重新优化投资组合
-   - 根据市场变化调整风险级别
-   - 分批建仓降低风险
-
-## 未来扩展
-
-1. **API扩展**
-   - 添加更多数据源（东方财富、新浪财经等）
-   - 添加实时交易接口
-   - 添加更多国际市场（日本、欧洲等）
-
-2. **策略扩展**
-   - 添加机器学习预测
-   - 添加更多技术指标
-   - 添加基本面分析
-
-3. **自动化交易**
-   - 连接交易所API
-   - 自动化订单执行
-   - 风险管理自动化
-
-## Vercel 部署
-
-本项目已配置 Vercel 自动部署，支持以下功能：
-
-### API 接口
-- `GET /api/hello` - 欢迎页面和系统信息
-- 更多 API 接口正在开发中...
-
-### 静态页面
-- `GET /` - 项目首页
-- `GET /index.html` - 项目详细介绍页面
-
-### 自动部署
-每次推送到 `main` 分支会自动触发 Vercel 部署，更新 [ai.link.cn](https://ai.link.cn)
-
-### 环境变量
-在 Vercel 项目中可配置以下环境变量：
-- `PYTHON_VERSION`: Python 版本（默认 3.9）
-- `MARKET_API_KEY`: 市场数据 API 密钥（可选）
-- `CRYPTO_API_KEY`: 数字货币 API 密钥（可选）
-
-## 联系作者
-
-如果有问题或建议，请联系Richard Zhao。
-
-## 在线资源
-- 🌐 **网站**: [ai.link.cn](https://ai.link.cn)
-- 📁 **源码**: [github.com/RicharZhaoyj/ai-link-cn](https://github.com/RicharZhaoyj/ai-link-cn)
-- 🔗 **API**: [ai.link.cn/api/hello](https://ai.link.cn/api/hello)
+**最后更新**: 2025年5月12日

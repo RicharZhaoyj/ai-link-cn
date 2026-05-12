@@ -1,0 +1,189 @@
+{
+  "project_name": "ai-link-platform",
+  "version": "1.0.0",
+  "created_at": "2025-05-12T02:30:00.000Z",
+  "description": "AI工具推荐平台 - 专业的AI工具评测、推荐和Affiliate营销平台",
+  "website": "https://ai.link.cn",
+  "business_model": "Affiliate佣金 + 广告收入",
+  
+  "core_features": [
+    "AI工具数据自动收集和更新",
+    "Affiliate链接管理和跟踪",
+    "自动化内容生成系统",
+    "SEO优化工具和关键词分析",
+    "完整的部署和监控系统"
+  ],
+  
+  "technology_stack": {
+    "frontend": "Next.js 14 + React + Tailwind CSS",
+    "backend": "Node.js + Express (或Python FastAPI)",
+    "database": "PostgreSQL + Redis",
+    "deployment": "Vercel + Railway",
+    "monitoring": "Sentry + LogRocket"
+  },
+  
+  "directory_structure": {
+    "src/": "源代码目录",
+    "config/": "配置文件",
+    "content/": "生成的内容文件",
+    "docs/": "项目文档",
+    "scripts/": "实用脚本",
+    "templates/": "内容模板",
+    "tests/": "测试文件",
+    "data/": "数据文件"
+  },
+  
+  "key_files": {
+    "src/ai_tools_scraper.js": "AI工具数据爬取器",
+    "src/affiliate_tracker.js": "Affiliate链接管理系统",
+    "src/content_generator.js": "内容生成器",
+    "config/affiliate_links.json": "Affiliate链接配置",
+    "config/tools_list.json": "AI工具列表配置",
+    "config/seo_keywords.json": "SEO关键词配置",
+    "docs/affiliate_guide.md": "Affiliate申请指南",
+    "scripts/deploy.sh": "部署脚本"
+  },
+  
+  "income_projection": {
+    "year_1": {
+      "monthly_visitors": "50,000",
+      "conversion_rate": "1.0%",
+      "monthly_income": "$5,000",
+      "annual_income": "$60,000"
+    },
+    "year_2": {
+      "monthly_visitors": "200,000",
+      "conversion_rate": "1.5%",
+      "monthly_income": "$20,000",
+      "annual_income": "$240,000"
+    }
+  },
+  
+  "cost_structure": {
+    "initial_investment": "¥50,000 (约$7,000)",
+    "monthly_costs": "¥5,000 (约$700)",
+    "break_even_time": "4-5个月"
+  },
+  
+  "risk_assessment": {
+    "market_risk": "中低 - AI工具市场快速增长",
+    "technical_risk": "低 - 使用成熟技术栈",
+    "compliance_risk": "中 - Affiliate营销需合规",
+    "competition_risk": "中 - 有竞品但市场足够大",
+    "overall_risk": "中低"
+  },
+  
+  "implementation_phases": {
+    "phase_1": {
+      "duration": "1-3个月",
+      "goals": [
+        "网站上线并运行",
+        "50篇高质量内容",
+        "建立基础SEO",
+        "开始产生收入"
+      ]
+    },
+    "phase_2": {
+      "duration": "4-6个月",
+      "goals": [
+        "月访问量达到10,000",
+        "月收入达到$1,000",
+        "建立邮件列表(5,000订阅者)",
+        "扩展内容类型"
+      ]
+    },
+    "phase_3": {
+      "duration": "7-12个月",
+      "goals": [
+        "月访问量达到50,000",
+        "月收入达到$5,000",
+        "成为中文AI工具领域知名平台",
+        "开始提供增值服务"
+      ]
+    }
+  },
+  
+  "competitors": {
+    "futurepedia": "英文AI工具目录，流量高",
+    "theresanaiforthat": "工具发现平台",
+    "ai_tool_hunt": "社区投票平台",
+    "chinese_competitors": [
+      "AI导航网",
+      "AI工具集",
+      "AI工具大全"
+    ]
+  },
+  
+  "differentiation_strategy": [
+    "专注中文市场，提供本地化内容",
+    "深度评测+实操教程，不只是简单介绍",
+    "AI工具+工作流集成展示",
+    "中小企业导向，提供企业解决方案"
+  ],
+  
+  "git_commands": [
+    "git init",
+    "git add .",
+    "git commit -m '初始化: AI.link.cn平台 v1.0.0'",
+    "git remote add origin https://github.com/yourusername/ai-link-platform.git",
+    "git push -u origin main"
+  ],
+  
+  "deployment_commands": [
+    "chmod +x scripts/deploy.sh",
+    "./scripts/deploy.sh --setup (首次使用)",
+    "./scripts/deploy.sh --build (构建项目)",
+    "./scripts/deploy.sh --deploy-vercel (部署到Vercel)",
+    "./scripts/deploy.sh --all (完整部署流程)"
+  ],
+  
+  "next_steps": [
+    "1. 配置环境变量 (.env文件)",
+    "2. 申请AI工具Affiliate项目",
+    "3. 生成初始内容 (node src/content_generator.js)",
+    "4. 部署到生产环境",
+    "5. 开始SEO和内容营销",
+    "6. 监控和分析数据"
+  ],
+  
+  "success_metrics": {
+    "traffic": "月访问量",
+    "engagement": "页面停留时间、跳出率",
+    "conversion": "Affiliate点击率、转化率",
+    "revenue": "月佣金收入",
+    "seo": "关键词排名、自然流量"
+  },
+  
+  "maintenance_tasks": {
+    "daily": [
+      "检查网站可用性",
+      "监控Affiliate链接有效性",
+      "查看网站统计数据"
+    ],
+    "weekly": [
+      "更新AI工具信息",
+      "生成新的内容",
+      "检查SEO排名变化",
+      "分析用户行为数据"
+    ],
+    "monthly": [
+      "优化高流量内容",
+      "申请新的Affiliate项目",
+      "分析收入报告",
+      "制定下月内容计划"
+    ]
+  },
+  
+  "contact": {
+    "website": "https://ai.link.cn",
+    "email": "contact@ai.link.cn",
+    "github": "https://github.com/yourusername/ai-link-platform"
+  },
+  
+  "notes": [
+    "此项目替代原有的实时市场数据系统，转向风险更低的AI工具推荐模式",
+    "初期可以完全自动化运行，后续根据需求添加人工编辑和审核",
+    "建议先从5-10个主要AI工具开始，逐步扩展到50+个工具",
+    "合规性非常重要，务必遵守各平台的Affiliate政策"
+  ]
+}

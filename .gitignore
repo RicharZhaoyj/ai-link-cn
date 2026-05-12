@@ -13,19 +13,23 @@ eggs/
 lib/
 lib64/
 parts/
-svelte/
-share/
+sdist/
+var/
+wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-MANIFEST
 
-# Virtual environments
+# Virtual Environment
 venv/
-env/
+venv_real_data/
 ENV/
+env/
 .env
-.venv
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
 # IDE
 .vscode/
@@ -34,88 +38,16 @@ ENV/
 *.swo
 *~
 
+# Data and logs
+data/
+*.log
+*.sql
+*.sqlite
+
 # OS
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
 Thumbs.db
 
-# Logs
-*.log
-logs/
-ai_coin_logs/
-ai_coin_integrated_logs/
-bnb_execution_logs/
-bnb_real_time_logs/
-buy_strategy_logs/
-consolidation_logs/
-consolidation_reports/
-enhanced_analysis/
-live_analysis_logs/
-live_monitoring/
-memory/
-monitoring_logs/
-optimization_results/
-real_data_logs/
-real_time_data/
-simulation_results/
-trade_analysis/
-unified_analysis/
-
-# Images
-*.png
-*.jpg
-*.jpeg
-*.gif
-
-# Data files
-*.json
-*.csv
-*.xlsx
-
-# Important text files (do NOT ignore these)
-!requirements.txt
-!README.md
-!QUICK_START.md
-
-# Reports
-*_report_*.txt
-price_analysis_*.txt
-quick_strategy_report_*.txt
-simplified_report_*.txt
-trading_strategy_*.txt
-
-# Configurations
-*.config.json
-*.cfg
-*.conf
-
-# Important configuration files (do NOT ignore these)
-!vercel.json
-
-# OpenClaw
-.openclaw/
-.clawhub/
-memory/
-
-# Personal files
-USER.md
-SOUL.md
-IDENTITY.md
-AGENTS.md
-HEARTBEAT.md
-MEMORY.md
-TOOLS.md
-BOOTSTRAP.md
-
-# Other
-network_solution.md
-singapore_trip_guide.md
-bash_quick_guide.md
-wsl_guide.md
-windows_guide.md
-Windows_to_WSL.md
-python_install_guide.md
+# Project specific
+market_data_cache/
+config/config.py  # 包含API密钥，不要提交
