@@ -1,0 +1,37 @@
+{
+  "version": 2,
+  "name": "ai-link-cn",
+  "public": true,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    },
+    {
+      "src": "src/**/*.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production",
+    "SITE_NAME": "AI.link.cn",
+    "SITE_URL": "https://ai.link.cn",
+    "SITE_DESCRIPTION": "专业的AI工具评测和推荐平台",
+    "SITE_KEYWORDS": "AI工具,人工智能,工具评测,AI推荐"
+  },
+  "github": {
+    "enabled": true,
+    "silent": true
+  },
+  "regions": ["hkg1"]
+}
