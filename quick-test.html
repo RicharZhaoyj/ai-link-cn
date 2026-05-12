@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI.link.cn 链接快速测试</title>
+    <style>
+        body { font-family: sans-serif; padding: 2rem; }
+        .test { margin: 1rem 0; padding: 1rem; border: 1px solid #ddd; }
+        .success { background: #d4edda; border-color: #c3e6cb; }
+        .error { background: #f8d7da; border-color: #f5c6cb; }
+        .loading { background: #fff3cd; border-color: #ffeaa7; }
+        button { margin: 1rem 0; padding: 0.5rem 1rem; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>🔗 AI.link.cn 链接测试</h1>
+    <p>点击下面的链接直接测试（新窗口打开）</p>
+    
+    <div>
+        <a href="/" target="_blank">🏠 测试首页</a> | 
+        <a href="/pages/tools/chatgpt.html" target="_blank">🤖 测试ChatGPT页面</a> | 
+        <a href="/pages/tools/" target="_blank">🔧 测试工具列表</a> | 
+        <a href="/pages/affiliate-guide.html" target="_blank">💰 测试赚钱指南</a>
+    </div>
+    
+    <h2>如果链接无效：</h2>
+    <ol>
+        <li>按 <strong>Ctrl+F5</strong> 强制刷新</li>
+        <li>等待 <strong>2分钟</strong> 让Vercel更新</li>
+        <li>使用 <strong>无痕/隐私模式</strong> 访问</li>
+        <li>复制链接直接粘贴到地址栏：<code>https://ai.link.cn/pages/tools/chatgpt.html</code></li>
+    </ol>
+    
+    <h2>我们已经修复的问题：</h2>
+    <ul>
+        <li>✅ Vercel路由配置错误（已修复）</li>
+        <li>✅ 路径映射问题（已修复）</li>
+        <li>✅ 重定向规则（已添加）</li>
+        <li>✅ 缓存控制（已优化）</li>
+    </ul>
+    
+    <h2>备用访问方案：</h2>
+    <p>如果以上都无效，访问：</p>
+    <ul>
+        <li><a href="https://github.com/RicharZhaoyj/ai-link-cn" target="_blank">🐙 GitHub仓库（查看文件）</a></li>
+        <li><a href="https://vercel.com/richarzhaoyj/ai-link-cn" target="_blank">🚀 Vercel部署面板</a></li>
+    </ul>
+    
+    <script>
+        function checkLinks() {
+            const links = [
+                { url: '/', name: '首页' },
+                { url: '/pages/tools/chatgpt.html', name: 'ChatGPT页' },
+                { url: '/pages/tools/', name: '工具列表' },
+                { url: '/pages/affiliate-guide.html', name: '赚钱指南' }
+            ];
+            
+            links.forEach(link => {
+                fetch(link.url, { method: 'HEAD' })
+                    .then(res => {
+                        console.log(`${link.name}: ${res.status}`);
+                    })
+                    .catch(err => {
+                        console.log(`${link.name}: 错误 - ${err.message}`);
+                    });
+            });
+        }
+        
+        // 自动检查
+        setTimeout(checkLinks, 1000);
+    </script>
+</body>
+</html>
