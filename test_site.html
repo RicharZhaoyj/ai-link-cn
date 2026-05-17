@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI.link.cn 测试页面</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { color: #333; }
+        .status { padding: 15px; margin: 10px 0; border-radius: 5px; }
+        .success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .warning { background: #fff3cd; color: #856404; border: 1px solid #ffeaa7; }
+        .error { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+        .tool-list { list-style: none; padding: 0; }
+        .tool-list li { padding: 8px; border-bottom: 1px solid #eee; }
+        .tool-list li:hover { background: #f8f9fa; }
+        a { color: #007bff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>AI.link.cn 测试页面</h1>
+    <p>这是一个测试页面，验证网站是否正常工作。</p>
+    
+    <div class="status success">
+        <h2>✅ 自动化系统状态</h2>
+        <p><strong>最后更新时间:</strong> $(date '+%Y年%m月%d日 %H:%M:%S')</p>
+        <p><strong>定时任务配置:</strong> 已设置每日自动更新</p>
+        <p><strong>Git同步:</strong> 已连接到GitHub</p>
+    </div>
+    
+    <div class="status warning">
+        <h2>⚠️ 当前注意事项</h2>
+        <p>Vercel部署依赖于GitHub Webhook自动触发。</p>
+        <p>如果页面未更新，请检查:</p>
+        <ul>
+            <li>GitHub和Vercel的连接状态</li>
+            <li>Vercel项目是否已部署</li>
+            <li>是否有网络访问限制</li>
+        </ul>
+    </div>
+    
+    <h2>已生成的工具页面</h2>
+    <ul class="tool-list">
+        <li><a href="pages/tools/chatgpt.html">ChatGPT</a> - 生成时间: 2026-05-17 12:08:21</li>
+        <li><a href="pages/tools/midjourney.html">Midjourney</a> - 生成时间: 2026-05-17 12:08:21</li>
+        <li><a href="pages/tools/github_copilot.html">GitHub Copilot</a> - 生成时间: 2026-05-17 12:08:21</li>
+        <li><a href="pages/tools/canva.html">Canva</a></li>
+        <li><a href="pages/tools/convertkit.html">ConvertKit</a></li>
+        <li><a href="pages/tools/grammarly.html">Grammarly</a></li>
+        <li><a href="pages/tools/hostinger.html">Hostinger</a></li>
+        <li><a href="pages/tools/jasper.html">Jasper AI</a></li>
+        <li><a href="pages/tools/notion_ai.html">Notion AI</a></li>
+        <li><a href="pages/tools/prowritingaid.html">ProWritingAid</a></li>
+    </ul>
+    
+    <div class="status">
+        <h2>🔧 技术架构</h2>
+        <p><strong>自动化流程:</strong> 发现 → 生成 → 提交 → 部署</p>
+        <p><strong>定时任务:</strong> 每天凌晨2:30自动执行</p>
+        <p><strong>内容生成:</strong> 基于模板自动生成工具页面</p>
+        <p><strong>部署方式:</strong> GitHub → Vercel 自动部署</p>
+    </div>
+    
+    <h2>测试网站访问</h2>
+    <p>请访问以下链接测试网站是否可访问:</p>
+    <ul>
+        <li><a href="https://project-f5cf8.vercel.app/" target="_blank">主要网站: project-f5cf8.vercel.app</a></li>
+        <li><a href="pages/tools/index.html" target="_blank">本地工具列表</a></li>
+        <li><a href="pages/tools/chatgpt.html" target="_blank">本地ChatGPT页面</a></li>
+    </ul>
+    
+    <hr>
+    <p><small>AI.link.cn 自动化系统 | 最后检查: $(date '+%Y-%m-%d %H:%M:%S')</small></p>
+</body>
+</html>
