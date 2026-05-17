@@ -7,160 +7,65 @@
     <meta name="description" content="AI.link.cn提供最新的AI工具评测、使用教程和推荐指南。每日自动更新，为您推荐最好的人工智能工具。">
     <meta name="keywords" content="AI工具,人工智能,工具评测,AI推荐,机器学习">
     <style>
-        /* 基本样式 */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
-        
-        /* 头部 */
-        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; border-radius: 10px; margin-bottom: 2rem; text-align: center; }
-        header h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-        nav { margin-top: 1rem; }
-        nav a { color: white; text-decoration: none; margin: 0 10px; padding: 8px 15px; border-radius: 5px; background: rgba(255,255,255,0.1); }
-        nav a:hover { background: rgba(255,255,255,0.2); }
-        
-        /* 主要内容 */
-        main { display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; }
-        .content { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        .sidebar { background: #f8f9fa; padding: 2rem; border-radius: 10px; }
-        
-        /* 工具列表 */
-        .tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem; margin: 2rem 0; }
-        .tool-card { background: white; padding: 1.5rem; border-radius: 8px; border: 1px solid #e0e0e0; transition: all 0.3s ease; }
-        .tool-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); border-color: #667eea; }
-        .tool-card h3 { color: #333; margin-bottom: 0.5rem; }
-        .tool-card p { color: #666; font-size: 0.9rem; margin-bottom: 1rem; }
-        .tool-link { display: inline-block; color: #667eea; text-decoration: none; font-weight: bold; }
-        
-        /* 底部 */
-        footer { text-align: center; padding: 2rem; margin-top: 2rem; color: #666; border-top: 1px solid #e0e0e0; }
-        
-        /* 状态指示 */
-        .status { padding: 1rem; border-radius: 8px; margin: 1rem 0; }
-        .status-success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
-        .status-update { background: #fff3cd; color: #856404; border: 1px solid #ffeaa7; }
-        
-        /* 响应式 */
-        @media (max-width: 768px) {
-            main { grid-template-columns: 1fr; }
-            .tools-grid { grid-template-columns: 1fr; }
-            header h1 { font-size: 1.8rem; }
-        }
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        header { background: #667eea; color: white; padding: 2rem; border-radius: 10px; text-align: center; }
+        nav a { color: white; margin: 0 10px; }
+        .tools { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; margin: 2rem 0; }
+        .tool { background: #f8f9fa; padding: 1rem; border-radius: 8px; }
+        footer { text-align: center; padding: 2rem; color: #666; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>AI.link.cn</h1>
-            <p>专业的AI工具评测和推荐平台</p>
-            <nav>
-                <a href="#tools">所有工具</a>
-                <a href="pages/tools/index.html">工具列表</a>
-                <a href="pages/about.html">关于我们</a>
-                <a href="test_site.html">系统状态</a>
-            </nav>
-        </header>
-        
-        <div class="status status-success">
-            <h3>✅ 自动化系统正常运行</h3>
-            <p>网站每日自动更新，最后更新时间: $(date '+%Y年%m月%d日 %H:%M:%S')</p>
+    <header>
+        <h1>AI.link.cn</h1>
+        <p>专业的AI工具评测和推荐平台</p>
+        <nav>
+            <a href="/">首页</a>
+            <a href="/pages/tools/index.html">所有工具</a>
+            <a href="/pages/about.html">关于我们</a>
+        </nav>
+    </header>
+    
+    <main>
+        <h2>已收录的AI工具</h2>
+        <div class="tools">
+            <div class="tool">
+                <h3>ChatGPT</h3>
+                <p>最先进的对话AI</p>
+                <a href="/pages/tools/chatgpt.html">查看详情</a>
+            </div>
+            <div class="tool">
+                <h3>Midjourney</h3>
+                <p>强大的AI图像生成工具</p>
+                <a href="/pages/tools/midjourney.html">查看详情</a>
+            </div>
+            <div class="tool">
+                <h3>GitHub Copilot</h3>
+                <p>AI编程助手</p>
+                <a href="/pages/tools/github_copilot.html">查看详情</a>
+            </div>
+            <div class="tool">
+                <h3>Canva</h3>
+                <p>设计工具</p>
+                <a href="/pages/tools/canva.html">查看详情</a>
+            </div>
         </div>
         
-        <main>
-            <div class="content">
-                <h2 id="tools">热门AI工具推荐</h2>
-                <p>我们每日自动发现和评测最新的AI工具，以下是我们推荐的优质工具:</p>
-                
-                <div class="tools-grid">
-                    <div class="tool-card">
-                        <h3>ChatGPT</h3>
-                        <p>最先进的对话AI，支持多种语言和复杂任务。</p>
-                        <a href="pages/tools/chatgpt.html" class="tool-link">查看详情 →</a>
-                    </div>
-                    
-                    <div class="tool-card">
-                        <h3>Midjourney</h3>
-                        <p>强大的AI图像生成工具，创造惊人的视觉效果。</p>
-                        <a href="pages/tools/midjourney.html" class="tool-link">查看详情 →</a>
-                    </div>
-                    
-                    <div class="tool-card">
-                        <h3>GitHub Copilot</h3>
-                        <p>AI编程助手，提升开发效率和代码质量。</p>
-                        <a href="pages/tools/github_copilot.html" class="tool-link">查看详情 →</a>
-                    </div>
-                    
-                    <div class="tool-card">
-                        <h3>Canva</h3>
-                        <p>设计工具，轻松创建专业级视觉内容。</p>
-                        <a href="pages/tools/canva.html" class="tool-link">查看详情 →</a>
-                    </div>
-                    
-                    <div class="tool-card">
-                        <h3>Grammarly</h3>
-                        <p>写作助手，检查语法和提升写作质量。</p>
-                        <a href="pages/tools/grammarly.html" class="tool-link">查看详情 →</a>
-                    </div>
-                    
-                    <div class="tool-card">
-                        <h3>Jasper AI</h3>
-                        <p>内容创作AI，帮助快速生成高质量文本。</p>
-                        <a href="pages/tools/jasper.html" class="tool-link">查看详情 →</a>
-                    </div>
-                </div>
-                
-                <div class="status status-update">
-                    <h3>🚀 自动更新功能</h3>
-                    <p>我们的网站每天自动:</p>
-                    <ul style="margin: 10px 0 10px 20px;">
-                        <li>凌晨2点: 发现新AI工具</li>
-                        <li>凌晨2:30: 生成工具页面并更新网站</li>
-                        <li>自动提交变更到GitHub</li>
-                        <li>触发Vercel自动部署</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="sidebar">
-                <h3>快速链接</h3>
-                <ul style="list-style: none; padding: 0; margin-top: 1rem;">
-                    <li style="margin-bottom: 0.8rem;"><a href="pages/tools/index.html" style="color: #667eea;">🔗 所有工具列表</a></li>
-                    <li style="margin-bottom: 0.8rem;"><a href="pages/about.html" style="color: #667eea;">🔗 关于我们</a></li>
-                    <li style="margin-bottom: 0.8rem;"><a href="test_site.html" style="color: #667eea;">🔗 系统状态检查</a></li>
-                </ul>
-                
-                <h3 style="margin-top: 2rem;">统计信息</h3>
-                <p>📊 工具总数: <strong>11个</strong></p>
-                <p>⏰ 最后更新: <strong>$(date '+%Y-%m-%d %H:%M')</strong></p>
-                <p>🔄 下次更新: <strong>明天凌晨2:30</strong></p>
-                
-                <div style="margin-top: 2rem; padding: 1rem; background: #e8f4fd; border-radius: 8px;">
-                    <h4>💡 使用建议</h4>
-                    <p>我们推荐定期访问网站查看新发现的AI工具，所有内容完全免费。</p>
-                </div>
-            </div>
-        </main>
-        
-        <footer>
-            <p>&copy; 2026 AI.link.cn - 专业的AI工具评测和推荐平台</p>
-            <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #888;">
-                本网站采用自动化系统维护，每日自动更新AI工具信息。
-                <br>GitHub: <a href="https://github.com/RicharZhaoyj/ai-link-cn" style="color: #667eea;">RicharZhaoyj/ai-link-cn</a>
-            </p>
-        </footer>
-    </div>
+        <div style="background: #e8f4fd; padding: 1rem; border-radius: 8px; margin: 2rem 0;">
+            <h3>🚀 自动更新系统</h3>
+            <p>网站每天自动更新：</p>
+            <ul>
+                <li>凌晨2点：发现新AI工具</li>
+                <li>凌晨2:30：生成工具页面</li>
+                <li>自动提交到GitHub</li>
+                <li>触发Vercel部署</li>
+            </ul>
+        </div>
+    </main>
     
-    <script>
-        // 简单的时间更新
-        function updateTime() {
-            const now = new Date();
-            const timeElement = document.querySelector('.status-success p');
-            if (timeElement) {
-                timeElement.textContent = '网站每日自动更新，最后更新时间: ' + now.toLocaleString('zh-CN');
-            }
-        }
-        // 每分钟更新时间
-        setInterval(updateTime, 60000);
-    </script>
+    <footer>
+        <p>&copy; 2026 AI.link.cn - 专业的AI工具评测和推荐平台</p>
+        <p>最后更新: 2026年5月17日</p>
+    </footer>
 </body>
 </html>
