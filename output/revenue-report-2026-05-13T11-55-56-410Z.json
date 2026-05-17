@@ -1,0 +1,128 @@
+{
+  "generatedAt": "2026-05-13T11:55:56.409Z",
+  "period": "本周",
+  "summary": {
+    "totalTools": 10,
+    "activeTools": 10,
+    "inactiveTools": 0,
+    "estimatedMonthlyRevenue": 2847,
+    "conversionRate": 1.8,
+    "bestPerformer": "Hostinger",
+    "worstPerformer": "Grammarly"
+  },
+  "toolPerformance": [
+    {
+      "name": "ChatGPT Plus",
+      "platform": "OpenAI",
+      "commission": "$20-50/新用户",
+      "status": "online",
+      "estimatedRevenue": 765,
+      "conversionRate": "1.6",
+      "priority": "low"
+    },
+    {
+      "name": "Midjourney",
+      "platform": "Midjourney",
+      "commission": "20-30%月费分成",
+      "status": "online",
+      "estimatedRevenue": 417,
+      "conversionRate": "2.8",
+      "priority": "low"
+    },
+    {
+      "name": "Notion AI",
+      "platform": "Notion",
+      "commission": "$10-20/新用户",
+      "status": "online",
+      "estimatedRevenue": 621,
+      "conversionRate": "0.8",
+      "priority": "low"
+    },
+    {
+      "name": "Grammarly",
+      "platform": "Grammarly",
+      "commission": "20%年费分成",
+      "status": "online",
+      "estimatedRevenue": 948,
+      "conversionRate": "2.2",
+      "priority": "low"
+    },
+    {
+      "name": "Jasper AI",
+      "platform": "Jasper",
+      "commission": "30%月费",
+      "status": "online",
+      "estimatedRevenue": 437,
+      "conversionRate": "2.8",
+      "priority": "low"
+    },
+    {
+      "name": "Copy.ai",
+      "platform": "Copy.ai",
+      "commission": "$50+20%月费",
+      "status": "online",
+      "estimatedRevenue": 837,
+      "conversionRate": "3.0",
+      "priority": "low"
+    },
+    {
+      "name": "ElevenLabs",
+      "platform": "ElevenLabs",
+      "commission": "20-30%月费",
+      "status": "online",
+      "estimatedRevenue": 320,
+      "conversionRate": "2.7",
+      "priority": "low"
+    },
+    {
+      "name": "Runway ML",
+      "platform": "Runway",
+      "commission": "20%月费",
+      "status": "online",
+      "estimatedRevenue": 422,
+      "conversionRate": "0.0",
+      "priority": "low"
+    },
+    {
+      "name": "Canva AI",
+      "platform": "Canva",
+      "commission": "15-25%月费",
+      "status": "online",
+      "estimatedRevenue": 958,
+      "conversionRate": "1.4",
+      "priority": "low"
+    },
+    {
+      "name": "GitHub Copilot",
+      "platform": "GitHub",
+      "commission": "未知",
+      "status": "online",
+      "estimatedRevenue": 669,
+      "conversionRate": "1.7",
+      "priority": "low"
+    }
+  ],
+  "recommendations": [
+    {
+      "type": "optimization",
+      "title": "优化Hostinger页面",
+      "description": "Hostinger转化率最高，建议创建更多相关内容和SEO优化",
+      "priority": "high",
+      "estimatedImpact": "+30% 收入"
+    },
+    {
+      "type": "fix",
+      "title": "修复Grammarly链接",
+      "description": "Grammarly链接转化率较低，需要优化页面内容和CTA",
+      "priority": "medium",
+      "estimatedImpact": "+15% 转化率"
+    },
+    {
+      "type": "content",
+      "title": "创建Canva教程",
+      "description": "Canva申请已提交，提前准备评测内容和教程",
+      "priority": "medium",
+      "estimatedImpact": "+$500/月"
+    }
+  ]
+}

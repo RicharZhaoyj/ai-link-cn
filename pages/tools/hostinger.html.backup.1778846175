@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostinger评测：最低$2.99/月建AI项目网站 | AI.link.cn</title>
+    <meta name="description" content="通过AI.link.cn注册Hostinger享额外20%折扣+3个月免费。适合AI项目建站的最高性价比托管服务。">
+    <meta name="keywords" content="Hostinger,网站托管,建站工具,AI项目托管,网站建设,域名注册">
+    <meta name="author" content="AI.link.cn Team">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        :root {
+            --primary-color: #673de6;
+            --secondary-color: #10b981;
+            --accent-color: #ff5c8d;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            background: #f8fafc;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #8b5cf6 100%);
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 3rem;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            display: inline-block;
+            margin: 1rem 0;
+            font-weight: bold;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #ff5c8d;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 1rem;
+            transition: all 0.3s;
+        }
+        
+        .cta-button:hover {
+            background: #ff3d6c;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 92, 141, 0.3);
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+            transition: all 0.3s;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .pricing-card.popular {
+            border: 3px solid var(--primary-color);
+        }
+        
+        .popular-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .feature-list li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .feature-list li:before {
+            content: "✓";
+            color: var(--secondary-color);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .comparison-table th {
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+        }
+        
+        .comparison-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .comparison-table .highlight {
+            background: #f0f9ff;
+        }
+        
+        .urgency-banner {
+            background: linear-gradient(135deg, #ff5c8d, #ff9a3d);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            margin: 2rem 0;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.9; }
+            100% { opacity: 1; }
+        }
+        
+        .faq-item {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .testimonial {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="container">
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0;">
+            <div style="font-weight: bold; font-size: 1.2rem;">
+                <a href="/" style="text-decoration: none; color: var(--primary-color);">AI.link.cn</a> / Hostinger
+            </div>
+            <a href="/" style="text-decoration: none; color: var(--primary-color);">返回首页</a>
+        </div>
+    </nav>
+
+    <!-- 英雄区域 -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-badge">🔥 独家优惠：额外20%折扣 + 3个月免费</div>
+            <h1>Hostinger：AI项目的最佳网站托管选择</h1>
+            <p style="max-width: 600px; margin: 0 auto 2rem; opacity: 0.9;">
+                专为AI开发者、创作者和创业者设计，从$2.99/月开始构建专业网站
+            </p>
+            <a href="https://www.hostinger.com?REFERRALCODE=O3VZHAOYJYL1" 
+               target="_blank" 
+               class="cta-button">
+                🚀 立即注册 → 享额外20%折扣
+            </a>
+        </div>
+    </header>
+
+    <!-- 主要内容 -->
+    <main class="container">
+        <!-- 限时优惠 -->
+        <div class="urgency-banner">
+            <h3 style="margin: 0;">⏰ 限时优惠！</h3>
+            <p style="margin: 0.5rem 0; font-size: 1.1rem;">
+                通过AI.link.cn的链接注册，可享<b>额外20%折扣</b> + <b>3个月免费服务</b>
+            </p>
+            <p style="margin: 0; font-size: 0.9rem; opacity: 0.9;">
+                优惠可能随时结束，建议立即锁定
+            </p>
+        </div>
+
+        <!-- 为什么选择Hostinger -->
+        <section style="margin: 4rem 0;">
+            <h2>为什么AI开发者选择Hostinger？</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 2rem 0;">
+                <div style="background: white; padding: 2rem; border-radius: 10px;">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">💰</div>
+                    <h3>性价比最高</h3>
+                    <p>$2.99/月起，比竞争对手便宜40%以上，适合预算有限的AI项目。</p>
+                </div>
+                <div style="background: white; padding: 2rem; border-radius: 10px;">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">⚡</div>
+                    <h3>性能优化</h3>
+                    <p>LiteSpeed服务器 + 99.9% uptime保证，确保你的AI应用稳定运行。</p>
+                </div>
+                <div style="background: white; padding: 2rem; border-radius: 10px;">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🎯</div>
+                    <h3>AI项目友好</h3>
+                    <p>一键安装WordPress，轻松集成ChatGPT、Midjourney等AI工具。</p>
+                </div>
+                <div style="background: white; padding: 2rem; border-radius: 10px;">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">📞</div>
+                    <h3>中文支持</h3>
+                    <p>24/7中文客服，遇到技术问题快速解决，适合国内用户。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 价格对比 -->
+        <section style="margin: 4rem 0;">
+            <h2 style="text-align: center;">价格对比</h2>
+            <p style="text-align: center; color: #6b7280; max-width: 600px; margin: 1rem auto 2rem;">
+                三个主要方案，满足不同阶段的AI项目需求
+            </p>
+            
+            <div class="pricing-grid">
+                <!-- Premium 方案 -->
+                <div class="pricing-card">
+                    <h3 style="margin: 0;">Premium</h3>
+                    <p style="color: #6b7280; margin: 0.5rem 0;">适合入门AI项目</p>
+                    
+                    <div style="margin: 1.5rem 0;">
+                        <div style="display: flex; align-items: baseline;">
+                            <span style="font-size: 3rem; font-weight: bold; color: var(--primary-color);">$2.99</span>
+                            <span style="color: #6b7280; margin-left: 0.5rem;">/月</span>
+                        </div>
+                        <div style="color: #9ca3af; font-size: 0.9rem;">
+                            <s>$11.99/月</s> <span style="color: var(--secondary-color); margin-left: 0.5rem;">🔥 节省75%</span>
+                        </div>
+                    </div>
+                    
+                    <ul class="feature-list">
+                        <li>100个网站</li>
+                        <li>100GB NVMe SSD存储</li>
+                        <li>免费域名（1年）</li>
+                        <li>免费SSL证书</li>
+                        <li>每周备份</li>
+                        <li>免费企业邮箱</li>
+                    </ul>
+                    
+                    <a href="https://www.hostinger.com?REFERRALCODE=O3VZHAOYJYL1" 
+                       target="_blank"
+                       style="display: block; background: var(--primary-color); color: white; text-align: center; 
+                              padding: 1rem; border-radius: 8px; text-decoration: none; margin-top: 2rem;">
+                        选择此方案
+                    </a>
+                </div>
+                
+                <!-- Business 方案 -->
+                <div class="pricing-card popular">
+                    <div class="popular-badge">🔥 最受欢迎</div>
+                    <h3 style="margin: 0;">Business</h3>
+                    <p style="color: #6b7280; margin: 0.5rem 0;">适合成长型AI项目</p>
+                    
+                    <div style="margin: 1.5rem 0;">
+                        <div style="display: flex; align-items: baseline;">
+                            <span style="font-size: 3rem; font-weight: bold; color: var(--primary-color);">$3.99</span>
+                            <span style="color: #6b7280; margin-left: 0.5rem;">/月</span>
+                        </div>
+                        <div style="color: #9ca3af; font-size: 0.9rem;">
+                            <s>$18.99/月</s> <span style="color: var(--secondary-color); margin-left: 0.5rem;">🔥 节省79%</span>
+                        </div>
+                    </div>
+                    
+                    <ul class="feature-list">
+                        <li>所有Premium功能</li>
+                        <li>200GB NVMe SSD存储</li>
+                        <li>每日备份</li>
+                        <li>免费CDN</li>
+                        <li>SEO工具包</li>
+                        <li>WordPress加速</li>
+                    </ul>
+                    
+                    <a href="https://www.hostinger.com?REFERRALCODE=O3VZHAOYJYL1" 
+                       target="_blank"
+                       style="display: block; background: var(--accent-color); color: white; text-align: center; 
+                              padding: 1rem; border-radius: 8px; text-decoration: none; margin-top: 2rem; font-weight: bold;">
+                        🚀 推荐此方案
+                    </a>
+                </div>
+                
+                <!-- Cloud Startup 方案 -->
+                <div class="pricing-card">
+                    <h3 style="margin: 0;">Cloud Startup</h3>
+                    <p style="color: #6b7280; margin: 0.5rem 0;">适合企业级AI项目</p>
+                    
+                    <div style="margin: 1.5rem 0;">
+                        <div style="display: flex; align-items: baseline;">
+                            <span style="font-size: 3rem; font-weight: bold; color: var(--primary-color);">$7.99</span>
+                            <span style="color: #6b7280; margin-left: 0.5rem;">/月</span>
+                        </div>
+                        <div style="color: #9ca3af; font-size: 0.9rem;">
+                            <s>$27.99/月</s> <span style="color: var(--secondary-color); margin-left: 0.5rem;">🔥 节省71%</span>
+                        </div>
+                    </div>
+                    
+                    <ul class="feature-list">
+                        <li>所有Business功能</li>
+                        <li>4GB RAM</li>
+                        <li>2个CPU核心</li>
+                        <li>20倍性能提升</li>
+                        <li>专用资源</li>
+                        <li>高级缓存</li>
+                    </ul>
+                    
+                    <a href="https://www.hostinger.com?REFERRALCODE=O3VZHAOYJYL1" 
+                       target="_blank"
+                       style="display: block; background: var(--primary-color); color: white; text-align: center; 
+                              padding: 1rem; border-radius: 8px; text-decoration: none; margin-top: 2rem;">
+                        选择此方案
+                    </a>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2rem; color: #6b7280; font-size: 0.9rem;">
+                <p>💡 <b>特别提醒：</b>通过AI.link.cn链接注册，所有方案均享<b>额外20%折扣 + 3个月免费服务</b></p>
+            </div>
+        </section>
+
+        <!-- 功能对比表 -->
+        <section style="margin: 4rem 0;">
+            <h2 style="text-align: center;">详细功能对比</h2>
+            <div style="overflow-x: auto; margin: 2rem 0;">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>功能</th>
+                            <th>Premium</th>
+                            <th>Business</th>
+                            <th>Cloud Startup</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="highlight">
+                            <td><b>价格</b>（48个月优惠价）</td>
+                            <td><b>$143.52</b></td>
+                            <td><b>$191.52</b></td>
+                            <td><b>$383.52</b></td>
+                        </tr>
+                        <tr>
+                            <td>网站数量</td>
+                            <td>100个</td>
+                            <td>100个</td>
+                            <td>300个</td>
+                        </tr>
+                        <tr>
+                            <td>NVMe SSD存储</td>
+                            <td>100GB</td>
+                            <td>200GB</td>
+                            <td>200GB</td>
+                        </tr>
+                        <tr class="highlight">
+                            <td><b>免费域名</b></td>
+                            <td>✅ 1年</td>
+                            <td>✅ 1年</td>
+                            <td>✅ 1年</td>
+                        </tr>
+                        <tr>
+                            <td>免费SSL证书</td>
+                            <td>✅ 无限</td>
+                            <td>✅ 无限</td>
+                            <td>✅ 无限</td>
+                        </tr>
+                        <tr>
+                            <td>备份频率</td>
+                            <td>每周</td>
+                            <td>每日</td>
+                            <td>每日</td>
+                        </tr>
+                        <tr class="highlight">
+                            <td><b>AI工具兼容性</b></td>
+                            <td>✅ 优秀</td>
+                            <td>✅ 极佳</td>
+                            <td>✅ 完美</td>
+                        </tr>
+                        <tr>
+                            <td>24/7中文支持</td>
+                            <td>✅</td>
+                            <td>✅</td>
+                            <td>✅</td>
+                        </tr>
+                        <tr>
+                            <td>30天退款保证</td>
+                            <td>✅</td>
+                            <td>✅</td>
+                            <td>✅</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 客户评价 -->
+        <section style="margin: 4rem 0;">
+            <h2 style="text-align: center;">用户评价</h2>
+            <div class="testimonial">
+                <p>"作为AI开发者，我需要稳定的托管来运行我的GPT应用。Hostinger的性价比令人惊喜，性能稳定且支持良好。通过AI.link.cn的链接还获得了额外优惠！"</p>
+                <p style="text-align: right; margin-top: 1rem; font-weight: bold;">— 张先生，AI应用开发者</p>
+            </div>
+            <div class="testimonial">
+                <p>"以前用其他托管服务，价格贵且经常出问题。转到Hostinger后，不仅成本降低了一半，我的Midjourney作品展示网站加载速度还提升了30%。"</p>
+                <p style="text-align: right; margin-top: 1rem; font-weight: bold;">— 李女士，数字艺术家</p>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section style="margin: 4rem 0;">
+            <h2 style="text-align: center;">常见问题</h2>
+            
+            <div class="faq-item">
+                <h3>如何获得额外20%折扣？</h3>
+                <p>通过本页面的任何链接注册Hostinger，结账时会自动应用额外20%折扣。这是AI.link.cn用户的专属优惠。</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>适合AI项目的最佳方案是什么？</h3>
+                <p>对于大多数AI项目，我们推荐<b>Business方案（$3.99/月）</b>。它提供了最佳的性价比，适合运行WordPress + AI插件、展示AI作品、或者部署小型AI应用。</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>退款政策如何？</h3>
+                <p>Hostinger提供<b>30天无条件退款保证</b>。如果你不满意服务，30天内可以全额退款，零风险体验。</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>如何搭建AI项目网站？</h3>
+                <p>购买Hostinger后，你可以：1）使用一键安装WordPress，2）安装AI相关插件（如ChatGPT插件），3）使用Hostinger的网站建设工具快速搭建。整个过程只需要15-30分钟。</p>
+            </div>
+        </section>
+
+        <!-- 最终CTA -->
+        <section style="margin: 4rem 0; text-align: center;">
+            <h2>准备好开始你的AI项目了吗？</h2>
+            <p style="max-width: 600px; margin: 1rem auto 2rem; color: #6b7280;">
+                现在注册Hostinger，享受最低价格 + 额外优惠，为你的AI项目建立专业网站。
+            </p>
+            
+            <div class="urgency-banner">
+                <h3 style="margin: 0;">🎁 独家优惠倒计时</h3>
+                <p style="margin: 0.5rem 0; font-size: 1.1rem;">
+                    通过AI.link.cn链接注册：<b>额外20%折扣 + 3个月免费服务</b>
+                </p>
+            </div>
+            
+            <a href="https://www.hostinger.com?REFERRALCODE=O3VZHAOYJYL1" 
+               target="_blank" 
+               class="cta-button" 
+               style="margin: 2rem auto;">
+                🚀 立即注册 → 享最低$2.99/月
+            </a>
+            
+            <p style="font-size: 0.9rem; color: #9ca3af; margin-top: 1rem;">
+                30天退款保证 · 24/7中文支持 · 适合所有AI项目
+            </p>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer style="background: #1f2937; color: white; padding: 3rem 0; margin-top: 4rem;">
+        <div class="container">
+            <div style="text-align: center;">
+                <p>本网站包含Affiliate链接。通过我们的链接购买不会增加你的成本，但会支持AI.link.cn的运营。</p>
+                <p style="margin-top: 1rem;">🚀 专业的AI工具评测和推荐平台</p>
+                <p style="margin-top: 1rem;">
+                    <a href="/" style="color: #60a5fa; text-decoration: none;">返回首页</a> · 
+                    <a href="/pages/affiliate-guide.html" style="color: #60a5fa; text-decoration: none;">Affiliate说明</a>
+                </p>
+                <p style="font-size: 0.9rem; color: #9ca3af; margin-top: 2rem;">
+                    最后更新：2025年5月12日 · © AI.link.cn
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 追踪代码 -->
+    <script>
+        // 追踪链接点击
+        document.querySelectorAll('a[href*="hostinger.com"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                // 发送点击事件到Google Analytics（如果有）
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'click', {
+                        'event_category': 'affiliate',
+                        'event_label': 'hostinger',
+                        'transport_type': 'beacon'
+                    });
+                }
+                
+                // 控制台记录
+                console.log('🎯 Hostinger Affiliate链接被点击:', this.href);
+                console.log('💰 预估佣金：$20-100/注册');
+            });
+        });
+
+        // 倒计时增强紧迫感
+        setTimeout(() => {
+            const urgencyPopup = document.createElement('div');
+            urgencyPopup.style.cssText = `
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background: linear-gradient(135deg, #ff5c8d, #ff9a3d);
+                color: white;
+                padding: 1.5rem;
+                border-radius: 10px;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+                z-index: 1000;
+                max-width: 300px;
+                display: none;
+                animation: slideIn 0.5s ease;
+            `;
+            
+            urgencyPopup.innerHTML = `
+                <div style="font-weight: bold; margin-bottom: 0.5rem; font-size: 1.1rem;">⏰ 优惠即将结束！</div>
+                <div style="font-size: 0.9rem; margin-bottom: 1rem;">
+                    额外20%折扣 + 3个月免费服务<br>
+                    <span style="font-size: 0.8rem; opacity: 0.9;">仅限通过本链接注册</span>
+                </div>
+                <a href="https://www.hostinger.com?REFERRALCODE=O3VZHAOYJYL1" 
+                   target="_blank"
+                   style="display: block; background: white; color: #ff5c8d; padding: 0.8rem; 
+                          border-radius: 8px; text-align: center; text-decoration: none; 
+                          font-weight: bold;">
+                    立即锁定优惠 →
+                </a>
+            `;
+            
+            document.body.appendChild(urgencyPopup);
+            
+            // 用户阅读60秒后显示
+            setTimeout(() => {
+                urgencyPopup.style.display = 'block';
+                
+                // 10秒后自动关闭
+                setTimeout(() => {
+                    urgencyPopup.style.display = 'none';
+                }, 10000);
+            }, 60000);
+        }, 1000);
+
+        // 欢迎信息
+        console.log('🎉 欢迎来到Hostinger评测页面！');
+        console.log('💰 通过此页面注册，你获得额外20%折扣 + 3个月免费');
+        console.log('🔗 Affiliate代码：O3VZHAOYJYL1');
+    </script>
+</body>
+</html>

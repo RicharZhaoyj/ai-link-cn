@@ -1,0 +1,17 @@
+# AI.link.cn 定时任务配置
+# 生成时间: Fri May 15 08:21:56 PM CST 2026
+
+# 每日凌晨2点执行工具发现
+0 2 * * * /root/.openclaw/workspace/scripts/daily_discovery.sh >> /root/.openclaw/workspace/logs/cron_daily.log 2>&1
+
+# 每周一早上6点执行内容生成
+0 6 * * 1 /root/.openclaw/workspace/scripts/weekly_content_generation.sh >> /root/.openclaw/workspace/logs/cron_weekly.log 2>&1
+
+# 每月1号早上8点执行推广分析
+0 8 1 * * /root/.openclaw/workspace/scripts/monthly_promotion_analysis.sh >> /root/.openclaw/workspace/logs/cron_monthly.log 2>&1
+
+# 每周日凌晨3点执行系统备份
+0 3 * * 0 /root/.openclaw/workspace/scripts/backup_system.sh >> /root/.openclaw/workspace/logs/cron_backup.log 2>&1
+
+# 每小时检查一次系统状态（可选）
+# 0 * * * * /root/.openclaw/workspace/scripts/health_check.sh >> /root/.openclaw/workspace/logs/cron_health.log 2>&1

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vercel部署状态 - AI.link.cn</title>
+    <meta http-equiv="refresh" content="30">
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        .status { padding: 20px; border-radius: 10px; margin: 20px 0; }
+        .building { background: #fff3cd; border-left: 5px solid #ffc107; }
+        .success { background: #d4edda; border-left: 5px solid #28a745; }
+        .failed { background: #f8d7da; border-left: 5px solid #dc3545; }
+        .step { margin: 10px 0; padding: 10px; background: #f8f9fa; border-radius: 5px; }
+        .timestamp { color: #6c757d; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <h1>🚀 AI.link.cn Vercel部署状态</h1>
+    <div class="timestamp">最后更新时间: <span id="current-time"></span></div>
+    
+    <div class="status building">
+        <h2>🔄 部署进行中</h2>
+        <p>Vercel正在构建和部署最新更改</p>
+    </div>
+    
+    <h3>部署步骤</h3>
+    <div class="step">
+        ✅ <strong>Git提交完成</strong> (7cb93a0)
+        <div>提交信息: 发布优化后的ProWritingAid和Jasper AI评测页面</div>
+    </div>
+    
+    <div class="step">
+        ✅ <strong>GitHub推送完成</strong>
+        <div>仓库: RicharZhaoyj/ai-link-cn</div>
+    </div>
+    
+    <div class="step">
+        🔄 <strong>Vercel构建中</strong>
+        <div>预计完成时间: 1-3分钟</div>
+    </div>
+    
+    <h3>更新内容</h3>
+    <ul>
+        <li><strong>ProWritingAid</strong>: 3700+字完整评测页面</li>
+        <li><strong>Jasper AI</strong>: 4500+字企业级评测页面</li>
+        <li><strong>主页</strong>: 添加两个新工具卡片</li>
+        <li><strong>导航</strong>: 更新网站导航链接</li>
+        <li><strong>策略</strong>: 移除佣金提及，专注于内容价值</li>
+    </ul>
+    
+    <h3>测试链接</h3>
+    <div style="background: #e9ecef; padding: 15px; border-radius: 5px;">
+        <p><strong>直接访问部署后的页面:</strong></p>
+        <ul>
+            <li><a href="https://project-f5cf8.vercel.app/" target="_blank">🏠 主页</a> - 查看新增工具</li>
+            <li><a href="https://project-f5cf8.vercel.app/pages/tools/prowritingaid.html" target="_blank">✍️ ProWritingAid评测</a></li>
+            <li><a href="https://project-f5cf8.vercel.app/pages/tools/jasper.html" target="_blank">🚀 Jasper AI评测</a></li>
+        </ul>
+    </div>
+    
+    <h3>如果看到旧版本</h3>
+    <ol>
+        <li><strong>清理缓存</strong>: Ctrl+Shift+R (强制刷新)</li>
+        <li><strong>使用隐身模式</strong>: 避免缓存问题</li>
+        <li><strong>等待1-3分钟</strong>: 部署需要时间</li>
+        <li><strong>检查Vercel控制台</strong>: <a href="https://vercel.com/RicharZhaoyj/ai-link-cn" target="_blank">查看部署状态</a></li>
+    </ol>
+    
+    <script>
+        // 更新时间显示
+        function updateTime() {
+            const now = new Date();
+            document.getElementById('current-time').textContent = 
+                now.toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' });
+        }
+        updateTime();
+        setInterval(updateTime, 1000);
+        
+        // 自动测试页面加载
+        setTimeout(() => {
+            fetch('https://project-f5cf8.vercel.app/')
+                .then(response => response.text())
+                .then(html => {
+                    if (html.includes('ProWritingAid')) {
+                        document.querySelector('.status').className = 'status success';
+                        document.querySelector('.status h2').innerHTML = '✅ 部署成功完成';
+                        document.querySelector('.status p').textContent = '页面已成功部署到Vercel';
+                    }
+                })
+                .catch(error => console.log('测试中...'));
+        }, 30000); // 30秒后测试
+    </script>
+</body>
+</html>

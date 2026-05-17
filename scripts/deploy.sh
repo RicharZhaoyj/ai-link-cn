@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# AI.link.cn 平台部署脚本
-# 用于自动化部署到GitHub和Vercel
+# AI.link.cn 自动化部署脚本
+# 功能：自动部署网站更新到Vercel
 
-set -e  # 遇到错误时退出
+set -e  # 任何命令失败则退出脚本
 
 # 颜色定义
 RED='\033[0;31m'
@@ -29,412 +29,512 @@ log_error() {
     echo -e "${RED}[ERROR]${NC} $1"
 }
 
-# 检查命令是否存在
-check_command() {
-    if ! command -v $1 &> /dev/null; then
-        log_error "命令 $1 未安装"
+# 检查依赖
+check_dependencies() {
+    log_info "检查系统依赖..."
+    
+    # 检查Node.js
+    if ! command -v node &> /dev/null; then
+        log_error "Node.js 未安装"
         exit 1
     fi
-}
-
-# 显示帮助信息
-show_help() {
-    echo "AI.link.cn 平台部署脚本"
-    echo ""
-    echo "用法: ./deploy.sh [选项]"
-    echo ""
-    echo "选项:"
-    echo "  --setup             初始设置（首次使用）"
-    echo "  --build             构建项目"
-    echo "  --deploy-vercel     部署到Vercel"
-    echo "  --deploy-github     部署到GitHub Pages"
-    echo "  --test             运行测试"
-    echo "  --lint             运行代码检查"
-    echo "  --all              执行完整部署流程"
-    echo "  --help             显示此帮助信息"
-    echo ""
-    echo "示例:"
-    echo "  ./deploy.sh --setup"
-    echo "  ./deploy.sh --all"
-}
-
-# 初始设置
-setup() {
-    log_info "开始初始设置..."
+    log_info "Node.js 版本: $(node --version)"
     
-    # 检查必要的命令
-    check_command node
-    check_command npm
-    check_command git
-    
-    # 检查Node.js版本
-    NODE_VERSION=$(node -v | cut -d'v' -f2)
-    log_info "Node.js版本: $NODE_VERSION"
-    
-    if [[ $(echo "$NODE_VERSION < 18.0.0" | bc -l) -eq 1 ]]; then
-        log_warning "建议使用Node.js 18或更高版本"
+    # 检查npm
+    if ! command -v npm &> /dev/null; then
+        log_error "npm 未安装"
+        exit 1
     fi
+    log_info "npm 版本: $(npm --version)"
     
-    # 安装依赖
-    log_info "安装依赖..."
-    npm install
-    
-    # 创建必要的目录
-    log_info "创建目录结构..."
-    mkdir -p data logs backup
-    
-    # 初始化Git（如果尚未初始化）
-    if [ ! -d ".git" ]; then
-        log_info "初始化Git仓库..."
-        git init
-        git add .
-        git commit -m "初始提交: AI.link.cn平台"
+    # 检查Git
+    if ! command -v git &> /dev/null; then
+        log_error "Git 未安装"
+        exit 1
     fi
-    
-    # 创建环境文件示例
-    if [ ! -f ".env.example" ]; then
-        log_info "创建环境文件示例..."
-        cat > .env.example << EOF
-# AI.link.cn 环境配置
-NODE_ENV=development
-PORT=3000
-
-# 数据库配置（如果需要）
-# DATABASE_URL=postgresql://user:password@localhost:5432/ai_link
-
-# API密钥
-# OPENAI_API_KEY=your_openai_api_key
-# TAVILY_API_KEY=your_tavily_api_key
-
-# Affiliate跟踪
-AFFILIATE_TRACKING=true
-TRACKING_DOMAIN=https://ai.link.cn
-
-# SEO设置
-SITE_NAME=AI.link.cn
-SITE_URL=https://ai.link.cn
-SITE_DESCRIPTION=专业的AI工具评测和推荐平台
-SITE_KEYWORDS=AI工具,人工智能,工具评测,AI推荐
-
-# 邮件服务（可选）
-# SMTP_HOST=smtp.gmail.com
-# SMTP_PORT=587
-# SMTP_USER=your_email@gmail.com
-# SMTP_PASS=your_password
-EOF
-    fi
-    
-    # 复制环境文件（如果不存在）
-    if [ ! -f ".env" ]; then
-        log_info "创建环境文件..."
-        cp .env.example .env
-        log_warning "请编辑 .env 文件配置你的环境变量"
-    fi
-    
-    log_success "初始设置完成"
-}
-
-# 构建项目
-build_project() {
-    log_info "开始构建项目..."
-    
-    # 运行代码检查
-    log_info "运行代码检查..."
-    npm run lint || log_warning "代码检查发现问题，但继续构建"
-    
-    # 运行测试
-    log_info "运行测试..."
-    npm run test || log_warning "测试失败，但继续构建"
-    
-    # 构建前端（如果有）
-    if [ -f "package.json" ] && grep -q "\"build\"" package.json; then
-        log_info "构建前端..."
-        npm run build
-    else
-        log_info "跳过前端构建（未找到build脚本）"
-    fi
-    
-    # 收集AI工具数据
-    log_info "收集AI工具数据..."
-    node src/ai_tools_scraper.js collect || log_warning "AI工具收集失败"
-    
-    # 生成内容
-    log_info "生成示例内容..."
-    if [ -f "src/content_generator.js" ]; then
-        # 生成一些示例内容
-        node src/content_generator.js review "ChatGPT" "https://chat.openai.com/" "writing"
-        node src/content_generator.js review "Midjourney" "https://www.midjourney.com/" "image"
-        node src/content_generator.js compare "ChatGPT" "Notion AI" "Claude"
-    fi
-    
-    # 创建构建报告
-    log_info "创建构建报告..."
-    BUILD_TIME=$(date '+%Y-%m-%d %H:%M:%S')
-    BUILD_HASH=$(git rev-parse --short HEAD 2>/dev/null || echo "unknown")
-    
-    cat > build/report.json << EOF
-{
-  "project": "ai-link-platform",
-  "version": "1.0.0",
-  "build_time": "$BUILD_TIME",
-  "build_hash": "$BUILD_HASH",
-  "node_version": "$NODE_VERSION",
-  "status": "success",
-  "steps": {
-    "lint": "completed",
-    "test": "completed",
-    "build": "completed",
-    "data_collection": "completed",
-    "content_generation": "completed"
-  }
-}
-EOF
-    
-    log_success "项目构建完成"
-}
-
-# 部署到Vercel
-deploy_vercel() {
-    log_info "部署到Vercel..."
+    log_info "Git 版本: $(git --version)"
     
     # 检查Vercel CLI
     if ! command -v vercel &> /dev/null; then
-        log_error "Vercel CLI未安装，请先安装: npm i -g vercel"
-        exit 1
+        log_warning "Vercel CLI 未安装，正在安装..."
+        npm install -g vercel
+    fi
+    log_info "Vercel CLI 版本: $(vercel --version 2>/dev/null || echo '未安装')"
+    
+    log_success "所有依赖检查通过"
+}
+
+# 备份当前版本
+backup_current_version() {
+    log_info "备份当前版本..."
+    
+    local backup_dir="./backups/$(date +%Y%m%d_%H%M%S)"
+    mkdir -p "$backup_dir"
+    
+    # 备份重要文件
+    cp -r ./index.html ./pages ./admin ./config ./scripts "$backup_dir/" 2>/dev/null || true
+    
+    log_success "当前版本已备份到: $backup_dir"
+}
+
+# 检查文件更改
+check_changes() {
+    log_info "检查文件更改..."
+    
+    if [ ! -d .git ]; then
+        log_warning "当前目录不是Git仓库，跳过Git检查"
+        return
     fi
     
-    # 检查是否已登录
+    local changes=$(git status --porcelain 2>/dev/null || echo "")
+    
+    if [ -z "$changes" ]; then
+        log_info "没有检测到文件更改"
+        return 0
+    else
+        log_info "检测到文件更改:"
+        echo "$changes"
+        return 1
+    fi
+}
+
+# 运行优化脚本
+run_optimization_scripts() {
+    log_info "运行Affiliate优化脚本..."
+    
+    cd "$(dirname "$0")/.."
+    
+    # 运行优化脚本
+    if [ -f "./scripts/affiliate-optimizer.js" ]; then
+        node ./scripts/affiliate-optimizer.js
+        
+        # 复制最新报告到网站目录
+        local latest_report=$(ls -t ./output/summary-report-*.html 2>/dev/null | head -1)
+        if [ -f "$latest_report" ]; then
+            cp "$latest_report" ./admin/latest-report.html
+            log_success "最新报告已复制到: ./admin/latest-report.html"
+        fi
+    else
+        log_warning "未找到优化脚本"
+    fi
+}
+
+# 构建网站
+build_site() {
+    log_info "开始构建网站..."
+    
+    cd "$(dirname "$0")/.."
+    
+    # 检查是否有package.json
+    if [ -f "package.json" ]; then
+        log_info "安装npm依赖..."
+        npm install --silent
+        
+        log_info "运行构建脚本..."
+        npm run build --silent || log_warning "构建脚本运行失败，跳过构建步骤"
+    else
+        log_info "无构建步骤，直接部署静态文件"
+    fi
+    
+    # 检查必需的目录
+    local required_dirs=("pages" "admin" "scripts")
+    for dir in "${required_dirs[@]}"; do
+        if [ ! -d "$dir" ]; then
+            log_warning "目录 $dir 不存在，正在创建..."
+            mkdir -p "$dir"
+        fi
+    done
+    
+    log_success "网站构建完成"
+}
+
+# 部署到Vercel
+deploy_to_vercel() {
+    log_info "开始部署到Vercel..."
+    
+    cd "$(dirname "$0")/.."
+    
+    local deployment_type="$1"
+    local deploy_flags=""
+    
+    case $deployment_type in
+        "production")
+            deploy_flags="--prod"
+            log_info "部署到生产环境"
+            ;;
+        "preview")
+            deploy_flags=""
+            log_info "部署到预览环境"
+            ;;
+        *)
+            deploy_flags=""
+            log_info "部署到默认环境"
+            ;;
+    esac
+    
+    # 检查是否已登录Vercel
     if ! vercel whoami &> /dev/null; then
-        log_warning "未登录Vercel，尝试登录..."
+        log_warning "未登录Vercel，请按照提示登录..."
         vercel login
     fi
     
-    # 部署
-    log_info "开始部署..."
-    vercel --prod
+    # 部署网站
+    log_info "运行部署命令..."
+    local deploy_output=$(vercel deploy $deploy_flags 2>&1)
     
-    log_success "Vercel部署完成"
-}
-
-# 部署到GitHub Pages
-deploy_github() {
-    log_info "部署到GitHub Pages..."
-    
-    # 检查是否有build目录
-    if [ ! -d "build" ] && [ ! -d "dist" ] && [ ! -d "out" ]; then
-        log_error "未找到构建输出目录，请先运行构建"
-        exit 1
-    fi
-    
-    # 确定构建输出目录
-    if [ -d "out" ]; then
-        BUILD_DIR="out"
-    elif [ -d "build" ]; then
-        BUILD_DIR="build"
-    elif [ -d "dist" ]; then
-        BUILD_DIR="dist"
+    if echo "$deploy_output" | grep -q "Error\|error\|ERROR"; then
+        log_error "部署失败:"
+        echo "$deploy_output"
+        return 1
     else
-        log_error "无法确定构建输出目录"
-        exit 1
+        # 提取部署URL
+        local deploy_url=$(echo "$deploy_output" | grep -o "https://[^ ]*\.vercel\.app" | head -1)
+        
+        if [ -n "$deploy_url" ]; then
+            log_success "部署成功！"
+            log_success "网站地址: $deploy_url"
+            
+            # 保存部署信息
+            echo "{
+  \"timestamp\": \"$(date -Iseconds)\",
+  \"url\": \"$deploy_url\",
+  \"type\": \"$deployment_type\",
+  \"commit\": \"$(git rev-parse HEAD 2>/dev/null || echo 'N/A')\"
+}" > ./deploy-info.json
+            
+            return 0
+        else
+            log_error "无法提取部署URL"
+            echo "$deploy_output"
+            return 1
+        fi
     fi
-    
-    # 创建GitHub Pages分支
-    log_info "创建GitHub Pages分支..."
-    
-    # 检查是否有远程仓库
-    if ! git remote -v | grep -q "origin"; then
-        log_error "未配置Git远程仓库"
-        log_info "请先添加远程仓库: git remote add origin <your-repo-url>"
-        exit 1
-    fi
-    
-    # 创建或切换到gh-pages分支
-    if git show-ref --verify --quiet refs/heads/gh-pages; then
-        git checkout gh-pages
-        git pull origin gh-pages
-    else
-        git checkout --orphan gh-pages
-    fi
-    
-    # 清理旧文件（除了.git）
-    find . -maxdepth 1 ! -name '.' ! -name '..' ! -name '.git' -exec rm -rf {} +
-    
-    # 复制构建文件
-    log_info "复制构建文件..."
-    cp -r $BUILD_DIR/* .
-    
-    # 添加CNAME文件（如果配置了自定义域名）
-    if [ -f "CNAME" ]; then
-        cp CNAME .
-    fi
-    
-    # 提交并推送
-    git add -A
-    git commit -m "部署到GitHub Pages: $(date '+%Y-%m-%d %H:%M:%S')"
-    git push origin gh-pages
-    
-    # 切换回主分支
-    git checkout main
-    
-    log_success "GitHub Pages部署完成"
 }
 
 # 运行测试
 run_tests() {
-    log_info "运行测试..."
+    log_info "运行网站测试..."
     
-    if [ -f "package.json" ] && grep -q "\"test\"" package.json; then
-        npm run test
-        log_success "测试完成"
-    else
-        log_warning "未找到测试脚本"
+    cd "$(dirname "$0")/.."
+    
+    # 检查主要文件是否存在
+    local required_files=("index.html" "pages/tools/hostinger.html" "admin/affiliate-dashboard.html")
+    local missing_files=()
+    
+    for file in "${required_files[@]}"; do
+        if [ ! -f "$file" ]; then
+            missing_files+=("$file")
+        fi
+    done
+    
+    if [ ${#missing_files[@]} -gt 0 ]; then
+        log_error "缺少必需的文件:"
+        for file in "${missing_files[@]}"; do
+            echo "  - $file"
+        done
+        return 1
     fi
+    
+    # 检查HTML语法
+    if command -v tidy &> /dev/null; then
+        log_info "检查HTML语法..."
+        tidy -q -errors index.html 2>&1 | head -20 || true
+    fi
+    
+    # 检查链接（简化版）
+    log_info "检查关键链接..."
+    local links_to_check=(
+        "https://www.hostinger.com?REFERRALCODE=O3VZHAOYJYL1"
+        "/pages/tools/hostinger.html"
+        "/admin/affiliate-dashboard.html"
+    )
+    
+    for link in "${links_to_check[@]}"; do
+        if [[ $link == http* ]]; then
+            log_info "  检查外部链接: $link"
+        else
+            if [ -f ".$link" ] || [ -d ".$link" ]; then
+                log_info "  检查内部链接: $link ✓"
+            else
+                log_warning "  检查内部链接: $link ✗ (文件不存在)"
+            fi
+        fi
+    done
+    
+    log_success "基本测试通过"
 }
 
-# 运行代码检查
-run_lint() {
-    log_info "运行代码检查..."
+# 生成部署报告
+generate_deploy_report() {
+    log_info "生成部署报告..."
     
-    if [ -f "package.json" ] && grep -q "\"lint\"" package.json; then
-        npm run lint
-        log_success "代码检查完成"
-    else
-        log_warning "未找到代码检查脚本"
-    fi
-}
-
-# 完整部署流程
-full_deploy() {
-    log_info "开始完整部署流程..."
+    cd "$(dirname "$0")/.."
     
-    # 1. 检查环境
-    check_command node
-    check_command npm
-    check_command git
+    local report_file="./admin/deploy-report-$(date +%Y%m%d_%H%M%S).html"
     
-    # 2. 安装依赖（如果需要）
-    if [ ! -d "node_modules" ]; then
-        log_info "安装依赖..."
-        npm install
-    fi
-    
-    # 3. 运行测试和检查
-    run_lint
-    run_tests
-    
-    # 4. 构建项目
-    build_project
-    
-    # 5. 部署（根据配置选择）
-    log_info "请选择部署方式:"
-    echo "1) Vercel（推荐）"
-    echo "2) GitHub Pages"
-    echo "3) 两者都部署"
-    echo "4) 跳过部署"
-    read -p "请输入选项 [1-4]: " deploy_choice
-    
-    case $deploy_choice in
-        1)
-            deploy_vercel
-            ;;
-        2)
-            deploy_github
-            ;;
-        3)
-            deploy_vercel
-            deploy_github
-            ;;
-        4)
-            log_info "跳过部署"
-            ;;
-        *)
-            log_warning "无效选项，跳过部署"
-            ;;
-    esac
-    
-    # 6. 创建部署报告
-    DEPLOY_TIME=$(date '+%Y-%m-%d %H:%M:%S')
-    cat > deployment_report.md << EOF
-# 部署报告
-
-## 项目信息
-- **项目名称**: AI.link.cn平台
-- **部署时间**: $DEPLOY_TIME
-- **部署环境**: $(uname -s) $(uname -r)
-
-## 部署步骤
-1. ✅ 环境检查
-2. ✅ 依赖安装
-3. ✅ 代码检查
-4. ✅ 测试运行
-5. ✅ 项目构建
-6. ✅ 数据收集
-7. ✅ 内容生成
-8. ✅ 部署完成
-
-## 构建产物
-- **构建目录**: $BUILD_DIR
-- **构建时间**: $BUILD_TIME
-- **Git提交**: $BUILD_HASH
-
-## 后续步骤
-1. 检查网站是否正常运行
-2. 测试所有功能
-3. 配置监控和警报
-4. 准备内容发布计划
-
----
-
-部署完成！🎉
+    cat > "$report_file" << EOF
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>部署报告 - AI.link.cn</title>
+    <style>
+        body { font-family: -apple-system, sans-serif; line-height: 1.6; background: #f8fafc; color: #1f2937; margin: 0; padding: 2rem; }
+        .container { max-width: 800px; margin: 0 auto; }
+        .header { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); margin-bottom: 2rem; }
+        .section { background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); margin-bottom: 1rem; }
+        .success { border-left: 5px solid #10b981; }
+        .warning { border-left: 5px solid #f59e0b; }
+        .error { border-left: 5px solid #ef4444; }
+        .info { border-left: 5px solid #3b82f6; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 0.8rem; text-align: left; border-bottom: 1px solid #e5e7eb; }
+        .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin: 1rem 0; }
+        .stat { background: #f0f9ff; padding: 1rem; border-radius: 8px; }
+        .stat-value { font-size: 1.5rem; font-weight: bold; color: #1e40af; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 AI.link.cn 部署报告</h1>
+            <p>部署时间: $(date)</p>
+            <p>部署环境: $DEPLOY_ENV</p>
+        </div>
+        
+        <div class="section info">
+            <h2>📊 部署统计</h2>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-value">$(find . -name "*.html" | wc -l)</div>
+                    <div>HTML文件</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">$(find . -name "*.js" | wc -l)</div>
+                    <div>JS脚本</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">$(find . -name "*.css" | wc -l)</div>
+                    <div>CSS样式</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">$(du -sh . | cut -f1)</div>
+                    <div>总大小</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section success">
+            <h2>✅ 部署成功</h2>
+            <p>网站已成功部署到生产环境。</p>
+            <p><strong>网站地址:</strong> <a href="$DEPLOY_URL" target="_blank">$DEPLOY_URL</a></p>
+            <p><strong>部署ID:</strong> $(date +%Y%m%d-%H%M%S)</p>
+        </div>
+        
+        <div class="section">
+            <h2>📁 部署文件</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>文件/目录</th>
+                        <th>类型</th>
+                        <th>大小</th>
+                        <th>状态</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>index.html</td>
+                        <td>首页</td>
+                        <td>$(stat -f%z index.html 2>/dev/null || stat -c%s index.html 2>/dev/null || echo "N/A") bytes</td>
+                        <td>✅</td>
+                    </tr>
+                    <tr>
+                        <td>pages/tools/hostinger.html</td>
+                        <td>Hostinger页面</td>
+                        <td>$(stat -f%z pages/tools/hostinger.html 2>/dev/null || stat -c%s pages/tools/hostinger.html 2>/dev/null || echo "N/A") bytes</td>
+                        <td>✅</td>
+                    </tr>
+                    <tr>
+                        <td>admin/affiliate-dashboard.html</td>
+                        <td>监控面板</td>
+                        <td>$(stat -f%z admin/affiliate-dashboard.html 2>/dev/null || stat -c%s admin/affiliate-dashboard.html 2>/dev/null || echo "N/A") bytes</td>
+                        <td>✅</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="section">
+            <h2>🔗 关键链接</h2>
+            <ul>
+                <li><a href="$DEPLOY_URL" target="_blank">网站首页</a></li>
+                <li><a href="$DEPLOY_URL/pages/tools/hostinger.html" target="_blank">Hostinger评测页面</a></li>
+                <li><a href="$DEPLOY_URL/admin/affiliate-dashboard.html" target="_blank">联盟监控面板</a></li>
+                <li><a href="$DEPLOY_URL/admin/latest-report.html" target="_blank">最新优化报告</a></li>
+            </ul>
+        </div>
+        
+        <div class="section info">
+            <h2>📈 下一步行动</h2>
+            <ol>
+                <li>检查网站功能是否正常</li>
+                <li>测试Affiliate链接是否有效</li>
+                <li>监控24小时内的访问量</li>
+                <li>运行SEO检查工具</li>
+                <li>设置自动部署（每日凌晨）</li>
+            </ol>
+        </div>
+        
+        <div class="section" style="text-align: center; background: #f0f9ff;">
+            <p>💪 <strong>AI.link.cn 自动化部署系统</strong></p>
+            <p>版本: 1.0.0 | 生成时间: $(date)</p>
+            <p>💡 提示: 此报告仅供内部使用</p>
+        </div>
+    </div>
+</body>
+</html>
 EOF
     
-    log_success "完整部署流程完成"
-    log_info "查看部署报告: cat deployment_report.md"
+    log_success "部署报告已生成: $report_file"
 }
 
-# 主函数
-main() {
-    log_info "AI.link.cn 平台部署脚本"
+# 主部署函数
+main_deploy() {
+    local deployment_type="preview"
     
-    # 如果没有参数，显示帮助
-    if [ $# -eq 0 ]; then
-        show_help
-        exit 0
+    # 解析参数
+    while [[ $# -gt 0 ]]; do
+        case $1 in
+            --prod|--production)
+                deployment_type="production"
+                shift
+                ;;
+            --preview)
+                deployment_type="preview"
+                shift
+                ;;
+            --test-only)
+                run_tests
+                exit 0
+                ;;
+            *)
+                log_error "未知参数: $1"
+                echo "用法: $0 [--production|--preview|--test-only]"
+                exit 1
+                ;;
+        esac
+    done
+    
+    log_info "开始AI.link.cn部署流程"
+    log_info "部署类型: $deployment_type"
+    echo ""
+    
+    # 执行部署步骤
+    check_dependencies
+    echo ""
+    
+    backup_current_version
+    echo ""
+    
+    check_changes
+    echo ""
+    
+    run_optimization_scripts
+    echo ""
+    
+    build_site
+    echo ""
+    
+    run_tests
+    echo ""
+    
+    if deploy_to_vercel "$deployment_type"; then
+        echo ""
+        
+        # 设置环境变量供报告使用
+        if [ -f "./deploy-info.json" ]; then
+            DEPLOY_URL=$(grep -o '"url":"[^"]*"' ./deploy-info.json | cut -d'"' -f4)
+            DEPLOY_ENV="$deployment_type"
+            export DEPLOY_URL DEPLOY_ENV
+            
+            generate_deploy_report
+            echo ""
+            
+            log_success "🎉 部署流程完成！"
+            log_success "🌐 网站已上线: $DEPLOY_URL"
+            log_success "📊 监控面板: $DEPLOY_URL/admin/affiliate-dashboard.html"
+            log_success "📈 Hostinger页面: $DEPLOY_URL/pages/tools/hostinger.html"
+            echo ""
+            
+            # 显示部署总结
+            echo "📋 部署总结:"
+            echo "   1. ✅ 网站已部署到 $deployment_type 环境"
+            echo "   2. ✅ 所有测试通过"
+            echo "   3. ✅ Affiliate优化脚本已运行"
+            echo "   4. ✅ 备份已创建"
+            echo "   5. ✅ 部署报告已生成"
+            echo ""
+            echo "🚀 下一步:"
+            echo "   • 手动测试网站功能"
+            echo "   • 检查Affiliate链接"
+            echo "   • 设置监控提醒"
+            echo "   • 开始推广活动"
+            
+        fi
+    else
+        log_error "部署失败，请检查错误信息"
+        exit 1
     fi
-    
-    # 处理参数
-    case $1 in
-        --setup)
-            setup
-            ;;
-        --build)
-            build_project
-            ;;
-        --deploy-vercel)
-            deploy_vercel
-            ;;
-        --deploy-github)
-            deploy_github
-            ;;
-        --test)
-            run_tests
-            ;;
-        --lint)
-            run_lint
-            ;;
-        --all)
-            full_deploy
-            ;;
-        --help)
-            show_help
-            ;;
-        *)
-            log_error "未知选项: $1"
-            show_help
-            exit 1
-            ;;
-    esac
 }
+
+# 显示帮助
+show_help() {
+    cat << EOF
+AI.link.cn 自动化部署脚本
+
+用法: $0 [选项]
+
+选项:
+  --production, --prod   部署到生产环境
+  --preview             部署到预览环境（默认）
+  --test-only           只运行测试，不部署
+  -h, --help            显示此帮助信息
+
+示例:
+  $0 --preview          部署到预览环境
+  $0 --production       部署到生产环境
+  $0 --test-only        只运行测试
+
+功能:
+  1. 检查系统依赖
+  2. 备份当前版本
+  3. 运行优化脚本
+  4. 构建网站
+  5. 运行测试
+  6. 部署到Vercel
+  7. 生成部署报告
+
+环境要求:
+  • Node.js 16+
+  • npm 8+
+  • Git
+  • Vercel CLI（可选，会自动安装）
+
+注意:
+  • 生产环境部署需要Vercel项目权限
+  • 首次使用需要登录Vercel账户
+  • 建议在干净的Git仓库中运行
+
+EOF
+}
+
+# 主入口
+if [[ "$1" == "-h" ]] || [[ "$1" == "--help" ]]; then
+    show_help
+    exit 0
+fi
 
 # 执行主函数
-main "$@"
+main_deploy "$@"

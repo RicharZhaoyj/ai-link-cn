@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联盟收入监控面板 | AI.link.cn</title>
+    <meta name="description" content="AI.link.cn联盟收入监控和管理面板">
+    <style>
+        :root {
+            --primary-color: #3b82f6;
+            --secondary-color: #10b981;
+            --warning-color: #f59e0b;
+            --danger-color: #ef4444;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f8fafc;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .header {
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 1.5rem 2rem;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .stat-card.primary {
+            border-left: 5px solid var(--primary-color);
+        }
+        
+        .stat-card.success {
+            border-left: 5px solid var(--secondary-color);
+        }
+        
+        .stat-card.warning {
+            border-left: 5px solid var(--warning-color);
+        }
+        
+        .stat-card.danger {
+            border-left: 5px solid var(--danger-color);
+        }
+        
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin: 0.5rem 0;
+        }
+        
+        .stat-label {
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+        
+        .stat-change {
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+        
+        .stat-change.positive {
+            color: var(--secondary-color);
+        }
+        
+        .stat-change.negative {
+            color: var(--danger-color);
+        }
+        
+        .section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .section-title {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: #1f2937;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th {
+            text-align: left;
+            padding: 1rem;
+            background: #f9fafb;
+            border-bottom: 1px solid #e5e7eb;
+            font-weight: 600;
+            color: #374151;
+        }
+        
+        td {
+            padding: 1rem;
+            border-bottom: 1px solid #f3f4f6;
+        }
+        
+        tr:hover {
+            background: #f9fafb;
+        }
+        
+        .status-badge {
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+        
+        .status-active {
+            background: #d1fae5;
+            color: #065f46;
+        }
+        
+        .status-pending {
+            background: #fef3c7;
+            color: #92400e;
+        }
+        
+        .status-inactive {
+            background: #f3f4f6;
+            color: #6b7280;
+        }
+        
+        .btn {
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .btn-success {
+            background: var(--secondary-color);
+            color: white;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 1px solid #d1d5db;
+            color: #374151;
+        }
+        
+        .tabs {
+            display: flex;
+            border-bottom: 1px solid #e5e7eb;
+            margin-bottom: 2rem;
+        }
+        
+        .tab {
+            padding: 1rem 2rem;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+        }
+        
+        .tab.active {
+            border-bottom-color: var(--primary-color);
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        .chart-container {
+            height: 300px;
+            margin: 2rem 0;
+        }
+        
+        .insight-card {
+            background: #f0f9ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+        
+        .affiliate-link {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            padding: 1rem;
+            font-family: monospace;
+            margin: 0.5rem 0;
+            word-break: break-all;
+        }
+        
+        .actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+        
+        .modal-content {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            max-width: 500px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #6b7280;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e5e7eb;
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <div class="header">
+            <div>
+                <h1 style="font-size: 1.8rem; margin-bottom: 0.5rem;">💰 联盟收入监控面板</h1>
+                <p style="color: #6b7280;">AI.link.cn 联盟营销收入跟踪和管理</p>
+            </div>
+            <div style="display: flex; gap: 1rem;">
+                <button class="btn btn-outline" onclick="refreshData()">🔄 刷新数据</button>
+                <button class="btn btn-primary" onclick="openModal('addAffiliate')">+ 添加新联盟</button>
+            </div>
+        </div>
+        
+        <!-- 统计数据 -->
+        <div class="stats-grid">
+            <div class="stat-card primary">
+                <div class="stat-label">本月预计收入</div>
+                <div class="stat-value">$2,847</div>
+                <div class="stat-change positive">↑ 34% 较上月</div>
+            </div>
+            
+            <div class="stat-card success">
+                <div class="stat-label">总点击次数</div>
+                <div class="stat-value">8,452</div>
+                <div class="stat-change positive">↑ 22% 较上周</div>
+            </div>
+            
+            <div class="stat-card warning">
+                <div class="stat-label">转化率</div>
+                <div class="stat-value">1.8%</div>
+                <div class="stat-change negative">↓ 0.2% 较上周</div>
+            </div>
+            
+            <div class="stat-card danger">
+                <div class="stat-label">待审核佣金</div>
+                <div class="stat-value">$1,236</div>
+                <div class="stat-change positive">↑ $512 新订单</div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-label">活跃联盟项目</div>
+                <div class="stat-value">14</div>
+                <div class="stat-label">共追踪 25 个项目</div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-label">平均每点击收入</div>
+                <div class="stat-value">$0.34</div>
+                <div class="stat-label">每千次点击收入：$337</div>
+            </div>
+        </div>
+        
+        <!-- 标签页 -->
+        <div class="tabs">
+            <div class="tab active" onclick="switchTab('overview')">📊 概览</div>
+            <div class="tab" onclick="switchTab('affiliates')">🔗 联盟项目</div>
+            <div class="tab" onclick="switchTab('performance')">📈 表现分析</div>
+            <div class="tab" onclick="switchTab('tools')">🛠️ 工具管理</div>
+            <div class="tab" onclick="switchTab('settings')">⚙️ 设置</div>
+        </div>
+        
+        <!-- 概览标签页 -->
+        <div id="overview" class="tab-content">
+            <div class="section">
+                <h2 class="section-title">📈 收入趋势</h2>
+                <div class="chart-container">
+                    <canvas id="revenueChart"></canvas>
+                </div>
+                
+                <div class="insight-card">
+                    <h3 style="margin-bottom: 1rem;">💡 关键洞察</h3>
+                    <p><strong>Hostinger表现突出：</strong>本周贡献了总收入的42%，转化率高达3.1%，明显高于平台平均1.8%。</p>
+                    <p><strong>优化机会：</strong>Canva和Grammarly转化率较低（0.8%），需要优化页面内容和CTA。</p>
+                    <p><strong>流量来源：</strong>SEO流量转化率最高（2.3%），社交媒体流量增长最快（+45%）。</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">🏆 表现最佳联盟</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>联盟项目</th>
+                            <th>本月收入</th>
+                            <th>转化率</th>
+                            <th>点击次数</th>
+                            <th>状态</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div style="display: flex; align-items: center; gap: 1rem;">
+                                    <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #667eea, #764ba2); 
+                                         border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">
+                                        H
+                                    </div>
+                                    <div>
+                                        <div style="font-weight: 600;">Hostinger</div>
+                                        <div style="font-size: 0.8rem; color: #6b7280;">网站托管服务</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td><strong>$1,192</strong></td>
+                            <td><span style="color: var(--secondary-color);">3.1%</span></td>
+                            <td>3,847</td>
+                            <td><span class="status-badge status-active">活跃</span></td>
+                            <td>
+                                <button class="btn btn-outline" onclick="viewDetails('hostinger')">查看</button>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <div style="display: flex; align-items: center; gap: 1rem;">
+                                    <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #10b981, #059669); 
+                                         border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">
+                                        C
+                                    </div>
+                                    <div>
+                                        <div style="font-weight: 600;">ChatGPT Plus</div>
+                                        <div style="font-size: 0.8rem; color: #6b7280;">AI对话工具</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td><strong>$845</strong></td>
+                            <td><span style="color: var(--secondary-color);">2.4%</span></td>
+                            <td>2,154</td>
+                            <td><span class="status-badge status-active">活跃</span></td>
+                            <td>
+                                <button class="btn btn-outline" onclick="viewDetails('chatgpt')">查看</button>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <div style="display: flex; align-items: center; gap: 1rem;">
+                                    <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #f59e0b, #d97706); 
+                                         border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">
+                                        M
+                                    </div>
+                                    <div>
+                                        <div style="font-weight: 600;">Midjourney</div>
+                                        <div style="font-size: 0.8rem; color: #6b7280;">AI图像生成</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td><strong>$512</strong></td>
+                            <td><span style="color: var(--secondary-color);">2.1%</span></td>
+                            <td>1,874</td>
+                            <td><span class="status-badge status-active">活跃</span></td>
+                            <td>
+                                <button class="btn btn-outline" onclick="viewDetails('midjourney')">查看</button>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <div style="display: flex; align-items: center; gap: 1rem;">
+                                    <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #ef4444, #dc2626); 
+                                         border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">
+                                        C
+                                    </div>
+                                    <div>
+                                        <div style="font-weight: 600;">Canva</div>
+                                        <div style="font-size: 0.8rem; color: #6b7280;">设计工具</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td><strong>$298</strong></td>
+                            <td><span style="color: var(--danger-color);">0.8%</span></td>
+                            <td>2,365</td>
+                            <td><span class="status-badge status-pending">申请中</span></td>
+                            <td>
+                                <button class="btn btn-outline" onclick="viewDetails('canva')">查看</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <!-- 联盟项目标签页 -->
+        <div id="affiliates" class="tab-content" style="display: none;">
+            <div class="section">
+                <h2 class="section-title">🔗 所有联盟项目</h2>
+                <div class="actions">
+                    <button class="btn btn-primary" onclick="openModal('addAffiliate')">+ 添加新联盟</button>
+                    <button class="btn btn-outline" onclick="exportData()">📥 导出数据</button>
+                    <button class="btn btn-outline" onclick="importData()">📤 导入数据</button>
+                </div>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>项目名称</th>
+                            <th>平台</th>
+                            <th>佣金类型</th>
+                            <th>预估收入</th>
+                            <th>链接状态</th>
+                            <th>最后检查</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody id="affiliatesTable">
+                        <!-- 通过JavaScript动态加载 -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <!-- 表现分析标签页 -->
+        <div id="performance" class="tab-content" style="display: none;">
+            <div class="section">
+                <h2 class="section-title">📊 转化率分析</h2>
+                <div class="chart-container">
+                    <canvas id="conversionChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">🔍 点击来源分析</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div>
+                        <h3 style="margin-bottom: 1rem;">流量来源分布</h3>
+                        <canvas id="trafficChart"></canvas>
+                    </div>
+                    <div>
+                        <h3 style="margin-bottom: 1rem;">转化率比较</h3>
+                        <canvas id="sourceConversionChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 工具管理标签页 -->
+        <div id="tools" class="tab-content" style="display: none;">
+            <div class="section">
+                <h2 class="section-title">🛠️ 实用工具</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div style="background: #f9fafb; padding: 2rem; border-radius: 10px;">
+                        <h3 style="margin-bottom: 1rem;">🔗 链接生成器</h3>
+                        <p>快速生成带有追踪参数的Affiliate链接。</p>
+                        <button class="btn btn-primary" onclick="openModal('linkGenerator')">打开工具</button>
+                    </div>
+                    
+                    <div style="background: #f9fafb; padding: 2rem; border-radius: 10px;">
+                        <h3 style="margin-bottom: 1rem;">📊 佣金计算器</h3>
+                        <p>根据点击量和转化率预估收入。</p>
+                        <button class="btn btn-primary" onclick="openModal('calculator')">打开工具</button>
+                    </div>
+                    
+                    <div style="background: #f9fafb; padding: 2rem; border-radius: 10px;">
+                        <h3 style="margin-bottom: 1rem;">📈 SEO优化检查</h3>
+                        <p>检查Affiliate页面的SEO表现。</p>
+                        <button class="btn btn-primary" onclick="openModal('seoCheck')">打开工具</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 设置标签页 -->
+        <div id="settings" class="tab-content" style="display: none;">
+            <div class="section">
+                <h2 class="section-title">⚙️ 系统设置</h2>
+                <div class="form-group">
+                    <label class="form-label">自动刷新间隔（分钟）</label>
+                    <select class="form-input">
+                        <option value="5">5分钟</option>
+                        <option value="15" selected>15分钟</option>
+                        <option value="30">30分钟</option>
+                        <option value="60">1小时</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">收入目标（每月）</label>
+                    <input type="number" class="form-input" value="5000" min="100" step="100">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">转化率目标</label>
+                    <input type="number" class="form-input" value="1.8" min="0.1" max="10" step="0.1">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">邮件通知</label>
+                    <div>
+                        <label style="display: flex; align-items: center; gap: 0.5rem;">
+                            <input type="checkbox" checked>
+                            <span>新订单通知</span>
+                        </label>
+                        <label style="display: flex; align-items: center; gap: 0.5rem;">
+                            <input type="checkbox" checked>
+                            <span>链接失效提醒</span>
+                        </label>
+                        <label style="display: flex; align-items: center; gap: 0.5rem;">
+                            <input type="checkbox">
+                            <span>每日收入报告</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <button class="btn btn-success" onclick="saveSettings()">💾 保存设置</button>
+            </div>
+        </div>
+        
+        <!-- 页脚 -->
+        <div class="footer">
+            <p>💡 提示：所有数据为模拟数据，实际收入请查看各联盟平台后台。</p>
+            <p>📅 最后更新：<span id="lastUpdate">正在加载...</span></p>
+            <p>🔒 仅限管理员访问</p>
+        </div>
+    </div>
+    
+    <!-- 模态框 -->
+    <div id="addAffiliate" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>添加新联盟项目</h2>
+                <button class="close-btn" onclick="closeModal('addAffiliate')">×</button>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">项目名称</label>
+                <input type="text" class="form-input" id="affiliateName" placeholder="例如：Hostinger">
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">平台/公司</label>
+                <input type="text" class="form-input" id="affiliatePlatform" placeholder="例如：Hostinger">
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">Affiliate链接</label>
+                <input type="url" class="form-input" id="affiliateUrl" placeholder="https://...">
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">佣金类型</label>
+                <select class="form-input" id="commissionType">
+                    <option value="percentage">百分比分成</option>
+                    <option value="fixed">固定金额</option>
+                    <option value="hybrid">混合模式</option>
+                    <option value="recurring">重复佣金</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">预估佣金</label>
+                <input type="text" class="form-input" id="commissionRate" placeholder="例如：30% 或 $20/单">
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">状态</label>
+                <select class="form-input" id="affiliateStatus">
+                    <option value="active">活跃</option>
+                    <option value="pending">申请中</option>
+                    <option value="inactive">已暂停</option>
+                </select>
+            </div>
+            
+            <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                <button class="btn btn-primary" onclick="saveAffiliate()">💾 保存项目</button>
+                <button class="btn btn-outline" onclick="closeModal('addAffiliate')">取消</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // 数据存储
+        let affiliateData = [];
+        let charts = {};
+        
+        // 初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            loadData();
+            initCharts();
+            updateLastUpdate();
+        });
+        
+        // 加载数据
+        function loadData() {
+            // 模拟数据
+            affiliateData = [
+                {
+                    id: 1,
+                    name: 'Hostinger',
+                    platform: 'Hostinger',
+                    url: 'https://www.hostinger.com?REFERRALCODE=O3VZHAOYJYL1',
+                    commission: '20% 折扣 + 佣金',
+                    estimated: '$1,192',
+                    status: 'active',
+                    lastChecked: '2025-05-12'
+                },
+                {
+                    id: 2,
+                    name: 'ChatGPT Plus',
+                    platform: 'OpenAI',
+                    url: 'https://chat.openai.com/?ref=ailink',
+                    commission: '$20-50/新用户',
+                    estimated: '$845',
+                    status: 'active',
+                    lastChecked: '2025-05-11'
+                },
+                {
+                    id: 3,
+                    name: 'Midjourney',
+                    platform: 'Midjourney',
+                    url: 'https://www.midjourney.com/?ref=ailink',
+                    commission: '20-30%月费',
+                    estimated: '$512',
+                    status: 'active',
+                    lastChecked: '2025-05-10'
+                },
+                {
+                    id: 4,
+                    name: 'Canva',
+                    platform: 'Canva',
+                    url: 'https://www.canva.com/?ref=ailink',
+                    commission: '15-25%月费',
+                    estimated: '$298',
+                    status: 'pending',
+                    lastChecked: '2025-05-12'
+                },
+                {
+                    id: 5,
+                    name: 'Grammarly',
+                    platform: 'Grammarly',
+                    url: 'https://www.grammarly.com/?ref=ailink',
+                    commission: '20%年费',
+                    estimated: '$0',
+                    status: 'inactive',
+                    lastChecked: '2025-05-09'
+                }
+            ];
+            
+            updateAffiliatesTable();
+        }
+        
+        // 初始化图表
+        function initCharts() {
+            // 收入趋势图
+            const revenueCtx = document.getElementById('revenueChart').getContext('2d');
+            charts.revenue = new Chart(revenueCtx, {
+                type: 'line',
+                data: {
+                    labels: ['1月', '2月', '3月', '4月', '5月'],
+                    datasets: [{
+                        label: '月收入 ($)',
+                        data: [1500, 2100, 1850, 2450, 2847],
+                        borderColor: '#3b82f6',
+                        backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false
+                }
+            });
+            
+            // 转化率图
+            const conversionCtx = document.getElementById('conversionChart').getContext('2d');
+            charts.conversion = new Chart(conversionCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Hostinger', 'ChatGPT', 'Midjourney', 'Canva', 'Grammarly'],
+                    datasets: [{
+                        label: '转化率 (%)',
+                        data: [3.1, 2.4, 2.1, 0.8, 0.5],
+                        backgroundColor: ['#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false
+                }
+            });
+            
+            // 流量来源图
+            const trafficCtx = document.getElementById('trafficChart').getContext('2d');
+            charts.traffic = new Chart(trafficCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['SEO', '社交媒体', '直接访问', '推荐', '邮件'],
+                    datasets: [{
+                        data: [42, 28, 15, 10, 5],
+                        backgroundColor: ['#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false
+                }
+            });
+        }
+        
+        // 切换标签页
+        function switchTab(tabName) {
+            // 隐藏所有标签页
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.style.display = 'none';
+            });
+            
+            // 移除所有活跃状态
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // 显示目标标签页
+            document.getElementById(tabName).style.display = 'block';
+            
+            // 设置活跃状态
+            document.querySelector(`[onclick="switchTab('${tabName}')"]`).classList.add('active');
+        }
+        
+        // 更新联盟表格
+        function updateAffiliatesTable() {
+            const tableBody = document.getElementById('affiliatesTable');
+            tableBody.innerHTML = '';
+            
+            affiliateData.forEach(item => {
+                const row = document.createElement('tr');
+                
+                let statusClass = 'status-inactive';
+                if (item.status === 'active') statusClass = 'status-active';
+                if (item.status === 'pending') statusClass = 'status-pending';
+                
+                row.innerHTML = `
+                    <td>
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #667eea, #764ba2); 
+                                 border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">
+                                ${item.name.charAt(0)}
+                            </div>
+                            <div>
+                                <div style="font-weight: 600;">${item.name}</div>
+                                <div style="font-size: 0.8rem; color: #6b7280;">${item.platform}</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>${item.platform}</td>
+                    <td>${item.commission}</td>
+                    <td><strong>${item.estimated}</strong></td>
+                    <td><span class="status-badge ${statusClass}">${getStatusText(item.status)}</span></td>
+                    <td>${item.lastChecked}</td>
+                    <td>
+                        <button class="btn btn-outline" onclick="copyLink('${item.url}')">复制链接</button>
+                        <button class="btn btn-outline" onclick="editAffiliate(${item.id})">编辑</button>
+                    </td>
+                `;
+                
+                tableBody.appendChild(row);
+            });
+        }
+        
+        // 获取状态文本
+        function getStatusText(status) {
+            const statusMap = {
+                'active': '活跃',
+                'pending': '申请中',
+                'inactive': '已暂停'
+            };
+            return statusMap[status] || status;
+        }
+        
+        // 复制链接
+        function copyLink(url) {
+            navigator.clipboard.writeText(url).then(() => {
+                alert('链接已复制到剪贴板！');
+            }).catch(err => {
+                console.error('复制失败:', err);
+                alert('复制失败，请手动复制链接。');
+            });
+        }
+        
+        // 刷新数据
+        function refreshData() {
+            // 模拟数据刷新
+            document.querySelectorAll('.stat-value').forEach((el, index) => {
+                const currentValue = parseFloat(el.textContent.replace('$', '')) || parseFloat(el.textContent);
+                const randomChange = Math.random() * 0.1 - 0.05; // -5% 到 +5% 的随机变化
+                const newValue = currentValue * (1 + randomChange);
+                
+                if (el.textContent.includes('$')) {
+                    el.textContent = '$' + Math.round(newValue);
+                } else {
+                    el.textContent = Math.round(newValue);
+                }
+            });
+            
+            updateLastUpdate();
+        }
+        
+        // 打开模态框
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'flex';
+        }
+        
+        // 关闭模态框
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+        
+        // 保存联盟项目
+        function saveAffiliate() {
+            const name = document.getElementById('affiliateName').value;
+            const platform = document.getElementById('affiliatePlatform').value;
+            const url = document.getElementById('affiliateUrl').value;
+            const commission = document.getElementById('commissionRate').value;
+            const status = document.getElementById('affiliateStatus').value;
+            
+            if (!name || !platform || !url) {
+                alert('请填写必填字段！');
+                return;
+            }
+            
+            // 添加到数据
+            const newItem = {
+                id: affiliateData.length + 1,
+                name: name,
+                platform: platform,
+                url: url,
+                commission: commission,
+                estimated: '$0',
+                status: status,
+                lastChecked: new Date().toISOString().split('T')[0]
+            };
+            
+            affiliateData.push(newItem);
+            updateAffiliatesTable();
+            closeModal('addAffiliate');
+            alert('联盟项目已添加！');
+        }
+        
+        // 保存设置
+        function saveSettings() {
+            alert('设置已保存！');
+        }
+        
+        // 导出数据
+        function exportData() {
+            const dataStr = JSON.stringify(affiliateData, null, 2);
+            const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
+            
+            const exportFileDefaultName = `affiliate-data-${new Date().toISOString().split('T')[0]}.json`;
+            
+            const linkElement = document.createElement('a');
+            linkElement.setAttribute('href', dataUri);
+            linkElement.setAttribute('download', exportFileDefaultName);
+            linkElement.click();
+        }
+        
+        // 导入数据
+        function importData() {
+            alert('导入功能需要服务器支持，请手动导入JSON文件。');
+        }
+        
+        // 更新最后更新时间
+        function updateLastUpdate() {
+            const now = new Date();
+            document.getElementById('lastUpdate').textContent = now.toLocaleString('zh-CN');
+        }
+        
+        // 查看详情
+        function viewDetails(platform) {
+            switch(platform) {
+                case 'hostinger':
+                    window.open('/pages/tools/hostinger.html', '_blank');
+                    break;
+                default:
+                    alert(`查看 ${platform} 的详细数据...`);
+            }
+        }
+        
+        // 定时刷新
+        setInterval(refreshData, 5 * 60 * 1000); // 每5分钟刷新一次
+        
+        // 初始化完成
+        console.log('💰 联盟收入监控面板已加载');
+        console.log('📊 共追踪 ' + affiliateData.length + ' 个联盟项目');
+        console.log('💻 面板版本: 1.0.0');
+    </script>
+</body>
+</html>

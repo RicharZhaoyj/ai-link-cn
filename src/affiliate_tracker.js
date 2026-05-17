@@ -539,7 +539,51 @@ if (require.main === module) {
         status: 'pending',
         lastChecked: new Date().toISOString(),
         notes: '✅ 有官方Affiliate项目。申请地址：https://www.hostinger.com/affiliates 高佣金'
+      },
+      // 实际可申请的Affiliate工具（添加在默认链接后面）
+      {
+        id: 'canva',
+        name: 'Canva AI',
+        toolName: 'Canva',
+        type: 'subscription',
+        url: 'https://www.canva.com/',
+        affiliateUrl: 'https://www.canva.com/?ref=YOUR_AFFILIATE_ID',
+        platform: 'Canva',
+        commission: '按销售计算',
+        commissionType: 'one_time',
+        status: 'pending',
+        lastChecked: new Date().toISOString(),
+        notes: '✅ 有官方Affiliate项目。申请地址：https://www.canva.com/affiliates/'
+      },
+      {
+        id: 'convertkit',
+        name: 'ConvertKit',
+        toolName: 'ConvertKit',
+        type: 'subscription',
+        url: 'https://convertkit.com/',
+        affiliateUrl: 'https://convertkit.com/?via=YOUR_AFFILIATE_ID',
+        platform: 'ConvertKit',
+        commission: '30%月费',
+        commissionType: 'percentage_recurring',
+        status: 'pending',
+        lastChecked: new Date().toISOString(),
+        notes: '✅ 有官方Affiliate项目。申请地址：https://convertkit.com/affiliates 容易批准'
+      },
+      {
+        id: 'hostinger',
+        name: 'Hostinger',
+        toolName: 'Hostinger',
+        type: 'one_time',
+        url: 'https://www.hostinger.com/',
+        affiliateUrl: 'https://www.hostinger.com/?ref=YOUR_AFFILIATE_ID',
+        platform: 'Hostinger',
+        commission: '60-100%首次购买',
+        commissionType: 'percentage_one_time',
+        status: 'pending',
+        lastChecked: new Date().toISOString(),
+        notes: '✅ 有官方Affiliate项目。申请地址：https://www.hostinger.com/affiliates 高佣金'
       }
+    
     
 
 module.exports = AffiliateTracker;

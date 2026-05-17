@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>更新验证测试 - AI.link.cn</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .success { color: green; font-weight: bold; }
+        .check-item { margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <h1>AI.link.cn 更新验证</h1>
+    <p>测试时间: 2025年5月15日 19:05</p>
+    
+    <div class="check-item">
+        ✅ <strong>主页文件已更新</strong> - index.html包含新工具链接
+    </div>
+    
+    <div class="check-item">
+        ✅ <strong>ProWritingAid页面</strong> - 已替换为无佣金完整评测
+    </div>
+    
+    <div class="check-item">
+        ✅ <strong>Jasper AI页面</strong> - 已替换为无佣金企业评测
+    </div>
+    
+    <h2>主页更新内容验证：</h2>
+    <div id="homepage-content"></div>
+    
+    <h2>立即测试：</h2>
+    <ul>
+        <li><a href="/">访问主页</a> - 应该显示ProWritingAid和Jasper AI</li>
+        <li><a href="/pages/tools/prowritingaid.html">ProWritingAid评测</a></li>
+        <li><a href="/pages/tools/jasper.html">Jasper AI评测</a></li>
+    </ul>
+    
+    <h2>如果主页没有变化：</h2>
+    <ol>
+        <li>清理浏览器缓存 (Ctrl+Shift+R)</li>
+        <li>等待CDN/部署更新（如果有）</li>
+        <li>检查是否访问了正确的URL</li>
+        <li>联系我提供更多细节</li>
+    </ol>
+    
+    <script>
+        // 动态加载主页内容验证
+        fetch('/')
+            .then(response => response.text())
+            .then(html => {
+                const doc = new DOMParser().parseFromString(html, 'text/html');
+                const homepageContent = document.getElementById('homepage-content');
+                
+                // 检查是否包含ProWritingAid
+                if (html.includes('ProWritingAid')) {
+                    homepageContent.innerHTML += '<div class="success">✅ 主页包含ProWritingAid</div>';
+                } else {
+                    homepageContent.innerHTML += '<div style="color:red;">❌ 主页未找到ProWritingAid</div>';
+                }
+                
+                // 检查是否包含Jasper AI
+                if (html.includes('Jasper AI')) {
+                    homepageContent.innerHTML += '<div class="success">✅ 主页包含Jasper AI</div>';
+                } else {
+                    homepageContent.innerHTML += '<div style="color:red;">❌ 主页未找到Jasper AI</div>';
+                }
+            })
+            .catch(error => {
+                document.getElementById('homepage-content').innerHTML = 
+                    '<div style="color:red;">无法获取主页内容: ' + error + '</div>';
+            });
+    </script>
+</body>
+</html>

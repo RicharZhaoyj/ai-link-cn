@@ -1,0 +1,24 @@
+# AI.link.cn 自动化任务配置
+# 时间格式: 分钟 小时 日期 月份 星期 命令
+
+# 每日任务
+0 2 * * *  cd /root/.openclaw/workspace && node scripts/affiliate-optimizer.js >> logs/cron/daily-optimization-\$(date +\%Y\%m\%d).log 2>&1
+30 2 * * *  cd /root/.openclaw/workspace && ./scripts/deploy.sh --test-only >> logs/cron/daily-test-\$(date +\%Y\%m\%d).log 2>&1
+
+# 备份任务
+0 3 * * *  cd /root/.openclaw/workspace && tar -czf data/backups/backup-\$(date +\%Y\%m\%d-\%H\%M\%S).tar.gz ./* --exclude=./data/backups --exclude=./logs >> logs/cron/backup-\$(date +\%Y\%m\%d).log 2>&1
+
+# 清理旧备份（保留最近7天）
+0 4 * * *  cd /root/.openclaw/workspace && find data/backups -name "*.tar.gz" -mtime +7 -delete >> logs/cron/cleanup-\$(date +\%Y\%m\%d).log 2>&1
+
+# 周一早上：周报生成
+0 9 * * 1  cd /root/.openclaw/workspace && node scripts/affiliate-optimizer.js && cp output/summary-report-*.html admin/weekly-report.html >> logs/cron/weekly-report-\$(date +\%Y\%m\%d).log 2>&1
+
+# 每月1号：月报生成
+0 10 1 * *  cd /root/.openclaw/workspace && node scripts/affiliate-optimizer.js && echo "月报生成完成" >> logs/cron/monthly-report-\$(date +\%Y\%m\%d).log 2>&1
+
+# 每小时检查链接状态
+0 * * * *  cd /root/.openclaw/workspace && curl -s -o /dev/null -w "%{http_code}" https://ai.link.cn > logs/cron/uptime-check-\$(date +\%Y\%m\%d-\%H).log 2>&1
+
+# 每6小时运行快速优化检查
+0 */6 * * *  cd /root/.openclaw/workspace && node -e "require('./scripts/affiliate-optimizer.js').loadConfig().then(console.log).catch(console.error)" >> logs/cron/quick-check-\$(date +\%Y\%m\%d-\%H).log 2>&1
