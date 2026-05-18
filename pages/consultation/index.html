@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI工具咨询服务预约 - AI.link.cn</title>
+    <meta name="description" content="专业AI工具咨询服务，帮助您选择、部署和优化AI工具。一对一咨询，定制化解决方案。">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="AI工具咨询服务 - AI.link.cn">
+    <meta property="og:description" content="专业的AI工具咨询，帮助您最大化AI投资回报。">
+    
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        .main-title {
+            font-size: 3rem;
+            color: #2563eb;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle {
+            font-size: 1.2rem;
+            color: #6b7280;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            position: relative;
+            border: 2px solid transparent;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border-color: #3b82f6;
+        }
+        .service-card.popular {
+            border-color: #10b981;
+        }
+        .popular-badge {
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: #10b981;
+            color: white;
+            padding: 0.25rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: bold;
+        }
+        .service-title {
+            font-size: 1.5rem;
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+        .service-price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #3b82f6;
+            margin: 1rem 0;
+        }
+        .service-duration {
+            color: #6b7280;
+            margin-bottom: 1.5rem;
+        }
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+        .feature-list li {
+            margin: 0.75rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .feature-list li:before {
+            content: '✓';
+            color: #10b981;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        .cta-button {
+            display: block;
+            text-align: center;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1.5rem;
+            transition: all 0.3s;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(59, 130, 246, 0.3);
+        }
+        .packages-section {
+            margin: 4rem 0;
+            background: white;
+            border-radius: 15px;
+            padding: 3rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: #1e293b;
+            margin-bottom: 3rem;
+        }
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .package-card {
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+        }
+        .package-card.popular {
+            border-color: #3b82f6;
+            background: linear-gradient(135deg, #f8fafc, #e0f2fe);
+        }
+        .process-section {
+            margin: 4rem 0;
+        }
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .process-step {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .step-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #3b82f6;
+            color: white;
+            border-radius: 50%;
+            line-height: 40px;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        .faq-section {
+            margin: 4rem 0;
+        }
+        .faq-item {
+            margin: 1.5rem 0;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .faq-question {
+            font-weight: bold;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e5e7eb;
+            color: #6b7280;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="main-title">AI工具专业咨询服务</h1>
+            <p class="subtitle">帮助个人、团队和企业选择、部署和优化AI工具，最大化您的AI投资回报。</p>
+        </div>
+        
+        <div class="services-grid">
+            <!-- 基础咨询 -->
+            <div class="service-card">
+                <h2 class="service-title">AI工具选型咨询</h2>
+                <div class="service-price">$99</div>
+                <div class="service-duration">60分钟 · 一对一咨询</div>
+                <ul class="feature-list">
+                    <li>需求分析和目标设定</li>
+                    <li>工具推荐和对比分析</li>
+                    <li>成本效益分析</li>
+                    <li>实施建议和后续步骤</li>
+                    <li>咨询报告和推荐列表</li>
+                </ul>
+                <a href="#booking" class="cta-button">立即预约</a>
+            </div>
+            
+            <!-- 团队咨询 -->
+            <div class="service-card">
+                <h2 class="service-title">团队部署咨询</h2>
+                <div class="service-price">$199</div>
+                <div class="service-duration">90分钟 · 团队咨询</div>
+                <ul class="feature-list">
+                    <li>团队需求和工作流评估</li>
+                    <li>团队协作工具推荐</li>
+                    <li>部署路线图制定</li>
+                    <li>培训计划设计</li>
+                    <li>ROI分析和预算规划</li>
+                    <li>实施支持计划</li>
+                </ul>
+                <a href="#booking" class="cta-button">立即预约</a>
+            </div>
+            
+            <!-- 企业咨询 -->
+            <div class="service-card popular">
+                <div class="popular-badge">最受欢迎</div>
+                <h2 class="service-title">企业战略咨询</h2>
+                <div class="service-price">$499</div>
+                <div class="service-duration">120分钟 · 深度咨询</div>
+                <ul class="feature-list">
+                    <li>企业AI成熟度评估</li>
+                    <li>战略规划和目标设定</li>
+                    <li>工具选型和供应商评估</li>
+                    <li>实施路线图和风险管理</li>
+                    <li>ROI模型和投资回报分析</li>
+                    <li>团队培训和发展计划</li>
+                    <li>后续跟进和支持</li>
+                </ul>
+                <a href="#booking" class="cta-button">立即预约</a>
+            </div>
+        </div>
+        
+        <div class="packages-section">
+            <h2 class="section-title">咨询套餐计划</h2>
+            <div class="packages-grid">
+                <div class="package-card">
+                    <h3>个人咨询套餐</h3>
+                    <div class="service-price">$249</div>
+                    <p>节省 $48 (16%)</p>
+                    <ul class="feature-list">
+                        <li>2次基础咨询</li>
+                        <li>1次工具审计</li>
+                        <li>邮件支持30天</li>
+                        <li>工具推荐库访问</li>
+                    </ul>
+                </div>
+                
+                <div class="package-card popular">
+                    <h3>团队咨询套餐</h3>
+                    <div class="service-price">$699</div>
+                    <p>节省 $98 (12%)</p>
+                    <ul class="feature-list">
+                        <li>1次团队咨询</li>
+                        <li>2次基础咨询</li>
+                        <li>团队工作流分析</li>
+                        <li>实施支持60天</li>
+                    </ul>
+                </div>
+                
+                <div class="package-card">
+                    <h3>企业年度咨询</h3>
+                    <div class="service-price">$2,999</div>
+                    <p>节省 $996 (25%)</p>
+                    <ul class="feature-list">
+                        <li>4次企业咨询</li>
+                        <li>全面工具审计</li>
+                        <li>季度战略回顾</li>
+                        <li>优先技术支持</li>
+                        <li>团队培训工作坊</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="process-section">
+            <h2 class="section-title">咨询流程</h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>需求评估</h3>
+                    <p>填写需求问卷，了解您的具体需求和目标</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>预约咨询</h3>
+                    <p>选择适合的咨询服务和时间，完成预约支付</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>咨询会议</h3>
+                    <p>进行一对一咨询，深入分析您的情况</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>交付报告</h3>
+                    <p>收到详细的咨询报告和建议方案</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <h3>后续支持</h3>
+                    <p>获得实施支持和问题解答</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="faq-section">
+            <h2 class="section-title">常见问题</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">咨询需要准备什么？</div>
+                <p>建议准备好您的具体需求描述、预算范围、团队情况（如果是团队咨询）、现有工具使用情况等。我们会提供详细的需求问卷。</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">咨询如何进行？</div>
+                <p>主要通过视频会议（Zoom/Google Meet）进行，也可以提供现场咨询（额外费用）。咨询前会发送会议链接和准备材料。</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">咨询后有后续支持吗？</div>
+                <p>是的，所有咨询都包含7天的邮件支持。团队和企业咨询包含更长的支持期。也可以购买额外的支持服务。</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">如何保证咨询质量？</div>
+                <p>我们提供100%满意度保证。如果对咨询不满意，可以在7天内申请全额退款。我们拥有丰富的AI工具经验和成功案例。</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">可以定制咨询内容吗？</div>
+                <p>是的，我们提供完全定制化的咨询服务。请通过邮件或预约系统与我们联系，讨论您的具体需求。</p>
+            </div>
+        </div>
+        
+        <div id="booking" style="text-align: center; margin: 4rem 0;">
+            <h2 class="section-title">立即预约咨询</h2>
+            <p style="margin-bottom: 2rem;">选择适合您的咨询服务，开始AI工具优化之旅</p>
+            
+            <div style="max-width: 600px; margin: 0 auto; background: white; padding: 3rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                <h3>预约系统即将上线</h3>
+                <p>我们正在集成专业的预约系统，很快将开放预约功能。</p>
+                <p>在此期间，请通过以下方式联系我们：</p>
+                
+                <div style="margin-top: 2rem;">
+                    <p><strong>📧 邮箱:</strong> contact@ai-link.cn</p>
+                    <p><strong>📱 电话:</strong> +86 138 0013 8000</p>
+                    <p><strong>💬 微信:</strong> AI_link_cn</p>
+                </div>
+                
+                <div style="margin-top: 2rem; padding: 1.5rem; background: #f0f9ff; border-radius: 8px;">
+                    <p><strong>💡 预约提醒:</strong> 发送邮件时请注明：</p>
+                    <ul style="text-align: left; padding-left: 1.5rem;">
+                        <li>您的具体需求</li>
+                        <li>希望咨询的服务类型</li>
+                        <li>可预约的时间段</li>
+                        <li>团队规模（如果是团队咨询）</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© 2026 AI.link.cn - 专业的AI工具评测和咨询平台</p>
+            <p>所有咨询服务均由经验丰富的AI专家提供，基于真实案例和最佳实践</p>
+        </div>
+    </div>
+</body>
+</html>

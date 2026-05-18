@@ -1,51 +1,75 @@
 {
   "version": 2,
-  "name": "ai-link-cn",
-  "public": true,
   "builds": [
     {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "."
-      }
+      "src": "*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "css/*",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "pages/**/*.html",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "/api/$1"
-    },
-    {
-      "src": "/pages/(.*)",
-      "dest": "/pages/$1"
-    },
-    {
-      "src": "/test-(.*)",
+      "src": "/(.*)",
       "dest": "/$1"
     },
     {
-      "src": "/$",
-      "dest": "/index.html"
+      "src": "/pages/tools",
+      "dest": "/pages/tools/index.html"
+    },
+    {
+      "src": "/pages/about",
+      "dest": "/pages/about.html"
+    },
+    {
+      "handle": "filesystem"
     },
     {
       "src": "/(.*)",
-      "headers": {
-        "cache-control": "public, max-age=0, must-revalidate"
-      },
-      "dest": "/$1"
+      "status": 404,
+      "dest": "/404.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    },
+    {
+      "source": "/css/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
     }
   ],
   "env": {
-    "NODE_ENV": "production",
-    "SITE_NAME": "AI.link.cn",
-    "SITE_URL": "https://ai.link.cn",
-    "SITE_DESCRIPTION": "专业的AI工具评测和推荐平台",
-    "SITE_KEYWORDS": "AI工具,人工智能,工具评测,AI推荐"
+    "NODE_VERSION": "18"
   },
   "github": {
     "enabled": true,
-    "silent": true
+    "silent": false
   },
   "regions": ["hkg1"]
 }

@@ -1,0 +1,61 @@
+# AI.link.cn robots.txt
+# 最后更新: 2026-05-18
+# 网站: https://project-f5cf8.vercel.app/
+
+User-agent: *
+Allow: /
+
+# 禁止爬取的目录
+Disallow: /admin/
+Disallow: /logs/
+Disallow: /backups/
+Disallow: /config/
+Disallow: /scripts/
+
+# 允许爬取的目录
+Allow: /css/
+Allow: /pages/
+Allow: /images/
+
+# Sitemap位置
+Sitemap: https://project-f5cf8.vercel.app/sitemap.xml
+Sitemap: https://project-f5cf8.vercel.app/sitemap-index.xml
+
+# 爬取延迟建议（可选）
+Crawl-delay: 2
+
+# 搜索引擎指令
+# Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Baidu
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+# 社交媒体爬虫
+User-agent: Twitterbot
+Allow: /
+
+User-agent: FacebookExternalHit
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# 禁止某些用户代理（垃圾爬虫）
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SEMrushBot
+Disallow: /

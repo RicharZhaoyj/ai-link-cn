@@ -1,0 +1,175 @@
+{
+  "version": "1.0.0",
+  "services": [
+    {
+      "id": "consultation_basic",
+      "name": "AI工具选型咨询",
+      "description": "60分钟一对一咨询，帮助您选择最适合的AI工具",
+      "duration": 60,
+      "price": 99.0,
+      "currency": "USD",
+      "delivery_method": [
+        "video_call",
+        "audio_call"
+      ],
+      "whats_included": [
+        "需求分析和目标设定",
+        "工具推荐和对比分析",
+        "成本效益分析",
+        "实施建议和后续步骤",
+        "咨询报告和推荐列表"
+      ],
+      "target_audience": [
+        "个人用户",
+        "小团队",
+        "创业者"
+      ],
+      "prerequisites": [
+        "准备好工具使用需求描述"
+      ],
+      "status": "active",
+      "created": "2026-05-18T15:26:27.362424"
+    },
+    {
+      "id": "consultation_team",
+      "name": "团队AI工具部署咨询",
+      "description": "90分钟团队咨询，制定团队AI工具部署方案",
+      "duration": 90,
+      "price": 199.0,
+      "currency": "USD",
+      "delivery_method": [
+        "video_call",
+        "onsite_workshop"
+      ],
+      "whats_included": [
+        "团队需求分析和工作流评估",
+        "团队协作工具推荐",
+        "部署路线图制定",
+        "培训计划设计",
+        "ROI分析和预算规划",
+        "实施支持计划"
+      ],
+      "target_audience": [
+        "中小企业",
+        "创业团队",
+        "部门管理者"
+      ],
+      "prerequisites": [
+        "团队成员名单",
+        "现有工作流描述",
+        "预算范围"
+      ],
+      "status": "active",
+      "created": "2026-05-18T15:26:27.362439"
+    },
+    {
+      "id": "consultation_enterprise",
+      "name": "企业AI战略咨询",
+      "description": "深度企业咨询，制定全面的AI工具战略",
+      "duration": 120,
+      "price": 499.0,
+      "currency": "USD",
+      "delivery_method": [
+        "video_call",
+        "onsite_consultation"
+      ],
+      "whats_included": [
+        "企业AI成熟度评估",
+        "战略规划和目标设定",
+        "工具选型和供应商评估",
+        "实施路线图和风险管理",
+        "ROI模型和投资回报分析",
+        "团队培训和发展计划",
+        "后续跟进和支持"
+      ],
+      "target_audience": [
+        "企业决策者",
+        "技术总监",
+        "创新部门"
+      ],
+      "prerequisites": [
+        "企业概况",
+        "战略目标",
+        "现有技术栈"
+      ],
+      "status": "active",
+      "created": "2026-05-18T15:26:27.362442"
+    },
+    {
+      "id": "audit_comprehensive",
+      "name": "AI工具使用全面审计",
+      "description": "对现有AI工具使用情况进行全面审计和优化建议",
+      "duration": 0,
+      "price": 799.0,
+      "currency": "USD",
+      "delivery_method": [
+        "remote_audit",
+        "report_delivery"
+      ],
+      "whats_included": [
+        "现有工具使用情况评估",
+        "效率和成本分析",
+        "工具整合和优化建议",
+        "替代方案分析",
+        "详细审计报告",
+        "实施建议和预算规划"
+      ],
+      "target_audience": [
+        "已使用AI工具的企业",
+        "希望优化的团队"
+      ],
+      "prerequisites": [
+        "现有工具列表",
+        "使用数据",
+        "团队反馈"
+      ],
+      "status": "active",
+      "created": "2026-05-18T15:26:27.362444"
+    }
+  ],
+  "pricing": {
+    "individual": {
+      "name": "个人咨询套餐",
+      "price": 249.0,
+      "currency": "USD",
+      "includes": [
+        "2次基础咨询",
+        "1次工具审计",
+        "邮件支持30天",
+        "工具推荐库访问"
+      ],
+      "savings": "节省$48 (16%)",
+      "popular": true
+    },
+    "team": {
+      "name": "团队咨询套餐",
+      "price": 699.0,
+      "currency": "USD",
+      "includes": [
+        "1次团队咨询",
+        "2次基础咨询",
+        "团队工作流分析",
+        "实施支持60天"
+      ],
+      "savings": "节省$98 (12%)",
+      "popular": false
+    },
+    "enterprise": {
+      "name": "企业年度咨询",
+      "price": 2999.0,
+      "currency": "USD",
+      "includes": [
+        "4次企业咨询",
+        "全面工具审计",
+        "季度战略回顾",
+        "优先技术支持",
+        "团队培训工作坊"
+      ],
+      "savings": "节省$996 (25%)",
+      "popular": false
+    }
+  },
+  "availability": {},
+  "booking_rules": {},
+  "updated_at": "2026-05-18T15:26:27.362607"
+}

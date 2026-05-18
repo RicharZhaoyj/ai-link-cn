@@ -1,0 +1,299 @@
+{
+  "timestamp": "2026-05-18T13:54:02.972556",
+  "pages_checked": 31,
+  "issues_found": 76,
+  "optimizations_applied": 29,
+  "details": [
+    {
+      "file": "test_site.html",
+      "issues": [
+        "缺少meta description",
+        "缺少Open Graph标签: og:title, og:description, og:image, og:url",
+        "缺少结构化数据",
+        "关键词密度不足"
+      ],
+      "keywords": "未找到主要关键词",
+      "score": 60
+    },
+    {
+      "file": "test-all-links.html",
+      "issues": [
+        "缺少meta description",
+        "缺少Open Graph标签: og:title, og:description, og:image, og:url",
+        "缺少结构化数据",
+        "关键词密度不足"
+      ],
+      "keywords": "未找到主要关键词",
+      "score": 60
+    },
+    {
+      "file": "cache-fix.html",
+      "issues": [
+        "缺少meta description",
+        "缺少Open Graph标签: og:title, og:description, og:image, og:url",
+        "缺少结构化数据"
+      ],
+      "keywords": "找到关键词: AI工具",
+      "score": 70
+    },
+    {
+      "file": "index_seo_optimized.html",
+      "issues": [],
+      "keywords": "找到关键词: AI工具, 人工智能工具, AI软件, AI应用, AI助手",
+      "score": 100
+    },
+    {
+      "file": "jasper_ai_optimized.html",
+      "issues": [
+        "缺少Open Graph标签: og:title, og:description, og:image, og:url"
+      ],
+      "keywords": "找到关键词: AI工具",
+      "score": 90
+    },
+    {
+      "file": "deploy-status.html",
+      "issues": [
+        "缺少meta description",
+        "缺少Open Graph标签: og:title, og:description, og:image, og:url",
+        "缺少结构化数据",
+        "关键词密度不足"
+      ],
+      "keywords": "未找到主要关键词",
+      "score": 60
+    },
+    {
+      "file": "prowritingaid_evaluation.html",
+      "issues": [
+        "缺少Open Graph标签: og:title, og:description, og:image, og:url",
+        "缺少结构化数据",
+        "关键词密度不足"
+      ],
+      "keywords": "未找到主要关键词",
+      "score": 70
+    },
+    {
+      "file": "index_updated.html",
+      "issues": [
+        "缺少Open Graph标签: og:title, og:description, og:image, og:url",
+        "缺少结构化数据"
+      ],
+      "keywords": "找到关键词: AI工具, 人工智能工具",
+      "score": 80
+    },
+    {
+      "file": "index_rich.html",
+      "issues": [
+        "缺少Open Graph标签: og:title, og:description, og:image, og:url",
+        "缺少结构化数据"
+      ],
+      "keywords": "找到关键词: AI工具, 人工智能工具, AI助手",
+      "score": 80
+    },
+    {
+      "file": "simple-fix.html",
+      "issues": [
+        "缺少meta description",
+        "缺少Open Graph标签: og:title, og:description, og:image, og:url",
+        "缺少结构化数据"
+      ],
+      "keywords": "找到关键词: AI工具, AI助手",
+      "score": 70
+    },
+    {
+      "file": "index_fixed.html",
+      "issues": [
+        "缺少Open Graph标签: og:title, og:description, og:image, og:url",
+        "缺少结构化数据"
+      ],
+      "keywords": "找到关键词: AI工具, 人工智能工具",
+      "score": 80
+    },
+    {
+      "file": "quick-test.html",
+      "issues": [
+        "缺少meta description",
+        "缺少Open Graph标签: og:title, og:description, og:image, og:url",
+        "缺少结构化数据",
+        "关键词密度不足"
+      ],
+      "keywords": "未找到主要关键词",
+      "score": 60
+    },
+    {
+      "file": "index.html",
+      "issues": [],
+      "keywords": "找到关键词: AI工具, 人工智能工具, AI软件, AI应用, AI助手",
+      "score": 100
+    },
+    {
+      "file": "test_update.html",
+      "issues": [
+        "缺少meta description",
+        "缺少Open Graph标签: og:title, og:description, og:image, og:url",
+        "缺少结构化数据",
+        "关键词密度不足"
+      ],
+      "keywords": "未找到主要关键词",
+      "score": 60
+    },
+    {
+      "file": "admin/affiliate-dashboard.html",
+      "issues": [
+        "缺少Open Graph标签: og:title, og:description, og:image, og:url",
+        "缺少结构化数据",
+        "关键词密度不足"
+      ],
+      "keywords": "未找到主要关键词",
+      "score": 70
+    },
+    {
+      "file": "admin/latest-report.html",
+      "issues": [
+        "缺少meta description",
+        "缺少Open Graph标签: og:title, og:description, og:image, og:url",
+        "缺少结构化数据",
+        "关键词密度不足"
+      ],
+      "keywords": "未找到主要关键词",
+      "score": 60
+    },
+    {
+      "file": "output/summary-report-2026-05-13T11-55-56-410Z.html",
+      "issues": [
+        "缺少meta description",
+        "缺少Open Graph标签: og:title, og:description, og:image, og:url",
+        "缺少结构化数据",
+        "关键词密度不足"
+      ],
+      "keywords": "未找到主要关键词",
+      "score": 60
+    },
+    {
+      "file": "pages/affiliate-guide.html",
+      "issues": [
+        "缺少Open Graph标签: og:title, og:description, og:image, og:url",
+        "缺少结构化数据"
+      ],
+      "keywords": "找到关键词: AI工具",
+      "score": 80
+    },
+    {
+      "file": "pages/about.html",
+      "issues": [
+        "缺少Open Graph标签: og:title, og:description, og:image, og:url",
+        "缺少结构化数据"
+      ],
+      "keywords": "找到关键词: AI工具, 人工智能工具",
+      "score": 80
+    },
+    {
+      "file": "pages/navigation.html",
+      "issues": [
+        "缺少meta description",
+        "缺少Open Graph标签: og:title, og:description, og:image, og:url",
+        "缺少结构化数据"
+      ],
+      "keywords": "找到关键词: AI工具, AI助手",
+      "score": 70
+    },
+    {
+      "file": "pages/tools/canva.html",
+      "issues": [
+        "缺少Open Graph标签: og:title, og:description, og:image, og:url",
+        "缺少结构化数据"
+      ],
+      "keywords": "找到关键词: AI工具",
+      "score": 80
+    },
+    {
+      "file": "pages/tools/hostinger.html",
+      "issues": [
+        "缺少Open Graph标签: og:title, og:description, og:image, og:url",
+        "缺少结构化数据"
+      ],
+      "keywords": "找到关键词: AI工具, AI应用",
+      "score": 80
+    },
+    {
+      "file": "pages/tools/chatgpt.html",
+      "issues": [
+        "缺少Open Graph标签: og:title, og:description, og:image, og:url",
+        "缺少结构化数据"
+      ],
+      "keywords": "找到关键词: AI工具",
+      "score": 80
+    },
+    {
+      "file": "pages/tools/grammarly.html",
+      "issues": [
+        "缺少Open Graph标签: og:title, og:description, og:image, og:url",
+        "缺少结构化数据"
+      ],
+      "keywords": "找到关键词: AI工具",
+      "score": 80
+    },
+    {
+      "file": "pages/tools/prowritingaid.html",
+      "issues": [
+        "缺少Open Graph标签: og:title, og:description, og:image, og:url",
+        "缺少结构化数据",
+        "关键词密度不足"
+      ],
+      "keywords": "未找到主要关键词",
+      "score": 70
+    },
+    {
+      "file": "pages/tools/notion_ai.html",
+      "issues": [
+        "缺少Open Graph标签: og:title, og:description, og:image, og:url",
+        "缺少结构化数据"
+      ],
+      "keywords": "找到关键词: AI工具",
+      "score": 80
+    },
+    {
+      "file": "pages/tools/convertkit.html",
+      "issues": [
+        "缺少Open Graph标签: og:title, og:description, og:image, og:url",
+        "缺少结构化数据"
+      ],
+      "keywords": "找到关键词: AI工具",
+      "score": 80
+    },
+    {
+      "file": "pages/tools/jasper.html",
+      "issues": [
+        "缺少Open Graph标签: og:title, og:description, og:image, og:url"
+      ],
+      "keywords": "找到关键词: AI工具",
+      "score": 90
+    },
+    {
+      "file": "pages/tools/midjourney.html",
+      "issues": [
+        "缺少Open Graph标签: og:title, og:description, og:image, og:url",
+        "缺少结构化数据"
+      ],
+      "keywords": "找到关键词: AI工具",
+      "score": 80
+    },
+    {
+      "file": "pages/tools/github_copilot.html",
+      "issues": [
+        "缺少Open Graph标签: og:title, og:description, og:image, og:url",
+        "缺少结构化数据"
+      ],
+      "keywords": "找到关键词: AI工具",
+      "score": 80
+    },
+    {
+      "file": "pages/tools/index.html",
+      "issues": [
+        "缺少Open Graph标签: og:title, og:description, og:image, og:url",
+        "缺少结构化数据"
+      ],
+      "keywords": "找到关键词: AI工具, 人工智能工具",
+      "score": 80
+    }
+  ]
+}

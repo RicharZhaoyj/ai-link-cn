@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    
+    <!-- AI.link.cn 网站地图 -->
+    <!-- 生成时间: 2026-05-18 -->
+    <!-- 网站: https://project-f5cf8.vercel.app/ -->
+    
+    <!-- 首页 -->
+    <url>
+        <loc>https://project-f5cf8.vercel.app/</loc>
+        <lastmod>2026-05-18</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <!-- 工具列表页面 -->
+    <url>
+        <loc>https://project-f5cf8.vercel.app/pages/tools/</loc>
+        <lastmod>2026-05-18</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- 关于页面 -->
+    <url>
+        <loc>https://project-f5cf8.vercel.app/pages/about.html</loc>
+        <lastmod>2026-05-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- 工具详情页面 -->
+    <url>
+        <loc>https://project-f5cf8.vercel.app/pages/tools/canva.html</loc>
+        <lastmod>2026-05-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://project-f5cf8.vercel.app/pages/tools/chatgpt.html</loc>
+        <lastmod>2026-05-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://project-f5cf8.vercel.app/pages/tools/convertkit.html</loc>
+        <lastmod>2026-05-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://project-f5cf8.vercel.app/pages/tools/github_copilot.html</loc>
+        <lastmod>2026-05-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://project-f5cf8.vercel.app/pages/tools/grammarly.html</loc>
+        <lastmod>2026-05-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://project-f5cf8.vercel.app/pages/tools/hostinger.html</loc>
+        <lastmod>2026-05-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://project-f5cf8.vercel.app/pages/tools/jasper.html</loc>
+        <lastmod>2026-05-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://project-f5cf8.vercel.app/pages/tools/midjourney.html</loc>
+        <lastmod>2026-05-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://project-f5cf8.vercel.app/pages/tools/notion_ai.html</loc>
+        <lastmod>2026-05-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://project-f5cf8.vercel.app/pages/tools/prowritingaid.html</loc>
+        <lastmod>2026-05-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- 深度评测页面 -->
+    <url>
+        <loc>https://project-f5cf8.vercel.app/jasper_ai_optimized.html</loc>
+        <lastmod>2026-05-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://project-f5cf8.vercel.app/prowritingaid_evaluation.html</loc>
+        <lastmod>2026-05-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- 其他页面 -->
+    <url>
+        <loc>https://project-f5cf8.vercel.app/pages/affiliate-guide.html</loc>
+        <lastmod>2026-05-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://project-f5cf8.vercel.app/pages/navigation.html</loc>
+        <lastmod>2026-05-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+</urlset>
