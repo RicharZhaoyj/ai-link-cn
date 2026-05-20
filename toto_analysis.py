@@ -81,7 +81,10 @@ def analyze_toto():
     # 分析号码频率
     all_numbers = []
     for draw in past_draws + [yesterday_draw]:
-        all_numbers.extend(draw['main_numbers'])
+        if 'main_numbers' in draw:
+            all_numbers.extend(draw['main_numbers'])
+        elif 'numbers' in draw:
+            all_numbers.extend(draw['numbers'])
     
     freq = Counter(all_numbers)
     print(f"   分析样本: {len(past_draws)+1}期开奖数据")
@@ -218,7 +221,10 @@ def generate_detailed_report(predicted_prize, freq, past_draws, yesterday_draw):
     print("1. 高级统计分析")
     all_numbers_flat = []
     for draw in past_draws + [yesterday_draw]:
-        all_numbers_flat.extend(draw['main_numbers'])
+        if 'main_numbers' in draw:
+            all_numbers_flat.extend(draw['main_numbers'])
+        elif 'numbers' in draw:
+            all_numbers_flat.extend(draw['numbers'])
     
     mean_val = statistics.mean(all_numbers_flat)
     median_val = statistics.median(all_numbers_flat)
@@ -240,7 +246,13 @@ def generate_detailed_report(predicted_prize, freq, past_draws, yesterday_draw):
     # 连续号码分析
     consecutive_pairs = 0
     for draw in past_draws[-10:] + [yesterday_draw]:  # 最近10期
-        nums = sorted(draw['main_numbers'])
+        if 'main_numbers' in draw:
+            nums = sorted(draw['main_numbers'])
+        elif 'numbers' in draw:
+            nums = sorted(draw['numbers'])
+        else:
+            continue
+            
         for i in range(len(nums)-1):
             if nums[i+1] - nums[i] == 1:
                 consecutive_pairs += 1
@@ -250,7 +262,14 @@ def generate_detailed_report(predicted_prize, freq, past_draws, yesterday_draw):
     # 同尾号码分析
     same_last_digit = 0
     for draw in past_draws[-10:] + [yesterday_draw]:
-        last_digits = [n % 10 for n in draw['main_numbers']]
+        if 'main_numbers' in draw:
+            numbers = draw['main_numbers']
+        elif 'numbers' in draw:
+            numbers = draw['numbers']
+        else:
+            continue
+            
+        last_digits = [n % 10 for n in numbers]
         if len(set(last_digits)) < 6:
             same_last_digit += 1
     
