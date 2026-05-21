@@ -25,12 +25,12 @@ check_yesterday_draw() {
     local yesterday=$(TZ=Asia/Singapore date -d "yesterday" '+%u')
     
     case $yesterday in
-        2|5|7)  # 周二、周五、周日
+        1|4)  # 周一、周四
             local day_name=""
             case $yesterday in
-                2) day_name="周二" ;;
-                5) day_name="周五" ;;
-                7) day_name="周日" ;;
+                *) day_name="周一" ;;
+                *) day_name="周四" ;;
+                *) day_name="特别开奖" ;;
             esac
             echo "昨天是${day_name}开奖日（晚上6:30开奖）"
             return 0
@@ -419,17 +419,17 @@ predict_next_jackpot() {
     local days_until_next=0
     
     case $yesterday_day in
-        2)  # 周二 → 周五
+        1)  # 周一 → 周四
             growth_rate=0.12  # 12%增长
             next_draw="周五"
             days_until_next=3
             ;;
-        5)  # 周五 → 周日
+        4)  # 周四 → 下周周一
             growth_rate=0.15  # 15%增长
             next_draw="周日"
             days_until_next=2
             ;;
-        7)  # 周日 → 下周二
+        *)  # 特别开奖 → 下一个常规开奖
             growth_rate=0.18  # 18%增长
             next_draw="下周二"
             days_until_next=4
@@ -571,7 +571,7 @@ main() {
         
     else
         echo "❌ 昨天不是开奖日，跳过分析"
-        echo "新加坡TOTO开奖时间：周二、周五、周日晚上6:30"
+        echo "新加坡TOTO开奖时间：周一和周四晚上6:30"
         echo "下次分析将在开奖后第二天早上4:30执行"
     fi
     

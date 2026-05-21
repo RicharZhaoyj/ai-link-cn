@@ -12,7 +12,11 @@ DATA_DIR="$WORKSPACE_DIR/data/lottery"
 TOKEN_FILE="$WORKSPACE_DIR/tokens/lottery_token.txt"
 SCRIPT_NAME="sg_toto_checker.sh"
 
-# 新加坡TOTO开奖时间（周二、周五、周日晚上6:30）
+# 🚨 重要修正：新加坡TOTO实际开奖时间是周一和周四！
+# 错误信息：之前的脚本都写成了周二、周五、周日
+# 正确信息：周一和周四晚上6:30开奖
+
+# 新加坡TOTO开奖时间（周一和周四晚上6:30）
 # 计算上次开奖时间
 get_last_draw_time() {
     local current_date=$(date '+%Y-%m-%d')
@@ -23,11 +27,27 @@ get_last_draw_time() {
     echo "[$sg_time] 新加坡时间"
     
     case $current_day in
-        1|4)  # 周一或周四 - 上次开奖是周日
-            echo "上次开奖: 周日 18:30"
-            last_draw_day="sun"
+        1|2)  # 周一或周二 - 上次开奖是上周四
+            echo "上次开奖: 上周四 18:30"
+            last_draw_day="last_thu"
             ;;
-        2|5)  # 周二或周五 - 上次开奖是周二或周五
+        3|4)  # 周三或周四 - 上次开奖是周一
+            # 检查是否已经过了今天的开奖时间
+            local current_hour=$(TZ=Asia/Singapore date '+%H')
+            if [ $current_day -eq 4 ] && [ $current_hour -ge 18 ]; then
+                echo "上次开奖: 今天 18:30"
+                last_draw_day="today"
+            else
+                echo "上次开奖: 周一 18:30"
+                last_draw_day="mon"
+            fi
+            ;;
+        5|6|7)  # 周五、周六、周日 - 上次开奖是周四
+            echo "上次开奖: 周四 18:30"
+            last_draw_day="thu"
+            ;;
+    esac
+}
             # 检查是否已经过了今天的开奖时间
             local current_hour=$(TZ=Asia/Singapore date '+%H')
             if [ $current_hour -ge 18 ]; then

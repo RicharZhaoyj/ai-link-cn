@@ -21,15 +21,15 @@ check_yesterday_draw() {
     
     case $yesterday in
         2)  # 周二
-            echo "昨天是周二开奖日（晚上6:30开奖）"
+            echo "昨天是周一开奖日（晚上6:30开奖）"
             return 0
             ;;
         5)  # 周五
-            echo "昨天是周五开奖日（晚上6:30开奖）"
+            echo "昨天是周四开奖日（晚上6:30开奖）"
             return 0
             ;;
         7)  # 周日
-            echo "昨天是周日开奖日（晚上6:30开奖）"
+            echo "昨天可能有特别开奖（常规是周一和周四）"
             return 0
             ;;
         *)
@@ -123,17 +123,17 @@ predict_next_jackpot() {
     # 根据销售增长趋势调整
     local growth_rate=0
     case $yesterday_day in
-        2)  # 周二开奖后，预测周五头奖（通常销售增长较小）
+        2)  # 周一开奖后，预测周四头奖（通常销售增长较小）
             growth_rate=0.10  # 10%增长
             next_draw="周五"
             days_until_next=3
             ;;
-        5)  # 周五开奖后，预测周日头奖（销售增长中等）
+        5)  # 周四开奖后，预测下周一头奖（销售增长中等）
             growth_rate=0.15  # 15%增长
             next_draw="周日"
             days_until_next=2
             ;;
-        7)  # 周日开奖后，预测下周二头奖（销售增长最大）
+        7)  # 特别开奖后，预测下一个常规开奖（销售增长最大）
             growth_rate=0.20  # 20%增长
             next_draw="下周二"
             days_until_next=4
@@ -243,7 +243,7 @@ main() {
         
     else
         echo "❌ 昨天不是开奖日，跳过查询"
-        echo "新加坡TOTO开奖时间：周二、周五、周日晚上6:30"
+        echo "新加坡TOTO开奖时间：周一和周四晚上6:30"
         echo "下次查询将在开奖后第二天早上4:30执行"
     fi
     

@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # 新加坡TOTO彩票简化查询脚本
-# 在每次开奖后10小时执行（周二、周五、周日早上4:30）
+# 🚨 重要修正：新加坡TOTO实际开奖时间是周一和周四！
+# 在每次开奖后10小时执行（周一和周四开奖后的早上4:30）
 
 set -e
 
@@ -18,6 +19,7 @@ LOG_FILE="$LOG_DIR/toto_$(date '+%Y%m%d_%H%M%S').log"
 main() {
     echo "===== 新加坡TOTO彩票查询 ====="
     echo "执行时间: $(TZ=Asia/Singapore date '+%Y-%m-%d %H:%M:%S %Z')"
+    echo "🚨 注意：已修正开奖时间（正确：周一和周四）"
     
     # 创建必要的目录
     mkdir -p "$LOG_DIR" "$DATA_DIR"
@@ -31,21 +33,18 @@ main() {
     echo "星期: $sg_day"
     
     # 2. 检查今天是否是开奖日
+    # 🚨 修正：周一和周四才是开奖日！
     local is_draw_day=false
     local draw_type=""
     
     case $sg_day in
-        2)  # 周二
+        1)  # 周一
             is_draw_day=true
-            draw_type="Tuesday"
+            draw_type="Monday"
             ;;
-        5)  # 周五
+        4)  # 周四
             is_draw_day=true
-            draw_type="Friday"
-            ;;
-        7)  # 周日
-            is_draw_day=true
-            draw_type="Sunday"
+            draw_type="Thursday"
             ;;
         *)
             is_draw_day=false
