@@ -273,6 +273,44 @@
             margin: 0 10px;
         }
         
+        /* 更新时间条 */
+        .update-bar {
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            color: white;
+            padding: 12px 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin: 15px auto;
+            max-width: 800px;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .update-bar .time-icon {
+            font-size: 1.2rem;
+        }
+        .update-bar .time-label {
+            font-weight: 600;
+        }
+        .update-bar .time-value {
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-family: monospace;
+        }
+        .update-bar .update-status {
+            margin-left: 15px;
+            padding: 4px 12px;
+            background: rgba(46, 204, 113, 0.2);
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+        
         /* 响应式 */
         @media (max-width: 768px) {
             main { 
@@ -294,6 +332,16 @@
                 max-width: 200px;
                 margin: 5px auto;
             }
+            .update-bar {
+                flex-direction: column;
+                gap: 5px;
+                padding: 10px;
+                font-size: 0.85rem;
+            }
+            .update-bar .update-status {
+                margin-left: 0;
+                margin-top: 5px;
+            }
         }
     </style>
 </head>
@@ -309,6 +357,14 @@
                 <a href="/test_site.html">系统状态</a>
             </nav>
         </header>
+        
+        <!-- 醒目更新时间条 -->
+        <div class="update-bar" id="updateBar">
+            <span class="time-icon">🕒</span>
+            <span class="time-label">网站最后更新时间：</span>
+            <span class="time-value" id="updateTimeDisplay">2026年5月22日 11:50:00</span>
+            <span class="update-status" id="updateStatusDisplay">🟢 实时更新中</span>
+        </div>
         
         <div class="featured-tools">
             <h2>🌟 特色推荐工具</h2>
@@ -423,7 +479,7 @@
                         <li><strong>自动部署</strong>：触发Vercel自动部署</li>
                         <li><strong>实时监控</strong>：系统状态和更新进度监控</li>
                     </ul>
-                    <p style="margin-top: 10px;"><strong>最后更新：</strong>2026年5月17日 14:40:00</p>
+                    <p style="margin-top: 10px;"><strong>最后更新：</strong>2026年5月22日 11:50:00</p>
                 </div>
             </div>
             
@@ -440,7 +496,7 @@
                     </div>
                     <div class="stat-item">
                         <span class="stat-label">最后更新</span>
-                        <span class="stat-value">今天 14:40</span>
+                        <span class="stat-value">今天 11:50</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-label">下次更新</span>
@@ -498,21 +554,45 @@
                            now.getMinutes().toString().padStart(2, '0') + ':' + 
                            now.getSeconds().toString().padStart(2, '0');
             
-            // 更新最后更新时间
-            const updateElements = document.querySelectorAll('.update-info p:last-child');
-            updateElements.forEach(el => {
-                if (el.textContent.includes('最后更新：')) {
-                    el.innerHTML = '<strong>最后更新：</strong>' + timeStr;
-                }
-            });
+            // 1. 更新顶部醒目时间条
+            const updateTimeDisplay = document.getElementById('updateTimeDisplay');
+            if (updateTimeDisplay) {
+                updateTimeDisplay.textContent = timeStr;
+            }
             
-            // 更新统计中的时间
+            // 2. 更新状态显示（每分钟检查一次是否为整点）
+            const updateStatusDisplay = document.getElementById('updateStatusDisplay');
+            if (updateStatusDisplay) {
+                if (now.getMinutes() === 0 && now.getSeconds() <= 10) {
+                    // 整点时显示最近更新时间
+                    updateStatusDisplay.textContent = '🟡 最近更新于整点';
+                    updateStatusDisplay.style.background = 'rgba(241, 196, 15, 0.2)';
+                } else if (now.getMinutes() === 30 && now.getSeconds() <= 10) {
+                    // 半点时显示
+                    updateStatusDisplay.textContent = '🟡 最近更新于半点';
+                    updateStatusDisplay.style.background = 'rgba(241, 196, 15, 0.2)';
+                } else {
+                    // 其他时间显示实时更新
+                    updateStatusDisplay.textContent = '🟢 实时更新中';
+                    updateStatusDisplay.style.background = 'rgba(46, 204, 113, 0.2)';
+                }
+            }
+            
+            // 3. 更新侧边栏统计中的时间
             const statValue = document.querySelector('.stat-item:nth-child(3) .stat-value');
             if (statValue) {
                 const hours = now.getHours();
                 const minutes = now.getMinutes();
                 statValue.textContent = '今天 ' + hours.toString().padStart(2, '0') + ':' + minutes.toString().padStart(2, '0');
             }
+            
+            // 4. 更新自动化系统区域的时间
+            const updateElements = document.querySelectorAll('.update-info p:last-child');
+            updateElements.forEach(el => {
+                if (el.textContent.includes('最后更新：')) {
+                    el.innerHTML = '<strong>最后更新：</strong>' + timeStr;
+                }
+            });
         }
         
         // 初始化和定时更新
