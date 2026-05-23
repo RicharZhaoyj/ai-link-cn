@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grammarly评测 - AI.link.cn</title>
+    <meta name="description" content="AI语法检查和写作改进工具">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+        .container { max-width: 800px; margin: 0 auto; padding: 2rem 1rem; }
+        .value-box { background: #f0f9ff; border-left: 4px solid #3b82f6; padding: 1.5rem; margin: 2rem 0; }
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 2rem 0; }
+        .info-card { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    </style>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://project-f5cf8.vercel.app/">
+    <meta property="og:title" content="AI.link.cn - 专业的AI工具评测和推荐平台">
+    <meta property="og:description" content="每日更新的AI工具评测平台，为您推荐最好的人工智能工具。">
+    <meta property="og:image" content="https://project-f5cf8.vercel.app/images/ai-tools-og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="AI.link.cn - AI工具评测平台">
+    <meta property="og:site_name" content="AI.link.cn">
+    <meta property="og:locale" content="zh_CN">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://project-f5cf8.vercel.app/">
+    <meta name="twitter:title" content="AI.link.cn - 专业的AI工具评测和推荐平台">
+    <meta name="twitter:description" content="每日更新的AI工具评测平台，为您推荐最好的人工智能工具。">
+    <meta name="twitter:image" content="https://project-f5cf8.vercel.app/images/ai-tools-twitter.png">
+    <meta name="twitter:image:alt" content="AI.link.cn - AI工具评测平台">
+                </head>
+<body>
+    <nav class="container">
+        <ul><li><strong><a href="/" style="color: inherit; text-decoration: none;">AI.link.cn</a></strong></li></ul>
+        <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/pages/tools/">所有工具</a></li>
+            <li><a href="/pages/value-guide.html">价值指南</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Grammarly评测</h1>
+        
+        
+        <div class="value-box">
+            <h3>🎯 为什么选择这个工具？</h3>
+            <p>我们专注于提供客观、深入的评测，帮助你了解工具的真正价值，而不是仅仅推荐产品。</p>
+        </div>
+    
+            <a href="https://www.grammarly.com/?ref=ailink" 
+               target="_blank" 
+               style="background: #10b981; color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; display: inline-block;">
+                🚀 立即体验Grammarly
+            </a>
+            <p><small>免责声明：</small></p>
+        </div>
+
+        <div class="info-grid">
+            <div class="info-card">
+                <h4>💰 定价</h4>
+                <p>免费版可用，高级版$12/月</p>
+            </div>
+            <div class="info-card">
+                <h4>🎯 适合人群</h4>
+                <p>写作者、学生、商务人士</p>
+            </div>
+            <div class="info-card">
+                <h4>⭐ 评分</h4>
+                <p>8.8/10</p>
+            </div>
+        </div>
+
+        <h2>详细介绍</h2>
+        <p>AI语法检查和写作改进工具</p>
+
+        <h2>主要功能</h2>
+        <ul>
+            <li>语法检查</li>
+<li>拼写纠正</li>
+<li>写作风格建议</li>
+<li>抄袭检测</li>
+        </ul>
+
+        <h2>使用建议</h2>
+        <p>安装浏览器插件，实时检查所有写作</p>
+
+        
+        <footer style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e5e7eb;">
+            
+            <p><strong>🔍 更多AI工具评测：</strong></p>
+            <p>
+                <a href="../">查看所有工具</a>
+            </p>
+        
+            <p>本文最后更新: 2026年5月 | 作者: AI.link.cn工具评测团队</p>
+            <p><a href="/">返回首页</a> | <a href="../">所有工具评测</a></p>
+        </footer>
+    
+    </div>
+</body>
+</html>
