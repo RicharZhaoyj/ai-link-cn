@@ -1029,6 +1029,321 @@
       "lastUpdated": "2026-05-24",
       "featured": false,
       "reviewUrl": "/pages/tools/superannotate.html"
+    },
+    {
+      "id": "autogpt",
+      "name": "AutoGPT",
+      "description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
+      "category": "AI工具",
+      "url": "https://github.com/Significant-Gravitas/AutoGPT",
+      "pricing": "免费/开源",
+      "rating": 4,
+      "pros": [
+        "功能强大",
+        "开源免费"
+      ],
+      "cons": [
+        "可能需要技术知识"
+      ],
+      "addedDate": "2026-05-25",
+      "lastUpdated": "2026-05-25",
+      "featured": false,
+      "reviewUrl": "/pages/tools/autogpt.html",
+      "source": "GitHub"
+    },
+    {
+      "id": "langflow",
+      "name": "langflow",
+      "description": "Langflow is a powerful tool for building and deploying AI-powered agents and workflows.",
+      "category": "AI工具",
+      "url": "https://github.com/langflow-ai/langflow",
+      "pricing": "免费/开源",
+      "rating": 4,
+      "pros": [
+        "功能强大",
+        "开源免费"
+      ],
+      "cons": [
+        "可能需要技术知识"
+      ],
+      "addedDate": "2026-05-25",
+      "lastUpdated": "2026-05-25",
+      "featured": false,
+      "reviewUrl": "/pages/tools/langflow.html",
+      "source": "GitHub"
+    },
+    {
+      "id": "system-prompts-and-models-of-ai-tools",
+      "name": "system-prompts-and-models-of-ai-tools",
+      "description": "FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus, NotionAI, Orchids.app, Perplexity, Poke, Qoder, Replit, Same.dev, Trae, Traycer AI, V",
+      "category": "AI工具",
+      "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
+      "pricing": "免费/开源",
+      "rating": 4,
+      "pros": [
+        "功能强大",
+        "开源免费"
+      ],
+      "cons": [
+        "可能需要技术知识"
+      ],
+      "addedDate": "2026-05-25",
+      "lastUpdated": "2026-05-25",
+      "featured": false,
+      "reviewUrl": "/pages/tools/system-prompts-and-models-of-ai-tools.html",
+      "source": "GitHub"
+    },
+    {
+      "id": "awesome-ai-tools",
+      "name": "awesome-ai-tools",
+      "description": "A curated list of Artificial Intelligence Top Tools",
+      "category": "AI工具",
+      "url": "https://github.com/mahseema/awesome-ai-tools",
+      "pricing": "免费/开源",
+      "rating": 4,
+      "pros": [
+        "功能强大",
+        "开源免费"
+      ],
+      "cons": [
+        "可能需要技术知识"
+      ],
+      "addedDate": "2026-05-25",
+      "lastUpdated": "2026-05-25",
+      "featured": false,
+      "reviewUrl": "/pages/tools/awesome-ai-tools.html",
+      "source": "GitHub"
+    },
+    {
+      "id": "sql-translator",
+      "name": "sql-translator",
+      "description": "SQL Translator is a tool for converting natural language queries into SQL code using artificial intelligence. This project is 100% free and open source.",
+      "category": "AI工具",
+      "url": "https://github.com/whoiskatrin/sql-translator",
+      "pricing": "免费/开源",
+      "rating": 4,
+      "pros": [
+        "功能强大",
+        "开源免费"
+      ],
+      "cons": [
+        "可能需要技术知识"
+      ],
+      "addedDate": "2026-05-25",
+      "lastUpdated": "2026-05-25",
+      "featured": false,
+      "reviewUrl": "/pages/tools/sql-translator.html",
+      "source": "GitHub"
+    },
+    {
+      "id": "artificial-intelligence",
+      "name": "Artificial-Intelligence",
+      "description": "Awesome AI Learning with +100 AI Cheat-Sheets, Free online Books, Top Courses, Best Videos and Lectures, Papers, Tutorials, +99 Researchers, Premium Websites, +121 Datasets, Conferences, Frameworks, T",
+      "category": "AI工具",
+      "url": "https://github.com/Niraj-Lunavat/Artificial-Intelligence",
+      "pricing": "免费/开源",
+      "rating": 4,
+      "pros": [
+        "功能强大",
+        "开源免费"
+      ],
+      "cons": [
+        "可能需要技术知识"
+      ],
+      "addedDate": "2026-05-25",
+      "lastUpdated": "2026-05-25",
+      "featured": false,
+      "reviewUrl": "/pages/tools/artificial-intelligence.html",
+      "source": "GitHub"
+    },
+    {
+      "id": "doccano",
+      "name": "doccano",
+      "description": "Open source annotation tool for machine learning practitioners.",
+      "category": "AI工具",
+      "url": "https://github.com/doccano/doccano",
+      "pricing": "免费/开源",
+      "rating": 4,
+      "pros": [
+        "功能强大",
+        "开源免费"
+      ],
+      "cons": [
+        "可能需要技术知识"
+      ],
+      "addedDate": "2026-05-25",
+      "lastUpdated": "2026-05-25",
+      "featured": false,
+      "reviewUrl": "/pages/tools/doccano.html",
+      "source": "GitHub"
+    },
+    {
+      "id": "tpot",
+      "name": "tpot",
+      "description": "A Python Automated Machine Learning tool that optimizes machine learning pipelines using genetic programming.",
+      "category": "AI工具",
+      "url": "https://github.com/EpistasisLab/tpot",
+      "pricing": "免费/开源",
+      "rating": 4,
+      "pros": [
+        "功能强大",
+        "开源免费"
+      ],
+      "cons": [
+        "可能需要技术知识"
+      ],
+      "addedDate": "2026-05-25",
+      "lastUpdated": "2026-05-25",
+      "featured": false,
+      "reviewUrl": "/pages/tools/tpot.html",
+      "source": "GitHub"
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "description": "AI tool from Futurepedia",
+      "category": "AI工具",
+      "url": "https://www.futurepedia.io/",
+      "pricing": "免费/开源",
+      "rating": 4,
+      "pros": [
+        "功能强大",
+        "开源免费"
+      ],
+      "cons": [
+        "可能需要技术知识"
+      ],
+      "addedDate": "2026-05-25",
+      "lastUpdated": "2026-05-25",
+      "featured": false,
+      "reviewUrl": "/pages/tools/claude.html",
+      "source": "GitHub"
+    },
+    {
+      "id": "hubspot-aeo",
+      "name": "HubSpot AEO",
+      "description": "AI tool from Futurepedia",
+      "category": "AI工具",
+      "url": "https://www.futurepedia.io/",
+      "pricing": "免费/开源",
+      "rating": 4,
+      "pros": [
+        "功能强大",
+        "开源免费"
+      ],
+      "cons": [
+        "可能需要技术知识"
+      ],
+      "addedDate": "2026-05-25",
+      "lastUpdated": "2026-05-25",
+      "featured": false,
+      "reviewUrl": "/pages/tools/hubspot-aeo.html",
+      "source": "GitHub"
+    },
+    {
+      "id": "perplexity",
+      "name": "Perplexity",
+      "description": "AI tool from Futurepedia",
+      "category": "AI工具",
+      "url": "https://www.futurepedia.io/",
+      "pricing": "免费/开源",
+      "rating": 4,
+      "pros": [
+        "功能强大",
+        "开源免费"
+      ],
+      "cons": [
+        "可能需要技术知识"
+      ],
+      "addedDate": "2026-05-25",
+      "lastUpdated": "2026-05-25",
+      "featured": false,
+      "reviewUrl": "/pages/tools/perplexity.html",
+      "source": "GitHub"
+    },
+    {
+      "id": "google-gemini",
+      "name": "Google Gemini",
+      "description": "AI tool from Futurepedia",
+      "category": "AI工具",
+      "url": "https://www.futurepedia.io/",
+      "pricing": "免费/开源",
+      "rating": 4,
+      "pros": [
+        "功能强大",
+        "开源免费"
+      ],
+      "cons": [
+        "可能需要技术知识"
+      ],
+      "addedDate": "2026-05-25",
+      "lastUpdated": "2026-05-25",
+      "featured": false,
+      "reviewUrl": "/pages/tools/google-gemini.html",
+      "source": "GitHub"
+    },
+    {
+      "id": "openai-api",
+      "name": "OpenAI API",
+      "description": "OpenAI的官方API，提供GPT系列模型访问",
+      "category": "API服务",
+      "url": "https://platform.openai.com/",
+      "pricing": "免费/开源",
+      "rating": 4,
+      "pros": [
+        "功能强大",
+        "开源免费"
+      ],
+      "cons": [
+        "可能需要技术知识"
+      ],
+      "addedDate": "2026-05-25",
+      "lastUpdated": "2026-05-25",
+      "featured": false,
+      "reviewUrl": "/pages/tools/openai-api.html",
+      "source": "GitHub"
+    },
+    {
+      "id": "hugging-face",
+      "name": "Hugging Face",
+      "description": "最大的AI模型和数据集社区",
+      "category": "模型平台",
+      "url": "https://huggingface.co/",
+      "pricing": "免费/开源",
+      "rating": 4,
+      "pros": [
+        "功能强大",
+        "开源免费"
+      ],
+      "cons": [
+        "可能需要技术知识"
+      ],
+      "addedDate": "2026-05-25",
+      "lastUpdated": "2026-05-25",
+      "featured": false,
+      "reviewUrl": "/pages/tools/hugging-face.html",
+      "source": "GitHub"
+    },
+    {
+      "id": "anthropic-claude",
+      "name": "Anthropic Claude",
+      "description": "Anthropic开发的先进对话AI",
+      "category": "对话AI",
+      "url": "https://www.anthropic.com/",
+      "pricing": "免费/开源",
+      "rating": 4,
+      "pros": [
+        "功能强大",
+        "开源免费"
+      ],
+      "cons": [
+        "可能需要技术知识"
+      ],
+      "addedDate": "2026-05-25",
+      "lastUpdated": "2026-05-25",
+      "featured": false,
+      "reviewUrl": "/pages/tools/anthropic-claude.html",
+      "source": "GitHub"
     }
   ],
   "lastUpdated": "2026-05-24T18:00:04.385Z",
@@ -1048,5 +1363,24 @@
       "AI工具": 30,
       "多媒体工具": 1
     }
+  },
+  "metadata": {
+    "lastUpdated": "2026-05-25T06:22:28.199Z",
+    "totalTools": 65,
+    "categories": [
+      "对话AI",
+      "图像生成",
+      "写作助手",
+      "内容创作",
+      "编程助手",
+      "生产力工具",
+      "设计工具",
+      "营销工具",
+      "网站托管",
+      "AI工具",
+      "多媒体工具",
+      "API服务",
+      "模型平台"
+    ]
   }
 }
