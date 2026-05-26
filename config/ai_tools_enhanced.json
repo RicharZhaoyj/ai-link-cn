@@ -1,0 +1,257 @@
+{
+  "version": "2.0.0",
+  "lastUpdated": "2026-05-26T10:00:00.000Z",
+  "totalTools": 65,
+  "categories": {
+    "writing": {
+      "name": "写作助手",
+      "description": "AI写作工具、文案生成、内容创作、语法检查",
+      "icon": "✍️",
+      "userScenarios": ["博主", "作者", "营销人员", "学生", "内容创作者"],
+      "tools": [
+        {
+          "name": "ChatGPT",
+          "slug": "chatgpt",
+          "description": "OpenAI的对话AI，支持多种语言和复杂任务处理",
+          "pricing": "免费版可用，Plus版$20/月",
+          "rating": 4.8,
+          "useCases": ["文章写作", "代码生成", "翻译", "摘要", "对话"],
+          "quickInput": true,
+          "templates": ["博客文章", "邮件", "报告", "创意写作", "技术文档"]
+        },
+        {
+          "name": "Grammarly",
+          "slug": "grammarly",
+          "description": "语法检查和写作改进工具",
+          "pricing": "免费版基础功能，高级版$12/月",
+          "rating": 4.6,
+          "useCases": ["语法检查", "风格优化", "抄袭检测", "语气调整"],
+          "quickInput": true,
+          "templates": ["英文文档", "学术论文", "商业邮件", "社交媒体帖子"]
+        },
+        {
+          "name": "Jasper AI",
+          "slug": "jasper",
+          "description": "AI内容生成工具，快速创建高质量文本",
+          "pricing": "$49/月起",
+          "rating": 4.5,
+          "useCases": ["营销文案", "产品描述", "广告创意", "社交媒体内容"],
+          "quickInput": true,
+          "templates": ["营销文案", "产品介绍", "广告标题", "网站内容"]
+        }
+      ]
+    },
+    "design": {
+      "name": "设计创作",
+      "description": "AI图像生成、设计工具、视觉创作",
+      "icon": "🎨",
+      "userScenarios": ["设计师", "营销人员", "内容创作者", "艺术家"],
+      "tools": [
+        {
+          "name": "Midjourney",
+          "slug": "midjourney",
+          "description": "AI图像生成工具，通过文本提示创造惊人的视觉艺术作品",
+          "pricing": "$10-60/月",
+          "rating": 4.7,
+          "useCases": ["概念艺术", "插画", "营销素材", "产品可视化"],
+          "quickInput": true,
+          "templates": ["商业插画", "概念设计", "产品图片", "艺术创作"]
+        },
+        {
+          "name": "Canva",
+          "slug": "canva",
+          "description": "在线设计平台，轻松创建专业视觉内容",
+          "pricing": "免费版可用，Pro版$12.99/月",
+          "rating": 4.6,
+          "useCases": ["社交媒体图片", "演示文稿", "海报设计", "名片制作"],
+          "quickInput": true,
+          "templates": ["社交媒体图片", "演示文稿", "海报", "名片"]
+        }
+      ]
+    },
+    "coding": {
+      "name": "编程开发",
+      "description": "AI代码生成、开发辅助、编程助手",
+      "icon": "💻",
+      "userScenarios": ["开发者", "程序员", "工程师", "学生"],
+      "tools": [
+        {
+          "name": "GitHub Copilot",
+          "slug": "github_copilot",
+          "description": "AI编程助手，基于GitHub代码库提供智能代码补全和建议",
+          "pricing": "$10/月（个人），$19/月（商业）",
+          "rating": 4.7,
+          "useCases": ["代码补全", "bug修复", "文档生成", "代码重构"],
+          "quickInput": true,
+          "templates": ["Python函数", "JavaScript组件", "API集成", "算法实现"]
+        },
+        {
+          "name": "AutoGPT",
+          "slug": "autogpt",
+          "description": "自主运行的GPT-4实验，可以自动完成任务",
+          "pricing": "开源免费",
+          "rating": 4.5,
+          "useCases": ["自动化任务", "数据分析", "内容生成", "研究辅助"],
+          "quickInput": true,
+          "templates": ["自动化脚本", "数据分析", "内容生成", "研究任务"]
+        }
+      ]
+    },
+    "productivity": {
+      "name": "办公效率",
+      "description": "AI办公助手、会议记录、任务管理、笔记工具",
+      "icon": "📊",
+      "userScenarios": ["白领", "管理者", "学生", "远程工作者"],
+      "tools": [
+        {
+          "name": "Notion AI",
+          "slug": "notion_ai",
+          "description": "Notion集成的AI助手，提升工作效率",
+          "pricing": "$10/月（附加在Notion订阅上）",
+          "rating": 4.6,
+          "useCases": ["笔记整理", "会议摘要", "内容生成", "任务管理"],
+          "quickInput": true,
+          "templates": ["会议纪要", "项目计划", "学习笔记", "工作总结"]
+        }
+      ]
+    },
+    "marketing": {
+      "name": "营销工具",
+      "description": "AI营销工具、客户服务、商业分析",
+      "icon": "📈",
+      "userScenarios": ["营销人员", "创业者", "企业主", "销售人员"],
+      "tools": [
+        {
+          "name": "ConvertKit",
+          "slug": "convertkit",
+          "description": "创作者友好的邮件营销平台",
+          "pricing": "$9/月起",
+          "rating": 4.5,
+          "useCases": ["邮件营销", "自动化工作流", "用户培养", "销售漏斗"],
+          "quickInput": true,
+          "templates": ["欢迎邮件", "营销活动", "产品发布", "新闻简报"]
+        }
+      ]
+    },
+    "research": {
+      "name": "研究分析",
+      "description": "AI研究助手、数据分析、学术工具",
+      "icon": "🔬",
+      "userScenarios": ["研究人员", "学者", "分析师", "学生"],
+      "tools": [
+        {
+          "name": "Langflow",
+          "slug": "langflow",
+          "description": "可视化构建LangChain应用的工具",
+          "pricing": "开源免费",
+          "rating": 4.4,
+          "useCases": ["AI应用开发", "工作流设计", "原型制作", "实验研究"],
+          "quickInput": true,
+          "templates": ["聊天机器人", "数据提取", "内容分析", "自动化流程"]
+        }
+      ]
+    }
+  },
+  
+  "userScenarios": {
+    "student": {
+      "name": "学生",
+      "description": "学习和学术研究场景",
+      "recommendedTools": ["ChatGPT", "Grammarly", "Notion AI"],
+      "useCases": ["论文写作", "学习总结", "代码学习", "研究辅助"]
+    },
+    "developer": {
+      "name": "开发者",
+      "description": "软件开发和编程场景",
+      "recommendedTools": ["GitHub Copilot", "AutoGPT", "Langflow"],
+      "useCases": ["代码开发", "bug调试", "API集成", "自动化脚本"]
+    },
+    "designer": {
+      "name": "设计师",
+      "description": "设计和创意工作场景",
+      "recommendedTools": ["Midjourney", "Canva"],
+      "useCases": ["视觉设计", "创意构思", "营销素材", "原型设计"]
+    },
+    "marketer": {
+      "name": "营销人员",
+      "description": "市场营销和内容创作场景",
+      "recommendedTools": ["Jasper AI", "ChatGPT", "ConvertKit"],
+      "useCases": ["内容创作", "营销文案", "邮件营销", "社交媒体"]
+    },
+    "business": {
+      "name": "企业主",
+      "description": "商业管理和运营场景",
+      "recommendedTools": ["Notion AI", "ChatGPT", "Grammarly"],
+      "useCases": ["项目管理", "客户沟通", "文档处理", "数据分析"]
+    }
+  },
+  
+  "workflowTemplates": {
+    "blog_writing": {
+      "name": "博客文章创作",
+      "description": "完整的博客文章创作流程",
+      "tools": ["ChatGPT", "Grammarly", "Midjourney"],
+      "steps": [
+        "使用ChatGPT生成文章大纲",
+        "用ChatGPT撰写文章草稿",
+        "用Grammarly检查和优化",
+        "用Midjourney创建配图"
+      ]
+    },
+    "coding_project": {
+      "name": "编程项目开发",
+      "description": "完整的代码项目开发流程",
+      "tools": ["GitHub Copilot", "AutoGPT"],
+      "steps": [
+        "使用GitHub Copilot编写基础代码",
+        "用AutoGPT进行代码优化",
+        "调试和测试",
+        "文档生成"
+      ]
+    },
+    "marketing_campaign": {
+      "name": "营销活动策划",
+      "description": "完整的营销活动流程",
+      "tools": ["Jasper AI", "ChatGPT", "ConvertKit"],
+      "steps": [
+        "用Jasper AI创建营销文案",
+        "用ChatGPT生成社交媒体内容",
+        "用ConvertKit设置邮件营销",
+        "分析和优化"
+      ]
+    }
+  },
+  
+  "quickInputTemplates": {
+    "chatgpt": {
+      "blog_post": {
+        "name": "博客文章写作",
+        "description": "生成一篇关于指定主题的博客文章",
+        "template": "请帮我写一篇关于[主题]的博客文章，要求：\n1. 标题吸引人\n2. 结构清晰，有引言、正文和结论\n3. 语言生动有趣\n4. 包含3-5个关键要点\n5. 约1000字\n\n主题：[请在此输入主题]",
+        "examples": ["人工智能的未来发展", "如何学习编程", "数字营销的最新趋势"]
+      },
+      "email_writing": {
+        "name": "邮件写作",
+        "description": "生成专业邮件",
+        "template": "请帮我写一封[邮件类型]邮件，收件人是[收件人]，主题是关于[主题]。\n要求：\n1. 专业得体的语气\n2. 清晰的沟通目的\n3. 包含必要的细节\n4. 礼貌的结尾\n\n邮件类型：[商务/求职/邀请/感谢等]\n收件人：[收件人信息]\n主题：[邮件主题]",
+        "examples": ["商务合作邀请", "求职信", "客户感谢信"]
+      }
+    },
+    "grammarly": {
+      "document_check": {
+        "name": "文档检查",
+        "description": "检查并优化英文文档",
+        "template": "[请在此粘贴需要检查的英文文档]\n\n检查要求：\n1. 语法和拼写错误\n2. 写作风格优化\n3. 语气调整（正式/非正式）\n4. 可读性改进",
+        "examples": ["学术论文摘要", "商业计划书", "英文简历"]
+      }
+    },
+    "midjourney": {
+      "image_generation": {
+        "name": "图像生成",
+        "description": "生成AI图像",
+        "template": "请基于以下描述生成图像：\n[图像描述]\n\n要求：\n1. 风格：[选择风格，如：写实/插画/抽象]\n2. 比例：[选择比例，如：16:9/1:1/4:3]\n3. 细节：[详细描述需要的细节]\n4. 氛围：[描述氛围，如：明亮/暗黑/温馨]\n\n图像描述：[请输入详细的图像描述]",
+        "examples": ["一个未来城市的夜景，赛博朋克风格，霓虹灯光，雨夜的街道", "一位宇航员在火星上种植植物，写实风格，红色天空"]
+      }
+    }
+  }
+}
