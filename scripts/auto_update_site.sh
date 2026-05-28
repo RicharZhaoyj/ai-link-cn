@@ -82,11 +82,20 @@ main() {
         warn "今天没有新发现的工具"
     fi
     
-    # 3. 生成最新工具列表页面
-    log "3. 更新工具列表页面..."
+    # 3. 更新时间显示（基于最新Git提交）
+    log "3. 更新时间显示..."
+    if [ -f "$WORKSPACE/scripts/update_time_display.sh" ]; then
+        "$WORKSPACE/scripts/update_time_display.sh"
+        success "时间显示已更新"
+    else
+        warn "时间更新脚本未找到: update_time_display.sh"
+    fi
+    
+    # 4. 生成最新工具列表页面
+    log "4. 更新工具列表页面..."
     update_tools_list_page
     
-    # 4. 检查是否有变更需要提交
+    # 5. 检查是否有变更需要提交
     log "4. 检查Git变更..."
     if git status --porcelain | grep -q "."; then
         success "检测到变更"
@@ -100,12 +109,12 @@ main() {
             success "提交成功: $COMMIT_MSG"
             
             # 推送到GitHub
-            log "5. 推送到GitHub..."
+            log "6. 推送到GitHub..."
             if git push origin main > /dev/null 2>&1; then
                 success "推送成功"
                 
-                # 6. 触发Vercel部署
-                log "6. 触发Vercel部署..."
+                # 7. 触发Vercel部署
+                log "7. 触发Vercel部署..."
                 trigger_vercel_deploy
             else
                 error "推送失败"
