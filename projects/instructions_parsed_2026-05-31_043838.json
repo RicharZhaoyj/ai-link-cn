@@ -1,0 +1,59 @@
+{
+    "parsed_at": "2026-05-31T04:38:38+08:00",
+    "instructions": [
+        {
+            "id": "heartbeat_001",
+            "source": "HEARTBEAT.md今日任务",
+            "type": "content_creation",
+            "title": "完成Grammarly AI评测",
+            "raw_text": "2. **Grammarly评测完成**（72% → 100%）✅ **昨天目标** - ❌ **失败**（14:00-18:00计划未执行）
+3. **ChatGPT评测推进**（62% → 75%）✅ **昨天目标** - ❌ **失败**（20:00-22:00计划未执行）
+4. **系统状态验证**: 自动化系统已正常运行 ✅ **已验证**",
+            "parsed": {
+                "action": "complete_grammarly_review",
+                "current": "212行 (72%)",
+                "target": "294行 (100%)",
+                "delta": "+82行",
+                "priority": "urgent",
+                "timeframe": "今日完成"
+            }
+        },
+        {
+            "id": "heartbeat_002",
+            "source": "HEARTBEAT.md今日任务",
+            "type": "content_creation",
+            "title": "推进ChatGPT-4o评测",
+            "raw_text": "3. **ChatGPT评测推进**（62% → 75%）✅ **昨天目标** - ❌ **失败**（20:00-22:00计划未执行）
+4. **系统状态验证**: 自动化系统已正常运行 ✅ **已验证**",
+            "parsed": {
+                "action": "advance_chatgpt_review",
+                "current": "302行 (77%)",
+                "target": "389行 (80%)",
+                "delta": "+87行",
+                "priority": "urgent",
+                "timeframe": "今日完成"
+            }
+        },
+        {
+            "id": "heartbeat_003",
+            "source": "HEARTBEAT.md今日任务",
+            "type": "social_media",
+            "title": "解决社交媒体阻塞问题",
+            "raw_text": "1. **社交媒体账号紧急建立** 🚨 **昨天必须完成** - ❌ **失败**（全天计划未执行）
+2. **Grammarly评测完成**（72% → 100%）✅ **昨天目标** - ❌ **失败**（14:00-18:00计划未执行）
+3. **ChatGPT评测推进**（62% → 75%）✅ **昨天目标** - ❌ **失败**（20:00-22:00计划未执行）",
+            "parsed": {
+                "action": "unblock_social_media",
+                "status": "blocked_6_days",
+                "priority": "critical",
+                "timeframe": "立即处理",
+                "requires": "manual_intervention"
+            }
+        }
+    ],
+    "action_required": {
+        "immediate": ["complete_grammarly_review", "advance_chatgpt_review"],
+        "manual": ["unblock_social_media"],
+        "monitoring": ["system_status_check"]
+    }
+}
