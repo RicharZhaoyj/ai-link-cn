@@ -1,0 +1,11 @@
+[
+{"component":"website","status":"healthy","http_code":200,"response_time":0.3,"title":"AI.link.cn - 基于实际测试的AI工具体验分享","timestamp":"2026-06-01T10:39:25+08:00"}
+,
+{"component":"automation","status":"healthy","last_run":"未知","log_age_seconds":999999,"timestamp":"2026-06-01T10:39:25+08:00"}
+,
+{"component":"social_media","linkedin":"stale","zhihu":"stale","timestamp":"2026-06-01T10:39:25+08:00"}
+,
+{"component":"reviews","grammarly":{"lines":312,"progress":106,"last_modified":"2026-06-01 10:39:21.870961354 +0800"},"chatgpt":{"lines":409,"progress":105,"last_modified":"2026-06-01 10:39:21.871961346 +0800"},"timestamp":"2026-06-01T10:39:25+08:00"}
+,
+{"component":"system","disk_usage":63,"memory_usage":48,"timestamp":"2026-06-01T10:39:25+08:00"}
+]

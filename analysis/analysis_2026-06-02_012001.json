@@ -1,0 +1,24 @@
+{
+    "timestamp": "2026-06-02T01:20:01+08:00",
+    "analysis_id": "2026-06-02_012001",
+    "overall_status": "critical",
+    "status_summary": "🚨 有 1 个紧急问题需要立即处理",
+    "total_alerts": 1,
+    "total_warnings": 0,
+    "total_suggestions": 6,
+    "alerts": [
+  "社交媒体任务严重延迟: LinkedIn(stale), 知乎(stale)"
+],
+    "warnings": [
+  ""
+],
+    "suggestions": [
+  "网站服务运行正常",
+  "自动化系统运行正常",
+  "Grammarly评测进展良好: 106%",
+  "ChatGPT评测进展良好: 105%",
+  "磁盘空间充足: 63%",
+  "内存使用正常: 49%"
+],
+    "data_source": "/root/.openclaw/workspace/status/latest_status.json"
+}
