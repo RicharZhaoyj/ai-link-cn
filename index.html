@@ -418,15 +418,15 @@
             <nav>
                 <a href="#news">今日热点</a>
                 <a href="https://tools.link.cn">工具推荐</a>
-                <a href="/pages/quick-input/">一键输入</a>
-                <a href="/pages/about.html">关于我们</a>
+                <a href="/pages/quick-input/">每日速递</a>
+                <a href="/pages/about.html">关于 AI News</a>
                 <a href="/test_site.html">系统状态</a>
             </nav>
         </header>
         <!-- 今日热点新闻 -->
         <section id="news" style="margin: 30px 0;">
             <h2 style="text-align: center; margin-bottom: 20px;">📰 今日 AI 热点</h2>
-            <div style="display: none; max-width: 1200px; margin: 0 auto;">
+            <div style="display: none !important; max-width: 1200px; margin: 0 auto;">
                 <div style="background: #f8fafc; padding: 20px; border-radius: 12px; border: 1px solid #e2e8f0;">
                     <div style="color: #64748b; font-size: 0.85rem; margin-bottom: 8px;">2026-06-05</div>
                     <h3 style="margin: 0 0 10px 0; font-size: 1.1rem;">OpenAI 发布 GPT-5.6 灰度版本</h3>
@@ -463,7 +463,7 @@
         </div>
         
         <div class="featured-tools">
-            <h2>🌟 常用AI工具示例</h2>
+            <h2>🌟 今日 AI 热点</h2>
             <div class="all-tools">
                 <div class="tool-card">
                     <div class="category">对话AI</div>
@@ -574,7 +574,7 @@
                 </div>
             </div>
             
-            <!-- 一键输入功能入口 -->
+            <!-- 每日速递功能入口 -->
             <div style="text-align: center; margin: 3rem 0;">
                 <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2rem; border-radius: 12px; color: white;">
                     <h2 style="color: white; margin-bottom: 1rem;">🆕 最新模型与工具</h2>
@@ -582,7 +582,7 @@
                         提供模板化输入，快速上手AI工具，节省学习和摸索时间
                     </p>
                     <a href="/pages/quick-input/" style="display: inline-block; padding: 12px 30px; background: white; color: #667eea; text-decoration: none; border-radius: 25px; font-weight: 600; transition: all 0.3s ease;">
-                        🎯 立即体验一键输入
+                        🎯 立即体验每日速递
                     </a>
                 </div>
             </div>
@@ -733,7 +733,7 @@
             </p>
             <div class="footer-links">
                 <a href="https://github.com/RicharZhaoyj/ai-link-cn" target="_blank">GitHub仓库</a>
-                <a href="/pages/about.html">关于我们</a>
+                <a href="/pages/about.html">关于 AI News</a>
                 <a href="/test_site.html">系统状态</a>
             </div>
         </footer>
@@ -1178,7 +1178,7 @@
                         </a>
                         ${tool.hasQuickInput ? `
                             <button class="tool-action-btn quick-input-btn" onclick="openQuickInput('${tool.slug}')">
-                                一键输入
+                                每日速递
                             </button>
                         ` : ''}
                     </div>
@@ -1216,7 +1216,7 @@
                                 ${workflow.tools.map(tool => `<span>${tool}</span>`).join('')}
                             </div>
                             <p style="margin-top: 10px; font-size: 0.9rem; color: #666;">
-                                📌 点击工具卡片上的"一键输入"可以直接使用模板
+                                📌 点击工具卡片上的"每日速递"可以直接使用模板
                             </p>
                         </div>
                     </div>
@@ -1232,7 +1232,7 @@
             }
         }
         
-        // 打开一键输入功能
+        // 打开每日速递功能
         function openQuickInput(toolSlug) {
             window.location.href = `/pages/quick-input/?tool=${toolSlug}`;
         }
