@@ -21,9 +21,11 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install feedparser
+        run: pip install feedparser requests
 
       - name: Run news update script
+        env:
+          AI_API_KEY: ${{ secrets.AI_API_KEY }}
         run: python scripts/update_news.py
 
       - name: Commit and push
