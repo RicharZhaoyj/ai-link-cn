@@ -5,72 +5,228 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI News — 每日 AI 热点与工具发现</title>
     <meta name="description" content="每日追踪 AI 领域最新动态、模型发布与实用工具，帮你快速了解行业趋势。">
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card-bg: #1e2937;
+            --accent: #22d3ee;
+            --text: #e2e8f0;
+            --text-secondary: #94a3b8;
+        }
+        
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 80px 20px 60px;
+        }
+        
+        h1 {
+            font-size: 3.2rem;
+            margin: 0 0 16px;
+            background: linear-gradient(90deg, #22d3ee, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 620px;
+            margin: 0 auto 40px;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+        
+        .btn-primary {
+            background: #22d3ee;
+            color: #0f172a;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #22d3ee;
+            border: 2px solid #22d3ee;
+        }
+        
+        .section-title {
+            font-size: 1.75rem;
+            text-align: center;
+            margin-bottom: 32px;
+            color: #e2e8f0;
+        }
+        
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+        
+        .news-card {
+            background: var(--card-bg);
+            border: 1px solid #334155;
+            border-radius: 16px;
+            padding: 24px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        
+        .news-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        
+        .tag {
+            font-size: 0.75rem;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+        
+        .tag-model { background: #312e81; color: #a5b4fc; }
+        .tag-tech { background: #164e63; color: #67e8f9; }
+        .tag-open { background: #14532d; color: #86efac; }
+        
+        .news-date {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        .news-card h3 {
+            margin: 0 0 12px;
+            font-size: 1.15rem;
+            line-height: 1.4;
+        }
+        
+        .news-card p {
+            color: #cbd5e1;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+        
+        .news-link {
+            color: #22d3ee;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .tools-cta {
+            background: #1e2937;
+            border: 1px solid #334155;
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            max-width: 620px;
+            margin: 60px auto;
+        }
+        
+        .tools-cta h3 {
+            margin: 0 0 12px;
+            color: #e2e8f0;
+        }
+        
+        .tools-cta p {
+            color: #94a3b8;
+            margin-bottom: 24px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-
-        <!-- 新闻风格 Hero -->
-        <header style="text-align: center; padding: 60px 20px 40px;">
-            <h1 style="font-size: 3rem; margin: 0 0 16px 0; color: #1e2937;">AI News</h1>
-            <p style="font-size: 1.25rem; color: #475569; max-width: 600px; margin: 0 auto 30px;">每日追踪 AI 最新动态、模型发布与实用工具</p>
+        
+        <!-- Hero -->
+        <header>
+            <h1>AI News</h1>
+            <p class="subtitle">每日追踪 AI 最新动态、模型发布与实用工具</p>
             
-            <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
-                <a href="#news" style="background: #6366f1; color: white; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 600;">浏览今日热点</a>
-                <a href="https://tools.link.cn" style="background: white; color: #6366f1; border: 2px solid #6366f1; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 600;">工具推荐 →</a>
+            <div class="nav-buttons">
+                <a href="#news" class="btn btn-primary">浏览今日热点</a>
+                <a href="https://tools.link.cn" class="btn btn-secondary">工具推荐 →</a>
             </div>
         </header>
 
         <!-- 今日热点新闻 -->
-        <section id="news" style="margin: 40px 0;">
-            <h2 style="text-align: center; margin-bottom: 30px; font-size: 1.8rem;">📰 今日 AI 热点</h2>
+        <section id="news">
+            <h2 class="section-title">📰 今日 AI 热点</h2>
             
-            <div style="max-width: 900px; margin: 0 auto;">
-                <!-- 新闻卡片 1 -->
-                <div style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px; margin-bottom: 16px;">
-                    <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 12px;">
-                        <span style="background: #fee2e2; color: #b91c1c; padding: 2px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">模型发布</span>
-                        <span style="color: #64748b; font-size: 0.9rem;">2026-06-05</span>
+            <div class="news-grid">
+                <!-- Card 1 -->
+                <div class="news-card">
+                    <div class="news-meta">
+                        <span class="tag tag-model">模型发布</span>
+                        <span class="news-date">2026-06-05</span>
                     </div>
-                    <h3 style="margin: 0 0 12px 0; font-size: 1.25rem; line-height: 1.4;">OpenAI 发布 GPT-5.6 灰度版本，Codex 角色插件全面上线</h3>
-                    <p style="color: #475569; line-height: 1.6; margin-bottom: 16px;">GPT-5.6 灰度版本已于 6 月 2 日开始推送，Codex 角色插件支持 62 款主流应用，覆盖数据分析、创意制作等场景。</p>
-                    <a href="#" style="color: #6366f1; font-weight: 500; text-decoration: none;">阅读全文 →</a>
+                    <h3>OpenAI 发布 GPT-5.6 灰度版本，Codex 角色插件全面上线</h3>
+                    <p>GPT-5.6 灰度版本已于 6 月 2 日开始推送，Codex 角色插件支持 62 款主流应用，覆盖数据分析、创意制作等场景。</p>
+                    <a href="https://openai.com" class="news-link">阅读全文 →</a>
                 </div>
 
-                <!-- 新闻卡片 2 -->
-                <div style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px; margin-bottom: 16px;">
-                    <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 12px;">
-                        <span style="background: #dbeafe; color: #1e40af; padding: 2px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">技术突破</span>
-                        <span style="color: #64748b; font-size: 0.9rem;">2026-06-05</span>
+                <!-- Card 2 -->
+                <div class="news-card">
+                    <div class="news-meta">
+                        <span class="tag tag-tech">技术突破</span>
+                        <span class="news-date">2026-06-05</span>
                     </div>
-                    <h3 style="margin: 0 0 12px 0; font-size: 1.25rem; line-height: 1.4;">Anthropic Claude Opus 4.8 正式发布，SWE-Bench Pro 达 69.2%</h3>
-                    <p style="color: #475569; line-height: 1.6; margin-bottom: 16px;">Opus 4.8 在编程评测中大幅领先，新增 effort 程度控制和 2.5 倍快速模式，Agent 能力显著提升。</p>
-                    <a href="#" style="color: #6366f1; font-weight: 500; text-decoration: none;">阅读全文 →</a>
+                    <h3>Anthropic Claude Opus 4.8 正式发布，SWE-Bench Pro 达 69.2%</h3>
+                    <p>Opus 4.8 在编程评测中大幅领先，新增 effort 程度控制和 2.5 倍快速模式，Agent 能力显著提升。</p>
+                    <a href="https://anthropic.com" class="news-link">阅读全文 →</a>
                 </div>
 
-                <!-- 新闻卡片 3 -->
-                <div style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px; margin-bottom: 16px;">
-                    <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 12px;">
-                        <span style="background: #fef3c7; color: #92400e; padding: 2px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">开源动态</span>
-                        <span style="color: #64748b; font-size: 0.9rem;">2026-06-04</span>
+                <!-- Card 3 -->
+                <div class="news-card">
+                    <div class="news-meta">
+                        <span class="tag tag-open">开源动态</span>
+                        <span class="news-date">2026-06-04</span>
                     </div>
-                    <h3 style="margin: 0 0 12px 0; font-size: 1.25rem; line-height: 1.4;">DeepSeek V4 正式开源，1.6T 参数模型定价全球最低</h3>
-                    <p style="color: #475569; line-height: 1.6; margin-bottom: 16px;">DeepSeek-V4-Pro API 价格永久下调 75%，每百万 token 输入仅 ¥0.025，SWE-Bench Pro 超越 GPT-5.4。</p>
-                    <a href="#" style="color: #6366f1; font-weight: 500; text-decoration: none;">阅读全文 →</a>
+                    <h3>DeepSeek V4 正式开源，1.6T 参数模型定价全球最低</h3>
+                    <p>DeepSeek-V4-Pro API 价格永久下调 75%，每百万 token 输入仅 ¥0.025，SWE-Bench Pro 超越 GPT-5.4。</p>
+                    <a href="https://deepseek.com" class="news-link">阅读全文 →</a>
                 </div>
             </div>
 
-            <div style="text-align: center; margin-top: 30px;">
-                <a href="#" style="display: inline-block; background: #6366f1; color: white; padding: 12px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1rem;">浏览全部 AI 新闻 →</a>
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="#" class="btn btn-primary">浏览全部 AI 新闻 →</a>
             </div>
         </section>
 
         <!-- 工具推荐入口 -->
-        <section style="margin: 40px 0; text-align: center;">
-            <div style="background: #f0f4ff; padding: 30px; border-radius: 16px; max-width: 600px; margin: 0 auto;">
-                <h3 style="margin: 0 0 15px 0;">🛠️ 工具推荐已迁移</h3>
-                <p style="color: #475569; margin-bottom: 20px;">所有 AI 工具推荐已迁移至 <a href="https://tools.link.cn" style="color: #6366f1; font-weight: 600;">tools.link.cn</a></p>
-                <a href="https://tools.link.cn" style="display: inline-block; background: #6366f1; color: white; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 600;">前往工具推荐平台 →</a>
-            </div>
+        <section class="tools-cta">
+            <h3>🛠️ 工具推荐已迁移</h3>
+            <p>所有 AI 工具推荐已迁移至 tools.link.cn</p>
+            <a href="https://tools.link.cn" class="btn btn-primary">前往工具推荐平台 →</a>
         </section>
 
     </div>
