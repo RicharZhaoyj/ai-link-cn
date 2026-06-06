@@ -2,7 +2,7 @@ name: Update AI News Daily
 
 on:
   schedule:
-    - cron: '0 8 * * *'   # 每天北京时间 16:00 执行
+    - cron: '0 8 * * *'
   workflow_dispatch:
 
 jobs:
@@ -28,5 +28,11 @@ jobs:
           git config user.name "AI News Bot"
           git config user.email "bot@ailink.cn"
           git add index.html
-          git commit -m "auto: update daily AI news" || exit 0
+
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+
+          git commit -m "auto: update daily AI news"
           git push
