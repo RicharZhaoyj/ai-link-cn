@@ -1,0 +1,32 @@
+name: Update AI News Daily
+
+on:
+  schedule:
+    - cron: '0 8 * * *'   # 每天北京时间 16:00 执行
+  workflow_dispatch:
+
+jobs:
+  update-news:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install feedparser
+
+      - name: Run news update script
+        run: python scripts/update_news.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "AI News Bot"
+          git config user.email "bot@ailink.cn"
+          git add index.html
+          git commit -m "auto: update daily AI news" || exit 0
+          git push
