@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文章标题 — AI News</title>
+    <meta name="description" content="一句话总结">
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card-bg: #1e2937;
+            --accent: #22d3ee;
+            --text: #e2e8f0;
+            --text-secondary: #94a3b8;
+        }
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        h1 {
+            font-size: 2.2rem;
+            line-height: 1.3;
+            margin-bottom: 12px;
+        }
+        .meta-bar {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+        .score {
+            background: #1e2937;
+            border: 1px solid #334155;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+        .recommend {
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        .recommend.high { background: #166534; color: #86efac; }
+        .recommend.medium { background: #854d0e; color: #fde047; }
+        .recommend.low { background: #7f1d1d; color: #fca5a5; }
+        
+        .summary {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #334155;
+        }
+        .content h2 {
+            margin-top: 40px;
+            font-size: 1.35rem;
+            color: #e2e8f0;
+        }
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 32px 0;
+        }
+        .pros, .cons {
+            background: #1e2937;
+            border-radius: 12px;
+            padding: 20px;
+        }
+        .pros h4 { color: #86efac; margin-top: 0; }
+        .cons h4 { color: #fca5a5; margin-top: 0; }
+        .tools-section {
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid #334155;
+        }
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+            margin-top: 20px;
+        }
+        .tool-card {
+            background: #1e2937;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 20px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s ease;
+        }
+        .tool-card:hover {
+            border-color: #22d3ee;
+            transform: translateY(-2px);
+        }
+        .conclusion {
+            background: #1e2937;
+            border-left: 4px solid #22d3ee;
+            padding: 20px;
+            margin-top: 48px;
+            border-radius: 0 12px 12px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>文章标题</h1>
+        
+        <div class="meta-bar">
+            <span class="score">评分：8.7/10</span>
+            <span class="recommend high">强烈推荐</span>
+            <span style="color:#94a3b8;">发布于 2026-06-14</span>
+        </div>
+        
+        <div class="summary">
+            <strong>一句话总结：</strong> 这里写核心判断（20-25字内）。
+        </div>
+        
+        <div class="content">
+            <!-- 正文内容 -->
+            <h2>核心亮点</h2>
+            <p>第一点...</p>
+            <p>第二点...</p>
+            
+            <h2>目前不足</h2>
+            <p>...</p>
+            
+            <div class="pros-cons">
+                <div class="pros">
+                    <h4>✅ 优点</h4>
+                    <ul>
+                        <li>优点1</li>
+                        <li>优点2</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h4>❌ 缺点</h4>
+                    <ul>
+                        <li>缺点1</li>
+                        <li>缺点2</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h2>适用场景</h2>
+            <p>...</p>
+            
+            <h2>不推荐场景</h2>
+            <p>...</p>
+        </div>
+        
+        <!-- 相关工具推荐 -->
+        <div class="tools-section">
+            <h3 style="margin-bottom:8px;">相关工具推荐</h3>
+            <div class="tools-grid">
+                <a href="https://tools.link.cn/tool/flux" class="tool-card">
+                    <h4>Flux</h4>
+                    <p>目前开源图像模型中真实感和速度表现最强的选择。</p>
+                </a>
+                <a href="https://tools.link.cn/tool/claude-3-5" class="tool-card">
+                    <h4>Claude 3.5 Sonnet</h4>
+                    <p>目前综合能力最强的 AI 模型之一。</p>
+                </a>
+            </div>
+        </div>
+        
+        <div class="conclusion">
+            <strong>最终建议：</strong> 这里写是否值得尝试的结论。
+        </div>
+    </div>
+</body>
+</html>
