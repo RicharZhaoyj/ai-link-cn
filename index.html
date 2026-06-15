@@ -4,301 +4,319 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI News — 每日 AI 热点与工具发现</title>
-    <meta name="description" content="每日追踪 AI 领域最新动态、模型发布与实用工具，帮你快速了解行业趋势。">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap');
+        
         :root {
-            --bg: #0f172a;
-            --card-bg: #1e2937;
-            --accent: #22d3ee;
-            --text: #e2e8f0;
-            --text-secondary: #94a3b8;
+            --bg: #0a0f1a;
+            --surface: #111827;
+            --surface-2: #1f2937;
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #67e8f9;
+            --accent-dark: #22d3ee;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         
         body {
-            margin: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-family: 'Inter', system_ui, sans-serif;
             background-color: var(--bg);
             color: var(--text);
-            line-height: 1.6;
+            line-height: 1.7;
         }
         
         .container {
-            max-width: 1100px;
+            max-width: 1180px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
         }
         
         header {
-            text-align: center;
-            padding: 80px 20px 60px;
+            padding: 32px 0;
+            border-bottom: 1px solid #1f2937;
         }
         
-        h1 {
-            font-size: 3.2rem;
-            margin: 0 0 16px;
-            background: linear-gradient(90deg, #22d3ee, #a78bfa);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .subtitle {
-            font-size: 1.25rem;
-            color: var(--text-secondary);
-            max-width: 620px;
-            margin: 0 auto 40px;
-        }
-        
-        .nav-buttons {
+        .nav {
             display: flex;
-            gap: 16px;
-            justify-content: center;
-            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
         }
         
-        .btn {
-            display: inline-block;
-            padding: 14px 32px;
-            border-radius: 8px;
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--text-muted);
             text-decoration: none;
-            font-weight: 600;
-            transition: all 0.2s ease;
+            font-weight: 500;
+            transition: color 0.2s ease;
         }
         
-        .btn-primary {
-            background: #22d3ee;
-            color: #0f172a;
+        .nav-links a:hover {
+            color: var(--text);
         }
         
-        .btn-secondary {
-            background: transparent;
-            color: #22d3ee;
-            border: 2px solid #22d3ee;
+        .hero {
+            padding: 120px 0 100px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 4.2rem;
+            line-height: 1.1;
+            font-weight: 700;
+            letter-spacing: -0.04em;
+            max-width: 820px;
+            margin: 0 auto 24px;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 560px;
+            margin: 0 auto 48px;
+        }
+        
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
         }
         
         .section-title {
             font-size: 1.75rem;
-            text-align: center;
-            margin-bottom: 32px;
-            color: #e2e8f0;
+            font-weight: 600;
+            letter-spacing: -0.02em;
         }
         
-        .news-grid {
+        .tool-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 24px;
-            margin-bottom: 40px;
         }
         
-        .news-card {
-            background: var(--card-bg);
-            border: 1px solid #334155;
-            border-radius: 16px;
-            padding: 24px;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        .tool-card {
+            background: var(--surface);
+            border: 1px solid #1f2937;
+            border-radius: 20px;
+            padding: 32px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+            color: inherit;
         }
         
-        .news-card:hover {
+        .tool-card:hover {
+            border-color: var(--accent);
             transform: translateY(-4px);
             box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
         }
         
-        .news-meta {
+        .tool-header {
             display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 12px;
-        }
-        
-        .tag {
-            font-size: 0.75rem;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-weight: 600;
-        }
-        
-        .tag-model { background: #312e81; color: #a5b4fc; }
-        .tag-tech { background: #164e63; color: #67e8f9; }
-        .tag-open { background: #14532d; color: #86efac; }
-        
-        .news-date {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-        
-        .news-card h3 {
-            margin: 0 0 12px;
-            font-size: 1.15rem;
-            line-height: 1.4;
-        }
-        
-        .news-card p {
-            color: #cbd5e1;
-            font-size: 0.95rem;
+            justify-content: space-between;
+            align-items: flex-start;
             margin-bottom: 20px;
         }
         
-        .news-link {
-            color: #22d3ee;
-            text-decoration: none;
-            font-weight: 500;
+        .tool-name {
+            font-size: 1.5rem;
+            font-weight: 600;
         }
         
-        .tools-cta {
-            background: #1e2937;
-            border: 1px solid #334155;
-            border-radius: 16px;
-            padding: 40px;
-            text-align: center;
-            max-width: 620px;
-            margin: 60px auto;
+        .score {
+            background: #166534;
+            color: #86efac;
+            padding: 4px 14px;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 600;
         }
         
-        .tools-cta h3 {
-            margin: 0 0 12px;
-            color: #e2e8f0;
-        }
-        
-        .tools-cta p {
-            color: #94a3b8;
+        .tool-desc {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            line-height: 1.6;
             margin-bottom: 24px;
+        }
+        
+        .tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        
+        .tag {
+            background: #1f2937;
+            color: #64748b;
+            padding: 6px 14px;
+            border-radius: 9999px;
+            font-size: 0.8rem;
+        }
+        
+        .article-list {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+        
+        .article-item {
+            display: flex;
+            gap: 32px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid #1f2937;
+        }
+        
+        .article-content {
+            flex: 1;
+        }
+        
+        .article-meta {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+        
+        .article-title {
+            font-size: 1.35rem;
+            font-weight: 600;
+            line-height: 1.4;
+            margin-bottom: 12px;
+            transition: color 0.2s ease;
+        }
+        
+        .article-item:hover .article-title {
+            color: var(--accent);
+        }
+        
+        .article-summary {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+        
+        footer {
+            padding: 60px 0 40px;
+            border-top: 1px solid #1f2937;
+            margin-top: 80px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        
-        <!-- Hero -->
-        <header>
-            <h1>AI News</h1>
-            <p class="subtitle">每日追踪 AI 最新动态、模型发布与实用工具</p>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">AI News</div>
+                <ul class="nav-links">
+                    <li><a href="#">工具发现</a></li>
+                    <li><a href="#">热点观察</a></li>
+                    <li><a href="#">趋势周报</a></li>
+                    <li><a href="https://tools.link.cn" target="_blank">工具推荐 ↗</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <div class="hero">
+        <div class="container">
+            <h1>深入 AI 的<br>每一个重要时刻</h1>
+            <p>我们不只是报道新闻，而是帮你判断哪些工具和变化真正值得关注。</p>
+        </div>
+    </div>
+
+    <!-- 本周值得关注的工具 -->
+    <div class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">本周值得关注的工具</h2>
+                <a href="https://tools.link.cn" style="color:#67e8f9; text-decoration:none; font-weight:500;">在 Tools 查看全部 →</a>
+            </div>
             
-            <div class="nav-buttons">
-                <a href="#news" class="btn btn-primary">浏览今日热点</a>
-                <a href="https://tools.link.cn" class="btn btn-secondary">工具推荐 →</a>
+            <div class="tool-grid">
+                <!-- Tool 1 -->
+                <a href="https://tools.link.cn/tool/flux" class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-name">Flux</div>
+                        <div class="score">9.4</div>
+                    </div>
+                    <div class="tool-desc">
+                        目前开源图像模型中，真实感与生成速度平衡最好的选择。
+                    </div>
+                    <div class="tags">
+                        <span class="tag">开源</span>
+                        <span class="tag">高性价比</span>
+                    </div>
+                </a>
+                
+                <!-- Tool 2 -->
+                <a href="https://tools.link.cn/tool/claude-3-5" class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-name">Claude 3.5 Sonnet</div>
+                        <div class="score">9.6</div>
+                    </div>
+                    <div class="tool-desc">
+                        目前综合能力最强的模型，尤其在复杂推理和代码任务上表现突出。
+                    </div>
+                    <div class="tags">
+                        <span class="tag">高性能</span>
+                        <span class="tag">长上下文</span>
+                    </div>
+                </a>
             </div>
-        </header>
-
-<!-- 本周值得关注的工具（联动 tools.link.cn） -->
-<section style="max-width:1100px;margin:40px auto;padding:0 20px;">
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;">
-        <h2 style="font-size:1.75rem;margin:0;">本周值得关注的工具</h2>
-        <a href="https://tools.link.cn" style="color:#22d3ee;text-decoration:none;font-weight:600;">在 Tools 查看更多 →</a>
+        </div>
     </div>
-    
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;">
-        <!-- 工具卡片 1 -->
-        <a href="https://tools.link.cn/tool/flux" style="text-decoration:none;color:inherit;">
-            <div style="background:#1e2937;border-radius:16px;padding:24px;border:1px solid #334155;transition:all 0.2s ease;">
-                <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:12px;">
-                    <div style="font-weight:700;font-size:1.25rem;">Flux</div>
-                    <div style="background:#166534;color:#86efac;padding:2px 10px;border-radius:12px;font-size:0.85rem;font-weight:600;">9.2</div>
-                </div>
-                <div style="color:#94a3b8;font-size:0.95rem;line-height:1.6;margin-bottom:16px;">
-                    目前开源图像模型中真实感和速度表现最强的选择。
-                </div>
-                <div style="display:flex;gap:8px;flex-wrap:wrap;">
-                    <span style="background:#334155;color:#e2e8f0;padding:4px 10px;border-radius:6px;font-size:0.8rem;">免费</span>
-                    <span style="background:#334155;color:#e2e8f0;padding:4px 10px;border-radius:6px;font-size:0.8rem;">开源</span>
-                </div>
+
+    <!-- 最新文章 -->
+    <div class="section" style="background:#111827; padding:80px 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">最新洞察</h2>
             </div>
-        </a>
-        
-        <!-- 工具卡片 2 -->
-        <a href="https://tools.link.cn/tool/claude-3-5" style="text-decoration:none;color:inherit;">
-            <div style="background:#1e2937;border-radius:16px;padding:24px;border:1px solid #334155;transition:all 0.2s ease;">
-                <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:12px;">
-                    <div style="font-weight:700;font-size:1.25rem;">Claude 3.5 Sonnet</div>
-                    <div style="background:#166534;color:#86efac;padding:2px 10px;border-radius:12px;font-size:0.85rem;font-weight:600;">9.5</div>
-                </div>
-                <div style="color:#94a3b8;font-size:0.95rem;line-height:1.6;margin-bottom:16px;">
-                    目前综合能力最强的 AI 模型之一，适合复杂任务。
-                </div>
-                <div style="display:flex;gap:8px;flex-wrap:wrap;">
-                    <span style="background:#334155;color:#e2e8f0;padding:4px 10px;border-radius:6px;font-size:0.8rem;">付费</span>
-                    <span style="background:#334155;color:#e2e8f0;padding:4px 10px;border-radius:6px;font-size:0.8rem;">高性价比</span>
-                </div>
-            </div>
-        </a>
-    </div>
-</section>
-
-
-
-
-
-
-        <!-- 今日热点新闻 -->
-        <section id="news">
-            <h2 class="section-title">📰 今日 AI 热点</h2>
             
-            <div class="news-grid">                <div class="news-card">
-                    <div class="news-meta">
-                        <span class="tag tag-model">模型发布</span>
-                        <span class="news-date">Thu, 11 Jun 2026</span>
+            <div class="article-list">
+                <div class="article-item">
+                    <div class="article-content">
+                        <div class="article-meta">2026.06.14 · 工具发现</div>
+                        <div class="article-title">这个新视频工具，可能正在重新定义个人创作者的工作流</div>
+                        <div class="article-summary">我们测试了目前最被看好的几款 AI 视频工具，发现其中一款在运动一致性和价格上实现了极佳平衡。</div>
                     </div>
-                    <h3>Google DeepMind is worried about what happens when millions of agents start to i</h3>
-                    <p>谷歌DeepMind资助研究数百万AI智能体在线交互的潜在风险。负责人罗欣·沙阿指出，随着无需人类监督的自主AI智能体大规模普及，其安全与对齐问题亟需关注。</p>
-                    <a href="https://www.technologyreview.com/2026/06/11/1138794/google-deepmind-is-worried-about-what-happens-when-millions-of-agents-start-to-interact/" class="news-link" target="_blank">阅读全文 →</a>
                 </div>
-                <div class="news-card">
-                    <div class="news-meta">
-                        <span class="tag tag-tech">技术突破</span>
-                        <span class="news-date">Tue, 09 Jun 2026</span>
+                
+                <div class="article-item">
+                    <div class="article-content">
+                        <div class="article-meta">2026.06.13 · 热点观察</div>
+                        <div class="article-title">Sora 开放后，哪些工具会最先受到冲击？</div>
+                        <div class="article-summary">OpenAI 的视频模型正式开放，我们分析了它对现有工具生态可能带来的结构性影响。</div>
                     </div>
-                    <h3>Learning to lead in a hybrid human-AI enterprise</h3>
-                    <p>未来两年AI代理采用率或激增300%，企业领导层正审慎评估人机混合劳动力的影响。与传统自动化不同，AI代理能自主协调复杂任务，跨工具环境交互。</p>
-                    <a href="https://www.technologyreview.com/2026/06/09/1137830/learning-to-lead-in-a-hybrid-human-ai-enterprise/" class="news-link" target="_blank">阅读全文 →</a>
                 </div>
-                <div class="news-card">
-                    <div class="news-meta">
-                        <span class="tag tag-open">开源动态</span>
-                        <span class="news-date">Mon, 27 Apr 2026</span>
-                    </div>
-                    <h3>Data center demand drives 66% surge in natural gas power plant costs</h3>
-                    <p>天然气发电厂建设成本两年内翻倍，工期延长23%，因数据中心电力需求激增。</p>
-                    <a href="https://techcrunch.com/2026/04/27/data-center-demand-drives-66-surge-in-natural-gas-power-plant-costs/" class="news-link" target="_blank">阅读全文 →</a>
-                </div>
-                <div class="news-card">
-                    <div class="news-meta">
-                        <span class="tag tag-model">模型发布</span>
-                        <span class="news-date">Tue, 13 Jan 2026</span>
-                    </div>
-                    <h3>Converge Bio raises $25M, backed by Bessemer and execs from Meta, OpenAI, Wiz</h3>
-                    <p>AI药物研发公司Converge Bio完成2500万美元A轮融资，由Bessemer领投，Meta、OpenAI及Wiz高管参投。</p>
-                    <a href="https://techcrunch.com/2026/01/13/ai-drug-discovery-startup-converge-bio-pulls-in-25m-from-bessemer-and-execs-from-meta-openai-and-wiz/" class="news-link" target="_blank">阅读全文 →</a>
-                </div>
-                <div class="news-card">
-                    <div class="news-meta">
-                        <span class="tag tag-tech">技术突破</span>
-                        <span class="news-date">Tue, 19 May 2026</span>
-                    </div>
-                    <h3>Google just redesigned the search box for the first time in 25 years — here’s wh</h3>
-                    <p>谷歌周二在年度I/O开发者大会上宣布，将正式淘汰沿用25年的经典搜索框界面。新搜索将整合AI技术，提供更智能的交互体验。</p>
-                    <a href="https://venturebeat.com/technology/google-just-redesigned-the-search-box-for-the-first-time-in-25-years-heres-why-it-matters-more-than-you-think" class="news-link" target="_blank">阅读全文 →</a>
-                </div>
-                <div class="news-card">
-                    <div class="news-meta">
-                        <span class="tag tag-open">开源动态</span>
-                        <span class="news-date">Thu, 22 Jan 2026</span>
-                    </div>
-                    <h3>Railway secures $100 million to challenge AWS with AI-native cloud infrastructur</h3>
-                    <p>美国云平台Railway获1亿美元B轮融资，用户达200万开发者。AI应用需求激增暴露传统云基础设施局限，该公司未投入营销费用即实现增长。</p>
-                    <a href="https://venturebeat.com/infrastructure/railway-secures-usd100-million-to-challenge-aws-with-ai-native-cloud" class="news-link" target="_blank">阅读全文 →</a>
-                </div>
-</div>
-
-            <div style="text-align: center; margin-top: 20px;">
-                <a href="#" class="btn btn-primary">浏览全部 AI 新闻 →</a>
             </div>
-        </section>
-
-        <!-- 工具推荐入口 -->
-        <section class="tools-cta">
-            <h3>🛠️ 工具推荐已迁移</h3>
-            <p>所有 AI 工具推荐已迁移至 tools.link.cn</p>
-            <a href="https://tools.link.cn" class="btn btn-primary">前往工具推荐平台 →</a>
-        </section>
-
+        </div>
     </div>
+
+    <footer>
+        <div class="container" style="text-align:center; color:#64748b; font-size:0.9rem;">
+            © 2026 AI News · 与 tools.link.cn 深度联动
+        </div>
+    </footer>
 </body>
 </html>
