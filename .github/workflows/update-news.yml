@@ -24,9 +24,7 @@ jobs:
         run: pip install feedparser requests
 
       - name: Run news update script
-        env:
-          AI_API_KEY: ${{ secrets.AI_API_KEY }}
-        run: python scripts/update_news.py
+        run: python scripts/update_news_v2.py
 
       - name: Commit and push
         run: |
