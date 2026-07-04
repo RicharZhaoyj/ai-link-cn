@@ -156,14 +156,23 @@ def update_articles_in_html(news_list):
 '''
         articles_html += article
     
-    # 替换 article-list 内容
-    pattern = r'(<div class="article-list">)(.*?)(</div>\s*</div>\s*</div>\s*<footer)'
-    replacement = r'\1\n' + articles_html + '                \3'
-    new_content = re.sub(pattern, replacement, content, flags=re.DOTALL)
+    start_marker = '<div class="article-list">'
+    end_marker = '<div class="container" style="text-align:center;">'
     
-    if new_content == content:
+    start_idx = content.find(start_marker)
+    end_idx = content.find(end_marker, start_idx)
+    
+    if start_idx == -1 or end_idx == -1:
         print("警告: 未找到匹配的 article-list，内容未更新")
         return False
+    
+    new_content = (
+        content[:start_idx + len(start_marker)]
+        + "\n"
+        + articles_html
+        + "                </div>\n            </div>\n        </div>\n    </div>\n    <footer>\n        "
+        + content[end_idx:]
+    )
     
     with open("index.html", "w", encoding="utf-8") as f:
         f.write(new_content)
