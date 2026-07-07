@@ -1,6 +1,6 @@
 # AI.link.cn robots.txt
-# 最后更新: 2026-05-18
-# 网站: https://project-f5cf8.vercel.app/
+# 最后更新: 2026-07-04
+# 网站: https://ai.link.cn/
 
 User-agent: *
 Allow: /
@@ -18,8 +18,7 @@ Allow: /pages/
 Allow: /images/
 
 # Sitemap位置
-Sitemap: https://project-f5cf8.vercel.app/sitemap.xml
-Sitemap: https://project-f5cf8.vercel.app/sitemap-index.xml
+Sitemap: https://ai.link.cn/sitemap.xml
 
 # 爬取延迟建议（可选）
 Crawl-delay: 2
