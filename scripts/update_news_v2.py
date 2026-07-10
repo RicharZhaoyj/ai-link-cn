@@ -138,7 +138,14 @@ def fetch_news(limit=8):
     return final_list
 
 def update_articles_in_html(news_list):
-    """更新 index.html 中的文章列表"""
+    """更新 index.html 中的文章列表 - 使用模板文件"""
+    import shutil
+    
+    # 先检查是否有模板文件
+    template_path = "index_template.html"
+    if os.path.exists(template_path):
+        shutil.copy(template_path, "index.html")
+    
     with open("index.html", "r", encoding="utf-8") as f:
         content = f.read()
     
@@ -146,33 +153,49 @@ def update_articles_in_html(news_list):
     
     articles_html = ""
     for i, item in enumerate(news_list):
-        article = f'''                <div class="article-item">
+        article = f'''                <a href="{item["link"]}" class="article-item" target="_blank">
                     <div class="article-content">
                         <div class="article-meta">{item["date_str"]} · {item["category"]}</div>
                         <div class="article-title">{item["title"]}</div>
                         <div class="article-summary">{item["summary"]}</div>
                     </div>
-                </div>
+                </a>
 '''
         articles_html += article
     
-    start_marker = '<div class="article-list">'
-    end_marker = '<div class="container" style="text-align:center;">'
+    # 新模板使用 NEWS_PLACEHOLDER_START 标记
+    start_marker = '<!-- NEWS_PLACEHOLDER_START -->'
     
     start_idx = content.find(start_marker)
-    end_idx = content.find(end_marker, start_idx)
     
-    if start_idx == -1 or end_idx == -1:
-        print("警告: 未找到匹配的 article-list，内容未更新")
-        return False
-    
-    new_content = (
-        content[:start_idx + len(start_marker)]
-        + "\n"
-        + articles_html
-        + "                </div>\n            </div>\n        </div>\n    </div>\n    <footer>\n        "
-        + content[end_idx:]
-    )
+    if start_idx == -1:
+        # 兼容旧模板
+        start_marker = '<div class="article-list">'
+        end_marker = '<div class="container" style="text-align:center;">'
+        
+        start_idx = content.find(start_marker)
+        end_idx = content.find(end_marker, start_idx)
+        
+        if start_idx == -1 or end_idx == -1:
+            print("警告: 未找到匹配的标记，内容未更新")
+            return False
+        
+        new_content = (
+            content[:start_idx + len(start_marker)]
+            + "\n"
+            + articles_html
+            + "                </div>\n            </div>\n        </div>\n    </div>\n    <footer>\n        "
+            + content[end_idx:]
+        )
+    else:
+        # 新模板处理
+        new_content = (
+            content[:start_idx + len(start_marker)]
+            + "\n"
+            + articles_html
+            + "            </div>\n        </div>\n    </div>\n"
+            + content[start_idx + len(start_marker):]
+        )
     
     with open("index.html", "w", encoding="utf-8") as f:
         f.write(new_content)
