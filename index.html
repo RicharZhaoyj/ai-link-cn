@@ -85,23 +85,24 @@
             align-items: center;
         }
         
-        .sister-dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
+        .sister-link {
+            text-decoration: none;
+            font-size: 0.85em;
+            padding: 4px 10px;
+            border-radius: 12px;
             transition: all 0.2s;
-            display: block;
+            display: inline-block;
         }
         
-        .sister-dot:hover {
-            transform: scale(1.5);
-            box-shadow: 0 0 12px currentColor;
+        .sister-link:hover {
+            opacity: 0.8;
+            transform: translateY(-1px);
         }
         
-        .sister-dot.tools { background: #3b82f6; }
-        .sister-dot.tool { background: #06b6d4; }
-        .sister-dot.prompts { background: #22c55e; }
-        .sister-dot.signal { background: #f97316; }
+        .sister-link.tools { color: #3b82f6; background: rgba(59, 130, 246, 0.1); }
+        .sister-link.tool { color: #06b6d4; background: rgba(6, 182, 212, 0.1); }
+        .sister-link.prompts { color: #22c55e; background: rgba(34, 197, 94, 0.1); }
+        .sister-link.signal { color: #f97316; background: rgba(249, 115, 22, 0.1); }
         
         /* Hero */
         .hero {
@@ -443,10 +444,10 @@
                     <li><a href="https://tools.link.cn" target="_blank">工具导航</a></li>
                 </ul>
                 <div class="sister-nav">
-                    <a href="https://tools.link.cn" class="sister-dot tools" title="AI工具推荐" target="_blank"></a>
-                    <a href="https://tool.link.cn" class="sister-dot tool" title="AI工具LTD" target="_blank"></a>
-                    <a href="https://prompts.link.cn" class="sister-dot prompts" title="AI提示词库" target="_blank"></a>
-                    <a href="https://signal.link.cn" class="sister-dot signal" title="加密货币行情" target="_blank"></a>
+                    <a href="https://tools.link.cn" class="sister-link tools" title="AI工具推荐" target="_blank">🛠️ 工具</a>
+                    <a href="https://tool.link.cn" class="sister-link tool" title="AI工具LTD" target="_blank">⚡ LTD</a>
+                    <a href="https://prompts.link.cn" class="sister-link prompts" title="AI提示词库" target="_blank">✍️ 提示词</a>
+                    <a href="https://signal.link.cn" class="sister-link signal" title="加密货币行情" target="_blank">₿ 加密</a>
                 </div>
             </nav>
         </div>
