@@ -85,24 +85,23 @@
             align-items: center;
         }
         
-        .sister-link {
-            text-decoration: none;
-            font-size: 0.85em;
-            padding: 4px 10px;
-            border-radius: 12px;
+        .sister-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
             transition: all 0.2s;
-            display: inline-block;
+            display: block;
         }
         
-        .sister-link:hover {
-            opacity: 0.8;
-            transform: translateY(-1px);
+        .sister-dot:hover {
+            transform: scale(1.5);
+            box-shadow: 0 0 12px currentColor;
         }
         
-        .sister-link.tools { color: #3b82f6; background: rgba(59, 130, 246, 0.1); }
-        .sister-link.tool { color: #06b6d4; background: rgba(6, 182, 212, 0.1); }
-        .sister-link.prompts { color: #22c55e; background: rgba(34, 197, 94, 0.1); }
-        .sister-link.signal { color: #f97316; background: rgba(249, 115, 22, 0.1); }
+        .sister-dot.tools { background: #3b82f6; }
+        .sister-dot.tool { background: #06b6d4; }
+        .sister-dot.prompts { background: #22c55e; }
+        .sister-dot.signal { background: #f97316; }
         
         /* Hero */
         .hero {
@@ -444,10 +443,10 @@
                     <li><a href="https://tools.link.cn" target="_blank">工具导航</a></li>
                 </ul>
                 <div class="sister-nav">
-                    <a href="https://tools.link.cn" class="sister-link tools" title="AI工具推荐" target="_blank">🛠️ 工具</a>
-                    <a href="https://tool.link.cn" class="sister-link tool" title="AI工具LTD" target="_blank">⚡ LTD</a>
-                    <a href="https://prompts.link.cn" class="sister-link prompts" title="AI提示词库" target="_blank">✍️ 提示词</a>
-                    <a href="https://signal.link.cn" class="sister-link signal" title="加密货币行情" target="_blank">₿ 加密</a>
+                    <a href="https://tools.link.cn" class="sister-dot tools" title="AI工具推荐" target="_blank"></a>
+                    <a href="https://tool.link.cn" class="sister-dot tool" title="AI工具LTD" target="_blank"></a>
+                    <a href="https://prompts.link.cn" class="sister-dot prompts" title="AI提示词库" target="_blank"></a>
+                    <a href="https://signal.link.cn" class="sister-dot signal" title="加密货币行情" target="_blank"></a>
                 </div>
             </nav>
         </div>
@@ -548,60 +547,60 @@
             </div>
             <div class="article-list">
                 <!-- NEWS_PLACEHOLDER_START -->
-                <a href="https://36kr.com/p/3894914381970438?f=rss" class="article-item" target="_blank">
+                <a href="https://36kr.com/p/3895721094842249?f=rss" class="article-item" target="_blank">
                     <div class="article-content">
-                        <div class="article-meta">2026.07.15 · 商业观察</div>
-                        <div class="article-title">🎁36氪放福利啦！体验10秒，即可免费抽AirPods 4、Redmi手环、超人帆布包！</div>
-                        <div class="article-summary">无门槛参与，所有微信用户都可以免费抽奖！ 只需打开微信，扫描下方二维码进入抽奖链接，浏览10秒36氪企业全情报，任意订阅一家企业，即可获得抽奖资格。 无需付费，无需任何额外操作，简单体验即可参与，AirPods 4、Redmi手环3、36氪...</div>
+                        <div class="article-meta">2026.07.16 · 商业观察</div>
+                        <div class="article-title">斯年智驾获3亿元C轮融资，自动驾驶重卡赛道再升温｜36氪独家</div>
+                        <div class="article-summary">自动驾驶重卡赛道，今年显著升温。 36氪独家获悉，斯年智驾近日已完成 3 亿元 C 轮融资，由兴证资本、颐道资本联合投资，资金将主要用于新一代车规级自动驾驶方案研发。 2026年1-6月，该赛道公开披露的融资已达5起，累计金额近70亿人民币...</div>
                     </div>
                 </a>
-                <a href="https://36kr.com/p/3895322613185543?f=rss" class="article-item" target="_blank">
+                <a href="https://36kr.com/p/3897553391978371?f=rss" class="article-item" target="_blank">
                     <div class="article-content">
-                        <div class="article-meta">2026.07.15 · 商业观察</div>
-                        <div class="article-title">氪星晚报 ｜智谱：完成配售新H股募资约314亿港元；荣耀与阿里将开展AI智能体终端合作；小米机器人首次实现汽车工厂柔性工件的长时作业</div>
-                        <div class="article-summary">大公司： 中国神华：预计上半年净利润同比增长6.9%-21.1% 36氪获悉，中国神华公告，预计2026年上半年归属于上市公司股东的净利润为263亿元至298亿元，同比增长6.9%-21.1%。业绩变动主要系煤化工业务量及自有铁路、港口、航...</div>
+                        <div class="article-meta">2026.07.16 · 商业观察</div>
+                        <div class="article-title">8点1氪丨国行苹果AI功能完成备案；三家共享单车上调起步价；知情人曝DeepSeek开始筹备IPO</div>
+                        <div class="article-summary">今日热点导览 澳洲将设AI办公室，限制数据中心能源消耗 巴菲特宣布8年内清仓伯克希尔股票 前高通自动驾驶工程副总裁将加入英伟达自动驾驶团队 长鑫科技：上市后仍将保持无实际控制人的控制权架构 谷歌参与建设美国最大太阳能项目，总规模达2.5GW...</div>
                     </div>
                 </a>
-                <a href="https://36kr.com/p/3895355856403456?f=rss" class="article-item" target="_blank">
+                <a href="https://36kr.com/p/3896830362601351?f=rss" class="article-item" target="_blank">
                     <div class="article-content">
-                        <div class="article-meta">2026.07.15 · 商业观察</div>
-                        <div class="article-title">估值110亿美元，这家超级独角兽要帮初创公司从Day0走向全球</div>
-                        <div class="article-summary">凌晨三点，一家刚成立不久的AI创业公司，可能已经在同时服务旧金山的客户、采购首尔的技术服务，并与拉各斯的合作伙伴签下合同。这家公司甚至还没有招到第一名全职财务人员，业务却已经跨越多个市场、币种和监管辖区。 AI正在让这样的创业路径成为可能。...</div>
+                        <div class="article-meta">2026.07.16 · 开源动态</div>
+                        <div class="article-title">独家｜面壁智能端侧大模型将搭载三星手机上市</div>
+                        <div class="article-summary">文｜邓咏仪 编辑｜张雨忻 杨轩 《智能涌现》独家获悉，端侧大模型公司面壁智能已与三星手机达成合作，其自主研发的MiniCPM系列端侧模型将搭载于三星手机上市，覆盖数款旗舰机型。 就在同一日，网信部门发布公告，包括“Apple智能”等7款提供...</div>
                     </div>
                 </a>
-                <a href="https://36kr.com/p/3896138695706497?f=rss" class="article-item" target="_blank">
+                <a href="https://36kr.com/p/3896563671222147?f=rss" class="article-item" target="_blank">
                     <div class="article-content">
-                        <div class="article-meta">2026.07.15 · 商业观察</div>
-                        <div class="article-title">8点1氪丨LV起诉国家知识产权局；DeepSeek梁文锋成全球AI公司领域新首富；戴比尔斯将暂停南非最大钻石矿生产</div>
-                        <div class="article-summary">今日热点导览 小米机器人首次实现汽车工厂柔性工件的长时作业 SK海力士加速Y1工厂建设，现已开始订购DRAM制造设备 国际金价持续回调，后市关注美联储政策路径 海关总署：中国出口连续11季度保持增长，贸易增量集中于AI领域 韩国政府四部门将...</div>
+                        <div class="article-meta">2026.07.16 · 商业观察</div>
+                        <div class="article-title">氪星晚报｜LG新能源将为谷歌规模最大的“光储一体”项目供应电池；元宝与京东AI Agent正式打通小程序生态；日本散户持有美元净空头飙至2....</div>
+                        <div class="article-summary">大公司： 美团、青桔、哈啰共享单车调价 近期，美团单车、滴滴青桔、哈啰单车相继在北京等多个城市上调计费规则，三大平台不约而同地采取了“提高起步定价、拉长基础骑行时长”的组合策略：起步价从此前的1.5元/30分钟左右，普遍调整为1.88元至1...</div>
                     </div>
                 </a>
-                <a href="https://www.qbitai.com/2026/07/449979.html" class="article-item" target="_blank">
+                <a href="https://venturebeat.com/ai/agentic-orchestration-enterprise-ai-organizations-have-a-deployment-problem-not-a-platform-problem-and-most-are-calling-chatbots-agents" class="article-item" target="_blank">
                     <div class="article-content">
-                        <div class="article-meta">2026.07.14 · 技术前沿</div>
-                        <div class="article-title">阶跃入局，重构智能体时代操作系统</div>
-                        <div class="article-summary">董事长印奇称“未来的OS一定是跨端的”</div>
+                        <div class="article-meta">2026.07.15 · 企业应用</div>
+                        <div class="article-title">Agentic orchestration: Enterprise AI organizations have a deployment p...</div>
+                        <div class="article-summary">Across 101 enterprises, agent orchestration is consolidating onto model-provider platforms — Anthropic’s Claude leads by...</div>
                     </div>
                 </a>
-                <a href="https://www.qbitai.com/2026/07/448475.html" class="article-item" target="_blank">
+                <a href="https://www.qbitai.com/2026/07/450841.html" class="article-item" target="_blank">
                     <div class="article-content">
-                        <div class="article-meta">2026.07.14 · 技术前沿</div>
-                        <div class="article-title">刚刚，一个免费AI Coding选手杀入全球第一梯队</div>
-                        <div class="article-summary">一手实测这就奉上</div>
-                    </div>
-                </a>
-                <a href="https://www.qbitai.com/2026/07/449906.html" class="article-item" target="_blank">
-                    <div class="article-content">
-                        <div class="article-meta">2026.07.14 · 技术前沿</div>
-                        <div class="article-title">马斯克“机器人还进不了厂”刚说完，小米机器人”上岗“汽车产线了</div>
-                        <div class="article-summary">全面硬刚Figure</div>
-                    </div>
-                </a>
-                <a href="https://www.qbitai.com/2026/07/449863.html" class="article-item" target="_blank">
-                    <div class="article-content">
-                        <div class="article-meta">2026.07.14 · 技术前沿</div>
-                        <div class="article-title">B站AI创造公开赛正式上线投币榜，单月参赛人数突破五千</div>
+                        <div class="article-meta">2026.07.15 · 模型发布</div>
+                        <div class="article-title">测量精度突破1微米，效率提升3倍，优可测高精度闪测仪发布</div>
                         <div class="article-summary"></div>
+                    </div>
+                </a>
+                <a href="https://www.qbitai.com/2026/07/450831.html" class="article-item" target="_blank">
+                    <div class="article-content">
+                        <div class="article-meta">2026.07.15 · 技术前沿</div>
+                        <div class="article-title">主论坛丨WAIC 2026主论坛（下午场）重磅揭晓！</div>
+                        <div class="article-summary"></div>
+                    </div>
+                </a>
+                <a href="https://www.qbitai.com/2026/07/450709.html" class="article-item" target="_blank">
+                    <div class="article-content">
+                        <div class="article-meta">2026.07.15 · 技术前沿</div>
+                        <div class="article-title">人在Meta，休个病假/产假转身被AI裁了？？</div>
+                        <div class="article-summary">26名员工正在集体起诉Meta</div>
                     </div>
                 </a>
             </div>
