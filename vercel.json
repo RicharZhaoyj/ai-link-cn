@@ -20,6 +20,22 @@
     {
       "src": "pages/**/*.html",
       "use": "@vercel/static"
+    },
+    {
+      "src": "tutorials/**/*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "deals/**/*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "compare/**/*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "discover/**/*.html",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
@@ -34,6 +50,22 @@
     {
       "src": "/pages/about",
       "dest": "/pages/about.html"
+    },
+    {
+      "src": "/tutorials",
+      "dest": "/tutorials/index.html"
+    },
+    {
+      "src": "/deals",
+      "dest": "/deals/index.html"
+    },
+    {
+      "src": "/compare",
+      "dest": "/compare/index.html"
+    },
+    {
+      "src": "/discover",
+      "dest": "/discover/index.html"
     },
     {
       "handle": "filesystem"
