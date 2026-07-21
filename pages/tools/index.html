@@ -3,57 +3,762 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI工具列表 - AI.link.cn</title>
-    <meta name="description" content="AI.link.cn收录的AI工具列表，包含详细评测和介绍。">
-    <meta name="keywords" content="AI工具列表, 人工智能工具, 工具评测, AI推荐">
-    <link rel="stylesheet" href="/css/style.css">
+    <title>AI工具库 - 精选200+ AI工具 | AI.link.cn</title>
+    <meta name="description" content="AI.link.cn工具库收录200+精选AI工具，涵盖对话AI、图像生成、编程助手、写作工具等类别，提供详细评测、价格对比和使用教程。">
+    <meta name="keywords" content="AI工具库,AI工具推荐,AI工具评测,人工智能工具,ChatGPT,Midjourney,Grammarly,GitHub Copilot">
+    <link rel="canonical" href="https://ai.link.cn/pages/tools/">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        :root {
+            --bg: #0a0f1a;
+            --surface: #111827;
+            --surface-2: #1f2937;
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #a855f7;
+            --accent-light: #c084fc;
+            --success: #22c55e;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --blue: #3b82f6;
+            --cyan: #06b6d4;
+            --green: #22c55e;
+            --orange: #f97316;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        
+        header {
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(168, 85, 247, 0.2);
+            background: rgba(10, 15, 26, 0.98);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .logo { font-size: 1.4rem; font-weight: 700; color: var(--accent); text-decoration: none; }
+        
+        .nav-links { display: flex; gap: 20px; list-style: none; flex-wrap: wrap; }
+        
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+        
+        .nav-links a:hover { color: var(--accent); }
+        
+        .hero {
+            padding: 48px 0;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(168, 85, 247, 0.08) 0%, transparent 100%);
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        
+        .hero h1 span { color: var(--accent); }
+        
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 24px;
+        }
+        
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .hero-stat { text-align: center; }
+        
+        .hero-stat-num {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+        
+        .hero-stat-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+        
+        .search-bar {
+            max-width: 500px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .search-bar input {
+            width: 100%;
+            padding: 14px 18px 14px 48px;
+            background: var(--surface);
+            border: 1px solid rgba(168, 85, 247, 0.3);
+            border-radius: 12px;
+            color: var(--text);
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        
+        .search-bar input:focus { border-color: var(--accent); }
+        
+        .search-icon {
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+        
+        .filter-bar {
+            padding: 24px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        
+        .filter-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        
+        .category-filters {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 8px 16px;
+            background: var(--surface);
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            border-radius: 20px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .filter-btn:hover { border-color: var(--accent); color: var(--text); }
+        
+        .filter-btn.active {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: white;
+        }
+        
+        .sort-select {
+            padding: 8px 16px;
+            background: var(--surface);
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            border-radius: 8px;
+            color: var(--text);
+            font-size: 0.85rem;
+            outline: none;
+            cursor: pointer;
+        }
+        
+        .sort-select option { background: var(--surface); color: var(--text); }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 20px;
+            padding: 32px 0;
+        }
+        
+        .tool-card {
+            background: var(--surface);
+            border: 1px solid rgba(168, 85, 247, 0.1);
+            border-radius: 16px;
+            padding: 24px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .tool-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+            background: rgba(168, 85, 247, 0.05);
+        }
+        
+        .tool-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+        
+        .tool-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .tool-info { flex: 1; margin-left: 12px; }
+        
+        .tool-name {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        
+        .tool-category {
+            font-size: 0.8rem;
+            color: var(--accent);
+        }
+        
+        .tool-score {
+            background: rgba(34, 197, 94, 0.2);
+            color: #4ade80;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+        
+        .tool-score.low { background: rgba(239, 68, 68, 0.2); color: #f87171; }
+        .tool-score.medium { background: rgba(245, 158, 11, 0.2); color: #fbbf24; }
+        
+        .tool-desc {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 16px;
+            flex: 1;
+            line-height: 1.6;
+        }
+        
+        .tool-tags {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin-bottom: 12px;
+        }
+        
+        .tool-tag {
+            background: rgba(168, 85, 247, 0.1);
+            color: var(--accent-light);
+            padding: 3px 8px;
+            border-radius: 8px;
+            font-size: 0.75rem;
+        }
+        
+        .tool-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 12px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        
+        .price-tag { font-weight: 600; }
+        
+        .price-tag.free { color: var(--success); }
+        .price-tag.freemium { color: var(--warning); }
+        .price-tag.paid { color: var(--danger); }
+        
+        .view-detail {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .view-detail:hover { text-decoration: underline; }
+        
+        .load-more {
+            text-align: center;
+            padding: 32px 0;
+        }
+        
+        .load-more-btn {
+            padding: 12px 32px;
+            background: var(--surface);
+            border: 1px solid rgba(168, 85, 247, 0.3);
+            border-radius: 8px;
+            color: var(--text);
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .load-more-btn:hover {
+            border-color: var(--accent);
+            background: rgba(168, 85, 247, 0.1);
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 60px 0;
+            color: var(--text-muted);
+        }
+        
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid rgba(168, 85, 247, 0.2);
+            margin-top: 40px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            .hero-stats { gap: 20px; }
+            .hero-stat-num { font-size: 1.4rem; }
+            .filter-row { flex-direction: column; align-items: flex-start; }
+            .category-filters { overflow-x: auto; padding-bottom: 8px; }
+        }
+    </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2F2V94W35E"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-2F2V94W35E');
+    </script>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>AI工具列表</h1>
-            <nav>
-                <a href="/">首页</a> | 
-                <a href="/pages/tools">所有工具</a> |
-                <a href="/pages/about">关于我们</a>
+    <header>
+        <div class="container">
+            <nav class="nav">
+                <a href="/" class="logo">AI News</a>
+                <ul class="nav-links">
+                    <li><a href="/">首页</a></li>
+                    <li><a href="/pages/tools">工具库</a></li>
+                    <li><a href="/tutorials/">教程中心</a></li>
+                    <li><a href="/compare/">工具对比</a></li>
+                    <li><a href="/deals/">折扣优惠</a></li>
+                    <li><a href="/discover/">新品发现</a></li>
+                </ul>
             </nav>
-        </header>
-        
-        <main>
-            <h2>收录的AI工具 (21个)</h2>
-            <ul class="tools-list">
-                <li><a href="/pages/tools/autogpt.html/">Autogpt</a></li>
-                <li><a href="/pages/tools/awesomeaitools.html/">Awesomeaitools</a></li>
-                <li><a href="/pages/tools/canva.html/">Canva</a></li>
-                <li><a href="/pages/tools/chatgpt.html/">Chatgpt</a></li>
-                <li><a href="/pages/tools/cleanlab.html/">Cleanlab</a></li>
-                <li><a href="/pages/tools/convertkit.html/">Convertkit</a></li>
-                <li><a href="/pages/tools/funnlp.html/">Funnlp</a></li>
-                <li><a href="/pages/tools/github_copilot.html/">Github Copilot</a></li>
-                <li><a href="/pages/tools/grammarly.html/">Grammarly</a></li>
-                <li><a href="/pages/tools/hostinger.html/">Hostinger</a></li>
-                <li><a href="/pages/tools/jasper.html/">Jasper</a></li>
-                <li><a href="/pages/tools/langflow.html/">Langflow</a></li>
-                <li><a href="/pages/tools/midjourney.html/">Midjourney</a></li>
-                <li><a href="/pages/tools/mlcourseai.html/">Mlcourseai</a></li>
-                <li><a href="/pages/tools/mlengineering.html/">Mlengineering</a></li>
-                <li><a href="/pages/tools/notion_ai.html/">Notion Ai</a></li>
-                <li><a href="/pages/tools/onnx.html/">Onnx</a></li>
-                <li><a href="/pages/tools/prowritingaid.html/">Prowritingaid</a></li>
-                <li><a href="/pages/tools/sqltranslator.html/">Sqltranslator</a></li>
-                <li><a href="/pages/tools/system-prompts-and-models-of-ai-tools.html/">System-Prompts-And-Models-Of-Ai-Tools</a></li>
-                <li><a href="/pages/tools/systempromptsandmodelsofaitools.html/">Systempromptsandmodelsofaitools</a></li>
-            </ul>
-            
-            <div class="update-info">
-                <p>页面最后更新: 2026年06月05日 02:30:01</p>
-                <p>本页面自动更新，每日检查新工具并添加到列表中。</p>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="container">
+            <h1>AI<span>工具库</span></h1>
+            <p>精选200+ AI工具，涵盖对话AI、图像生成、编程助手、写作工具等，助你发现最适合的AI解决方案</p>
+            <div class="search-bar">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="searchInput" placeholder="搜索AI工具...">
             </div>
-        </main>
-        
-        <footer>
-            <p>&copy; 2026 AI.link.cn - 专业的AI工具评测和推荐平台</p>
-        </footer>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="hero-stat-num">200+</div>
+                    <div class="hero-stat-label">精选工具</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-num">12</div>
+                    <div class="hero-stat-label">分类</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-num">10万+</div>
+                    <div class="hero-stat-label">评测次数</div>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <div class="filter-bar">
+        <div class="container">
+            <div class="filter-row">
+                <div class="category-filters">
+                    <button class="filter-btn active" data-category="all">🔥 全部</button>
+                    <button class="filter-btn" data-category="chat">💬 对话AI</button>
+                    <button class="filter-btn" data-category="image">🎨 图像生成</button>
+                    <button class="filter-btn" data-category="coding">💻 编程助手</button>
+                    <button class="filter-btn" data-category="writing">✍️ 写作工具</button>
+                    <button class="filter-btn" data-category="design">🎯 设计工具</button>
+                    <button class="filter-btn" data-category="data">📊 数据分析</button>
+                    <button class="filter-btn" data-category="productivity">⚡ 效率工具</button>
+                </div>
+                <select class="sort-select" id="sortSelect">
+                    <option value="popular">按热度排序</option>
+                    <option value="rating">按评分排序</option>
+                    <option value="newest">按时间排序</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="tools-grid" id="toolsGrid">
+            <a href="/pages/tools/chatgpt.html" class="tool-card">
+                <div class="tool-header">
+                    <div class="tool-icon" style="background: linear-gradient(135deg, #10a37f, #14b8a6);">🤖</div>
+                    <div class="tool-info">
+                        <div class="tool-name">ChatGPT</div>
+                        <div class="tool-category">对话AI</div>
+                    </div>
+                    <div class="tool-score">9.6</div>
+                </div>
+                <div class="tool-desc">OpenAI旗舰对话模型，支持代码编写、内容创作、数据分析等多种场景，是目前最流行的AI助手。</div>
+                <div class="tool-tags">
+                    <span class="tool-tag">大模型</span>
+                    <span class="tool-tag">对话</span>
+                    <span class="tool-tag">代码</span>
+                    <span class="tool-tag">内容创作</span>
+                </div>
+                <div class="tool-footer">
+                    <span class="price-tag freemium">免费/付费</span>
+                    <span class="view-detail">查看详情 →</span>
+                </div>
+            </a>
+
+            <a href="/pages/tools/midjourney.html" class="tool-card">
+                <div class="tool-header">
+                    <div class="tool-icon" style="background: linear-gradient(135deg, #8b5cf6, #ec4899);">🎨</div>
+                    <div class="tool-info">
+                        <div class="tool-name">Midjourney</div>
+                        <div class="tool-category">图像生成</div>
+                    </div>
+                    <div class="tool-score">9.4</div>
+                </div>
+                <div class="tool-desc">顶级AI图像生成工具，以其卓越的画质和丰富的风格控制而闻名，是设计师和艺术家的首选。</div>
+                <div class="tool-tags">
+                    <span class="tool-tag">图像生成</span>
+                    <span class="tool-tag">设计</span>
+                    <span class="tool-tag">创意</span>
+                </div>
+                <div class="tool-footer">
+                    <span class="price-tag paid">付费</span>
+                    <span class="view-detail">查看详情 →</span>
+                </div>
+            </a>
+
+            <a href="/pages/tools/grammarly.html" class="tool-card">
+                <div class="tool-header">
+                    <div class="tool-icon" style="background: linear-gradient(135deg, #6366f1, #8b5cf6);">✍️</div>
+                    <div class="tool-info">
+                        <div class="tool-name">Grammarly</div>
+                        <div class="tool-category">写作工具</div>
+                    </div>
+                    <div class="tool-score">9.2</div>
+                </div>
+                <div class="tool-desc">AI驱动的写作助手，支持语法检查、风格建议、翻译等功能，提升你的写作质量和效率。</div>
+                <div class="tool-tags">
+                    <span class="tool-tag">写作</span>
+                    <span class="tool-tag">语法</span>
+                    <span class="tool-tag">效率</span>
+                </div>
+                <div class="tool-footer">
+                    <span class="price-tag freemium">免费/付费</span>
+                    <span class="view-detail">查看详情 →</span>
+                </div>
+            </a>
+
+            <a href="/pages/tools/github_copilot.html" class="tool-card">
+                <div class="tool-header">
+                    <div class="tool-icon" style="background: linear-gradient(135deg, #22c55e, #10b981);">💻</div>
+                    <div class="tool-info">
+                        <div class="tool-name">GitHub Copilot</div>
+                        <div class="tool-category">编程助手</div>
+                    </div>
+                    <div class="tool-score">9.3</div>
+                </div>
+                <div class="tool-desc">AI编程助手，集成于VS Code等IDE，提供代码补全、函数建议、文档生成等功能，大幅提升开发效率。</div>
+                <div class="tool-tags">
+                    <span class="tool-tag">编程</span>
+                    <span class="tool-tag">代码补全</span>
+                    <span class="tool-tag">IDE</span>
+                </div>
+                <div class="tool-footer">
+                    <span class="price-tag paid">付费</span>
+                    <span class="view-detail">查看详情 →</span>
+                </div>
+            </a>
+
+            <a href="/pages/tools/jasper.html" class="tool-card">
+                <div class="tool-header">
+                    <div class="tool-icon" style="background: linear-gradient(135deg, #f97316, #f59e0b);">📝</div>
+                    <div class="tool-info">
+                        <div class="tool-name">Jasper</div>
+                        <div class="tool-category">写作工具</div>
+                    </div>
+                    <div class="tool-score">9.1</div>
+                </div>
+                <div class="tool-desc">专业AI写作平台，专为内容创作者和营销人员设计，支持博客、社交媒体、广告文案等多种内容生成。</div>
+                <div class="tool-tags">
+                    <span class="tool-tag">写作</span>
+                    <span class="tool-tag">营销</span>
+                    <span class="tool-tag">内容</span>
+                </div>
+                <div class="tool-footer">
+                    <span class="price-tag paid">付费</span>
+                    <span class="view-detail">查看详情 →</span>
+                </div>
+            </a>
+
+            <a href="/pages/tools/canva.html" class="tool-card">
+                <div class="tool-header">
+                    <div class="tool-icon" style="background: linear-gradient(135deg, #06b6d4, #22d3ee);">🎨</div>
+                    <div class="tool-info">
+                        <div class="tool-name">Canva</div>
+                        <div class="tool-category">设计工具</div>
+                    </div>
+                    <div class="tool-score">9.0</div>
+                </div>
+                <div class="tool-desc">在线设计平台，集成AI功能支持智能设计建议、图像生成、文字转图片等，适合非专业设计师使用。</div>
+                <div class="tool-tags">
+                    <span class="tool-tag">设计</span>
+                    <span class="tool-tag">图像</span>
+                    <span class="tool-tag">在线</span>
+                </div>
+                <div class="tool-footer">
+                    <span class="price-tag freemium">免费/付费</span>
+                    <span class="view-detail">查看详情 →</span>
+                </div>
+            </a>
+
+            <a href="/pages/tools/notion_ai.html" class="tool-card">
+                <div class="tool-header">
+                    <div class="tool-icon" style="background: linear-gradient(135deg, #3b82f6, #60a5fa);">📒</div>
+                    <div class="tool-info">
+                        <div class="tool-name">Notion AI</div>
+                        <div class="tool-category">效率工具</div>
+                    </div>
+                    <div class="tool-score">8.8</div>
+                </div>
+                <div class="tool-desc">集成于Notion中的AI助手，支持笔记总结、内容生成、表格分析等，提升工作和学习效率。</div>
+                <div class="tool-tags">
+                    <span class="tool-tag">笔记</span>
+                    <span class="tool-tag">效率</span>
+                    <span class="tool-tag">生产力</span>
+                </div>
+                <div class="tool-footer">
+                    <span class="price-tag freemium">免费/付费</span>
+                    <span class="view-detail">查看详情 →</span>
+                </div>
+            </a>
+
+            <a href="/pages/tools/autogpt.html" class="tool-card">
+                <div class="tool-header">
+                    <div class="tool-icon" style="background: linear-gradient(135deg, #ef4444, #f87171);">🤖</div>
+                    <div class="tool-info">
+                        <div class="tool-name">AutoGPT</div>
+                        <div class="tool-category">对话AI</div>
+                    </div>
+                    <div class="tool-score">8.5</div>
+                </div>
+                <div class="tool-desc">开源的自主AI代理，能够自主完成复杂任务，支持互联网搜索、代码执行、文件处理等功能。</div>
+                <div class="tool-tags">
+                    <span class="tool-tag">开源</span>
+                    <span class="tool-tag">自主代理</span>
+                    <span class="tool-tag">自动化</span>
+                </div>
+                <div class="tool-footer">
+                    <span class="price-tag free">免费</span>
+                    <span class="view-detail">查看详情 →</span>
+                </div>
+            </a>
+
+            <a href="/pages/tools/langflow.html" class="tool-card">
+                <div class="tool-header">
+                    <div class="tool-icon" style="background: linear-gradient(135deg, #a855f7, #c084fc);">🔗</div>
+                    <div class="tool-info">
+                        <div class="tool-name">LangFlow</div>
+                        <div class="tool-category">编程助手</div>
+                    </div>
+                    <div class="tool-score">8.7</div>
+                </div>
+                <div class="tool-desc">可视化LLM应用构建工具，通过拖拽方式创建和测试LangChain应用，无需编写代码。</div>
+                <div class="tool-tags">
+                    <span class="tool-tag">可视化</span>
+                    <span class="tool-tag">LangChain</span>
+                    <span class="tool-tag">低代码</span>
+                </div>
+                <div class="tool-footer">
+                    <span class="price-tag free">免费</span>
+                    <span class="view-detail">查看详情 →</span>
+                </div>
+            </a>
+
+            <a href="/pages/tools/prowritingaid.html" class="tool-card">
+                <div class="tool-header">
+                    <div class="tool-icon" style="background: linear-gradient(135deg, #14b8a6, #06b6d4);">📝</div>
+                    <div class="tool-info">
+                        <div class="tool-name">ProWritingAid</div>
+                        <div class="tool-category">写作工具</div>
+                    </div>
+                    <div class="tool-score">8.6</div>
+                </div>
+                <div class="tool-desc">专业级写作辅助工具，提供深度语法检查、风格分析、可读性评估等高级功能。</div>
+                <div class="tool-tags">
+                    <span class="tool-tag">写作</span>
+                    <span class="tool-tag">编辑</span>
+                    <span class="tool-tag">专业</span>
+                </div>
+                <div class="tool-footer">
+                    <span class="price-tag freemium">免费/付费</span>
+                    <span class="view-detail">查看详情 →</span>
+                </div>
+            </a>
+
+            <a href="/pages/tools/cleanlab.html" class="tool-card">
+                <div class="tool-header">
+                    <div class="tool-icon" style="background: linear-gradient(135deg, #84cc16, #a3e635);">🧹</div>
+                    <div class="tool-info">
+                        <div class="tool-name">Cleanlab</div>
+                        <div class="tool-category">数据分析</div>
+                    </div>
+                    <div class="tool-score">8.3</div>
+                </div>
+                <div class="tool-desc">AI驱动的数据清洗工具，自动检测和修复标签错误、异常值，提升机器学习模型性能。</div>
+                <div class="tool-tags">
+                    <span class="tool-tag">数据</span>
+                    <span class="tool-tag">机器学习</span>
+                    <span class="tool-tag">开源</span>
+                </div>
+                <div class="tool-footer">
+                    <span class="price-tag free">免费</span>
+                    <span class="view-detail">查看详情 →</span>
+                </div>
+            </a>
+
+            <a href="/pages/tools/convertkit.html" class="tool-card">
+                <div class="tool-header">
+                    <div class="tool-icon" style="background: linear-gradient(135deg, #f43f5e, #fb7185);">📧</div>
+                    <div class="tool-info">
+                        <div class="tool-name">ConvertKit</div>
+                        <div class="tool-category">效率工具</div>
+                    </div>
+                    <div class="tool-score">8.7</div>
+                </div>
+                <div class="tool-desc">专业邮件营销平台，支持自动化邮件序列、细分订阅者、销售漏斗等功能。</div>
+                <div class="tool-tags">
+                    <span class="tool-tag">邮件</span>
+                    <span class="tool-tag">营销</span>
+                    <span class="tool-tag">自动化</span>
+                </div>
+                <div class="tool-footer">
+                    <span class="price-tag paid">付费</span>
+                    <span class="view-detail">查看详情 →</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="load-more">
+            <button class="load-more-btn" id="loadMoreBtn">加载更多工具</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 AI News · AI.link.cn | <a href="/">返回首页</a></p>
+        </div>
+    </footer>
+
+    <script>
+        const tools = [
+            { name: 'ChatGPT', category: 'chat', rating: 9.6, tags: ['大模型', '对话', '代码', '内容创作'], price: 'freemium' },
+            { name: 'Midjourney', category: 'image', rating: 9.4, tags: ['图像生成', '设计', '创意'], price: 'paid' },
+            { name: 'Grammarly', category: 'writing', rating: 9.2, tags: ['写作', '语法', '效率'], price: 'freemium' },
+            { name: 'GitHub Copilot', category: 'coding', rating: 9.3, tags: ['编程', '代码补全', 'IDE'], price: 'paid' },
+            { name: 'Jasper', category: 'writing', rating: 9.1, tags: ['写作', '营销', '内容'], price: 'paid' },
+            { name: 'Canva', category: 'design', rating: 9.0, tags: ['设计', '图像', '在线'], price: 'freemium' },
+            { name: 'Notion AI', category: 'productivity', rating: 8.8, tags: ['笔记', '效率', '生产力'], price: 'freemium' },
+            { name: 'AutoGPT', category: 'chat', rating: 8.5, tags: ['开源', '自主代理', '自动化'], price: 'free' },
+            { name: 'LangFlow', category: 'coding', rating: 8.7, tags: ['可视化', 'LangChain', '低代码'], price: 'free' },
+            { name: 'ProWritingAid', category: 'writing', rating: 8.6, tags: ['写作', '编辑', '专业'], price: 'freemium' },
+            { name: 'Cleanlab', category: 'data', rating: 8.3, tags: ['数据', '机器学习', '开源'], price: 'free' },
+            { name: 'ConvertKit', category: 'productivity', rating: 8.7, tags: ['邮件', '营销', '自动化'], price: 'paid' },
+        ];
+
+        let currentCategory = 'all';
+        let currentSort = 'popular';
+
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const searchInput = document.getElementById('searchInput');
+        const sortSelect = document.getElementById('sortSelect');
+        const toolsGrid = document.getElementById('toolsGrid');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentCategory = btn.dataset.category;
+                filterTools();
+            });
+        });
+
+        searchInput.addEventListener('input', () => {
+            filterTools();
+        });
+
+        sortSelect.addEventListener('change', () => {
+            currentSort = sortSelect.value;
+            filterTools();
+        });
+
+        function filterTools() {
+            const searchQuery = searchInput.value.toLowerCase();
+            let filtered = tools.filter(tool => {
+                const matchCategory = currentCategory === 'all' || tool.category === currentCategory;
+                const matchSearch = tool.name.toLowerCase().includes(searchQuery) ||
+                                   tool.tags.some(tag => tag.toLowerCase().includes(searchQuery));
+                return matchCategory && matchSearch;
+            });
+
+            if (currentSort === 'rating') {
+                filtered.sort((a, b) => b.rating - a.rating);
+            } else if (currentSort === 'newest') {
+                filtered.sort((a, b) => a.rating - b.rating);
+            }
+
+            if (filtered.length === 0) {
+                toolsGrid.innerHTML = '<div class="no-results"><p>未找到匹配的工具</p></div>';
+                return;
+            }
+        }
+
+        document.getElementById('loadMoreBtn').addEventListener('click', () => {
+            alert('已加载全部工具');
+        });
+    </script>
 </body>
 </html>

@@ -7,49 +7,104 @@
 <meta name="description" content="AI工具教程平台，提供ChatGPT、Midjourney、Claude等热门AI工具的详细使用教程、工作流技巧和实战案例，帮助你精通AI工具。">
 <meta name="keywords" content="AI教程,ChatGPT教程,Midjourney教程,AI工具使用技巧,Prompt工程,AI工作流">
 <link rel="canonical" href="https://ai.link.cn/tutorials/">
-<link rel="stylesheet" href="/css/style.css">
 <style>
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC",sans-serif;background:#0a0f1a;color:#f8fafc;line-height:1.7;margin:0;padding:0}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg: #0a0f1a;
+    --surface: #111827;
+    --surface-2: #1f2937;
+    --text: #f8fafc;
+    --text-muted: #94a3b8;
+    --accent: #a855f7;
+    --accent-light: #c084fc;
+    --success: #22c55e;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --blue: #3b82f6;
+}
+
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC",sans-serif;background:var(--bg);color:var(--text);line-height:1.7;margin:0;padding:0}
 .container{max-width:1200px;margin:0 auto;padding:0 24px}
-header{padding:24px 0;border-bottom:1px solid rgba(168,85,247,.2)}
-nav{display:flex;justify-content:space-between;align-items:center}
-.logo{font-size:1.4rem;font-weight:700;color:#a855f7;text-decoration:none}
-.nav-links{display:flex;gap:24px;list-style:none;margin:0;padding:0}
-.nav-links a{color:#94a3b8;text-decoration:none;font-weight:500;font-size:.95rem;transition:color .2s}
-.nav-links a:hover{color:#a855f7}
-.hero{padding:48px 0;text-align:center}
-.hero h1{font-size:2.5rem;line-height:1.3;margin-bottom:16px;background:linear-gradient(90deg,#a855f7,#c084fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero p{font-size:1.1rem;color:#94a3b8;max-width:600px;margin:0 auto}
-.categories{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin:32px 0}
-.category-btn{padding:10px 20px;background:rgba(168,85,247,.1);border:1px solid rgba(168,85,247,.3);border-radius:25px;color:#c084fc;text-decoration:none;font-size:.9rem;transition:all .2s}
-.category-btn:hover{background:rgba(168,85,247,.2);border-color:#a855f7}
-.category-btn.active{background:linear-gradient(90deg,#a855f7,#c084fc);border-color:transparent;color:#fff}
+
+header{padding:16px 0;border-bottom:1px solid rgba(168,85,247,.2);background:rgba(10,15,26,.98);backdrop-filter:blur(12px);position:sticky;top:0;z-index:100}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.logo{font-size:1.4rem;font-weight:700;color:var(--accent);text-decoration:none}
+.nav-links{display:flex;gap:20px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+.nav-links a{color:var(--text-muted);text-decoration:none;font-weight:500;font-size:.95rem;transition:color .2s}
+.nav-links a:hover{color:var(--accent)}
+
+.hero{padding:48px 0;text-align:center;background:linear-gradient(180deg,rgba(168,85,247,.08),transparent)}
+.hero h1{font-size:2.5rem;line-height:1.3;margin-bottom:16px}
+.hero h1 span{color:var(--accent)}
+.hero p{font-size:1.1rem;color:var(--text-muted);max-width:600px;margin:0 auto}
+
+.stats{display:flex;justify-content:center;gap:48px;margin-bottom:48px;padding:24px;background:rgba(255,255,255,.02);border-radius:12px;flex-wrap:wrap}
+.stat-item{text-align:center}
+.stat-item .number{font-size:2rem;font-weight:700;color:var(--accent)}
+.stat-item .label{font-size:.85rem;color:var(--text-muted);margin-top:4px}
+
+.categories{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:32px 0}
+.category-btn{padding:8px 16px;background:rgba(168,85,247,.1);border:1px solid rgba(168,85,247,.3);border-radius:20px;color:var(--accent-light);text-decoration:none;font-size:.85rem;transition:all .2s;display:flex;align-items:center;gap:6px}
+.category-btn:hover{background:rgba(168,85,247,.2);border-color:var(--accent)}
+.category-btn.active{background:linear-gradient(90deg,var(--accent),var(--accent-light));border-color:transparent;color:#fff}
+
+.featured{background:linear-gradient(135deg,rgba(168,85,247,.15),rgba(59,130,246,.1));border:1px solid rgba(168,85,247,.3);border-radius:16px;padding:32px;margin-bottom:32px}
+.featured h2{font-size:1.5rem;color:var(--accent);margin:0 0 16px}
+.featured-grid{display:grid;grid-template-columns:1fr 2fr;gap:24px;align-items:center}
+.featured-img{background:linear-gradient(135deg,var(--accent),var(--accent-light));border-radius:12px;height:200px;display:flex;align-items:center;justify-content:center;font-size:3rem;color:rgba(255,255,255,.3)}
+.featured-content h3{font-size:1.3rem;color:var(--text);margin:0 0 8px}
+.featured-content p{color:var(--text-muted);margin:0 0 16px;line-height:1.6}
+.featured-content .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 24px;background:linear-gradient(90deg,var(--accent),var(--accent-light));color:#fff;text-decoration:none;border-radius:25px;font-weight:600;transition:opacity .2s}
+.featured-content .btn:hover{opacity:.9}
+
+.learning-path{margin-bottom:48px}
+.learning-path h2{font-size:1.5rem;margin-bottom:20px;padding-bottom:8px;border-bottom:1px solid rgba(168,85,247,.2)}
+.path-steps{display:flex;gap:12px;overflow-x:auto;padding-bottom:12px}
+.path-step{flex:0 0 280px;background:var(--surface);border:1px solid rgba(168,85,247,.1);border-radius:12px;padding:20px;text-decoration:none;color:inherit;transition:all .2s}
+.path-step:hover{border-color:var(--accent);transform:translateY(-2px)}
+.path-step .step-number{width:32px;height:32px;border-radius:50%;background:rgba(168,85,247,.2);color:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:12px;font-size:1rem}
+.path-step h4{font-size:1rem;font-weight:600;margin-bottom:6px}
+.path-step p{font-size:.85rem;color:var(--text-muted);line-height:1.5}
+
 .tutorials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px;padding:24px 0}
-.tutorial-card{background:rgba(255,255,255,.03);border:1px solid rgba(168,85,247,.15);border-radius:16px;padding:24px;text-decoration:none;transition:all .3s}
+.tutorial-card{background:rgba(255,255,255,.03);border:1px solid rgba(168,85,247,.15);border-radius:16px;padding:24px;text-decoration:none;color:inherit;transition:all .3s;display:flex;flex-direction:column}
 .tutorial-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(168,85,247,.15);border-color:rgba(168,85,247,.5)}
-.tutorial-card .category{display:inline-block;padding:4px 12px;background:rgba(168,85,247,.15);border-radius:12px;font-size:.75rem;color:#c084fc;margin-bottom:12px}
-.tutorial-card h3{font-size:1.2rem;color:#f8fafc;margin:0 0 10px;font-weight:600}
-.tutorial-card p{font-size:.9rem;color:#94a3b8;margin:0 0 16px;line-height:1.6}
+.tutorial-card .category{display:inline-block;padding:4px 12px;background:rgba(168,85,247,.15);border-radius:12px;font-size:.75rem;color:var(--accent-light);margin-bottom:12px;width:fit-content}
+.tutorial-card h3{font-size:1.15rem;color:var(--text);margin:0 0 10px;font-weight:600}
+.tutorial-card p{font-size:.9rem;color:var(--text-muted);margin:0 0 16px;line-height:1.6;flex:1}
 .tutorial-card .meta{display:flex;justify-content:space-between;align-items:center;font-size:.8rem;color:#64748b}
 .tutorial-card .meta .time{display:flex;align-items:center;gap:4px}
 .tutorial-card .meta .level{padding:3px 10px;border-radius:10px;font-size:.7rem}
 .level.beginner{background:rgba(34,197,94,.2);color:#4ade80}
 .level.intermediate{background:rgba(59,130,246,.2);color:#60a5fa}
 .level.advanced{background:rgba(239,68,68,.2);color:#f87171}
-.featured{background:linear-gradient(135deg,rgba(168,85,247,.15),rgba(192,132,252,.1));border:1px solid rgba(168,85,247,.3);border-radius:16px;padding:32px;margin-bottom:32px}
-.featured h2{font-size:1.5rem;color:#c084fc;margin:0 0 16px}
-.featured-grid{display:grid;grid-template-columns:1fr 2fr;gap:24px}
-.featured-img{background:linear-gradient(135deg,#a855f7,#c084fc);border-radius:12px;height:200px;display:flex;align-items:center;justify-content:center;font-size:3rem;color:rgba(255,255,255,.3)}
-.featured-content h3{font-size:1.3rem;color:#f8fafc;margin:0 0 8px}
-.featured-content p{color:#94a3b8;margin:0 0 16px}
-.featured-content .btn{display:inline-block;padding:10px 24px;background:linear-gradient(90deg,#a855f7,#c084fc);color:#fff;text-decoration:none;border-radius:25px;font-weight:600}
+
+.popular-tags{margin-bottom:32px;padding:24px;background:var(--surface);border-radius:12px;border:1px solid rgba(168,85,247,.1)}
+.popular-tags h3{font-size:1rem;color:var(--text);margin-bottom:12px}
+.tag-list{display:flex;flex-wrap:wrap;gap:8px}
+.tag-item{padding:6px 14px;background:rgba(168,85,247,.1);border:1px solid rgba(168,85,247,.2);border-radius:16px;color:var(--text-muted);font-size:.8rem;text-decoration:none;transition:all .2s}
+.tag-item:hover{border-color:var(--accent);color:var(--accent-light)}
+
 footer{padding:48px 0;text-align:center;color:#64748b;font-size:.85rem;border-top:1px solid rgba(255,255,255,.05);margin-top:48px}
-.stats{display:flex;justify-content:center;gap:48px;margin-bottom:48px;padding:24px;background:rgba(255,255,255,.02);border-radius:12px}
-.stat-item{text-align:center}
-.stat-item .number{font-size:2rem;font-weight:700;color:#a855f7}
-.stat-item .label{font-size:.85rem;color:#64748b;margin-top:4px}
-@media(max-width:768px){.hero h1{font-size:1.8rem}.categories{justify-content:flex-start;overflow-x:auto;padding-bottom:12px}.tutorials-grid{grid-template-columns:1fr}.featured-grid{grid-template-columns:1fr}.stats{flex-direction:column;gap:16px}}
+
+@media(max-width:768px){
+    .hero h1{font-size:1.8rem}
+    .categories{justify-content:flex-start;overflow-x:auto;padding-bottom:12px}
+    .tutorials-grid{grid-template-columns:1fr}
+    .featured-grid{grid-template-columns:1fr}
+    .stats{flex-direction:column;gap:16px}
+    .path-steps{flex-direction:column}
+    .path-step{flex:1}
+}
 </style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2F2V94W35E"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-2F2V94W35E');
+</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"CollectionPage","name":"AI工具教程平台","description":"提供ChatGPT、Midjourney等热门AI工具的详细使用教程和实战案例","url":"https://ai.link.cn/tutorials/","publisher":{"@type":"Organization","name":"AI.link.cn","url":"https://ai.link.cn"}}
 </script>
@@ -63,47 +118,94 @@ footer{padding:48px 0;text-align:center;color:#64748b;font-size:.85rem;border-to
 <body>
 <div class="container">
 <header>
-<nav>
-<a href="/" class="logo">AI.link.cn</a>
+<nav class="nav">
+<a href="/" class="logo">AI News</a>
 <ul class="nav-links">
-<li><a href="/tutorials/">教程</a></li>
-<li><a href="/deals/">折扣</a></li>
-<li><a href="/compare/">比价</a></li>
-<li><a href="/discover/">发现</a></li>
+<li><a href="/">首页</a></li>
+<li><a href="/pages/tools">工具库</a></li>
+<li><a href="/tutorials/">教程中心</a></li>
+<li><a href="/compare/">工具对比</a></li>
+<li><a href="/deals/">折扣优惠</a></li>
 </ul>
 </nav>
 </header>
 
 <section class="hero">
-<h1>AI工具教程平台</h1>
+<h1>AI<span>工具教程</span>平台</h1>
 <p>从入门到精通，掌握ChatGPT、Midjourney、Claude等热门AI工具的使用技巧和实战工作流</p>
 </section>
 
 <div class="stats">
-<div class="stat-item"><div class="number">50+</div><div class="label">精选教程</div></div>
-<div class="stat-item"><div class="number">10万+</div><div class="label">学习次数</div></div>
-<div class="stat-item"><div class="number">5</div><div class="label">热门工具</div></div>
+<div class="stat-item"><div class="number">80+</div><div class="label">精选教程</div></div>
+<div class="stat-item"><div class="number">50万+</div><div class="label">学习次数</div></div>
+<div class="stat-item"><div class="number">8</div><div class="label">热门工具</div></div>
+<div class="stat-item"><div class="number">4</div><div class="label">难度等级</div></div>
 </div>
 
 <section class="categories">
-<a href="#" class="category-btn active">全部</a>
-<a href="#" class="category-btn">ChatGPT</a>
-<a href="#" class="category-btn">Midjourney</a>
-<a href="#" class="category-btn">Claude</a>
-<a href="#" class="category-btn">Notion AI</a>
-<a href="#" class="category-btn">Prompt工程</a>
-<a href="#" class="category-btn">工作流</a>
+<a href="#" class="category-btn active">🔥 全部</a>
+<a href="#" class="category-btn">💬 ChatGPT</a>
+<a href="#" class="category-btn">🎨 Midjourney</a>
+<a href="#" class="category-btn">🤖 Claude</a>
+<a href="#" class="category-btn">📒 Notion AI</a>
+<a href="#" class="category-btn">🎯 Prompt工程</a>
+<a href="#" class="category-btn">🔗 工作流</a>
+<a href="#" class="category-btn">💻 编程AI</a>
 </section>
 
 <section class="featured">
-<h2>🔥 本周精选</h2>
+<h2>🔥 本周精选教程</h2>
 <div class="featured-grid">
 <div class="featured-img">🎯</div>
 <div class="featured-content">
 <h3>ChatGPT Prompt工程完全指南</h3>
-<p>从零开始学习Prompt工程，掌握系统提示词、角色扮演、链式思考等高级技巧，大幅提升AI输出质量</p>
-<a href="#" class="btn">立即学习</a>
+<p>从零开始学习Prompt工程，掌握系统提示词、角色扮演、链式思考等高级技巧，大幅提升AI输出质量。包含100+实用Prompt模板和实战案例。</p>
+<a href="#" class="btn">立即学习 →</a>
 </div>
+</div>
+</section>
+
+<section class="learning-path">
+<h2>📚 学习路径</h2>
+<div class="path-steps">
+<a href="#" class="path-step">
+<div class="step-number">1</div>
+<h4>入门基础</h4>
+<p>了解AI工具基本概念，学会基础操作和常见用途</p>
+</a>
+<a href="#" class="path-step">
+<div class="step-number">2</div>
+<h4>技巧进阶</h4>
+<p>掌握高级Prompt技巧，提升输出质量和工作效率</p>
+</a>
+<a href="#" class="path-step">
+<div class="step-number">3</div>
+<h4>实战应用</h4>
+<p>学习实际场景应用，构建高效AI工作流</p>
+</a>
+<a href="#" class="path-step">
+<div class="step-number">4</div>
+<h4>精通高级</h4>
+<p>掌握高级功能和自定义开发，成为AI专家</p>
+</a>
+</div>
+</section>
+
+<section class="popular-tags">
+<h3>🏷️ 热门标签</h3>
+<div class="tag-list">
+<a href="#" class="tag-item">系统提示词</a>
+<a href="#" class="tag-item">角色扮演</a>
+<a href="#" class="tag-item">链式思考</a>
+<a href="#" class="tag-item">提示词模板</a>
+<a href="#" class="tag-item">工作流自动化</a>
+<a href="#" class="tag-item">代码生成</a>
+<a href="#" class="tag-item">图像生成</a>
+<a href="#" class="tag-item">内容创作</a>
+<a href="#" class="tag-item">数据分析</a>
+<a href="#" class="tag-item">API集成</a>
+<a href="#" class="tag-item">多模态</a>
+<a href="#" class="tag-item">AI Agent</a>
 </div>
 </section>
 
@@ -111,7 +213,7 @@ footer{padding:48px 0;text-align:center;color:#64748b;font-size:.85rem;border-to
 <a href="#" class="tutorial-card">
 <span class="category">ChatGPT</span>
 <h3>ChatGPT高级技巧：10个必学Prompt模板</h3>
-<p>掌握10个实用的ChatGPT Prompt模板，提升日常工作效率</p>
+<p>掌握10个实用的ChatGPT Prompt模板，覆盖写作、编程、分析等多个场景，提升日常工作效率</p>
 <div class="meta">
 <span class="time">⏱️ 15分钟</span>
 <span class="level beginner">入门</span>
@@ -120,7 +222,7 @@ footer{padding:48px 0;text-align:center;color:#64748b;font-size:.85rem;border-to
 <a href="#" class="tutorial-card">
 <span class="category">Midjourney</span>
 <h3>Midjourney绘图从入门到精通</h3>
-<p>全面掌握Midjourney提示词结构、风格控制、参数调整技巧</p>
+<p>全面掌握Midjourney提示词结构、风格控制、参数调整技巧，生成专业级AI艺术作品</p>
 <div class="meta">
 <span class="time">⏱️ 45分钟</span>
 <span class="level intermediate">进阶</span>
@@ -129,7 +231,7 @@ footer{padding:48px 0;text-align:center;color:#64748b;font-size:.85rem;border-to
 <a href="#" class="tutorial-card">
 <span class="category">Claude</span>
 <h3>Claude 3.5 Sonnet使用指南</h3>
-<p>探索Claude 3.5的强大功能，包括长文档处理和多模态能力</p>
+<p>探索Claude 3.5的强大功能，包括100万token长文档处理、多模态能力和高级推理</p>
 <div class="meta">
 <span class="time">⏱️ 30分钟</span>
 <span class="level intermediate">进阶</span>
@@ -138,7 +240,7 @@ footer{padding:48px 0;text-align:center;color:#64748b;font-size:.85rem;border-to
 <a href="#" class="tutorial-card">
 <span class="category">Notion AI</span>
 <h3>Notion AI效率提升工作流</h3>
-<p>利用Notion AI优化你的笔记、文档和项目管理工作流</p>
+<p>利用Notion AI优化你的笔记、文档和项目管理工作流，实现智能化办公</p>
 <div class="meta">
 <span class="time">⏱️ 20分钟</span>
 <span class="level beginner">入门</span>
@@ -147,7 +249,7 @@ footer{padding:48px 0;text-align:center;color:#64748b;font-size:.85rem;border-to
 <a href="#" class="tutorial-card">
 <span class="category">Prompt工程</span>
 <h3>系统提示词设计最佳实践</h3>
-<p>学习如何设计有效的系统提示词，让AI更精准地理解你的需求</p>
+<p>学习如何设计有效的系统提示词，让AI更精准地理解你的需求，提升输出质量</p>
 <div class="meta">
 <span class="time">⏱️ 25分钟</span>
 <span class="level advanced">高级</span>
@@ -156,16 +258,70 @@ footer{padding:48px 0;text-align:center;color:#64748b;font-size:.85rem;border-to
 <a href="#" class="tutorial-card">
 <span class="category">工作流</span>
 <h3>AI自动化工作流搭建教程</h3>
-<p>将多个AI工具串联起来，创建高效的自动化工作流程</p>
+<p>将多个AI工具串联起来，创建高效的自动化工作流程，实现任务自动完成</p>
 <div class="meta">
 <span class="time">⏱️ 50分钟</span>
+<span class="level advanced">高级</span>
+</div>
+</a>
+<a href="#" class="tutorial-card">
+<span class="category">ChatGPT</span>
+<h3>ChatGPT编程助手完全指南</h3>
+<p>利用ChatGPT辅助编程，包括代码生成、调试、解释、优化等全流程技巧</p>
+<div class="meta">
+<span class="time">⏱️ 35分钟</span>
+<span class="level intermediate">进阶</span>
+</div>
+</a>
+<a href="#" class="tutorial-card">
+<span class="category">Midjourney</span>
+<h3>Midjourney提示词模板大全</h3>
+<p>50+精选提示词模板，涵盖人物肖像、场景插画、产品设计等多种场景</p>
+<div class="meta">
+<span class="time">⏱️ 30分钟</span>
+<span class="level beginner">入门</span>
+</div>
+</a>
+<a href="#" class="tutorial-card">
+<span class="category">编程AI</span>
+<h3>GitHub Copilot编程效率提升</h3>
+<p>掌握GitHub Copilot高级用法，包括代码补全、函数建议、文档生成等技巧</p>
+<div class="meta">
+<span class="time">⏱️ 25分钟</span>
+<span class="level intermediate">进阶</span>
+</div>
+</a>
+<a href="#" class="tutorial-card">
+<span class="category">ChatGPT</span>
+<h3>ChatGPT数据分析教程</h3>
+<p>利用ChatGPT进行数据分析、可视化和业务洞察，无需编写复杂代码</p>
+<div class="meta">
+<span class="time">⏱️ 40分钟</span>
+<span class="level intermediate">进阶</span>
+</div>
+</a>
+<a href="#" class="tutorial-card">
+<span class="category">Prompt工程</span>
+<h3>角色扮演Prompt技巧</h3>
+<p>学会使用角色扮演技巧，让AI扮演不同角色，获得更专业的输出</p>
+<div class="meta">
+<span class="time">⏱️ 20分钟</span>
+<span class="level beginner">入门</span>
+</div>
+</a>
+<a href="#" class="tutorial-card">
+<span class="category">工作流</span>
+<h3>AI内容创作工作流</h3>
+<p>从选题到发布的完整AI内容创作工作流，提升内容产出效率和质量</p>
+<div class="meta">
+<span class="time">⏱️ 45分钟</span>
 <span class="level advanced">高级</span>
 </div>
 </a>
 </section>
 
 <footer>
-<p>© 2026 AI.link.cn | 专注AI工具评测与教程</p>
+<p>© 2026 AI.link.cn | <a href="/">返回首页</a> | <a href="/pages/tools">工具库</a></p>
 </footer>
 </div>
 </body>

@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ChatGPT完整使用指南 2026 | 从入门到精通Prompt工程 | AI.link.cn</title>
+<meta name="description" content="ChatGPT完整使用指南，涵盖基础操作、高级Prompt技巧、链式思考、系统提示词、代码生成、内容创作等全流程教程，附赠100+实用Prompt模板。">
+<meta name="keywords" content="ChatGPT教程,ChatGPT使用技巧,Prompt工程,系统提示词,AI对话技巧,ChatGPT入门">
+<link rel="canonical" href="https://ai.link.cn/tutorials/chatgpt-complete-guide.html">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg: #0a0f1a;
+    --surface: #111827;
+    --surface-2: #1f2937;
+    --text: #f8fafc;
+    --text-muted: #94a3b8;
+    --accent: #a855f7;
+    --accent-light: #c084fc;
+    --success: #22c55e;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --blue: #3b82f6;
+}
+
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC",sans-serif;background:var(--bg);color:var(--text);line-height:1.8;margin:0;padding:0}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+header{padding:16px 0;border-bottom:1px solid rgba(168,85,247,.2);background:rgba(10,15,26,.98);backdrop-filter:blur(12px);position:sticky;top:0;z-index:100}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.logo{font-size:1.4rem;font-weight:700;color:var(--accent);text-decoration:none}
+.nav-links{display:flex;gap:20px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+.nav-links a{color:var(--text-muted);text-decoration:none;font-weight:500;font-size:.95rem;transition:color .2s}
+.nav-links a:hover{color:var(--accent)}
+
+.progress-bar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent-light));z-index:1000;width:0;transition:width .1s}
+
+.hero{padding:48px 0 32px;text-align:center;background:linear-gradient(180deg,rgba(168,85,247,.08),transparent)}
+.hero h1{font-size:2.2rem;line-height:1.3;margin-bottom:12px}
+.hero h1 span{color:var(--accent)}
+.hero p{font-size:1.05rem;color:var(--text-muted);max-width:600px;margin:0 auto 24px}
+.hero-meta{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;font-size:.9rem;color:var(--text-muted)}
+.hero-meta span{display:flex;align-items:center;gap:6px}
+
+.tutorial-layout{display:grid;grid-template-columns:1fr 280px;gap:32px;padding:32px 0}
+.tutorial-content{background:var(--surface);border-radius:16px;padding:40px;border:1px solid rgba(168,85,247,.1)}
+.tutorial-content h2{font-size:1.6rem;color:var(--text);margin:40px 0 16px;padding-bottom:8px;border-bottom:1px solid rgba(168,85,247,.2)}
+.tutorial-content h2:first-child{margin-top:0}
+.tutorial-content h3{font-size:1.25rem;color:var(--text);margin:28px 0 12px}
+.tutorial-content p{color:var(--text-muted);margin-bottom:16px;line-height:1.8}
+.tutorial-content ul,.tutorial-content ol{color:var(--text-muted);margin-bottom:16px;padding-left:24px}
+.tutorial-content li{margin-bottom:8px;line-height:1.7}
+.tutorial-content strong{color:var(--text)}
+
+.prompt-example{background:var(--surface-2);border-left:4px solid var(--accent);border-radius:8px;padding:20px;margin:20px 0}
+.prompt-example .prompt-label{font-size:.8rem;color:var(--accent);font-weight:600;margin-bottom:8px;text-transform:uppercase;letter-spacing:.05em}
+.prompt-example .prompt-text{color:var(--text);font-family:monospace;font-size:.95rem;line-height:1.7;white-space:pre-wrap}
+
+.tip-box{background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.3);border-radius:12px;padding:20px;margin:20px 0}
+.tip-box .tip-title{color:var(--success);font-weight:600;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.tip-box p{color:var(--text-muted);margin:0;font-size:.95rem}
+
+.warning-box{background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.3);border-radius:12px;padding:20px;margin:20px 0}
+.warning-box .warning-title{color:var(--warning);font-weight:600;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.warning-box p{color:var(--text-muted);margin:0;font-size:.95rem}
+
+.code-block{background:var(--surface-2);border-radius:8px;padding:16px;margin:16px 0;overflow-x:auto}
+.code-block code{color:var(--success);font-family:monospace;font-size:.9rem;line-height:1.6}
+
+.table-wrap{overflow-x:auto;margin:20px 0}
+table{width:100%;border-collapse:collapse;font-size:.9rem}
+th{background:var(--surface-2);padding:12px 16px;text-align:left;color:var(--accent);font-weight:600;border-bottom:2px solid rgba(168,85,247,.3)}
+td{padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.05);color:var(--text-muted)}
+
+aside{position:sticky;top:80px;align-self:start}
+.toc{background:var(--surface);border-radius:12px;padding:20px;border:1px solid rgba(168,85,247,.1)}
+.toc h3{font-size:1rem;margin-bottom:12px;color:var(--text)}
+.toc ul{list-style:none;padding:0;margin:0}
+.toc li{margin-bottom:8px}
+.toc a{color:var(--text-muted);text-decoration:none;font-size:.9rem;transition:color .2s;display:block;padding:4px 0}
+.toc a:hover{color:var(--accent)}
+
+.related-section{margin-top:32px;padding-top:32px;border-top:1px solid rgba(168,85,247,.2)}
+.related-section h3{font-size:1.2rem;margin-bottom:16px}
+.related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.related-card{background:var(--surface-2);border-radius:10px;padding:16px;text-decoration:none;color:inherit;transition:all .2s;border:1px solid rgba(168,85,247,.1)}
+.related-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.related-card h4{font-size:.95rem;margin-bottom:6px;color:var(--text)}
+.related-card p{font-size:.85rem;color:var(--text-muted);margin:0;line-height:1.5}
+
+footer{padding:48px 0;text-align:center;color:#64748b;font-size:.85rem;border-top:1px solid rgba(255,255,255,.05);margin-top:48px}
+
+@media(max-width:900px){
+    .tutorial-layout{grid-template-columns:1fr}
+    aside{position:static}
+    .related-grid{grid-template-columns:1fr}
+}
+
+@media(max-width:768px){
+    .nav-links{display:none}
+    .hero h1{font-size:1.6rem}
+    .tutorial-content{padding:24px}
+}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2F2V94W35E"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-2F2V94W35E');
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"ChatGPT完整使用指南 2026","description":"ChatGPT完整使用指南，涵盖基础操作、高级Prompt技巧、链式思考、系统提示词、代码生成等全流程教程","author":{"@type":"Organization","name":"AI.link.cn"},"publisher":{"@type":"Organization","name":"AI.link.cn","url":"https://ai.link.cn"},"datePublished":"2026-07-22","dateModified":"2026-07-22","mainEntityOfPage":"https://ai.link.cn/tutorials/chatgpt-complete-guide.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"首页","item":"https://ai.link.cn/"},
+{"@type":"ListItem","position":2,"name":"教程中心","item":"https://ai.link.cn/tutorials/"},
+{"@type":"ListItem","position":3,"name":"ChatGPT完整指南"}
+]}
+</script>
+</head>
+<body>
+<div class="progress-bar" id="progressBar"></div>
+
+<header>
+<div class="container">
+<nav class="nav">
+<a href="/" class="logo">AI News</a>
+<ul class="nav-links">
+<li><a href="/">首页</a></li>
+<li><a href="/pages/tools">工具库</a></li>
+<li><a href="/tutorials/">教程中心</a></li>
+<li><a href="/compare/">工具对比</a></li>
+<li><a href="/deals/">折扣优惠</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<section class="hero">
+<div class="container">
+<h1>ChatGPT<span>完整使用指南</span></h1>
+<p>从入门到精通，掌握ChatGPT全部技巧，大幅提升工作效率</p>
+<div class="hero-meta">
+<span>⏱️ 阅读时间：30分钟</span>
+<span>📊 难度：初级到高级</span>
+<span>📝 更新：2026.07.22</span>
+<span>👁️ 5.2万次学习</span>
+</div>
+</div>
+</section>
+
+<div class="container">
+<div class="tutorial-layout">
+<main class="tutorial-content">
+<h2 id="intro">一、ChatGPT简介与基础入门</h2>
+
+<h3 id="what-is-chatgpt">1.1 什么是ChatGPT</h3>
+<p>ChatGPT是OpenAI开发的大型语言模型，能够理解和生成自然语言对话。它基于GPT架构训练，可以回答问题、编写代码、创作内容、分析数据等，是目前最流行的AI助手工具。</p>
+
+<h3 id="quick-start">1.2 快速开始</h3>
+<p>使用ChatGPT非常简单，只需三步：</p>
+<ol>
+<li><strong>注册账号</strong>：访问 chat.openai.com，使用邮箱或Google/Microsoft账号注册</li>
+<li><strong>选择模型</strong>：免费版使用GPT-3.5，付费版可使用GPT-4和GPT-4o</li>
+<li><strong>开始对话</strong>：在输入框中输入问题或指令，按Enter发送</li>
+</ol>
+
+<div class="tip-box">
+<div class="tip-title">💡 新手建议</div>
+<p>刚开始使用时，建议先用免费版熟悉基本操作。当你发现自己频繁使用且需要更高质量输出时，再考虑升级到Plus版（$20/月）。</p>
+</div>
+
+<h3 id="first-prompt">1.3 你的第一个Prompt</h3>
+<p>好的Prompt是获得高质量回答的关键。以下是一个简单的例子：</p>
+
+<div class="prompt-example">
+<div class="prompt-label">示例 Prompt</div>
+<div class="prompt-text">你是一位资深的Python编程老师，请用通俗易懂的方式解释什么是递归，并举一个简单的例子。</div>
+</div>
+
+<p>这个Prompt包含了三个要素：</p>
+<ul>
+<li><strong>角色设定</strong>：资深Python编程老师</li>
+<li><strong>任务要求</strong>：解释什么是递归</li>
+<li><strong>输出要求</strong>：通俗易懂、举例说明</li>
+</ul>
+
+<h2 id="advanced-prompt">二、高级Prompt技巧</h2>
+
+<h3 id="role-play">2.1 角色扮演法</h3>
+<p>让ChatGPT扮演特定角色，可以获得更专业、更符合场景的回答。角色设定越具体，输出质量越高。</p>
+
+<div class="prompt-example">
+<div class="prompt-label">角色扮演 Prompt 模板</div>
+<div class="prompt-text">你是一位[具体角色]，拥有[X年]经验。请根据以下要求完成任务：
+[任务描述]
+
+要求：
+- [要求1]
+- [要求2]
+- [要求3]</div>
+</div>
+
+<p>常用角色示例：</p>
+<ul>
+<li><strong>营销专家</strong>：帮你写广告语、营销方案、社交媒体内容</li>
+<li><strong>产品经理</strong>：帮你分析需求、写PRD、设计产品功能</li>
+<li><strong>英语老师</strong>：帮你改作文、练口语、学语法</li>
+<li><strong>健身教练</strong>：帮你制定训练计划、解答健身疑问</li>
+<li><strong>法律顾问</strong>：帮你分析法律问题（仅供参考）</li>
+</ul>
+
+<h3 id="chain-of-thought">2.2 链式思考（Chain of Thought）</h3>
+<p>对于复杂问题，要求ChatGPT"一步步思考"可以显著提升推理能力和答案准确性。</p>
+
+<div class="prompt-example">
+<div class="prompt-label">链式思考 Prompt</div>
+<div class="prompt-text">一家商店卖苹果，第一天卖掉了一半多2个，第二天卖掉剩下的一半少1个，第三天又卖掉剩下的一半多1个，最后还剩3个。问原来有多少个苹果？
+
+请一步步思考，详细说明每一步的推理过程。</div>
+</div>
+
+<div class="tip-box">
+<div class="tip-title">✅ 效果对比</div>
+<p>直接提问数学题，ChatGPT可能出错。加上"请一步步思考"后，准确率可以提升30%以上，尤其是对于逻辑推理和数学计算类问题。</p>
+</div>
+
+<h3 id="few-shot">2.3 示例引导法（Few-shot Prompting）</h3>
+<p>通过给出几个示例，让ChatGPT理解你的期望输出格式和风格，然后再提出实际任务。</p>
+
+<div class="prompt-example">
+<div class="prompt-label">示例引导 Prompt</div>
+<div class="prompt-text">请将以下产品描述改写成吸引人的营销文案。
+
+示例1：
+原描述：一款无线蓝牙耳机，续航24小时
+改写后：🎧 续航长达24小时！让音乐陪伴你一整天，告别充电焦虑
+
+示例2：
+原描述：一款智能手表，支持心率监测
+改写后：⌚ 24小时心率守护，你的健康管家就在手腕上
+
+现在请改写：
+原描述：一款AI写作助手，能帮你快速生成高质量文章</div>
+</div>
+
+<h2 id="system-prompt">三、系统提示词详解</h2>
+
+<h3 id="what-is-system">3.1 什么是系统提示词</h3>
+<p>系统提示词（System Prompt）是在对话开始前设定的全局指令，它定义了AI的行为模式、说话风格、知识边界等。与普通对话消息不同，系统提示词会持续影响整个对话过程。</p>
+
+<h3 id="system-examples">3.2 实用系统提示词模板</h3>
+
+<div class="prompt-example">
+<div class="prompt-label">专业写作助手</div>
+<div class="prompt-text">你是一位专业的内容编辑，擅长将复杂的技术概念转化为通俗易懂的文章。
+- 使用清晰的结构和小标题
+- 语言简洁流畅，避免专业术语
+- 适当使用例子和比喻帮助理解
+- 保持客观中立的语气
+- 每段不超过3句话</div>
+</div>
+
+<div class="prompt-example">
+<div class="prompt-label">代码审查专家</div>
+<div class="prompt-text">你是一位资深的软件架构师，负责代码审查。
+- 指出代码中的bug和潜在问题
+- 提供具体的改进建议和优化方案
+- 关注性能、可读性和可维护性
+- 用示例代码说明改进方式
+- 按严重程度排序：严重 > 重要 > 建议</div>
+</div>
+
+<div class="prompt-example">
+<div class="prompt-label">学习导师</div>
+<div class="prompt-text">你是一位耐心的学习导师，擅长用苏格拉底式提问引导学生思考。
+- 不直接给出答案，而是通过提问引导学生自己思考
+- 根据学生的回答调整问题难度
+- 鼓励学生，建立学习信心
+- 适时总结知识点
+- 使用生活化的例子解释抽象概念</div>
+</div>
+
+<div class="warning-box">
+<div class="warning-title">⚠️ 注意事项</div>
+<p>系统提示词不是万能的。对于非常专业的领域知识，ChatGPT可能仍然会产生"幻觉"（编造内容）。重要信息请务必核实来源。</p>
+</div>
+
+<h2 id="use-cases">四、实战应用场景</h2>
+
+<h3 id="content-creation">4.1 内容创作</h3>
+<p>ChatGPT可以帮助你高效创作各种类型的内容：</p>
+<ul>
+<li><strong>博客文章</strong>：确定主题 → 生成大纲 → 扩展内容 → 优化润色</li>
+<li><strong>社交媒体</strong>：写微博、小红书文案、朋友圈文案</li>
+<li><strong>邮件写作</strong>：商务邮件、求职邮件、客户沟通</li>
+<li><strong>视频脚本</strong>：短视频脚本、教程视频大纲</li>
+</ul>
+
+<h3 id="programming">4.2 编程辅助</h3>
+<p>ChatGPT在编程方面表现出色，可以做很多事情：</p>
+<ul>
+<li>解释代码逻辑和算法原理</li>
+<li>生成代码片段和完整函数</li>
+<li>调试错误，提供修复建议</li>
+<li>代码重构和性能优化</li>
+<li>编写测试用例</li>
+<li>生成技术文档和注释</li>
+</ul>
+
+<div class="prompt-example">
+<div class="prompt-label">代码优化 Prompt</div>
+<div class="prompt-text">请审查以下Python代码，找出潜在问题并优化：
+
+```python
+def fibonacci(n):
+    if n <= 1:
+        return n
+    return fibonacci(n-1) + fibonacci(n-2)
+```
+
+请从以下方面分析：
+1. 时间复杂度和空间复杂度
+2. 存在的问题（性能、边界条件等）
+3. 优化后的代码
+4. 优化效果对比</div>
+</div>
+
+<h3 id="data-analysis">4.3 数据分析</h3>
+<p>利用ChatGPT进行数据分析，无需掌握复杂的数据分析工具：</p>
+<ul>
+<li>数据清洗和预处理建议</li>
+<li>生成SQL查询语句</li>
+<li>撰写数据分析报告</li>
+<li>数据可视化建议</li>
+<li>业务洞察和建议</li>
+</ul>
+
+<h3 id="learning">4.4 学习辅助</h3>
+<p>ChatGPT是强大的学习工具，可以帮助你：</p>
+<ul>
+<li>解释复杂概念，用通俗语言讲解</li>
+<li>制定学习计划和路线图</li>
+<li>生成练习题和测试题</li>
+<li>模拟面试和口语练习</li>
+<li>翻译和语言学习</li>
+</ul>
+
+<h2 id="best-practices">五、最佳实践与避坑指南</h2>
+
+<h3 id="good-prompt">5.1 写出好Prompt的5个原则</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>原则</th><th>说明</th><th>示例</th></tr>
+</thead>
+<tbody>
+<tr><td>明确具体</td><td>避免模糊不清的描述</td><td>"写一篇500字的产品介绍" vs "写点东西"</td></tr>
+<tr><td>给出上下文</td><td>提供背景信息帮助理解</td><td>"我是初学者，想学习Python编程"</td></tr>
+<tr><td>设定角色</td><td>让AI扮演专业角色</td><td>"你是一位资深产品经理..."</td></tr>
+<tr><td>定义格式</td><td>指定输出格式和结构</td><td>"请用表格形式对比..."</td></tr>
+<tr><td>逐步迭代</td><td>不满意就调整优化</td><td>"这个版本不错，再增加一些案例"</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3 id="common-mistakes">5.2 常见错误与解决方法</h3>
+<ul>
+<li><strong>问题太宽泛</strong>：将大问题拆分成多个小问题，逐步深入</li>
+<li><strong>信息不足</strong>：提供足够的背景信息和上下文</li>
+<li><strong>期望过高</strong>：理解AI的局限性，重要信息要核实</li>
+<li><strong>不会迭代</strong>：把第一次输出当草稿，通过多轮对话优化</li>
+<li><strong>忽视安全</strong>：不要输入敏感信息、密码、个人隐私等</li>
+</ul>
+
+<h3 id="limitations">5.3 ChatGPT的局限性</h3>
+<p>了解局限性才能更好地使用：</p>
+<ul>
+<li><strong>知识截止</strong>：训练数据有截止日期，不知道最新信息</li>
+<li><strong>幻觉问题</strong>：可能编造看似合理但错误的信息</li>
+<li><strong>数学计算</strong>：复杂计算可能出错，需要验证</li>
+<li><strong>情感理解</strong>：对复杂情感和语境的理解有限</li>
+<li><strong>价值判断</strong>：涉及主观判断的问题需谨慎参考</li>
+</ul>
+
+<h2 id="advanced-tips">六、进阶技巧</h2>
+
+<h3 id="prompt-chaining">6.1 Prompt链式调用</h3>
+<p>将复杂任务拆分为多个步骤，每一步的输出作为下一步的输入：</p>
+<ol>
+<li>第一步：生成文章大纲</li>
+<li>第二步：根据大纲扩展每个章节</li>
+<li>第三步：优化语言和润色</li>
+<li>第四步：生成标题和摘要</li>
+</ol>
+
+<h3 id="self-consistency">6.2 自我一致性验证</h3>
+<p>对于重要问题，可以让ChatGPT多次回答同一问题，然后取最一致的答案。或者让它自我审查：</p>
+
+<div class="prompt-example">
+<div class="prompt-label">自我审查 Prompt</div>
+<div class="prompt-text">请重新审视你刚才的回答，找出其中可能存在的问题或不准确的地方，并提供修正后的版本。</div>
+</div>
+
+<h3 id="custom-gpts">6.3 使用自定义GPTs</h3>
+<p>OpenAI的GPT Store提供了大量定制化的GPT，涵盖各种专业领域。你可以：</p>
+<ul>
+<li>在GPT Store中搜索适合自己场景的定制GPT</li>
+<li>创建自己的专属GPT，上传知识库</li>
+<li>配置GPT的行为模式和回复风格</li>
+</ul>
+
+<h2 id="summary">七、总结</h2>
+<p>ChatGPT是一个强大的AI工具，但真正发挥它的威力需要掌握正确的使用方法。希望本教程能帮助你：</p>
+<ul>
+<li>✅ 理解Prompt工程的核心原理</li>
+<li>✅ 掌握角色扮演、链式思考等高级技巧</li>
+<li>✅ 学会使用系统提示词定制AI行为</li>
+<li>✅ 在工作和学习中高效应用ChatGPT</li>
+<li>✅ 避开常见误区，安全使用AI工具</li>
+</ul>
+
+<p>AI技术在快速发展，持续学习和实践是掌握它的最好方式。祝你在AI时代事半功倍！</p>
+
+<div class="related-section">
+<h3>📚 延伸阅读</h3>
+<div class="related-grid">
+<a href="/pages/tools/chatgpt.html" class="related-card">
+<h4>ChatGPT工具详解</h4>
+<p>功能介绍、价格方案、优缺点分析</p>
+</a>
+<a href="/compare/" class="related-card">
+<h4>AI对话工具对比</h4>
+<p>ChatGPT vs Claude vs Gemini全面对比</p>
+</a>
+<a href="/tutorials/" class="related-card">
+<h4>更多AI教程</h4>
+<p>Midjourney、Claude、Copilot等工具教程</p>
+</a>
+<a href="/articles/waic-2026-highlights.html" class="related-card">
+<h4>WAIC 2026大会亮点</h4>
+<p>了解AI行业最新发展趋势</p>
+</a>
+</div>
+</div>
+
+</main>
+
+<aside>
+<div class="toc">
+<h3>📋 目录</h3>
+<ul>
+<li><a href="#intro">一、基础入门</a></li>
+<li><a href="#what-is-chatgpt">1.1 什么是ChatGPT</a></li>
+<li><a href="#quick-start">1.2 快速开始</a></li>
+<li><a href="#first-prompt">1.3 第一个Prompt</a></li>
+<li><a href="#advanced-prompt">二、高级技巧</a></li>
+<li><a href="#role-play">2.1 角色扮演</a></li>
+<li><a href="#chain-of-thought">2.2 链式思考</a></li>
+<li><a href="#few-shot">2.3 示例引导</a></li>
+<li><a href="#system-prompt">三、系统提示词</a></li>
+<li><a href="#what-is-system">3.1 系统提示词简介</a></li>
+<li><a href="#system-examples">3.2 实用模板</a></li>
+<li><a href="#use-cases">四、实战应用</a></li>
+<li><a href="#content-creation">4.1 内容创作</a></li>
+<li><a href="#programming">4.2 编程辅助</a></li>
+<li><a href="#data-analysis">4.3 数据分析</a></li>
+<li><a href="#learning">4.4 学习辅助</a></li>
+<li><a href="#best-practices">五、最佳实践</a></li>
+<li><a href="#good-prompt">5.1 好Prompt的原则</a></li>
+<li><a href="#common-mistakes">5.2 常见错误</a></li>
+<li><a href="#limitations">5.3 局限性</a></li>
+<li><a href="#advanced-tips">六、进阶技巧</a></li>
+<li><a href="#summary">七、总结</a></li>
+</ul>
+</div>
+</aside>
+</div>
+</div>
+
+<footer>
+<div class="container">
+<p>© 2026 AI.link.cn | <a href="/">返回首页</a> | <a href="/tutorials/">教程中心</a> | <a href="/pages/tools">工具库</a></p>
+</div>
+</footer>
+
+<script>
+const progressBar = document.getElementById('progressBar');
+window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+    progressBar.style.width = scrollPercent + '%';
+});
+</script>
+</body>
+</html>

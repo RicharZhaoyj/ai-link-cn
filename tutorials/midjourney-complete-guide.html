@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Midjourney完整教程 2026 | AI图像生成从入门到精通 | AI.link.cn</title>
+<meta name="description" content="Midjourney完整使用教程，涵盖提示词结构、风格控制、参数调节、高级技巧、50+实用模板，从零开始成为AI绘画大师。">
+<meta name="keywords" content="Midjourney教程,Midjourney提示词,AI图像生成,AI绘画教程,Prompt模板,Midjourney参数">
+<link rel="canonical" href="https://ai.link.cn/tutorials/midjourney-complete-guide.html">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg: #0a0f1a;
+    --surface: #111827;
+    --surface-2: #1f2937;
+    --text: #f8fafc;
+    --text-muted: #94a3b8;
+    --accent: #a855f7;
+    --accent-light: #c084fc;
+    --success: #22c55e;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --blue: #3b82f6;
+}
+
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC",sans-serif;background:var(--bg);color:var(--text);line-height:1.8;margin:0;padding:0}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+header{padding:16px 0;border-bottom:1px solid rgba(168,85,247,.2);background:rgba(10,15,26,.98);backdrop-filter:blur(12px);position:sticky;top:0;z-index:100}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.logo{font-size:1.4rem;font-weight:700;color:var(--accent);text-decoration:none}
+.nav-links{display:flex;gap:20px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+.nav-links a{color:var(--text-muted);text-decoration:none;font-weight:500;font-size:.95rem;transition:color .2s}
+.nav-links a:hover{color:var(--accent)}
+
+.progress-bar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent-light));z-index:1000;width:0;transition:width .1s}
+
+.hero{padding:48px 0 32px;text-align:center;background:linear-gradient(180deg,rgba(168,85,247,.08),transparent)}
+.hero h1{font-size:2.2rem;line-height:1.3;margin-bottom:12px}
+.hero h1 span{color:var(--accent)}
+.hero p{font-size:1.05rem;color:var(--text-muted);max-width:600px;margin:0 auto 24px}
+.hero-meta{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;font-size:.9rem;color:var(--text-muted)}
+.hero-meta span{display:flex;align-items:center;gap:6px}
+
+.tutorial-layout{display:grid;grid-template-columns:1fr 280px;gap:32px;padding:32px 0}
+.tutorial-content{background:var(--surface);border-radius:16px;padding:40px;border:1px solid rgba(168,85,247,.1)}
+.tutorial-content h2{font-size:1.6rem;color:var(--text);margin:40px 0 16px;padding-bottom:8px;border-bottom:1px solid rgba(168,85,247,.2)}
+.tutorial-content h2:first-child{margin-top:0}
+.tutorial-content h3{font-size:1.25rem;color:var(--text);margin:28px 0 12px}
+.tutorial-content p{color:var(--text-muted);margin-bottom:16px;line-height:1.8}
+.tutorial-content ul,.tutorial-content ol{color:var(--text-muted);margin-bottom:16px;padding-left:24px}
+.tutorial-content li{margin-bottom:8px;line-height:1.7}
+.tutorial-content strong{color:var(--text)}
+
+.prompt-example{background:var(--surface-2);border-left:4px solid var(--accent);border-radius:8px;padding:20px;margin:20px 0}
+.prompt-example .prompt-label{font-size:.8rem;color:var(--accent);font-weight:600;margin-bottom:8px;text-transform:uppercase;letter-spacing:.05em}
+.prompt-example .prompt-text{color:var(--text);font-family:monospace;font-size:.95rem;line-height:1.7;white-space:pre-wrap}
+
+.tip-box{background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.3);border-radius:12px;padding:20px;margin:20px 0}
+.tip-box .tip-title{color:var(--success);font-weight:600;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.tip-box p{color:var(--text-muted);margin:0;font-size:.95rem}
+
+.warning-box{background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.3);border-radius:12px;padding:20px;margin:20px 0}
+.warning-box .warning-title{color:var(--warning);font-weight:600;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.warning-box p{color:var(--text-muted);margin:0;font-size:.95rem}
+
+.style-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}
+.style-card{background:var(--surface-2);border-radius:8px;padding:12px;text-align:center;font-size:.85rem;color:var(--text-muted);border:1px solid rgba(168,85,247,.1)}
+.style-card .style-icon{font-size:1.5rem;margin-bottom:6px}
+.style-card .style-name{color:var(--text);font-weight:600;margin-bottom:4px}
+
+.table-wrap{overflow-x:auto;margin:20px 0}
+table{width:100%;border-collapse:collapse;font-size:.9rem}
+th{background:var(--surface-2);padding:12px 16px;text-align:left;color:var(--accent);font-weight:600;border-bottom:2px solid rgba(168,85,247,.3)}
+td{padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.05);color:var(--text-muted)}
+
+aside{position:sticky;top:80px;align-self:start}
+.toc{background:var(--surface);border-radius:12px;padding:20px;border:1px solid rgba(168,85,247,.1)}
+.toc h3{font-size:1rem;margin-bottom:12px;color:var(--text)}
+.toc ul{list-style:none;padding:0;margin:0}
+.toc li{margin-bottom:8px}
+.toc a{color:var(--text-muted);text-decoration:none;font-size:.9rem;transition:color .2s;display:block;padding:4px 0}
+.toc a:hover{color:var(--accent)}
+
+.related-section{margin-top:32px;padding-top:32px;border-top:1px solid rgba(168,85,247,.2)}
+.related-section h3{font-size:1.2rem;margin-bottom:16px}
+.related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.related-card{background:var(--surface-2);border-radius:10px;padding:16px;text-decoration:none;color:inherit;transition:all .2s;border:1px solid rgba(168,85,247,.1)}
+.related-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.related-card h4{font-size:.95rem;margin-bottom:6px;color:var(--text)}
+.related-card p{font-size:.85rem;color:var(--text-muted);margin:0;line-height:1.5}
+
+footer{padding:48px 0;text-align:center;color:#64748b;font-size:.85rem;border-top:1px solid rgba(255,255,255,.05);margin-top:48px}
+
+@media(max-width:900px){
+    .tutorial-layout{grid-template-columns:1fr}
+    aside{position:static}
+    .related-grid{grid-template-columns:1fr}
+    .style-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+@media(max-width:768px){
+    .nav-links{display:none}
+    .hero h1{font-size:1.6rem}
+    .tutorial-content{padding:24px}
+}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2F2V94W35E"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-2F2V94W35E');
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Midjourney完整教程 2026","description":"Midjourney完整使用教程，涵盖提示词结构、风格控制、参数调节、高级技巧、50+实用模板","author":{"@type":"Organization","name":"AI.link.cn"},"publisher":{"@type":"Organization","name":"AI.link.cn","url":"https://ai.link.cn"},"datePublished":"2026-07-22","dateModified":"2026-07-22","mainEntityOfPage":"https://ai.link.cn/tutorials/midjourney-complete-guide.html"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"首页","item":"https://ai.link.cn/"},
+{"@type":"ListItem","position":2,"name":"教程中心","item":"https://ai.link.cn/tutorials/"},
+{"@type":"ListItem","position":3,"name":"Midjourney完整教程"}
+]}
+</script>
+</head>
+<body>
+<div class="progress-bar" id="progressBar"></div>
+
+<header>
+<div class="container">
+<nav class="nav">
+<a href="/" class="logo">AI News</a>
+<ul class="nav-links">
+<li><a href="/">首页</a></li>
+<li><a href="/pages/tools">工具库</a></li>
+<li><a href="/tutorials/">教程中心</a></li>
+<li><a href="/compare/">工具对比</a></li>
+<li><a href="/deals/">折扣优惠</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<section class="hero">
+<div class="container">
+<h1>Midjourney<span>完整教程</span></h1>
+<p>从零开始掌握AI图像生成，成为AI绘画大师</p>
+<div class="hero-meta">
+<span>⏱️ 阅读时间：45分钟</span>
+<span>📊 难度：初级到高级</span>
+<span>📝 更新：2026.07.22</span>
+<span>👁️ 3.8万次学习</span>
+</div>
+</div>
+</section>
+
+<div class="container">
+<div class="tutorial-layout">
+<main class="tutorial-content">
+<h2 id="intro">一、Midjourney基础入门</h2>
+
+<h3 id="what-is-midjourney">1.1 什么是Midjourney</h3>
+<p>Midjourney是一款基于AI的图像生成工具，通过文字描述（Prompt）就能生成高质量的艺术图像。它以卓越的画质和丰富的风格控制能力著称，是设计师、艺术家和创意工作者的首选AI绘画工具。</p>
+
+<h3 id="quick-start">1.2 快速开始</h3>
+<ol>
+<li><strong>注册Discord账号</strong>：Midjourney通过Discord使用，先注册Discord账号</li>
+<li><strong>加入Midjourney服务器</strong>：访问 midjourney.com，点击Join the Beta</li>
+<li><strong>选择订阅计划</strong>：基础版$10/月起，标准版$30/月，专业版$60/月</li>
+<li><strong>开始生成图像</strong>：在Newbies频道输入 /imagine + 描述文字</li>
+</ol>
+
+<div class="tip-box">
+<div class="tip-title">💡 新手建议</div>
+<p>刚开始可以先用基础版熟悉操作。当你需要更多生成次数和更高画质时，再考虑升级。新手建议从Standard版开始，性价比最高。</p>
+</div>
+
+<h3 id="first-image">1.3 生成你的第一张图</h3>
+<p>输入以下Prompt，体验Midjourney的魅力：</p>
+
+<div class="prompt-example">
+<div class="prompt-label">示例 Prompt</div>
+<div class="prompt-text">/imagine prompt: a beautiful sunset over the ocean, golden hour, cinematic lighting, highly detailed, 8k --ar 16:9 --v 6.0</div>
+</div>
+
+<p>这个Prompt包含：</p>
+<ul>
+<li><strong>主体描述</strong>：a beautiful sunset over the ocean</li>
+<li><strong>风格/氛围</strong>：golden hour, cinematic lighting</li>
+<li><strong>质量描述</strong>：highly detailed, 8k</li>
+<li><strong>参数</strong>：--ar 16:9（宽高比）, --v 6.0（版本）</li>
+</ul>
+
+<h2 id="prompt-structure">二、提示词结构详解</h2>
+
+<h3 id="basic-structure">2.1 基础结构公式</h3>
+<p>一个好的Midjourney Prompt通常包含以下几个部分：</p>
+
+<div class="prompt-example">
+<div class="prompt-label">Prompt 结构公式</div>
+<div class="prompt-text">[主体] + [场景/环境] + [风格] + [光影] + [视角] + [画质描述] + [参数]</div>
+</div>
+
+<p>详细说明：</p>
+<ul>
+<li><strong>主体（Subject）</strong>：你想画什么 - 人物、动物、风景、物品等</li>
+<li><strong>场景/环境（Environment）</strong>：在什么地方 - 森林、城市、太空、室内等</li>
+<li><strong>风格（Style）</strong>：艺术风格 - 油画、水彩、赛博朋克、宫崎骏风格等</li>
+<li><strong>光影（Lighting）</strong>：光线效果 - 黄金时刻、霓虹灯光、柔和光线等</li>
+<li><strong>视角（View）</strong>：拍摄角度 - 特写、鸟瞰、平视、广角等</li>
+<li><strong>画质（Quality）</strong>：质量描述 - 高清、精细、8k、照片级等</li>
+</ul>
+
+<h3 id="style-keywords">2.2 常用风格关键词</h3>
+<div class="style-grid">
+<div class="style-card">
+<div class="style-icon">🎨</div>
+<div class="style-name">油画风</div>
+<div>oil painting, impasto</div>
+</div>
+<div class="style-card">
+<div class="style-icon">💧</div>
+<div class="style-name">水彩风</div>
+<div>watercolor, soft</div>
+</div>
+<div class="style-card">
+<div class="style-icon">🏙️</div>
+<div class="style-name">赛博朋克</div>
+<div>cyberpunk, neon</div>
+</div>
+<div class="style-card">
+<div class="style-icon">🏯</div>
+<div class="style-name">宫崎骏风</div>
+<div>Studio Ghibli style</div>
+</div>
+<div class="style-card">
+<div class="style-icon">📷</div>
+<div class="style-name">照片写实</div>
+<div>photorealistic, DSLR</div>
+</div>
+<div class="style-card">
+<div class="style-icon">✏️</div>
+<div class="style-name">素描风</div>
+<div>pencil sketch, drawing</div>
+</div>
+</div>
+
+<h3 id="artist-styles">2.3 艺术家风格参考</h3>
+<p>在Prompt中加入艺术家名字，可以让图像更有特定艺术风格：</p>
+<ul>
+<li><strong>Vincent van Gogh</strong> - 梵高风格，后印象派，强烈色彩</li>
+<li><strong>Claude Monet</strong> - 莫奈风格，印象派，光影柔和</li>
+<li><strong>Salvador Dali</strong> - 达利风格，超现实主义，梦幻</li>
+<li><strong>Pablo Picasso</strong> - 毕加索风格，立体主义</li>
+<li><strong>Hayao Miyazaki</strong> - 宫崎骏风格，日式动画</li>
+<li><strong>Syd Mead</strong> - 赛博朋克概念设计</li>
+</ul>
+
+<h2 id="parameters">三、常用参数详解</h2>
+
+<h3 id="aspect-ratio">3.1 宽高比 --ar</h3>
+<p>控制生成图像的宽高比例：</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>参数</th><th>比例</th><th>适用场景</th></tr>
+</thead>
+<tbody>
+<tr><td>--ar 1:1</td><td>正方形</td><td>头像、图标、社交媒体配图</td></tr>
+<tr><td>--ar 16:9</td><td>横版16:9</td><td>壁纸、视频封面、横幅</td></tr>
+<tr><td>--ar 9:16</td><td>竖版9:16</td><td>手机壁纸、短视频封面</td></tr>
+<tr><td>--ar 4:3</td><td>4:3</td><td>传统照片比例</td></tr>
+<tr><td>--ar 3:2</td><td>3:2</td><td>单反照片比例</td></tr>
+<tr><td>--ar 2:3</td><td>2:3</td><td>竖版照片比例</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3 id="quality">3.2 质量与细节参数</h3>
+<ul>
+<li><strong>--q 0.25</strong>：粗糙质量，生成速度快，适合快速试验想法</li>
+<li><strong>--q 0.5</strong>：中等质量，平衡速度和质量</li>
+<li><strong>--q 1</strong>：默认质量，日常使用推荐</li>
+<li><strong>--q 2</strong>：高质量，细节更丰富，消耗2倍时长</li>
+<li><strong>--hd</strong>：高清模式，适合建筑和风景</li>
+<li><strong>--style raw</strong>：原始风格，减少艺术美化</li>
+</ul>
+
+<h3 id="stylize">3.3 风格化程度 --s</h3>
+<p>控制Midjourney对图像的风格化程度：</p>
+<ul>
+<li><strong>--s 0</strong>：完全按照描述，不添加额外风格</li>
+<li><strong>--s 100</strong>：低风格化，比较写实</li>
+<li><strong>--s 250</strong>：默认值，平衡风格和描述</li>
+<li><strong>--s 500</strong>：高风格化，艺术性更强</li>
+<li><strong>--s 750</strong>：很高风格化，创意性强</li>
+<li><strong>--s 1000</strong>：最高风格化，非常艺术化</li>
+</ul>
+
+<div class="tip-box">
+<div class="tip-title">🎯 使用技巧</div>
+<p>想要图像更接近你的描述，用较低的--s值；想要更有艺术感和创意，用较高的--s值。人像摄影建议s值在100-250之间，艺术创作可以尝试500-1000。</p>
+</div>
+
+<h3 id="other-params">3.4 其他实用参数</h3>
+<ul>
+<li><strong>--no</strong>：排除某些元素，如 --no text, watermark</li>
+<li><strong>--seed</strong>：指定种子值，生成相似图像</li>
+<li><strong>--chaos</strong>：增加随机性，0-100，值越高变化越大</li>
+<li><strong>--tile</strong>：生成可平铺的图案纹理</li>
+<li><strong>--iw</strong>：图像权重，图生图时控制参考图影响程度</li>
+</ul>
+
+<h2 id="advanced-tips">四、高级技巧</h2>
+
+<h3 id="image-prompt">4.1 图生图技巧</h3>
+<p>上传图片作为参考，可以更好地控制生成效果：</p>
+<ol>
+<li>将图片拖入Discord发送</li>
+<li>右键图片，复制图片链接</li>
+<li>在Prompt开头粘贴图片URL</li>
+<li>后面跟上文字描述和参数</li>
+<li>使用 --iw 0.5-2 调整参考图权重</li>
+</ol>
+
+<div class="prompt-example">
+<div class="prompt-label">图生图 Prompt</div>
+<div class="prompt-text">[图片URL] cyberpunk city, neon lights, rainy night, cinematic --iw 1.5 --ar 16:9 --v 6.0</div>
+</div>
+
+<h3 id="remix">4.2 Remix模式</h3>
+<p>开启Remix模式后，可以在变体（Vary）时修改Prompt：</p>
+<ol>
+<li>输入 /settings 打开设置面板</li>
+<li>点击 Remix mode 开启</li>
+<li>生成图像后点击 V1/V2/V3/V4</li>
+<li>弹出的对话框中修改Prompt</li>
+<li>点击提交生成新变体</li>
+</ol>
+
+<h3 id="inpainting">4.3 局部重绘（Vary Region）</h3>
+<p>只修改图像的某一部分，保持其他部分不变：</p>
+<ol>
+<li>放大（Upscale）一张图</li>
+<li>点击 Vary (Region) 按钮</li>
+<li>用画笔涂抹要修改的区域</li>
+<li>输入新的描述文字</li>
+<li>点击提交生成</li>
+</ol>
+
+<div class="tip-box">
+<div class="tip-title">✨ 实用场景</div>
+<p>局部重绘非常有用：人物换发型、添加/移除物体、修改服装、换背景中的元素等。配合Remix模式效果更好。</p>
+</div>
+
+<h3 id="zoom-out">4.4 缩放扩展（Zoom Out）</h3>
+<p>扩展图像边界，生成更大的场景：</p>
+<ul>
+<li><strong>Zoom Out 2x</strong>：2倍缩放，扩展画面</li>
+<li><strong>Zoom Out 1.5x</strong>：1.5倍缩放，小幅扩展</li>
+<li><strong>Custom Zoom</strong>：自定义缩放比例和新Prompt</li>
+</ul>
+<p>配合Pan（上下左右平移）功能，可以制作超大幅全景图。</p>
+
+<h2 id="templates">五、实用Prompt模板</h2>
+
+<h3 id="portrait">5.1 人像摄影模板</h3>
+<div class="prompt-example">
+<div class="prompt-label">人像摄影 Prompt</div>
+<div class="prompt-text">portrait of [人物描述], [年龄] years old, [表情/姿势], shot on Sony A7IV, 85mm f/1.4 lens, golden hour lighting, shallow depth of field, bokeh, photorealistic, highly detailed skin, cinematic color grading --ar 2:3 --s 200 --v 6.0</div>
+</div>
+
+<h3 id="landscape">5.2 风景摄影模板</h3>
+<div class="prompt-example">
+<div class="prompt-label">风景摄影 Prompt</div>
+<div class="prompt-text">epic landscape of [场景描述], dramatic lighting, [时间], wide angle shot, foreground interest, leading lines, rule of thirds, National Geographic photography, 8k, ultra detailed, HDR --ar 16:9 --s 250 --v 6.0</div>
+</div>
+
+<h3 id="product">5.3 产品展示模板</h3>
+<div class="prompt-example">
+<div class="prompt-label">产品摄影 Prompt</div>
+<div class="prompt-text">product photography of [产品描述], studio lighting, softbox, clean white background, minimalist, commercial style, high-end retouching, sharp focus, 8k, commercial advertisement style --ar 1:1 --s 150 --v 6.0</div>
+</div>
+
+<h3 id="concept">5.4 概念艺术模板</h3>
+<div class="prompt-example">
+<div class="prompt-label">概念艺术 Prompt</div>
+<div class="prompt-text">concept art of [主题], [风格] style, intricate details, volumetric lighting, atmospheric perspective, fantasy, epic scale, trending on artstation, by [艺术家名字] --ar 16:9 --s 750 --v 6.0</div>
+</div>
+
+<h3 id="logo">5.5 Logo设计模板</h3>
+<div class="prompt-example">
+<div class="prompt-label">Logo设计 Prompt</div>
+<div class="prompt-text">minimalist logo design of [描述], vector style, flat design, clean lines, [配色方案], modern, professional, on white background, no text --ar 1:1 --s 250 --v 6.0 --no text shading gradient</div>
+</div>
+
+<h2 id="best-practices">六、最佳实践与避坑</h2>
+
+<h3 id="good-prompt">6.1 写出好Prompt的7个秘诀</h3>
+<ol>
+<li><strong>具体明确</strong>：用具体名词替代模糊描述，"布偶猫"比"猫"好</li>
+<li><strong>加入细节</strong>：材质、纹理、环境细节越多越好</li>
+<li><strong>描述光线</strong>：光线决定画面氛围，黄金时刻、柔光、逆光等</li>
+<li><strong>指定视角</strong>：特写、广角、俯视、平视等</li>
+<li><strong>添加质感</strong>：照片级、油画、数字艺术、像素风等</li>
+<li><strong>参考艺术家</strong>：加入艺术家名字快速定位风格</li>
+<li><strong>多迭代优化</strong>：不断调整Prompt，逐步逼近理想效果</li>
+</ol>
+
+<h3 id="common-issues">6.2 常见问题与解决</h3>
+<ul>
+<li><strong>图像模糊不清晰</strong>：加入highly detailed, sharp focus, 8k等词</li>
+<li><strong>人物变形</strong>：增加--q 2，使用photorealistic，指定相机和镜头</li>
+<li><strong>文字乱码</strong>：使用--no text，或后期用其他工具添加文字</li>
+<li><strong>手指异常</strong>：加入perfect hands, detailed fingers，或后期修复</li>
+<li><strong>风格不对</strong>：加入具体艺术家名或风格关键词，调整--s值</li>
+<li><strong>太抽象看不懂</strong>：减少--s值，增加具体描述，使用--style raw</li>
+</ul>
+
+<h3 id="workflow">6.3 高效工作流</h3>
+<p>专业的AI绘画工作流程：</p>
+<ol>
+<li><strong>灵感收集</strong>：收集参考图，确定风格和主题</li>
+<li><strong>快速草图</strong>：用--q 0.25快速生成大量方案</li>
+<li><strong>筛选优化</strong>：选满意的方向，优化Prompt</li>
+<li><strong>精细调整</strong>：使用Remix和Vary Region微调细节</li>
+<li><strong>高清输出</strong>：Upscale放大，必要时用Zoom Out扩展</li>
+<li><strong>后期处理</strong>：Photoshop微调、修瑕疵、调色</li>
+</ol>
+
+<h2 id="summary">七、总结</h2>
+<p>Midjourney是一个强大的AI图像生成工具，掌握它需要理解提示词结构、参数用法，并通过大量练习培养审美。希望本教程能帮助你：</p>
+<ul>
+<li>✅ 理解Midjourney的工作原理和基本操作</li>
+<li>✅ 掌握提示词结构和常用关键词</li>
+<li>✅ 熟练使用各种参数控制生成效果</li>
+<li>✅ 学会图生图、局部重绘等高级技巧</li>
+<li>✅ 套用实用模板快速出图</li>
+<li>✅ 避开常见坑，提升出图效率</li>
+</ul>
+
+<p>AI绘画技术发展日新月异，保持学习和实践是提升的关键。祝你创作出令人惊叹的作品！</p>
+
+<div class="related-section">
+<h3>🎨 延伸阅读</h3>
+<div class="related-grid">
+<a href="/pages/tools/midjourney.html" class="related-card">
+<h4>Midjourney工具详解</h4>
+<p>功能介绍、价格方案、优缺点分析</p>
+</a>
+<a href="/compare/" class="related-card">
+<h4>AI图像工具对比</h4>
+<p>Midjourney vs DALL-E vs Stable Diffusion</p>
+</a>
+<a href="/tutorials/" class="related-card">
+<h4>更多AI教程</h4>
+<p>ChatGPT、Claude、Copilot等工具教程</p>
+</a>
+<a href="/discover/" class="related-card">
+<h4>AI新品发现</h4>
+<p>最新AI工具和设计趋势</p>
+</a>
+</div>
+</div>
+
+</main>
+
+<aside>
+<div class="toc">
+<h3>📋 目录</h3>
+<ul>
+<li><a href="#intro">一、基础入门</a></li>
+<li><a href="#what-is-midjourney">1.1 什么是Midjourney</a></li>
+<li><a href="#quick-start">1.2 快速开始</a></li>
+<li><a href="#first-image">1.3 第一张图</a></li>
+<li><a href="#prompt-structure">二、提示词结构</a></li>
+<li><a href="#basic-structure">2.1 基础结构公式</a></li>
+<li><a href="#style-keywords">2.2 常用风格关键词</a></li>
+<li><a href="#artist-styles">2.3 艺术家风格</a></li>
+<li><a href="#parameters">三、参数详解</a></li>
+<li><a href="#aspect-ratio">3.1 宽高比</a></li>
+<li><a href="#quality">3.2 质量参数</a></li>
+<li><a href="#stylize">3.3 风格化程度</a></li>
+<li><a href="#other-params">3.4 其他参数</a></li>
+<li><a href="#advanced-tips">四、高级技巧</a></li>
+<li><a href="#image-prompt">4.1 图生图</a></li>
+<li><a href="#remix">4.2 Remix模式</a></li>
+<li><a href="#inpainting">4.3 局部重绘</a></li>
+<li><a href="#zoom-out">4.4 缩放扩展</a></li>
+<li><a href="#templates">五、Prompt模板</a></li>
+<li><a href="#best-practices">六、最佳实践</a></li>
+<li><a href="#summary">七、总结</a></li>
+</ul>
+</div>
+</aside>
+</div>
+</div>
+
+<footer>
+<div class="container">
+<p>© 2026 AI.link.cn | <a href="/">返回首页</a> | <a href="/tutorials/">教程中心</a> | <a href="/pages/tools">工具库</a></p>
+</div>
+</footer>
+
+<script>
+const progressBar = document.getElementById('progressBar');
+window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+    progressBar.style.width = scrollPercent + '%';
+});
+</script>
+</body>
+</html>
