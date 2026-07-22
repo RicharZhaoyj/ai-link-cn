@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI News · AI热点资讯 | 每日人工智能前沿动态</title>
-    <meta name="description" content="AI.link.cn 提供每日AI热点资讯、热门工具评测、详细教程指南，覆盖大模型发布、开源动态、商业观察、技术前沿等领域。一站式掌握人工智能最新进展。">
-    <meta name="keywords" content="AI新闻, 人工智能资讯, AI热点, 大模型新闻, GPT, Claude, AI行业动态, AI技术前沿, AI工具, AI教程">
+    <meta name="description" content="AI.link.cn 提供每日AI热点资讯，覆盖大模型发布、开源动态、商业观察、技术前沿等领域。一站式掌握人工智能最新进展。">
+    <meta name="keywords" content="AI新闻, 人工智能资讯, AI热点, 大模型新闻, GPT, Claude, AI行业动态, AI技术前沿">
     <link rel="canonical" href="https://ai.link.cn">
     <meta property="og:title" content="AI News · AI热点资讯">
-    <meta property="og:description" content="每日AI热点资讯，覆盖大模型、开源、商业、技术等领域，包含工具评测和教程指南">
+    <meta property="og:description" content="每日AI热点资讯，覆盖大模型、开源、商业、技术等领域">
     <meta property="og:url" content="https://ai.link.cn">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="zh_CN">
@@ -26,9 +26,6 @@
             --text-muted: #94a3b8;
             --accent: #a855f7;
             --accent-light: #c084fc;
-            --success: #22c55e;
-            --warning: #f59e0b;
-            --danger: #ef4444;
         }
         
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -44,9 +41,9 @@
         
         /* Header */
         header {
-            padding: 16px 0;
+            padding: 20px 0;
             border-bottom: 1px solid rgba(168, 85, 247, 0.2);
-            background: rgba(10, 15, 26, 0.98);
+            background: rgba(10, 15, 26, 0.95);
             backdrop-filter: blur(12px);
             position: sticky;
             top: 0;
@@ -57,7 +54,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 20px;
         }
         
         .logo {
@@ -65,14 +61,12 @@
             font-weight: 700;
             color: var(--accent);
             letter-spacing: -0.02em;
-            white-space: nowrap;
         }
         
         .nav-links {
             display: flex;
-            gap: 20px;
+            gap: 24px;
             list-style: none;
-            flex-wrap: wrap;
         }
         
         .nav-links a {
@@ -84,48 +78,6 @@
         }
         
         .nav-links a:hover { color: var(--accent); }
-        
-        .search-box {
-            position: relative;
-            flex: 1;
-            max-width: 300px;
-            display: none;
-        }
-        
-        .search-input {
-            width: 100%;
-            padding: 8px 12px 8px 32px;
-            background: var(--surface-2);
-            border: 1px solid rgba(168, 85, 247, 0.2);
-            border-radius: 8px;
-            color: var(--text);
-            font-size: 0.9rem;
-            outline: none;
-            transition: border-color 0.2s;
-        }
-        
-        .search-input:focus { border-color: var(--accent); }
-        
-        .search-icon {
-            position: absolute;
-            left: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--text-muted);
-            font-size: 0.85rem;
-        }
-        
-        .search-toggle {
-            background: var(--surface-2);
-            border: 1px solid rgba(168, 85, 247, 0.2);
-            border-radius: 8px;
-            padding: 8px 12px;
-            color: var(--text-muted);
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        
-        .search-toggle:hover { border-color: var(--accent); color: var(--accent); }
         
         .sister-nav {
             display: flex;
@@ -151,153 +103,37 @@
         .sister-dot.prompts { background: #22c55e; }
         .sister-dot.signal { background: #f97316; }
         
-        /* Search Results Overlay */
-        .search-overlay {
-            display: none;
-            position: fixed;
-            top: 60px;
-            left: 0;
-            right: 0;
-            background: rgba(10, 15, 26, 0.98);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(168, 85, 247, 0.2);
-            z-index: 99;
-            padding: 20px 0;
-        }
-        
-        .search-overlay.active { display: block; }
-        
-        .search-results {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-        
-        .search-results-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 16px;
-        }
-        
-        .search-results-title {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-        }
-        
-        .search-close {
-            background: none;
-            border: none;
-            color: var(--text-muted);
-            font-size: 1.2rem;
-            cursor: pointer;
-        }
-        
-        .search-result-item {
-            padding: 12px 16px;
-            background: var(--surface);
-            border-radius: 8px;
-            margin-bottom: 8px;
-            text-decoration: none;
-            color: inherit;
-            display: block;
-            transition: background 0.2s;
-        }
-        
-        .search-result-item:hover { background: var(--surface-2); }
-        
-        .search-result-title { font-weight: 600; margin-bottom: 4px; }
-        
-        .search-result-category {
-            font-size: 0.8rem;
-            color: var(--accent);
-            margin-right: 8px;
-        }
-        
-        .search-result-desc {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-        
         /* Hero */
         .hero {
-            padding: 60px 0 40px;
+            padding: 80px 0 60px;
             text-align: center;
             background: linear-gradient(180deg, rgba(168, 85, 247, 0.08) 0%, transparent 100%);
         }
         
         .hero h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             font-weight: 700;
             letter-spacing: -0.03em;
             margin-bottom: 16px;
             color: var(--text);
         }
         
-        .hero h1 span { color: var(--accent); }
+        .hero h1 span {
+            color: var(--accent);
+        }
         
         .hero p {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             color: var(--text-muted);
             max-width: 500px;
-            margin: 0 auto 24px;
+            margin: 0 auto 32px;
         }
-        
-        .hero-search {
-            max-width: 500px;
-            margin: 0 auto;
-            position: relative;
-        }
-        
-        .hero-search input {
-            width: 100%;
-            padding: 14px 18px 14px 48px;
-            background: var(--surface);
-            border: 1px solid rgba(168, 85, 247, 0.3);
-            border-radius: 12px;
-            color: var(--text);
-            font-size: 1rem;
-            outline: none;
-            transition: border-color 0.2s, box-shadow 0.2s;
-        }
-        
-        .hero-search input:focus {
-            border-color: var(--accent);
-            box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.15);
-        }
-        
-        .hero-search-icon {
-            position: absolute;
-            left: 18px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--text-muted);
-            font-size: 1rem;
-        }
-        
-        .hero-search-btn {
-            position: absolute;
-            right: 4px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: var(--accent);
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-        
-        .hero-search-btn:hover { background: var(--accent-light); }
         
         .hero-stats {
             display: flex;
             justify-content: center;
             gap: 40px;
-            margin-top: 32px;
-            flex-wrap: wrap;
+            margin-top: 24px;
         }
         
         .hero-stat {
@@ -305,7 +141,7 @@
         }
         
         .hero-stat-num {
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: 700;
             color: var(--accent);
         }
@@ -315,60 +151,22 @@
             color: var(--text-muted);
         }
         
-        /* Category Tabs */
-        .category-tabs {
-            display: flex;
-            justify-content: center;
-            gap: 8px;
-            margin-bottom: 32px;
-            flex-wrap: wrap;
-        }
-        
-        .category-tab {
-            background: var(--surface);
-            border: 1px solid rgba(168, 85, 247, 0.2);
-            border-radius: 20px;
-            padding: 8px 20px;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            cursor: pointer;
-            transition: all 0.2s;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        
-        .category-tab:hover { border-color: var(--accent); color: var(--text); }
-        
-        .category-tab.active {
-            background: var(--accent);
-            border-color: var(--accent);
-            color: white;
-        }
-        
         /* Sister Cards */
         .sister-section {
-            padding: 40px 0;
+            padding: 60px 0;
         }
         
         .section-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
         
         .section-title {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             font-weight: 600;
             color: var(--text);
-        }
-        
-        .section-link {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9rem;
         }
         
         .sister-cards-grid {
@@ -423,13 +221,13 @@
         
         /* Featured Tools */
         .tools-section {
-            padding: 40px 0;
+            padding: 60px 0;
             background: var(--surface);
         }
         
         .tools-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 20px;
         }
         
@@ -441,8 +239,6 @@
             text-decoration: none;
             color: inherit;
             transition: all 0.3s;
-            display: flex;
-            flex-direction: column;
         }
         
         .tool-card:hover {
@@ -458,7 +254,7 @@
         }
         
         .tool-name {
-            font-size: 1.15rem;
+            font-size: 1.2rem;
             font-weight: 600;
         }
         
@@ -471,20 +267,15 @@
             font-weight: 600;
         }
         
-        .tool-score.low { background: rgba(239, 68, 68, 0.2); color: #f87171; }
-        .tool-score.medium { background: rgba(245, 158, 11, 0.2); color: #fbbf24; }
-        
         .tool-desc {
             color: var(--text-muted);
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             margin-bottom: 16px;
-            flex: 1;
         }
         
         .tool-tags {
             display: flex;
             gap: 8px;
-            flex-wrap: wrap;
         }
         
         .tool-tag {
@@ -495,30 +286,20 @@
             font-size: 0.75rem;
         }
         
-        .tool-meta {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 12px;
-            padding-top: 12px;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            font-size: 0.8rem;
-            color: var(--text-muted);
-        }
-        
         /* News Section */
         .news-section {
-            padding: 40px 0;
+            padding: 60px 0;
         }
         
         .article-list {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            display: flex;
+            flex-direction: column;
             gap: 20px;
         }
         
         .article-item {
             display: flex;
-            flex-direction: column;
+            gap: 24px;
             padding: 20px;
             background: var(--surface);
             border-radius: 12px;
@@ -536,308 +317,28 @@
         .article-content { flex: 1; }
         
         .article-meta {
-            display: flex;
-            gap: 12px;
             font-size: 0.85rem;
-            margin-bottom: 10px;
-        }
-        
-        .article-date { color: var(--text-muted); }
-        
-        .article-category {
-            background: rgba(168, 85, 247, 0.15);
             color: var(--accent);
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 0.75rem;
-        }
-        
-        .article-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            line-height: 1.5;
-            margin-bottom: 10px;
-            transition: color 0.2s;
-            flex: 1;
-        }
-        
-        .article-item:hover .article-title { color: var(--accent-light); }
-        
-        .article-summary {
-            color: var(--text-muted);
-            font-size: 0.88rem;
-            line-height: 1.6;
-            margin-bottom: 12px;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-        
-        .article-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.8rem;
-            color: var(--text-muted);
-        }
-        
-        /* Tutorials Section */
-        .tutorials-section {
-            padding: 40px 0;
-            background: var(--surface);
-        }
-        
-        .tutorials-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-        
-        .tutorial-card {
-            background: var(--surface-2);
-            border: 1px solid rgba(168, 85, 247, 0.1);
-            border-radius: 16px;
-            overflow: hidden;
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.3s;
-        }
-        
-        .tutorial-card:hover { border-color: var(--accent); transform: translateY(-2px); }
-        
-        .tutorial-image {
-            height: 120px;
-            background: linear-gradient(135deg, rgba(168, 85, 247, 0.3), rgba(59, 130, 246, 0.2));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
-        }
-        
-        .tutorial-content {
-            padding: 16px;
-        }
-        
-        .tutorial-title {
-            font-size: 1rem;
-            font-weight: 600;
-            margin-bottom: 6px;
-        }
-        
-        .tutorial-desc {
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            margin-bottom: 12px;
-        }
-        
-        .tutorial-meta {
-            display: flex;
-            gap: 16px;
-            font-size: 0.8rem;
-            color: var(--text-muted);
-        }
-        
-        .tutorial-duration { display: flex; align-items: center; gap: 4px; }
-        .tutorial-level { display: flex; align-items: center; gap: 4px; }
-        
-        /* Compare Section */
-        .compare-section {
-            padding: 40px 0;
-            background: var(--surface);
-        }
-        
-        .compare-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-        
-        .compare-card {
-            background: var(--surface-2);
-            border: 1px solid rgba(168, 85, 247, 0.1);
-            border-radius: 16px;
-            padding: 24px;
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.3s;
-        }
-        
-        .compare-card:hover { border-color: var(--accent); transform: translateY(-2px); }
-        
-        .compare-icon {
-            font-size: 2rem;
-            margin-bottom: 12px;
-        }
-        
-        .compare-title {
-            font-size: 1.05rem;
-            font-weight: 600;
             margin-bottom: 8px;
         }
         
-        .compare-desc {
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            margin-bottom: 16px;
+        .article-title {
+            font-size: 1.15rem;
+            font-weight: 600;
             line-height: 1.5;
+            margin-bottom: 8px;
+            transition: color 0.2s;
         }
         
-        .compare-meta {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-        
-        .compare-tag {
-            padding: 4px 10px;
-            background: rgba(168, 85, 247, 0.1);
+        .article-item:hover .article-title {
             color: var(--accent-light);
-            border-radius: 12px;
-            font-size: 0.75rem;
         }
         
-        /* Topics Section */
-        .topics-section {
-            padding: 40px 0;
-        }
-        
-        .topics-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-        
-        .topic-card {
-            background: var(--surface);
-            border: 1px solid rgba(168, 85, 247, 0.1);
-            border-radius: 16px;
-            padding: 32px;
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .topic-card:hover { border-color: var(--accent); transform: translateY(-2px); }
-        
-        .topic-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--accent), #3b82f6);
-        }
-        
-        .topic-icon {
-            font-size: 2.5rem;
-            margin-bottom: 16px;
-        }
-        
-        .topic-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-        
-        .topic-desc {
+        .article-summary {
             color: var(--text-muted);
             font-size: 0.9rem;
-            margin-bottom: 20px;
-            line-height: 1.6;
+            line-height: 1.5;
         }
-        
-        .topic-stats {
-            display: flex;
-            gap: 24px;
-            padding-top: 16px;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        
-        .topic-stat {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
-        
-        .topic-stat-value {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--accent-light);
-        }
-        
-        .topic-stat-label {
-            font-size: 0.75rem;
-            color: var(--text-muted);
-        }
-        
-        /* Popular Section */
-        .popular-section {
-            padding: 40px 0;
-        }
-        
-        .popular-list {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-        
-        .popular-item {
-            display: flex;
-            align-items: center;
-            padding: 16px;
-            background: var(--surface);
-            border-radius: 10px;
-            border: 1px solid rgba(168, 85, 247, 0.1);
-            transition: all 0.2s;
-            text-decoration: none;
-            color: inherit;
-        }
-        
-        .popular-item:hover { border-color: var(--accent); background: rgba(168, 85, 247, 0.05); }
-        
-        .popular-rank {
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            background: var(--surface-2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.85rem;
-            font-weight: 700;
-            color: var(--accent);
-            margin-right: 16px;
-        }
-        
-        .popular-rank.top {
-            background: var(--accent);
-            color: white;
-        }
-        
-        .popular-content { flex: 1; }
-        
-        .popular-title {
-            font-weight: 600;
-            font-size: 0.95rem;
-            margin-bottom: 2px;
-        }
-        
-        .popular-meta {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-        }
-        
-        .popular-trend {
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-        
-        .popular-trend.up { color: var(--success); }
-        .popular-trend.down { color: var(--danger); }
         
         /* Footer */
         footer {
@@ -846,43 +347,11 @@
             margin-top: 40px;
         }
         
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 32px;
-            margin-bottom: 32px;
-        }
-        
-        .footer-section h3 {
-            font-size: 1rem;
-            font-weight: 600;
-            margin-bottom: 16px;
-            color: var(--text);
-        }
-        
-        .footer-section ul {
-            list-style: none;
-        }
-        
-        .footer-section li {
-            margin-bottom: 8px;
-        }
-        
-        .footer-section a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.2s;
-        }
-        
-        .footer-section a:hover { color: var(--accent); }
-        
         .footer-sites {
             display: flex;
             justify-content: center;
             gap: 24px;
             margin-bottom: 16px;
-            flex-wrap: wrap;
         }
         
         .footer-site-link {
@@ -909,29 +378,16 @@
             font-size: 0.85rem;
         }
         
-        @media (max-width: 900px) {
-            .tools-grid { grid-template-columns: repeat(2, 1fr); }
-            .tutorials-grid { grid-template-columns: repeat(2, 1fr); }
-            .compare-grid { grid-template-columns: repeat(2, 1fr); }
-            .topics-grid { grid-template-columns: 1fr; }
-            .article-list { grid-template-columns: 1fr; }
-            .footer-content { grid-template-columns: repeat(2, 1fr); }
-        }
-        
         @media (max-width: 768px) {
             .nav-links { display: none; }
-            .search-box { display: none; }
-            .hero h1 { font-size: 1.8rem; }
+            .hero h1 { font-size: 2rem; }
             .hero-stats { gap: 20px; }
             .sister-cards-grid { grid-template-columns: repeat(2, 1fr); }
             .tools-grid { grid-template-columns: 1fr; }
-            .tutorials-grid { grid-template-columns: 1fr; }
-            .compare-grid { grid-template-columns: 1fr; }
-            .topics-grid { grid-template-columns: 1fr; }
-            .hero-stat-num { font-size: 1.4rem; }
-            .footer-content { grid-template-columns: 1fr; }
+            .hero-stat-num { font-size: 1.5rem; }
         }
     </style>
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2F2V94W35E"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -939,13 +395,14 @@
         gtag('js', new Date());
         gtag('config', 'G-2F2V94W35E');
     </script>
+    <!-- JSON-LD: WebSite + SearchAction -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "AI News · AI热点资讯",
         "url": "https://ai.link.cn",
-        "description": "AI.link.cn 提供每日AI热点资讯、热门工具评测、详细教程指南，覆盖大模型发布、开源动态、商业观察、技术前沿等领域。",
+        "description": "AI.link.cn 提供每日AI热点资讯，覆盖大模型发布、开源动态、商业观察、技术前沿等领域。",
         "publisher": {
             "@type": "Organization",
             "name": "AI News",
@@ -958,8 +415,24 @@
         }
     }
     </script>
+    <!-- JSON-LD: Blog -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "AI News",
+        "url": "https://ai.link.cn",
+        "description": "每日AI热点资讯，覆盖大模型、开源、商业、技术等领域",
+        "publisher": {
+            "@type": "Organization",
+            "name": "AI News",
+            "url": "https://ai.link.cn"
+        }
+    }
+    </script>
 </head>
 <body>
+    <!-- Header -->
     <header>
         <div class="container">
             <nav class="nav">
@@ -967,16 +440,8 @@
                 <ul class="nav-links">
                     <li><a href="#news">热点资讯</a></li>
                     <li><a href="#tools">热门工具</a></li>
-                    <li><a href="#tutorials">精选教程</a></li>
-                    <li><a href="#popular">热门搜索</a></li>
-                    <li><a href="/tutorials/">教程中心</a></li>
-                    <li><a href="/deals/">折扣优惠</a></li>
+                    <li><a href="https://tools.link.cn" target="_blank">工具导航</a></li>
                 </ul>
-                <div class="search-box">
-                    <span class="search-icon">🔍</span>
-                    <input type="text" class="search-input" placeholder="搜索工具、教程...">
-                </div>
-                <button class="search-toggle" id="searchToggle">🔍</button>
                 <div class="sister-nav">
                     <a href="https://tools.link.cn" class="sister-dot tools" title="AI工具推荐" target="_blank"></a>
                     <a href="https://tool.link.cn" class="sister-dot tool" title="AI工具LTD" target="_blank"></a>
@@ -987,37 +452,19 @@
         </div>
     </header>
 
-    <div class="search-overlay" id="searchOverlay">
-        <div class="search-results">
-            <div class="search-results-header">
-                <span class="search-results-title">搜索结果</span>
-                <button class="search-close" id="searchClose">✕</button>
-            </div>
-            <div id="searchResultsContainer"></div>
-        </div>
-    </div>
-
+    <!-- Hero -->
     <div class="hero">
         <div class="container">
             <h1>每日<span>AI热点</span>资讯</h1>
             <p>一站式掌握人工智能最新进展，覆盖大模型、开源动态、商业观察、技术前沿</p>
-            <div class="hero-search">
-                <span class="hero-search-icon">🔍</span>
-                <input type="text" id="heroSearch" placeholder="搜索AI工具、教程、新闻...">
-                <button class="hero-search-btn" id="heroSearchBtn">搜索</button>
-            </div>
             <div class="hero-stats">
                 <div class="hero-stat">
-                    <div class="hero-stat-num">15+</div>
+                    <div class="hero-stat-num">8+</div>
                     <div class="hero-stat-label">每日更新</div>
                 </div>
                 <div class="hero-stat">
-                    <div class="hero-stat-num">100+</div>
-                    <div class="hero-stat-label">AI工具</div>
-                </div>
-                <div class="hero-stat">
-                    <div class="hero-stat-num">50+</div>
-                    <div class="hero-stat-label">精选教程</div>
+                    <div class="hero-stat-num">6</div>
+                    <div class="hero-stat-label">RSS信源</div>
                 </div>
                 <div class="hero-stat">
                     <div class="hero-stat-num">24h</div>
@@ -1027,6 +474,7 @@
         </div>
     </div>
 
+    <!-- Sister Sites -->
     <div class="sister-section">
         <div class="container">
             <div class="section-header">
@@ -1036,496 +484,136 @@
                 <a href="https://tools.link.cn" class="sister-card" target="_blank">
                     <div class="sister-card-icon tools">🛠</div>
                     <div class="sister-card-name">AI工具推荐</div>
-                    <div class="sister-card-desc">精选全球优秀AI工具，详细评测与对比</div>
+                    <div class="sister-card-desc">精选全球优秀AI工具</div>
                 </a>
                 <a href="https://tool.link.cn" class="sister-card" target="_blank">
                     <div class="sister-card-icon tool">⚡</div>
                     <div class="sister-card-name">AI工具LTD</div>
-                    <div class="sister-card-desc">终身买断授权方案，限时优惠抢购</div>
+                    <div class="sister-card-desc">终身买断授权方案</div>
                 </a>
                 <a href="https://prompts.link.cn" class="sister-card" target="_blank">
                     <div class="sister-card-icon prompts">💬</div>
                     <div class="sister-card-name">AI提示词库</div>
-                    <div class="sister-card-desc">免费高质量Prompt，提升AI使用效率</div>
+                    <div class="sister-card-desc">免费高质量Prompt</div>
                 </a>
                 <a href="https://signal.link.cn" class="sister-card" target="_blank">
                     <div class="sister-card-icon signal">₿</div>
                     <div class="sister-card-name">加密货币行情</div>
-                    <div class="sister-card-desc">智能分析与信号，把握市场机会</div>
+                    <div class="sister-card-desc">智能分析与信号</div>
                 </a>
             </div>
         </div>
     </div>
 
+    <!-- Featured Tools -->
     <div class="tools-section" id="tools">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">🔥 热门AI工具</h2>
-                <a href="/compare/" class="section-link">对比更多工具 →</a>
+                <a href="https://tools.link.cn" style="color:var(--accent);text-decoration:none;font-weight:500;">查看全部 →</a>
             </div>
             <div class="tools-grid">
-                <a href="/pages/tools/chatgpt.html" class="tool-card">
+                <a href="https://tools.link.cn/tool/flux" class="tool-card" target="_blank">
                     <div class="tool-header">
-                        <div class="tool-name">ChatGPT</div>
-                        <div class="tool-score">9.6</div>
-                    </div>
-                    <div class="tool-desc">OpenAI旗舰对话模型，支持代码编写、内容创作、数据分析等多种场景，是目前最流行的AI助手。</div>
-                    <div class="tool-tags">
-                        <span class="tool-tag">大模型</span>
-                        <span class="tool-tag">对话</span>
-                        <span class="tool-tag">代码</span>
-                    </div>
-                    <div class="tool-meta">
-                        <span>💰 免费/付费</span>
-                        <span>📚 教程</span>
-                    </div>
-                </a>
-                <a href="/pages/tools/midjourney.html" class="tool-card">
-                    <div class="tool-header">
-                        <div class="tool-name">Midjourney</div>
+                        <div class="tool-name">Flux</div>
                         <div class="tool-score">9.4</div>
                     </div>
-                    <div class="tool-desc">顶级AI图像生成工具，以其卓越的画质和丰富的风格控制而闻名，是设计师和艺术家的首选。</div>
+                    <div class="tool-desc">开源AI图像生成模型，超越Midjourney的画质与速度</div>
                     <div class="tool-tags">
                         <span class="tool-tag">图像生成</span>
-                        <span class="tool-tag">设计</span>
-                        <span class="tool-tag">创意</span>
-                    </div>
-                    <div class="tool-meta">
-                        <span>💰 付费</span>
-                        <span>📚 教程</span>
+                        <span class="tool-tag">开源</span>
                     </div>
                 </a>
-                <a href="/pages/tools/grammarly.html" class="tool-card">
+                <a href="https://tools.link.cn/tool/claude-3-5" class="tool-card" target="_blank">
                     <div class="tool-header">
-                        <div class="tool-name">Grammarly</div>
-                        <div class="tool-score">9.2</div>
+                        <div class="tool-name">Claude 3.5 Sonnet</div>
+                        <div class="tool-score">9.6</div>
                     </div>
-                    <div class="tool-desc">AI驱动的写作助手，支持语法检查、风格建议、翻译等功能，提升你的写作质量和效率。</div>
+                    <div class="tool-desc">Anthropic最强对话模型，编程与推理能力领先</div>
                     <div class="tool-tags">
-                        <span class="tool-tag">写作</span>
-                        <span class="tool-tag">语法</span>
-                        <span class="tool-tag">效率</span>
-                    </div>
-                    <div class="tool-meta">
-                        <span>💰 免费/付费</span>
-                        <span>📚 教程</span>
-                    </div>
-                </a>
-                <a href="/pages/tools/github_copilot.html" class="tool-card">
-                    <div class="tool-header">
-                        <div class="tool-name">GitHub Copilot</div>
-                        <div class="tool-score">9.3</div>
-                    </div>
-                    <div class="tool-desc">AI编程助手，集成于VS Code等IDE，提供代码补全、函数建议、文档生成等功能，大幅提升开发效率。</div>
-                    <div class="tool-tags">
+                        <span class="tool-tag">大模型</span>
                         <span class="tool-tag">编程</span>
-                        <span class="tool-tag">代码补全</span>
-                        <span class="tool-tag">IDE</span>
-                    </div>
-                    <div class="tool-meta">
-                        <span>💰 付费</span>
-                        <span>📚 教程</span>
-                    </div>
-                </a>
-                <a href="/pages/tools/jasper.html" class="tool-card">
-                    <div class="tool-header">
-                        <div class="tool-name">Jasper</div>
-                        <div class="tool-score">9.1</div>
-                    </div>
-                    <div class="tool-desc">专业AI写作平台，专为内容创作者和营销人员设计，支持博客、社交媒体、广告文案等多种内容生成。</div>
-                    <div class="tool-tags">
-                        <span class="tool-tag">写作</span>
-                        <span class="tool-tag">营销</span>
-                        <span class="tool-tag">内容</span>
-                    </div>
-                    <div class="tool-meta">
-                        <span>💰 付费</span>
-                        <span>📚 教程</span>
-                    </div>
-                </a>
-                <a href="/pages/tools/canva.html" class="tool-card">
-                    <div class="tool-header">
-                        <div class="tool-name">Canva</div>
-                        <div class="tool-score">9.0</div>
-                    </div>
-                    <div class="tool-desc">在线设计平台，集成AI功能支持智能设计建议、图像生成、文字转图片等，适合非专业设计师使用。</div>
-                    <div class="tool-tags">
-                        <span class="tool-tag">设计</span>
-                        <span class="tool-tag">图像</span>
-                        <span class="tool-tag">在线</span>
-                    </div>
-                    <div class="tool-meta">
-                        <span>💰 免费/付费</span>
-                        <span>📚 教程</span>
                     </div>
                 </a>
             </div>
         </div>
     </div>
 
+    <!-- News Section -->
     <div class="news-section" id="news">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">📰 最新资讯</h2>
             </div>
-            <div class="category-tabs">
-                <button class="category-tab active" data-category="all">🔥 全部</button>
-                <button class="category-tab" data-category="tech">⚡ 技术前沿</button>
-                <button class="category-tab" data-category="business">💼 商业观察</button>
-                <button class="category-tab" data-category="tools">🛠️ 工具发现</button>
-                <button class="category-tab" data-category="open">📦 开源动态</button>
-            </div>
-            <div class="article-list" id="articleList">
-                <a href="https://36kr.com/p/3899174356387718?f=rss" class="article-item" data-category="business" target="_blank">
+            <div class="article-list">
+                <!-- NEWS_PLACEHOLDER_START -->
+                <a href="https://36kr.com/p/3906043683296648?f=rss" class="article-item" target="_blank">
                     <div class="article-content">
-                        <div class="article-meta">
-                            <span class="article-date">2026.07.21</span>
-                            <span class="article-category">商业观察</span>
-                        </div>
-                        <div class="article-title">「月泉仿生」获数亿元融资，仿生拉压体灵巧手万台量产、订单过亿</div>
-                        <div class="article-summary">36氪独家获悉，月泉仿生已完成数亿元Pre-A+轮融资，本轮融资由长发基金、华控基金等联合投资。据介绍，月泉仿生的核心产品——拉压体灵巧手已实现万台级量产，在手订单过亿。</div>
-                    </div>
-                    <div class="article-footer">
-                        <span>36氪</span>
-                        <span>阅读全文 →</span>
+                        <div class="article-meta">2026.07.22 · 商业观察</div>
+                        <div class="article-title">8点1氪丨怡颗莓回应“检出致癌物”；美团否认上线“本科专送”“硕士优送”等配送服务；美方喊话三星电子、SK海力士分享超额利润</div>
+                        <div class="article-summary">今日热点导览 字节XR业务PICO创始人周宏伟将卸任，李晓凯成为新任业务负责人 ZARA客服回应“阔腿裤存安全隐患”：专员正在核实处理 SpaceX将于8月4日发布上市后首份财报 恋与深空多平台账号停更 美国发布全球安全警示 TOP3大新闻...</div>
                     </div>
                 </a>
-                <a href="https://36kr.com/p/3904632333862535?f=rss" class="article-item" data-category="tools" target="_blank">
+                <a href="https://36kr.com/p/3905234473158279?f=rss" class="article-item" target="_blank">
                     <div class="article-content">
-                        <div class="article-meta">
-                            <span class="article-date">2026.07.21</span>
-                            <span class="article-category">工具发现</span>
-                        </div>
-                        <div class="article-title">8点1氪｜美国将对加拿大部分产品加征50%关税；任泽平回应会员炒股亏损千万</div>
-                        <div class="article-summary">今日热点：光电融合芯片有望让Token成本降50%；泡泡玛特创始人王宁与投资人段永平纽约会面；阿根廷队背对领奖台无视对手领奖，拒绝接受采访。</div>
-                    </div>
-                    <div class="article-footer">
-                        <span>36氪</span>
-                        <span>阅读全文 →</span>
+                        <div class="article-meta">2026.07.22 · 商业观察</div>
+                        <div class="article-title">茅台涨了100元，白酒还欠3000亿</div>
+                        <div class="article-summary">作者 | 谢芸子 编辑 | 张帆 茅台涨价也没能“扶起”白酒的颓势。 7月21日发稿前，贵州茅台股价回落1.47%至每股1308元；万得白酒指数也同步下跌1.47%至2926.9。 就在一个交易日前，受飞天茅台提价影响，整个白酒板块“高开高...</div>
                     </div>
                 </a>
-                <a href="https://36kr.com/p/3903710346790535?f=rss" class="article-item" data-category="business" target="_blank">
+                <a href="https://36kr.com/p/3905176863721349?f=rss" class="article-item" target="_blank">
                     <div class="article-content">
-                        <div class="article-meta">
-                            <span class="article-date">2026.07.21</span>
-                            <span class="article-category">商业观察</span>
-                        </div>
-                        <div class="article-title">氪星晚报｜SpaceX将"星舰"第13次试飞推迟至7月23日；马斯克称特斯拉FSD会模仿驾驶风格</div>
-                        <div class="article-summary">大公司动态：摩根士丹利成为华尔街AI债务交易头号银行，设计了新的债务和股权融资模式，为数据中心的大规模建设输送数百亿美元资金。</div>
-                    </div>
-                    <div class="article-footer">
-                        <span>36氪</span>
-                        <span>阅读全文 →</span>
+                        <div class="article-meta">2026.07.22 · 商业观察</div>
+                        <div class="article-title">独家 | PICO创始人周宏伟将卸任，李晓凯成为新任业务负责人</div>
+                        <div class="article-summary">文 | 李炤锋 编辑 | 张雨忻 智能涌现独家获悉，字节旗下XR（扩展现实）业务PICO近日完成业务负责人调整：由于个人规划原因，创始人周宏伟不再担任 PICO 负责人，李晓凯接任负责人，全面负责PICO业务。 据了解，此次管理交接不会影响...</div>
                     </div>
                 </a>
-                <a href="https://36kr.com/p/3903687507904387?f=rss" class="article-item" data-category="tech" target="_blank">
+                <a href="https://36kr.com/p/3905169127114368?f=rss" class="article-item" target="_blank">
                     <div class="article-content">
-                        <div class="article-meta">
-                            <span class="article-date">2026.07.21</span>
-                            <span class="article-category">技术前沿</span>
-                        </div>
-                        <div class="article-title">WAIC上，AI开始接管人类的欲望</div>
-                        <div class="article-summary">在2026年世界人工智能大会上，大模型、算力与机器人占据核心展区。但在创新展区里，AI正在向下接管人类最私密的需求，24.8万的仿生人形机器人引发热议。</div>
-                    </div>
-                    <div class="article-footer">
-                        <span>36氪</span>
-                        <span>阅读全文 →</span>
+                        <div class="article-meta">2026.07.22 · 商业观察</div>
+                        <div class="article-title">圆桌论坛：夏天周而复始·VC3.0| 36氪WAVES2026新浪潮</div>
+                        <div class="article-summary">“2026年，创投圈的浪潮再次翻涌：AI从技术概念走进产业深水区，硬科技创业从“小众赛道” 变成“主流共识”，年轻的创业者们正在用代码和双手，重新定义中国创新的未来坐标。 每一年，由36氪 · 暗涌主办的WAVES大会，都是中国创投圈的年度...</div>
                     </div>
                 </a>
-                <a href="/articles/waic-2026-highlights.html" class="article-item" data-category="tech">
+                <a href="https://www.qbitai.com/2026/07/456052.html" class="article-item" target="_blank">
                     <div class="article-content">
-                        <div class="article-meta">
-                            <span class="article-date">2026.07.21</span>
-                            <span class="article-category">技术前沿</span>
-                        </div>
-                        <div class="article-title">WAIC 2026收官｜范式大会亮点集锦，见证AI 2.0从技术突破走向产业实践</div>
-                        <div class="article-summary">2026年世界人工智能大会圆满收官，本文深入分析大会亮点、技术突破和产业实践，带你全面了解AI 2.0时代的发展趋势。</div>
-                    </div>
-                    <div class="article-footer">
-                        <span>AI News</span>
-                        <span>阅读全文 →</span>
+                        <div class="article-meta">2026.07.21 · 模型发布</div>
+                        <div class="article-title">WAIC重磅成果｜上海仪电智算牵头成立“智算系统架构联盟”并发布《超节点系统架构规范》</div>
+                        <div class="article-summary"></div>
                     </div>
                 </a>
-                <a href="https://www.qbitai.com/2026/07/455805.html" class="article-item" data-category="open" target="_blank">
+                <a href="https://www.qbitai.com/2026/07/456026.html" class="article-item" target="_blank">
                     <div class="article-content">
-                        <div class="article-meta">
-                            <span class="article-date">2026.07.20</span>
-                            <span class="article-category">开源动态</span>
-                        </div>
-                        <div class="article-title">不同模型厂同一家Agentic Infra，AGI时代的地基终于浮出水面</div>
-                        <div class="article-summary">随着AGI时代的到来，不同模型厂商正在逐渐汇聚到同一家Agentic基础设施之上，这标志着AI基础设施的整合与标准化正在加速。</div>
-                    </div>
-                    <div class="article-footer">
-                        <span>量子位</span>
-                        <span>阅读全文 →</span>
+                        <div class="article-meta">2026.07.21 · 技术前沿</div>
+                        <div class="article-title">WAIC重磅成果｜上海市教育算力专区正式开启试运行</div>
+                        <div class="article-summary"></div>
                     </div>
                 </a>
-            </div>
-            <div class="no-results" id="noResults" style="display:none;text-align:center;padding:40px;color:var(--text-muted);">
-                <div style="font-size:2rem;margin-bottom:12px;">🔍</div>
-                <div>该分类暂无文章</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="tutorials-section" id="tutorials">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">📚 精选教程</h2>
-                <a href="/tutorials/" class="section-link">查看全部教程 →</a>
-            </div>
-            <div class="tutorials-grid">
-                <a href="/tutorials/chatgpt-complete-guide.html" class="tutorial-card">
-                    <div class="tutorial-image">🎯</div>
-                    <div class="tutorial-content">
-                        <div class="tutorial-title">ChatGPT完整使用指南</div>
-                        <div class="tutorial-desc">从入门到精通，掌握Prompt工程、插件使用和最佳实践</div>
-                        <div class="tutorial-meta">
-                            <span class="tutorial-duration">⏱️ 45分钟</span>
-                            <span class="tutorial-level">📊 入门-高级</span>
-                        </div>
+                <a href="https://www.qbitai.com/2026/07/456021.html" class="article-item" target="_blank">
+                    <div class="article-content">
+                        <div class="article-meta">2026.07.21 · 模型发布</div>
+                        <div class="article-title">WAIC重磅成果｜智爱赛思全面升级并发布科研专属Token Plan</div>
+                        <div class="article-summary"></div>
                     </div>
                 </a>
-                <a href="/tutorials/midjourney-complete-guide.html" class="tutorial-card">
-                    <div class="tutorial-image">🎨</div>
-                    <div class="tutorial-content">
-                        <div class="tutorial-title">Midjourney完全教程</div>
-                        <div class="tutorial-desc">提示词结构、参数详解、风格控制和实战案例</div>
-                        <div class="tutorial-meta">
-                            <span class="tutorial-duration">⏱️ 40分钟</span>
-                            <span class="tutorial-level">📊 入门-高级</span>
-                        </div>
-                    </div>
-                </a>
-                <a href="/tutorials/claude-complete-guide.html" class="tutorial-card">
-                    <div class="tutorial-image">🧠</div>
-                    <div class="tutorial-content">
-                        <div class="tutorial-title">Claude完整教程</div>
-                        <div class="tutorial-desc">长文档处理、多模态能力、Claude 3.5新功能详解</div>
-                        <div class="tutorial-meta">
-                            <span class="tutorial-duration">⏱️ 35分钟</span>
-                            <span class="tutorial-level">📊 入门-高级</span>
-                        </div>
-                    </div>
-                </a>
-                <a href="/tutorials/github-copilot-guide.html" class="tutorial-card">
-                    <div class="tutorial-image">💻</div>
-                    <div class="tutorial-content">
-                        <div class="tutorial-title">GitHub Copilot指南</div>
-                        <div class="tutorial-desc">代码补全、Copilot Chat、各语言最佳实践</div>
-                        <div class="tutorial-meta">
-                            <span class="tutorial-duration">⏱️ 30分钟</span>
-                            <span class="tutorial-level">📊 初级-中级</span>
-                        </div>
-                    </div>
-                </a>
-                <a href="/tutorials/ai-writing-guide.html" class="tutorial-card">
-                    <div class="tutorial-image">✍️</div>
-                    <div class="tutorial-content">
-                        <div class="tutorial-title">AI写作完全指南</div>
-                        <div class="tutorial-desc">Prompt公式、场景实战、原创度提升、SEO优化</div>
-                        <div class="tutorial-meta">
-                            <span class="tutorial-duration">⏱️ 50分钟</span>
-                            <span class="tutorial-level">📊 入门-高级</span>
-                        </div>
-                    </div>
-                </a>
-                <a href="/tutorials/" class="tutorial-card">
-                    <div class="tutorial-image">📚</div>
-                    <div class="tutorial-content">
-                        <div class="tutorial-title">查看全部教程</div>
-                        <div class="tutorial-desc">更多AI工具教程和实战指南，持续更新中</div>
-                        <div class="tutorial-meta">
-                            <span class="tutorial-duration">📖 10+教程</span>
-                            <span class="tutorial-level">🔄 持续更新</span>
-                        </div>
+                <a href="https://www.qbitai.com/2026/07/455998.html" class="article-item" target="_blank">
+                    <div class="article-content">
+                        <div class="article-meta">2026.07.21 · 技术前沿</div>
+                        <div class="article-title">WAIC重磅成果｜仪电智算云在国家人工智能应用中试基地建设中展现全栈服务能力</div>
+                        <div class="article-summary"></div>
                     </div>
                 </a>
             </div>
         </div>
     </div>
 
-    <div class="compare-section" id="compare">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">⚖️ 工具对比评测</h2>
-                <a href="/compare/" class="section-link">查看全部对比 →</a>
-            </div>
-            <div class="compare-grid">
-                <a href="/compare/chatgpt-vs-claude-vs-gemini.html" class="compare-card">
-                    <div class="compare-icon">💬</div>
-                    <div class="compare-title">AI对话模型对比</div>
-                    <div class="compare-desc">ChatGPT vs Claude vs Gemini 三大模型深度评测，功能、价格、适用场景全解析</div>
-                    <div class="compare-meta">
-                        <span class="compare-tag">ChatGPT</span>
-                        <span class="compare-tag">Claude</span>
-                        <span class="compare-tag">Gemini</span>
-                    </div>
-                </a>
-                <a href="/compare/midjourney-vs-dalle-vs-stablediffusion.html" class="compare-card">
-                    <div class="compare-icon">🎨</div>
-                    <div class="compare-title">AI图像生成对比</div>
-                    <div class="compare-desc">Midjourney vs DALL-E 3 vs Stable Diffusion 画质、控制、价格全面对比</div>
-                    <div class="compare-meta">
-                        <span class="compare-tag">Midjourney</span>
-                        <span class="compare-tag">DALL-E</span>
-                        <span class="compare-tag">SD</span>
-                    </div>
-                </a>
-                <a href="/compare/ai-writing-tools-comparison.html" class="compare-card">
-                    <div class="compare-icon">✍️</div>
-                    <div class="compare-title">AI写作工具对比</div>
-                    <div class="compare-desc">ChatGPT vs Claude vs Jasper vs Grammarly 四款写作工具深度评测</div>
-                    <div class="compare-meta">
-                        <span class="compare-tag">AI写作</span>
-                        <span class="compare-tag">Jasper</span>
-                        <span class="compare-tag">Grammarly</span>
-                    </div>
-                </a>
             </div>
         </div>
     </div>
 
-    <div class="topics-section" id="topics">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">📋 专题聚合</h2>
-            </div>
-            <div class="topics-grid">
-                <a href="/pages/best-ai-image-generators.html" class="topic-card">
-                    <div class="topic-icon">🎨</div>
-                    <div class="topic-title">AI绘画工具大全</div>
-                    <div class="topic-desc">2026年最佳AI绘画工具盘点，11款主流工具深度评测，按场景和预算推荐最适合你的选择</div>
-                    <div class="topic-stats">
-                        <div class="topic-stat">
-                            <span class="topic-stat-value">11+</span>
-                            <span class="topic-stat-label">款工具</span>
-                        </div>
-                        <div class="topic-stat">
-                            <span class="topic-stat-value">8</span>
-                            <span class="topic-stat-label">大场景</span>
-                        </div>
-                        <div class="topic-stat">
-                            <span class="topic-stat-value">4</span>
-                            <span class="topic-stat-label">档预算</span>
-                        </div>
-                    </div>
-                </a>
-                <a href="/pages/best-ai-coding-tools.html" class="topic-card">
-                    <div class="topic-icon">💻</div>
-                    <div class="topic-title">AI编程工具大全</div>
-                    <div class="topic-desc">2026年最佳AI编程工具盘点，12款主流工具横向对比，按语言和场景提升开发效率</div>
-                    <div class="topic-stats">
-                        <div class="topic-stat">
-                            <span class="topic-stat-value">12+</span>
-                            <span class="topic-stat-label">款工具</span>
-                        </div>
-                        <div class="topic-stat">
-                            <span class="topic-stat-value">6</span>
-                            <span class="topic-stat-label">种语言</span>
-                        </div>
-                        <div class="topic-stat">
-                            <span class="topic-stat-value">8</span>
-                            <span class="topic-stat-label">大场景</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="popular-section" id="popular">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">🔥 热门搜索</h2>
-            </div>
-            <div class="popular-list">
-                <a href="/pages/tools/chatgpt.html" class="popular-item">
-                    <div class="popular-rank top">1</div>
-                    <div class="popular-content">
-                        <div class="popular-title">ChatGPT</div>
-                        <div class="popular-meta">大语言模型 · 对话AI</div>
-                    </div>
-                    <div class="popular-trend up">↑ +23%</div>
-                </a>
-                <a href="/pages/tools/midjourney.html" class="popular-item">
-                    <div class="popular-rank top">2</div>
-                    <div class="popular-content">
-                        <div class="popular-title">Midjourney</div>
-                        <div class="popular-meta">图像生成 · AI艺术</div>
-                    </div>
-                    <div class="popular-trend up">↑ +18%</div>
-                </a>
-                <a href="/pages/tools/grammarly.html" class="popular-item">
-                    <div class="popular-rank top">3</div>
-                    <div class="popular-content">
-                        <div class="popular-title">Grammarly</div>
-                        <div class="popular-meta">写作助手 · 语法检查</div>
-                    </div>
-                    <div class="popular-trend up">↑ +12%</div>
-                </a>
-                <a href="/pages/tools/github_copilot.html" class="popular-item">
-                    <div class="popular-rank">4</div>
-                    <div class="popular-content">
-                        <div class="popular-title">GitHub Copilot</div>
-                        <div class="popular-meta">编程助手 · 代码补全</div>
-                    </div>
-                    <div class="popular-trend up">↑ +8%</div>
-                </a>
-                <a href="/pages/tools/jasper.html" class="popular-item">
-                    <div class="popular-rank">5</div>
-                    <div class="popular-content">
-                        <div class="popular-title">Jasper</div>
-                        <div class="popular-meta">AI写作 · 内容营销</div>
-                    </div>
-                    <div class="popular-trend down">↓ -2%</div>
-                </a>
-            </div>
-        </div>
-    </div>
-
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>AI工具</h3>
-                    <ul>
-                        <li><a href="/pages/tools/chatgpt.html">ChatGPT</a></li>
-                        <li><a href="/pages/tools/midjourney.html">Midjourney</a></li>
-                        <li><a href="/pages/tools/grammarly.html">Grammarly</a></li>
-                        <li><a href="/pages/tools/github_copilot.html">GitHub Copilot</a></li>
-                        <li><a href="/compare/">工具对比</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>学习资源</h3>
-                    <ul>
-                        <li><a href="/tutorials/">AI教程</a></li>
-                        <li><a href="/pages/tools/">工具指南</a></li>
-                        <li><a href="/pages/about.html">关于我们</a></li>
-                        <li><a href="/pages/affiliate-guide.html">Affiliate指南</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>姊妹站点</h3>
-                    <ul>
-                        <li><a href="https://tools.link.cn">AI工具推荐</a></li>
-                        <li><a href="https://tool.link.cn">AI工具LTD</a></li>
-                        <li><a href="https://prompts.link.cn">AI提示词库</a></li>
-                        <li><a href="https://signal.link.cn">加密货币行情</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>服务</h3>
-                    <ul>
-                        <li><a href="/deals/">折扣优惠</a></li>
-                        <li><a href="/discover/">新品发现</a></li>
-                        <li><a href="/tutorials/">教程中心</a></li>
-                        <li><a href="/compare/">比价平台</a></li>
-                    </ul>
-                </div>
-            </div>
             <div class="footer-sites">
                 <a href="https://tools.link.cn" class="footer-site-link" target="_blank">
                     <span class="footer-site-dot" style="background:#3b82f6;"></span>
@@ -1549,107 +637,5 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        const searchToggle = document.getElementById('searchToggle');
-        const searchOverlay = document.getElementById('searchOverlay');
-        const searchClose = document.getElementById('searchClose');
-        const heroSearch = document.getElementById('heroSearch');
-        const heroSearchBtn = document.getElementById('heroSearchBtn');
-        const searchResultsContainer = document.getElementById('searchResultsContainer');
-
-        const searchData = [
-            { title: 'ChatGPT 完整使用指南', category: '教程', desc: '从入门到精通，掌握ChatGPT全部技巧', url: '/pages/tools/chatgpt.html' },
-            { title: 'Midjourney 提示词技巧', category: '教程', desc: '学习高级提示词，生成惊艳作品', url: '/pages/tools/midjourney.html' },
-            { title: 'Grammarly 写作优化', category: '工具', desc: 'AI驱动的写作助手', url: '/pages/tools/grammarly.html' },
-            { title: 'GitHub Copilot 编程', category: '工具', desc: 'AI编程助手，提升开发效率', url: '/pages/tools/github_copilot.html' },
-            { title: 'Jasper AI写作平台', category: '工具', desc: '专业AI内容创作平台', url: '/pages/tools/jasper.html' },
-            { title: 'AI工具对比评测', category: '比价', desc: '对比不同AI工具的优缺点', url: '/compare/' },
-            { title: 'AI工具折扣优惠', category: '折扣', desc: '限时优惠和折扣码', url: '/deals/' },
-            { title: 'AI新品发现', category: '发现', desc: '最新AI工具和趋势', url: '/discover/' },
-            { title: 'AI教程中心', category: '教程', desc: '海量AI教程资源', url: '/tutorials/' },
-        ];
-
-        function performSearch(query) {
-            if (!query.trim()) {
-                searchResultsContainer.innerHTML = '<div style="text-align:center;color:var(--text-muted);padding:20px;">请输入搜索关键词</div>';
-                return;
-            }
-            const results = searchData.filter(item => 
-                item.title.toLowerCase().includes(query.toLowerCase()) ||
-                item.desc.toLowerCase().includes(query.toLowerCase()) ||
-                item.category.toLowerCase().includes(query.toLowerCase())
-            );
-            if (results.length === 0) {
-                searchResultsContainer.innerHTML = '<div style="text-align:center;color:var(--text-muted);padding:20px;">未找到相关结果</div>';
-                return;
-            }
-            searchResultsContainer.innerHTML = results.map(item => `
-                <a href="${item.url}" class="search-result-item">
-                    <div>
-                        <span class="search-result-category">[${item.category}]</span>
-                        <span class="search-result-title">${item.title}</span>
-                    </div>
-                    <div class="search-result-desc">${item.desc}</div>
-                </a>
-            `).join('');
-        }
-
-        searchToggle.addEventListener('click', () => {
-            searchOverlay.classList.toggle('active');
-            if (searchOverlay.classList.contains('active')) {
-                heroSearch.focus();
-            }
-        });
-
-        searchClose.addEventListener('click', () => {
-            searchOverlay.classList.remove('active');
-        });
-
-        heroSearch.addEventListener('input', (e) => {
-            performSearch(e.target.value);
-        });
-
-        heroSearchBtn.addEventListener('click', () => {
-            performSearch(heroSearch.value);
-        });
-
-        heroSearch.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') {
-                performSearch(heroSearch.value);
-            }
-        });
-
-        document.addEventListener('click', (e) => {
-            if (!searchOverlay.contains(e.target) && !searchToggle.contains(e.target)) {
-                searchOverlay.classList.remove('active');
-            }
-        });
-
-        const categoryTabs = document.querySelectorAll('.category-tab');
-        const articleItems = document.querySelectorAll('.article-item');
-        const noResults = document.getElementById('noResults');
-
-        categoryTabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                categoryTabs.forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-
-                const category = tab.dataset.category;
-                let visibleCount = 0;
-
-                articleItems.forEach(item => {
-                    if (category === 'all' || item.dataset.category === category) {
-                        item.style.display = '';
-                        visibleCount++;
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-
-                noResults.style.display = visibleCount === 0 ? 'block' : 'none';
-            });
-        });
-    </script>
 </body>
 </html>
