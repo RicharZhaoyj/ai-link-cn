@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cursor编辑器完全指南 2026 | 从入门到精通AI编程 | AI.link.cn</title>
+<meta name="description" content="Cursor编辑器完全指南，涵盖安装配置、AI对话编程、代码生成、重构、调试技巧、快捷键大全、高级配置、团队协作及与VS Code对比，助你高效AI编程。">
+<meta name="keywords" content="Cursor教程,Cursor编辑器,AI编程,Cursor使用指南">
+<link rel="canonical" href="https://ai.link.cn/tutorials/cursor-complete-guide.html">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg: #0a0f1a;
+    --surface: #111827;
+    --surface-2: #1f2937;
+    --text: #f8fafc;
+    --text-muted: #94a3b8;
+    --accent: #a855f7;
+    --accent-light: #c084fc;
+    --success: #22c55e;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --blue: #3b82f6;
+}
+
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC",sans-serif;background:var(--bg);color:var(--text);line-height:1.8;margin:0;padding:0}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+header{padding:16px 0;border-bottom:1px solid rgba(168,85,247,.2);background:rgba(10,15,26,.98);backdrop-filter:blur(12px);position:sticky;top:0;z-index:100}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.logo{font-size:1.4rem;font-weight:700;color:var(--accent);text-decoration:none}
+.nav-links{display:flex;gap:20px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+.nav-links a{color:var(--text-muted);text-decoration:none;font-weight:500;font-size:.95rem;transition:color .2s}
+.nav-links a:hover{color:var(--accent)}
+
+.progress-bar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent-light));z-index:1000;width:0;transition:width .1s}
+
+.hero{padding:48px 0 32px;text-align:center;background:linear-gradient(180deg,rgba(168,85,247,.08),transparent)}
+.hero h1{font-size:2.2rem;line-height:1.3;margin-bottom:12px}
+.hero h1 span{color:var(--accent)}
+.hero p{font-size:1.05rem;color:var(--text-muted);max-width:600px;margin:0 auto 24px}
+.hero-meta{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;font-size:.9rem;color:var(--text-muted)}
+.hero-meta span{display:flex;align-items:center;gap:6px}
+
+.tutorial-layout{display:grid;grid-template-columns:1fr 280px;gap:32px;padding:32px 0}
+.tutorial-content{background:var(--surface);border-radius:16px;padding:40px;border:1px solid rgba(168,85,247,.1)}
+.tutorial-content h2{font-size:1.6rem;color:var(--text);margin:40px 0 16px;padding-bottom:8px;border-bottom:1px solid rgba(168,85,247,.2)}
+.tutorial-content h2:first-child{margin-top:0}
+.tutorial-content h3{font-size:1.25rem;color:var(--text);margin:28px 0 12px}
+.tutorial-content p{color:var(--text-muted);margin-bottom:16px;line-height:1.8}
+.tutorial-content ul,.tutorial-content ol{color:var(--text-muted);margin-bottom:16px;padding-left:24px}
+.tutorial-content li{margin-bottom:8px;line-height:1.7}
+.tutorial-content strong{color:var(--text)}
+
+.prompt-example{background:var(--surface-2);border-left:4px solid var(--accent);border-radius:8px;padding:20px;margin:20px 0}
+.prompt-example .prompt-label{font-size:.8rem;color:var(--accent);font-weight:600;margin-bottom:8px;text-transform:uppercase;letter-spacing:.05em}
+.prompt-example .prompt-text{color:var(--text);font-family:monospace;font-size:.95rem;line-height:1.7;white-space:pre-wrap}
+
+.tip-box{background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.3);border-radius:12px;padding:20px;margin:20px 0}
+.tip-box .tip-title{color:var(--success);font-weight:600;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.tip-box p{color:var(--text-muted);margin:0;font-size:.95rem}
+
+.warning-box{background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.3);border-radius:12px;padding:20px;margin:20px 0}
+.warning-box .warning-title{color:var(--warning);font-weight:600;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.warning-box p{color:var(--text-muted);margin:0;font-size:.95rem}
+
+.code-block{background:var(--surface-2);border-radius:8px;padding:16px;margin:16px 0;overflow-x:auto}
+.code-block code{color:var(--success);font-family:monospace;font-size:.9rem;line-height:1.6}
+
+.table-wrap{overflow-x:auto;margin:20px 0}
+table{width:100%;border-collapse:collapse;font-size:.9rem}
+th{background:var(--surface-2);padding:12px 16px;text-align:left;color:var(--accent);font-weight:600;border-bottom:2px solid rgba(168,85,247,.3)}
+td{padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.05);color:var(--text-muted)}
+
+aside{position:sticky;top:80px;align-self:start}
+.toc{background:var(--surface);border-radius:12px;padding:20px;border:1px solid rgba(168,85,247,.1)}
+.toc h3{font-size:1rem;margin-bottom:12px;color:var(--text)}
+.toc ul{list-style:none;padding:0;margin:0}
+.toc li{margin-bottom:8px}
+.toc a{color:var(--text-muted);text-decoration:none;font-size:.9rem;transition:color .2s;display:block;padding:4px 0}
+.toc a:hover{color:var(--accent)}
+
+.related-section{margin-top:32px;padding-top:32px;border-top:1px solid rgba(168,85,247,.2)}
+.related-section h3{font-size:1.2rem;margin-bottom:16px}
+.related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.related-card{background:var(--surface-2);border-radius:10px;padding:16px;text-decoration:none;color:inherit;transition:all .2s;border:1px solid rgba(168,85,247,.1)}
+.related-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.related-card h4{font-size:.95rem;margin-bottom:6px;color:var(--text)}
+.related-card p{font-size:.85rem;color:var(--text-muted);margin:0;line-height:1.5}
+
+footer{padding:48px 0;text-align:center;color:#64748b;font-size:.85rem;border-top:1px solid rgba(255,255,255,.05);margin-top:48px}
+
+@media(max-width:900px){
+    .tutorial-layout{grid-template-columns:1fr}
+    aside{position:static}
+    .related-grid{grid-template-columns:1fr}
+}
+
+@media(max-width:768px){
+    .nav-links{display:none}
+    .hero h1{font-size:1.6rem}
+    .tutorial-content{padding:24px}
+}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2F2V94W35E"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-2F2V94W35E');
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"Cursor编辑器完全指南：从入门到精通","description":"Cursor编辑器完整使用教程，涵盖安装配置、AI对话编程、代码生成、重构、调试技巧、快捷键大全、高级配置、团队协作及与VS Code对比","author":{"@type":"Organization","name":"AI.link.cn"},"publisher":{"@type":"Organization","name":"AI.link.cn","url":"https://ai.link.cn"},"datePublished":"2026-07-23","dateModified":"2026-07-23","totalTime":"PT35M","mainEntityOfPage":"https://ai.link.cn/tutorials/cursor-complete-guide.html","step":[{"@type":"HowToStep","name":"安装与配置Cursor","text":"从官网下载Cursor安装包，完成基础配置和AI模型设置"},{"@type":"HowToStep","name":"掌握核心功能","text":"熟悉Chat、Cmd K、代码库索引、Tab补全等核心功能"},{"@type":"HowToStep","name":"AI对话编程实战","text":"使用Composer和Chat进行多文件代码生成与修改"},{"@type":"HowToStep","name":"代码重构与调试","text":"利用AI辅助重构代码、定位Bug、生成测试用例"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"首页","item":"https://ai.link.cn/"},
+{"@type":"ListItem","position":2,"name":"教程中心","item":"https://ai.link.cn/tutorials/"},
+{"@type":"ListItem","position":3,"name":"Cursor完全指南"}
+]}
+</script>
+</head>
+<body>
+<div class="progress-bar" id="progressBar"></div>
+
+<header>
+<div class="container">
+<nav class="nav">
+<a href="/" class="logo">AI News</a>
+<ul class="nav-links">
+<li><a href="/">首页</a></li>
+<li><a href="/pages/tools">工具库</a></li>
+<li><a href="/tutorials/">教程中心</a></li>
+<li><a href="/compare/">工具对比</a></li>
+<li><a href="/deals/">折扣优惠</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<section class="hero">
+<div class="container">
+<h1>Cursor编辑器<span>完全指南</span></h1>
+<p>从入门到精通，掌握AI原生编辑器Cursor的全部技巧，让编程效率翻倍</p>
+<div class="hero-meta">
+<span>⏱️ 阅读时间：35分钟</span>
+<span>📊 难度：初级到高级</span>
+<span>📝 更新：2026.07.23</span>
+<span>👁️ 3.8万次学习</span>
+</div>
+</div>
+</section>
+
+<div class="container">
+<div class="tutorial-layout">
+<main class="tutorial-content">
+<h2 id="intro">一、Cursor编辑器简介与安装</h2>
+
+<h3 id="what-is-cursor">1.1 什么是Cursor</h3>
+<p>Cursor是一款基于VS Code内核深度定制的AI原生代码编辑器（AI-native Code Editor），由Anysphere公司开发。它将大语言模型（LLM）深度融入编码流程，支持代码生成、智能补全、对话式编程、代码库问答等能力。Cursor最大的特点是<strong>把AI作为编辑器的一等公民</strong>，而不是简单的外挂插件。</p>
+
+<p>相比传统编辑器加插件的方式，Cursor的优势在于：</p>
+<ul>
+<li><strong>深度集成</strong>：AI能力贯穿整个编辑器，而非简单的API调用</li>
+<li><strong>代码库理解</strong>：可对整个项目建立索引，AI回答时能引用相关文件</li>
+<li><strong>多文件编辑</strong>：Composer功能可以一次性修改多个文件</li>
+<li><strong>多模型支持</strong>：可切换GPT-4、Claude、Gemini等主流模型</li>
+</ul>
+
+<h3 id="install">1.2 安装与配置</h3>
+<p>Cursor的安装非常简单，支持Windows、macOS和Linux三大平台：</p>
+<ol>
+<li><strong>下载安装包</strong>：访问 cursor.com 下载对应系统的安装包</li>
+<li><strong>安装运行</strong>：Windows双击exe安装；macOS拖入Applications；Linux解压后运行</li>
+<li><strong>登录账号</strong>：首次启动需要注册或登录Cursor账号，免费版即可使用基础功能</li>
+<li><strong>导入VS Code配置</strong>：启动时会自动检测并提示导入VS Code的设置、扩展和快捷键</li>
+</ol>
+
+<div class="tip-box">
+<div class="tip-title">💡 一键迁移提示</div>
+<p>Cursor兼容VS Code的绝大多数扩展和主题，迁移几乎零成本。建议在首次启动时勾选"导入VS Code配置"，可以保留你熟悉的快捷键和主题。</p>
+</div>
+
+<h3 id="model-config">1.3 模型配置</h3>
+<p>Cursor支持多种AI模型，可在右下角状态栏切换：</p>
+<ul>
+<li><strong>默认模型</strong>：用于Tab补全和日常Chat（推荐GPT-4o或Claude 3.5 Sonnet）</li>
+<li><strong>高级模型</strong>：用于复杂任务，如Composer和大范围重构（推荐Claude 3.5 Sonnet）</li>
+<li><strong>自定义API Key</strong>：付费版支持配置OpenAI、Anthropic等官方API Key</li>
+</ul>
+
+<div class="code-block">
+<code>// Settings > Models 配置示例
+{
+  "cursor.ai.defaultModel": "gpt-4o",
+  "cursor.ai.composerModel": "claude-3-5-sonnet",
+  "cursor.ai.tabCompletion": true,
+  "cursor.ai.codebaseIndex": true
+}</code>
+</div>
+
+<h2 id="core-features">二、核心功能详解</h2>
+
+<h3 id="chat">2.1 Chat对话编程</h3>
+<p>Chat是Cursor最常用的功能之一，可以通过 <code>Cmd/Ctrl + L</code> 唤出侧边栏对话面板。它不仅理解你选中的代码，还能引用整个代码库的上下文。</p>
+
+<div class="prompt-example">
+<div class="prompt-label">Chat 提问示例</div>
+<div class="prompt-text">@UserController 这个控制器里的 create 方法有什么问题？请从安全性、性能和可读性三个角度分析，并给出改进建议。</div>
+</div>
+
+<p>Chat支持以下常用命令符号：</p>
+<ul>
+<li><strong>@文件名</strong>：引用特定文件作为上下文</li>
+<li><strong>@文件夹</strong>：引用整个文件夹</li>
+<li><strong>@Codebase</strong>：让AI搜索整个代码库</li>
+<li><strong>@Docs</strong>：引用第三方文档（如React、Vue官方文档）</li>
+<li><strong>@Web</strong>：联网搜索最新资料</li>
+</ul>
+
+<h3 id="cmd-k">2.2 Cmd K 内联编辑</h3>
+<p>按下 <code>Cmd/Ctrl + K</code> 可以在光标位置唤出内联编辑框，输入指令后AI会直接生成代码并预览差异，按Tab接受、Esc取消。这是最高频的编码操作。</p>
+
+<div class="prompt-example">
+<div class="prompt-label">Cmd K 内联指令示例</div>
+<div class="prompt-text">将这个函数改成使用 async/await，并添加 try-catch 错误处理，错误时记录到日志</div>
+</div>
+
+<h3 id="composer">2.3 Composer多文件编辑</h3>
+<p>Composer是Cursor的王牌功能，按 <code>Cmd/Ctrl + I</code> 唤出。它能理解复杂需求，一次性修改多个文件，是构建新功能、重构大型模块的利器。</p>
+
+<div class="prompt-example">
+<div class="prompt-label">Composer 任务示例</div>
+<div class="prompt-text">为这个Express项目添加用户登录功能：需要创建 User 模型、auth 中间件、登录注册路由，并更新 README 说明如何使用。请同时处理错误边界和输入校验。</div>
+</div>
+
+<p>Composer会列出所有受影响的文件，你可以逐个审查Diff后决定是否应用。</p>
+
+<h3 id="tab-completion">2.4 Tab智能补全</h3>
+<p>Cursor的Tab补全远超传统LSP补全，它不仅能补全当前光标处的代码，还能：</p>
+<ul>
+<li><strong>跨行补全</strong>：根据上下文预测后续多行代码</li>
+<li><strong>修改建议</strong>：检测到光标处代码有问题时直接给出修改建议</li>
+<li><strong>跳转补全</strong>：根据编辑历史预测下一个要修改的位置</li>
+</ul>
+
+<div class="tip-box">
+<div class="tip-title">✅ Tab补全技巧</div>
+<p>当Cursor给出补全建议时，可以先不要立即按Tab，等几秒钟让它生成更完整的方案。对于多行建议，按Tab接受全部，按Cmd+→逐词接受。</p>
+</div>
+
+<h2 id="ai-coding">三、AI对话编程实战</h2>
+
+<h3 id="generate-code">3.1 代码生成</h3>
+<p>利用Cursor生成代码的最佳实践是<strong>先描述清楚需求，再让AI生成草稿，最后迭代优化</strong>。</p>
+
+<div class="prompt-example">
+<div class="prompt-label">代码生成 Prompt</div>
+<div class="prompt-text">@Codebase 我需要给现有的电商项目添加一个商品搜索接口。要求：
+1. 支持按名称、分类、价格区间筛选
+2. 支持分页和排序
+3. 使用项目现有的数据库连接方式
+4. 返回格式与现有接口保持一致
+5. 添加单元测试
+
+请先分析现有代码结构，再生成完整实现。</div>
+</div>
+
+<h3 id="refactor">3.2 代码重构</h3>
+<p>Cursor的重构能力非常强大，特别适合处理遗留代码。常见重构场景：</p>
+<ul>
+<li><strong>提取函数/组件</strong>：选中代码后让AI抽取为独立函数</li>
+<li><strong>设计模式应用</strong>：将过程式代码重构为工厂模式、策略模式等</li>
+<li><strong>类型增强</strong>：给JS代码添加TypeScript类型</li>
+<li><strong>性能优化</strong>：识别N+1查询、内存泄漏等问题</li>
+</ul>
+
+<div class="prompt-example">
+<div class="prompt-label">重构 Prompt 示例</div>
+<div class="prompt-text">请将这段处理订单的代码重构为策略模式，支持不同支付方式（微信、支付宝、信用卡）独立扩展，不修改原有逻辑。</div>
+</div>
+
+<h3 id="debug">3.3 调试技巧</h3>
+<p>Cursor的调试能力可以让Bug定位时间缩短80%：</p>
+<ol>
+<li><strong>错误日志分析</strong>：把堆栈信息粘贴到Chat，AI会自动定位相关代码</li>
+<li><strong>断点辅助</strong>：让AI建议在哪里下断点最有效</li>
+<li><strong>测试用例生成</strong>：让AI生成能复现Bug的最小测试用例</li>
+<li><strong>修复建议</strong>：AI分析后给出修复方案，并解释根因</li>
+</ol>
+
+<div class="prompt-example">
+<div class="prompt-label">调试 Prompt 示例</div>
+<div class="prompt-text">@Codebase 用户反馈在订单金额为0时下单会崩溃，错误日志如下：
+TypeError: Cannot read property 'toFixed' of undefined
+    at calculateTotal (order.js:45)
+请帮我定位问题根因，并给出修复方案和防御性测试用例。</div>
+</div>
+
+<h2 id="shortcuts">四、快捷键大全</h2>
+
+<p>掌握以下快捷键是成为Cursor高手的关键：</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>快捷键</th><th>功能</th><th>说明</th></tr>
+</thead>
+<tbody>
+<tr><td>Cmd/Ctrl + L</td><td>打开Chat</td><td>在侧边栏开启AI对话</td></tr>
+<tr><td>Cmd/Ctrl + K</td><td>内联编辑</td><td>在光标处生成/修改代码</td></tr>
+<tr><td>Cmd/Ctrl + I</td><td>Composer</td><td>多文件AI编辑</td></tr>
+<tr><td>Tab</td><td>接受补全</td><td>接受AI的补全建议</td></tr>
+<tr><td>Cmd/Ctrl + →</td><td>逐词接受</td><td>逐个单词接受补全</td></tr>
+<tr><td>Esc</td><td>取消</td><td>取消当前AI操作</td></tr>
+<tr><td>Cmd/Ctrl + Shift + L</td><td>新Chat</td><td>开启新的对话窗口</td></tr>
+<tr><td>Cmd/Ctrl + Enter</td><td>接受全部</td><td>在Composer中接受所有变更</td></tr>
+<tr><td>Ctrl + `</td><td>终端</td><td>打开集成终端</td></tr>
+<tr><td>Cmd/Ctrl + P</td><td>快速打开</td><td>按文件名快速跳转</td></tr>
+<tr><td>Cmd/Ctrl + Shift + P</td><td>命令面板</td><td>执行编辑器命令</td></tr>
+<tr><td>Cmd/Ctrl + D</td><td>多光标</td><td>选中下一个相同词</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="warning-box">
+<div class="warning-title">⚠️ macOS与Windows差异</div>
+<p>本文档中 Cmd 对应 macOS的Command键，Ctrl 对应 Windows/Linux的Control键。可在 Settings > Keyboard Shortcuts 中自定义。</p>
+</div>
+
+<h2 id="advanced-config">五、高级配置</h2>
+
+<h3 id="rules">5.1 项目规则文件 .cursorrules</h3>
+<p>在项目根目录创建 <code>.cursorrules</code> 文件，可以为AI设定项目级的编码规范和偏好，所有Chat和Composer都会遵循：</p>
+
+<div class="code-block">
+<code># .cursorrules 示例
+本项目使用 React 18 + TypeScript + TailwindCSS。
+- 组件使用函数式组件和Hooks
+- 优先使用 React Server Components
+- 状态管理使用 Zustand，不用 Redux
+- 命名规范：组件用PascalCase，工具函数用camelCase
+- 必须为所有函数添加 TypeScript 类型
+- 注释使用中文
+- 提交前必须通过 ESLint 和 Prettier 检查</code>
+</div>
+
+<h3 id="docs-index">5.2 文档索引</h3>
+<p>对于使用第三方库的项目，可以让Cursor索引官方文档，AI回答时会引用最新文档：</p>
+<ol>
+<li>在Chat中输入 <code>@Docs</code>，点击"Add new doc"</li>
+<li>输入文档地址（如 https://docs.nextjs.org）</li>
+<li>等待索引完成，之后AI会自动引用</li>
+</ol>
+
+<h3 id="codebase-index">5.3 代码库索引</h3>
+<p>开启 <code>Codebase Indexing</code> 后，Cursor会为整个项目建立向量索引，AI能精准定位相关代码。建议在大型项目开启：</p>
+<ul>
+<li>路径：Settings > Features > Codebase Indexing</li>
+<li>可设置忽略目录（如 node_modules、dist）</li>
+<li>支持远程索引（付费版），团队共享索引</li>
+</ul>
+
+<h2 id="team-collab">六、团队协作</h2>
+
+<h3 id="shared-rules">6.1 共享规则</h3>
+<p>把 <code>.cursorrules</code> 文件提交到Git仓库，团队成员clone后即可共享同一套AI编码规范，保证代码风格统一。</p>
+
+<h3 id="shared-docs">6.2 共享文档索引</h3>
+<p>团队管理员可以为整个组织配置共享文档索引，避免每个人重复索引，节省带宽和时间。</p>
+
+<h3 id="team-billing">6.3 团队版计费</h3>
+<p>Cursor提供团队订阅方案，管理员可以为成员分配配额、查看用量统计，适合企业级使用。</p>
+
+<div class="tip-box">
+<div class="tip-title">💡 团队使用建议</div>
+<p>建议在团队Wiki中维护一份 .cursorrules 模板，新人入职时直接使用，能显著降低AI生成代码的返工率。</p>
+</div>
+
+<h2 id="vs-vscode">七、与VS Code对比</h2>
+
+<p>Cursor基于VS Code内核，但定位完全不同。以下是详细对比：</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>对比维度</th><th>Cursor</th><th>VS Code + Copilot</th></tr>
+</thead>
+<tbody>
+<tr><td>AI集成深度</td><td>原生集成，贯穿全流程</td><td>插件形式，相对独立</td></tr>
+<tr><td>多文件编辑</td><td>Composer支持</td><td>支持有限</td></tr>
+<tr><td>代码库理解</td><td>全库索引，精准引用</td><td>有限上下文</td></tr>
+<tr><td>多模型切换</td><td>支持GPT/Claude/Gemini</td><td>主要OpenAI模型</td></tr>
+<tr><td>VS Code扩展</td><td>完全兼容</td><td>原生支持</td></tr>
+<tr><td>价格</td><td>$20/月(Pro)</td><td>$10/月</td></tr>
+<tr><td>响应速度</td><td>快，AI原生优化</td><td>较快</td></tr>
+<tr><td>学习成本</td><td>需熟悉AI工作流</td><td>低</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="warning-box">
+<div class="warning-title">⚠️ 选择建议</div>
+<p>如果你是重度AI编程用户，Cursor的多文件编辑和代码库理解能力会显著提升效率。如果只是偶尔用AI补全，VS Code + Copilot性价比更高。</p>
+</div>
+
+<h2 id="best-practices">八、最佳实践与避坑</h2>
+
+<h3 id="good-prompt">8.1 写好AI指令</h3>
+<ul>
+<li><strong>提供上下文</strong>：用@引用相关文件，比泛泛描述更精准</li>
+<li><strong>明确约束</strong>：说清楚用什么框架、什么风格、什么命名规范</li>
+<li><strong>分步执行</strong>：复杂任务拆解为多个小任务，逐步迭代</li>
+<li><strong>要求解释</strong>：让AI说明修改思路，便于审查</li>
+</ul>
+
+<h3 id="avoid-pitfalls">8.2 常见误区</h3>
+<ul>
+<li><strong>盲目接受</strong>：Composer生成的代码一定要审查Diff再接受</li>
+<li><strong>忽略测试</strong>：AI生成代码后必须跑测试，不要直接上线</li>
+<li><strong>泄漏敏感信息</strong>：不要把密钥、密码粘贴给AI</li>
+<li><strong>过度依赖</strong>：复杂架构设计仍需人类主导，AI辅助</li>
+</ul>
+
+<h2 id="summary">九、总结</h2>
+<p>Cursor重新定义了代码编辑器，把AI作为编程流程的核心而非附属。掌握本教程的内容，你将能够：</p>
+<ul>
+<li>✅ 高效使用Chat、Cmd K、Composer三大核心功能</li>
+<li>✅ 利用AI完成代码生成、重构、调试全流程</li>
+<li>✅ 通过.cursorrules和文档索引定制AI行为</li>
+<li>✅ 在团队中推广AI协作最佳实践</li>
+<li>✅ 理性选择Cursor与VS Code + Copilot</li>
+</ul>
+
+<p>AI编程时代已经到来，工具会用得越熟，效率提升越明显。祝你在Cursor的陪伴下，写出更优雅的代码！</p>
+
+<div class="related-section">
+<h3>📚 延伸阅读</h3>
+<div class="related-grid">
+<a href="/tutorials/chatgpt-complete-guide.html" class="related-card">
+<h4>ChatGPT完整指南</h4>
+<p>Prompt工程、系统提示词、实战应用全流程</p>
+</a>
+<a href="/compare/" class="related-card">
+<h4>AI编程工具对比</h4>
+<p>Cursor vs Copilot vs Claude Code全面对比</p>
+</a>
+<a href="/pages/tools/github_copilot.html" class="related-card">
+<h4>GitHub Copilot详解</h4>
+<p>功能介绍、价格方案、使用技巧</p>
+</a>
+<a href="/tutorials/dalle3-complete-guide.html" class="related-card">
+<h4>DALL-E 3完全指南</h4>
+<p>AI绘画从入门到大师</p>
+</a>
+</div>
+</div>
+
+</main>
+
+<aside>
+<div class="toc">
+<h3>📋 目录</h3>
+<ul>
+<li><a href="#intro">一、简介与安装</a></li>
+<li><a href="#what-is-cursor">1.1 什么是Cursor</a></li>
+<li><a href="#install">1.2 安装配置</a></li>
+<li><a href="#model-config">1.3 模型配置</a></li>
+<li><a href="#core-features">二、核心功能</a></li>
+<li><a href="#chat">2.1 Chat对话</a></li>
+<li><a href="#cmd-k">2.2 Cmd K内联</a></li>
+<li><a href="#composer">2.3 Composer</a></li>
+<li><a href="#tab-completion">2.4 Tab补全</a></li>
+<li><a href="#ai-coding">三、AI编程实战</a></li>
+<li><a href="#generate-code">3.1 代码生成</a></li>
+<li><a href="#refactor">3.2 代码重构</a></li>
+<li><a href="#debug">3.3 调试技巧</a></li>
+<li><a href="#shortcuts">四、快捷键大全</a></li>
+<li><a href="#advanced-config">五、高级配置</a></li>
+<li><a href="#rules">5.1 项目规则</a></li>
+<li><a href="#docs-index">5.2 文档索引</a></li>
+<li><a href="#codebase-index">5.3 代码库索引</a></li>
+<li><a href="#team-collab">六、团队协作</a></li>
+<li><a href="#vs-vscode">七、与VS Code对比</a></li>
+<li><a href="#best-practices">八、最佳实践</a></li>
+<li><a href="#summary">九、总结</a></li>
+</ul>
+</div>
+</aside>
+</div>
+</div>
+
+<footer>
+<div class="container">
+<p>© 2026 AI.link.cn | <a href="/">返回首页</a> | <a href="/tutorials/">教程中心</a> | <a href="/pages/tools">工具库</a></p>
+</div>
+</footer>
+
+<script>
+const progressBar = document.getElementById('progressBar');
+window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+    progressBar.style.width = scrollPercent + '%';
+});
+</script>
+</body>
+</html>

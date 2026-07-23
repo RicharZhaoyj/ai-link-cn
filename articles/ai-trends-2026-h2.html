@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026下半年AI行业十大趋势预测 | AI.link.cn</title>
+    <meta name="description" content="2026下半年AI行业十大趋势预测：多模态AI、AI Agent爆发、端侧AI崛起、AI监管政策、开源vs闭源、AI芯片竞争等深度解析，前瞻AGI时代的发展方向。">
+    <meta name="keywords" content="AI趋势2026,人工智能发展,AI行业预测,GPT-5,AGI,AI Agent,多模态AI">
+    <link rel="canonical" href="https://ai.link.cn/articles/ai-trends-2026-h2.html">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        :root {
+            --bg: #0a0f1a;
+            --surface: #111827;
+            --surface-2: #1f2937;
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #a855f7;
+            --accent-light: #c084fc;
+            --success: #22c55e;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --blue: #3b82f6;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        header {
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(168, 85, 247, 0.2);
+            background: rgba(10, 15, 26, 0.98);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo { font-size: 1.4rem; font-weight: 700; color: var(--accent); text-decoration: none; }
+
+        .nav-links { display: flex; gap: 20px; list-style: none; flex-wrap: wrap; }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover, .nav-links a.active { color: var(--accent); }
+
+        .progress-bar {
+            position: fixed;
+            top: 60px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: rgba(168, 85, 247, 0.15);
+            z-index: 99;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent), var(--accent-light));
+            transition: width 0.1s ease;
+            width: 0%;
+        }
+
+        .article-header {
+            padding: 48px 0 32px;
+            text-align: center;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .article-category {
+            background: rgba(168, 85, 247, 0.15);
+            color: var(--accent);
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+        }
+
+        .article-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+
+        .article-subtitle {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+            max-width: 640px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .article-banner {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(59, 130, 246, 0.1));
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 32px;
+            border: 1px solid rgba(168, 85, 247, 0.2);
+        }
+
+        .article-banner h3 {
+            font-size: 1.15rem;
+            margin-bottom: 12px;
+            color: var(--accent);
+        }
+
+        .article-banner ul { list-style: none; padding-left: 0; }
+
+        .article-banner li {
+            padding: 6px 0;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .article-banner li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+        }
+
+        .article-content { padding: 24px 0; }
+
+        .section { margin-bottom: 40px; }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(168, 85, 247, 0.2);
+        }
+
+        .section-title::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 20px;
+            background: var(--accent);
+            border-radius: 2px;
+            margin-right: 12px;
+            vertical-align: middle;
+        }
+
+        .article-content h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 24px 0 12px;
+            color: var(--text);
+        }
+
+        .article-content p {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .article-content strong { color: var(--text); font-weight: 600; }
+
+        .article-content ul, .article-content ol {
+            margin: 12px 0 16px 24px;
+            color: var(--text-muted);
+        }
+
+        .article-content li { margin-bottom: 8px; }
+
+        .trend-card {
+            background: var(--surface);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 16px 0;
+            border: 1px solid rgba(168, 85, 247, 0.15);
+        }
+
+        .trend-card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .trend-number {
+            width: 36px;
+            height: 36px;
+            line-height: 36px;
+            text-align: center;
+            border-radius: 50%;
+            background: rgba(168, 85, 247, 0.15);
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .trend-card-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .highlight-box {
+            background: var(--surface);
+            border-left: 4px solid var(--accent);
+            border-radius: 0 8px 8px 0;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .highlight-box p { color: var(--text); font-weight: 500; margin: 0; }
+
+        .related-articles {
+            padding: 40px 0;
+            margin-top: 40px;
+            border-top: 1px solid rgba(168, 85, 247, 0.2);
+        }
+
+        .related-title { font-size: 1.3rem; font-weight: 600; margin-bottom: 20px; }
+
+        .related-list { display: flex; flex-direction: column; gap: 12px; }
+
+        .related-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 16px;
+            background: var(--surface);
+            border-radius: 10px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s;
+            border: 1px solid rgba(168, 85, 247, 0.1);
+        }
+
+        .related-item:hover {
+            border-color: var(--accent);
+            background: rgba(168, 85, 247, 0.05);
+        }
+
+        .related-icon {
+            width: 40px; height: 40px;
+            border-radius: 8px;
+            background: rgba(168, 85, 247, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            margin-right: 12px;
+        }
+
+        .related-content { flex: 1; }
+        .related-title-text { font-weight: 600; font-size: 0.95rem; margin-bottom: 4px; }
+        .related-desc { font-size: 0.8rem; color: var(--text-muted); }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 24px;
+            font-size: 0.95rem;
+        }
+
+        .back-link:hover { text-decoration: underline; }
+
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid rgba(168, 85, 247, 0.2);
+            margin-top: 40px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        footer a { color: var(--accent); text-decoration: none; margin: 0 6px; }
+
+        @media (max-width: 768px) {
+            .article-title { font-size: 1.6rem; }
+            .article-banner { padding: 20px; }
+            .nav-links { gap: 12px; }
+            .trend-card { padding: 18px; }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "2026下半年AI行业十大趋势预测",
+        "description": "2026下半年AI行业十大趋势预测：多模态AI、AI Agent爆发、端侧AI崛起、AI监管政策、开源vs闭源、AI芯片竞争等深度解析。",
+        "author": {"@type": "Organization", "name": "AI.link.cn 编辑部"},
+        "publisher": {"@type": "Organization", "name": "AI.link.cn"},
+        "datePublished": "2026-07-23",
+        "dateModified": "2026-07-23",
+        "image": "https://ai.link.cn/images/ai-trends-2026-h2.jpg",
+        "articleSection": "AI趋势",
+        "keywords": ["AI趋势2026", "人工智能发展", "AI行业预测", "GPT-5", "AGI"]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="nav">
+                <a href="/" class="logo">AI.link.cn</a>
+                <ul class="nav-links">
+                    <li><a href="/">首页</a></li>
+                    <li><a href="/pages/tools/">工具</a></li>
+                    <li><a href="/tutorials/">教程</a></li>
+                    <li><a href="/articles/" class="active">资讯</a></li>
+                    <li><a href="/compare/">对比</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="progress-bar">
+        <div class="progress-bar-fill" id="progressBar"></div>
+    </div>
+
+    <div class="container">
+        <a href="/articles/" class="back-link">← 返回资讯列表</a>
+
+        <div class="article-header">
+            <div class="article-meta">
+                <span class="article-category">AI趋势</span>
+                <span>2026年07月23日</span>
+                <span>阅读时间：18分钟</span>
+            </div>
+            <h1 class="article-title">2026下半年AI行业十大趋势预测</h1>
+            <p class="article-subtitle">从多模态AI到Agent爆发，从端侧AI到监管收紧，本文系统预测2026年下半年AI行业的十大关键趋势，帮你提前把握AGI时代的发展脉搏。</p>
+        </div>
+
+        <div class="article-banner">
+            <h3>📋 本文要点</h3>
+            <ul>
+                <li>多模态AI成为标配，图文音视频统一理解成主流</li>
+                <li>AI Agent从概念走向规模化落地，改变工作流形态</li>
+                <li>端侧AI崛起，手机、PC、可穿戴设备本地推理普及</li>
+                <li>全球AI监管政策收紧，合规成为行业准入门槛</li>
+                <li>开源与闭源走向共存，差异化竞争加剧</li>
+            </ul>
+        </div>
+
+        <article class="article-content">
+            <section class="section">
+                <h2 class="section-title">开篇：站在AGI门槛上的2026</h2>
+                <p>2026年上半年，AI行业经历了从"模型军备竞赛"到"应用落地"的关键转折。GPT-5、Claude 4、Gemini 2.5相继发布，模型能力逼近人类专家水平；与此同时，AI Agent、端侧推理、具身智能等方向快速迭代。进入下半年，行业将呈现哪些新趋势？本文从技术、产品、政策、商业四个维度，梳理十大值得关注的趋势。</p>
+                <p>无论是从业者、投资者还是普通用户，理解这些趋势都有助于在AI浪潮中找准方向。以下预测基于公开信息、行业动态与技术演进规律，仅供参考。</p>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">趋势一：多模态AI成为标配</h2>
+                <div class="trend-card">
+                    <div class="trend-card-header">
+                        <span class="trend-number">1</span>
+                        <span class="trend-card-title">多模态统一理解成为主流</span>
+                    </div>
+                    <p>2026年下半年，多模态AI不再是高端模型的专属功能，而会成为中端甚至开源模型的标配能力。GPT-5、Gemini 2.5已经实现原生多模态，国内通义、文心、豆包也在快速跟进。<strong>统一理解</strong>是关键词：模型不再分别处理文本、图像、音频，而是在同一架构中联合理解，带来更自然的交互体验。</p>
+                    <p>具体表现包括：实时语音对话延迟降至200毫秒以内；视频理解时长突破小时级；图像生成与编辑融合到对话流程中。这意味着用户可以用一句"把这张图的背景换成海边，并把人物衣服改成蓝色"完成复杂编辑，无需切换工具。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">趋势二：AI Agent爆发</h2>
+                <div class="trend-card">
+                    <div class="trend-card-header">
+                        <span class="trend-number">2</span>
+                        <span class="trend-card-title">Agent从概念走向规模化落地</span>
+                    </div>
+                    <p>如果说2025年是Agent的"概念验证年"，2026年下半年则是"规模化落地年"。OpenAI的Operator、Anthropic的Computer Use、字节的Trae Agent、Google的Project Mariner都在让Agent真正承担端到端任务。</p>
+                    <p>典型场景包括：自动浏览网页完成购物比价、自动操作软件完成数据录入、自动写代码并提交PR、自动整理邮件并起草回复。<strong>Agent的核心价值在于"闭环"</strong>——不只是生成内容，而是感知环境、规划步骤、调用工具、执行动作、反馈结果。</p>
+                    <p>预计下半年会出现一批面向垂直行业的Agent产品，如法律文书Agent、医疗问诊Agent、财务对账Agent等，单价更低、效果更专。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">趋势三：端侧AI崛起</h2>
+                <div class="trend-card">
+                    <div class="trend-card-header">
+                        <span class="trend-number">3</span>
+                        <span class="trend-card-title">手机、PC、可穿戴本地推理普及</span>
+                    </div>
+                    <p>随着高通骁龙8 Gen4、苹果A19、联发科天玑9500等芯片的NPU算力提升，以及7B-13B参数模型的量化压缩，端侧AI在2026年下半年迎来爆发。手机本地运行7B模型成为中高端机型的标配，PC端则借助NPU实现 Always-on AI 助手。</p>
+                    <p>端侧AI的优势在于<strong>隐私、延迟与离线能力</strong>：敏感数据不出设备，响应无需等待网络，飞机上也能用。可穿戴设备（眼镜、耳机）借助端侧AI实现实时翻译、会议纪要、视觉问答，成为新的入口级产品。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">趋势四：AI监管政策收紧</h2>
+                <div class="trend-card">
+                    <div class="trend-card-header">
+                        <span class="trend-number">4</span>
+                        <span class="trend-card-title">合规成为行业准入门槛</span>
+                    </div>
+                    <p>欧盟AI Act在2026年进入全面执行阶段，对高风险AI系统提出严格义务；美国加州等地的AI法案陆续落地；中国《生成式人工智能服务管理暂行办法》持续完善，备案与算法登记成为上线前提。<strong>合规不再是可选项，而是准入门槛。</strong></p>
+                    <p>对企业的影响：模型训练需披露数据来源；上线服务需通过安全评估；面向公众的应用需标注AI生成内容；深度合成需显著标识。建议从业者提前建立合规团队，避免产品上线受阻。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">趋势五：开源vs闭源竞争</h2>
+                <div class="trend-card">
+                    <div class="trend-card-header">
+                        <span class="trend-number">5</span>
+                        <span class="trend-card-title">开源与闭源走向共存与差异化</span>
+                    </div>
+                    <p>2026年下半年，开源与闭源之争不再是"谁取代谁"，而是走向差异化共存。闭源模型（GPT-5、Claude 4、Gemini 2.5）在尖端能力、安全对齐、企业服务上保持领先；开源模型（DeepSeek、Llama 4、Qwen3、Mistral）在性价比、可定制、私有化部署上持续发力。</p>
+                    <p>一个值得注意的现象是<strong>"开源逼近闭源"的速度越来越快"</strong>。DeepSeek-V3在多项基准上接近GPT-4o，且API价格低一个数量级。这倒逼闭源厂商加快迭代，也给了中小企业低成本接入AI的机会。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">趋势六：AI芯片竞争白热化</h2>
+                <div class="trend-card">
+                    <div class="trend-card-header">
+                        <span class="trend-number">6</span>
+                        <span class="trend-card-title">英伟达地位受挑战，国产芯片突围</span>
+                    </div>
+                    <p>训练侧，英伟达Blackwell架构GPU（B200、GB200）继续主导大模型训练，但AMD MI400、Google TPU v7、英特尔Gaudi 3都在抢占份额。推理侧，专用ASIC（Groq LPU、Cerebras）凭借极低延迟抢占实时场景。</p>
+                    <p>中国市场方面，华为昇腾910C、寒武纪思元690、海光DCU等国产芯片在推理场景逐步替代受限进口卡，软件生态（CANN、ROCm兼容层）持续完善。<strong>芯片自主可控</strong>已成为国家战略级议题，下半年国产替代进度值得重点关注。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">趋势七：AI+科学研究加速</h2>
+                <div class="trend-card">
+                    <div class="trend-card-header">
+                        <span class="trend-number">7</span>
+                        <span class="trend-card-title">AI for Science 进入收获期</span>
+                    </div>
+                    <p>继AlphaFold之后，AI在科学研究中的应用全面铺开：材料发现（GNoME）、数学证明（AlphaProof）、聚变控制、药物设计、气候模拟。2026年下半年，预计会有更多"AI发现"登上Nature、Science。</p>
+                    <p>值得关注的是<strong>"AI科学家"</strong>概念的落地——多个团队正在构建能自主提出假设、设计实验、分析数据的AI系统。虽然距离完全自主仍有距离，但在特定领域（如化学合成路线规划）已展现出超越人类的效率。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">趋势八：AI安全与对齐</h2>
+                <div class="trend-card">
+                    <div class="trend-card-header">
+                        <span class="trend-number">8</span>
+                        <span class="trend-card-title">安全从"事后补救"转向"前置设计"</span>
+                    </div>
+                    <p>随着模型能力提升，AI安全风险也在升级：越狱攻击、提示注入、深度伪造、模型窃取、训练数据投毒。2026年下半年，行业将更重视"前置安全设计"——在模型训练阶段就嵌入对齐与防护，而非上线后再打补丁。</p>
+                    <p>技术方向包括：RLHF/RLAIF的改进版（DPO、Constitutional AI）、可解释性研究（mechanistic interpretability）、红队自动化、模型水印与内容溯源（C2PA）。监管层面，"高风险模型需第三方评估"有望成为共识。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">趋势九：AI+具身智能</h2>
+                <div class="trend-card">
+                    <div class="trend-card-header">
+                        <span class="trend-number">9</span>
+                        <span class="trend-card-title">人形机器人从实验室走向示范应用</span>
+                    </div>
+                    <p>特斯拉Optimus、Figure 02、宇树H1、智元远征A1等人形机器人在2026年下半年进入小规模商业示范。应用场景集中在工业装配、仓储搬运、巡检、展厅导览等<strong>结构化环境</strong>，距离家庭服务仍有距离。</p>
+                    <p>具身智能的瓶颈不在硬件，而在"大脑"——如何让模型理解物理世界、规划长时任务、从少量演示中学习。VLA（Vision-Language-Action）模型成为研究热点，预计下半年会有开源VLA基座模型发布，加速生态发展。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">趋势十：AI商业化落地</h2>
+                <div class="trend-card">
+                    <div class="trend-card-header">
+                        <span class="trend-number">10</span>
+                        <span class="trend-card-title">从"卖API"到"卖结果"的商业模式演进</span>
+                    </div>
+                    <p>2026年下半年，AI商业化模式发生明显演进。单纯卖API（按token计费）的赛道价格战激烈，毛利持续压缩；越来越多厂商转向"卖结果"——按完成的任务、达成的目标计费，如按成交的订单、生成的合格简历、处理的工单收费。</p>
+                    <p>企业级市场，AI从"工具"升级为"同事"：Microsoft 365 Copilot、Salesforce Agentforce、飞书智能伙伴都强调"端到端完成工作"。C端市场，订阅制仍是主流，但"按需付费"（如Sora按视频时长、Midjourney按张数）也在兴起。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">结语：在不确定性中寻找确定性</h2>
+                <p>预测AI行业如同预测天气——短期内可信，长期则充满变数。上述十大趋势基于当前可见的技术与市场信号，但AI发展速度之快，往往几个月就会重塑格局。<strong>对个人而言，最确定的事是持续学习</strong>：理解模型能力边界、掌握工具使用、关注安全合规、保持批判性思维。</p>
+                <p>无论2026年下半年出现哪些"黑天鹅"，有一点是确定的：AI已经从"前沿技术"变成"基础设施"，正在重塑每一个行业。与其焦虑被替代，不如主动拥抱，成为"会用AI的人"。</p>
+                <div class="highlight-box">
+                    <p>最后送一句话：AI不会取代你，但会用AI的人会取代不会用AI的人。2026年下半年，愿你站在趋势的正确一侧。</p>
+                </div>
+            </section>
+        </article>
+
+        <div class="related-articles">
+            <h2 class="related-title">📌 相关推荐</h2>
+            <div class="related-list">
+                <a href="/articles/ai-tools-ranking-2026.html" class="related-item">
+                    <div class="related-icon">🏆</div>
+                    <div class="related-content">
+                        <div class="related-title-text">2026年AI工具排行榜：50款最强AI工具全收录</div>
+                        <div class="related-desc">按六大类别盘点2026年最值得使用的AI工具，含功能简评与适用场景</div>
+                    </div>
+                </a>
+                <a href="/articles/ai-office-efficiency.html" class="related-item">
+                    <div class="related-icon">⚡</div>
+                    <div class="related-content">
+                        <div class="related-title-text">AI办公效率提升指南：从入门到精通</div>
+                        <div class="related-desc">系统讲解文档、表格、PPT、会议纪要等场景的AI办公实战方法</div>
+                    </div>
+                </a>
+                <a href="/articles/free-ai-tools-collection.html" class="related-item">
+                    <div class="related-icon">🎁</div>
+                    <div class="related-content">
+                        <div class="related-title-text">2026免费AI工具大全：100+好用工具收藏</div>
+                        <div class="related-desc">按类别整理的免费AI工具，写作、绘画、编程、视频一应俱全</div>
+                    </div>
+                </a>
+                <a href="/tutorials/" class="related-item">
+                    <div class="related-icon">📚</div>
+                    <div class="related-content">
+                        <div class="related-title-text">AI工具教程中心</div>
+                        <div class="related-desc">系统掌握ChatGPT、Midjourney、Cursor等热门工具的使用方法</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 AI.link.cn · 专注AI工具与资讯 | <a href="/">首页</a> · <a href="/pages/tools/">工具库</a> · <a href="/tutorials/">教程</a> · <a href="/articles/">资讯</a> · <a href="/compare/">对比</a></p>
+        </div>
+    </footer>
+
+    <script>
+        const progressBar = document.getElementById('progressBar');
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+            progressBar.style.width = scrollPercent + '%';
+        });
+    </script>
+</body>
+</html>

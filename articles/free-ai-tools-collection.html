@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026免费AI工具大全：100+好用工具收藏 | AI.link.cn</title>
+    <meta name="description" content="2026免费AI工具大全：按写作、绘画、编程、视频、音频、办公、设计、学习8大类整理100+好用免费AI工具，含免费额度与使用建议，零成本上手AI。">
+    <meta name="keywords" content="免费AI工具,AI工具免费,免费ChatGPT替代,免费AI绘画,免费AI写作,免费AI编程,免费AI视频">
+    <link rel="canonical" href="https://ai.link.cn/articles/free-ai-tools-collection.html">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        :root {
+            --bg: #0a0f1a;
+            --surface: #111827;
+            --surface-2: #1f2937;
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #a855f7;
+            --accent-light: #c084fc;
+            --success: #22c55e;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --blue: #3b82f6;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        header {
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(168, 85, 247, 0.2);
+            background: rgba(10, 15, 26, 0.98);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo { font-size: 1.4rem; font-weight: 700; color: var(--accent); text-decoration: none; }
+
+        .nav-links { display: flex; gap: 20px; list-style: none; flex-wrap: wrap; }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover, .nav-links a.active { color: var(--accent); }
+
+        .progress-bar {
+            position: fixed;
+            top: 60px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: rgba(168, 85, 247, 0.15);
+            z-index: 99;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent), var(--accent-light));
+            transition: width 0.1s ease;
+            width: 0%;
+        }
+
+        .article-header {
+            padding: 48px 0 32px;
+            text-align: center;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .article-category {
+            background: rgba(168, 85, 247, 0.15);
+            color: var(--accent);
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+        }
+
+        .article-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+
+        .article-subtitle {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+            max-width: 640px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .article-banner {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(59, 130, 246, 0.1));
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 32px;
+            border: 1px solid rgba(168, 85, 247, 0.2);
+        }
+
+        .article-banner h3 {
+            font-size: 1.15rem;
+            margin-bottom: 12px;
+            color: var(--accent);
+        }
+
+        .article-banner ul { list-style: none; padding-left: 0; }
+
+        .article-banner li {
+            padding: 6px 0;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .article-banner li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+        }
+
+        .article-content { padding: 24px 0; }
+
+        .section { margin-bottom: 40px; }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(168, 85, 247, 0.2);
+        }
+
+        .section-title::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 20px;
+            background: var(--accent);
+            border-radius: 2px;
+            margin-right: 12px;
+            vertical-align: middle;
+        }
+
+        .article-content h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 24px 0 12px;
+            color: var(--text);
+        }
+
+        .article-content p {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .article-content strong { color: var(--text); font-weight: 600; }
+
+        .article-content ul, .article-content ol {
+            margin: 12px 0 16px 24px;
+            color: var(--text-muted);
+        }
+
+        .article-content li { margin-bottom: 8px; }
+
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 12px;
+            margin: 20px 0;
+        }
+
+        .tool-card {
+            background: var(--surface);
+            border-radius: 10px;
+            padding: 16px;
+            border: 1px solid rgba(168, 85, 247, 0.12);
+            transition: all 0.2s;
+        }
+
+        .tool-card:hover {
+            border-color: var(--accent);
+            background: rgba(168, 85, 247, 0.05);
+        }
+
+        .tool-card-name {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .free-badge {
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 8px;
+            background: rgba(34, 197, 94, 0.15);
+            color: var(--success);
+            font-weight: 600;
+        }
+
+        .tool-card-desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .tool-card-info {
+            font-size: 0.78rem;
+            color: var(--accent);
+        }
+
+        .highlight-box {
+            background: var(--surface);
+            border-left: 4px solid var(--accent);
+            border-radius: 0 8px 8px 0;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .highlight-box p { color: var(--text); font-weight: 500; margin: 0; }
+
+        .related-articles {
+            padding: 40px 0;
+            margin-top: 40px;
+            border-top: 1px solid rgba(168, 85, 247, 0.2);
+        }
+
+        .related-title { font-size: 1.3rem; font-weight: 600; margin-bottom: 20px; }
+
+        .related-list { display: flex; flex-direction: column; gap: 12px; }
+
+        .related-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 16px;
+            background: var(--surface);
+            border-radius: 10px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s;
+            border: 1px solid rgba(168, 85, 247, 0.1);
+        }
+
+        .related-item:hover {
+            border-color: var(--accent);
+            background: rgba(168, 85, 247, 0.05);
+        }
+
+        .related-icon {
+            width: 40px; height: 40px;
+            border-radius: 8px;
+            background: rgba(168, 85, 247, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            margin-right: 12px;
+        }
+
+        .related-content { flex: 1; }
+        .related-title-text { font-weight: 600; font-size: 0.95rem; margin-bottom: 4px; }
+        .related-desc { font-size: 0.8rem; color: var(--text-muted); }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 24px;
+            font-size: 0.95rem;
+        }
+
+        .back-link:hover { text-decoration: underline; }
+
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid rgba(168, 85, 247, 0.2);
+            margin-top: 40px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        footer a { color: var(--accent); text-decoration: none; margin: 0 6px; }
+
+        @media (max-width: 768px) {
+            .article-title { font-size: 1.6rem; }
+            .article-banner { padding: 20px; }
+            .nav-links { gap: 12px; }
+            .tool-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "2026免费AI工具大全：100+好用工具收藏",
+        "description": "2026免费AI工具大全：按写作、绘画、编程、视频、音频、办公、设计、学习8大类整理100+好用免费AI工具，含免费额度与使用建议。",
+        "author": {"@type": "Organization", "name": "AI.link.cn 编辑部"},
+        "publisher": {"@type": "Organization", "name": "AI.link.cn"},
+        "datePublished": "2026-07-23",
+        "dateModified": "2026-07-23",
+        "image": "https://ai.link.cn/images/free-ai-tools-collection.jpg",
+        "articleSection": "AI工具",
+        "keywords": ["免费AI工具", "AI工具免费", "免费ChatGPT替代", "免费AI绘画", "免费AI写作"]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="nav">
+                <a href="/" class="logo">AI.link.cn</a>
+                <ul class="nav-links">
+                    <li><a href="/">首页</a></li>
+                    <li><a href="/pages/tools/">工具</a></li>
+                    <li><a href="/tutorials/">教程</a></li>
+                    <li><a href="/articles/" class="active">资讯</a></li>
+                    <li><a href="/compare/">对比</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="progress-bar">
+        <div class="progress-bar-fill" id="progressBar"></div>
+    </div>
+
+    <div class="container">
+        <a href="/articles/" class="back-link">← 返回资讯列表</a>
+
+        <div class="article-header">
+            <div class="article-meta">
+                <span class="article-category">AI工具</span>
+                <span>2026年07月23日</span>
+                <span>阅读时间：20分钟</span>
+            </div>
+            <h1 class="article-title">2026免费AI工具大全：100+好用工具收藏</h1>
+            <p class="article-subtitle">按8大类整理的100+免费AI工具，写作、绘画、编程、视频、音频、办公、设计、学习全覆盖，含免费额度说明与使用建议，帮你零成本玩转AI。</p>
+        </div>
+
+        <div class="article-banner">
+            <h3>📋 本文要点</h3>
+            <ul>
+                <li>8大类100+免费AI工具，每款标注免费额度与限制</li>
+                <li>国产工具为主，国际工具为辅，网络友好</li>
+                <li>附"免费组合方案"，零成本满足日常需求</li>
+                <li>定期更新，建议收藏备用</li>
+                <li>区分"真免费"与"试用免费"，避免踩坑</li>
+            </ul>
+        </div>
+
+        <article class="article-content">
+            <section class="section">
+                <h2 class="section-title">一、免费AI工具的真相</h2>
+                <p>在开始推荐前，先说清楚"免费AI工具"的几种模式，避免踩坑：</p>
+                <p><strong>1. 真免费：</strong>核心功能永久免费，无水印、无强制升级。如豆包、Kimi、通义千问的对话功能。</p>
+                <p><strong>2. 额度免费：</strong>每天/每月给一定额度，用完就要付费。如ChatGPT免费版每天有限次GPT-5调用。</p>
+                <p><strong>3. 试用免费：</strong>7天或14天免费试用，到期必须付费。本质是付费工具，需谨慎注册。</p>
+                <p>本文优先推荐前两类。所有信息基于2026年7月公开政策，工具的免费策略可能调整，以官网为准。</p>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">二、写作类免费AI工具</h2>
+                <p>写作是AI最成熟的赛道，免费工具的选择非常丰富。以下工具均可零成本完成日常写作、润色、翻译需求。</p>
+
+                <div class="tool-grid">
+                    <div class="tool-card">
+                        <div class="tool-card-name">豆包 <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">字节出品，对话写作、长文生成、文档解析全免费</div>
+                        <div class="tool-card-info">无额度限制</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">Kimi <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">超长上下文，整本书/长文档解析最强</div>
+                        <div class="tool-card-info">免费版够用</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">通义千问 <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">阿里出品，中文写作、公文、营销文案</div>
+                        <div class="tool-card-info">无额度限制</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">ChatGPT免费版 <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">GPT-5有限次调用，多模态、联网搜索</div>
+                        <div class="tool-card-info">每日限额</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">Claude免费版 <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">写作逻辑严谨，长文润色出色</div>
+                        <div class="tool-card-info">每日限额</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">秘塔写作猫 <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">中文润色、查重、公文写作</div>
+                        <div class="tool-card-info">基础功能免费</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">DeepSeek <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">深度思考模式，推理写作强</div>
+                        <div class="tool-card-info">网页版免费</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">火山写作 <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">字节出品，新媒体文案场景</div>
+                        <div class="tool-card-info">免费</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">Rytr <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">多语言文案生成，每月10k字符免费</div>
+                        <div class="tool-card-info">10k字符/月</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">Copy.ai免费版 <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">营销文案模板丰富</div>
+                        <div class="tool-card-info">2000字/月</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">三、绘画类免费AI工具</h2>
+                <p>AI绘画的免费方案主要靠Stable Diffusion生态和厂商免费额度。以下是网络友好且真正可用的免费绘画工具。</p>
+
+                <div class="tool-grid">
+                    <div class="tool-card">
+                        <div class="tool-card-name">即梦AI <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">字节出品，中文提示词友好，每日免费额度</div>
+                        <div class="tool-card-info">每日免费额度</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">Leonardo.ai <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">模型丰富，每日150 token免费</div>
+                        <div class="tool-card-info">150 token/日</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">Stable Diffusion <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">完全开源，本地部署无限制</div>
+                        <div class="tool-card-info">需显卡支持</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">文心一格 <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">百度出品，中文场景，每日免费生成</div>
+                        <div class="tool-card-info">每日免费额度</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">通义万相 <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">阿里出品，文生图、图生图免费</div>
+                        <div class="tool-card-info">免费</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">Recraft <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">矢量图、品牌风格管理，免费版50图/天</div>
+                        <div class="tool-card-info">50图/天</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">Ideogram <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">文字渲染最强，海报Logo神器</div>
+                        <div class="tool-card-info">免费额度</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">Tensor.art <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">在线跑SD模型，每日100算力免费</div>
+                        <div class="tool-card-info">100算力/日</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">Civitai <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">SD模型社区，在线生成免费</div>
+                        <div class="tool-card-info">Buzz积分制</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">SeaArt <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">海艺AI，中文友好，每日免费额度</div>
+                        <div class="tool-card-info">每日150算力</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">四、编程类免费AI工具</h2>
+                <p>编程是AI工具免费额度最慷慨的领域之一。学生、开源贡献者、个人开发者都能享受免费Pro级服务。</p>
+
+                <div class="tool-grid">
+                    <div class="tool-card">
+                        <div class="tool-card-name">通义灵码 <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">阿里出品，VS Code/JetBrains插件，完全免费</div>
+                        <div class="tool-card-info">个人免费</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">Codeium <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">个人版永久免费，多语言支持</div>
+                        <div class="tool-card-info">个人免费</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">Cursor免费版 <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">AI原生IDE，免费版每月2000次补全</div>
+                        <div class="tool-card-info">2000次/月</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">Trae <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">字节出品AI IDE，免费配额充足</div>
+                        <div class="tool-card-info">免费</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">GitHub Copilot学生包 <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">认证学生免费，含Copilot全套</div>
+                        <div class="tool-card-info">学生免费</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">Windsurf免费版 <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">多文件编辑，Cascade流程</div>
+                        <div class="tool-card-info">免费额度</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">DeepSeek-V3 <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">网页版免费对话，代码能力强</div>
+                        <div class="tool-card-info">网页版免费</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">Replit免费版 <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">云端IDE，基础功能免费</div>
+                        <div class="tool-card-info">免费版可用</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">v0免费版 <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">Vercel出品，AI生成前端UI</div>
+                        <div class="tool-card-info">每月免费额度</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">Bolt.new <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">浏览器内AI全栈开发</div>
+                        <div class="tool-card-info">每日免费额度</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">五、视频类免费AI工具</h2>
+                <p>AI视频生成算力成本高，完全免费的不多，但以下工具的免费额度足够日常使用。</p>
+
+                <div class="tool-grid">
+                    <div class="tool-card">
+                        <div class="tool-card-name">可灵AI <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">快手出品，文生视频/图生视频，每日免费额度</div>
+                        <div class="tool-card-info">每日66算力</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">剪映AI <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">剪辑+生成一体，中文生态</div>
+                        <div class="tool-card-info">基础功能免费</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">Luma Dream Machine <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">每月30次免费生成</div>
+                        <div class="tool-card-info">30次/月</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">Vidu <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">生数科技，角色一致性强</div>
+                        <div class="tool-card-info">每月免费额度</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">Pika <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">每日免费积分，特效玩法多</div>
+                        <div class="tool-card-info">每日免费积分</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">即梦AI视频 <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">字节出品，与即梦绘画共享额度</div>
+                        <div class="tool-card-info">每日免费额度</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">Runway免费版 <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">Gen-3 Alpha，首次注册125积分</div>
+                        <div class="tool-card-info">125积分一次性</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">Hailuo AI <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">MiniMax出品，文生视频免费试用</div>
+                        <div class="tool-card-info">免费试用</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">六、音频类免费AI工具</h2>
+                <p>音频AI覆盖语音合成、语音识别、音乐生成、降噪等场景。以下是免费方案。</p>
+
+                <div class="tool-grid">
+                    <div class="tool-card">
+                        <div class="tool-card-name">微软TTS <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">Edge浏览器朗读功能，多种音色免费</div>
+                        <div class="tool-card-info">免费</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">通义听悟 <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">阿里出品，录音转写+总结，每日免费时长</div>
+                        <div class="tool-card-info">每日免费时长</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">飞书妙记 <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">实时转写+AI总结，多语言</div>
+                        <div class="tool-card-info">含飞书免费版</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">Suno AI <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">AI音乐生成，每日50积分免费</div>
+                        <div class="tool-card-info">50积分/日</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">Udio <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">AI音乐生成，音质出色</div>
+                        <div class="tool-card-info">每月免费额度</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">Adobe Podcast <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">免费音频降噪，效果惊艳</div>
+                        <div class="tool-card-info">完全免费</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">Assembly AI <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">在线语音转文字，每月5小时免费</div>
+                        <div class="tool-card-info">5小时/月</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">ElevenLabs <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">顶级语音克隆，每月1万字符免费</div>
+                        <div class="tool-card-info">1万字符/月</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">七、办公类免费AI工具</h2>
+                <p>办公AI的免费方案主要集中在国产套件，国际工具大多需要订阅。</p>
+
+                <div class="tool-grid">
+                    <div class="tool-card">
+                        <div class="tool-card-name">WPS AI <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">文档+表格+PPT，基础AI功能免费</div>
+                        <div class="tool-card-info">基础功能免费</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">飞书免费版 <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">文档+多维表格+妙记，50人团队免费</div>
+                        <div class="tool-card-info">50人免费</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">Notion个人版 <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">笔记+知识库，个人永久免费</div>
+                        <div class="tool-card-info">个人免费</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">Gamma免费版 <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">AI生成PPT，每月400积分免费</div>
+                        <div class="tool-card-info">400积分/月</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">腾讯文档AI <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">在线文档+AI助手，基础免费</div>
+                        <div class="tool-card-info">基础功能免费</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">钉钉AI助理 <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">IM+文档+会议，基础AI免费</div>
+                        <div class="tool-card-info">基础功能免费</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">百度文库AI <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">文档生成、PPT、问答，每日免费</div>
+                        <div class="tool-card-info">每日免费额度</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">扣子Coze <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">字节出品，免费搭AI Bot工作流</div>
+                        <div class="tool-card-info">免费</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">八、设计与学习类免费AI工具</h2>
+                <h3>1. 设计类</h3>
+                <div class="tool-grid">
+                    <div class="tool-card">
+                        <div class="tool-card-name">Canva免费版 <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">在线设计，AI配图、AI文案</div>
+                        <div class="tool-card-info">基础功能免费</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">创客贴 <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">国产Canva，中文模板丰富</div>
+                        <div class="tool-card-info">基础功能免费</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">稿定设计AI <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">电商主图、海报AI生成</div>
+                        <div class="tool-card-info">每日免费额度</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">Remove.bg <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">AI抠图，普通分辨率免费</div>
+                        <div class="tool-card-info">普通分辨率免费</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">Upscayl <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">开源AI图片放大，本地运行</div>
+                        <div class="tool-card-info">完全免费</div>
+                    </div>
+                </div>
+
+                <h3>2. 学习类</h3>
+                <div class="tool-grid">
+                    <div class="tool-card">
+                        <div class="tool-card-name">多邻国 <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">语言学习，基础课程免费</div>
+                        <div class="tool-card-info">基础免费</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">Khan Academy AI <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">Khanmigo AI辅导，部分免费</div>
+                        <div class="tool-card-info">部分免费</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">DeepL <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">最准翻译，文本翻译免费</div>
+                        <div class="tool-card-info">文本翻译免费</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">Wolfram Alpha <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">数学计算与知识引擎</div>
+                        <div class="tool-card-info">网页版免费</div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-card-name">Photomath <span class="free-badge">免费</span></div>
+                        <div class="tool-card-desc">拍照解题，步骤展示免费</div>
+                        <div class="tool-card-info">基础免费</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">九、免费AI工具组合方案</h2>
+                <p>工具不在多，在精。以下给出三套零成本组合方案，覆盖90%日常需求：</p>
+
+                <h3>方案A：国产全能免费组合（推荐）</h3>
+                <ul>
+                    <li><strong>对话写作：</strong>豆包 + Kimi（长文档）</li>
+                    <li><strong>绘画：</strong>即梦AI + 通义万相</li>
+                    <li><strong>视频：</strong>可灵AI + 剪映AI</li>
+                    <li><strong>办公：</strong>WPS AI + 飞书免费版</li>
+                    <li><strong>编程：</strong>通义灵码 + Trae</li>
+                    <li><strong>音频：</strong>飞书妙记 + Suno</li>
+                </ul>
+
+                <h3>方案B：国际免费组合（需网络）</h3>
+                <ul>
+                    <li><strong>对话：</strong>ChatGPT免费版 + Claude免费版</li>
+                    <li><strong>绘画：</strong>Leonardo.ai + Ideogram</li>
+                    <li><strong>视频：</strong>Luma + Pika</li>
+                    <li><strong>办公：</strong>Notion + Gamma</li>
+                    <li><strong>编程：</strong>Codeium + Cursor免费版</li>
+                </ul>
+
+                <h3>方案C：学生专享组合</h3>
+                <ul>
+                    <li><strong>对话：</strong>ChatGPT免费版 + 豆包</li>
+                    <li><strong>编程：</strong>GitHub Copilot学生包 + 通义灵码</li>
+                    <li><strong>笔记：</strong>Notion个人免费 + GitHub Student Pack</li>
+                    <li><strong>学习：</strong>Kimi（文献）+ DeepL（翻译）+ Wolfram Alpha</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <p>最后一句送给所有人：免费工具的天花板比你想象的高。在付费之前，先把免费工具的能力榨干，你会发现90%的需求都能零成本解决。会选工具、会用工具，本身就是一种能力。</p>
+                </div>
+            </section>
+        </article>
+
+        <div class="related-articles">
+            <h2 class="related-title">📌 相关推荐</h2>
+            <div class="related-list">
+                <a href="/articles/ai-tools-ranking-2026.html" class="related-item">
+                    <div class="related-icon">🏆</div>
+                    <div class="related-content">
+                        <div class="related-title-text">2026年AI工具排行榜：50款最强AI工具全收录</div>
+                        <div class="related-desc">含付费工具的完整榜单，看完本文还想要更多可参考</div>
+                    </div>
+                </a>
+                <a href="/articles/ai-tools-for-students.html" class="related-item">
+                    <div class="related-icon">🎓</div>
+                    <div class="related-content">
+                        <div class="related-title-text">学生党必备AI工具指南：提升学习效率10倍</div>
+                        <div class="related-desc">学生场景的免费AI工具详细使用指南</div>
+                    </div>
+                </a>
+                <a href="/articles/ai-office-efficiency.html" class="related-item">
+                    <div class="related-icon">⚡</div>
+                    <div class="related-content">
+                        <div class="related-title-text">AI办公效率提升指南：从入门到精通</div>
+                        <div class="related-desc">免费办公AI工具的实战使用方法与提示词模板</div>
+                    </div>
+                </a>
+                <a href="/pages/tools/" class="related-item">
+                    <div class="related-icon">🧰</div>
+                    <div class="related-content">
+                        <div class="related-title-text">AI工具库</div>
+                        <div class="related-desc">按类别浏览更多AI工具，含详细评测与对比</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 AI.link.cn · 专注AI工具与资讯 | <a href="/">首页</a> · <a href="/pages/tools/">工具库</a> · <a href="/tutorials/">教程</a> · <a href="/articles/">资讯</a> · <a href="/compare/">对比</a></p>
+        </div>
+    </footer>
+
+    <script>
+        const progressBar = document.getElementById('progressBar');
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+            progressBar.style.width = scrollPercent + '%';
+        });
+    </script>
+</body>
+</html>

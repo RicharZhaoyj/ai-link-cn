@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI资讯文章合集 | AI.link.cn</title>
+<meta name="description" content="AI.link.cn文章合集索引页，汇集技术前沿、商业观察、工具发现、开源动态、教程指南等各类AI资讯文章，支持分类筛选。">
+<meta name="keywords" content="AI资讯,AI文章,AI新闻,人工智能动态,AI工具评测">
+<link rel="canonical" href="https://ai.link.cn/articles/">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg: #0a0f1a;
+    --surface: #111827;
+    --surface-2: #1f2937;
+    --text: #f8fafc;
+    --text-muted: #94a3b8;
+    --accent: #a855f7;
+    --accent-light: #c084fc;
+    --success: #22c55e;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --blue: #3b82f6;
+}
+
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC",sans-serif;background:var(--bg);color:var(--text);line-height:1.8;margin:0;padding:0}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+header{padding:16px 0;border-bottom:1px solid rgba(168,85,247,.2);background:rgba(10,15,26,.98);backdrop-filter:blur(12px);position:sticky;top:0;z-index:100}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.logo{font-size:1.4rem;font-weight:700;color:var(--accent);text-decoration:none}
+.nav-links{display:flex;gap:20px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+.nav-links a{color:var(--text-muted);text-decoration:none;font-weight:500;font-size:.95rem;transition:color .2s}
+.nav-links a:hover{color:var(--accent)}
+
+.progress-bar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent-light));z-index:1000;width:0;transition:width .1s}
+
+.breadcrumb{padding:24px 0 0;font-size:.9rem;color:var(--text-muted)}
+.breadcrumb a{color:var(--text-muted);text-decoration:none;transition:color .2s}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb span{color:var(--accent)}
+
+.hero{padding:32px 0;text-align:center;background:linear-gradient(180deg,rgba(168,85,247,.08),transparent)}
+.hero h1{font-size:2.2rem;line-height:1.3;margin-bottom:12px}
+.hero h1 span{color:var(--accent)}
+.hero p{font-size:1.05rem;color:var(--text-muted);max-width:640px;margin:0 auto 24px}
+.hero-meta{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;font-size:.9rem;color:var(--text-muted)}
+.hero-meta span{display:flex;align-items:center;gap:6px}
+
+.filter-section{padding:24px 0;text-align:center}
+.filter-nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:16px}
+.filter-btn{padding:8px 18px;background:var(--surface);border:1px solid rgba(168,85,247,.2);border-radius:20px;color:var(--text-muted);font-size:.9rem;cursor:pointer;transition:all .2s;font-family:inherit;font-weight:500}
+.filter-btn:hover{border-color:var(--accent);color:var(--accent)}
+.filter-btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+.search-box{margin:16px auto 0;max-width:500px;display:flex;gap:8px}
+.search-box input{flex:1;padding:12px 16px;background:var(--surface);border:1px solid rgba(168,85,247,.2);border-radius:10px;color:var(--text);font-size:.95rem;font-family:inherit}
+.search-box input::placeholder{color:var(--text-muted)}
+.search-box input:focus{outline:none;border-color:var(--accent)}
+
+.articles-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:20px;padding:24px 0 48px}
+
+.article-card{background:var(--surface);border:1px solid rgba(168,85,247,.1);border-radius:14px;padding:24px;text-decoration:none;color:inherit;transition:all .2s;display:flex;flex-direction:column;gap:12px}
+.article-card:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:0 8px 24px rgba(168,85,247,.15)}
+
+.article-tag{display:inline-block;padding:4px 12px;border-radius:12px;font-size:.75rem;font-weight:600;align-self:flex-start}
+.tag-tech{background:rgba(59,130,246,.15);color:#60a5fa;border:1px solid rgba(59,130,246,.3)}
+.tag-business{background:rgba(245,158,11,.15);color:var(--warning);border:1px solid rgba(245,158,11,.3)}
+.tag-tools{background:rgba(168,85,247,.15);color:var(--accent-light);border:1px solid rgba(168,85,247,.3)}
+.tag-opensource{background:rgba(34,197,94,.15);color:var(--success);border:1px solid rgba(34,197,94,.3)}
+.tag-tutorial{background:rgba(236,72,153,.15);color:#f472b6;border:1px solid rgba(236,72,153,.3)}
+
+.article-card h3{font-size:1.15rem;color:var(--text);margin:0;line-height:1.4;transition:color .2s}
+.article-card:hover h3{color:var(--accent)}
+.article-card p{color:var(--text-muted);font-size:.9rem;margin:0;line-height:1.6;flex:1}
+.article-meta{display:flex;justify-content:space-between;align-items:center;font-size:.8rem;color:var(--text-muted);padding-top:8px;border-top:1px solid rgba(255,255,255,.05)}
+.article-meta .date{display:flex;align-items:center;gap:6px}
+.article-meta .read-time{display:flex;align-items:center;gap:6px}
+
+.no-results{text-align:center;padding:48px 0;color:var(--text-muted);font-size:1rem;display:none}
+.no-results.show{display:block}
+
+.related-section{margin-top:32px;padding-top:32px;border-top:1px solid rgba(168,85,247,.2)}
+.related-section h3{font-size:1.2rem;margin-bottom:16px}
+.related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.related-card{background:var(--surface-2);border-radius:10px;padding:16px;text-decoration:none;color:inherit;transition:all .2s;border:1px solid rgba(168,85,247,.1)}
+.related-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.related-card h4{font-size:.95rem;margin-bottom:6px;color:var(--text)}
+.related-card p{font-size:.85rem;color:var(--text-muted);margin:0;line-height:1.5}
+
+footer{padding:48px 0;text-align:center;color:#64748b;font-size:.85rem;border-top:1px solid rgba(255,255,255,.05);margin-top:48px}
+
+@media(max-width:768px){
+    .nav-links{display:none}
+    .hero h1{font-size:1.6rem}
+    .articles-grid{grid-template-columns:1fr}
+    .related-grid{grid-template-columns:1fr}
+}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2F2V94W35E"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-2F2V94W35E');
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CollectionPage","name":"AI资讯文章合集","description":"AI.link.cn文章合集索引页，汇集技术前沿、商业观察、工具发现、开源动态、教程指南等各类AI资讯文章","url":"https://ai.link.cn/articles/","publisher":{"@type":"Organization","name":"AI.link.cn","url":"https://ai.link.cn"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"首页","item":"https://ai.link.cn/"},
+{"@type":"ListItem","position":2,"name":"文章合集"}
+]}
+</script>
+</head>
+<body>
+<div class="progress-bar" id="progressBar"></div>
+
+<header>
+<div class="container">
+<nav class="nav">
+<a href="/" class="logo">AI News</a>
+<ul class="nav-links">
+<li><a href="/">首页</a></li>
+<li><a href="/pages/tools">工具库</a></li>
+<li><a href="/tutorials/">教程中心</a></li>
+<li><a href="/compare/">工具对比</a></li>
+<li><a href="/deals/">折扣优惠</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<div class="container">
+<div class="breadcrumb">
+<a href="/">首页</a> / <span>文章合集</span>
+</div>
+</div>
+
+<section class="hero">
+<div class="container">
+<h1>AI资讯<span>文章合集</span></h1>
+<p>汇集技术前沿、商业观察、工具发现、开源动态、教程指南等各类AI深度文章</p>
+<div class="hero-meta">
+<span>📊 共 9 篇文章</span>
+<span>🔄 持续更新</span>
+<span>📝 更新：2026.07.23</span>
+</div>
+</div>
+</section>
+
+<div class="container">
+<div class="filter-section">
+<div class="filter-nav">
+<button class="filter-btn active" data-filter="all">全部</button>
+<button class="filter-btn" data-filter="tech">技术前沿</button>
+<button class="filter-btn" data-filter="business">商业观察</button>
+<button class="filter-btn" data-filter="tools">工具发现</button>
+<button class="filter-btn" data-filter="opensource">开源动态</button>
+<button class="filter-btn" data-filter="tutorial">教程指南</button>
+</div>
+<div class="search-box">
+<input type="text" id="searchInput" placeholder="🔍 搜索文章标题或摘要...">
+</div>
+</div>
+
+<div class="articles-grid" id="articlesGrid">
+
+<a href="/articles/ai-tools-ranking-2026.html" class="article-card" data-category="tools">
+<span class="article-tag tag-tools">工具发现</span>
+<h3>2026年AI工具排行榜：最值得用的50款AI应用</h3>
+<p>全面盘点2026年最值得使用的50款AI工具，涵盖对话、绘画、编程、写作、视频等多个领域，按使用场景分类，附详细评分和适用人群分析。</p>
+<div class="article-meta">
+<span class="date">📅 2026.07.15</span>
+<span class="read-time">⏱️ 15分钟</span>
+</div>
+</a>
+
+<a href="/articles/waic-2026-highlights.html" class="article-card" data-category="tech">
+<span class="article-tag tag-tech">技术前沿</span>
+<h3>WAIC 2026世界人工智能大会亮点回顾</h3>
+<p>2026世界人工智能大会(WAIC)核心亮点深度解读，包括最新大模型发布、具身智能突破、AI Agent技术进展、行业应用案例等，带你了解AI前沿动态。</p>
+<div class="article-meta">
+<span class="date">📅 2026.07.10</span>
+<span class="read-time">⏱️ 12分钟</span>
+</div>
+</a>
+
+<a href="/articles/ai-trends-2026-h2.html" class="article-card" data-category="tech">
+<span class="article-tag tag-tech">技术前沿</span>
+<h3>2026下半年AI发展趋势预测：六大方向值得关注</h3>
+<p>展望2026年下半年AI行业发展趋势，从多模态大模型、AI Agent、具身智能、边缘AI、AI安全、商业化落地六大方向深度分析，助你提前布局。</p>
+<div class="article-meta">
+<span class="date">📅 2026.07.05</span>
+<span class="read-time">⏱️ 10分钟</span>
+</div>
+</a>
+
+<a href="/articles/cursor-vs-copilot-vs-claude-code.html" class="article-card" data-category="tools">
+<span class="article-tag tag-tools">工具发现</span>
+<h3>Cursor vs Copilot vs Claude Code：三大AI编程工具深度对比</h3>
+<p>对比Cursor、GitHub Copilot、Claude Code三大主流AI编程工具的功能、性能、价格、使用体验，从代码生成、调试、重构等维度全方位评测，帮你选对工具。</p>
+<div class="article-meta">
+<span class="date">📅 2026.06.28</span>
+<span class="read-time">⏱️ 14分钟</span>
+</div>
+</a>
+
+<a href="/articles/ai-agent-development-guide.html" class="article-card" data-category="tutorial">
+<span class="article-tag tag-tutorial">教程指南</span>
+<h3>AI Agent开发完全指南：从原理到实战</h3>
+<p>系统讲解AI Agent的开发流程，涵盖Agent架构设计、工具调用、记忆系统、多Agent协作等核心技术，附LangChain和LlamaIndex实战代码示例。</p>
+<div class="article-meta">
+<span class="date">📅 2026.06.20</span>
+<span class="read-time">⏱️ 20分钟</span>
+</div>
+</a>
+
+<a href="/articles/ai-image-tools-free-alternatives.html" class="article-card" data-category="tools">
+<span class="article-tag tag-tools">工具发现</span>
+<h3>AI绘画工具免费替代方案盘点：不花钱也能玩转AI绘图</h3>
+<p>盘点10款免费AI绘画工具和方案，包括Bing Image Creator、Stable Diffusion本地部署、Leonardo.ai等，对比功能、画质、商用政策，帮你零成本入门AI绘画。</p>
+<div class="article-meta">
+<span class="date">📅 2026.06.15</span>
+<span class="read-time">⏱️ 8分钟</span>
+</div>
+</a>
+
+<a href="/articles/ai-productivity-guide-2026.html" class="article-card" data-category="tutorial">
+<span class="article-tag tag-tutorial">教程指南</span>
+<h3>2026 AI生产力指南：用AI工具把工作效率提升10倍</h3>
+<p>系统介绍如何用AI工具构建个人生产力系统，覆盖任务管理、写作、编程、设计、研究等场景，分享20+实用AI工作流，助你成为AI时代的效率达人。</p>
+<div class="article-meta">
+<span class="date">📅 2026.06.08</span>
+<span class="read-time">⏱️ 18分钟</span>
+</div>
+</a>
+
+<a href="/articles/ai-side-hustle-guide.html" class="article-card" data-category="business">
+<span class="article-tag tag-business">商业观察</span>
+<h3>AI副业指南：8种用AI赚钱的真实路径</h3>
+<p>分享8种经过验证的AI副业赚钱方式，包括AI绘画接单、AI写作变现、AI课程开发、AI工具评测、Prompt定制服务等，附真实收入数据和起步建议。</p>
+<div class="article-meta">
+<span class="date">📅 2026.05.30</span>
+<span class="read-time">⏱️ 12分钟</span>
+</div>
+</a>
+
+<a href="/articles/ai-tools-for-students.html" class="article-card" data-category="tutorial">
+<span class="article-tag tag-tutorial">教程指南</span>
+<h3>学生党AI工具推荐：学习效率翻倍的实用清单</h3>
+<p>专为学生整理的AI工具清单，涵盖学习辅助、论文写作、笔记整理、外语学习、考试备考等场景，所有工具均有免费方案，附学生优惠申请方法。</p>
+<div class="article-meta">
+<span class="date">📅 2026.05.20</span>
+<span class="read-time">⏱️ 9分钟</span>
+</div>
+</a>
+
+</div>
+
+<div class="no-results" id="noResults">
+📭 没有找到匹配的文章，试试其他关键词吧
+</div>
+
+<div class="related-section">
+<h3>📚 延伸阅读</h3>
+<div class="related-grid">
+<a href="/tutorials/chatgpt-complete-guide.html" class="related-card">
+<h4>ChatGPT完整指南</h4>
+<p>Prompt工程、系统提示词、实战应用</p>
+</a>
+<a href="/tutorials/cursor-complete-guide.html" class="related-card">
+<h4>Cursor编辑器完全指南</h4>
+<p>AI编程从入门到精通</p>
+</a>
+<a href="/tutorials/dalle3-complete-guide.html" class="related-card">
+<h4>DALL-E 3完全指南</h4>
+<p>AI绘画从入门到大师</p>
+</a>
+<a href="/faq.html" class="related-card">
+<h4>AI工具常见问题FAQ</h4>
+<p>35+热门问答，覆盖各类AI工具疑问</p>
+</a>
+</div>
+</div>
+
+</div>
+
+<footer>
+<div class="container">
+<p>© 2026 AI.link.cn | <a href="/">返回首页</a> | <a href="/tutorials/">教程中心</a> | <a href="/pages/tools">工具库</a></p>
+</div>
+</footer>
+
+<script>
+const progressBar = document.getElementById('progressBar');
+window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+    progressBar.style.width = scrollPercent + '%';
+});
+
+// 分类筛选
+const filterBtns = document.querySelectorAll('.filter-btn');
+const articleCards = document.querySelectorAll('.article-card');
+const noResults = document.getElementById('noResults');
+let currentFilter = 'all';
+let currentSearch = '';
+
+function applyFilter() {
+    let visibleCount = 0;
+    articleCards.forEach(card => {
+        const category = card.dataset.category;
+        const text = card.textContent.toLowerCase();
+        const matchCategory = currentFilter === 'all' || category === currentFilter;
+        const matchSearch = currentSearch === '' || text.includes(currentSearch);
+        if (matchCategory && matchSearch) {
+            card.style.display = '';
+            visibleCount++;
+        } else {
+            card.style.display = 'none';
+        }
+    });
+    noResults.classList.toggle('show', visibleCount === 0);
+}
+
+filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentFilter = btn.dataset.filter;
+        applyFilter();
+    });
+});
+
+// 搜索筛选
+const searchInput = document.getElementById('searchInput');
+searchInput.addEventListener('input', () => {
+    currentSearch = searchInput.value.toLowerCase().trim();
+    applyFilter();
+});
+</script>
+</body>
+</html>
