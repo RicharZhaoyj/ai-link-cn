@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stable Diffusion完全指南：从安装到高级出图技巧 | AI.link.cn</title>
+<meta name="description" content="Stable Diffusion完全教程，涵盖WebUI与ComfyUI安装部署、提示词结构、参数详解、模型推荐、ControlNet、LoRA、图生图、局部重绘及实用Prompt模板，从零到高级出图技巧。">
+<meta name="keywords" content="Stable Diffusion教程,SD教程,AI绘画教程,Stable Diffusion安装,SD提示词,ControlNet,LoRA,ComfyUI,WebUI">
+<link rel="canonical" href="https://ai.link.cn/tutorials/stable-diffusion-complete-guide.html">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg: #0a0f1a;
+    --surface: #111827;
+    --surface-2: #1f2937;
+    --text: #f8fafc;
+    --text-muted: #94a3b8;
+    --accent: #a855f7;
+    --accent-light: #c084fc;
+    --success: #22c55e;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --blue: #3b82f6;
+}
+
+*{box-sizing:border-box}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC",sans-serif;background:var(--bg);color:var(--text);line-height:1.8;margin:0;padding:0}
+.container{max-width:800px;margin:0 auto;padding:0 24px}
+
+header{padding:16px 0;border-bottom:1px solid rgba(168,85,247,.2);background:rgba(10,15,26,.98);backdrop-filter:blur(12px);position:sticky;top:0;z-index:100}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.logo{font-size:1.4rem;font-weight:700;color:var(--accent);text-decoration:none;letter-spacing:.02em}
+.nav-links{display:flex;gap:22px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+.nav-links a{color:var(--text-muted);text-decoration:none;font-weight:500;font-size:.95rem;transition:color .2s}
+.nav-links a:hover{color:var(--accent)}
+
+.progress-bar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent-light));z-index:1000;width:0;transition:width .1s}
+
+.hero{padding:56px 0 36px;text-align:center;background:linear-gradient(180deg,rgba(168,85,247,.08),transparent)}
+.hero h1{font-size:2.3rem;line-height:1.3;margin:0 0 14px}
+.hero h1 span{color:var(--accent)}
+.hero p{font-size:1.05rem;color:var(--text-muted);max-width:600px;margin:0 auto 24px}
+.hero-meta{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;font-size:.9rem;color:var(--text-muted)}
+.hero-meta span{display:flex;align-items:center;gap:6px}
+
+.toc-card{background:var(--surface);border:1px solid rgba(168,85,247,.15);border-radius:12px;padding:20px 24px;margin:24px 0}
+.toc-card h3{font-size:1rem;margin:0 0 12px;color:var(--text)}
+.toc-card ul{list-style:none;padding:0;margin:0;columns:2;column-gap:24px}
+.toc-card li{margin-bottom:6px;break-inside:avoid}
+.toc-card a{color:var(--text-muted);text-decoration:none;font-size:.88rem;transition:color .2s}
+.toc-card a:hover{color:var(--accent)}
+
+.tutorial-content{background:var(--surface);border-radius:16px;padding:44px;border:1px solid rgba(168,85,247,.1);margin-top:8px}
+.tutorial-content h2{font-size:1.6rem;color:var(--text);margin:44px 0 16px;padding-bottom:8px;border-bottom:1px solid rgba(168,85,247,.2);scroll-margin-top:80px}
+.tutorial-content h2:first-child{margin-top:0}
+.tutorial-content h3{font-size:1.22rem;color:var(--text);margin:28px 0 12px;scroll-margin-top:80px}
+.tutorial-content p{color:var(--text-muted);margin-bottom:16px;line-height:1.8}
+.tutorial-content ul,.tutorial-content ol{color:var(--text-muted);margin-bottom:16px;padding-left:24px}
+.tutorial-content li{margin-bottom:8px;line-height:1.75}
+.tutorial-content strong{color:var(--text)}
+.tutorial-content a{color:var(--accent-light);text-decoration:none}
+.tutorial-content a:hover{text-decoration:underline}
+
+.prompt-example{background:var(--surface-2);border-left:4px solid var(--accent);border-radius:8px;padding:18px 20px;margin:20px 0}
+.prompt-example .prompt-label{font-size:.8rem;color:var(--accent);font-weight:600;margin-bottom:8px;text-transform:uppercase;letter-spacing:.05em}
+.prompt-example .prompt-text{color:var(--text);font-family:monospace;font-size:.92rem;line-height:1.7;white-space:pre-wrap;margin:0}
+
+.tip-box{background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.3);border-radius:12px;padding:18px 20px;margin:20px 0}
+.tip-box .tip-title{color:var(--success);font-weight:600;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.tip-box p{color:var(--text-muted);margin:0;font-size:.95rem}
+
+.warning-box{background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.3);border-radius:12px;padding:18px 20px;margin:20px 0}
+.warning-box .warning-title{color:var(--warning);font-weight:600;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.warning-box p{color:var(--text-muted);margin:0;font-size:.95rem}
+
+.table-wrap{overflow-x:auto;margin:20px 0;border-radius:8px;border:1px solid rgba(255,255,255,.05)}
+table{width:100%;border-collapse:collapse;font-size:.9rem}
+th{background:var(--surface-2);padding:12px 16px;text-align:left;color:var(--accent);font-weight:600;border-bottom:2px solid rgba(168,85,247,.3)}
+td{padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.05);color:var(--text-muted)}
+tr:last-child td{border-bottom:none}
+
+.related-section{margin-top:36px;padding-top:32px;border-top:1px solid rgba(168,85,247,.2)}
+.related-section h3{font-size:1.25rem;margin-bottom:16px;color:var(--text)}
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.related-card{background:var(--surface-2);border-radius:10px;padding:18px;text-decoration:none;color:inherit;transition:all .2s;border:1px solid rgba(168,85,247,.1);display:block}
+.related-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.related-card h4{font-size:.98rem;margin:0 0 6px;color:var(--text)}
+.related-card p{font-size:.84rem;color:var(--text-muted);margin:0;line-height:1.55}
+
+footer{padding:48px 0;text-align:center;color:#64748b;font-size:.85rem;border-top:1px solid rgba(255,255,255,.05);margin-top:48px}
+footer a{color:var(--text-muted);text-decoration:none;margin:0 6px}
+footer a:hover{color:var(--accent)}
+
+@media(max-width:768px){
+    .nav-links{display:none}
+    .hero h1{font-size:1.7rem}
+    .tutorial-content{padding:24px}
+    .related-grid{grid-template-columns:1fr}
+    .toc-card ul{columns:1}
+}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2F2V94W35E"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-2F2V94W35E');
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Stable Diffusion完全指南：从安装到高级出图技巧","description":"Stable Diffusion完全教程，涵盖WebUI与ComfyUI安装部署、提示词结构、参数详解、模型推荐、ControlNet、LoRA、图生图、局部重绘及实用Prompt模板。","keywords":["Stable Diffusion教程","SD教程","AI绘画教程","Stable Diffusion安装","SD提示词","ControlNet","LoRA"],"author":{"@type":"Organization","name":"AI.link.cn"},"publisher":{"@type":"Organization","name":"AI.link.cn","url":"https://ai.link.cn"},"datePublished":"2026-07-23","dateModified":"2026-07-23","mainEntityOfPage":"https://ai.link.cn/tutorials/stable-diffusion-complete-guide.html","articleSection":"AI绘画教程","inLanguage":"zh-CN"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"首页","item":"https://ai.link.cn/"},
+{"@type":"ListItem","position":2,"name":"教程中心","item":"https://ai.link.cn/tutorials/"},
+{"@type":"ListItem","position":3,"name":"Stable Diffusion完全指南"}
+]}
+</script>
+</head>
+<body>
+<div class="progress-bar" id="progressBar"></div>
+
+<header>
+<div class="container">
+<nav class="nav">
+<a href="/" class="logo">AI.link.cn</a>
+<ul class="nav-links">
+<li><a href="/">首页</a></li>
+<li><a href="/pages/tools/">工具</a></li>
+<li><a href="/tutorials/">教程</a></li>
+<li><a href="/articles/">资讯</a></li>
+<li><a href="/compare/">对比</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<section class="hero">
+<div class="container">
+<h1>Stable Diffusion<span>完全指南</span></h1>
+<p>从安装部署到高级出图技巧，全面掌握开源AI绘画神器</p>
+<div class="hero-meta">
+<span>⏱️ 阅读时间：50分钟</span>
+<span>📊 难度：初级到高级</span>
+<span>📝 更新：2026.07.23</span>
+<span>👁️ 4.2万次学习</span>
+</div>
+</div>
+</section>
+
+<div class="container">
+<div class="toc-card">
+<h3>📋 本文目录</h3>
+<ul>
+<li><a href="#intro">一、基础入门</a></li>
+<li><a href="#install">二、安装部署</a></li>
+<li><a href="#prompt">三、提示词详解</a></li>
+<li><a href="#params">四、常用参数</a></li>
+<li><a href="#models">五、模型推荐</a></li>
+<li><a href="#advanced">六、高级技巧</a></li>
+<li><a href="#templates">七、实用Prompt模板</a></li>
+<li><a href="#faq">八、常见问题与避坑</a></li>
+<li><a href="#summary">九、总结</a></li>
+</ul>
+</div>
+
+<article class="tutorial-content">
+<h2 id="intro">一、Stable Diffusion基础入门</h2>
+
+<h3 id="what-is-sd">1.1 什么是Stable Diffusion</h3>
+<p>Stable Diffusion（简称SD）是2022年由Stability AI开源的潜在扩散模型（Latent Diffusion Model），它能根据文字描述生成高质量图像，是目前<strong>最流行的开源AI绘画模型</strong>。与闭源商业工具不同，SD将模型权重和代码完全开源，任何人都可以在本地电脑上免费部署、训练、微调，从而诞生了繁荣的生态——包括各种WebUI、ComfyUI、上千个微调模型、ControlNet、LoRA等扩展组件。</p>
+<p>SD的工作原理是在低维潜在空间（latent space）中逐步去噪，最终解码为像素图像。这种"潜在扩散"设计让它对显存更友好，普通消费级显卡（8GB显存起）即可流畅运行，这也是它能普及开来的关键原因。截至2026年，主流版本包括SD 1.5、SDXL、SD3以及社区持续优化的各种衍生模型。</p>
+
+<h3 id="sd-vs-mj">1.2 Stable Diffusion与Midjourney的区别</h3>
+<p>很多新手会在SD和Midjourney之间纠结，二者各有定位：</p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>对比维度</th><th>Stable Diffusion</th><th>Midjourney</th></tr></thead>
+<tbody>
+<tr><td>开源情况</td><td>完全开源，可本地部署</td><td>闭源，仅云端服务</td></tr>
+<tr><td>使用成本</td><td>本地免费（需硬件），云端按量</td><td>订阅制，$10/月起</td></tr>
+<tr><td>可控性</td><td>极高，可精调每个参数</td><td>中等，参数相对收敛</td></tr>
+<tr><td>上手难度</td><td>较高，需要折腾环境</td><td>低，Discord里输入即可</td></tr>
+<tr><td>模型生态</td><td>海量checkpoint/LoRA/ControlNet</td><td>官方统一模型</td></tr>
+<tr><td>隐私性</td><td>本地生成，数据不出门</td><td>数据上传到服务器</td></tr>
+<tr><td>出图风格</td><td>自定义空间极大</td><td>美学统一，艺术感强</td></tr>
+</tbody>
+</table>
+</div>
+<p>简单来说：如果你想<strong>"开箱即用、追求艺术感"</strong>，选Midjourney；如果你<strong>"追求极致可控、想做商业项目、需要本地隐私或定制化"</strong>，Stable Diffusion是更好的选择。两者并不冲突，很多专业创作者会同时使用。</p>
+
+<div class="tip-box">
+<div class="tip-title">💡 选型建议</div>
+<p>零基础新手可先用Midjourney或云端SD服务（如国内各大模型平台）感受出图乐趣；当你想深度定制、批量生成、做电商主图或工作流自动化时，再转向本地部署的Stable Diffusion。</p>
+</div>
+
+<h2 id="install">二、安装部署</h2>
+
+<h3 id="hardware">2.1 硬件准备</h3>
+<p>本地运行SD对硬件有基本要求，建议配置如下：</p>
+<ul>
+<li><strong>显卡（GPU）</strong>：NVIDIA显卡是首选，显存8GB起步（如RTX 3060/4060），推荐12GB以上（RTX 4070及以上）以运行SDXL及更大模型。AMD显卡和苹果M系列芯片也可运行但兼容性稍差。</li>
+<li><strong>内存（RAM）</strong>：16GB起步，推荐32GB。</li>
+<li><strong>硬盘</strong>：建议预留100GB以上SSD空间，单个checkpoint模型动辄2-7GB，加上LoRA、VAE、ControlNet模型很快就会塞满。</li>
+<li><strong>系统</strong>：Windows 10/11、Linux、macOS均可，Windows生态最成熟。</li>
+</ul>
+
+<h3 id="webui-install">2.2 WebUI (Automatic1111) 安装</h3>
+<p>WebUI是最经典、生态最完善的图形界面，适合新手和大多数日常出图需求。安装步骤如下：</p>
+<ol>
+<li><strong>安装Python</strong>：安装Python 3.10.6（注意版本，3.11+会有兼容问题），安装时勾选"Add Python to PATH"。</li>
+<li><strong>安装Git</strong>：从git-scm.com下载安装Git for Windows。</li>
+<li><strong>克隆WebUI仓库</strong>：在你想安装的目录下打开终端，执行 <code>git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git</code></li>
+<li><strong>下载模型</strong>：从Civitai或HuggingFace下载一个checkpoint模型（.safetensors格式），放到 <code>stable-diffusion-webui/models/Stable-diffusion/</code> 目录下。</li>
+<li><strong>启动WebUI</strong>：双击运行 <code>webui-user.bat</code>，首次启动会自动下载依赖和CLIP模型（需要科学上网，过程可能持续20-40分钟）。</li>
+<li><strong>访问界面</strong>：启动完成后浏览器打开 <code>http://127.0.0.1:7860</code> 即可使用。</li>
+</ol>
+<p>建议在 <code>webui-user.bat</code> 中配置 <code>COMMANDLINE_ARGS</code>，例如8GB显存可加上 <code>--medvram --opt-split-attention</code>，可显著降低显存占用。</p>
+
+<div class="warning-box">
+<div class="warning-title">⚠️ 首次启动注意</div>
+<p>首次运行会从HuggingFace和GitHub下载大量依赖，国内网络很可能超时失败。建议提前配置好代理，或将 <code>HUGGINGFACE_HUB</code> 镜像源切换为国内镜像。失败后不要反复重试，先检查网络。</p>
+</div>
+
+<h3 id="comfyui-install">2.3 ComfyUI安装</h3>
+<p>ComfyUI是节点式（node-based）界面，类似Blender或Nuke的工作流，对高级用户更友好，显存效率更高，也是2025年后社区发展的主流方向。</p>
+<ol>
+<li><strong>下载ComfyUI</strong>：访问github.com/comfyanonymous/ComfyUI，下载Release压缩包并解压。</li>
+<li><strong>放置模型</strong>：将checkpoint模型放入 <code>ComfyUI/models/checkpoints/</code>，VAE放 <code>models/vae/</code>，LoRA放 <code>models/loras/</code>。</li>
+<li><strong>安装依赖</strong>：进入解压目录，运行 <code>python -m pip install -r requirements.txt</code>。</li>
+<li><strong>启动</strong>：双击 <code>run_nvidia_gpu.bat</code>（N卡）或对应启动脚本，浏览器访问 <code>http://127.0.0.1:8188</code>。</li>
+<li><strong>加载工作流</strong>：ComfyUI默认空白，可将他人分享的JSON工作流拖入界面，或从comfyworkflows.com下载模板。</li>
+</ol>
+<p>WebUI偏向"所见即所得"的表单操作，ComfyUI偏向"搭积木"的工作流编排。建议<strong>新手先学WebUI熟悉概念，再过渡到ComfyUI做高级流程</strong>。两者模型库互通，迁移成本不高。</p>
+
+<h2 id="prompt">三、提示词详解</h2>
+
+<h3 id="positive-prompt">3.1 正向提示词结构</h3>
+<p>SD的提示词写法与Midjourney不同，更强调<strong>关键词堆叠</strong>而非自然语言长句。一个高质量正向提示词通常按以下结构组织：</p>
+<div class="prompt-example">
+<div class="prompt-label">正向提示词公式</div>
+<div class="prompt-text">[主体描述] + [细节特征] + [环境/背景] + [光影氛围] + [构图视角] + [风格/艺术家] + [画质增强词]</div>
+</div>
+
+<p>下面是一个完整示例，描述一位赛博朋克风格的女武士：</p>
+<div class="prompt-example">
+<div class="prompt-label">正向 Prompt 示例</div>
+<div class="prompt-text">1girl, female samurai, cyberpunk outfit, glowing neon katana, (detailed face:1.2), long black hair with red streaks, standing in rain-soaked tokyo street at night, neon signs reflection on wet ground, dramatic cinematic lighting, volumetric fog, low angle shot, masterpiece, best quality, ultra-detailed, 8k, photo realistic, sharp focus</div>
+</div>
+
+<p>解析：开头用 <code>1girl, female samurai</code> 锁定主体；中段细化服装、武器、面部、场景；后段控制光影、构图；结尾用 <code>masterpiece, best quality, 8k</code> 等画质词提升精细度。逗号分隔，越靠前的词权重越大。</p>
+
+<h3 id="negative-prompt">3.2 负向提示词</h3>
+<p>负向提示词告诉模型"不要生成什么"，对SD出图质量影响极大。通用负向提示词模板：</p>
+<div class="prompt-example">
+<div class="prompt-label">通用负向 Prompt</div>
+<div class="prompt-text">lowres, bad anatomy, bad hands, extra fingers, missing fingers, extra limbs, fused fingers, deformed, ugly, duplicate, morbid, mutilated, blurry, watermark, signature, text, cropped, worst quality, low quality, jpeg artifacts, poorly drawn face, mutation</div>
+</div>
+<p>建议把这段保存为预设，每次出图都加载。针对特定场景还可补充，例如人像加 <code>asymmetric eyes, cross-eyed</code>，全身加 <code>missing legs, extra arms</code>。</p>
+
+<h3 id="weight-control">3.3 权重控制</h3>
+<p>SD通过多种语法精确控制关键词权重：</p>
+<ul>
+<li><strong>圆括号增强</strong>：<code>(keyword)</code> 提升约1.1倍，<code>((keyword))</code> 约1.21倍，可叠加。</li>
+<li><strong>数值精确控制</strong>：<code>(keyword:1.3)</code> 表示权重1.3，范围建议0.5-1.5，超过2.0容易画面崩坏。</li>
+<li><strong>方括号减弱</strong>：<code>[keyword]</code> 降低权重，<code>[keyword:0.5]</code> 精确减弱到0.5。</li>
+<li><strong>渐变切换</strong>：<code>[keyword1:keyword2:0.6]</code> 表示前60%步数用keyword1，之后切换到keyword2，可做风格过渡。</li>
+<li><strong>交替词</strong>：<code>[cow|horse]</code> 在每步交替使用，能融合两种概念。</li>
+</ul>
+
+<div class="tip-box">
+<div class="tip-title">💡 权重实战</div>
+<p>面部崩坏时优先用 <code>(detailed face:1.3), (perfect eyes:1.2)</code> 增强面部；想要更明显的风格，把风格词权重拉到1.2-1.4。但切记权重不是越高越好，叠加过多会过曝或失真。</p>
+</div>
+
+<h2 id="params">四、常用参数详解</h2>
+
+<div class="table-wrap">
+<table>
+<thead><tr><th>参数</th><th>推荐范围</th><th>作用说明</th></tr></thead>
+<tbody>
+<tr><td>Steps（采样步数）</td><td>20-40</td><td>去噪迭代次数，越多越精细但越慢。SDXL建议25-30，过50收益递减</td></tr>
+<tr><td>CFG Scale（提示词相关性）</td><td>5-12</td><td>越高越忠于提示词，过高会过饱和失真。人像建议7-9</td></tr>
+<tr><td>Sampler（采样器）</td><td>DPM++ 2M Karras / Euler a</td><td>不同算法效果差异明显。DPM++ 2M Karras速度快质量高，Euler a适合速览</td></tr>
+<tr><td>Seed（随机种子）</td><td>-1（随机）或固定数值</td><td>固定种子可复现结果，便于微调对比</td></tr>
+<tr><td>Batch Size（批大小）</td><td>4-8</td><td>同时生成的图片数量，越大显存占用越高</td></tr>
+<tr><td>Batch Count（批次数）</td><td>按需</td><td>循环生成的批次，配合小Batch Size可生成更多图</td></tr>
+<tr><td>Width / Height</td><td>512x512 / 1024x1024</td><td>SD1.5原生512，SDXL原生1024。非正方形按64倍数调整</td></tr>
+<tr><td>Hires. fix（高清修复）</td><td>放大1.5-2倍</td><td>低分辨率出图后放大重绘，能显著提升细节</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>一个稳健的<strong>出图参数组合</strong>：Steps 28、CFG 7、Sampler DPM++ 2M Karras、分辨率1024x1024（SDXL）或512x768（SD1.5人物），生成满意后开Hires. fix放大1.5倍精修。这是大多数创作者的"舒适区"配置。</p>
+
+<div class="warning-box">
+<div class="warning-title">⚠️ CFG过高的坑</div>
+<p>CFG Scale超过15后图像会色彩过饱和、出现"塑料感"和异常纹理，新手常常误以为是模型问题。如果你发现出图又艳又假，先把CFG降到7-8试试。</p>
+</div>
+
+<h2 id="models">五、模型推荐</h2>
+
+<p>Stable Diffusion的魅力在于海量社区模型。下面按风格推荐几类经典checkpoint：</p>
+
+<h3 id="model-realistic">5.1 写实人像</h3>
+<ul>
+<li><strong>Realistic Vision</strong>：老牌写实模型，皮肤质感、光影真实，适合人像、电商、产品图。</li>
+<li><strong>ChilloutMix / MajicMix Realistic</strong>：亚洲面孔表现优秀，常用于写真、汉服、人像摄影。</li>
+<li><strong>Juggernaut XL</strong>：基于SDXL的高质量写实模型，电影感和商业摄影质感出色。</li>
+</ul>
+
+<h3 id="model-anime">5.2 二次元/动漫</h3>
+<ul>
+<li><strong>Anything V5</strong>：经典二次元模型，泛用性强，新手友好。</li>
+<li><strong>Counterfeit / MeinaMix</strong>：日系插画风格，色彩通透，适合人物立绘。</li>
+<li><strong>Nijijourney风格模型</strong>：模仿Midjourney Niji的二次元质感。</li>
+</ul>
+
+<h3 id="model-art">5.3 艺术插画</h3>
+<ul>
+<li><strong>DreamShaper</strong>：通用泛化强，写实与插画之间平衡，新手推荐。</li>
+<li><strong>Deliberate</strong>：油画、概念艺术风格，适合场景插画。</li>
+<li><strong>Pony Diffusion XL</strong>：SDXL底座，风格化能力强，社区扩展多。</li>
+</ul>
+
+<h3 id="model-sdxl">5.4 SDXL系列</h3>
+<p>SDXL原生模型质量已很高，推荐 <strong>SDXL Base 1.0 + SDXL Refiner</strong> 两阶段出图，或直接用 <strong>Juggernaut XL、DreamShaper XL</strong> 等微调版一步到位。SDXL对显存要求更高，建议12GB以上显卡。</p>
+
+<div class="tip-box">
+<div class="tip-title">💡 模型下载渠道</div>
+<p>主要在 <strong>civitai.com</strong>（俗称C站）和 <strong>huggingface.co</strong> 下载。C站可直接看示例图和提示词，方便参考。下载时认准 .safetensors 格式，避免 .ckpt（存在pickle注入安全风险）。</p>
+</div>
+
+<h2 id="advanced">六、高级技巧</h2>
+
+<h3 id="controlnet">6.1 ControlNet使用</h3>
+<p>ControlNet是SD最具革命性的扩展，它能让模型<strong>依据参考图控制构图、姿态、边缘、深度</strong>等，是商业出图的核心工具。常用类型：</p>
+<ul>
+<li><strong>Canny（边缘检测）</strong>：保留线稿轮廓，适合保持构图、二改同人。</li>
+<li><strong>OpenPose（姿态）</strong>：提取人物骨架，精准控制人物姿势。</li>
+<li><strong>Depth（深度图）</strong>：保留空间前后关系，适合场景重构。</li>
+<li><strong>Tile（分块）</strong>：放大重绘时保持细节一致，强烈推荐用于高清修复。</li>
+<li><strong>IP-Adapter</strong>：以图生图风格迁移，可参考图片的画风、人物特征。</li>
+</ul>
+<p>使用流程：在WebUI的ControlNet面板上传参考图 → 选择预处理和模型 → 设置控制权重（建议0.6-1.0）→ 生成。多个ControlNet可串联（如OpenPose+Canny同时用），实现"姿态+构图"双重控制。</p>
+
+<h3 id="img2img">6.2 图生图（Img2Img）</h3>
+<p>图生图以一张已有图片为基础，按提示词重新绘制，是修图、风格转换的常用功能。关键参数：</p>
+<ul>
+<li><strong>Denoising strength（重绘幅度）</strong>：0-1之间。0.3-0.5做微调（保留原图结构），0.5-0.7做大改风格，0.7以上基本是全新生成。</li>
+<li><strong>Resize mode</strong>：控制缩放模式，注意原图比例与目标分辨率尽量一致，避免拉伸。</li>
+</ul>
+<p>典型场景：把照片重绘为油画（重绘0.5）、修复老照片（重绘0.3）、把草图细化为成品（重绘0.6）。</p>
+
+<h3 id="inpainting">6.3 局部重绘（Inpaint）</h3>
+<p>局部重绘只修改蒙版区域，是修脸、换背景、补物件的利器。操作步骤：</p>
+<ol>
+<li>切换到Img2Img → Inpaint标签页。</li>
+<li>上传原图，用画笔涂抹需要修改的区域（如脸部）。</li>
+<li>写好对应提示词（如修复脸： <code>perfect face, detailed eyes</code>）。</li>
+<li>设置Mask blur（1-2像素）、Denoising（0.5-0.7），生成。</li>
+</ol>
+<p>进阶可用 <strong>Inpaint Anywhere</strong> 插件分区重绘，或结合ControlNet实现精准局部修改。商业项目几乎都靠局部重绘来精修出图。</p>
+
+<h3 id="lora">6.4 LoRA使用</h3>
+<p>LoRA是轻量化微调模型，几百MB就能让基础模型学会特定人物、画风、物件，是SD生态的灵魂。使用方法：</p>
+<ul>
+<li>将LoRA文件（.safetensors）放入 <code>models/Lora/</code> 目录，刷新WebUI。</li>
+<li>在正向提示词中通过 <code>&lt;lora:文件名:0.7&gt;</code> 调用，权重0.6-0.9常用。</li>
+<li>可叠加多个LoRA，如 <code>&lt;lora:characterA:0.7&gt; &lt;lora:styleB:0.5&gt;</code>，组合人物+画风。</li>
+</ul>
+<p>C站有海量角色、明星、画风、服饰LoRA。下载时注意LoRA适配的基础模型版本（SD1.5的LoRA不能用于SDXL），并参考作者给出的示例提示词。</p>
+
+<div class="tip-box">
+<div class="tip-title">💡 LoRA叠加技巧</div>
+<p>多个LoRA叠加容易"打架"导致画面崩坏。建议每加一个先单独测试权重，确认无冲突再组合；总权重之和不超过1.5比较稳妥。出现崩图时优先降低LoRA权重而非调其他参数。</p>
+</div>
+
+<h2 id="templates">七、实用Prompt模板</h2>
+
+<h3 id="tpl-portrait">7.1 人像摄影</h3>
+<div class="prompt-example">
+<div class="prompt-label">人像模板</div>
+<div class="prompt-text">1girl, solo, (detailed face:1.2), portrait, looking at viewer, professional makeup, [hair color] long hair, wearing [clothing], soft bokeh background, golden hour lighting, shot on Sony A7R IV, 85mm f1.4, shallow depth of field, masterpiece, best quality, ultra realistic, 8k
+Negative: lowres, bad anatomy, deformed hands, extra fingers, ugly, blurry, watermark, text</div>
+</div>
+
+<h3 id="tpl-landscape">7.2 风景大片</h3>
+<div class="prompt-example">
+<div class="prompt-label">风景模板</div>
+<div class="prompt-text">breathtaking landscape, [mountain range / ocean / forest], dramatic sky at sunset, volumetric clouds, god rays, reflections on water, ultra wide angle, cinematic composition, highly detailed, photorealistic, 8k, award winning photography, National Geographic style
+Negative: lowres, blurry, people, text, watermark, oversaturated</div>
+</div>
+
+<h3 id="tpl-anime">7.3 动漫人物</h3>
+<div class="prompt-example">
+<div class="prompt-label">动漫模板</div>
+<div class="prompt-text">1girl, anime style, [character description], school uniform / fantasy armor, expressive eyes, dynamic pose, cherry blossoms background, soft cell shading, vibrant colors, key visual, studio ghibli inspired, masterpiece, high quality
+Negative: 3d, realistic, photo, lowres, bad anatomy, extra limbs, text, signature</div>
+</div>
+
+<h3 id="tpl-product">7.4 产品/电商</h3>
+<div class="prompt-example">
+<div class="prompt-label">电商产品模板</div>
+<div class="prompt-text">professional product photography, [product name] on marble podium, soft studio lighting, gradient background, sharp focus, high detail, commercial photography, 8k, octane render, centered composition
+Negative: lowres, blurry, hand, person, text, watermark, distorted, cluttered background</div>
+</div>
+
+<p>使用时把方括号部分替换成你的具体需求，再根据出图效果微调权重和负向词。建议把这些模板保存为WebUI的"Presets"，一键调用。</p>
+
+<h2 id="faq">八、常见问题与避坑指南</h2>
+
+<h3>Q1：出图全是糊的、像马赛克怎么办？</h3>
+<p>九成是<strong>分辨率没选对</strong>。SD1.5原生512，用1024会糊；SDXL原生1024，用512会糊。其次检查Steps是否过低（建议≥20）、是否误开了"low quality"预设。模型版本和分辨率必须匹配。</p>
+
+<h3>Q2：人物手部一直崩坏？</h3>
+<p>手部是所有AI绘画的难点。综合方案：①负向加 <code>bad hands, extra fingers, fused fingers, deformed hands</code>；②用ControlNet的OpenPose Hand模型精准控制手部姿态；③出图后用局部重绘单独修手；④用 <code>ADetailer</code> 插件自动修复面部和手部。</p>
+
+<h3>Q3：模型加载报错 "out of memory"？</h3>
+<p>显存不足。优先尝试：①启动参数加 <code>--medvram</code> 或 <code>--lowvram</code>；②关闭后台占显存程序；③降低分辨率和Batch Size；④改用更省显存的ComfyUI；⑤实在不行升级到12GB+显存显卡。</p>
+
+<h3>Q4：生成的图跟提示词对不上？</h3>
+<p>提示词太长或冲突会导致模型"听不懂"。建议：①关键词控制在75个token以内；②按"主体-细节-风格"顺序排列；③删除矛盾的词（如同时要"realistic"和"anime"）；④适当提高CFG Scale（7-9）。</p>
+
+<h3>Q5：LoRA加载了没效果？</h3>
+<p>排查：①LoRA版本和基础模型是否匹配（SD1.5 LoRA只能配SD1.5系模型）；②权重是否过低（从0.7开始试）；③触发词是否写了（很多LoRA需要特定关键词激活，作者页面会注明）。</p>
+
+<div class="warning-box">
+<div class="warning-title">⚠️ 商用版权避坑</div>
+<p>不同模型License差异大：部分写实模型禁止商用，部分LoRA禁止用于真实明星形象。商业项目务必查阅模型License，优先选MIT/Apache协议的模型，避免使用涉及真人肖像的LoRA。</p>
+</div>
+
+<h2 id="summary">九、总结</h2>
+<p>Stable Diffusion的上手曲线确实比Midjourney陡，但回报是<strong>极致的可控性和无限的定制空间</strong>。本篇教程带你走完了从安装、提示词、参数、模型到ControlNet、LoRA、图生图的全流程，掌握了这些你已超过90%的SD用户。</p>
+
+<p>学习路径建议：先用WebUI+DreamShaper熟悉基础出图 → 再玩LoRA做角色和画风 → 接着学ControlNet实现构图控制 → 最后转ComfyUI搭建自动化工作流。坚持每天产出10张图、对照C站优秀作品分析提示词，一个月就能形成自己的出图方法论。</p>
+
+<p>AI绘画是工具，更是审美和表达力的延伸。愿你用SD创造出独属于自己的视觉世界！</p>
+
+<div class="related-section">
+<h3>📚 相关教程推荐</h3>
+<div class="related-grid">
+<a href="/tutorials/midjourney-complete-guide.html" class="related-card">
+<h4>Midjourney完整教程</h4>
+<p>提示词结构、参数、风格控制全掌握</p>
+</a>
+<a href="/pages/tools/midjourney.html" class="related-card">
+<h4>AI绘画工具详解</h4>
+<p>主流AI绘画工具功能与价格对比</p>
+</a>
+<a href="/compare/" class="related-card">
+<h4>AI图像工具对比</h4>
+<p>SD vs Midjourney vs DALL-E 横评</p>
+</a>
+<a href="/tutorials/chatgpt-complete-guide.html" class="related-card">
+<h4>ChatGPT完全指南</h4>
+<p>用ChatGPT辅助生成SD提示词</p>
+</a>
+<a href="/tutorials/" class="related-card">
+<h4>更多AI教程</h4>
+<p>Claude、Copilot等工具实战教程</p>
+</a>
+<a href="/discover/" class="related-card">
+<h4>AI新品发现</h4>
+<p>最新AI绘画模型与工具趋势</p>
+</a>
+</div>
+</div>
+</article>
+</div>
+
+<footer>
+<div class="container">
+<p>© 2026 AI.link.cn | <a href="/">返回首页</a> | <a href="/tutorials/">教程中心</a> | <a href="/pages/tools/">工具库</a> | <a href="/articles/">资讯</a> | <a href="/compare/">工具对比</a></p>
+<p>本站内容仅供参考学习，AI工具请通过官方渠道使用。</p>
+</div>
+</footer>
+
+<script>
+const progressBar = document.getElementById('progressBar');
+window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    progressBar.style.width = scrollPercent + '%';
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Agent开发入门指南：从零构建你的第一个智能体 | AI.link.cn</title>
+    <meta name="description" content="2026年最系统的AI Agent开发入门指南，介绍AI Agent概念、主流开发框架（LangChain、AutoGPT、CrewAI、OpenAI Agents SDK）、开发步骤与实战案例。">
+    <meta name="keywords" content="AI Agent开发,智能体开发,AI Agent教程,AutoGPT,LangChain,CrewAI,AI智能体">
+    <link rel="canonical" href="https://ai.link.cn/articles/ai-agent-development-guide.html">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        :root {
+            --bg: #0a0f1a;
+            --surface: #111827;
+            --surface-2: #1f2937;
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #a855f7;
+            --accent-light: #c084fc;
+            --success: #22c55e;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --blue: #3b82f6;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        header {
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(168, 85, 247, 0.2);
+            background: rgba(10, 15, 26, 0.98);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo { font-size: 1.4rem; font-weight: 700; color: var(--accent); text-decoration: none; }
+
+        .nav-links { display: flex; gap: 20px; list-style: none; flex-wrap: wrap; }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover, .nav-links a.active { color: var(--accent); }
+
+        .progress-bar {
+            position: fixed;
+            top: 60px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: rgba(168, 85, 247, 0.15);
+            z-index: 99;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent), var(--accent-light));
+            transition: width 0.1s ease;
+            width: 0%;
+        }
+
+        .article-header {
+            padding: 48px 0 32px;
+            text-align: center;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .article-category {
+            background: rgba(168, 85, 247, 0.15);
+            color: var(--accent);
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+        }
+
+        .article-title {
+            font-size: 2.1rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+
+        .article-subtitle {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+            max-width: 640px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .article-banner {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(59, 130, 246, 0.1));
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 32px;
+            border: 1px solid rgba(168, 85, 247, 0.2);
+        }
+
+        .article-banner h3 {
+            font-size: 1.15rem;
+            margin-bottom: 12px;
+            color: var(--accent);
+        }
+
+        .article-banner ul { list-style: none; padding-left: 0; }
+
+        .article-banner li {
+            padding: 6px 0;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .article-banner li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+        }
+
+        .article-content { padding: 24px 0; }
+
+        .section { margin-bottom: 40px; }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(168, 85, 247, 0.2);
+        }
+
+        .section-title::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 20px;
+            background: var(--accent);
+            border-radius: 2px;
+            margin-right: 12px;
+            vertical-align: middle;
+        }
+
+        .article-content h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 24px 0 12px;
+            color: var(--text);
+        }
+
+        .article-content p {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .article-content strong { color: var(--text); font-weight: 600; }
+
+        .article-content ul, .article-content ol {
+            margin: 12px 0 16px 24px;
+            color: var(--text-muted);
+        }
+
+        .article-content li { margin-bottom: 8px; }
+
+        .article-content code {
+            background: var(--surface-2);
+            padding: 2px 8px;
+            border-radius: 4px;
+            color: var(--accent-light);
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.88em;
+        }
+
+        .article-content pre {
+            background: var(--surface);
+            border: 1px solid rgba(168, 85, 247, 0.15);
+            border-radius: 10px;
+            padding: 18px 20px;
+            overflow-x: auto;
+            margin: 16px 0;
+        }
+
+        .article-content pre code {
+            background: transparent;
+            padding: 0;
+            color: var(--text);
+            font-size: 0.86em;
+            line-height: 1.6;
+        }
+
+        .framework-card {
+            background: var(--surface);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 16px 0;
+            border: 1px solid rgba(168, 85, 247, 0.15);
+        }
+
+        .framework-card h4 {
+            color: var(--accent);
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .framework-card .meta {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+
+        .framework-card p {
+            font-size: 0.92rem;
+            margin-bottom: 6px;
+        }
+
+        .compare-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: var(--surface);
+            border-radius: 12px;
+            overflow: hidden;
+            font-size: 0.9rem;
+        }
+
+        .compare-table th {
+            background: var(--surface-2);
+            color: var(--accent);
+            padding: 12px 14px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 1px solid rgba(168, 85, 247, 0.2);
+        }
+
+        .compare-table td {
+            padding: 12px 14px;
+            border-bottom: 1px solid rgba(168, 85, 247, 0.08);
+            color: var(--text-muted);
+            vertical-align: top;
+        }
+
+        .compare-table tr:last-child td { border-bottom: none; }
+        .compare-table td:first-child { color: var(--text); font-weight: 600; }
+
+        .highlight-box {
+            background: var(--surface);
+            border-left: 4px solid var(--accent);
+            border-radius: 0 8px 8px 0;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .highlight-box p { color: var(--text); font-weight: 500; margin: 0; }
+
+        .tip-box {
+            background: rgba(245, 158, 11, 0.08);
+            border-left: 4px solid var(--warning);
+            border-radius: 0 8px 8px 0;
+            padding: 16px 20px;
+            margin: 16px 0;
+        }
+
+        .tip-box p { color: var(--text); font-size: 0.92rem; margin: 0; }
+
+        .step-list {
+            counter-reset: step;
+            list-style: none;
+            padding-left: 0;
+            margin: 20px 0;
+        }
+
+        .step-list li {
+            counter-increment: step;
+            padding: 10px 0 10px 48px;
+            position: relative;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .step-list li::before {
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
+            text-align: center;
+            border-radius: 50%;
+            background: rgba(168, 85, 247, 0.15);
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .related-articles {
+            padding: 40px 0;
+            margin-top: 40px;
+            border-top: 1px solid rgba(168, 85, 247, 0.2);
+        }
+
+        .related-title { font-size: 1.3rem; font-weight: 600; margin-bottom: 20px; }
+
+        .related-list { display: flex; flex-direction: column; gap: 12px; }
+
+        .related-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 16px;
+            background: var(--surface);
+            border-radius: 10px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s;
+            border: 1px solid rgba(168, 85, 247, 0.1);
+        }
+
+        .related-item:hover {
+            border-color: var(--accent);
+            background: rgba(168, 85, 247, 0.05);
+        }
+
+        .related-icon {
+            width: 40px; height: 40px;
+            border-radius: 8px;
+            background: rgba(168, 85, 247, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            margin-right: 12px;
+        }
+
+        .related-content { flex: 1; }
+        .related-title-text { font-weight: 600; font-size: 0.95rem; margin-bottom: 4px; }
+        .related-desc { font-size: 0.8rem; color: var(--text-muted); }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 24px;
+            font-size: 0.95rem;
+        }
+
+        .back-link:hover { text-decoration: underline; }
+
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid rgba(168, 85, 247, 0.2);
+            margin-top: 40px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        footer a { color: var(--accent); text-decoration: none; margin: 0 6px; }
+
+        @media (max-width: 768px) {
+            .article-title { font-size: 1.5rem; }
+            .article-banner { padding: 20px; }
+            .nav-links { gap: 12px; }
+            .compare-table { font-size: 0.78rem; }
+            .compare-table th, .compare-table td { padding: 8px 8px; }
+            .article-content pre { padding: 12px; }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "AI Agent开发入门指南：从零构建你的第一个智能体",
+        "description": "2026年最系统的AI Agent开发入门指南，介绍AI Agent概念、主流开发框架（LangChain、AutoGPT、CrewAI、OpenAI Agents SDK）、开发步骤与实战案例。",
+        "author": {"@type": "Organization", "name": "AI.link.cn 编辑部"},
+        "publisher": {"@type": "Organization", "name": "AI.link.cn"},
+        "datePublished": "2026-07-10",
+        "dateModified": "2026-07-22",
+        "image": "https://ai.link.cn/images/ai-agent-development-guide.jpg",
+        "articleSection": "AI Agent",
+        "keywords": ["AI Agent开发", "智能体开发", "AI Agent教程", "AutoGPT", "LangChain"]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="nav">
+                <a href="/" class="logo">AI.link.cn</a>
+                <ul class="nav-links">
+                    <li><a href="/">首页</a></li>
+                    <li><a href="/pages/tools/">工具</a></li>
+                    <li><a href="/tutorials/">教程</a></li>
+                    <li><a href="/articles/" class="active">资讯</a></li>
+                    <li><a href="/compare/">对比</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="progress-bar">
+        <div class="progress-bar-fill" id="progressBar"></div>
+    </div>
+
+    <div class="container">
+        <a href="/articles/" class="back-link">← 返回资讯列表</a>
+
+        <div class="article-header">
+            <div class="article-meta">
+                <span class="article-category">AI Agent</span>
+                <span>2026年07月10日</span>
+                <span>阅读时间：16分钟</span>
+            </div>
+            <h1 class="article-title">AI Agent开发入门指南：从零构建你的第一个智能体</h1>
+            <p class="article-subtitle">2026年AI Agent已经成为大模型应用的主流形态。本文从概念、框架选型、开发步骤到实战案例，带你系统入门AI Agent开发，并在文末给出一个可运行的Demo。</p>
+        </div>
+
+        <div class="article-banner">
+            <h3>📋 本文要点</h3>
+            <ul>
+                <li>AI Agent vs 普通大模型调用的本质区别</li>
+                <li>4大主流开发框架对比：LangChain、CrewAI、AutoGPT、OpenAI Agents SDK</li>
+                <li>Agent开发的核心5步：目标定义、工具设计、Prompt工程、循环控制、评估迭代</li>
+                <li>实战案例：用LangChain构建一个"市场调研Agent"</li>
+                <li>常见坑点与最佳实践</li>
+            </ul>
+        </div>
+
+        <article class="article-content">
+            <section class="section">
+                <h2 class="section-title">一、什么是AI Agent？</h2>
+                <p>AI Agent（智能体）是大模型从"对话工具"走向"自主执行者"的关键形态。普通的大模型调用是<strong>一问一答</strong>——你给一个输入，模型返回一个输出，整个交互是单轮的、被动的。</p>
+                <p>而AI Agent具备三个核心能力：</p>
+                <ul>
+                    <li><strong>自主规划：</strong>把复杂目标拆解为多个子任务，自主决定执行顺序</li>
+                    <li><strong>工具调用：</strong>能调用搜索、计算、数据库、API等外部工具，突破模型的"知识截止"和"无副作用"限制</li>
+                    <li><strong>循环反思：</strong>能根据工具返回的结果调整下一步行动，遇到错误能自我修正</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <p>通俗类比：普通大模型调用像"问一个无所不知但只能动嘴的专家"，AI Agent像"雇一个会自己查资料、跑腿、写文档、还能复盘的助理"。</p>
+                </div>
+
+                <p>2026年AI Agent已经从实验室走向生产环境。OpenAI的Operator、Anthropic的Claude Computer Use、字节跳动的Coze、智谱的AutoGLM都是典型的Agent产品。对开发者来说，掌握Agent开发已经成为大模型应用层最重要的技能之一。</p>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">二、Agent vs Workflow：两个关键概念</h2>
+                <p>在开始动手前，必须分清两个容易混淆的概念：</p>
+                <ul>
+                    <li><strong>Workflow（工作流）：</strong>预定义了步骤和分支的LLM调用流水线，每一步做什么、什么时候切换都是写死的。比如"先搜索→再总结→再翻译"。</li>
+                    <li><strong>Agent（智能体）：</strong>只给目标，由LLM自主决定下一步动作。LLM既是"执行者"也是"决策者"。</li>
+                </ul>
+                <p>判断标准很简单：<strong>路径是否由LLM动态决定</strong>。是，则属于Agent；否，则属于Workflow。</p>
+                <p>实践中两者常常结合使用：Workflow处理稳定流程，Agent处理需要灵活决策的环节。Anthropic在2025年发布的《Building Effective Agents》一文对此有深入论述，强烈推荐阅读。</p>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">三、主流开发框架对比</h2>
+                <p>2026年AI Agent开发框架已经从"百花齐放"收敛为"四强并立"。每个框架都有自己的强项场景：</p>
+
+                <div class="framework-card">
+                    <h4>1. LangChain / LangGraph</h4>
+                    <div class="meta">语言：Python / JS · GitHub星标：100k+ · 学习曲线：中等</div>
+                    <p><strong>定位：</strong>大模型应用开发的"瑞士军刀"。LangChain提供完整的LLM应用组件（模型封装、Prompt模板、Memory、Tools、Retrieval等），LangGraph在其基础上提供基于状态图的Agent编排能力，支持循环、分支、人在回路（human-in-the-loop）等复杂流程。</p>
+                    <p><strong>优势：</strong>生态最大、组件最全、文档丰富、社区活跃。LangGraph的图结构让复杂Agent的状态管理变得清晰。</p>
+                    <p><strong>劣势：</strong>API变更频繁、抽象层较重、对简单场景略显笨重。</p>
+                    <p><strong>适合：</strong>需要构建复杂、有状态、多步推理Agent的团队；企业级应用。</p>
+                </div>
+
+                <div class="framework-card">
+                    <h4>2. CrewAI</h4>
+                    <div class="meta">语言：Python · GitHub星标：30k+ · 学习曲线：低</div>
+                    <p><strong>定位：</strong>主打"多Agent协作"。你定义多个角色（Researcher、Writer、Editor等），每个角色有专属工具和目标，CrewAI让它们按顺序或并行协作完成任务。API设计极其直观，5行代码就能跑起来一个多Agent流程。</p>
+                    <p><strong>优势：</strong>多Agent协作天然支持、API简洁、上手快、社区活跃。</p>
+                    <p><strong>劣势：</strong>对底层控制力较弱、对复杂状态管理支持有限。</p>
+                    <p><strong>适合：</strong>多角色协作场景（内容生产、研究分析、产品研发）；快速原型。</p>
+                </div>
+
+                <div class="framework-card">
+                    <h4>3. OpenAI Agents SDK（原Swarm）</h4>
+                    <div class="meta">语言：Python · GitHub星标：20k+ · 学习曲线：低</div>
+                    <p><strong>定位：</strong>OpenAI官方推出的轻量级多Agent框架。核心理念是"Agent + Handoff"——每个Agent有专属指令和工具，Agent之间通过"交接"传递控制权。极其轻量，没有复杂的抽象层。</p>
+                    <p><strong>优势：</strong>官方背书、与OpenAI模型深度集成、轻量易上手、Tracing内置。</p>
+                    <p><strong>劣势：</strong>对非OpenAI模型支持一般、功能相对精简。</p>
+                    <p><strong>适合：</strong>OpenAI生态用户、轻量级多Agent应用、教学demo。</p>
+                </div>
+
+                <div class="framework-card">
+                    <h4>4. AutoGPT / AutoGen</h4>
+                    <div class="meta">语言：Python · GitHub星标：170k+ · 学习曲线：中高</div>
+                    <p><strong>定位：</strong>AutoGen是微软推出的多Agent对话框架，强调Agent之间的"群聊式"协作。AutoGPT则是开源社区最早的自主Agent项目之一，2026年已经演进为可构建生产级自主Agent的平台。</p>
+                    <p><strong>优势：</strong>AutoGen对多Agent对话编排能力强、支持人在回路；AutoGPT自主性最强、插件生态丰富。</p>
+                    <p><strong>劣势：</strong>AutoGen API相对复杂；AutoGPT稳定性需自行把控。</p>
+                    <p><strong>适合：</strong>研究型项目、需要Agent间深度讨论的场景、追求极致自主性。</p>
+                </div>
+
+                <table class="compare-table">
+                    <thead>
+                        <tr><th>维度</th><th>LangGraph</th><th>CrewAI</th><th>Agents SDK</th><th>AutoGen</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>学习曲线</td><td>中</td><td>低</td><td>低</td><td>中高</td></tr>
+                        <tr><td>多Agent协作</td><td>支持</td><td>核心强项</td><td>支持</td><td>核心强项</td></tr>
+                        <tr><td>状态管理</td><td>图结构，强</td><td>简单</td><td>简单</td><td>对话历史</td></tr>
+                        <tr><td>人在回路</td><td>原生支持</td><td>支持</td><td>支持</td><td>原生支持</td></tr>
+                        <tr><td>模型自由度</td><td>任意</td><td>任意</td><td>OpenAI优先</td><td>任意</td></tr>
+                        <tr><td>生态规模</td><td>最大</td><td>中等</td><td>中等</td><td>较大</td></tr>
+                        <tr><td>典型场景</td><td>复杂企业应用</td><td>多角色协作</td><td>OpenAI生态</td><td>研究/复杂对话</td></tr>
+                    </tbody>
+                </table>
+
+                <div class="tip-box">
+                    <p>⚠️ <strong>选型建议：</strong>初学者从CrewAI或OpenAI Agents SDK起步最快；构建企业级复杂Agent选LangGraph；需要深度多Agent讨论选AutoGen。不要一上来就追求"最强框架"，先把一个Agent跑通比选对框架更重要。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">四、Agent开发5步法</h2>
+                <p>无论用哪个框架，构建一个Agent都遵循以下5个核心步骤：</p>
+
+                <h3>第1步：明确Agent的目标与边界</h3>
+                <p>先问自己三个问题：①Agent要解决什么具体问题？②它的输入是什么、输出是什么？③哪些事它能做、哪些事它不能做？</p>
+                <p>错误示范："做一个帮我处理工作的Agent"——太宽泛，无法落地。正确示范："做一个市场调研Agent，输入是一个公司名，输出是一份包含公司业务、竞品、近期动态的Markdown报告"。</p>
+
+                <h3>第2步：设计工具集（Tools）</h3>
+                <p>Agent的能力边界由工具决定。常见工具包括：网络搜索（Tavily、SerpAPI）、网页抓取（Firecrawl、Jina Reader）、数据库查询、文件读写、代码执行、API调用、计算器等。</p>
+                <p>设计工具的关键原则：①每个工具职责单一、命名清晰；②工具描述（description）要写得让LLM能准确判断何时使用；③输入输出用Pydantic或JSON Schema严格定义。</p>
+
+                <h3>第3步：编写System Prompt</h3>
+                <p>System Prompt是Agent的"角色说明书"。好的System Prompt包含：①角色定位；②任务目标；③可用工具及其使用时机；④输出格式约束；⑤边界与禁止行为；⑥示例（few-shot）。</p>
+
+                <h3>第4步：实现Agent循环</h3>
+                <p>Agent的核心是"思考-行动-观察"循环（ReAct范式）：LLM思考下一步该做什么→调用工具→观察返回结果→继续思考……直到LLM判断任务完成。</p>
+                <p>实现时要注意：①设置最大迭代次数防止死循环；②对工具调用做超时处理；③错误信息回传给LLM让其自我修正；④关键步骤加入"人在回路"确认。</p>
+
+                <h3>第5步：评估与迭代</h3>
+                <p>Agent开发最大的挑战是评估——同样的输入可能产生不同的执行路径。建议：①准备10-20个测试用例覆盖典型场景；②记录每次执行的完整trace用于调试；③关注"成功率""平均步数""平均token消耗""平均耗时"四个核心指标；④用LLM-as-Judge自动评分。</p>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">五、实战案例：用LangChain构建市场调研Agent</h2>
+                <p>下面我们用LangChain + LangGraph构建一个简化版的市场调研Agent。它接受一个公司名作为输入，自主搜索公司信息、抓取相关网页、生成结构化报告。</p>
+
+                <h3>完整代码</h3>
+                <pre><code>from typing import Annotated, TypedDict
+from langchain_openai import ChatOpenAI
+from langchain_community.tools.tavily_search import TavilySearchResults
+from langchain_core.messages import HumanMessage, SystemMessage
+from langgraph.graph import StateGraph, START, END
+from langgraph.graph.message import add_messages
+from langgraph.prebuilt import ToolNode, tools_condition
+
+# 1. 定义工具
+search = TavilySearchResults(max_results=5)
+tools = [search]
+
+# 2. 定义模型并绑定工具
+model = ChatOpenAI(model="gpt-4o", temperature=0)
+model_with_tools = model.bind_tools(tools)
+
+# 3. 定义状态
+class State(TypedDict):
+    messages: Annotated[list, add_messages]
+
+# 4. 定义Agent节点
+SYSTEM_PROMPT = """你是一位资深市场调研分析师。
+任务：根据用户给出的公司名，产出一份结构化的市场调研报告。
+
+报告必须包含以下章节：
+1. 公司概况（业务、规模、成立时间）
+2. 核心产品与服务
+3. 主要竞争对手
+4. 近期重要动态
+5. 简要分析
+
+你可以使用搜索工具获取最新信息。每个章节至少基于2条搜索结果。
+输出格式：Markdown。"""
+
+def agent_node(state: State):
+    messages = [SystemMessage(content=SYSTEM_PROMPT)] + state["messages"]
+    response = model_with_tools.invoke(messages)
+    return {"messages": [response]}
+
+# 5. 构建Graph
+graph = StateGraph(State)
+graph.add_node("agent", agent_node)
+graph.add_node("tools", ToolNode(tools))
+graph.add_edge(START, "agent")
+graph.add_conditional_edges("agent", tools_condition)
+graph.add_edge("tools", "agent")
+graph.add_edge("agent", END)
+
+# 6. 编译并运行
+app = graph.compile()
+result = app.invoke({"messages": [HumanMessage(content="调研一下 Anthropic 这家公司")]})
+print(result["messages"][-1].content)</code></pre>
+
+                <h3>代码解读</h3>
+                <ol class="step-list">
+                    <li><strong>定义工具：</strong>用Tavily搜索API作为Agent的"眼睛"，让它能查最新信息。</li>
+                    <li><strong>绑定工具：</strong>通过bind_tools让模型知道有哪些工具可调用、何时调用。</li>
+                    <li><strong>定义状态：</strong>LangGraph用TypedDict管理状态，messages字段自动累加。</li>
+                    <li><strong>定义Agent节点：</strong>核心是System Prompt，明确角色、任务、输出格式。</li>
+                    <li><strong>构建Graph：</strong>START→agent→（条件分支：要调用工具则去tools节点，否则END）→tools→回到agent。这就是ReAct循环。</li>
+                    <li><strong>编译运行：</strong>compile()把图编译为可执行对象，invoke触发执行。</li>
+                </ol>
+
+                <div class="tip-box">
+                    <p>💡 <strong>扩展建议：</strong>①加上Firecrawl工具让Agent能抓取网页正文；②加上文件写入工具让Agent能把报告保存为.md文件；③加上Human-in-the-loop让Agent在关键步骤暂停确认。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">六、常见坑点与最佳实践</h2>
+
+                <h3>坑点1：Agent陷入死循环</h3>
+                <p>表现：Agent反复调用同一个工具、产生同样的错误、永远不收敛。解决：①设置max_iterations（建议10-20）；②在System Prompt里明确"如果尝试3次仍失败，请直接给出当前已知信息并说明限制"；③用LangGraph的checkpointer保存中间状态便于调试。</p>
+
+                <h3>坑点2：工具描述不清导致误用</h3>
+                <p>表现：Agent在不该调用工具时调用、或调用了错误的工具。解决：工具的name和description要写得像写给新同事看的SOP——明确"这个工具做什么""什么时候该用""什么时候不该用"。比如"search_news"应描述为"搜索最近7天的新闻，用于获取公司近期动态。当需要历史信息（早于7天）时不要使用此工具"。</p>
+
+                <h3>坑点3：Token爆炸</h3>
+                <p>表现：长任务跑着跑着上下文超出模型限制。解决：①用summarization定期压缩历史消息；②只把最近N轮对话保留为完整message，更早的压缩为摘要；③工具返回结果要精简，避免返回大段原始HTML。</p>
+
+                <h3>坑点4：评估困难</h3>
+                <p>表现：改了一个Prompt，不知道是变好还是变坏了。解决：①建立固定的测试集；②用LLM-as-Judge按维度打分（准确性、完整性、格式、可读性）；③记录每次变更的trace，对比同一输入的执行差异。</p>
+
+                <h3>坑点5：忽视安全与成本</h3>
+                <p>表现：Agent自主执行了危险操作（删文件、发邮件）或烧光API预算。解决：①危险工具必须加human-in-the-loop确认；②设置每日token预算上限；③对工具调用做权限分级。</p>
+
+                <div class="highlight-box">
+                    <p>核心心法：Agent开发的难点不在"写代码"，而在"调教"。把它当成培养一个新员工——清晰的指令、明确的边界、可量化的评估、持续的反馈，比追求"最强模型"更重要。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">七、进阶方向：从单Agent到多Agent系统</h2>
+                <p>当你能熟练构建单Agent后，下一个台阶是多Agent系统（Multi-Agent System）。核心思想是<strong>让多个专精Agent协作完成复杂任务</strong>，类似人类团队的分工。</p>
+                <p>常见的多Agent模式：</p>
+                <ul>
+                    <li><strong>主管-工人模式（Orchestrator-Worker）：</strong>一个主管Agent拆解任务、分发给多个工人Agent，最后汇总。适合内容生产、研究报告等场景。</li>
+                    <li><strong>辩论模式：</strong>多个Agent从不同立场讨论同一问题，最后由裁判Agent综合。适合决策支持、风险评估。</li>
+                    <li><strong>流水线模式：</strong>Agent按顺序处理——Researcher调研→Writer写作→Editor审校→Publisher发布。适合内容生产线。</li>
+                </ul>
+                <p>CrewAI和OpenAI Agents SDK对多Agent协作有原生支持，是入门多Agent系统的推荐起点。</p>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">八、总结与学习路径</h2>
+                <p>AI Agent是2026年大模型应用层最值得投入的方向。掌握Agent开发，你能构建出真正"能干活"的AI应用，而不仅仅是"会聊天"的对话框。</p>
+                <p>推荐的学习路径：</p>
+                <ol class="step-list">
+                    <li><strong>第1周：</strong>读Anthropic的《Building Effective Agents》和OpenAI的《Practices for Building Agents》两篇官方文档，建立概念框架。</li>
+                    <li><strong>第2周：</strong>用OpenAI Agents SDK或CrewAI跑通一个最简单的多Agent demo，建立直觉。</li>
+                    <li><strong>第3-4周：</strong>用LangGraph构建一个有状态、带工具的单Agent，跑通完整ReAct循环。</li>
+                    <li><strong>第2个月：</strong>选一个真实场景（比如市场调研、代码审查、客户支持）构建生产级Agent，加入评估、监控、人在回路。</li>
+                    <li><strong>第3个月：</strong>尝试多Agent系统，理解不同协作模式的优劣。</li>
+                </ol>
+
+                <div class="highlight-box">
+                    <p>最后一句：Agent开发是一门"工程+艺术"的混合手艺。理论再好不如动手做一个——从今天的Hello World Agent开始，比你纠结三个月选型更有价值。</p>
+                </div>
+            </section>
+        </article>
+
+        <div class="related-articles">
+            <h2 class="related-title">📌 相关推荐</h2>
+            <div class="related-list">
+                <a href="/articles/ai-tools-ranking-2026.html" class="related-item">
+                    <div class="related-icon">🏆</div>
+                    <div class="related-content">
+                        <div class="related-title-text">2026年AI工具排行榜：50款最强AI工具全收录</div>
+                        <div class="related-desc">包含LangChain、CrewAI等Agent开发工具在内的全景盘点</div>
+                    </div>
+                </a>
+                <a href="/pages/tools/autogpt.html" class="related-item">
+                    <div class="related-icon">🤖</div>
+                    <div class="related-content">
+                        <div class="related-title-text">AutoGPT 工具详解与使用指南</div>
+                        <div class="related-desc">深入了解自主Agent先驱的功能与用法</div>
+                    </div>
+                </a>
+                <a href="/tutorials/" class="related-item">
+                    <div class="related-icon">📚</div>
+                    <div class="related-content">
+                        <div class="related-title-text">AI开发教程中心</div>
+                        <div class="related-desc">从Prompt工程到Agent开发的系统化教程</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 AI.link.cn · 专注AI工具与资讯 | <a href="/">首页</a> · <a href="/pages/tools/">工具库</a> · <a href="/tutorials/">教程</a> · <a href="/articles/">资讯</a> · <a href="/compare/">对比</a></p>
+        </div>
+    </footer>
+
+    <script>
+        const progressBar = document.getElementById('progressBar');
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+            progressBar.style.width = scrollPercent + '%';
+        });
+    </script>
+</body>
+</html>
