@@ -5,7 +5,7 @@
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     
     <!-- AI.link.cn 网站地图 -->
-    <!-- 生成时间: 2026-07-25 -->
+    <!-- 生成时间: 2026-07-27 -->
     <!-- 网站: https://ai.link.cn/ -->
     
     <!-- 首页 -->
@@ -503,6 +503,14 @@
         <loc>https://ai.link.cn/articles/ai-data-analysis-tools.html</loc>
         <lastmod>2026-07-27</lastmod>
         <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+    </url>
+
+    <!-- 最新文章：本地部署指南 -->
+    <url>
+        <loc>https://ai.link.cn/articles/ai-local-deployment-guide-2026.html</loc>
+        <lastmod>2026-07-27</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>0.95</priority>
     </url>
 
