@@ -359,6 +359,14 @@
         <priority>0.9</priority>
     </url>
 
+    <!-- 新增7月行业动态文章 -->
+    <url>
+        <loc>https://ai.link.cn/articles/ai-july-2026-update.html</loc>
+        <lastmod>2026-07-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+    </url>
+
     <!-- 文章索引页 -->
     <url>
         <loc>https://ai.link.cn/articles/</loc>
