@@ -367,6 +367,38 @@
         <priority>0.95</priority>
     </url>
 
+    <!-- 高商业意图SEO文章 -->
+    <url>
+        <loc>https://ai.link.cn/articles/ai-marketing-tools-small-business.html</loc>
+        <lastmod>2026-07-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>https://ai.link.cn/articles/ai-student-tools-guide.html</loc>
+        <lastmod>2026-07-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>https://ai.link.cn/articles/ai-resume-builder-comparison.html</loc>
+        <lastmod>2026-07-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>https://ai.link.cn/articles/ai-money-making-guide-2026.html</loc>
+        <lastmod>2026-07-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>https://ai.link.cn/articles/ai-expensive-software-alternatives.html</loc>
+        <lastmod>2026-07-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+    </url>
+
     <!-- 文章索引页 -->
     <url>
         <loc>https://ai.link.cn/articles/</loc>
