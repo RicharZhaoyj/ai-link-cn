@@ -514,4 +514,24 @@
         <priority>0.95</priority>
     </url>
 
+    <!-- 第三批高意图SEO文章：SEO/编程/设计 -->
+    <url>
+        <loc>https://ai.link.cn/articles/ai-seo-tools-guide.html</loc>
+        <lastmod>2026-07-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>https://ai.link.cn/articles/ai-coding-tools-guide.html</loc>
+        <lastmod>2026-07-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>https://ai.link.cn/articles/ai-design-tools-guide.html</loc>
+        <lastmod>2026-07-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+    </url>
+
 </urlset>
