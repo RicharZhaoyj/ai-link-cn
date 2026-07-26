@@ -220,9 +220,79 @@
         }
         
         /* Featured Tools */
-        .tools-section {
+        .business-section {
             padding: 60px 0;
             background: var(--surface);
+        }
+        
+        .hot-section {
+            padding: 60px 0;
+        }
+        
+        .hot-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        
+        .hot-card {
+            background: var(--surface);
+            border: 1px solid rgba(168, 85, 247, 0.15);
+            border-radius: 14px;
+            padding: 24px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s;
+            display: block;
+        }
+        
+        .hot-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(168, 85, 247, 0.15);
+        }
+        
+        .hot-card-tag {
+            display: inline-block;
+            background: rgba(236, 72, 153, 0.15);
+            color: #f472b6;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        
+        .hot-card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            line-height: 1.4;
+            margin-bottom: 10px;
+            transition: color 0.2s;
+        }
+        
+        .hot-card:hover h3 {
+            color: var(--accent);
+        }
+        
+        .hot-card p {
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+        
+        .hot-card-meta {
+            display: flex;
+            gap: 12px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        
+        .hot-card-meta span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
         }
         
         .tools-grid {
@@ -384,6 +454,7 @@
             .hero-stats { gap: 20px; }
             .sister-cards-grid { grid-template-columns: repeat(2, 1fr); }
             .tools-grid { grid-template-columns: 1fr; }
+            .hot-grid { grid-template-columns: 1fr; }
             .hero-stat-num { font-size: 1.5rem; }
         }
     </style>
@@ -439,6 +510,7 @@
                 <div class="logo">AI News</div>
                 <ul class="nav-links">
                     <li><a href="#news">热点资讯</a></li>
+                    <li><a href="#hot-articles">热门文章</a></li>
                     <li><a href="#tools">热门工具</a></li>
                     <li><a href="https://tools.link.cn" target="_blank">工具导航</a></li>
                 </ul>
@@ -589,6 +661,105 @@
                     <div class="tool-tags">
                         <span class="tool-tag">求职</span>
                         <span class="tool-tag">简历</span>
+                    </div>
+                </a>
+                <a href="/articles/ai-customer-service-tools.html" class="tool-card" target="_blank">
+                    <div class="tool-header">
+                        <div class="tool-name">AI客服工具</div>
+                        <div class="tool-score">8款对比</div>
+                    </div>
+                    <div class="tool-desc">AI客服工具全面对比，降低人力成本50%+</div>
+                    <div class="tool-tags">
+                        <span class="tool-tag">客服</span>
+                        <span class="tool-tag">降本</span>
+                    </div>
+                </a>
+                <a href="/articles/ai-data-analysis-tools.html" class="tool-card" target="_blank">
+                    <div class="tool-header">
+                        <div class="tool-name">AI数据分析</div>
+                        <div class="tool-score">8款神器</div>
+                    </div>
+                    <div class="tool-desc">AI数据分析工具选购指南，让数据说话</div>
+                    <div class="tool-tags">
+                        <span class="tool-tag">BI</span>
+                        <span class="tool-tag">数据分析</span>
+                    </div>
+                </a>
+                <a href="/articles/ai-content-creation-platforms.html" class="tool-card" target="_blank">
+                    <div class="tool-header">
+                        <div class="tool-name">AI创作平台</div>
+                        <div class="tool-score">一站式</div>
+                    </div>
+                    <div class="tool-desc">从文案到视频的AI内容创作完整方案</div>
+                    <div class="tool-tags">
+                        <span class="tool-tag">创作</span>
+                        <span class="tool-tag">内容</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hot Articles Section -->
+    <div class="hot-section" id="hot-articles">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">🔥 热门文章</h2>
+                <a href="/articles/" style="color:var(--accent);text-decoration:none;font-weight:500;">查看全部 →</a>
+            </div>
+            <div class="hot-grid">
+                <a href="/articles/ai-customer-service-tools.html" class="hot-card">
+                    <span class="hot-card-tag">AI客服</span>
+                    <h3>2026年AI客服工具全面对比：8款智能客服降本增效</h3>
+                    <p>AI客服工具对比：智能回复、多渠道、AI质检8大能力，降低人力成本50%+</p>
+                    <div class="hot-card-meta">
+                        <span>📅 2026.07.27</span>
+                        <span>⏱️ 14分钟</span>
+                    </div>
+                </a>
+                <a href="/articles/ai-content-creation-platforms.html" class="hot-card">
+                    <span class="hot-card-tag">AI创作</span>
+                    <h3>AI内容创作平台终极指南：从文案到视频一站式解决</h3>
+                    <p>文案、图片、视频、音频一站式工具链，让单人团队拥有10人创作能力</p>
+                    <div class="hot-card-meta">
+                        <span>📅 2026.07.27</span>
+                        <span>⏱️ 15分钟</span>
+                    </div>
+                </a>
+                <a href="/articles/ai-data-analysis-tools.html" class="hot-card">
+                    <span class="hot-card-tag">AI数据</span>
+                    <h3>AI数据分析工具选购指南：让数据说话的8款神器</h3>
+                    <p>从商业智能到预测分析，8款工具让人人都是数据分析师</p>
+                    <div class="hot-card-meta">
+                        <span>📅 2026.07.27</span>
+                        <span>⏱️ 16分钟</span>
+                    </div>
+                </a>
+                <a href="/articles/ai-money-making-guide-2026.html" class="hot-card">
+                    <span class="hot-card-tag">AI变现</span>
+                    <h3>用AI赚钱的10种实战方法：从副业到年入百万</h3>
+                    <p>2026年AI变现方法盘点，含启动成本、月收入预期、30天启动计划</p>
+                    <div class="hot-card-meta">
+                        <span>📅 2026.07.26</span>
+                        <span>⏱️ 13分钟</span>
+                    </div>
+                </a>
+                <a href="/articles/ai-expensive-software-alternatives.html" class="hot-card">
+                    <span class="hot-card-tag">AI省钱</span>
+                    <h3>用AI替代昂贵软件：10个每年省$1000+的方案</h3>
+                    <p>AI工具替代Adobe、Notion、HubSpot等昂贵软件，功能对比+迁移指南</p>
+                    <div class="hot-card-meta">
+                        <span>📅 2026.07.26</span>
+                        <span>⏱️ 10分钟</span>
+                    </div>
+                </a>
+                <a href="/articles/free-ai-tools-collection.html" class="hot-card">
+                    <span class="hot-card-tag">免费工具</span>
+                    <h3>免费AI工具合集：100+款免费AI神器全收录</h3>
+                    <p>汇集100+款免费AI工具，涵盖对话、绘画、写作、编程等10大类别</p>
+                    <div class="hot-card-meta">
+                        <span>📅 2026.07.20</span>
+                        <span>⏱️ 12分钟</span>
                     </div>
                 </a>
             </div>

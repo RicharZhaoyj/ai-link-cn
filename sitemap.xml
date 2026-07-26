@@ -461,9 +461,49 @@
     <!-- FAQ页面 -->
     <url>
         <loc>https://ai.link.cn/faq.html</loc>
-        <lastmod>2026-07-26</lastmod>
+        <lastmod>2026-07-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+    </url>
+
+    <!-- 补充遗漏的文章 -->
+    <url>
+        <loc>https://ai.link.cn/articles/ai-agent-development-guide.html</loc>
+        <lastmod>2026-07-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://ai.link.cn/articles/ai-image-tools-free-alternatives.html</loc>
+        <lastmod>2026-07-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://ai.link.cn/articles/ai-productivity-guide-2026.html</loc>
+        <lastmod>2026-07-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+
+    <!-- 新增高意图SEO文章：AI客服工具 -->
+    <url>
+        <loc>https://ai.link.cn/articles/ai-customer-service-tools.html</loc>
+        <lastmod>2026-07-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>https://ai.link.cn/articles/ai-content-creation-platforms.html</loc>
+        <lastmod>2026-07-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>https://ai.link.cn/articles/ai-data-analysis-tools.html</loc>
+        <lastmod>2026-07-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
     </url>
 
 </urlset>
