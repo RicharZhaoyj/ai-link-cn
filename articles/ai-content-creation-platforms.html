@@ -237,6 +237,91 @@
 
         .highlight-box p { color: var(--text); font-weight: 500; margin: 0; }
 
+        .continue-reading {
+            padding: 40px 0;
+            margin-top: 40px;
+            border-top: 1px solid rgba(168, 85, 247, 0.2);
+        }
+
+        .continue-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .continue-desc {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .continue-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .continue-card {
+            display: block;
+            background: var(--surface);
+            border-radius: 12px;
+            padding: 20px;
+            text-decoration: none;
+            color: inherit;
+            border: 1px solid rgba(168, 85, 247, 0.1);
+            transition: all 0.2s;
+            position: relative;
+        }
+
+        .continue-card:hover {
+            border-color: var(--accent);
+            background: rgba(168, 85, 247, 0.05);
+            transform: translateY(-2px);
+        }
+
+        .continue-card-tag {
+            display: inline-block;
+            background: rgba(168, 85, 247, 0.15);
+            color: var(--accent);
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            margin-bottom: 10px;
+        }
+
+        .continue-card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+            line-height: 1.4;
+        }
+
+        .continue-card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        .continue-arrow {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: var(--accent);
+            font-size: 1.1rem;
+            opacity: 0.6;
+            transition: opacity 0.2s;
+        }
+
+        .continue-card:hover .continue-arrow {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .continue-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         .related-articles {
             padding: 40px 0;
             margin-top: 40px;
@@ -668,6 +753,31 @@
                 <p>最后记住一点：<strong>AI永远不会取代好的创作者，但会用好工具的创作者会取代不用AI的创作者。</strong></p>
             </section>
         </article>
+
+        <div class="continue-reading">
+            <h2 class="continue-title">继续阅读</h2>
+            <p class="continue-desc">看了AI内容创作平台，这些内容也可能帮到你：</p>
+            <div class="continue-grid">
+                <a href="/articles/ai-design-tools-guide.html" class="continue-card">
+                    <span class="continue-card-tag">AI设计</span>
+                    <span class="continue-arrow">→</span>
+                    <h3>AI设计工具完全指南</h3>
+                    <p>12款神器从入门到专业</p>
+                </a>
+                <a href="/articles/ai-seo-tools-guide.html" class="continue-card">
+                    <span class="continue-card-tag">SEO优化</span>
+                    <span class="continue-arrow">→</span>
+                    <h3>AI SEO工具终极指南</h3>
+                    <p>8款工具让你的网站流量暴涨</p>
+                </a>
+                <a href="/articles/ai-money-making-guide-2026.html" class="continue-card">
+                    <span class="continue-card-tag">AI变现</span>
+                    <span class="continue-arrow">→</span>
+                    <h3>用AI赚钱的10种方法</h3>
+                    <p>从副业到年入百万的完整指南</p>
+                </a>
+            </div>
+        </div>
 
         <div class="related-articles">
             <h2 class="related-title">📌 相关推荐</h2>

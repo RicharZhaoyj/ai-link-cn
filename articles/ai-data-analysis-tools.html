@@ -237,6 +237,29 @@
 
         .highlight-box p { color: var(--text); font-weight: 500; margin: 0; }
 
+        .continue-reading {
+            padding: 40px 0;
+            margin-top: 32px;
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.08), rgba(59, 130, 246, 0.05));
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 24px;
+            border: 1px solid rgba(168, 85, 247, 0.2);
+        }
+        .continue-title { font-size: 1.4rem; font-weight: 600; margin-bottom: 8px; color: var(--text); }
+        .continue-desc { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px; }
+        .continue-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+        .continue-card {
+            background: var(--surface); border: 1px solid rgba(168, 85, 247, 0.15); border-radius: 12px;
+            padding: 20px; text-decoration: none; color: inherit; transition: all 0.3s; position: relative; display: block;
+        }
+        .continue-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 12px 32px rgba(168, 85, 247, 0.2); }
+        .continue-card-tag { display: inline-block; background: rgba(168, 85, 247, 0.15); color: var(--accent-light); padding: 4px 10px; border-radius: 10px; font-size: 0.75rem; font-weight: 600; margin-bottom: 10px; }
+        .continue-card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 8px; line-height: 1.4; color: var(--text); }
+        .continue-card p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 12px; }
+        .continue-arrow { display: inline-block; color: var(--accent); font-size: 1.2rem; font-weight: 700; transition: transform 0.2s; }
+        .continue-card:hover .continue-arrow { transform: translateX(6px); }
+        @media (max-width: 768px) { .continue-grid { grid-template-columns: 1fr; } }
         .related-articles {
             padding: 40px 0;
             margin-top: 40px;
@@ -677,6 +700,31 @@
                 <p>根据我们统计的50+案例，平均见效时间为<strong>2.8个月</strong>。第一个月主要是数据接入和工具熟悉期，第二个月开始看到效率提升（报表自动化、数据查询加速），第三个月AI洞察开始产生实质性业务影响（异常发现、预测优化）。关键是要在前3个月锁定1-2个高频场景，快速出成果。</p>
             </section>
         </article>
+
+        <div class="continue-reading">
+            <h2 class="continue-title">📖 继续阅读</h2>
+            <p class="continue-desc">看了AI数据分析工具，这些内容也可能帮到你：</p>
+            <div class="continue-grid">
+                <a href="/articles/ai-seo-tools-guide.html" class="continue-card">
+                    <div class="continue-card-tag">SEO优化</div>
+                    <h3>AI SEO工具终极指南</h3>
+                    <p>8款工具让你的网站流量暴涨</p>
+                    <span class="continue-arrow">→</span>
+                </a>
+                <a href="/articles/ai-coding-tools-guide.html" class="continue-card">
+                    <div class="continue-card-tag">AI编程</div>
+                    <h3>AI编程工具大比拼</h3>
+                    <p>10款工具让开发效率提升5倍</p>
+                    <span class="continue-arrow">→</span>
+                </a>
+                <a href="/articles/ai-productivity-guide-2026.html" class="continue-card">
+                    <div class="continue-card-tag">生产力</div>
+                    <h3>2026 AI生产力指南</h3>
+                    <p>用AI工具把工作效率提升10倍</p>
+                    <span class="continue-arrow">→</span>
+                </a>
+            </div>
+        </div>
 
         <div class="related-articles">
             <h2 class="related-title">📌 相关推荐</h2>

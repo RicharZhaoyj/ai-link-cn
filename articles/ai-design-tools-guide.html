@@ -237,6 +237,78 @@
 
         .highlight-box p { color: var(--text); font-weight: 500; margin: 0; }
 
+        .continue-reading {
+            padding: 40px 0;
+            margin-top: 20px;
+        }
+        .continue-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .continue-desc {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .continue-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+        .continue-card {
+            display: block;
+            background: var(--surface);
+            border: 1px solid rgba(168, 85, 247, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s;
+            position: relative;
+        }
+        .continue-card:hover {
+            border-color: var(--accent);
+            background: rgba(168, 85, 247, 0.05);
+            transform: translateY(-2px);
+        }
+        .continue-card-tag {
+            display: inline-block;
+            background: rgba(168, 85, 247, 0.15);
+            color: var(--accent);
+            padding: 2px 10px;
+            border-radius: 10px;
+            font-size: 0.75rem;
+            margin-bottom: 10px;
+        }
+        .continue-card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+        .continue-card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+        .continue-arrow {
+            position: absolute;
+            right: 16px;
+            top: 16px;
+            color: var(--accent);
+            font-size: 1.2rem;
+            transition: transform 0.2s;
+        }
+        .continue-card:hover .continue-arrow {
+            transform: translateX(4px);
+        }
+        @media (max-width: 768px) {
+            .continue-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+        }
         .related-articles {
             padding: 40px 0;
             margin-top: 40px;
@@ -852,6 +924,31 @@
                 <a class="share-btn twitter" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fai.link.cn%2Farticles%2Fai-design-tools-guide.html&text=2026%E5%B9%B4AI%E8%AE%BE%E8%AE%A1%E5%B7%A5%E5%85%B7%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97" target="_blank" rel="noopener">🐦 Twitter</a>
                 <a class="share-btn linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fai.link.cn%2Farticles%2Fai-design-tools-guide.html" target="_blank" rel="noopener">💼 LinkedIn</a>
                 <button class="share-btn copy" onclick="copyLink()">📋 复制链接</button>
+            </div>
+        </div>
+
+        <div class="continue-reading">
+            <h2 class="continue-title">📖 继续阅读</h2>
+            <p class="continue-desc">看了AI设计工具，这些内容也可能帮到你：</p>
+            <div class="continue-grid">
+                <a href="/articles/ai-coding-tools-guide.html" class="continue-card">
+                    <div class="continue-card-tag">AI编程</div>
+                    <h3>AI编程工具大比拼</h3>
+                    <p>10款工具让开发效率提升5倍</p>
+                    <span class="continue-arrow">→</span>
+                </a>
+                <a href="/articles/ai-image-tools-free-alternatives.html" class="continue-card">
+                    <div class="continue-card-tag">免费工具</div>
+                    <h3>AI绘画免费替代方案</h3>
+                    <p>不花钱也能玩转AI绘图</p>
+                    <span class="continue-arrow">→</span>
+                </a>
+                <a href="/articles/ai-content-creation-platforms.html" class="continue-card">
+                    <div class="continue-card-tag">AI创作</div>
+                    <h3>AI内容创作平台指南</h3>
+                    <p>从文案到视频一站式工具链</p>
+                    <span class="continue-arrow">→</span>
+                </a>
             </div>
         </div>
 

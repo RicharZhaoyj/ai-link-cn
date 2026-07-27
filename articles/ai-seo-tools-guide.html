@@ -289,6 +289,95 @@
             font-size: 1rem;
         }
 
+        .continue-reading {
+            padding: 40px 0;
+            margin-top: 32px;
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.08), rgba(59, 130, 246, 0.05));
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 24px;
+            border: 1px solid rgba(168, 85, 247, 0.2);
+        }
+
+        .continue-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+
+        .continue-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .continue-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .continue-card {
+            background: var(--surface);
+            border: 1px solid rgba(168, 85, 247, 0.15);
+            border-radius: 12px;
+            padding: 20px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s;
+            position: relative;
+            display: block;
+        }
+
+        .continue-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(168, 85, 247, 0.2);
+        }
+
+        .continue-card-tag {
+            display: inline-block;
+            background: rgba(168, 85, 247, 0.15);
+            color: var(--accent-light);
+            padding: 4px 10px;
+            border-radius: 10px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .continue-card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            line-height: 1.4;
+            color: var(--text);
+        }
+
+        .continue-card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+
+        .continue-arrow {
+            display: inline-block;
+            color: var(--accent);
+            font-size: 1.2rem;
+            font-weight: 700;
+            transition: transform 0.2s;
+        }
+
+        .continue-card:hover .continue-arrow {
+            transform: translateX(6px);
+        }
+
+        @media (max-width: 768px) {
+            .continue-grid { grid-template-columns: 1fr; }
+        }
+
         .related-articles {
             padding: 40px 0;
             margin-top: 40px;
@@ -1056,6 +1145,31 @@
                 <a class="share-btn twitter" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fai.link.cn%2Farticles%2Fai-seo-tools-guide.html&text=2026%E5%B9%B4AI%20SEO%E5%B7%A5%E5%85%B7%E7%BB%88%E6%9E%81%E6%8C%87%E5%8D%97" target="_blank" rel="noopener">🐦 Twitter</a>
                 <a class="share-btn linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fai.link.cn%2Farticles%2Fai-seo-tools-guide.html" target="_blank" rel="noopener">💼 LinkedIn</a>
                 <button class="share-btn copy" onclick="copyLink()">📋 复制链接</button>
+            </div>
+        </div>
+
+        <div class="continue-reading">
+            <h2 class="continue-title">📖 继续阅读</h2>
+            <p class="continue-desc">看了AI SEO工具，这些内容也可能帮到你：</p>
+            <div class="continue-grid">
+                <a href="/articles/ai-content-creation-platforms.html" class="continue-card">
+                    <div class="continue-card-tag">AI创作</div>
+                    <h3>AI内容创作平台终极指南</h3>
+                    <p>从文案到视频一站式工具链，让内容生产效率提升10倍</p>
+                    <span class="continue-arrow">→</span>
+                </a>
+                <a href="/articles/ai-marketing-tools-small-business.html" class="continue-card">
+                    <div class="continue-card-tag">AI营销</div>
+                    <h3>小企业AI营销工具指南</h3>
+                    <p>8款省钱又高效的工具，附ROI计算与实施步骤</p>
+                    <span class="continue-arrow">→</span>
+                </a>
+                <a href="/articles/ai-data-analysis-tools.html" class="continue-card">
+                    <div class="continue-card-tag">AI数据</div>
+                    <h3>AI数据分析工具选购指南</h3>
+                    <p>Tableau、Power BI等8款工具，人人都是数据分析师</p>
+                    <span class="continue-arrow">→</span>
+                </a>
             </div>
         </div>
 
