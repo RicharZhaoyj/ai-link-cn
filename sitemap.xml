@@ -533,4 +533,32 @@
         <priority>0.95</priority>
     </url>
 
+    <!-- 第四批长尾关键词文章 -->
+    <url>
+        <loc>https://ai.link.cn/articles/ai-translation-tools-guide.html</loc>
+        <lastmod>2026-07-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>https://ai.link.cn/articles/ai-video-tools-guide.html</loc>
+        <lastmod>2026-07-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>https://ai.link.cn/articles/ai-meeting-tools-guide.html</loc>
+        <lastmod>2026-07-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+    </url>
+
+    <!-- 专题聚合页 -->
+    <url>
+        <loc>https://ai.link.cn/articles/ai-tools-overview.html</loc>
+        <lastmod>2026-07-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
 </urlset>
