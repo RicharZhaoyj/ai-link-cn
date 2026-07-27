@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI视频生成工具完整指南 2026 | Runway/Pika/Kling深度教程 | AI.link.cn</title>
+<meta name="description" content="2026年AI视频生成工具完整指南，深度解析Runway Gen-3、Pika 2.0、Kling等主流工具，包含Prompt技巧、参数设置、商业应用案例和免费替代方案。">
+<meta name="keywords" content="AI视频生成,Runway教程,Pika教程,Kling AI,AI动画制作,文生视频,Sora替代,视频Prompt技巧">
+<link rel="canonical" href="https://ai.link.cn/tutorials/ai-video-generation-guide.html">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg: #0a0f1a;
+    --surface: #111827;
+    --surface-2: #1f2937;
+    --text: #f8fafc;
+    --text-muted: #94a3b8;
+    --accent: #a855f7;
+    --accent-light: #c084fc;
+    --success: #22c55e;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --blue: #3b82f6;
+}
+
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC",sans-serif;background:var(--bg);color:var(--text);line-height:1.8;margin:0;padding:0}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+header{padding:16px 0;border-bottom:1px solid rgba(168,85,247,.2);background:rgba(10,15,26,.98);backdrop-filter:blur(12px);position:sticky;top:0;z-index:100}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.logo{font-size:1.4rem;font-weight:700;color:var(--accent);text-decoration:none}
+.nav-links{display:flex;gap:20px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+.nav-links a{color:var(--text-muted);text-decoration:none;font-weight:500;font-size:.95rem;transition:color .2s}
+.nav-links a:hover{color:var(--accent)}
+
+.progress-bar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent-light));z-index:1000;width:0;transition:width .1s}
+
+.hero{padding:48px 0 32px;text-align:center;background:linear-gradient(180deg,rgba(168,85,247,.08),transparent)}
+.hero h1{font-size:2.2rem;line-height:1.3;margin-bottom:12px}
+.hero h1 span{color:var(--accent)}
+.hero p{font-size:1.05rem;color:var(--text-muted);max-width:600px;margin:0 auto 24px}
+.hero-meta{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;font-size:.9rem;color:var(--text-muted)}
+.hero-meta span{display:flex;align-items:center;gap:6px}
+
+.tutorial-layout{display:grid;grid-template-columns:1fr 280px;gap:32px;padding:32px 0}
+.tutorial-content{background:var(--surface);border-radius:16px;padding:40px;border:1px solid rgba(168,85,247,.1)}
+.tutorial-content h2{font-size:1.6rem;color:var(--text);margin:40px 0 16px;padding-bottom:8px;border-bottom:1px solid rgba(168,85,247,.2)}
+.tutorial-content h2:first-child{margin-top:0}
+.tutorial-content h3{font-size:1.25rem;color:var(--text);margin:28px 0 12px}
+.tutorial-content p{color:var(--text-muted);margin-bottom:16px}
+.tutorial-content ul,.tutorial-content ol{color:var(--text-muted);margin-bottom:16px;padding-left:24px}
+.tutorial-content li{margin-bottom:8px}
+.tutorial-content code{background:var(--surface-2);padding:3px 8px;border-radius:4px;font-size:.9em;color:var(--accent-light)}
+.tutorial-content pre{background:var(--surface-2);padding:20px;border-radius:8px;overflow-x:auto;border:1px solid rgba(168,85,247,.1)}
+.tutorial-content pre code{background:none;padding:0}
+
+.tip-box{background:rgba(34,197,94,.1);border-left:3px solid var(--success);padding:16px;margin:20px 0;border-radius:8px}
+.tip-box strong{color:var(--success)}
+.warning-box{background:rgba(245,158,11,.1);border-left:3px solid var(--warning);padding:16px;margin:20px 0;border-radius:8px}
+.warning-box strong{color:var(--warning)}
+.tool-card{background:var(--surface-2);border-radius:12px;padding:24px;margin:20px 0;border:1px solid rgba(168,85,247,.15)}
+.tool-card h4{font-size:1.1rem;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.tool-card p{font-size:.95rem;margin-bottom:12px}
+
+.comparison-table{width:100%;border-collapse:collapse;margin:24px 0}
+.comparison-table th,.comparison-table td{padding:12px;text-align:left;border-bottom:1px solid rgba(168,85,247,.15)}
+.comparison-table th{background:var(--surface-2);font-weight:600}
+.comparison-table tr:hover td{background:rgba(168,85,247,.05)}
+
+.sidebar{position:sticky;top:80px}
+.toc{background:var(--surface);border-radius:12px;padding:24px;border:1px solid rgba(168,85,247,.1)}
+.toc h4{font-size:1rem;margin-bottom:16px}
+.toc ul{list-style:none;padding:0;margin:0}
+.toc li{margin-bottom:8px}
+.toc a{color:var(--text-muted);text-decoration:none;font-size:.9rem;display:block;padding:6px 12px;border-radius:6px;transition:all .2s}
+.toc a:hover{background:rgba(168,85,247,.1);color:var(--accent)}
+.toc a.active{background:rgba(168,85,247,.15);color:var(--accent)}
+
+footer{padding:40px 0;text-align:center;border-top:1px solid rgba(168,85,247,.1);margin-top:60px}
+footer p{color:var(--text-muted);font-size:.9rem}
+
+@media(max-width:900px){
+    .tutorial-layout{grid-template-columns:1fr}
+    .sidebar{display:none}
+}
+</style>
+</head>
+<body>
+<div class="progress-bar" id="progressBar"></div>
+
+<header>
+    <div class="container">
+        <nav class="nav">
+            <a href="../index.html" class="logo">AI.link.cn</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="../articles/index.html">文章</a></li>
+                <li><a href="index.html">教程</a></li>
+                <li><a href="../tools/index.html">工具</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="container">
+            <h1><span>AI视频生成工具</span>完整指南 2026</h1>
+            <p>从Runway到Pika再到Kling，一文掌握AI视频生成的核心技术、Prompt技巧和商业应用</p>
+            <div class="hero-meta">
+                <span>📅 2026-07-27</span>
+                <span>⏱️ 阅读约25分钟</span>
+                <span>👁️ 视频制作/AI动画</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="tutorial-layout">
+            <article class="tutorial-content">
+                <h2 id="intro">为什么选择AI视频生成？</h2>
+                <p>2026年，AI视频生成技术已经从"会动的图片"进化到接近专业级制作水平。无论是内容创作者、广告从业者还是独立开发者，都能在几分钟内生成原本需要数万元预算才能完成的视频内容。</p>
+                <p>本教程将深入解析三大主流AI视频生成工具：<strong>Runway Gen-3</strong>、<strong>Pika 2.0</strong>和<strong>Kling（可灵）</strong>，帮助你快速上手并掌握专业级视频创作技能。</p>
+
+                <h2 id="tools">三大主流工具对比</h2>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>特性</th>
+                            <th>Runway Gen-3</th>
+                            <th>Pika 2.0</th>
+                            <th>Kling</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>视频时长</td>
+                            <td>5-10秒</td>
+                            <td>3-5秒</td>
+                            <td>5-10秒</td>
+                        </tr>
+                        <tr>
+                            <td>分辨率</td>
+                            <td>最高4K</td>
+                            <td>1080p</td>
+                            <td>1080p</td>
+                        </tr>
+                        <tr>
+                            <td>文生视频</td>
+                            <td>✅ 优秀</td>
+                            <td>✅ 良好</td>
+                            <td>✅ 优秀</td>
+                        </tr>
+                        <tr>
+                            <td>图生视频</td>
+                            <td>✅ 优秀</td>
+                            <td>✅ 优秀</td>
+                            <td>✅ 良好</td>
+                        </tr>
+                        <tr>
+                            <td>运动控制</td>
+                            <td>精确控制</td>
+                            <td>自动优化</td>
+                            <td>智能理解</td>
+                        </tr>
+                        <tr>
+                            <td>价格</td>
+                            <td>$12/月起</td>
+                            <td>$8/月起</td>
+                            <td>免费/付费</td>
+                        </tr>
+                        <tr>
+                            <td>中文支持</td>
+                            <td>部分</td>
+                            <td>部分</td>
+                            <td>✅ 原生</td>
+                        </tr>
+                        <tr>
+                            <td>访问方式</td>
+                            <td>Web端</td>
+                            <td>Web/Discord</td>
+                            <td>Web/App</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="tip-box">
+                    <strong>💡 快速选择建议：</strong>
+                    <ul>
+                        <li><strong>专业创作者</strong>：优先选择Runway Gen-3，画质和可控性最强</li>
+                        <li><strong>社交媒体内容</strong>：Pika 2.0性价比高，适合短视频创作</li>
+                        <li><strong>中文用户/国内企业</strong>：Kling访问最便捷，中文理解最好</li>
+                    </ul>
+                </div>
+
+                <h2 id="runway">Runway Gen-3 深度教程</h2>
+                <p>Runway是AI视频领域的标杆产品，Gen-3版本在画面质量、运动自然度和生成速度上都有显著提升。</p>
+
+                <h3 id="runway-basics">基础操作流程</h3>
+                <ol>
+                    <li>访问 <a href="https://runwayml.com" target="_blank" rel="noopener">Runway官网</a> 并注册账号</li>
+                    <li>进入Gen-3 Alpha工作区</li>
+                    <li>选择生成模式：Text to Video 或 Image to Video</li>
+                    <li>输入Prompt或上传参考图片</li>
+                    <li>调整参数（时长、分辨率、运动强度）</li>
+                    <li>点击生成，等待10-60秒</li>
+                </ol>
+
+                <h3 id="runway-prompt">Prompt技巧详解</h3>
+                <p>Runway对英文Prompt理解最佳，推荐使用以下结构：</p>
+                <pre><code>[主体] + [动作] + [场景/环境] + [镜头运动] + [风格/氛围]</code></pre>
+
+                <div class="tool-card">
+                    <h4>🎯 高质量Prompt示例</h4>
+                    <p><strong>电影感镜头：</strong></p>
+                    <pre><code>A lone astronaut walking on Mars surface, slow cinematic tracking shot following from behind, red dust kicking up in zero gravity, dramatic sunset lighting, shot on IMAX 70mm, photorealistic, 8K</code></pre>
+                    <p><strong>产品展示：</strong></p>
+                    <pre><code>Minimalist white background, luxury watch rotating 360 degrees slowly, macro lens, soft studio lighting, depth of field, commercial quality</code></pre>
+                    <p><strong>动态场景：</strong></p>
+                    <pre><code>Drone flying through neon-lit Tokyo streets at night, fast paced, cyberpunk aesthetic, rain reflections, volumetric fog, cinematic</code></pre>
+                </div>
+
+                <div class="warning-box">
+                    <strong>⚠️ 常见错误：</strong>
+                    <ul>
+                        <li>Prompt过于抽象（如"一个美丽的画面"）→ AI无法理解具体内容</li>
+                        <li>同时要求多个动作（如"跑步同时跳舞"）→ 运动混乱</li>
+                        <li>忽略镜头语言 → 缺乏电影感，画面平淡</li>
+                    </ul>
+                </div>
+
+                <h3 id="runway-motion">运动控制参数</h3>
+                <p>Runway提供精确的运动控制：</p>
+                <ul>
+                    <li><strong>Camera Motion</strong>：控制镜头移动（水平、垂直、缩放）</li>
+                    <li><strong>Motion Brush</strong>：涂抹特定区域控制其运动</li>
+                    <li><strong>Motion Score</strong>：整体运动强度（0-10）</li>
+                </ul>
+                <p>建议新手从低运动强度（3-5）开始，逐步尝试更高强度。</p>
+
+                <h2 id="pika">Pika 2.0 实战指南</h2>
+                <p>Pika以"快、准、省"著称，特别适合社交媒体短视频和快速原型制作。</p>
+
+                <h3 id="pika-features">核心功能</h3>
+                <ul>
+                    <li><strong>Pikaffects</strong>：一键添加特效（爆炸、融化、变形等）</li>
+                    <li><strong>Lip Sync</strong>：口型同步，让静态人物说话</li>
+                    <li><strong>Expand</strong>：扩展视频画面，生成更大场景</li>
+                    <li><strong>Modify</strong>：局部修改视频中的人物或物体</li>
+                </ul>
+
+                <h3 id="pika-workflow">高效工作流</h3>
+                <ol>
+                    <li>用ChatGPT/Midjourney生成高质量参考图</li>
+                    <li>上传图片到Pika，选择Image to Video</li>
+                    <li>添加简单运动描述（如"缓慢向右移动"）</li>
+                    <li>生成后用Pikaffects添加特效增强</li>
+                    <li>导出并剪辑组合成完整视频</li>
+                </ol>
+
+                <div class="tip-box">
+                    <strong>💡 Pika省钱技巧：</strong>
+                    <p>免费版每月125积分，每个视频消耗10-20积分。建议先用Midjourney生成高质量静态图，再用Pika转为视频，这样可以用更少积分获得更好效果。</p>
+                </div>
+
+                <h2 id="kling">Kling（可灵）详细教程</h2>
+                <p>Kling是快手推出的AI视频生成工具，对中文用户最友好，支持原生中文Prompt理解。</p>
+
+                <h3 id="kling-access">访问与注册</h3>
+                <ol>
+                    <li>访问 <a href="https://klingai.kuaishou.com" target="_blank" rel="noopener">Kling官网</a></li>
+                    <li>使用手机号快速注册</li>
+                    <li>免费用户每天获得66积分，可生成约6-10个视频</li>
+                    <li>付费会员可解锁更高质量和更快生成速度</li>
+                </ol>
+
+                <h3 id="kling-prompt">中文Prompt技巧</h3>
+                <p>Kling理解自然中文描述，无需翻译成英文：</p>
+                <pre><code>一只橘猫在阳光下打盹，毛发细节清晰，镜头缓慢推近，温暖氛围
+
+[主体：橘猫] + [状态：打盹] + [环境：阳光] + [镜头：缓慢推近] + [氛围：温暖]</code></pre>
+
+                <div class="tool-card">
+                    <h4>🎯 中文Prompt模板</h4>
+                    <p><strong>广告风格：</strong></p>
+                    <pre><code>产品特写，[产品名]，[颜色/材质]，[背景环境]，专业商业拍摄，柔和光线，高质感</code></pre>
+                    <p><strong>风景大片：</strong></p>
+                    <pre><code>[地点/场景]，[天气/时间]，[运动方式]，航拍视角，电影感，广角镜头</code></pre>
+                    <p><strong>人物动态：</strong></p>
+                    <pre><code>[人物描述]，[动作]，[场景]，[镜头运动]，[光影效果]，电影质感</code></pre>
+                </div>
+
+                <h3 id="kling-tips">使用技巧</h3>
+                <ul>
+                    <li><strong>分镜生成</strong>：将复杂视频拆分成多个5秒片段，分别生成后剪辑</li>
+                    <li><strong>负面提示</strong>：添加不想要的内容（如"无水印""无文字"）</li>
+                    <li><strong>运动强度</strong>：中文描述中可加入"轻微""大幅""剧烈"等程度词</li>
+                    <li><strong>首尾帧控制</strong>：上传开头和结尾图片，AI自动补全中间动画</li>
+                </ul>
+
+                <h2 id="advanced">进阶技巧</h2>
+
+                <h3 id="workflow">专业工作流</h3>
+                <ol>
+                    <li><strong>前期规划</strong>：用文字描述分镜脚本，明确每个镜头的内容和时长</li>
+                    <li><strong>素材准备</strong>：
+                        <ul>
+                            <li>用Midjourney/DALL-E生成关键帧参考图</li>
+                            <li>用ChatGPT优化英文Prompt</li>
+                        </ul>
+                    </li>
+                    <li><strong>视频生成</strong>：
+                        <ul>
+                            <li>Runway：生成主要镜头</li>
+                            <li>Pika：生成特效镜头和转场</li>
+                            <li>Kling：生成中文内容相关镜头</li>
+                        </ul>
+                    </li>
+                    <li><strong>后期处理</strong>：
+                        <ul>
+                            <li>Premiere Pro/DaVinci Resolve剪辑</li>
+                            <li>添加配乐和音效</li>
+                            <li>调色和输出</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h3 id="prompt-templates">通用Prompt模板库</h3>
+                <pre><code># 电影级镜头
+[主体] in [环境], [镜头运动], [光影效果], cinematic, [参考风格], [技术规格]
+
+# 商业产品
+[产品名] product showcase, [角度/运动], [背景], studio lighting, commercial, 4K
+
+# 抽象艺术
+abstract [概念], [色彩搭配], [运动方式], [艺术风格], [技术关键词]
+
+# 自然风光
+[自然场景], [天气/时间], [镜头运动], [氛围], photorealistic, wide angle</code></pre>
+
+                <h2 id="free-alternatives">免费替代方案</h2>
+                <p>如果预算有限，以下方案可供参考：</p>
+
+                <div class="tool-card">
+                    <h4>🆓 免费资源</h4>
+                    <ul>
+                        <li><strong>Kling免费版</strong>：每天66积分，约6-10个视频</li>
+                        <li><strong>Pika免费版</strong>：每月125积分，约10个视频</li>
+                        <li><strong>Runway试用</strong>：新用户获得一次性免费积分</li>
+                        <li><strong>Luma Dream Machine</strong>：新工具，提供免费额度</li>
+                        <li><strong>Hailuo AI（海螺）</strong>：国产工具，部分免费</li>
+                    </ul>
+                </div>
+
+                <div class="warning-box">
+                    <strong>⚠️ 注意事项：</strong>
+                    <p>免费版通常有水印、分辨率限制和生成队列。商业用途请务必购买付费版本获得商业授权。</p>
+                </div>
+
+                <h2 id="commercial">商业应用案例</h2>
+
+                <h3>案例1：社交媒体广告</h3>
+                <p><strong>需求</strong>：为某品牌咖啡制作10秒广告</p>
+                <p><strong>解决方案</strong>：</p>
+                <ol>
+                    <li>Midjourney生成咖啡产品高端静物图</li>
+                    <li>Runway生成咖啡缓慢倒入杯中的视频（4秒）</li>
+                    <li>Pika生成咖啡香气升腾特效（3秒）</li>
+                    <li>Premiere剪辑+品牌Logo+音乐</li>
+                </ol>
+                <p><strong>成本</strong>：约$15工具费 vs 传统拍摄$2000+</p>
+
+                <h3>案例2：YouTube频道片头</h3>
+                <p><strong>需求</strong>：科技频道15秒片头动画</p>
+                <p><strong>解决方案</strong>：</p>
+                <ol>
+                    <li>Kling生成3个5秒科技感镜头（芯片、代码流、城市夜景）</li>
+                    <li>After Effects添加频道名称和Logo动画</li>
+                    <li>配电子音乐背景</li>
+                </ol>
+                <p><strong>成本</strong>：免费（Kling免费版）vs 外包制作$500+</p>
+
+                <h3>案例3：企业产品演示</h3>
+                <p><strong>需求</strong>：B2B软件产品30秒演示</p>
+                <p><strong>解决方案</strong>：</p>
+                <ol>
+                    <li>录制真实软件操作录屏</li>
+                    <li>Runway图生视频为录屏添加动态背景效果</li>
+                    <li>Pika添加UI元素高亮动画</li>
+                    <li>配音+字幕</li>
+                </ol>
+                <p><strong>成本</strong>：约$20工具费 vs 专业制作$3000+</p>
+
+                <h2 id="troubleshooting">常见问题解决</h2>
+
+                <h3>问题1：生成画面模糊/低质量</h3>
+                <ul>
+                    <li>检查是否选择了最高分辨率选项</li>
+                    <li>Prompt中添加"4K, 8K, high quality, sharp details"</li>
+                    <li>使用Image to Video而非Text to Video，用高质量图片作为起点</li>
+                </ul>
+
+                <h3>问题2：运动不自然/卡顿</h3>
+                <ul>
+                    <li>降低运动强度参数</li>
+                    <li>简化Prompt中的动作描述</li>
+                    <li>使用"smooth, fluid motion"关键词</li>
+                </ul>
+
+                <h3>问题3：生成速度慢</h3>
+                <ul>
+                    <li>选择付费版本获得优先队列</li>
+                    <li>减少视频时长（5秒比10秒快一倍）</li>
+                    <li>降低分辨率（720p生成快于1080p）</li>
+                </ul>
+
+                <h3>问题4：中文Prompt效果差</h3>
+                <ul>
+                    <li>Kling原生支持中文，优先选择</li>
+                    <li>Runway/Pika用英文Prompt效果更好</li>
+                    <li>用ChatGPT翻译并优化Prompt</li>
+                </ul>
+
+                <h2 id="future">未来发展趋势</h2>
+                <p>2026下半年及2027年，AI视频生成预计将迎来以下突破：</p>
+                <ul>
+                    <li><strong>时长突破</strong>：从5-10秒扩展到30秒-1分钟连贯视频</li>
+                    <li><strong>角色一致性</strong>：同一角色在多镜头中保持外观一致</li>
+                    <li><strong>声音同步</strong>：生成视频同时匹配音效和背景音乐</li>
+                    <li><strong>实时生成</strong>：几秒内完成视频生成</li>
+                    <li><strong>多模态输入</strong>：语音、图片、视频混合输入生成新内容</li>
+                </ul>
+
+                <h2 id="summary">总结</h2>
+                <p>AI视频生成已经从"玩具"进化为"工具"，内容创作者、营销从业者和独立开发者都应该掌握这项技能。</p>
+                <p><strong>核心要点回顾：</strong></p>
+                <ul>
+                    <li>Runway适合专业创作者追求最佳画质</li>
+                    <li>Pika适合快速迭代和社交媒体内容</li>
+                    <li>Kling是中文用户的首选</li>
+                    <li>Prompt质量决定输出质量，多练习多尝试</li>
+                    <li>结合传统剪辑工具，AI只是创作流程的一部分</li>
+                </ul>
+                <p>现在就访问 <a href="https://runwayml.com" target="_blank" rel="noopener">Runway</a>、<a href="https://pika.art" target="_blank" rel="noopener">Pika</a> 或 <a href="https://klingai.kuaishou.com" target="_blank" rel="noopener">Kling</a> 开始你的AI视频创作之旅！</p>
+
+                <div class="tip-box">
+                    <strong>📚 延伸阅读：</strong>
+                    <ul>
+                        <li><a href="midjourney-complete-guide.html">Midjourney完整指南</a> - 生成高质量静态图作为视频起点</li>
+                        <li><a href="chatgpt-complete-guide.html">ChatGPT完整指南</a> - 用AI优化视频Prompt</li>
+                        <li><a href="ai-video-tools-guide.html">AI视频工具排行榜</a> - 更多视频工具对比</li>
+                    </ul>
+                </div>
+            </article>
+
+            <aside class="sidebar">
+                <div class="toc">
+                    <h4>目录</h4>
+                    <ul>
+                        <li><a href="#intro">为什么选择AI视频生成</a></li>
+                        <li><a href="#tools">三大主流工具对比</a></li>
+                        <li><a href="#runway">Runway Gen-3教程</a></li>
+                        <li><a href="#runway-basics">• 基础操作</a></li>
+                        <li><a href="#runway-prompt">• Prompt技巧</a></li>
+                        <li><a href="#runway-motion">• 运动控制</a></li>
+                        <li><a href="#pika">Pika 2.0指南</a></li>
+                        <li><a href="#kling">Kling详细教程</a></li>
+                        <li><a href="#kling-prompt">• 中文Prompt</a></li>
+                        <li><a href="#advanced">进阶技巧</a></li>
+                        <li><a href="#free-alternatives">免费替代方案</a></li>
+                        <li><a href="#commercial">商业应用案例</a></li>
+                        <li><a href="#troubleshooting">常见问题</a></li>
+                        <li><a href="#future">未来趋势</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2026 AI.link.cn - AI工具导航与教程 | <a href="../index.html">返回首页</a></p>
+    </div>
+</footer>
+
+<script>
+// 阅读进度条
+window.addEventListener('scroll', () => {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    document.getElementById('progressBar').style.width = scrolled + '%';
+});
+
+// 目录高亮
+const sections = document.querySelectorAll('h2[id], h3[id]');
+const tocLinks = document.querySelectorAll('.toc a');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            tocLinks.forEach(link => link.classList.remove('active'));
+            const activeLink = document.querySelector(`.toc a[href="#${entry.target.id}"]`);
+            if (activeLink) activeLink.classList.add('active');
+        }
+    });
+}, { threshold: 0.3 });
+
+sections.forEach(section => observer.observe(section));
+</script>
+</body>
+</html>
