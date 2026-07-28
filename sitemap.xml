@@ -548,4 +548,30 @@
         <priority>1.0</priority>
     </url>
 
+    <!-- 垂直行业AI工具指南 -->
+    <url>
+        <loc>https://ai.link.cn/articles/ai-education-tools-guide.html</loc>
+        <lastmod>2026-07-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>https://ai.link.cn/articles/ai-healthcare-tools-guide.html</loc>
+        <lastmod>2026-07-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>https://ai.link.cn/articles/ai-legal-tools-guide.html</loc>
+        <lastmod>2026-07-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+    </url>
+    <url>
+        <loc>https://ai.link.cn/articles/ai-finance-tools-guide.html</loc>
+        <lastmod>2026-07-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+    </url>
+
 </urlset>

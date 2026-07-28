@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026年AI金融工具完全指南：8款工具让理财更智能 | AI.link.cn</title>
+    <meta name="description" content="AI金融工具全面评测：智能投顾、量化交易、风险控制、财务分析、个人理财全覆盖。对比Betterment、Wealthfront、Kensho等8款工具，让AI成为你的理财助手。">
+    <meta name="keywords" content="AI金融,AI理财,智能投顾,量化交易AI,金融科技,AI投资,财富管理">
+    <link rel="canonical" href="https://ai.link.cn/articles/ai-finance-tools-guide.html">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        :root {
+            --bg: #0a0f1a;
+            --surface: #111827;
+            --surface-2: #1f2937;
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #f59e0b;
+            --accent-light: #fbbf24;
+            --success: #22c55e;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --blue: #3b82f6;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        header {
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(245, 158, 11, 0.2);
+            background: rgba(10, 15, 26, 0.98);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo { font-size: 1.4rem; font-weight: 700; color: var(--accent); text-decoration: none; }
+
+        .nav-links { display: flex; gap: 20px; list-style: none; flex-wrap: wrap; }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover, .nav-links a.active { color: var(--accent); }
+
+        .progress-bar {
+            position: fixed;
+            top: 60px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: rgba(245, 158, 11, 0.15);
+            z-index: 99;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent), var(--accent-light));
+            transition: width 0.1s ease;
+            width: 0%;
+        }
+
+        .article-header {
+            padding: 48px 0 32px;
+            text-align: center;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .article-category {
+            background: rgba(245, 158, 11, 0.15);
+            color: var(--accent);
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+        }
+
+        .article-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+
+        .article-subtitle {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+            max-width: 640px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .article-banner {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(59, 130, 246, 0.1));
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 32px;
+            border: 1px solid rgba(245, 158, 11, 0.2);
+        }
+
+        .article-banner h3 {
+            font-size: 1.15rem;
+            margin-bottom: 12px;
+            color: var(--accent);
+        }
+
+        .article-banner ul { list-style: none; padding-left: 0; }
+
+        .article-banner li {
+            padding: 6px 0;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .article-banner li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+        }
+
+        .article-content { padding: 24px 0; }
+
+        .section { margin-bottom: 40px; }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(245, 158, 11, 0.2);
+        }
+
+        .section-title::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 20px;
+            background: var(--accent);
+            border-radius: 2px;
+            margin-right: 12px;
+            vertical-align: middle;
+        }
+
+        .article-content h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 24px 0 12px;
+            color: var(--text);
+        }
+
+        .article-content p {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .article-content strong { color: var(--text); font-weight: 600; }
+
+        .article-content ul, .article-content ol {
+            margin: 12px 0 16px 24px;
+            color: var(--text-muted);
+        }
+
+        .article-content li { margin-bottom: 8px; }
+
+        .tool-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: var(--surface);
+            border-radius: 12px;
+            overflow: hidden;
+            font-size: 0.92rem;
+        }
+
+        .tool-table th {
+            background: var(--surface-2);
+            color: var(--accent);
+            padding: 12px 14px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 1px solid rgba(245, 158, 11, 0.2);
+        }
+
+        .tool-table td {
+            padding: 12px 14px;
+            border-bottom: 1px solid rgba(245, 158, 11, 0.08);
+            color: var(--text-muted);
+        }
+
+        .tool-table tr:last-child td { border-bottom: none; }
+        .tool-table td.tool-name { color: var(--text); font-weight: 600; }
+
+        .highlight-box {
+            background: var(--surface);
+            border-left: 4px solid var(--accent);
+            border-radius: 0 8px 8px 0;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .highlight-box p { color: var(--text); font-weight: 500; margin: 0; }
+
+        .decision-tree {
+            background: var(--surface);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 20px 0;
+            border: 1px solid rgba(245, 158, 11, 0.15);
+        }
+
+        .decision-node {
+            padding: 12px 16px;
+            margin: 8px 0;
+            border-radius: 8px;
+            background: var(--surface-2);
+            border-left: 3px solid var(--accent);
+        }
+
+        .decision-question {
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 8px;
+        }
+
+        .decision-options {
+            padding-left: 20px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .decision-result {
+            background: rgba(245, 158, 11, 0.1);
+            border-left-color: var(--success);
+        }
+
+        .sister-sites {
+            padding: 24px 0;
+            margin: 20px 0;
+            text-align: center;
+            border-top: 1px solid rgba(245, 158, 11, 0.15);
+            border-bottom: 1px solid rgba(245, 158, 11, 0.15);
+        }
+
+        .sister-sites-title {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+
+        .sister-sites-links {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .sister-sites-links a {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 6px 14px;
+            border-radius: 8px;
+            background: rgba(245, 158, 11, 0.1);
+            transition: all 0.2s;
+        }
+
+        .sister-sites-links a:hover {
+            background: rgba(245, 158, 11, 0.2);
+        }
+
+        .continue-reading {
+            padding: 40px 0;
+            margin-top: 20px;
+        }
+        .continue-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .continue-desc {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .continue-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+        .continue-card {
+            display: block;
+            background: var(--surface);
+            border: 1px solid rgba(245, 158, 11, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s;
+            position: relative;
+        }
+        .continue-card:hover {
+            border-color: var(--accent);
+            background: rgba(245, 158, 11, 0.05);
+            transform: translateY(-2px);
+        }
+        .continue-card-tag {
+            display: inline-block;
+            background: rgba(245, 158, 11, 0.15);
+            color: var(--accent);
+            padding: 2px 10px;
+            border-radius: 10px;
+            font-size: 0.75rem;
+            margin-bottom: 10px;
+        }
+        .continue-card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+        .continue-card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+        .continue-arrow {
+            position: absolute;
+            right: 16px;
+            top: 16px;
+            color: var(--accent);
+            font-size: 1.2rem;
+            transition: transform 0.2s;
+        }
+        .continue-card:hover .continue-arrow {
+            transform: translateX(4px);
+        }
+        @media (max-width: 768px) {
+            .continue-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 24px;
+            font-size: 0.95rem;
+        }
+
+        .back-link:hover { text-decoration: underline; }
+
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid rgba(245, 158, 11, 0.2);
+            margin-top: 40px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        footer a { color: var(--accent); text-decoration: none; margin: 0 6px; }
+
+        .social-share {
+            padding: 24px 0;
+            margin: 20px 0;
+            text-align: center;
+            border-top: 1px solid rgba(245, 158, 11, 0.15);
+            border-bottom: 1px solid rgba(245, 158, 11, 0.15);
+        }
+        .social-share-title {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+        .social-share-btns {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 24px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.88rem;
+            transition: all 0.2s;
+            border: 1px solid rgba(245, 158, 11, 0.25);
+            background: var(--surface);
+            color: var(--text);
+            cursor: pointer;
+        }
+        .share-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        .share-btn.wechat { border-color: rgba(34, 197, 94, 0.4); }
+        .share-btn.wechat:hover { background: rgba(34, 197, 94, 0.15); }
+        .share-btn.weibo { border-color: rgba(249, 115, 22, 0.4); }
+        .share-btn.weibo:hover { background: rgba(249, 115, 22, 0.15); }
+        .share-btn.twitter { border-color: rgba(59, 130, 246, 0.4); }
+        .share-btn.twitter:hover { background: rgba(59, 130, 246, 0.15); }
+        .share-btn.linkedin { border-color: rgba(6, 182, 212, 0.4); }
+        .share-btn.linkedin:hover { background: rgba(6, 182, 212, 0.15); }
+        .share-btn.copy { border-color: rgba(245, 158, 11, 0.4); }
+        .share-btn.copy:hover { background: rgba(245, 158, 11, 0.15); }
+        .share-btn.copied { background: rgba(34, 197, 94, 0.15) !important; border-color: rgba(34, 197, 94, 0.6) !important; }
+
+        @media (max-width: 768px) {
+            .article-title { font-size: 1.6rem; }
+            .article-banner { padding: 20px; }
+            .nav-links { gap: 12px; }
+            .tool-table { font-size: 0.82rem; }
+            .tool-table th, .tool-table td { padding: 8px 10px; }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "2026年AI金融工具完全指南：8款工具让理财更智能",
+        "description": "AI金融工具全面评测：智能投顾、量化交易、风险控制、财务分析、个人理财全覆盖。对比Betterment、Wealthfront、Kensho等8款工具，让AI成为你的理财助手。",
+        "author": {"@type": "Organization", "name": "AI.link.cn 编辑部"},
+        "publisher": {"@type": "Organization", "name": "AI.link.cn"},
+        "datePublished": "2026-07-28",
+        "dateModified": "2026-07-28",
+        "image": "https://ai.link.cn/images/ai-finance-tools-guide.jpg",
+        "articleSection": "AI金融",
+        "keywords": ["AI金融", "AI理财", "智能投顾", "量化交易AI", "金融科技", "AI投资", "财富管理"]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://ai.link.cn/"},
+            {"@type": "ListItem", "position": 2, "name": "资讯", "item": "https://ai.link.cn/articles/"},
+            {"@type": "ListItem", "position": 3, "name": "AI金融工具完全指南", "item": "https://ai.link.cn/articles/ai-finance-tools-guide.html"}
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "AI理财工具真的能赚钱吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "AI理财工具可以提高投资决策的科学性和纪律性，但不能保证一定赚钱。智能投顾这类工具的优势在于分散投资、降低成本、避免情绪化决策，长期来看大概率能获得市场平均收益。但市场有风险，投资需谨慎，AI只是工具，不能消除市场风险。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Betterment vs Wealthfront 哪个智能投顾更好？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "两者都是美国顶尖的智能投顾，各有优势。Betterment用户体验更好，功能更全面，适合大多数投资者；Wealthfront费率略低，自动投资功能更强，适合喜欢全自动的用户。两者的投资策略和收益表现差距不大，选哪个都可以，主要看个人偏好。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "普通人能用AI做量化交易吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "不建议普通人直接做量化交易。量化交易需要专业的金融知识、编程能力和风险管理经验，门槛很高。普通人更适合用智能投顾这类工具，让专业团队帮你做资产配置。如果真的对量化感兴趣，可以先学习基础知识，用模拟盘练习，不要一开始就投入真金白银。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "使用AI理财工具有什么风险？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "主要风险有：1) 市场风险——AI不能保证收益，投资有赚有亏；2) 技术风险——系统故障、算法错误；3) 数据安全——财务信息很敏感，要注意平台安全性；4) 过度依赖——不要因为有AI就放松警惕；5) 监管风险——AI金融的监管还在完善中。记住：AI是工具，决策和风险还是要自己承担。"
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="nav">
+                <a href="/" class="logo">AI.link.cn</a>
+                <ul class="nav-links">
+                    <li><a href="/">首页</a></li>
+                    <li><a href="/pages/tools/">工具</a></li>
+                    <li><a href="/tutorials/">教程</a></li>
+                    <li><a href="/articles/" class="active">资讯</a></li>
+                    <li><a href="/compare/">对比</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="progress-bar">
+        <div class="progress-bar-fill" id="progressBar"></div>
+    </div>
+
+    <div class="container">
+        <a href="/articles/" class="back-link">← 返回资讯列表</a>
+
+        <div class="article-header">
+            <div class="article-meta">
+                <span class="article-category">AI金融</span>
+                <span>2026年07月28日</span>
+                <span>阅读时间：16分钟</span>
+            </div>
+            <h1 class="article-title">2026年AI金融工具完全指南：8款工具让理财更智能</h1>
+            <p class="article-subtitle">从智能投顾到量化交易，从风险管理到个人理财，AI正在重塑金融服务的每一个环节。本文深度评测8款主流AI金融工具，帮你找到最适合的理财助手。</p>
+        </div>
+
+        <div class="article-banner">
+            <h3>📋 本文要点</h3>
+            <ul>
+                <li>8款主流AI金融工具全面对比，附费用、功能、适用场景一览表</li>
+                <li>五大核心能力深度评测：智能投顾、量化交易、风险管理、财务分析、个人理财</li>
+                <li>按需求推荐：新手/进阶/专业投资者的最佳选择</li>
+                <li>AI金融的边界与局限，投资风险提示</li>
+                <li>选型决策树与安全注意事项，科学使用AI金融工具</li>
+            </ul>
+        </div>
+
+        <article class="article-content">
+            <section class="section">
+                <h2 class="section-title">一、AI金融市场概览：科技重塑金融</h2>
+                <p>2026年，AI金融已经从"高大上"的华尔街专属，走进了寻常百姓家。根据麦肯锡最新报告，全球AI金融市场规模已突破<span style="color: var(--success); font-weight: 600;">550亿美元</span>，年复合增长率超过50%。从智能投顾到算法交易，从风控反欺诈到客户服务，AI正在重塑金融业的方方面面。</p>
+                <p>更重要的是，AI正在让金融服务变得更加普惠。过去，资产百万以上的高净值人群才能享受到专业的财富管理服务；现在，几百美元就能用上智能投顾，享受专业级的资产配置方案。过去，只有投行和对冲基金才能用量化交易；现在，普通人也能接触到AI驱动的投资工具。金融的民主化，正在AI的推动下加速到来。</p>
+                
+                <h3>1.1 AI金融的六大应用场景</h3>
+                <p>AI在金融领域的应用非常广泛，目前最成熟的六大场景是：</p>
+                <ul>
+                    <li><strong>智能投顾</strong>：AI根据你的风险偏好和投资目标，自动配置资产组合</li>
+                    <li><strong>量化交易</strong>：AI算法自动分析市场，执行交易策略</li>
+                    <li><strong>风险管理</strong>：AI识别和评估各种金融风险，预警潜在问题</li>
+                    <li><strong>财务分析</strong>：AI分析财报、市场数据，提供投资建议</li>
+                    <li><strong>个人理财</strong>：AI帮你记账、预算、储蓄、规划财务目标</li>
+                    <li><strong>反欺诈</strong>：AI实时检测异常交易，防范金融诈骗</li>
+                </ul>
+
+                <h3>1.2 2026年AI金融的新进展</h3>
+                <p>今年的AI金融工具有几个显著突破：</p>
+                <ul>
+                    <li><strong>大模型驱动</strong>：新一代大模型让金融分析和对话能力大幅提升</li>
+                    <li><strong>个性化程度更高</strong>：千人千面的投资建议，真正做到量身定制</li>
+                    <li><strong>多模态分析</strong>：不仅看数字，还能分析新闻、舆情、社交媒体</li>
+                    <li><strong>实时性更强</strong>：毫秒级的市场分析和交易执行</li>
+                    <li><strong>门槛进一步降低</strong>：曾经的高端功能，现在普通人也能用得起</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <p>⚠️ 风险提示：投资有风险，入市需谨慎。本文介绍的工具仅供参考，不构成任何投资建议。AI不能保证收益，投资决策请自行判断并承担风险。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">二、8款AI金融工具横向对比表</h2>
+                <p>我们从市面上数十款AI金融工具中精选了8款最具代表性的产品，从多个维度进行了深度评测。下面是总览对比表，帮你快速建立全局认知。</p>
+                
+                <table class="tool-table">
+                    <thead>
+                        <tr><th>工具名称</th><th>核心能力</th><th>费率/价格</th><th>适合场景</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="tool-name">Betterment</td><td>智能投顾、资产配置、税收优化、退休规划</td><td>0.25%年管理费</td><td>新手投资者、长期投资、退休储蓄</td></tr>
+                        <tr><td class="tool-name">Wealthfront</td><td>智能投顾、自动投资、税收损失收割、财务规划</td><td>0.25%年管理费</td><td>全自动投资、懒人理财、长期持有</td></tr>
+                        <tr><td class="tool-name">Kensho</td><td>金融数据分析、市场预测、事件驱动分析、AI研究</td><td>企业定制/个人版$50月起</td><td>专业投资者、金融研究、数据分析</td></tr>
+                        <tr><td class="tool-name">Personal Capital</td><td>财富管理、财务聚合、退休规划、投资分析</td><td>免费/财富管理0.89%起</td><td>个人财务管理、资产追踪、净值分析</td></tr>
+                        <tr><td class="tool-name">Mint</td><td>个人理财、记账预算、账单提醒、信用评分</td><td>完全免费</td><td>个人记账、预算管理、财务规划入门</td></tr>
+                        <tr><td class="tool-name">Robinhood AI</td><td>智能选股、市场分析、AI投研、交易辅助</td><td>免费/Gold $5月</td><td>美股投资、散户投资者、交易辅助</td></tr>
+                        <tr><td class="tool-name">AlphaSense</td><td>金融文档搜索、AI研究、财报分析、市场情报</td><td>企业定制</td><td>金融专业人士、投研分析、信息检索</td></tr>
+                        <tr><td class="tool-name">Plaid + AI</td><td>银行API聚合、交易分类、财务分析、风控</td><td>按调用量计费</td><td>开发者、金融APP集成、财务数据分析</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>2.1 核心能力对比</h3>
+                <p>我们从几个关键维度对比了主要工具的表现：</p>
+                <table class="tool-table">
+                    <thead>
+                        <tr><th>工具</th><th>易用性</th><th>专业性</th><th>费用透明度</th><th>自动化程度</th><th>性价比</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="tool-name">Betterment</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td></tr>
+                        <tr><td class="tool-name">Wealthfront</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td></tr>
+                        <tr><td class="tool-name">Kensho</td><td>⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐</td></tr>
+                        <tr><td class="tool-name">Personal Capital</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td></tr>
+                        <tr><td class="tool-name">Mint</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td></tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight-box">
+                    <p>📌 快速选择建议：新手理财选Betterment；全自动投资选Wealthfront；个人记账选Mint；资产总览选Personal Capital；专业研究选Kensho；美股投资用Robinhood AI。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">三、核心工具深度评测</h2>
+                <p>前面的表格给了你一个全局视角，接下来我们深入评测4款最值得关注的核心工具，看看它们的真实体验如何。</p>
+
+                <h3>3.1 Betterment：智能投顾的"标杆"</h3>
+                <p>Betterment是智能投顾领域的开创者和标杆，也是美国最大的独立智能投顾之一。它的理念很简单：你告诉我你的目标和风险承受能力，我帮你配置资产，自动调仓，你什么都不用管。</p>
+                <p><strong>核心优势：</strong></p>
+                <ul>
+                    <li><strong>简单易用</strong>：注册流程简单，界面友好，新手也能快速上手</li>
+                    <li><strong>费用透明</strong>：0.25%的年管理费，没有其他隐藏费用</li>
+                    <li><strong>税收优化</strong>：Tax-loss harvesting等功能帮你合理避税</li>
+                    <li><strong>目标导向</strong>：退休、买房、应急基金，按目标管理投资</li>
+                </ul>
+                <p><strong>适合人群：</strong>投资新手、上班族、没有时间研究投资的人、长期投资者。</p>
+                <p><strong>不足之处：</strong>主要是指数基金配置，追求高收益的人可能觉得不够刺激；不能自己选股；主要服务美国市场。</p>
+
+                <h3>3.2 Wealthfront：自动化程度最高</h3>
+                <p>Wealthfront是Betterment最大的竞争对手，两者经常被放在一起比较。Wealthfront的特点是<strong>极致的自动化</strong>——你几乎什么都不用管，它帮你搞定一切。</p>
+                <p><strong>核心优势：</strong></p>
+                <ul>
+                    <li><strong>全自动投资</strong>：从资金存入到资产配置到调仓，全程自动化</li>
+                    <li><strong>税收优化强</strong>：Direct Indexing等高级税收优化功能</li>
+                    <li><strong>财务规划工具</strong>：免费的财务规划工具非常强大</li>
+                    <li><strong>费率有竞争力</strong>：同样0.25%，但功能更多</li>
+                </ul>
+                <p><strong>适合人群：</strong>喜欢"设置好就忘了"的懒人投资者、长期持有者、注重税收优化的人。</p>
+                <p><strong>不足之处：</strong>用户体验不如Betterment细腻；灵活性稍差；同样主要服务美国市场。</p>
+
+                <h3>3.3 Personal Capital：你的财富仪表盘</h3>
+                <p>Personal Capital和前面两个不太一样——它不是纯智能投顾，更像是一个<strong>财富管理仪表盘</strong>。你可以把所有账户（银行、证券、房贷、信用卡）都连进去，在一个地方看清楚你的全部财务状况。</p>
+                <p><strong>核心优势：</strong></p>
+                <ul>
+                    <li><strong>全资产视图</strong>：所有账户一个地方看，净资产一目了然</li>
+                    <li><strong>投资分析</strong>：分析你的投资组合，找出费用过高、配置不合理的地方</li>
+                    <li><strong>退休规划</strong>：模拟你退休后的财务状况，看看钱够不够</li>
+                    <li><strong>免费功能强大</strong>：核心功能都是免费的，已经够用了</li>
+                </ul>
+                <p><strong>适合人群：</strong>想要全面了解自己财务状况的人、有多个投资账户的人、做财务规划的人。</p>
+                <p><strong>不足之处：</strong>财富管理服务费率较高（0.89%起）；会有销售电话推销付费服务；主要支持美国机构。</p>
+
+                <h3>3.4 Mint：个人理财的"入门神器"</h3>
+                <p>如果你连理财是什么都还不太清楚，那就从Mint开始吧。它是完全免费的个人理财工具，帮你记账、做预算、管理账单、看信用分数，功能全面又简单。</p>
+                <p><strong>核心优势：</strong></p>
+                <ul>
+                    <li><strong>完全免费</strong>：所有核心功能都是免费的，性价比极高</li>
+                    <li><strong>自动记账</strong>：连接银行账户，自动分类交易，不用手动记账</li>
+                    <li><strong>预算管理</strong>：设置各类支出预算，超支了提醒你</li>
+                    <li><strong>账单提醒</strong>：账单到期前提醒，避免逾期罚款</li>
+                </ul>
+                <p><strong>适合人群：</strong>理财新手、月光族、想要控制支出的人、预算管理新手。</p>
+                <p><strong>不足之处：</strong>广告较多；投资功能比较弱；数据同步偶尔会出问题；主要支持美国金融机构。</p>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">四、按投资需求选择工具</h2>
+                <p>不同的投资需求和经验水平，适合不同的工具。下面我们按常见场景，给出具体的工具推荐和组合方案。</p>
+
+                <h3>4.1 场景一：投资新手/小白</h3>
+                <p>痛点：不懂投资，不知道怎么开始，怕亏钱，怕麻烦。</p>
+                <table class="tool-table">
+                    <thead>
+                        <tr><th>工具</th><th>核心作用</th><th>推荐指数</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="tool-name">Betterment</td><td>帮你配置资产，自动管理</td><td>⭐⭐⭐⭐⭐</td></tr>
+                        <tr><td class="tool-name">Mint</td><td>记账预算，理清财务状况</td><td>⭐⭐⭐⭐⭐</td></tr>
+                        <tr><td class="tool-name">Personal Capital</td><td>资产总览，财务规划</td><td>⭐⭐⭐⭐</td></tr>
+                    </tbody>
+                </table>
+                <p><strong>新手最佳路径：</strong>先用Mint理清收支，存下第一笔钱，然后用Betterment做长期投资。先求稳，再求收益。不要一开始就碰个股和加密货币。</p>
+
+                <h3>4.2 场景二：有一定经验的投资者</h3>
+                <p>痛点：自己在投资，但想做得更好，需要更多工具和数据支持。</p>
+                <ul>
+                    <li><strong>资产配置</strong>：Betterment/Wealthfront 的智能投顾做核心配置</li>
+                    <li><strong>个股分析</strong>：Robinhood AI 辅助选股和分析</li>
+                    <li><strong>市场研究</strong>：Kensho 做深度数据分析和事件研究</li>
+                    <li><strong>总览管理</strong>：Personal Capital 统一查看所有账户</li>
+                </ul>
+
+                <h3>4.3 场景三：专业投资者/金融从业者</h3>
+                <p>痛点：信息太多看不过来，研究效率低，需要更强大的分析工具。</p>
+                <table class="tool-table">
+                    <thead>
+                        <tr><th>需求</th><th>推荐工具</th><th>核心价值</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="tool-name">金融研究分析</td><td>Kensho</td><td>AI驱动的金融数据分析和预测</td></tr>
+                        <tr><td class="tool-name">文档信息检索</td><td>AlphaSense</td><td>秒级搜索海量金融文档</td></tr>
+                        <tr><td class="tool-name">财务数据分析</td><td>Placid + AI</td><td>聚合财务数据，自定义分析</td></tr>
+                        <tr><td class="tool-name">市场情报</td><td>Kensho + AlphaSense</td><td>数据+文档，全方位覆盖</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>4.4 场景四：个人财务管理</h3>
+                <p>痛点：钱不知道花哪了，存不下钱，财务一团糟。</p>
+                <ul>
+                    <li><strong>记账预算</strong>：Mint - 自动记账，分类清晰，预算提醒</li>
+                    <li><strong>资产总览</strong>：Personal Capital - 所有账户一个地方看</li>
+                    <li><strong>储蓄目标</strong>：设置具体的储蓄目标，一步步实现</li>
+                    <li><strong>债务管理</strong>：优先还高息债务，制定还款计划</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <p>💰 理财的本质：先赚钱，再存钱，最后让钱生钱。AI工具只是辅助，最根本的还是提高收入、控制支出、长期投资。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">五、风险与注意事项</h2>
+                <p>AI金融工具虽好，但投资本身就有风险。了解这些风险和注意事项，才能更安全地使用AI金融工具。</p>
+
+                <h3>5.1 最重要的原则：AI不能消除市场风险</h3>
+                <p>这是必须反复强调的一点。AI再厉害，也<strong>不能保证你赚钱，更不能消除市场风险</strong>。</p>
+                <p><strong>AI可以帮你做的：</strong></p>
+                <ul>
+                    <li>分散投资，降低非系统性风险</li>
+                    <li>避免情绪化决策，保持纪律性</li>
+                    <li>提高研究和分析效率</li>
+                    <li>做好资产配置和风险管理</li>
+                    <li>节省时间和精力</li>
+                </ul>
+                <p><strong>AI做不到的：</strong></p>
+                <ul>
+                    <li>保证投资收益</li>
+                    <li>预测市场的每一次涨跌</li>
+                    <li>消除系统性风险（比如股灾）</li>
+                    <li>替代你做投资决策</li>
+                    <li>为你的亏损负责</li>
+                </ul>
+
+                <h3>5.2 AI金融的特殊风险</h3>
+                <p>除了普通的市场风险，AI金融还有一些特殊的风险：</p>
+                <ul>
+                    <li><strong>算法风险</strong>：AI算法可能有缺陷，或者在极端行情下失效</li>
+                    <li><strong>黑箱问题</strong>：很多AI模型你不知道它为什么这么决策</li>
+                    <li><strong>过度拟合</strong>：AI在历史数据上表现好，不代表未来也表现好</li>
+                    <li><strong>技术故障</strong>：系统宕机、数据错误、网络问题</li>
+                    <li><strong>安全风险</strong>：黑客攻击、数据泄露、账户被盗</li>
+                </ul>
+
+                <h3>5.3 避坑指南：常见的AI理财误区</h3>
+                <p>使用AI理财工具时，要避免这些常见误区：</p>
+                <ul>
+                    <li><strong>误区一：</strong>"AI说买什么就买什么" —— 自己要有判断，AI只是参考</li>
+                    <li><strong>误区二：</strong>"历史收益高的策略一定好" —— 过去不代表未来，警惕过拟合</li>
+                    <li><strong>误区三：</strong>"有了AI就不用学习了" —— 越用AI，越要学习金融知识</li>
+                    <li><strong>误区四：</strong>"越复杂的AI策略越赚钱" —— 简单有效的策略往往更好</li>
+                    <li><strong>误区五：</strong>"AI能帮我赚快钱" —— 投资是马拉松，不是百米冲刺</li>
+                </ul>
+
+                <h3>5.4 安全使用建议</h3>
+                <p>安全使用AI金融工具的几条建议：</p>
+                <ul>
+                    <li>选择有监管牌照的正规平台</li>
+                    <li>开通双重认证，保护账户安全</li>
+                    <li>不要把所有钱都放在一个平台</li>
+                    <li>定期检查账户和交易记录</li>
+                    <li>保护好个人信息，不要泄露密码</li>
+                    <li>只投你能承受损失的钱</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <p>⚠️ 风险提示：本文不构成任何投资建议。投资有风险，入市需谨慎。所有投资决策请自行判断，风险自担。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">六、选型决策树</h2>
+                <p>这么多AI金融工具，到底该选哪个？跟着这棵决策树走，几步就能找到适合你的。</p>
+
+                <div class="decision-tree">
+                    <div class="decision-node">
+                        <div class="decision-question">问题1：你现在的理财处于什么阶段？</div>
+                        <div class="decision-options">
+                            <p>→ 完全小白，还没开始理财 → 继续问题2</p>
+                            <p>→ 有一些基础，想要投资 → 继续问题3</p>
+                            <p>→ 有投资经验，想要更好的工具 → 继续问题4</p>
+                            <p>→ 金融专业人士 → 推荐：Kensho + AlphaSense</p>
+                        </div>
+                    </div>
+
+                    <div class="decision-node">
+                        <div class="decision-question">问题2：你最想解决什么问题？</div>
+                        <div class="decision-options">
+                            <p>→ 不知道钱花哪了，想记账 → 推荐：Mint</p>
+                            <p>→ 想存钱，做财务规划 → 推荐：Mint + Personal Capital</p>
+                            <p>→ 想开始投资，但什么都不懂 → 推荐：Betterment</p>
+                        </div>
+                    </div>
+
+                    <div class="decision-node">
+                        <div class="decision-question">问题3：你想要什么样的投资方式？</div>
+                        <div class="decision-options">
+                            <p>→ 越省心越好，最好不用管 → 推荐：Wealthfront</p>
+                            <p>→ 想要一些选择和控制权 → 推荐：Betterment</p>
+                            <p>→ 想自己选股，但要AI辅助 → 推荐：Robinhood AI</p>
+                            <p>→ 想全面了解资产状况 → 推荐：Personal Capital</p>
+                        </div>
+                    </div>
+
+                    <div class="decision-node">
+                        <div class="decision-question">问题4：你最需要什么功能？</div>
+                        <div class="decision-options">
+                            <p>→ 深度市场研究和数据分析 → 推荐：Kensho</p>
+                            <p>→ 金融文档和信息检索 → 推荐：AlphaSense</p>
+                            <p>→ 资产配置+人工顾问 → 推荐：Personal Capital 财富管理</p>
+                            <p>→ 量化策略和自动交易 → 谨慎！建议先充分学习</p>
+                        </div>
+                    </div>
+
+                    <div class="decision-node decision-result">
+                        <div class="decision-question">✅ 选型完成</div>
+                        <div class="decision-options">
+                            <p>建议先从免费功能开始体验，觉得有用再考虑付费。投资是长期的事，不要急，慢慢学习，慢慢积累。</p>
+                            <p style="margin-top: 8px;"><strong>最重要的：</strong>工具只是辅助，投资的核心是认知、纪律和心态。把这三样修炼好，比什么工具都重要。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">七、未来发展趋势</h2>
+                <p>AI金融还在快速发展，未来几年会有哪些变化？让我们展望一下。</p>
+
+                <h3>7.1 个性化金融的时代</h3>
+                <p>未来的金融服务会越来越个性化：</p>
+                <ul>
+                    <li><strong>千人千面的投资建议</strong>：AI真正理解你的情况，给出量身定制的方案</li>
+                    <li><strong>个性化风险评估</strong>：不是简单的风险等级，而是真正理解你的风险承受能力</li>
+                    <li><strong>动态资产配置</strong>：根据市场环境和你的变化，实时调整投资组合</li>
+                    <li><strong>全生命周期规划</strong>：从毕业到退休，全程陪伴你的财务人生</li>
+                </ul>
+
+                <h3>7.2 生成式AI的深度应用</h3>
+                <p>大模型和生成式AI会给金融带来更大变化：</p>
+                <ul>
+                    <li><strong>自然语言交互</strong>：用自然语言问AI任何金融问题，秒级得到答案</li>
+                    <li><strong>报告自动生成</strong>：AI自动生成投资报告、研究分析、财务摘要</li>
+                    <li><strong>多模态分析</strong>：文字、数字、图表、视频，AI都能分析</li>
+                    <li><strong>AI投顾对话</strong>：像和真人理财顾问聊天一样自然</li>
+                </ul>
+
+                <h3>7.3 普惠金融的深化</h3>
+                <p>AI会让金融服务更加普惠：</p>
+                <ul>
+                    <li>更多人能享受到专业级的财富管理服务</li>
+                    <li>小微企业更容易获得贷款和金融服务</li>
+                    <li>金融服务的成本进一步下降</li>
+                    <li>金融知识的门槛降低，更多人能懂理财</li>
+                </ul>
+
+                <h3>7.4 监管与合规的演进</h3>
+                <p>AI金融的监管也会越来越完善：</p>
+                <ul>
+                    <li>AI金融的监管框架会逐步建立</li>
+                    <li>算法透明度和可解释性要求提高</li>
+                    <li>消费者保护会越来越受重视</li>
+                    <li>数据隐私和安全的要求越来越高</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <p>🔮 趋势总结：AI会让金融变得更智能、更普惠、更高效。但金融的本质不会变——风险和收益永远匹配，不懂的东西不要碰。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">八、总结与建议</h2>
+                <p>看到这里，相信你对AI金融工具有了比较全面的了解。最后总结一下，给你一些实用的建议。</p>
+
+                <h3>8.1 核心要点回顾</h3>
+                <ul>
+                    <li><strong>AI是工具，不是神</strong>：AI能提高效率，但不能保证赚钱，更不能消除风险</li>
+                    <li><strong>选对工具很重要</strong>：不同阶段、不同需求，适合不同的工具</li>
+                    <li><strong>投资有风险</strong>：永远不要投你输不起的钱</li>
+                    <li><strong>学习是王道</strong>：工具越好，越需要你有判断力</li>
+                    <li><strong>长期主义</strong>：投资是马拉松，慢慢来，比较快</li>
+                </ul>
+
+                <h3>8.2 给不同人群的建议</h3>
+                <p><strong>给理财小白：</strong></p>
+                <ul>
+                    <li>先从记账和储蓄开始，别急着投资</li>
+                    <li>先用免费工具学习和体验</li>
+                    <li>第一笔投资建议用智能投顾，简单省心</li>
+                    <li>不要碰不懂的东西，比如杠杆、期权、复杂衍生品</li>
+                </ul>
+
+                <p><strong>给有经验的投资者：</strong></p>
+                <ul>
+                    <li>用AI工具提高研究和分析效率</li>
+                    <li>核心配置可以用智能投顾，卫星部分自己操作</li>
+                    <li>保持独立思考，不要盲从AI的建议</li>
+                    <li>持续学习，提升自己的投资认知</li>
+                </ul>
+
+                <p><strong>给金融从业者：</strong></p>
+                <ul>
+                    <li>拥抱AI，它会让你更有竞争力，而不是取代你</li>
+                    <li>从重复性工作开始用AI，把时间用在高价值的地方</li>
+                    <li>AI的结果一定要人工审核和验证</li>
+                    <li>遵守职业道德和监管要求，合规使用AI</li>
+                </ul>
+
+                <h3>8.3 行动清单</h3>
+                <p>看完这篇文章，你可以做这些事：</p>
+                <ol>
+                    <li><strong>评估现状</strong>：你现在的财务状况如何？处于什么阶段？</li>
+                    <li><strong>明确目标</strong>：你想用AI金融工具帮你做什么？</li>
+                    <li><strong>选择工具</strong>：根据决策树，选1-2款工具开始使用</li>
+                    <li><strong>从小开始</strong>：先用小钱试试水，熟悉了再增加投入</li>
+                    <li><strong>持续学习</strong>：金融知识是最好的投资，永远不要停止学习</li>
+                </ol>
+
+                <div class="highlight-box">
+                    <p>💰 最后想说：理财的终极目标不是赚最多的钱，而是过上你想要的生活。工具只是手段，幸福生活才是目的。祝你财务健康，生活幸福！</p>
+                </div>
+            </section>
+        </article>
+
+        <div class="sister-sites">
+            <div class="sister-sites-title">🌐 姊妹站点</div>
+            <div class="sister-sites-links">
+                <a href="https://tool.link.cn" target="_blank" rel="noopener">tool.link.cn</a>
+                <a href="https://tools.link.cn" target="_blank" rel="noopener">tools.link.cn</a>
+                <a href="https://prompts.link.cn" target="_blank" rel="noopener">prompts.link.cn</a>
+                <a href="https://signal.link.cn" target="_blank" rel="noopener">signal.link.cn</a>
+            </div>
+        </div>
+
+        <div class="social-share">
+            <div class="social-share-title">🔗 觉得有用？分享给更多人</div>
+            <div class="social-share-btns">
+                <button class="share-btn wechat" onclick="shareToWeChat()">💬 微信</button>
+                <a class="share-btn weibo" href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fai.link.cn%2Farticles%2Fai-finance-tools-guide.html&title=2026%E5%B9%B4AI%E9%87%91%E8%9E%8D%E5%B7%A5%E5%85%B7%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97" target="_blank" rel="noopener">🎨 微博</a>
+                <a class="share-btn twitter" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fai.link.cn%2Farticles%2Fai-finance-tools-guide.html&text=2026%E5%B9%B4AI%E9%87%91%E8%9E%8D%E5%B7%A5%E5%85%B7%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97" target="_blank" rel="noopener">🐦 Twitter</a>
+                <a class="share-btn linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fai.link.cn%2Farticles%2Fai-finance-tools-guide.html" target="_blank" rel="noopener">💼 LinkedIn</a>
+                <button class="share-btn copy" onclick="copyLink()">📋 复制链接</button>
+            </div>
+        </div>
+
+        <div class="continue-reading">
+            <h2 class="continue-title">📖 继续阅读</h2>
+            <p class="continue-desc">看了AI金融工具，这些内容也可能帮到你：</p>
+            <div class="continue-grid">
+                <a href="/articles/ai-tools-overview.html" class="continue-card">
+                    <div class="continue-card-tag">工具总览</div>
+                    <h3>AI工具大全总览</h3>
+                    <p>200+款AI工具分类导航与深度评测</p>
+                    <span class="continue-arrow">→</span>
+                </a>
+                <a href="/articles/ai-productivity-guide-2026.html" class="continue-card">
+                    <div class="continue-card-tag">生产力</div>
+                    <h3>2026 AI生产力指南</h3>
+                    <p>用AI工具把工作效率提升10倍的实战方法</p>
+                    <span class="continue-arrow">→</span>
+                </a>
+                <a href="/articles/ai-money-making-guide-2026.html" class="continue-card">
+                    <div class="continue-card-tag">副业赚钱</div>
+                    <h3>用AI赚钱的10种方法</h3>
+                    <p>从副业到年入百万的完整变现指南</p>
+                    <span class="continue-arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 AI.link.cn · 专注AI工具与资讯 | <a href="/">首页</a> · <a href="/pages/tools/">工具库</a> · <a href="/tutorials/">教程</a> · <a href="/articles/">资讯</a> · <a href="/compare/">对比</a></p>
+        </div>
+    </footer>
+
+    <script>
+        const progressBar = document.getElementById('progressBar');
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+            progressBar.style.width = scrollPercent + '%';
+        });
+    </script>
+    <script>
+        function copyLink() {
+            const url = window.location.href;
+            navigator.clipboard.writeText(url).then(() => {
+                const btn = event.target.closest('.share-btn');
+                const originalText = btn.textContent;
+                btn.textContent = '✓ 已复制';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+        function shareToWeChat() {
+            alert('请截图或复制链接分享到微信好友/群聊：\n' + window.location.href);
+        }
+    </script>
+</body>
+</html>

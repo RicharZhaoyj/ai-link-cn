@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026年AI医疗健康工具完全指南：8款工具守护你的健康 | AI.link.cn</title>
+    <meta name="description" content="AI医疗健康工具全面评测：智能问诊、健康管理、医学影像、心理健康、用药提醒全覆盖。对比Ada Health、WebMD Symptom Checker、Buoy等8款工具，让AI成为你的健康助手。">
+    <meta name="keywords" content="AI医疗,AI健康工具,智能问诊,医学影像AI,心理健康AI,健康管理,远程医疗">
+    <link rel="canonical" href="https://ai.link.cn/articles/ai-healthcare-tools-guide.html">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        :root {
+            --bg: #0a0f1a;
+            --surface: #111827;
+            --surface-2: #1f2937;
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #22c55e;
+            --accent-light: #4ade80;
+            --success: #22c55e;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --blue: #3b82f6;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        header {
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(34, 197, 94, 0.2);
+            background: rgba(10, 15, 26, 0.98);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo { font-size: 1.4rem; font-weight: 700; color: var(--accent); text-decoration: none; }
+
+        .nav-links { display: flex; gap: 20px; list-style: none; flex-wrap: wrap; }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover, .nav-links a.active { color: var(--accent); }
+
+        .progress-bar {
+            position: fixed;
+            top: 60px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: rgba(34, 197, 94, 0.15);
+            z-index: 99;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent), var(--accent-light));
+            transition: width 0.1s ease;
+            width: 0%;
+        }
+
+        .article-header {
+            padding: 48px 0 32px;
+            text-align: center;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .article-category {
+            background: rgba(34, 197, 94, 0.15);
+            color: var(--accent);
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+        }
+
+        .article-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+
+        .article-subtitle {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+            max-width: 640px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .article-banner {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.15), rgba(59, 130, 246, 0.1));
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 32px;
+            border: 1px solid rgba(34, 197, 94, 0.2);
+        }
+
+        .article-banner h3 {
+            font-size: 1.15rem;
+            margin-bottom: 12px;
+            color: var(--accent);
+        }
+
+        .article-banner ul { list-style: none; padding-left: 0; }
+
+        .article-banner li {
+            padding: 6px 0;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .article-banner li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+        }
+
+        .article-content { padding: 24px 0; }
+
+        .section { margin-bottom: 40px; }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(34, 197, 94, 0.2);
+        }
+
+        .section-title::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 20px;
+            background: var(--accent);
+            border-radius: 2px;
+            margin-right: 12px;
+            vertical-align: middle;
+        }
+
+        .article-content h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 24px 0 12px;
+            color: var(--text);
+        }
+
+        .article-content p {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .article-content strong { color: var(--text); font-weight: 600; }
+
+        .article-content ul, .article-content ol {
+            margin: 12px 0 16px 24px;
+            color: var(--text-muted);
+        }
+
+        .article-content li { margin-bottom: 8px; }
+
+        .tool-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: var(--surface);
+            border-radius: 12px;
+            overflow: hidden;
+            font-size: 0.92rem;
+        }
+
+        .tool-table th {
+            background: var(--surface-2);
+            color: var(--accent);
+            padding: 12px 14px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 1px solid rgba(34, 197, 94, 0.2);
+        }
+
+        .tool-table td {
+            padding: 12px 14px;
+            border-bottom: 1px solid rgba(34, 197, 94, 0.08);
+            color: var(--text-muted);
+        }
+
+        .tool-table tr:last-child td { border-bottom: none; }
+        .tool-table td.tool-name { color: var(--text); font-weight: 600; }
+
+        .highlight-box {
+            background: var(--surface);
+            border-left: 4px solid var(--accent);
+            border-radius: 0 8px 8px 0;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .highlight-box p { color: var(--text); font-weight: 500; margin: 0; }
+
+        .decision-tree {
+            background: var(--surface);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 20px 0;
+            border: 1px solid rgba(34, 197, 94, 0.15);
+        }
+
+        .decision-node {
+            padding: 12px 16px;
+            margin: 8px 0;
+            border-radius: 8px;
+            background: var(--surface-2);
+            border-left: 3px solid var(--accent);
+        }
+
+        .decision-question {
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 8px;
+        }
+
+        .decision-options {
+            padding-left: 20px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .decision-result {
+            background: rgba(34, 197, 94, 0.1);
+            border-left-color: var(--success);
+        }
+
+        .sister-sites {
+            padding: 24px 0;
+            margin: 20px 0;
+            text-align: center;
+            border-top: 1px solid rgba(34, 197, 94, 0.15);
+            border-bottom: 1px solid rgba(34, 197, 94, 0.15);
+        }
+
+        .sister-sites-title {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+
+        .sister-sites-links {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .sister-sites-links a {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 6px 14px;
+            border-radius: 8px;
+            background: rgba(34, 197, 94, 0.1);
+            transition: all 0.2s;
+        }
+
+        .sister-sites-links a:hover {
+            background: rgba(34, 197, 94, 0.2);
+        }
+
+        .continue-reading {
+            padding: 40px 0;
+            margin-top: 20px;
+        }
+        .continue-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .continue-desc {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .continue-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+        .continue-card {
+            display: block;
+            background: var(--surface);
+            border: 1px solid rgba(34, 197, 94, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s;
+            position: relative;
+        }
+        .continue-card:hover {
+            border-color: var(--accent);
+            background: rgba(34, 197, 94, 0.05);
+            transform: translateY(-2px);
+        }
+        .continue-card-tag {
+            display: inline-block;
+            background: rgba(34, 197, 94, 0.15);
+            color: var(--accent);
+            padding: 2px 10px;
+            border-radius: 10px;
+            font-size: 0.75rem;
+            margin-bottom: 10px;
+        }
+        .continue-card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+        .continue-card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+        .continue-arrow {
+            position: absolute;
+            right: 16px;
+            top: 16px;
+            color: var(--accent);
+            font-size: 1.2rem;
+            transition: transform 0.2s;
+        }
+        .continue-card:hover .continue-arrow {
+            transform: translateX(4px);
+        }
+        @media (max-width: 768px) {
+            .continue-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 24px;
+            font-size: 0.95rem;
+        }
+
+        .back-link:hover { text-decoration: underline; }
+
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid rgba(34, 197, 94, 0.2);
+            margin-top: 40px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        footer a { color: var(--accent); text-decoration: none; margin: 0 6px; }
+
+        .social-share {
+            padding: 24px 0;
+            margin: 20px 0;
+            text-align: center;
+            border-top: 1px solid rgba(34, 197, 94, 0.15);
+            border-bottom: 1px solid rgba(34, 197, 94, 0.15);
+        }
+        .social-share-title {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+        .social-share-btns {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 24px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.88rem;
+            transition: all 0.2s;
+            border: 1px solid rgba(34, 197, 94, 0.25);
+            background: var(--surface);
+            color: var(--text);
+            cursor: pointer;
+        }
+        .share-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        .share-btn.wechat { border-color: rgba(34, 197, 94, 0.4); }
+        .share-btn.wechat:hover { background: rgba(34, 197, 94, 0.15); }
+        .share-btn.weibo { border-color: rgba(249, 115, 22, 0.4); }
+        .share-btn.weibo:hover { background: rgba(249, 115, 22, 0.15); }
+        .share-btn.twitter { border-color: rgba(59, 130, 246, 0.4); }
+        .share-btn.twitter:hover { background: rgba(59, 130, 246, 0.15); }
+        .share-btn.linkedin { border-color: rgba(6, 182, 212, 0.4); }
+        .share-btn.linkedin:hover { background: rgba(6, 182, 212, 0.15); }
+        .share-btn.copy { border-color: rgba(34, 197, 94, 0.4); }
+        .share-btn.copy:hover { background: rgba(34, 197, 94, 0.15); }
+        .share-btn.copied { background: rgba(34, 197, 94, 0.15) !important; border-color: rgba(34, 197, 94, 0.6) !important; }
+
+        @media (max-width: 768px) {
+            .article-title { font-size: 1.6rem; }
+            .article-banner { padding: 20px; }
+            .nav-links { gap: 12px; }
+            .tool-table { font-size: 0.82rem; }
+            .tool-table th, .tool-table td { padding: 8px 10px; }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "2026年AI医疗健康工具完全指南：8款工具守护你的健康",
+        "description": "AI医疗健康工具全面评测：智能问诊、健康管理、医学影像、心理健康、用药提醒全覆盖。对比Ada Health、WebMD Symptom Checker、Buoy等8款工具，让AI成为你的健康助手。",
+        "author": {"@type": "Organization", "name": "AI.link.cn 编辑部"},
+        "publisher": {"@type": "Organization", "name": "AI.link.cn"},
+        "datePublished": "2026-07-28",
+        "dateModified": "2026-07-28",
+        "image": "https://ai.link.cn/images/ai-healthcare-tools-guide.jpg",
+        "articleSection": "AI医疗健康",
+        "keywords": ["AI医疗", "AI健康工具", "智能问诊", "医学影像AI", "心理健康AI", "健康管理", "远程医疗"]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://ai.link.cn/"},
+            {"@type": "ListItem", "position": 2, "name": "资讯", "item": "https://ai.link.cn/articles/"},
+            {"@type": "ListItem", "position": 3, "name": "AI医疗健康工具完全指南", "item": "https://ai.link.cn/articles/ai-healthcare-tools-guide.html"}
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "AI医疗工具能代替医生吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "不能。AI医疗工具是辅助工具，不是医生的替代品。它们可以帮助你初步了解症状、提醒用药、追踪健康数据，但不能进行诊断和开处方。遇到健康问题，AI工具可以作为参考，但一定要咨询专业医生。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Ada Health vs Buoy vs WebMD 哪个更好？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ada Health在症状评估方面最准确，有医生团队背书，全球用户最多；Buoy的交互体验更好，更像和医生聊天；WebMD的医疗知识库最丰富，信息最全面。一般推荐首选Ada Health，它的准确率和专业性都比较高。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "AI心理健康工具真的有效吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "多项临床研究表明，AI驱动的认知行为疗法（CBT）对轻度到中度的焦虑、抑郁、失眠等问题有显著效果，效果接近面对面咨询。但对于严重的心理疾病，AI工具不能代替专业治疗，应该寻求专业心理医生的帮助。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "使用AI健康工具安全吗？我的健康数据会泄露吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "正规的AI健康工具都有严格的数据安全和隐私保护措施，通常遵守HIPAA等医疗数据保护法规。但仍需注意：选择有口碑的正规平台，仔细阅读隐私政策，不要分享过多敏感信息，敏感健康问题优先咨询线下医生。"
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="nav">
+                <a href="/" class="logo">AI.link.cn</a>
+                <ul class="nav-links">
+                    <li><a href="/">首页</a></li>
+                    <li><a href="/pages/tools/">工具</a></li>
+                    <li><a href="/tutorials/">教程</a></li>
+                    <li><a href="/articles/" class="active">资讯</a></li>
+                    <li><a href="/compare/">对比</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="progress-bar">
+        <div class="progress-bar-fill" id="progressBar"></div>
+    </div>
+
+    <div class="container">
+        <a href="/articles/" class="back-link">← 返回资讯列表</a>
+
+        <div class="article-header">
+            <div class="article-meta">
+                <span class="article-category">AI医疗健康</span>
+                <span>2026年07月28日</span>
+                <span>阅读时间：15分钟</span>
+            </div>
+            <h1 class="article-title">2026年AI医疗健康工具完全指南：8款工具守护你的健康</h1>
+            <p class="article-subtitle">从智能问诊到健康管理，从心理健康到用药提醒，AI正在让健康管理变得更智能、更便捷。本文深度评测8款主流AI医疗健康工具，帮你找到最适合的健康助手。</p>
+        </div>
+
+        <div class="article-banner">
+            <h3>📋 本文要点</h3>
+            <ul>
+                <li>8款主流AI医疗健康工具全面对比，附价格、功能、适用场景一览表</li>
+                <li>六大核心能力深度评测：智能问诊、健康追踪、医学影像、心理健康、用药管理、健康科普</li>
+                <li>按需求推荐：日常保健/慢病管理/心理健康/远程问诊的最佳选择</li>
+                <li>AI医疗的边界与局限，哪些情况一定要看医生</li>
+                <li>选型决策树与安全注意事项，科学使用AI健康工具</li>
+            </ul>
+        </div>
+
+        <article class="article-content">
+            <section class="section">
+                <h2 class="section-title">一、AI医疗健康市场概览：科技守护健康</h2>
+                <p>2026年，AI医疗健康已经从前沿概念走进了寻常百姓家。根据Grand View Research最新报告，全球AI医疗市场规模已突破<span style="color: var(--success); font-weight: 600;">650亿美元</span>，年复合增长率超过42%。从智能问诊到医学影像，从药物研发到健康管理，AI正在重塑医疗健康的方方面面。</p>
+                <p>更重要的是，AI正在让医疗资源变得更普惠。过去需要排队几小时看医生的小毛病，现在打开APP几分钟就能得到专业评估；过去需要去大医院才能做的影像分析，现在AI几秒钟就能给出参考意见。对于慢病患者和亚健康人群，AI更是提供了24小时不间断的健康守护。</p>
+                
+                <h3>1.1 AI医疗健康的六大应用场景</h3>
+                <p>AI在医疗健康领域的应用越来越广泛，目前最成熟的六大场景是：</p>
+                <ul>
+                    <li><strong>智能问诊与分诊</strong>：根据症状初步判断可能的疾病，给出就医建议</li>
+                    <li><strong>医学影像诊断</strong>：AI辅助读片，提高诊断效率和准确率</li>
+                    <li><strong>健康管理与追踪</strong>：运动、饮食、睡眠全方位健康数据监测</li>
+                    <li><strong>心理健康</strong>：AI心理疏导、认知行为疗法、情绪管理</li>
+                    <li><strong>用药管理</strong>：用药提醒、药物相互作用查询、用药依从性管理</li>
+                    <li><strong>健康科普</strong>：个性化健康知识推送，解答健康疑问</li>
+                </ul>
+
+                <h3>1.2 2026年AI医疗的新进展</h3>
+                <p>今年的AI医疗工具有几个显著突破：</p>
+                <ul>
+                    <li><strong>多模态交互</strong>：支持文字、语音、图片，甚至可以上传皮肤照片、检查报告让AI分析</li>
+                    <li><strong>可穿戴设备整合</strong>：和智能手表、健康手环深度联动，数据更全面</li>
+                    <li><strong>个性化健康方案</strong>：基于个人健康数据，定制专属的运动、饮食、睡眠建议</li>
+                    <li><strong>远程医疗融合</strong>：AI初筛后可以直接对接在线医生，形成完整服务闭环</li>
+                    <li><strong>准确率大幅提升</strong>：新一代模型在常见疾病的诊断准确率上已接近全科医生水平</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <p>💡 重要提醒：AI医疗工具是健康助手，不是医生。本文介绍的所有工具都不能替代专业医疗诊断，身体不适请及时就医。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">二、8款AI医疗健康工具横向对比表</h2>
+                <p>我们从市面上数十款AI健康工具中精选了8款最具代表性的产品，从多个维度进行了深度评测。下面是总览对比表，帮你快速建立全局认知。</p>
+                
+                <table class="tool-table">
+                    <thead>
+                        <tr><th>工具名称</th><th>核心能力</th><th>价格</th><th>适合场景</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="tool-name">Ada Health</td><td>AI智能问诊、症状评估、健康追踪、就医建议</td><td>免费/高级版$10月</td><td>日常症状自查、健康咨询、就医指导</td></tr>
+                        <tr><td class="tool-name">Buoy Health</td><td>AI问诊助手、症状检查、就医导航、保险对接</td><td>免费</td><td>症状初筛、就医建议、保险查询</td></tr>
+                        <tr><td class="tool-name">WebMD Symptom Checker</td><td>症状自查、医疗百科、医生查找、健康资讯</td><td>免费</td><td>健康科普、症状查询、医疗知识学习</td></tr>
+                        <tr><td class="tool-name">Woebot</td><td>AI心理治疗、CBT认知行为疗法、情绪追踪、焦虑抑郁管理</td><td>免费/高级版$12月</td><td>心理健康、情绪管理、压力缓解</td></tr>
+                        <tr><td class="tool-name">Medisafe</td><td>用药提醒、药物管理、依从性追踪、药物交互查询</td><td>免费/高级版$5月</td><td>慢病用药管理、老年人用药提醒</td></tr>
+                        <tr><td class="tool-name">Google Fit</td><td>运动追踪、健康记录、AI健身建议、和健康设备联动</td><td>完全免费</td><td>日常运动健康管理、数据整合</td></tr>
+                        <tr><td class="tool-name">DermAssist</td><td>AI皮肤分析、皮肤病初步筛查、护肤建议</td><td>免费/专业版$15月</td><td>皮肤问题自查、护肤咨询</td></tr>
+                        <tr><td class="tool-name">Youper</td><td>AI情绪健康、焦虑管理、睡眠改善、冥想引导</td><td>免费/高级版$10月</td><td>情绪管理、睡眠改善、压力调节</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>2.1 核心能力对比</h3>
+                <p>我们从几个关键维度对比了8款工具的表现：</p>
+                <table class="tool-table">
+                    <thead>
+                        <tr><th>工具</th><th>准确率</th><th>易用性</th><th>功能丰富度</th><th>性价比</th><th>数据安全</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="tool-name">Ada Health</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td></tr>
+                        <tr><td class="tool-name">Buoy Health</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td></tr>
+                        <tr><td class="tool-name">WebMD</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td></tr>
+                        <tr><td class="tool-name">Woebot</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td></tr>
+                        <tr><td class="tool-name">Medisafe</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td></tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight-box">
+                    <p>📌 快速选择建议：症状自查首选Ada Health；心理健康选Woebot；用药管理选Medisafe；运动健康选Google Fit；皮肤问题选DermAssist。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">三、核心工具深度评测</h2>
+                <p>前面的表格给了你一个全局视角，接下来我们深入评测4款最值得投入的核心工具，看看它们的真实体验如何。</p>
+
+                <h3>3.1 Ada Health：AI医生中的"优等生"</h3>
+                <p>Ada Health是目前全球最受欢迎的AI健康助手之一，累计用户超过1000万。它由医生和AI科学家共同打造， symptom checker（症状检查）的准确率在同类产品中名列前茅。</p>
+                <p><strong>核心优势：</strong></p>
+                <ul>
+                    <li><strong>准确率高</strong>：基于庞大的医学知识库和真实病例，常见疾病评估准确率超过90%</li>
+                    <li><strong>医生背书</strong>：有专业医生团队参与研发和持续更新，医学严谨性有保障</li>
+                    <li><strong>问诊流程专业</strong>：像真实医生问诊一样，一步步询问症状，不遗漏关键信息</li>
+                    <li><strong>多语言支持</strong>：支持包括中文在内的多种语言，全球用户都能用</li>
+                </ul>
+                <p><strong>适合人群：</strong>经常有健康疑问的人、想要了解症状的人、需要就医前初步评估的人。</p>
+                <p><strong>不足之处：</strong>高级功能需要付费；中文版本的体验不如英文版；不能替代医生诊断。</p>
+
+                <h3>3.2 Woebot：你的AI心理治疗师</h3>
+                <p>Woebot是一款基于认知行为疗法（CBT）的AI心理健康工具。它不像传统心理咨询师那样听你倾诉，而是通过结构化的对话和练习，帮你调整认知模式，改善情绪。</p>
+                <p><strong>核心优势：</strong></p>
+                <ul>
+                    <li><strong>循证方法</strong>：基于经过临床验证的CBT认知行为疗法，效果有科学依据</li>
+                    <li><strong>24/7可用</strong>：凌晨3点焦虑发作也有人陪，不用预约不用等</li>
+                    <li><strong>无压力环境</strong>：不用担心被评判，可以完全敞开心扉</li>
+                    <li><strong>游戏化设计</strong>：对话轻松有趣，不会像做心理咨询那么沉重</li>
+                </ul>
+                <p><strong>适合人群：</strong>有轻度焦虑、抑郁、压力问题的人；想要改善情绪管理的人；不方便线下咨询的人。</p>
+                <p><strong>不足之处：</strong>严重心理疾病不适用；无法替代药物治疗；深度问题还是需要真人咨询师。</p>
+
+                <h3>3.3 Medisafe：吃药再也不忘了</h3>
+                <p>如果你或者家人需要长期吃药，Medisafe简直是神器。它不仅能提醒你按时吃药，还能追踪用药情况、预警药物相互作用，甚至可以同步给家人，让家人帮忙监督。</p>
+                <p><strong>核心优势：</strong></p>
+                <ul>
+                    <li><strong>智能提醒</strong>：多种提醒方式，确保你不会漏掉任何一次用药</li>
+                    <li><strong>用药依从性追踪</strong>：清楚记录你吃了没吃，生成用药报告</li>
+                    <li><strong>药物相互作用预警</strong>：新增药物时自动检查，避免危险的药物组合</li>
+                    <li><strong>家人同步</strong>：可以绑定家人，老人忘吃药时子女能收到提醒</li>
+                </ul>
+                <p><strong>适合人群：</strong>慢病患者、需要长期服药的人、老年人、照顾老人的子女。</p>
+                <p><strong>不足之处：</strong>主要功能就是用药提醒，功能相对单一；高级功能需要付费。</p>
+
+                <h3>3.4 DermAssist：皮肤问题随手拍</h3>
+                <p>皮肤上长了个东西不知道是什么？拍张照片给DermAssist，AI几秒钟就能给出初步分析。虽然不能替代皮肤科医生，但对于常见的皮肤问题，它的参考价值还是很高的。</p>
+                <p><strong>核心优势：</strong></p>
+                <ul>
+                    <li><strong>方便快捷</strong>：拍张照片几秒钟出结果，不用请假去医院排队</li>
+                    <li><strong>覆盖常见皮肤病</strong>：痤疮、湿疹、皮炎、皮疹等常见皮肤问题都能识别</li>
+                    <li><strong>护肤建议</strong>：不仅分析问题，还给出针对性的护肤和护理建议</li>
+                    <li><strong>严重程度评估</strong>：告诉你什么情况需要尽快看医生，什么情况可以先观察</li>
+                </ul>
+                <p><strong>适合人群：</strong>经常有皮肤问题的人、想了解皮肤状况的人、不方便去医院的时候做初步评估。</p>
+                <p><strong>不足之处：</strong>准确率受照片质量影响很大；不能做病理诊断；皮肤问题建议还是优先看医生。</p>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">四、按健康需求选择工具</h2>
+                <p>不同的健康需求适合不同的工具。下面我们按常见的健康场景，给出具体的工具推荐和组合方案。</p>
+
+                <h3>4.1 场景一：日常健康管理</h3>
+                <p>需求：关注整体健康，想要养成健康生活习惯，了解身体状况。</p>
+                <table class="tool-table">
+                    <thead>
+                        <tr><th>工具</th><th>核心作用</th><th>推荐指数</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="tool-name">Google Fit</td><td>运动、睡眠、心率全面追踪</td><td>⭐⭐⭐⭐⭐</td></tr>
+                        <tr><td class="tool-name">Ada Health</td><td>健康疑问随时咨询</td><td>⭐⭐⭐⭐</td></tr>
+                        <tr><td class="tool-name">WebMD</td><td>健康知识科普学习</td><td>⭐⭐⭐⭐</td></tr>
+                    </tbody>
+                </table>
+                <p><strong>最佳组合方案：</strong>Google Fit + Ada Health。一个管日常数据追踪，一个管健康疑问咨询，双剑合璧，守护日常健康。</p>
+
+                <h3>4.2 场景二：慢病管理</h3>
+                <p>需求：需要长期吃药、定期监测、生活方式管理。</p>
+                <ul>
+                    <li><strong>用药管理</strong>：Medisafe - 提醒吃药、追踪依从性、药物相互作用预警</li>
+                    <li><strong>数据监测</strong>：Google Fit + 智能设备 - 血压、血糖、体重等数据持续追踪</li>
+                    <li><strong>生活方式</strong>：Ada Health - 饮食、运动、睡眠的个性化健康建议</li>
+                    <li><strong>定期复诊</strong>：AI工具不能替代定期复查，该去医院还是要去</li>
+                </ul>
+
+                <h3>4.3 场景三：心理健康</h3>
+                <p>需求：压力大、焦虑、失眠、情绪低落，想要改善心理状态。</p>
+                <table class="tool-table">
+                    <thead>
+                        <tr><th>问题类型</th><th>推荐工具</th><th>使用建议</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="tool-name">压力/焦虑</td><td>Woebot + Youper</td><td>Woebot做CBT练习，Youper做情绪追踪</td></tr>
+                        <tr><td class="tool-name">失眠</td><td>Youper + 冥想练习</td><td>Youper的睡眠CBT对失眠效果很好</td></tr>
+                        <tr><td class="tool-name">轻度抑郁</td><td>Woebot</td><td>坚持使用CBT练习，同时建议咨询专业医生</td></tr>
+                        <tr><td class="tool-name">情绪管理</td><td>Youper</td><td>记录情绪，发现情绪规律</td></tr>
+                    </tbody>
+                </table>
+                <p><strong>重要提示：</strong>如果有严重的心理问题或自杀倾向，请立即寻求专业帮助，拨打心理援助热线或去医院精神科就诊。AI工具只是辅助，不能替代专业治疗。</p>
+
+                <h3>4.4 场景四：症状自查与就医</h3>
+                <p>需求：身体不舒服，想先了解一下可能是什么问题，要不要去医院。</p>
+                <ul>
+                    <li><strong>第一步：AI初筛</strong> - 用Ada Health或Buoy输入症状，获得初步评估</li>
+                    <li><strong>第二步：严重程度判断</strong> - AI说需要就医就别犹豫，赶紧去医院</li>
+                    <li><strong>第三步：就医准备</strong> - 用AI整理症状信息，见医生时说得更清楚</li>
+                    <li><strong>第四步：术后/病后康复</strong> - 用AI了解康复注意事项，追踪恢复情况</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <p>🚨 紧急情况不要用AI：胸痛、呼吸困难、大出血、意识模糊、剧烈头痛等紧急情况，直接打120或去急诊，不要浪费时间问AI！</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">五、风险与注意事项</h2>
+                <p>AI医疗健康工具虽好，但也有它的局限性和风险。了解这些边界，才能更安全、更有效地使用它们。</p>
+
+                <h3>5.1 最重要的原则：AI不是医生</h3>
+                <p>这是必须反复强调的一点。所有的AI健康工具，不管多先进，都<strong>不能替代专业医生的诊断和治疗</strong>。</p>
+                <p><strong>AI工具可以做的：</strong></p>
+                <ul>
+                    <li>提供健康信息和科普知识</li>
+                    <li>对常见症状给出初步评估和建议</li>
+                    <li>提醒用药、追踪健康数据</li>
+                    <li>提供心理疏导和情绪管理工具</li>
+                    <li>帮助你更好地和医生沟通</li>
+                </ul>
+                <p><strong>AI工具不能做的：</strong></p>
+                <ul>
+                    <li>进行医学诊断</li>
+                    <li>开处方或推荐处方药</li>
+                    <li>建议停止或改变现有治疗方案</li>
+                    <li>处理紧急医疗情况</li>
+                    <li>保证100%的准确率</li>
+                </ul>
+
+                <h3>5.2 准确率的局限</h3>
+                <p>AI的准确率虽然一直在提升，但远没有达到完美。影响准确率的因素有很多：</p>
+                <ul>
+                    <li><strong>信息不全</strong>：你描述的症状不完整，AI判断自然不准</li>
+                    <li><strong>罕见病</strong>：AI主要训练的是常见病，罕见病容易漏诊</li>
+                    <li><strong>个体差异</strong>：同样的病在不同人身上表现可能不一样</li>
+                    <li><strong>非典型症状</strong>：不按常理出牌的症状，AI容易判断错</li>
+                    <li><strong>图片质量</strong>：皮肤AI、影像AI的准确率和图片质量关系很大</li>
+                </ul>
+
+                <h3>5.3 隐私与数据安全</h3>
+                <p>健康数据是最敏感的个人信息之一，使用AI健康工具时一定要注意隐私保护：</p>
+                <ul>
+                    <li>选择有口碑、有资质的正规平台</li>
+                    <li>仔细阅读隐私政策，了解数据如何使用和保护</li>
+                    <li>不要在公共设备上登录你的健康APP</li>
+                    <li>敏感健康问题可以考虑匿名使用</li>
+                    <li>儿童使用需家长监护</li>
+                </ul>
+
+                <h3>5.4 避免的误区</h3>
+                <p>使用AI健康工具时，要避免这些常见误区：</p>
+                <ul>
+                    <li><strong>误区一：</strong>"AI说没事就真没事" —— AI可能漏诊，不放心就去医院</li>
+                    <li><strong>误区二：</strong>"AI说很严重就吓死了" —— AI可能过度预警，先别自己吓自己，去医院确认</li>
+                    <li><strong>误区三：</strong>"AI推荐的药可以自己买来吃" —— 绝对不行！用药一定要遵医嘱</li>
+                    <li><strong>误区四：</strong>"有了AI就不用体检了" —— AI不能替代定期体检和专业检查</li>
+                    <li><strong>误区五：</strong>"心理问题靠AI就能搞定" —— 严重心理疾病一定要看专业医生</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <p>⚠️ 安全守则：AI是参考，医生是权威。拿不准的时候，永远选看医生。健康无小事，安全第一。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">六、选型决策树</h2>
+                <p>这么多AI健康工具，到底该选哪个？跟着这棵决策树走，几步就能找到适合你的。</p>
+
+                <div class="decision-tree">
+                    <div class="decision-node">
+                        <div class="decision-question">问题1：你最主要的健康需求是什么？</div>
+                        <div class="decision-options">
+                            <p>→ 症状自查/健康咨询 → 推荐：Ada Health</p>
+                            <p>→ 心理健康/情绪管理 → 继续问题2</p>
+                            <p>→ 运动健康/日常追踪 → 推荐：Google Fit</p>
+                            <p>→ 用药提醒/慢病管理 → 推荐：Medisafe</p>
+                            <p>→ 皮肤问题 → 推荐：DermAssist</p>
+                            <p>→ 健康知识/科普 → 推荐：WebMD</p>
+                        </div>
+                    </div>
+
+                    <div class="decision-node">
+                        <div class="decision-question">问题2：你主要的心理困扰是什么？</div>
+                        <div class="decision-options">
+                            <p>→ 焦虑/抑郁/压力大 → 推荐：Woebot</p>
+                            <p>→ 情绪波动/想更了解自己 → 推荐：Youper</p>
+                            <p>→ 失眠/睡眠不好 → 推荐：Youper</p>
+                            <p>→ 就是想放松一下 → 推荐：Youper + 冥想APP</p>
+                        </div>
+                    </div>
+
+                    <div class="decision-node decision-result">
+                        <div class="decision-question">✅ 选型完成</div>
+                        <div class="decision-options">
+                            <p>建议先选1-2款核心工具，用2-4周体验效果。大多数人日常使用Ada Health + Google Fit就足够了。有特定需求再添加对应工具。</p>
+                            <p style="margin-top: 8px;"><strong>最重要的：</strong>工具只是辅助，规律作息、均衡饮食、适度运动、定期体检，才是健康的四大基石。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">七、未来发展趋势</h2>
+                <p>AI医疗健康还在快速发展，未来几年会有哪些激动人心的变化？让我们展望一下。</p>
+
+                <h3>7.1 精准医疗的时代</h3>
+                <p>未来的医疗会越来越个性化：</p>
+                <ul>
+                    <li><strong>基因组学+AI</strong>：基于你的基因信息，预测疾病风险，定制健康方案</li>
+                    <li><strong>精准营养</strong>：AI根据你的身体状况和基因，定制最适合你的饮食方案</li>
+                    <li><strong>个性化运动</strong>：不是所有人都适合同样的运动，AI帮你找到最优方案</li>
+                    <li><strong>药物反应预测</strong>：预测你对哪种药物反应最好，减少试错成本</li>
+                </ul>
+
+                <h3>7.2 可穿戴设备的进化</h3>
+                <p>智能手表、健康手环会变得越来越强大：</p>
+                <ul>
+                    <li><strong>更多健康指标</strong>：血压、血糖、血氧、心电图、体脂，一个手表全搞定</li>
+                    <li><strong>主动健康预警</strong>：在你还没感觉的时候，AI就发现健康隐患</li>
+                    <li><strong>无创检测</strong>：不用抽血就能测血糖、测各种生化指标</li>
+                    <li><strong>持续监测</strong>：24小时不间断健康守护，异常情况即时报警</li>
+                </ul>
+
+                <h3>7.3 AI+医生的协同模式</h3>
+                <p>未来不是AI取代医生，而是会用AI的医生取代不会用AI的医生：</p>
+                <ul>
+                    <li><strong>AI做初筛</strong>：常见问题AI先处理，节省医生时间</li>
+                    <li><strong>AI做助手</strong>：医生诊断时，AI实时提供参考信息和建议</li>
+                    <li><strong>AI读片</strong>：影像、病理切片AI先过一遍，找出可疑区域</li>
+                    <li><strong>远程医疗普及</strong>：AI+远程医生，在家就能看病</li>
+                </ul>
+
+                <h3>7.4 心理健康的AI化</h3>
+                <p>心理健康是AI最有潜力的领域之一：</p>
+                <ul>
+                    <li>AI心理治疗效果接近真人咨询师，而且更便宜、更方便</li>
+                    <li>情绪识别技术：通过声音、表情、文字自动判断情绪状态</li>
+                    <li>早期预警：在心理问题恶化前就发现并干预</li>
+                    <li>个性化治疗方案：根据每个人的情况定制心理干预方案</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <p>🔮 趋势总结：未来的医疗会更智能、更精准、更普惠。AI不是让我们不需要医生了，而是让医生的时间花在更有价值的地方，让每个人都能享受到更好的医疗服务。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">八、总结与建议</h2>
+                <p>看到这里，相信你对AI医疗健康工具有了比较全面的了解。最后总结一下，给你一些实用的建议。</p>
+
+                <h3>8.1 核心要点回顾</h3>
+                <ul>
+                    <li><strong>AI是好助手</strong>：AI健康工具能帮你更好地管理健康，但不能替代医生</li>
+                    <li><strong>选对工具很重要</strong>：不同工具擅长不同领域，根据需求选1-2款就够了</li>
+                    <li><strong>安全第一</strong>：严重症状、紧急情况直接去医院，不要依赖AI</li>
+                    <li><strong>保护隐私</strong>：健康数据很敏感，选择正规平台，注意隐私保护</li>
+                    <li><strong>健康靠自己</strong>：工具只是辅助，规律作息、健康饮食、适度运动才是根本</li>
+                </ul>
+
+                <h3>8.2 不同人群的建议</h3>
+                <p><strong>给健康人群：</strong></p>
+                <ul>
+                    <li>用Google Fit或类似工具追踪运动和睡眠，养成健康习惯</li>
+                    <li>装一个Ada Health，有健康疑问时随时查</li>
+                    <li>定期体检，不要因为有AI就忽视了专业检查</li>
+                    <li>保持健康的生活方式，这才是最好的"保健品"</li>
+                </ul>
+
+                <p><strong>给慢病患者：</strong></p>
+                <ul>
+                    <li>用Medisafe管理用药，提高依从性</li>
+                    <li>用智能设备监测相关指标，做好数据记录</li>
+                    <li>定期复查，遵医嘱治疗，不要自己乱调药</li>
+                    <li>AI工具可以辅助，但治疗方案一定要听医生的</li>
+                </ul>
+
+                <p><strong>给关注心理健康的人：</strong></p>
+                <ul>
+                    <li>轻度情绪问题可以试试Woebot或Youper</li>
+                    <li>坚持使用才能看到效果，不要用一两次就放弃</li>
+                    <li>如果问题严重或持续恶化，一定要寻求专业帮助</li>
+                    <li>运动、社交、规律作息对心理健康同样重要</li>
+                </ul>
+
+                <h3>8.3 行动清单</h3>
+                <p>看完这篇文章，你可以做这些事：</p>
+                <ol>
+                    <li><strong>评估需求</strong>：你最想改善健康的哪个方面？</li>
+                    <li><strong>选择工具</strong>：根据决策树，选1-2款工具开始使用</li>
+                    <li><strong>养成习惯</strong>：每天花几分钟记录或查看，养成健康管理习惯</li>
+                    <li><strong>定期体检</strong>：每年至少做一次全面体检</li>
+                    <li><strong>健康生活</strong>：规律作息、均衡饮食、适度运动，这才是健康的基石</li>
+                </ol>
+
+                <div class="highlight-box">
+                    <p>🌟 最后想说：健康是1，其他都是0。有了AI这个健康助手，希望每个人都能更好地照顾自己和家人的健康。祝你身体健康，生活愉快！</p>
+                </div>
+            </section>
+        </article>
+
+        <div class="sister-sites">
+            <div class="sister-sites-title">🌐 姊妹站点</div>
+            <div class="sister-sites-links">
+                <a href="https://tool.link.cn" target="_blank" rel="noopener">tool.link.cn</a>
+                <a href="https://tools.link.cn" target="_blank" rel="noopener">tools.link.cn</a>
+                <a href="https://prompts.link.cn" target="_blank" rel="noopener">prompts.link.cn</a>
+                <a href="https://signal.link.cn" target="_blank" rel="noopener">signal.link.cn</a>
+            </div>
+        </div>
+
+        <div class="social-share">
+            <div class="social-share-title">🔗 觉得有用？分享给更多人</div>
+            <div class="social-share-btns">
+                <button class="share-btn wechat" onclick="shareToWeChat()">💬 微信</button>
+                <a class="share-btn weibo" href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fai.link.cn%2Farticles%2Fai-healthcare-tools-guide.html&title=2026%E5%B9%B4AI%E5%8C%BB%E7%96%97%E5%81%A5%E5%BA%B7%E5%B7%A5%E5%85%B7%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97" target="_blank" rel="noopener">🎨 微博</a>
+                <a class="share-btn twitter" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fai.link.cn%2Farticles%2Fai-healthcare-tools-guide.html&text=2026%E5%B9%B4AI%E5%8C%BB%E7%96%97%E5%81%A5%E5%BA%B7%E5%B7%A5%E5%85%B7%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97" target="_blank" rel="noopener">🐦 Twitter</a>
+                <a class="share-btn linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fai.link.cn%2Farticles%2Fai-healthcare-tools-guide.html" target="_blank" rel="noopener">💼 LinkedIn</a>
+                <button class="share-btn copy" onclick="copyLink()">📋 复制链接</button>
+            </div>
+        </div>
+
+        <div class="continue-reading">
+            <h2 class="continue-title">📖 继续阅读</h2>
+            <p class="continue-desc">看了AI医疗健康工具，这些内容也可能帮到你：</p>
+            <div class="continue-grid">
+                <a href="/articles/ai-tools-overview.html" class="continue-card">
+                    <div class="continue-card-tag">工具总览</div>
+                    <h3>AI工具大全总览</h3>
+                    <p>200+款AI工具分类导航与深度评测</p>
+                    <span class="continue-arrow">→</span>
+                </a>
+                <a href="/articles/ai-productivity-guide-2026.html" class="continue-card">
+                    <div class="continue-card-tag">生产力</div>
+                    <h3>2026 AI生产力指南</h3>
+                    <p>用AI工具把工作效率提升10倍的实战方法</p>
+                    <span class="continue-arrow">→</span>
+                </a>
+                <a href="/articles/ai-money-making-guide-2026.html" class="continue-card">
+                    <div class="continue-card-tag">副业赚钱</div>
+                    <h3>用AI赚钱的10种方法</h3>
+                    <p>从副业到年入百万的完整变现指南</p>
+                    <span class="continue-arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 AI.link.cn · 专注AI工具与资讯 | <a href="/">首页</a> · <a href="/pages/tools/">工具库</a> · <a href="/tutorials/">教程</a> · <a href="/articles/">资讯</a> · <a href="/compare/">对比</a></p>
+        </div>
+    </footer>
+
+    <script>
+        const progressBar = document.getElementById('progressBar');
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+            progressBar.style.width = scrollPercent + '%';
+        });
+    </script>
+    <script>
+        function copyLink() {
+            const url = window.location.href;
+            navigator.clipboard.writeText(url).then(() => {
+                const btn = event.target.closest('.share-btn');
+                const originalText = btn.textContent;
+                btn.textContent = '✓ 已复制';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+        function shareToWeChat() {
+            alert('请截图或复制链接分享到微信好友/群聊：\n' + window.location.href);
+        }
+    </script>
+</body>
+</html>

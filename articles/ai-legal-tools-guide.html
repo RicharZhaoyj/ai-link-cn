@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026年AI法律工具完全指南：7款工具让法律服务触手可及 | AI.link.cn</title>
+    <meta name="description" content="AI法律工具全面评测：合同审查、法律咨询、法律文书生成、案例检索、合规检查全覆盖。对比Harvey AI、Casetext、LawGeex等7款工具，让AI成为你的法律顾问。">
+    <meta name="keywords" content="AI法律工具,AI律师,合同审查,法律AI,法律咨询,法律文书,智能合约">
+    <link rel="canonical" href="https://ai.link.cn/articles/ai-legal-tools-guide.html">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        :root {
+            --bg: #0a0f1a;
+            --surface: #111827;
+            --surface-2: #1f2937;
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #6366f1;
+            --accent-light: #818cf8;
+            --success: #22c55e;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --blue: #3b82f6;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        header {
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+            background: rgba(10, 15, 26, 0.98);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo { font-size: 1.4rem; font-weight: 700; color: var(--accent); text-decoration: none; }
+
+        .nav-links { display: flex; gap: 20px; list-style: none; flex-wrap: wrap; }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover, .nav-links a.active { color: var(--accent); }
+
+        .progress-bar {
+            position: fixed;
+            top: 60px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: rgba(99, 102, 241, 0.15);
+            z-index: 99;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent), var(--accent-light));
+            transition: width 0.1s ease;
+            width: 0%;
+        }
+
+        .article-header {
+            padding: 48px 0 32px;
+            text-align: center;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .article-category {
+            background: rgba(99, 102, 241, 0.15);
+            color: var(--accent);
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+        }
+
+        .article-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+
+        .article-subtitle {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+            max-width: 640px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .article-banner {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(59, 130, 246, 0.1));
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 32px;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+        }
+
+        .article-banner h3 {
+            font-size: 1.15rem;
+            margin-bottom: 12px;
+            color: var(--accent);
+        }
+
+        .article-banner ul { list-style: none; padding-left: 0; }
+
+        .article-banner li {
+            padding: 6px 0;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .article-banner li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+        }
+
+        .article-content { padding: 24px 0; }
+
+        .section { margin-bottom: 40px; }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+        }
+
+        .section-title::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 20px;
+            background: var(--accent);
+            border-radius: 2px;
+            margin-right: 12px;
+            vertical-align: middle;
+        }
+
+        .article-content h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 24px 0 12px;
+            color: var(--text);
+        }
+
+        .article-content p {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .article-content strong { color: var(--text); font-weight: 600; }
+
+        .article-content ul, .article-content ol {
+            margin: 12px 0 16px 24px;
+            color: var(--text-muted);
+        }
+
+        .article-content li { margin-bottom: 8px; }
+
+        .tool-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: var(--surface);
+            border-radius: 12px;
+            overflow: hidden;
+            font-size: 0.92rem;
+        }
+
+        .tool-table th {
+            background: var(--surface-2);
+            color: var(--accent);
+            padding: 12px 14px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+        }
+
+        .tool-table td {
+            padding: 12px 14px;
+            border-bottom: 1px solid rgba(99, 102, 241, 0.08);
+            color: var(--text-muted);
+        }
+
+        .tool-table tr:last-child td { border-bottom: none; }
+        .tool-table td.tool-name { color: var(--text); font-weight: 600; }
+
+        .highlight-box {
+            background: var(--surface);
+            border-left: 4px solid var(--accent);
+            border-radius: 0 8px 8px 0;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .highlight-box p { color: var(--text); font-weight: 500; margin: 0; }
+
+        .decision-tree {
+            background: var(--surface);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 20px 0;
+            border: 1px solid rgba(99, 102, 241, 0.15);
+        }
+
+        .decision-node {
+            padding: 12px 16px;
+            margin: 8px 0;
+            border-radius: 8px;
+            background: var(--surface-2);
+            border-left: 3px solid var(--accent);
+        }
+
+        .decision-question {
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 8px;
+        }
+
+        .decision-options {
+            padding-left: 20px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .decision-result {
+            background: rgba(99, 102, 241, 0.1);
+            border-left-color: var(--success);
+        }
+
+        .sister-sites {
+            padding: 24px 0;
+            margin: 20px 0;
+            text-align: center;
+            border-top: 1px solid rgba(99, 102, 241, 0.15);
+            border-bottom: 1px solid rgba(99, 102, 241, 0.15);
+        }
+
+        .sister-sites-title {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+
+        .sister-sites-links {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .sister-sites-links a {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 6px 14px;
+            border-radius: 8px;
+            background: rgba(99, 102, 241, 0.1);
+            transition: all 0.2s;
+        }
+
+        .sister-sites-links a:hover {
+            background: rgba(99, 102, 241, 0.2);
+        }
+
+        .continue-reading {
+            padding: 40px 0;
+            margin-top: 20px;
+        }
+        .continue-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .continue-desc {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .continue-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+        .continue-card {
+            display: block;
+            background: var(--surface);
+            border: 1px solid rgba(99, 102, 241, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s;
+            position: relative;
+        }
+        .continue-card:hover {
+            border-color: var(--accent);
+            background: rgba(99, 102, 241, 0.05);
+            transform: translateY(-2px);
+        }
+        .continue-card-tag {
+            display: inline-block;
+            background: rgba(99, 102, 241, 0.15);
+            color: var(--accent);
+            padding: 2px 10px;
+            border-radius: 10px;
+            font-size: 0.75rem;
+            margin-bottom: 10px;
+        }
+        .continue-card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+        .continue-card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+        .continue-arrow {
+            position: absolute;
+            right: 16px;
+            top: 16px;
+            color: var(--accent);
+            font-size: 1.2rem;
+            transition: transform 0.2s;
+        }
+        .continue-card:hover .continue-arrow {
+            transform: translateX(4px);
+        }
+        @media (max-width: 768px) {
+            .continue-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 24px;
+            font-size: 0.95rem;
+        }
+
+        .back-link:hover { text-decoration: underline; }
+
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid rgba(99, 102, 241, 0.2);
+            margin-top: 40px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        footer a { color: var(--accent); text-decoration: none; margin: 0 6px; }
+
+        .social-share {
+            padding: 24px 0;
+            margin: 20px 0;
+            text-align: center;
+            border-top: 1px solid rgba(99, 102, 241, 0.15);
+            border-bottom: 1px solid rgba(99, 102, 241, 0.15);
+        }
+        .social-share-title {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+        .social-share-btns {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 24px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.88rem;
+            transition: all 0.2s;
+            border: 1px solid rgba(99, 102, 241, 0.25);
+            background: var(--surface);
+            color: var(--text);
+            cursor: pointer;
+        }
+        .share-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        .share-btn.wechat { border-color: rgba(34, 197, 94, 0.4); }
+        .share-btn.wechat:hover { background: rgba(34, 197, 94, 0.15); }
+        .share-btn.weibo { border-color: rgba(249, 115, 22, 0.4); }
+        .share-btn.weibo:hover { background: rgba(249, 115, 22, 0.15); }
+        .share-btn.twitter { border-color: rgba(59, 130, 246, 0.4); }
+        .share-btn.twitter:hover { background: rgba(59, 130, 246, 0.15); }
+        .share-btn.linkedin { border-color: rgba(6, 182, 212, 0.4); }
+        .share-btn.linkedin:hover { background: rgba(6, 182, 212, 0.15); }
+        .share-btn.copy { border-color: rgba(99, 102, 241, 0.4); }
+        .share-btn.copy:hover { background: rgba(99, 102, 241, 0.15); }
+        .share-btn.copied { background: rgba(34, 197, 94, 0.15) !important; border-color: rgba(34, 197, 94, 0.6) !important; }
+
+        @media (max-width: 768px) {
+            .article-title { font-size: 1.6rem; }
+            .article-banner { padding: 20px; }
+            .nav-links { gap: 12px; }
+            .tool-table { font-size: 0.82rem; }
+            .tool-table th, .tool-table td { padding: 8px 10px; }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "2026年AI法律工具完全指南：7款工具让法律服务触手可及",
+        "description": "AI法律工具全面评测：合同审查、法律咨询、法律文书生成、案例检索、合规检查全覆盖。对比Harvey AI、Casetext、LawGeex等7款工具，让AI成为你的法律顾问。",
+        "author": {"@type": "Organization", "name": "AI.link.cn 编辑部"},
+        "publisher": {"@type": "Organization", "name": "AI.link.cn"},
+        "datePublished": "2026-07-28",
+        "dateModified": "2026-07-28",
+        "image": "https://ai.link.cn/images/ai-legal-tools-guide.jpg",
+        "articleSection": "AI法律",
+        "keywords": ["AI法律工具", "AI律师", "合同审查", "法律AI", "法律咨询", "法律文书", "智能合约"]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://ai.link.cn/"},
+            {"@type": "ListItem", "position": 2, "name": "资讯", "item": "https://ai.link.cn/articles/"},
+            {"@type": "ListItem", "position": 3, "name": "AI法律工具完全指南", "item": "https://ai.link.cn/articles/ai-legal-tools-guide.html"}
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "AI法律工具能代替律师吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "不能。AI法律工具是辅助工具，不能替代执业律师。它们可以帮助你审查合同、检索案例、生成法律文书初稿、解答基础法律问题，但不能提供法律意见，也不能代表你出庭。重要法律事务一定要咨询专业律师。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Harvey AI vs Casetext vs LawGeex 哪个更好？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Harvey AI是全能型法律AI，适合律师事务所和企业法务，功能最全面；Casetext擅长法律研究和案例检索，CoCounsel功能强大；LawGeex专注合同自动化审查，在合同审查领域最专业。选择取决于你的核心需求：全能选Harvey，研究案例选Casetext，审合同选LawGeex。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "普通人需要用AI法律工具吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "非常有必要。普通人也会遇到租房合同、劳动合同、借条欠条、消费维权等各种法律问题。AI法律工具可以帮你快速了解相关法律知识、审查合同条款、识别风险点，避免踩坑。虽然不能替代律师，但可以帮你做到心中有数，少走弯路。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "使用AI法律工具有什么风险？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "主要风险有：1) AI可能生成错误的法律信息，不能全信；2) 法律有地域差异，AI可能不了解当地法律；3) 重要法律文件不能完全依赖AI，需要律师审核；4) 上传敏感法律文件要注意隐私和保密。记住：AI是参考，最终决策要咨询专业律师。"
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="nav">
+                <a href="/" class="logo">AI.link.cn</a>
+                <ul class="nav-links">
+                    <li><a href="/">首页</a></li>
+                    <li><a href="/pages/tools/">工具</a></li>
+                    <li><a href="/tutorials/">教程</a></li>
+                    <li><a href="/articles/" class="active">资讯</a></li>
+                    <li><a href="/compare/">对比</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="progress-bar">
+        <div class="progress-bar-fill" id="progressBar"></div>
+    </div>
+
+    <div class="container">
+        <a href="/articles/" class="back-link">← 返回资讯列表</a>
+
+        <div class="article-header">
+            <div class="article-meta">
+                <span class="article-category">AI法律</span>
+                <span>2026年07月28日</span>
+                <span>阅读时间：14分钟</span>
+            </div>
+            <h1 class="article-title">2026年AI法律工具完全指南：7款工具让法律服务触手可及</h1>
+            <p class="article-subtitle">从合同审查到法律咨询，从案例检索到文书生成，AI正在让法律服务变得更高效、更亲民。本文深度评测7款主流AI法律工具，帮你找到最适合的法律助手。</p>
+        </div>
+
+        <div class="article-banner">
+            <h3>📋 本文要点</h3>
+            <ul>
+                <li>7款主流AI法律工具全面对比，附价格、功能、适用场景一览表</li>
+                <li>五大核心能力深度评测：合同审查、法律研究、文书生成、合规检查、法律咨询</li>
+                <li>按需求推荐：个人/企业法务/律师事务所/创业者的最佳选择</li>
+                <li>AI法律的边界与局限，哪些情况一定要找律师</li>
+                <li>选型决策树与风险注意事项，科学使用AI法律工具</li>
+            </ul>
+        </div>
+
+        <article class="article-content">
+            <section class="section">
+                <h2 class="section-title">一、AI法律市场概览：科技改变法律服务</h2>
+                <p>2026年，AI法律已经从"尝鲜"变成了"标配"。根据麦肯锡最新报告，全球AI法律科技市场规模已突破<span style="color: var(--success); font-weight: 600;">80亿美元</span>，年复合增长率超过45%。全球Top 100律师事务所中，已有超过85%开始使用AI法律工具。</p>
+                <p>更重要的是，AI正在让法律服务变得更加普惠。过去，动辄几千元的律师费让普通人望而却步，遇到法律问题只能自认倒霉。现在，AI法律工具可以帮你快速了解法律知识、审查合同、识别风险，成本只有传统法律服务的几十分之一。虽然不能替代律师，但至少能让你做到"心中有数"。</p>
+                
+                <h3>1.1 AI法律的五大应用场景</h3>
+                <p>AI在法律领域的应用越来越广泛，目前最成熟的五大场景是：</p>
+                <ul>
+                    <li><strong>合同审查与分析</strong>：快速审查合同条款，识别风险点，提出修改建议</li>
+                    <li><strong>法律研究与案例检索</strong>：海量判例和法规中快速找到相关案例</li>
+                    <li><strong>法律文书生成</strong>：自动生成合同、律师函、法律意见书等文书初稿</li>
+                    <li><strong>合规检查</strong>：企业合规审查、监管政策解读、风险预警</li>
+                    <li><strong>法律咨询</strong>：解答基础法律问题，提供法律知识科普</li>
+                </ul>
+
+                <h3>1.2 2026年AI法律的新进展</h3>
+                <p>今年的AI法律工具有几个显著突破：</p>
+                <ul>
+                    <li><strong>长文档处理能力</strong>：从几万字的合同到几十万字的判例，AI都能快速理解</li>
+                    <li><strong>多语言法律支持</strong>：跨境法律业务的语言壁垒被打破</li>
+                    <li><strong>法律推理能力提升</strong>：新一代法律AI不仅能搜索，还能进行法律推理</li>
+                    <li><strong>企业级集成</strong>：和企业OA、合同管理系统深度集成</li>
+                    <li><strong>价格下探</strong>：企业级功能下放到个人版，普通人也用得起</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <p>💡 重要声明：本文介绍的所有AI法律工具都不能替代专业律师，也不能提供法律意见。遇到法律问题，请咨询执业律师。本文内容仅供参考，不构成任何法律建议。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">二、7款AI法律工具横向对比表</h2>
+                <p>我们从市面上数十款AI法律工具中精选了7款最具代表性的产品，从多个维度进行了深度评测。下面是总览对比表，帮你快速建立全局认知。</p>
+                
+                <table class="tool-table">
+                    <thead>
+                        <tr><th>工具名称</th><th>核心能力</th><th>价格</th><th>适合场景</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="tool-name">Harvey AI</td><td>全能法律AI、合同审查、法律研究、文书生成、合规</td><td>企业定制/个人版$99月起</td><td>律师事务所、企业法务、专业法律工作者</td></tr>
+                        <tr><td class="tool-name">Casetext</td><td>法律研究、案例检索、CoCounsel智能助手、诉状生成</td><td>$200月/年付优惠</td><td>诉讼律师、法律研究、案例检索</td></tr>
+                        <tr><td class="tool-name">LawGeex</td><td>合同自动化审查、风险识别、合同模板库、审批流</td><td>企业定制</td><td>企业法务、合同量大的公司</td></tr>
+                        <tr><td class="tool-name">DoNotPay</td><td>消费者维权、罚单申诉、小额索赔、法律自助</td><td>$36月</td><td>普通消费者、小额维权、日常法律问题</td></tr>
+                        <tr><td class="tool-name">LegalRobot</td><td>合同分析、法律文档自动化、合规检查、API接口</td><td>免费试用/$99月起</td><td>中小企业、创业者、合同分析</td></tr>
+                        <tr><td class="tool-name">Robin AI</td><td>合同审查、法律问答、知识管理、律所自动化</td><td>企业定制</td><td>律师事务所、企业法务团队</td></tr>
+                        <tr><td class="tool-name">ChatGPT法律插件</td><td>法律咨询、法律知识、文书初稿、通用问答</td><td>$20月(含ChatGPT Plus)</td><td>日常法律问题、基础咨询、学习了解</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>2.1 核心能力对比</h3>
+                <p>我们从几个关键维度对比了7款工具的表现：</p>
+                <table class="tool-table">
+                    <thead>
+                        <tr><th>工具</th><th>合同审查</th><th>法律研究</th><th>文书生成</th><th>易用性</th><th>性价比</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="tool-name">Harvey AI</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐</td></tr>
+                        <tr><td class="tool-name">Casetext</td><td>⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐</td><td>⭐⭐⭐</td></tr>
+                        <tr><td class="tool-name">LawGeex</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐</td><td>⭐⭐⭐</td><td>⭐⭐⭐</td><td>⭐⭐</td></tr>
+                        <tr><td class="tool-name">DoNotPay</td><td>⭐⭐</td><td>⭐⭐⭐</td><td>⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td></tr>
+                        <tr><td class="tool-name">LegalRobot</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐</td><td>⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td></tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight-box">
+                    <p>📌 快速选择建议：专业法律人选Harvey AI；做诉讼选Casetext；企业审合同选LawGeex；普通人维权用DoNotPay；中小企业选LegalRobot；日常咨询用ChatGPT法律插件。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">三、核心工具深度评测</h2>
+                <p>前面的表格给了你一个全局视角，接下来我们深入评测4款最值得关注的核心工具，看看它们的真实体验如何。</p>
+
+                <h3>3.1 Harvey AI：法律AI的"全能选手"</h3>
+                <p>Harvey AI是目前最炙手可热的法律AI初创公司，获得了OpenAI的投资。它可以说是法律AI领域的"全能选手"，从合同审查到法律研究，从文书生成到合规检查，几乎无所不能。</p>
+                <p><strong>核心优势：</strong></p>
+                <ul>
+                    <li><strong>功能全面</strong>：合同审查、法律研究、文书生成、尽职调查、合规检查，一个工具全搞定</li>
+                    <li><strong>法律专业度高</strong>：专门针对法律场景训练，法律术语和逻辑理解更准确</li>
+                    <li><strong>长文档处理强</strong>>：几十万字的合同和判例也能快速理解和分析</li>
+                    <li><strong>企业级功能</strong>：支持团队协作、知识库、工作流自动化</li>
+                </ul>
+                <p><strong>适合人群：</strong>律师事务所、企业法务部门、法律专业人士。</p>
+                <p><strong>不足之处：</strong>价格偏高，个人用户可能觉得贵；主要针对英美法系，对中国法律的支持还有限；学习曲线略陡。</p>
+
+                <h3>3.2 Casetext：法律研究的"搜索引擎"</h3>
+                <p>Casetext是法律研究领域的老牌玩家，它的CoCounsel功能被很多律师誉为"AI法律助理"。如果你需要找案例、查法条、做法律研究，Casetext是首选。</p>
+                <p><strong>核心优势：</strong></p>
+                <ul>
+                    <li><strong>案例检索最强</strong>：海量判例数据库，AI检索相关案例又快又准</li>
+                    <li><strong>CoCounsel智能助手</strong>：可以用自然语言提问，AI帮你找案例、写法律备忘录</li>
+                    <li><strong>诉讼工具丰富</strong>：诉状生成、质证意见、案例引用格式化</li>
+                    <li><strong>数据更新快</strong>：最新判例和法规及时收录</li>
+                </ul>
+                <p><strong>适合人群：</strong>诉讼律师、法律研究者、需要大量案例检索的法律工作者。</p>
+                <p><strong>不足之处：</strong>合同审查功能相对较弱；价格不便宜；主要针对美国法律。</p>
+
+                <h3>3.3 LawGeex：合同审查的"专家"</h3>
+                <p>如果你的主要需求是合同审查，LawGeex可能是最专业的选择。它专注于合同自动化审查这一个领域，深耕多年，准确率非常高。</p>
+                <p><strong>核心优势：</strong></p>
+                <ul>
+                    <li><strong>合同审查准确率高</strong>：专注合同领域多年，标准合同审查准确率超过90%</li>
+                    <li><strong>风险识别专业</strong>：能精准识别合同中的风险条款和遗漏项</li>
+                    <li><strong>模板库丰富</strong>：各种类型的合同模板都有，快速生成标准合同</li>
+                    <li><strong>审批流程自动化</strong>：可以对接企业审批流，合同审查自动化</li>
+                </ul>
+                <p><strong>适合人群：</strong>合同量大的企业、公司法务团队、经常需要审合同的律所。</p>
+                <p><strong>不足之处：</strong>功能相对单一，主要就是合同；价格较高，需要企业定制；不太适合个人用户。</p>
+
+                <h3>3.4 DoNotPay：普通人的"法律武器"</h3>
+                <p>前面几款都是给专业人士用的，DoNotPay不一样——它就是给普通人做的。从罚单申诉到小额索赔，从消费者维权到租房纠纷，DoNotPay帮普通人用法律武器维护自己的权益。</p>
+                <p><strong>核心优势：</strong></p>
+                <ul>
+                    <li><strong>面向普通人</strong>：不需要懂法律术语，跟着步骤一步步来就行</li>
+                    <li><strong>场景丰富</strong>：罚单申诉、退款维权、小额法庭、取消订阅、隐私保护等几十种场景</li>
+                    <li><strong>操作简单</strong>：AI引导你一步步完成，不需要自己写法律文书</li>
+                    <li><strong>性价比高</strong>：月费几十美元，比起律师费便宜太多了</li>
+                </ul>
+                <p><strong>适合人群：</strong>普通消费者、遇到小额纠纷的人、想维权但请不起律师的人。</p>
+                <p><strong>不足之处：</strong>主要适用于美国，其他国家支持有限；复杂法律问题搞不定；不能替代律师。</p>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">四、按场景选择工具</h2>
+                <p>不同的法律需求适合不同的工具。下面我们按常见场景，给出具体的工具推荐和组合方案。</p>
+
+                <h3>4.1 场景一：个人日常法律问题</h3>
+                <p>痛点：遇到法律问题不知道怎么办，咨询律师又贵又麻烦。</p>
+                <table class="tool-table">
+                    <thead>
+                        <tr><th>需求</th><th>推荐工具</th><th>使用建议</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="tool-name">了解法律知识</td><td>ChatGPT法律插件</td><td>先用AI搞清楚基本概念和法律关系</td></tr>
+                        <tr><td class="tool-name">消费者维权</td><td>DoNotPay</td><td>小额退款、取消订阅、维权投诉等</td></tr>
+                        <tr><td class="tool-name">审查租房/劳动合同</td><td>LegalRobot</td><td>上传合同，AI帮你找风险点</td></tr>
+                        <tr><td class="tool-name">写个借条/简单合同</td><td>ChatGPT法律插件</td><td>让AI生成初稿，然后自己修改完善</td></tr>
+                    </tbody>
+                </table>
+                <p><strong>重要提醒：</strong>个人遇到法律问题，先用AI了解基本情况，但如果涉及金额较大或情况复杂，一定要咨询专业律师。</p>
+
+                <h3>4.2 场景二：创业者/中小企业</h3>
+                <p>痛点：公司刚起步，法务预算有限，但又有很多合同要审、法律问题要处理。</p>
+                <ul>
+                    <li><strong>合同审查</strong>：LegalRobot - 价格适中，基本的合同审查足够用</li>
+                    <li><strong>文书生成</strong>：Harvey AI个人版 + ChatGPT - 生成各种法律文书初稿</li>
+                    <li><strong>合规检查</strong>：Harvey AI - 了解监管要求，做基本的合规检查</li>
+                    <li><strong>法律研究</strong>：Casetext - 需要研究法律问题时用</li>
+                </ul>
+
+                <h3>4.3 场景三：企业法务部门</h3>
+                <p>痛点：合同太多审不过来，法律研究效率低，重复性工作占用大量时间。</p>
+                <ul>
+                    <li><strong>合同量大</strong>：LawGeex - 自动化合同审查，标准合同直接AI过</li>
+                    <li><strong>全能需求</strong>：Harvey AI - 法务部的全能AI助手，各种工作都能帮上忙</li>
+                    <li><strong>知识管理</strong>：Robin AI - 把律所/法务部的知识沉淀下来，AI随时调用</li>
+                    <li><strong>诉讼支持</strong>：Casetext - 案例检索、法律研究、诉讼文书</li>
+                </ul>
+
+                <h3>4.4 场景四：律师事务所</h3>
+                <p>痛点：律师时间宝贵，重复性工作太多，客户要求越来越高。</p>
+                <table class="tool-table">
+                    <thead>
+                        <tr><th>业务类型</th><th>推荐工具</th><th>核心价值</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="tool-name">公司业务/非诉</td><td>Harvey AI + LawGeex</td><td>合同审查、尽职调查、合规审查效率翻倍</td></tr>
+                        <tr><td class="tool-name">诉讼业务</td><td>Casetext + Harvey AI</td><td>案例检索、法律研究、文书生成</td></tr>
+                        <tr><td class="tool-name">全业务所</td><td>Harvey AI</td><td>一个工具满足大部分AI需求</td></tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight-box">
+                    <p>⚖️ 使用原则：AI提高效率，但质量要靠人把控。AI生成的内容一定要人工审核，尤其是重要法律文件。对客户负责，就是对自己负责。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">五、风险与注意事项</h2>
+                <p>AI法律工具虽好，但也有它的局限性和风险。了解这些边界，才能更安全、更有效地使用它们。</p>
+
+                <h3>5.1 最重要的原则：AI不是律师</h3>
+                <p>这是必须反复强调的一点。所有的AI法律工具，都<strong>不能替代执业律师，也不能提供法律意见</strong>。</p>
+                <p><strong>AI可以帮你做的：</strong></p>
+                <ul>
+                    <li>检索法律条文和案例</li>
+                    <li>审查合同，指出潜在风险点</li>
+                    <li>生成法律文书初稿</li>
+                    <li>解答基础法律知识问题</li>
+                    <li>整理和归纳法律信息</li>
+                </ul>
+                <p><strong>AI不能做的：</strong></p>
+                <ul>
+                    <li>提供法律意见（告诉你应该怎么做）</li>
+                    <li>代表你出庭或处理法律事务</li>
+                    <li>保证100%的准确率</li>
+                    <li>替代律师的专业判断</li>
+                    <li>对你的决策承担法律责任</li>
+                </ul>
+
+                <h3>5.2 准确率的局限</h3>
+                <p>AI在法律领域的准确率虽然一直在提升，但远没有到完美的程度：</p>
+                <ul>
+                    <li><strong>法律幻觉</strong>：AI可能会"编造"不存在的法条和案例，而且说得有模有样</li>
+                    <li><strong>地域差异</strong>：不同国家、不同地区的法律不一样，AI可能搞混</li>
+                    <li><strong>时效性问题</strong>：法律会更新，AI的知识可能不是最新的</li>
+                    <li><strong>复杂案件处理能力有限</strong>：简单问题AI表现好，复杂案件还是要靠人</li>
+                    <li><strong>事实认定能力弱</strong>：法律适用是一方面，事实认定是另一方面，AI不擅长后者</li>
+                </ul>
+
+                <h3>5.3 保密与数据安全</h3>
+                <p>法律文件往往涉及大量机密和敏感信息，使用AI工具时一定要注意保密：</p>
+                <ul>
+                    <li>不要把客户保密信息上传到公共AI工具</li>
+                    <li>选择企业版时，确认数据不会被用于训练模型</li>
+                    <li>敏感文件优先选择本地部署或私有化方案</li>
+                    <li>签订保密协议，明确数据安全责任</li>
+                    <li>遵守律师职业道德和保密义务</li>
+                </ul>
+
+                <h3>5.4 职业道德与合规</h3>
+                <p>法律行业有严格的职业道德要求，使用AI工具时也要注意合规：</p>
+                <ul>
+                    <li>向客户披露使用了AI工具（很多州/地区要求）</li>
+                    <li>对AI生成的内容进行人工审核，承担最终责任</li>
+                    <li>不能用AI从事未经授权的法律执业（UPL）</li>
+                    <li>确保AI的使用符合当地律师协会的规定</li>
+                    <li>保留工作记录，能够证明尽到了合理注意义务</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <p>⚠️ 风险提示：AI法律工具是辅助工具，不是律师。重要法律事务一定要咨询专业律师。因使用AI工具导致的任何损失，使用者自行承担责任。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">六、选型决策树</h2>
+                <p>这么多AI法律工具，到底该选哪个？跟着这棵决策树走，几步就能找到适合你的。</p>
+
+                <div class="decision-tree">
+                    <div class="decision-node">
+                        <div class="decision-question">问题1：你的身份和主要用途是什么？</div>
+                        <div class="decision-options">
+                            <p>→ 个人用户/日常法律问题 → 继续问题2</p>
+                            <p>→ 创业者/中小企业 → 继续问题3</p>
+                            <p>→ 企业法务部门 → 继续问题4</p>
+                            <p>→ 律师/律所 → 继续问题5</p>
+                        </div>
+                    </div>
+
+                    <div class="decision-node">
+                        <div class="decision-question">问题2：你主要用它做什么？</div>
+                        <div class="decision-options">
+                            <p>→ 了解法律知识/解答疑问 → 推荐：ChatGPT法律插件</p>
+                            <p>→ 消费者维权/小额纠纷 → 推荐：DoNotPay</p>
+                            <p>→ 审查合同/写简单文书 → 推荐：LegalRobot + ChatGPT</p>
+                        </div>
+                    </div>
+
+                    <div class="decision-node">
+                        <div class="decision-question">问题3：你的核心需求是什么？</div>
+                        <div class="decision-options">
+                            <p>→ 合同审查为主 → 推荐：LegalRobot</p>
+                            <p>→ 综合法律需求 → 推荐：Harvey AI个人版</p>
+                            <p>→ 预算有限 → 推荐：ChatGPT法律插件</p>
+                        </div>
+                    </div>
+
+                    <div class="decision-node">
+                        <div class="decision-question">问题4：你们合同量大吗？</div>
+                        <div class="decision-options">
+                            <p>→ 合同量很大（年千份以上） → 推荐：LawGeex</p>
+                            <p>→ 综合法务需求 → 推荐：Harvey AI企业版</p>
+                            <p>→ 需要知识管理 → 推荐：Robin AI</p>
+                        </div>
+                    </div>
+
+                    <div class="decision-node">
+                        <div class="decision-question">问题5：你们主要做什么业务？</div>
+                        <div class="decision-options">
+                            <p>→ 诉讼为主 → 推荐：Casetext</p>
+                            <p>→ 非诉/公司业务 → 推荐：Harvey AI + LawGeex</p>
+                            <p>→ 综合律所 → 推荐：Harvey AI</p>
+                        </div>
+                    </div>
+
+                    <div class="decision-node decision-result">
+                        <div class="decision-question">✅ 选型完成</div>
+                        <div class="decision-options">
+                            <p>建议先免费试用，用真实的工作场景测试效果，再决定是否付费。AI法律工具是效率倍增器，但需要和人的专业判断结合使用。</p>
+                            <p style="margin-top: 8px;"><strong>记住：</strong>AI提高效率，但人要对结果负责。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">七、未来发展趋势</h2>
+                <p>AI法律科技还在快速发展，未来几年会有哪些变化？让我们展望一下。</p>
+
+                <h3>7.1 法律工作的自动化</h3>
+                <p>越来越多的法律工作会被AI自动化：</p>
+                <ul>
+                    <li><strong>合同全流程自动化</strong>：从起草、谈判、审查到签署、归档，AI全程参与</li>
+                    <li><strong>法律研究智能化</strong>：不是简单搜索，而是真正的法律推理和问题分析</li>
+                    <li><strong>合规监控自动化</strong>：实时监控监管变化，自动评估合规风险</li>
+                    <li><strong>案件预测</strong>：基于历史案例，预测案件走向和判决结果</li>
+                </ul>
+
+                <h3>7.2 律师角色的转变</h3>
+                <p>AI不会让律师失业，但会改变律师的工作方式：</p>
+                <ul>
+                    <li>从"体力劳动者"变成"脑力劳动者"——重复性工作AI做，律师做高价值判断</li>
+                    <li>从"按小时收费"到"按价值收费"——效率提升了，收费模式也会变</li>
+                    <li>技术能力成为律师的核心竞争力之一——会用AI的律师更有竞争力</li>
+                    <li>法律服务的边界扩大——因为成本降低了，更多人能享受到法律服务</li>
+                </ul>
+
+                <h3>7.3 法律科技的新赛道</h3>
+                <p>AI会催生很多新的法律科技赛道：</p>
+                <ul>
+                    <li><strong>AI+合规科技</strong>：企业合规的自动化和智能化</li>
+                    <li><strong>AI+争议解决</strong>：在线纠纷解决、AI调解、AI仲裁</li>
+                    <li><strong>AI+法律教育</strong>：AI辅助法学教育、模拟法庭、法律实务培训</li>
+                    <li><strong>AI+司法</strong>：法院智能化、AI辅助判案、智慧司法</li>
+                </ul>
+
+                <h3>7.4 监管与伦理</h3>
+                <p>随着AI在法律领域的应用越来越广，监管也会跟上：</p>
+                <ul>
+                    <li>AI法律工具的准入和认证会越来越规范</li>
+                    <li>律师使用AI的职业道德规范会更加明确</li>
+                    <li>AI生成内容的披露要求会越来越普遍</li>
+                    <li>数据安全和隐私保护会更加严格</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <p>🔮 趋势总结：AI不会取代律师，但会用AI的律师会取代不会用AI的律师。法律行业的游戏规则正在改变，越早适应越好。</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">八、总结与建议</h2>
+                <p>看到这里，相信你对AI法律工具有了比较全面的了解。最后总结一下，给你一些实用的建议。</p>
+
+                <h3>8.1 核心要点回顾</h3>
+                <ul>
+                    <li><strong>AI是助手，不是律师</strong>：AI法律工具能提高效率，但不能替代专业律师</li>
+                    <li><strong>选对工具很重要</strong>：不同工具擅长不同领域，根据需求选最合适的</li>
+                    <li><strong>人工审核不可少</strong>：AI生成的内容一定要人工审核，人要对结果负责</li>
+                    <li><strong>注意保密安全</strong>：法律文件很敏感，数据安全和保密一定要重视</li>
+                    <li><strong>保持学习</strong>：法律AI发展很快，持续学习才能保持竞争力</li>
+                </ul>
+
+                <h3>8.2 给不同人群的建议</h3>
+                <p><strong>给普通人：</strong></p>
+                <ul>
+                    <li>遇到法律问题，可以先用AI了解基本情况，做到心中有数</li>
+                    <li>小额纠纷、日常维权可以试试DoNotPay这类工具</li>
+                    <li>签合同前用AI工具过一遍，能发现很多坑</li>
+                    <li>但如果涉及金额大、情况复杂，一定要找律师</li>
+                </ul>
+
+                <p><strong>给创业者和中小企业：</strong></p>
+                <ul>
+                    <li>创业初期法务预算有限，AI法律工具性价比很高</li>
+                    <li>标准合同可以用AI审，重要合同还是要律师把关</li>
+                    <li>用AI生成文书初稿，节省律师时间，也省律师费</li>
+                    <li>公司发展起来后，还是建议请专业法务或律所</li>
+                </ul>
+
+                <p><strong>给法律从业者：</strong></p>
+                <ul>
+                    <li>不要抗拒AI，拥抱它，它会让你更有竞争力</li>
+                    <li>从重复性工作开始用AI，把时间花在更有价值的地方</li>
+                    <li>AI生成的内容一定要审核，对客户负责，也对自己负责</li>
+                    <li>遵守职业道德和监管要求，合规使用AI</li>
+                </ul>
+
+                <h3>8.3 行动清单</h3>
+                <p>看完这篇文章，你可以做这些事：</p>
+                <ol>
+                    <li><strong>评估需求</strong>：你最想让AI帮你做什么法律工作？</li>
+                    <li><strong>选择工具</strong>：根据决策树，选1-2款工具开始试用</li>
+                    <li><strong>从小处开始</strong>：先从简单的、不重要的工作开始试用</li>
+                    <li><strong>人工审核</strong>：养成习惯，AI生成的内容一定要人工检查</li>
+                    <li><strong>持续学习</strong>：法律AI发展很快，定期了解新功能和新工具</li>
+                </ol>
+
+                <div class="highlight-box">
+                    <p>⚖️ 最后想说：法律的本质是公平正义，AI是实现它的工具。用好AI，让更多人能享受到优质的法律服务，让公平正义触手可及。</p>
+                </div>
+            </section>
+        </article>
+
+        <div class="sister-sites">
+            <div class="sister-sites-title">🌐 姊妹站点</div>
+            <div class="sister-sites-links">
+                <a href="https://tool.link.cn" target="_blank" rel="noopener">tool.link.cn</a>
+                <a href="https://tools.link.cn" target="_blank" rel="noopener">tools.link.cn</a>
+                <a href="https://prompts.link.cn" target="_blank" rel="noopener">prompts.link.cn</a>
+                <a href="https://signal.link.cn" target="_blank" rel="noopener">signal.link.cn</a>
+            </div>
+        </div>
+
+        <div class="social-share">
+            <div class="social-share-title">🔗 觉得有用？分享给更多人</div>
+            <div class="social-share-btns">
+                <button class="share-btn wechat" onclick="shareToWeChat()">💬 微信</button>
+                <a class="share-btn weibo" href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fai.link.cn%2Farticles%2Fai-legal-tools-guide.html&title=2026%E5%B9%B4AI%E6%B3%95%E5%BE%8B%E5%B7%A5%E5%85%B7%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97" target="_blank" rel="noopener">🎨 微博</a>
+                <a class="share-btn twitter" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fai.link.cn%2Farticles%2Fai-legal-tools-guide.html&text=2026%E5%B9%B4AI%E6%B3%95%E5%BE%8B%E5%B7%A5%E5%85%B7%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97" target="_blank" rel="noopener">🐦 Twitter</a>
+                <a class="share-btn linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fai.link.cn%2Farticles%2Fai-legal-tools-guide.html" target="_blank" rel="noopener">💼 LinkedIn</a>
+                <button class="share-btn copy" onclick="copyLink()">📋 复制链接</button>
+            </div>
+        </div>
+
+        <div class="continue-reading">
+            <h2 class="continue-title">📖 继续阅读</h2>
+            <p class="continue-desc">看了AI法律工具，这些内容也可能帮到你：</p>
+            <div class="continue-grid">
+                <a href="/articles/ai-tools-overview.html" class="continue-card">
+                    <div class="continue-card-tag">工具总览</div>
+                    <h3>AI工具大全总览</h3>
+                    <p>200+款AI工具分类导航与深度评测</p>
+                    <span class="continue-arrow">→</span>
+                </a>
+                <a href="/articles/ai-productivity-guide-2026.html" class="continue-card">
+                    <div class="continue-card-tag">生产力</div>
+                    <h3>2026 AI生产力指南</h3>
+                    <p>用AI工具把工作效率提升10倍的实战方法</p>
+                    <span class="continue-arrow">→</span>
+                </a>
+                <a href="/articles/ai-money-making-guide-2026.html" class="continue-card">
+                    <div class="continue-card-tag">副业赚钱</div>
+                    <h3>用AI赚钱的10种方法</h3>
+                    <p>从副业到年入百万的完整变现指南</p>
+                    <span class="continue-arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 AI.link.cn · 专注AI工具与资讯 | <a href="/">首页</a> · <a href="/pages/tools/">工具库</a> · <a href="/tutorials/">教程</a> · <a href="/articles/">资讯</a> · <a href="/compare/">对比</a></p>
+        </div>
+    </footer>
+
+    <script>
+        const progressBar = document.getElementById('progressBar');
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+            progressBar.style.width = scrollPercent + '%';
+        });
+    </script>
+    <script>
+        function copyLink() {
+            const url = window.location.href;
+            navigator.clipboard.writeText(url).then(() => {
+                const btn = event.target.closest('.share-btn');
+                const originalText = btn.textContent;
+                btn.textContent = '✓ 已复制';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+        function shareToWeChat() {
+            alert('请截图或复制链接分享到微信好友/群聊：\n' + window.location.href);
+        }
+    </script>
+</body>
+</html>
