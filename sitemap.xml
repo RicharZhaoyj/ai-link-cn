@@ -464,6 +464,20 @@
         <priority>0.85</priority>
     </url>
 
+    <url>
+        <loc>https://ai.link.cn/tutorials/perplexity-complete-guide.html</loc>
+        <lastmod>2026-07-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+
+    <url>
+        <loc>https://ai.link.cn/tutorials/suno-ai-music-guide.html</loc>
+        <lastmod>2026-07-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+
     <!-- FAQ页面 -->
     <url>
         <loc>https://ai.link.cn/faq.html</loc>
