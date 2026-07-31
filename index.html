@@ -377,6 +377,118 @@
             color: var(--text-muted);
             font-size: 0.85rem;
         }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 60px 0;
+            background: var(--surface);
+        }
+
+        .faq-list {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .faq-item {
+            background: var(--surface-2);
+            border: 1px solid rgba(168, 85, 247, 0.12);
+            border-radius: 12px;
+            padding: 24px 28px;
+            transition: all 0.2s;
+        }
+
+        .faq-item:hover {
+            border-color: rgba(168, 85, 247, 0.3);
+            background: rgba(168, 85, 247, 0.04);
+        }
+
+        .faq-question {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .faq-question::before {
+            content: 'Q';
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: rgba(168, 85, 247, 0.2);
+            color: var(--accent);
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .faq-answer {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            padding-left: 38px;
+        }
+
+        .faq-answer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .faq-answer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Article Category Cards */
+        .category-section {
+            padding: 60px 0;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .category-card {
+            background: var(--surface);
+            border: 1px solid rgba(168, 85, 247, 0.1);
+            border-radius: 12px;
+            padding: 20px 24px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s;
+            display: block;
+        }
+
+        .category-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+            background: rgba(168, 85, 247, 0.05);
+        }
+
+        .category-card-icon {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+        }
+
+        .category-card-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .category-card-count {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
         
         @media (max-width: 768px) {
             .nav-links { display: none; }
@@ -385,6 +497,8 @@
             .sister-cards-grid { grid-template-columns: repeat(2, 1fr); }
             .tools-grid { grid-template-columns: 1fr; }
             .hero-stat-num { font-size: 1.5rem; }
+            .category-grid { grid-template-columns: 1fr; }
+            .faq-item { padding: 18px 20px; }
         }
     </style>
     <!-- Google Analytics -->
@@ -428,6 +542,63 @@
             "name": "AI News",
             "url": "https://ai.link.cn"
         }
+    }
+    </script>
+    <!-- JSON-LD: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "2026年最值得关注的AI趋势有哪些？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "2026下半年AI核心趋势包括：1) AI Agent爆发：多Agent协作成为主流；2) 多模态大一统：图文音视频端到端模型；3) 端侧AI崛起：手机/PC本地运行大模型；4) AI监管落地：欧盟AI法案等全面实施；5) 开源vs闭源竞争加剧。详见我们的深度分析《2026下半年AI行业十大趋势预测》。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "目前最好用的AI编程工具有哪些？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "2026年主流AI编程工具梯队：第一梯队（最佳体验）：Cursor、Claude Code、GitHub Copilot；第二梯队（高性价比）：Codeium、JetBrains AI Assistant；第三梯队（开源/本地化）：Continue.dev、TabbyML。针对前端、后端、数据科学等不同角色各有最优选择，完整对比请参考《AI编程工具完全指南》。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "如何用AI工具提升工作效率？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "AI提效三板斧：1) 流程自动化：用AI Agent处理重复性工作（邮件分类、数据整理、报告生成）；2) 创作加速：写作/设计/编程先用AI出初稿，人工润色；3) 学习提效：让AI总结长文档、解释技术概念、生成学习路径。具体案例见《AI生产力工具完全指南》。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "GPT-5和Claude 4有什么区别？该怎么选？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "核心区别：GPT-5强在多模态生成（图像/视频质量更高）、生态整合更好（ChatGPT插件/App Store）；Claude 4强在上下文长度（200K tokens）、编程/推理能力、企业级安全合规。选型建议：创意/多模态内容选GPT-5；长文档处理和开发选Claude 4；日常使用两者搭配。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "2026年有哪些AI副业赚钱机会？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "2026年AI副业TOP方向：1) AI提示词售卖：在Prompt市场上架高质量Prompt模板；2) AI内容创作：批量生成SEO文章/短视频脚本；3) AI工具教程：做小红书/B站AI教学博主；4) AI定制开发：为中小企业搭建AI工作流；5) 设计/插画外包：用Flux+Midjourney承接设计需求。完整变现路径见《用AI赚钱的10种实战方法》。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "AI.link.cn 与其他AI资讯站有什么不同？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "AI.link.cn 的特色：1) 每日8+条精选资讯，覆盖36氪/量子位/InfoQ等6大RSS信源；2) 附带深度评测指南：每类AI工具都有完整对比和使用教程；3) 姊妹站点生态：一站式跳转AI工具推荐(tools.link.cn)、Prompt市场(prompts.link.cn)、加密货币分析(signal.link.cn)，AI全产业链信息聚合。"
+                }
+            }
+        ]
     }
     </script>
 </head>
