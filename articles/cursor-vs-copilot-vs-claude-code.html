@@ -457,15 +457,57 @@
         </div>
 
         <article class="article-content">
+<!-- Table of Contents - SEO锚点优化 -->
+<div class="toc-inline" style="background:var(--surface);border:1px solid rgba(168,85,247,.15);border-radius:14px;padding:24px 28px;margin:32px 0">
+<div style="font-weight:700;font-size:1.1rem;color:var(--accent);margin-bottom:14px;display:flex;align-items:center;gap:8px">
+<span>📋</span> 本文目录
+</div>
+<ul style="list-style:none;padding:0;margin:0;columns:2;column-gap:24px">
+<li><a href="#本文要点" style="padding-left:16px">📋 本文要点</a></li>
+<li><a href="#一产品定位三种完全不同的哲学" style="padding-left:0px">一、产品定位：三种完全不同的哲学</a></li>
+<li><a href="#1-cursorai原生ide" style="padding-left:16px">1. Cursor：AI原生IDE</a></li>
+<li><a href="#2-github-copilot插件生态之王" style="padding-left:16px">2. GitHub Copilot：插件生态之王</a></li>
+<li><a href="#3-claude-code命令行agent" style="padding-left:16px">3. Claude Code：命令行Agent</a></li>
+<li><a href="#二核心功能对比" style="padding-left:0px">二、核心功能对比</a></li>
+<li><a href="#三价格与计费方式" style="padding-left:0px">三、价格与计费方式</a></li>
+<li><a href="#cursor" style="padding-left:16px">Cursor</a></li>
+<li><a href="#github-copilot" style="padding-left:16px">GitHub Copilot</a></li>
+<li><a href="#claude-code" style="padding-left:16px">Claude Code</a></li>
+<li><a href="#四编程语言支持与代码补全质量" style="padding-left:0px">四、编程语言支持与代码补全质量</a></li>
+<li><a href="#语言覆盖" style="padding-left:16px">语言覆盖</a></li>
+<li><a href="#补全质量实测" style="padding-left:16px">补全质量实测</a></li>
+<li><a href="#五agent能力自主完成复杂任务" style="padding-left:0px">五、Agent能力：自主完成复杂任务</a></li>
+<li><a href="#cursor-agent--composer" style="padding-left:16px">Cursor Agent / Composer</a></li>
+<li><a href="#copilot-agent" style="padding-left:16px">Copilot Agent</a></li>
+<li><a href="#claude-code-1" style="padding-left:16px">Claude Code</a></li>
+<li><a href="#六实际体验3个真实场景" style="padding-left:0px">六、实际体验：3个真实场景</a></li>
+<li><a href="#场景1从0搭建一个nextjs全栈应用" style="padding-left:16px">场景1：从0搭建一个Next.js全栈应用</a></li>
+<li><a href="#场景2修复一个陌生开源项目的bug" style="padding-left:16px">场景2：修复一个陌生开源项目的Bug</a></li>
+<li><a href="#场景3日常写业务代码crud表单api" style="padding-left:16px">场景3：日常写业务代码（CRUD、表单、API）</a></li>
+<li><a href="#七谁该选谁分人群推荐" style="padding-left:0px">七、谁该选谁：分人群推荐</a></li>
+<li><a href="#推荐-cursor-的人群" style="padding-left:16px">推荐 Cursor 的人群</a></li>
+<li><a href="#推荐-github-copilot-的人群" style="padding-left:16px">推荐 GitHub Copilot 的人群</a></li>
+<li><a href="#推荐-claude-code-的人群" style="padding-left:16px">推荐 Claude Code 的人群</a></li>
+<li><a href="#八未来展望编程ai的下一站" style="padding-left:0px">八、未来展望：编程AI的下一站</a></li>
+<li><a href="#相关推荐" style="padding-left:0px">📌 相关推荐</a></li>
+</ul>
+</div>
+<style>
+.toc-inline li { margin-bottom:6px;break-inside:avoid }
+.toc-inline a { color:var(--text-muted);text-decoration:none;font-size:.92rem;display:block;padding:4px 0;border-left:2px solid transparent;padding-left:10px;transition:all .2s }
+.toc-inline a:hover { color:var(--accent);border-left-color:var(--accent);background:rgba(168,85,247,.05);border-radius:0 6px 6px 0 }
+@media(max-width:640px){ .toc-inline ul { columns:1 } }
+</style>
+
             <section class="section">
                 <h2 class="section-title" id="一产品定位三种完全不同的哲学">一、产品定位：三种完全不同的哲学</h2>
                 <p>在比较具体功能之前，必须先理解三款工具的产品哲学差异，这决定了它们适合什么样的开发者。</p>
 
-                <h3 id="1-cursorai原生ide">1. Cursor：AI原生IDE</h3>
+                <h3 id="1-cursorai原生ide">1. <a href="https://ai.link.cn/articles/cursor-vs-copilot-vs-claude-code.html" style="color:var(--accent);text-decoration:none;border-bottom:1px dashed rgba(168,85,247,.4);font-weight:500">Cursor</a>：AI原生IDE</h3>
                 <p>Cursor是Anysphere推出的AI原生IDE，基于VS Code fork开发。它最大的特点是从底层就把AI当成一等公民——Tab补全、Chat、Composer（多文件编辑）、Agent模式、@-mention引用文件、Cmd-K内联编辑全部内置。开发者无需安装任何插件即可获得完整AI体验，所有AI能力都深度集成到编辑器内核。</p>
 
-                <h3 id="2-github-copilot插件生态之王">2. GitHub Copilot：插件生态之王</h3>
-                <p>Copilot是GitHub与OpenAI合作推出的AI编程助手，以插件形式运行在VS Code、JetBrains、Visual Studio、Neovim等主流IDE中。它的优势是"不挑IDE"——你可以在自己最熟悉的编辑器里使用，同时依托GitHub的代码库和Pull Request生态，对开源项目和企业仓库的支持尤其成熟。2026年推出的Copilot Workspace和Agent模式让其能力进一步扩展。</p>
+                <h3 id="2-github-copilot插件生态之王">2. <a href="https://ai.link.cn/articles/cursor-vs-copilot-vs-claude-code.html" style="color:var(--accent);text-decoration:none;border-bottom:1px dashed rgba(168,85,247,.4);font-weight:500">GitHub Copilot</a>：插件生态之王</h3>
+                <p>Copilot是GitHub与OpenAI合作推出的<a href="/compare/ai-coding-tools-comparison.html" style="color:var(--accent);text-decoration:none;border-bottom:1px dashed rgba(168,85,247,.4);font-weight:500">AI编程助手</a>，以插件形式运行在VS Code、JetBrains、Visual Studio、Neovim等主流IDE中。它的优势是"不挑IDE"——你可以在自己最熟悉的编辑器里使用，同时依托GitHub的代码库和Pull Request生态，对开源项目和企业仓库的支持尤其成熟。2026年推出的Copilot Workspace和Agent模式让其能力进一步扩展。</p>
 
                 <h3 id="3-claude-code命令行agent">3. Claude Code：命令行Agent</h3>
                 <p>Claude Code是Anthropic推出的命令行AI编程Agent。它不依附任何IDE，而是直接在终端运行，通过自然语言指令让Claude自主完成代码搜索、文件编辑、命令执行、测试运行等任务。它擅长长任务自主执行——你可以让它"修这个issue"、"重构这个模块"，它会自主探索代码库、修改文件、跑测试，并在过程中向用户确认关键决策。这种"放手让它干"的范式特别适合资深工程师处理大型代码库。</p>
@@ -519,7 +561,7 @@
                         </tr>
                         <tr>
                             <td>模型选择</td>
-                            <td>GPT-5 / Claude / Gemini等可选</td>
+                            <td>GPT-5 / <a href="https://ai.link.cn/compare/chatgpt-vs-claude-vs-gemini.html" style="color:var(--accent);text-decoration:none;border-bottom:1px dashed rgba(168,85,247,.4);font-weight:500">Claude</a> / <a href="https://ai.link.cn/compare/chatgpt-vs-claude-vs-gemini.html" style="color:var(--accent);text-decoration:none;border-bottom:1px dashed rgba(168,85,247,.4);font-weight:500">Gemini</a>等可选</td>
                             <td>OpenAI / Anthropic模型</td>
                             <td>Claude系列模型</td>
                         </tr>
@@ -690,7 +732,7 @@
 
             <section class="section">
                 <h2 class="section-title" id="八未来展望编程ai的下一站">八、未来展望：编程AI的下一站</h2>
-                <p>2026年下半年到2027年，AI编程工具的竞争将集中在三个方向：</p>
+                <p>2026年下半年到2027年，<a href="/articles/ai-coding-tools-guide.html" style="color:var(--accent);text-decoration:none;border-bottom:1px dashed rgba(168,85,247,.4);font-weight:500">AI编程工具</a>的竞争将集中在三个方向：</p>
                 <ol>
                     <li><strong>真正的全自主工程能力：</strong>不只是写代码，而是能独立完成"需求分析-架构设计-编码-测试-部署-监控"全链路。Claude Code和Cursor Agent都在朝这个方向演进。</li>
                     <li><strong>多Agent协作：</strong>类似Devin、CrewAI的范式，多个专业Agent（前端Agent、后端Agent、测试Agent）协作完成项目。Cursor的并行后台Agent是雏形。</li>

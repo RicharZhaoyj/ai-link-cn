@@ -519,6 +519,43 @@
         </div>
 
         <article class="article-content">
+<!-- Table of Contents - SEO锚点优化 -->
+<div class="toc-inline" style="background:var(--surface);border:1px solid rgba(168,85,247,.15);border-radius:14px;padding:24px 28px;margin:32px 0">
+<div style="font-weight:700;font-size:1.1rem;color:var(--accent);margin-bottom:14px;display:flex;align-items:center;gap:8px">
+<span>📋</span> 本文目录
+</div>
+<ul style="list-style:none;padding:0;margin:0;columns:2;column-gap:24px">
+<li><a href="#本文要点" style="padding-left:16px">📋 本文要点</a></li>
+<li><a href="#一什么是ai-agent" style="padding-left:0px">一、什么是AI Agent？</a></li>
+<li><a href="#二agent-vs-workflow两个关键概念" style="padding-left:0px">二、Agent vs Workflow：两个关键概念</a></li>
+<li><a href="#三主流开发框架对比" style="padding-left:0px">三、主流开发框架对比</a></li>
+<li><a href="#四agent开发5步法" style="padding-left:0px">四、Agent开发5步法</a></li>
+<li><a href="#第1步明确agent的目标与边界" style="padding-left:16px">第1步：明确Agent的目标与边界</a></li>
+<li><a href="#第2步设计工具集tools" style="padding-left:16px">第2步：设计工具集（Tools）</a></li>
+<li><a href="#第3步编写system-prompt" style="padding-left:16px">第3步：编写System Prompt</a></li>
+<li><a href="#第4步实现agent循环" style="padding-left:16px">第4步：实现Agent循环</a></li>
+<li><a href="#第5步评估与迭代" style="padding-left:16px">第5步：评估与迭代</a></li>
+<li><a href="#五实战案例用langchain构建市场调研agent" style="padding-left:0px">五、实战案例：用LangChain构建市场调研Agent</a></li>
+<li><a href="#完整代码" style="padding-left:16px">完整代码</a></li>
+<li><a href="#代码解读" style="padding-left:16px">代码解读</a></li>
+<li><a href="#六常见坑点与最佳实践" style="padding-left:0px">六、常见坑点与最佳实践</a></li>
+<li><a href="#坑点1agent陷入死循环" style="padding-left:16px">坑点1：Agent陷入死循环</a></li>
+<li><a href="#坑点2工具描述不清导致误用" style="padding-left:16px">坑点2：工具描述不清导致误用</a></li>
+<li><a href="#坑点3token爆炸" style="padding-left:16px">坑点3：Token爆炸</a></li>
+<li><a href="#坑点4评估困难" style="padding-left:16px">坑点4：评估困难</a></li>
+<li><a href="#坑点5忽视安全与成本" style="padding-left:16px">坑点5：忽视安全与成本</a></li>
+<li><a href="#七进阶方向从单agent到多agent系统" style="padding-left:0px">七、进阶方向：从单Agent到多Agent系统</a></li>
+<li><a href="#八总结与学习路径" style="padding-left:0px">八、总结与学习路径</a></li>
+<li><a href="#相关推荐" style="padding-left:0px">📌 相关推荐</a></li>
+</ul>
+</div>
+<style>
+.toc-inline li { margin-bottom:6px;break-inside:avoid }
+.toc-inline a { color:var(--text-muted);text-decoration:none;font-size:.92rem;display:block;padding:4px 0;border-left:2px solid transparent;padding-left:10px;transition:all .2s }
+.toc-inline a:hover { color:var(--accent);border-left-color:var(--accent);background:rgba(168,85,247,.05);border-radius:0 6px 6px 0 }
+@media(max-width:640px){ .toc-inline ul { columns:1 } }
+</style>
+
             <section class="section">
                 <h2 class="section-title" id="一什么是ai-agent">一、什么是AI Agent？</h2>
                 <p>AI Agent（智能体）是大模型从"对话工具"走向"自主执行者"的关键形态。普通的大模型调用是<strong>一问一答</strong>——你给一个输入，模型返回一个输出，整个交互是单轮的、被动的。</p>

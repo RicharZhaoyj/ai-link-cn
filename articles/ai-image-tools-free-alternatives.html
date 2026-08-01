@@ -499,10 +499,44 @@
         </div>
 
         <article class="article-content">
+<!-- Table of Contents - SEO锚点优化 -->
+<div class="toc-inline" style="background:var(--surface);border:1px solid rgba(168,85,247,.15);border-radius:14px;padding:24px 28px;margin:32px 0">
+<div style="font-weight:700;font-size:1.1rem;color:var(--accent);margin-bottom:14px;display:flex;align-items:center;gap:8px">
+<span>📋</span> 本文目录
+</div>
+<ul style="list-style:none;padding:0;margin:0;columns:2;column-gap:24px">
+<li><a href="#本文要点" style="padding-left:16px">📋 本文要点</a></li>
+<li><a href="#一为什么要找免费替代方案" style="padding-left:0px">一、为什么要找免费替代方案？</a></li>
+<li><a href="#二云端免费工具盘点" style="padding-left:0px">二、云端免费工具盘点</a></li>
+<li><a href="#三本地部署完全免费的终极方案" style="padding-left:0px">三、本地部署：完全免费的终极方案</a></li>
+<li><a href="#本地部署stable-diffusion-webui5步上手" style="padding-left:16px">本地部署Stable Diffusion WebUI：5步上手</a></li>
+<li><a href="#四9款工具横向对比" style="padding-left:0px">四、9款工具横向对比</a></li>
+<li><a href="#五按场景选工具" style="padding-left:0px">五、按场景选工具</a></li>
+<li><a href="#场景1零基础新手只想生成几张图玩玩" style="padding-left:16px">场景1：零基础新手，只想生成几张图玩玩</a></li>
+<li><a href="#场景2新媒体配图社媒封面" style="padding-left:16px">场景2：新媒体配图、社媒封面</a></li>
+<li><a href="#场景3插画师概念设计师" style="padding-left:16px">场景3：插画师、概念设计师</a></li>
+<li><a href="#场景4二次元创作者" style="padding-left:16px">场景4：二次元创作者</a></li>
+<li><a href="#场景5追求midjourney那种艺术感" style="padding-left:16px">场景5：追求Midjourney那种"艺术感"</a></li>
+<li><a href="#六常见问题解答" style="padding-left:0px">六、常见问题解答</a></li>
+<li><a href="#q1免费工具生成的图片可以商用吗" style="padding-left:16px">Q1：免费工具生成的图片可以商用吗？</a></li>
+<li><a href="#q2免费工具的内容审核严格吗" style="padding-left:16px">Q2：免费工具的内容审核严格吗？</a></li>
+<li><a href="#q3mac能用本地stable-diffusion吗" style="padding-left:16px">Q3：Mac能用本地Stable Diffusion吗？</a></li>
+<li><a href="#q4没有显卡但又想无限生成怎么办" style="padding-left:16px">Q4：没有显卡，但又想无限生成，怎么办？</a></li>
+<li><a href="#七总结免费不代表凑合" style="padding-left:0px">七、总结：免费不代表"凑合"</a></li>
+<li><a href="#相关推荐" style="padding-left:0px">📌 相关推荐</a></li>
+</ul>
+</div>
+<style>
+.toc-inline li { margin-bottom:6px;break-inside:avoid }
+.toc-inline a { color:var(--text-muted);text-decoration:none;font-size:.92rem;display:block;padding:4px 0;border-left:2px solid transparent;padding-left:10px;transition:all .2s }
+.toc-inline a:hover { color:var(--accent);border-left-color:var(--accent);background:rgba(168,85,247,.05);border-radius:0 6px 6px 0 }
+@media(max-width:640px){ .toc-inline ul { columns:1 } }
+</style>
+
             <section class="section">
                 <h2 class="section-title" id="一为什么要找免费替代方案">一、为什么要找免费替代方案？</h2>
-                <p>Midjourney v7依然是艺术风格天花板，但$10/月的起步价对很多人不友好——尤其是学生党、刚入门的爱好者、只想偶尔生成几张图的非重度用户。即便订阅了，每日GPU时长限制也常常捉襟见肘。</p>
-                <p>好消息是，2026年免费AI绘画工具的生态比任何时候都成熟。从Stable Diffusion 3.5这类完全开源的本地部署方案，到Leonardo.ai、即梦AI这类提供慷慨免费额度的云服务，再到Bing Image Creator这种"完全免费+DALL·E 3驱动"的方案，选择极其丰富。下面我们逐一盘点。</p>
+                <p><a href="https://ai.link.cn/compare/midjourney-vs-dalle-vs-stablediffusion.html" style="color:var(--accent);text-decoration:none;border-bottom:1px dashed rgba(168,85,247,.4);font-weight:500">Midjourney</a> v7依然是艺术风格天花板，但$10/月的起步价对很多人不友好——尤其是学生党、刚入门的爱好者、只想偶尔生成几张图的非重度用户。即便订阅了，每日GPU时长限制也常常捉襟见肘。</p>
+                <p>好消息是，2026年免费<a href="/articles/ai-design-tools-guide.html" style="color:var(--accent);text-decoration:none;border-bottom:1px dashed rgba(168,85,247,.4);font-weight:500">AI绘画工具</a>的生态比任何时候都成熟。从<a href="https://ai.link.cn/compare/midjourney-vs-dalle-vs-stablediffusion.html" style="color:var(--accent);text-decoration:none;border-bottom:1px dashed rgba(168,85,247,.4);font-weight:500">Stable Diffusion</a> 3.5这类完全开源的本地部署方案，到Leonardo.ai、即梦AI这类提供慷慨免费额度的云服务，再到Bing Image Creator这种"完全免费+<a href="https://ai.link.cn/compare/midjourney-vs-dalle-vs-stablediffusion.html" style="color:var(--accent);text-decoration:none;border-bottom:1px dashed rgba(168,85,247,.4);font-weight:500">DALL·E</a> 3驱动"的方案，选择极其丰富。下面我们逐一盘点。</p>
 
                 <div class="highlight-box">
                     <p>选择免费工具的核心权衡：云端免费（开箱即用但有额度限制）vs 本地部署（完全免费但需要硬件与折腾）。下文会给出明确的判断标准。</p>
@@ -542,7 +576,7 @@
                         <span class="tool-card-tag">每日50张免费</span>
                     </div>
                     <div class="tool-card-meta">模型：Playground v3 + Flux + SDXL · 注册：Google账号 · 商用：付费版</div>
-                    <p><strong>核心特点：</strong>主打"AI设计工具"，免费用户每日50张图片额度。除了基础文生图，还提供inpaint/outpaint、放大、滤镜、Magic Expand等高级功能。Playground v3模型在文字渲染和真实感上表现出色。</p>
+                    <p><strong>核心特点：</strong>主打"<a href="/articles/ai-design-tools-guide.html" style="color:var(--accent);text-decoration:none;border-bottom:1px dashed rgba(168,85,247,.4);font-weight:500">AI设计工具</a>"，免费用户每日50张图片额度。除了基础文生图，还提供inpaint/outpaint、放大、滤镜、Magic Expand等高级功能。Playground v3模型在文字渲染和真实感上表现出色。</p>
                     <p><strong>优势：</strong>功能丰富、UI现代、支持Flux模型、有移动端。</p>
                     <p><strong>劣势：</strong>免费图片带水印、商用需付费、高级功能需订阅。</p>
                     <p><strong>适合：</strong>设计师、社媒运营、需要"修图+生成"组合功能的用户。</p>
