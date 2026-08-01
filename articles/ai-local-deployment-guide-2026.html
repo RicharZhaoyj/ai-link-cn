@@ -296,11 +296,58 @@
     </article>
 
     <div class="article-content">
+<!-- Table of Contents - SEO锚点优化 -->
+<div class="toc-inline" style="background:var(--surface);border:1px solid rgba(168,85,247,.15);border-radius:14px;padding:24px 28px;margin:32px 0">
+<div style="font-weight:700;font-size:1.1rem;color:var(--accent);margin-bottom:14px;display:flex;align-items:center;gap:8px">
+<span>📋</span> 本文目录
+</div>
+<ul style="list-style:none;padding:0;margin:0;columns:2;column-gap:24px">
+<li><a href="#why-local" style="padding-left:0px">一、为什么选择本地部署？</a></li>
+<li><a href="#核心优势" style="padding-left:16px">核心优势</a></li>
+<li><a href="#适用场景" style="padding-left:16px">适用场景</a></li>
+<li><a href="#hardware" style="padding-left:0px">二、硬件要求全解析</a></li>
+<li><a href="#模型规模与显存对照表" style="padding-left:16px">模型规模与显存对照表</a></li>
+<li><a href="#显卡推荐" style="padding-left:16px">显卡推荐</a></li>
+<li><a href="#cpu与内存" style="padding-left:16px">CPU与内存</a></li>
+<li><a href="#models" style="padding-left:0px">三、主流开源模型推荐</a></li>
+<li><a href="#通用对话模型" style="padding-left:16px">通用对话模型</a></li>
+<li><a href="#专业领域模型" style="padding-left:16px">专业领域模型</a></li>
+<li><a href="#多模态模型" style="padding-left:16px">多模态模型</a></li>
+<li><a href="#tools" style="padding-left:0px">四、部署工具大比拼</a></li>
+<li><a href="#ollama-tutorial" style="padding-left:0px">五、Ollama实战教程</a></li>
+<li><a href="#安装步骤" style="padding-left:16px">安装步骤</a></li>
+<li><a href="#运行模型" style="padding-left:16px">运行模型</a></li>
+<li><a href="#api调用" style="padding-left:16px">API调用</a></li>
+<li><a href="#自定义模型参数" style="padding-left:16px">自定义模型参数</a></li>
+<li><a href="#optimization" style="padding-left:0px">六、性能优化技巧</a></li>
+<li><a href="#模型量化" style="padding-left:16px">模型量化</a></li>
+<li><a href="#批处理与并发" style="padding-left:16px">批处理与并发</a></li>
+<li><a href="#kv-cache优化" style="padding-left:16px">KV Cache优化</a></li>
+<li><a href="#faq" style="padding-left:0px">七、常见问题与解决方案</a></li>
+<li><a href="#q1-模型下载速度慢怎么办" style="padding-left:16px">Q1: 模型下载速度慢怎么办？</a></li>
+<li><a href="#q2-推理速度慢如何优化" style="padding-left:16px">Q2: 推理速度慢如何优化？</a></li>
+<li><a href="#q3-如何选择合适的模型" style="padding-left:16px">Q3: 如何选择合适的模型？</a></li>
+<li><a href="#q4-企业生产环境推荐方案" style="padding-left:16px">Q4: 企业生产环境推荐方案？</a></li>
+<li><a href="#compliance" style="padding-left:0px">八、商用与合规</a></li>
+<li><a href="#开源模型许可证" style="padding-left:16px">开源模型许可证</a></li>
+<li><a href="#数据合规建议" style="padding-left:16px">数据合规建议</a></li>
+<li><a href="#summary" style="padding-left:0px">九、总结与展望</a></li>
+<li><a href="#开始你的本地部署之旅" style="padding-left:16px">🚀 开始你的本地部署之旅</a></li>
+<li><a href="#延伸阅读" style="padding-left:16px">延伸阅读</a></li>
+</ul>
+</div>
+<style>
+.toc-inline li { margin-bottom:6px;break-inside:avoid }
+.toc-inline a { color:var(--text-muted);text-decoration:none;font-size:.92rem;display:block;padding:4px 0;border-left:2px solid transparent;padding-left:10px;transition:all .2s }
+.toc-inline a:hover { color:var(--accent);border-left-color:var(--accent);background:rgba(168,85,247,.05);border-radius:0 6px 6px 0 }
+@media(max-width:640px){ .toc-inline ul { columns:1 } }
+</style>
+
         <p>在AI大模型快速发展的今天，本地部署已成为越来越多开发者、企业和研究机构的首选方案。相比云端API，本地部署不仅能有效保护数据隐私、降低长期成本，还能实现更深度的定制与控制。本文将带你全面了解AI大模型本地部署的核心知识。</p>
 
         <h2 id="why-local">一、为什么选择本地部署？</h2>
         
-        <h3>核心优势</h3>
+        <h3 id="核心优势">核心优势</h3>
         <ul>
             <li><strong>数据隐私保护</strong>：敏感数据无需上传第三方服务器，符合GDPR、数据安全法等合规要求</li>
             <li><strong>成本控制</strong>：无API调用费用，长期使用成本更低，尤其适合高频调用场景</li>
@@ -309,7 +356,7 @@
             <li><strong>离线可用</strong>：无网络环境下也能正常工作</li>
         </ul>
 
-        <h3>适用场景</h3>
+        <h3 id="适用场景">适用场景</h3>
         <ul>
             <li>企业内部知识库问答系统</li>
             <li>医疗、金融等敏感领域的AI应用</li>
@@ -320,7 +367,7 @@
 
         <h2 id="hardware">二、硬件要求全解析</h2>
 
-        <h3>模型规模与显存对照表</h3>
+        <h3 id="模型规模与显存对照表">模型规模与显存对照表</h3>
         <table>
             <thead>
                 <tr>
@@ -364,7 +411,7 @@
             </tbody>
         </table>
 
-        <h3>显卡推荐</h3>
+        <h3 id="显卡推荐">显卡推荐</h3>
         <ul>
             <li><strong>入门级（7B模型）</strong>：RTX 3060 12GB、RTX 4060 Ti 16GB</li>
             <li><strong>进阶级（13B-34B）</strong>：RTX 4090 24GB、RTX 3090 24GB（二手性价比高）</li>
@@ -376,7 +423,7 @@
             <p>Apple Silicon（M1/M2/M3/M4）芯片的Mac电脑可以直接使用统一内存运行大模型。一台32GB内存的Mac Studio可流畅运行13B量化模型，64GB配置甚至可跑70B INT4量化版本。</p>
         </div>
 
-        <h3>CPU与内存</h3>
+        <h3 id="cpu与内存">CPU与内存</h3>
         <p>现代推理框架（如llama.cpp）支持CPU推理，但速度明显慢于GPU。如选择CPU推理：</p>
         <ul>
             <li><strong>CPU</strong>：推荐AMD Ryzen 9 7950X或Intel i9-14900K</li>
@@ -386,7 +433,7 @@
 
         <h2 id="models">三、主流开源模型推荐</h2>
 
-        <h3>通用对话模型</h3>
+        <h3 id="通用对话模型">通用对话模型</h3>
         <ul>
             <li><strong>Llama 3.1 8B/70B</strong>：Meta最新开源模型，性能接近GPT-4，8B版本适合个人部署</li>
             <li><strong>Mistral 7B v0.3</strong>：小参数大能力，13B以下最强选择</li>
@@ -394,14 +441,14 @@
             <li><strong>Gemma 2 9B/27B</strong>：Google开源，安全对齐优秀</li>
         </ul>
 
-        <h3>专业领域模型</h3>
+        <h3 id="专业领域模型">专业领域模型</h3>
         <ul>
             <li><strong>CodeLlama / DeepSeek-Coder-V2</strong>：编程专用，支持多种编程语言</li>
             <li><strong>Yi-1.5-34B</strong>：零一万物，长文本处理能力强</li>
             <li><strong>Phi-3 Medium</strong>：微软小模型，推理效率极高</li>
         </ul>
 
-        <h3>多模态模型</h3>
+        <h3 id="多模态模型">多模态模型</h3>
         <ul>
             <li><strong>Llava-Next</strong>：开源视觉语言模型，支持图像理解</li>
             <li><strong>Pixtral 12B</strong>：Mistral的多模态版本</li>
@@ -462,7 +509,7 @@
 
         <p>Ollama是目前最简单的本地部署方案，支持macOS、Linux和Windows。</p>
 
-        <h3>安装步骤</h3>
+        <h3 id="安装步骤">安装步骤</h3>
 
         <p><strong>macOS / Linux</strong></p>
         <pre><code>curl -fsSL https://ollama.com/install.sh | sh</code></pre>
@@ -470,7 +517,7 @@
         <p><strong>Windows</strong></p>
         <p>访问 <a href="https://ollama.com/download" style="color: var(--accent-light);">ollama.com/download</a> 下载安装包。</p>
 
-        <h3>运行模型</h3>
+        <h3 id="运行模型">运行模型</h3>
         <pre><code># 下载并运行Llama 3.1 8B
 ollama run llama3.1
 
@@ -483,7 +530,7 @@ ollama run qwen2
 # 查看已下载模型
 ollama list</code></pre>
 
-        <h3>API调用</h3>
+        <h3 id="api调用">API调用</h3>
         <p>Ollama默认在 <code>http://localhost:11434</code> 提供API服务：</p>
         <pre><code>curl http://localhost:11434/api/generate -d '{
   "model": "llama3.1",
@@ -498,7 +545,7 @@ ollama list</code></pre>
   ]
 }'</code></pre>
 
-        <h3>自定义模型参数</h3>
+        <h3 id="自定义模型参数">自定义模型参数</h3>
         <p>创建 <code>Modelfile</code> 自定义行为：</p>
         <pre><code>FROM llama3.1
 
@@ -516,7 +563,7 @@ ollama run my-assistant</code></pre>
 
         <h2 id="optimization">六、性能优化技巧</h2>
 
-        <h3>模型量化</h3>
+        <h3 id="模型量化">模型量化</h3>
         <p>量化可显著降低显存占用和推理延迟，同时保持较好性能：</p>
         <ul>
             <li><strong>INT8</strong>：性能损失约1-2%，显存减半</li>
@@ -524,7 +571,7 @@ ollama run my-assistant</code></pre>
             <li><strong>GGUF格式</strong>：Ollama默认使用，支持多种量化级别</li>
         </ul>
 
-        <h3>批处理与并发</h3>
+        <h3 id="批处理与并发">批处理与并发</h3>
         <p>vLLM等框架支持连续批处理，可大幅提升吞吐量：</p>
         <pre><code># vLLM启动示例
 python -m vllm.entrypoints.openai.api_server \
@@ -532,7 +579,7 @@ python -m vllm.entrypoints.openai.api_server \
     --tensor-parallel-size 1 \
     --max-num-seqs 128</code></pre>
 
-        <h3>KV Cache优化</h3>
+        <h3 id="kv-cache优化">KV Cache优化</h3>
         <ul>
             <li>使用<strong>PagedAttention</strong>（vLLM）动态管理KV Cache</li>
             <li>设置合理的 <code>max_context_length</code></li>
@@ -551,7 +598,7 @@ python -m vllm.entrypoints.openai.api_server \
 
         <h2 id="faq">七、常见问题与解决方案</h2>
 
-        <h3>Q1: 模型下载速度慢怎么办？</h3>
+        <h3 id="q1-模型下载速度慢怎么办">Q1: 模型下载速度慢怎么办？</h3>
         <p>使用国内镜像源或手动下载GGUF文件：</p>
         <pre><code># 设置HuggingFace镜像
 export HF_ENDPOINT=https://hf-mirror.com
@@ -559,7 +606,7 @@ export HF_ENDPOINT=https://hf-mirror.com
 # 或手动下载后导入Ollama
 ollama create my-model -f Modelfile</code></pre>
 
-        <h3>Q2: 推理速度慢如何优化？</h3>
+        <h3 id="q2-推理速度慢如何优化">Q2: 推理速度慢如何优化？</h3>
         <ul>
             <li>确认使用GPU而非CPU（检查 <code>nvidia-smi</code> 显存占用）</li>
             <li>使用量化模型（INT4）</li>
@@ -567,7 +614,7 @@ ollama create my-model -f Modelfile</code></pre>
             <li>升级到支持Flash Attention的显卡</li>
         </ul>
 
-        <h3>Q3: 如何选择合适的模型？</h3>
+        <h3 id="q3-如何选择合适的模型">Q3: 如何选择合适的模型？</h3>
         <p>建议根据显存选择：</p>
         <ul>
             <li>8GB显存：7B INT4量化模型</li>
@@ -576,7 +623,7 @@ ollama create my-model -f Modelfile</code></pre>
             <li>48GB+：70B INT4</li>
         </ul>
 
-        <h3>Q4: 企业生产环境推荐方案？</h3>
+        <h3 id="q4-企业生产环境推荐方案">Q4: 企业生产环境推荐方案？</h3>
         <p>推荐架构：</p>
         <ul>
             <li><strong>推理引擎</strong>：vLLM（高吞吐）或TGI（稳定性好）</li>
@@ -587,7 +634,7 @@ ollama create my-model -f Modelfile</code></pre>
 
         <h2 id="compliance">八、商用与合规</h2>
 
-        <h3>开源模型许可证</h3>
+        <h3 id="开源模型许可证">开源模型许可证</h3>
         <ul>
             <li><strong>Llama 3.1</strong>：Llama Community License，商用需注意用户数限制</li>
             <li><strong>Mistral</strong>：Apache 2.0，可自由商用</li>
@@ -595,7 +642,7 @@ ollama create my-model -f Modelfile</code></pre>
             <li><strong>Gemma 2</strong>：Gemma Terms of Use，有使用限制</li>
         </ul>
 
-        <h3>数据合规建议</h3>
+        <h3 id="数据合规建议">数据合规建议</h3>
         <ul>
             <li>建立数据分类分级制度，明确敏感数据范围</li>
             <li>记录模型训练/微调数据来源，确保版权合规</li>
@@ -618,7 +665,7 @@ ollama create my-model -f Modelfile</code></pre>
         <p>无论你是个人开发者还是企业决策者，现在都是开始探索本地部署的最佳时机。掌握这项技能，将让你在AI时代拥有更强的自主权和竞争力。</p>
 
         <div class="cta-section">
-            <h3>🚀 开始你的本地部署之旅</h3>
+            <h3 id="开始你的本地部署之旅">🚀 开始你的本地部署之旅</h3>
             <p>访问我们的工具库，发现更多开源AI工具和部署方案</p>
             <a href="/pages/tools" class="cta-btn">探索AI工具库</a>
         </div>
@@ -626,7 +673,7 @@ ollama create my-model -f Modelfile</code></pre>
 
     <div class="article-footer">
         <div class="related-articles">
-            <h3>延伸阅读</h3>
+            <h3 id="延伸阅读">延伸阅读</h3>
             <div class="related-list">
                 <a href="/articles/ai-agent-practical-guide-2026.html" class="related-card">
                     <h4>AI Agent开发实战指南</h4>

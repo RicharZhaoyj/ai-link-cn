@@ -446,7 +446,7 @@
         </div>
 
         <div class="article-banner">
-            <h3>📋 本文要点</h3>
+            <h3 id="本文要点">📋 本文要点</h3>
             <ul>
                 <li>三款工具的核心定位差异：IDE原生 / 插件 / 命令行Agent</li>
                 <li>价格、计费方式与免费额度对比</li>
@@ -458,16 +458,16 @@
 
         <article class="article-content">
             <section class="section">
-                <h2 class="section-title">一、产品定位：三种完全不同的哲学</h2>
+                <h2 class="section-title" id="一产品定位三种完全不同的哲学">一、产品定位：三种完全不同的哲学</h2>
                 <p>在比较具体功能之前，必须先理解三款工具的产品哲学差异，这决定了它们适合什么样的开发者。</p>
 
-                <h3>1. Cursor：AI原生IDE</h3>
+                <h3 id="1-cursorai原生ide">1. Cursor：AI原生IDE</h3>
                 <p>Cursor是Anysphere推出的AI原生IDE，基于VS Code fork开发。它最大的特点是从底层就把AI当成一等公民——Tab补全、Chat、Composer（多文件编辑）、Agent模式、@-mention引用文件、Cmd-K内联编辑全部内置。开发者无需安装任何插件即可获得完整AI体验，所有AI能力都深度集成到编辑器内核。</p>
 
-                <h3>2. GitHub Copilot：插件生态之王</h3>
+                <h3 id="2-github-copilot插件生态之王">2. GitHub Copilot：插件生态之王</h3>
                 <p>Copilot是GitHub与OpenAI合作推出的AI编程助手，以插件形式运行在VS Code、JetBrains、Visual Studio、Neovim等主流IDE中。它的优势是"不挑IDE"——你可以在自己最熟悉的编辑器里使用，同时依托GitHub的代码库和Pull Request生态，对开源项目和企业仓库的支持尤其成熟。2026年推出的Copilot Workspace和Agent模式让其能力进一步扩展。</p>
 
-                <h3>3. Claude Code：命令行Agent</h3>
+                <h3 id="3-claude-code命令行agent">3. Claude Code：命令行Agent</h3>
                 <p>Claude Code是Anthropic推出的命令行AI编程Agent。它不依附任何IDE，而是直接在终端运行，通过自然语言指令让Claude自主完成代码搜索、文件编辑、命令执行、测试运行等任务。它擅长长任务自主执行——你可以让它"修这个issue"、"重构这个模块"，它会自主探索代码库、修改文件、跑测试，并在过程中向用户确认关键决策。这种"放手让它干"的范式特别适合资深工程师处理大型代码库。</p>
 
                 <div class="highlight-box">
@@ -476,7 +476,7 @@
             </section>
 
             <section class="section">
-                <h2 class="section-title">二、核心功能对比</h2>
+                <h2 class="section-title" id="二核心功能对比">二、核心功能对比</h2>
                 <table class="compare-table">
                     <thead>
                         <tr>
@@ -552,10 +552,10 @@
             </section>
 
             <section class="section">
-                <h2 class="section-title">三、价格与计费方式</h2>
+                <h2 class="section-title" id="三价格与计费方式">三、价格与计费方式</h2>
                 <p>定价是个人开发者最关心的维度之一。三家在2026年的策略略有不同：</p>
 
-                <h3>Cursor</h3>
+                <h3 id="cursor">Cursor</h3>
                 <ul>
                     <li><strong>免费版：</strong>2000次补全 + 50次高级请求/月，足够轻度使用</li>
                     <li><strong>Pro：</strong>$20/月，无限补全，500次快速请求，超出后降速</li>
@@ -563,7 +563,7 @@
                     <li>模型按"快速/慢速"区分，GPT-5、Claude 3.5 Sonnet等高级模型消耗快速请求额度</li>
                 </ul>
 
-                <h3>GitHub Copilot</h3>
+                <h3 id="github-copilot">GitHub Copilot</h3>
                 <ul>
                     <li><strong>Free：</strong>每月2000次补全 + 50次Chat，无需付费</li>
                     <li><strong>Pro：</strong>$10/月（或$100/年），无限补全与Chat，性价比极高</li>
@@ -572,7 +572,7 @@
                     <li><strong>Enterprise：</strong>$39/用户/月，知识库索引、PR深度总结</li>
                 </ul>
 
-                <h3>Claude Code</h3>
+                <h3 id="claude-code">Claude Code</h3>
                 <ul>
                     <li>包含在 Claude Pro ($20/月) 和 Max ($100或$200/月) 订阅中</li>
                     <li>也可通过 API 按量计费使用，按 token 计费</li>
@@ -586,17 +586,17 @@
             </section>
 
             <section class="section">
-                <h2 class="section-title">四、编程语言支持与代码补全质量</h2>
+                <h2 class="section-title" id="四编程语言支持与代码补全质量">四、编程语言支持与代码补全质量</h2>
                 <p>三款工具对编程语言的支持都很广泛，但补全质量在不同语言上有差异。</p>
 
-                <h3>语言覆盖</h3>
+                <h3 id="语言覆盖">语言覆盖</h3>
                 <ul>
                     <li><strong>Cursor：</strong>所有主流语言（Python、JS/TS、Go、Rust、Java、C/C++、C#、Ruby、PHP、Swift、Kotlin等），基于VS Code的LSP支持</li>
                     <li><strong>Copilot：</strong>覆盖最广，连COBOL、Haskell、Elixir等小众语言也支持良好</li>
                     <li><strong>Claude Code：</strong>语言无关（基于Claude模型本身的能力），对主流语言都很强</li>
                 </ul>
 
-                <h3>补全质量实测</h3>
+                <h3 id="补全质量实测">补全质量实测</h3>
                 <p>我们在一个真实的中型TypeScript项目（约5万行代码）上测试了三款工具：</p>
 
                 <table class="compare-table">
@@ -617,16 +617,16 @@
             </section>
 
             <section class="section">
-                <h2 class="section-title">五、Agent能力：自主完成复杂任务</h2>
+                <h2 class="section-title" id="五agent能力自主完成复杂任务">五、Agent能力：自主完成复杂任务</h2>
                 <p>2026年是AI编程的"Agent元年"。三款工具都推出了Agent能力，但实现方式差异巨大。</p>
 
-                <h3>Cursor Agent / Composer</h3>
+                <h3 id="cursor-agent--composer">Cursor Agent / Composer</h3>
                 <p>Cursor的Agent模式可以自主规划任务、读取多个文件、修改代码、运行终端命令、根据报错自我修正。后台Agent甚至可以并行处理多个独立任务，完成后通知用户审阅。它的优势是可视化diff、可中断、可回滚，对工程师的"控制感"非常友好。</p>
 
-                <h3>Copilot Agent</h3>
+                <h3 id="copilot-agent">Copilot Agent</h3>
                 <p>Copilot Agent深度整合GitHub生态——它可以直接在Issue里被@提及，自主分析问题、提交PR、回应评论。对于开源项目维护者这是杀手锏。VS Code里的Copilot Edits也支持多文件编辑，但自主性略弱于另外两者。</p>
 
-                <h3>Claude Code</h3>
+                <h3 id="claude-code-1">Claude Code</h3>
                 <p>Claude Code的Agent能力是最"放手"的。它会主动探索代码库结构、读取相关文件、运行测试、迭代修改，遇到关键决策（比如删除文件、修改配置）才会询问。配合MCP（Model Context Protocol）能扩展到数据库查询、Slack通知、Jira工单等外部工具。对资深工程师来说，这是真正能"派活"的AI。</p>
 
                 <div class="winner-card">
@@ -638,28 +638,28 @@
             </section>
 
             <section class="section">
-                <h2 class="section-title">六、实际体验：3个真实场景</h2>
+                <h2 class="section-title" id="六实际体验3个真实场景">六、实际体验：3个真实场景</h2>
 
-                <h3>场景1：从0搭建一个Next.js全栈应用</h3>
+                <h3 id="场景1从0搭建一个nextjs全栈应用">场景1：从0搭建一个Next.js全栈应用</h3>
                 <p><strong>Cursor：</strong>新建项目后用Composer描述需求，能在2-3分钟内生成项目骨架、数据库schema、API路由、前端页面，过程中可以实时干预。体验最流畅。</p>
                 <p><strong>Copilot：</strong>需要手动一步步引导，Copilot Workspace可以加速但仍在迭代中，整体效率中等。</p>
                 <p><strong>Claude Code：</strong>一条命令搞定，会自主规划目录结构、安装依赖、写代码、跑测试，最后给出一份总结。最"省心"但中途可控性略弱。</p>
 
-                <h3>场景2：修复一个陌生开源项目的Bug</h3>
+                <h3 id="场景2修复一个陌生开源项目的bug">场景2：修复一个陌生开源项目的Bug</h3>
                 <p><strong>Cursor：</strong>把项目clone下来后，用@codebase提问快速定位，然后让Agent修复。代码库索引让跨文件理解很高效。</p>
                 <p><strong>Copilot：</strong>在GitHub仓库页面或IDE里@提及Copilot，让它分析Issue并提PR。整个流程在GitHub生态内完成，无需本地clone。</p>
                 <p><strong>Claude Code：</strong>在项目根目录运行claude，描述Bug，它会自主探索代码、定位问题、修复、跑测试。最适合不熟悉的项目。</p>
 
-                <h3>场景3：日常写业务代码（CRUD、表单、API）</h3>
+                <h3 id="场景3日常写业务代码crud表单api">场景3：日常写业务代码（CRUD、表单、API）</h3>
                 <p><strong>Cursor：</strong>Tab补全体验最丝滑，Cmd-K内联编辑快速重构，是日常开发的首选。</p>
                 <p><strong>Copilot：</strong>稳定可靠，对各类业务代码模式都很熟悉，免费额度足够轻度用户。</p>
                 <p><strong>Claude Code：</strong>对于这类高频小任务略显笨重，更适合复杂任务而非日常补全。</p>
             </section>
 
             <section class="section">
-                <h2 class="section-title">七、谁该选谁：分人群推荐</h2>
+                <h2 class="section-title" id="七谁该选谁分人群推荐">七、谁该选谁：分人群推荐</h2>
 
-                <h3>推荐 Cursor 的人群</h3>
+                <h3 id="推荐-cursor-的人群">推荐 Cursor 的人群</h3>
                 <ul>
                     <li>全栈/前端开发者，重度使用IDE</li>
                     <li>追求最流畅的Tab补全和Cmd-K内联编辑体验</li>
@@ -667,7 +667,7 @@
                     <li>愿意迁移到新IDE（基于VS Code，迁移成本低）</li>
                 </ul>
 
-                <h3>推荐 GitHub Copilot 的人群</h3>
+                <h3 id="推荐-github-copilot-的人群">推荐 GitHub Copilot 的人群</h3>
                 <ul>
                     <li>开源贡献者、GitHub重度用户</li>
                     <li>JetBrains、Visual Studio等非VS Code IDE用户</li>
@@ -675,7 +675,7 @@
                     <li>企业团队，需要成熟的SSO、审计、合规能力</li>
                 </ul>
 
-                <h3>推荐 Claude Code 的人群</h3>
+                <h3 id="推荐-claude-code-的人群">推荐 Claude Code 的人群</h3>
                 <ul>
                     <li>资深工程师，擅长用命令行</li>
                     <li>需要处理大型、陌生代码库</li>
@@ -689,7 +689,7 @@
             </section>
 
             <section class="section">
-                <h2 class="section-title">八、未来展望：编程AI的下一站</h2>
+                <h2 class="section-title" id="八未来展望编程ai的下一站">八、未来展望：编程AI的下一站</h2>
                 <p>2026年下半年到2027年，AI编程工具的竞争将集中在三个方向：</p>
                 <ol>
                     <li><strong>真正的全自主工程能力：</strong>不只是写代码，而是能独立完成"需求分析-架构设计-编码-测试-部署-监控"全链路。Claude Code和Cursor Agent都在朝这个方向演进。</li>
@@ -701,7 +701,7 @@
         </article>
 
         <div class="related-articles">
-            <h2 class="related-title">📌 相关推荐</h2>
+            <h2 class="related-title" id="相关推荐">📌 相关推荐</h2>
             <div class="related-list">
                 <a href="/articles/ai-tools-ranking-2026.html" class="related-item">
                     <div class="related-icon">🏆</div>

@@ -327,11 +327,47 @@
     </div>
 
     <div class="article-content">
+<!-- Table of Contents - SEO锚点优化 -->
+<div class="toc-inline" style="background:var(--surface);border:1px solid rgba(168,85,247,.15);border-radius:14px;padding:24px 28px;margin:32px 0">
+<div style="font-weight:700;font-size:1.1rem;color:var(--accent);margin-bottom:14px;display:flex;align-items:center;gap:8px">
+<span>📋</span> 本文目录
+</div>
+<ul style="list-style:none;padding:0;margin:0;columns:2;column-gap:24px">
+<li><a href="#一ai-agent时代背景" style="padding-left:0px">一、AI Agent时代背景</a></li>
+<li><a href="#二主流agent框架对比" style="padding-left:0px">二、主流Agent框架对比</a></li>
+<li><a href="#21-框架全景" style="padding-left:16px">2.1 框架全景</a></li>
+<li><a href="#22-框架选择建议" style="padding-left:16px">2.2 框架选择建议</a></li>
+<li><a href="#三核心架构模式" style="padding-left:0px">三、核心架构模式</a></li>
+<li><a href="#31-基本架构组件" style="padding-left:16px">3.1 基本架构组件</a></li>
+<li><a href="#32-规划-执行-反思循环" style="padding-left:16px">3.2 规划-执行-反思循环</a></li>
+<li><a href="#四工具调用机制" style="padding-left:0px">四、工具调用机制</a></li>
+<li><a href="#41-工具注册与发现" style="padding-left:16px">4.1 工具注册与发现</a></li>
+<li><a href="#42-工具调用最佳实践" style="padding-left:16px">4.2 工具调用最佳实践</a></li>
+<li><a href="#五记忆系统设计" style="padding-left:0px">五、记忆系统设计</a></li>
+<li><a href="#51-记忆类型" style="padding-left:16px">5.1 记忆类型</a></li>
+<li><a href="#52-向量数据库选择" style="padding-left:16px">5.2 向量数据库选择</a></li>
+<li><a href="#六生产部署最佳实践" style="padding-left:0px">六、生产部署最佳实践</a></li>
+<li><a href="#61-可观测性" style="padding-left:16px">6.1 可观测性</a></li>
+<li><a href="#62-安全与防护" style="padding-left:16px">6.2 安全与防护</a></li>
+<li><a href="#63-性能优化" style="padding-left:16px">6.3 性能优化</a></li>
+<li><a href="#七2026年趋势展望" style="padding-left:0px">七、2026年趋势展望</a></li>
+<li><a href="#开始你的agent开发之旅" style="padding-left:16px">🚀 开始你的Agent开发之旅</a></li>
+<li><a href="#八总结" style="padding-left:0px">八、总结</a></li>
+<li><a href="#相关文章" style="padding-left:16px">📚 相关文章</a></li>
+</ul>
+</div>
+<style>
+.toc-inline li { margin-bottom:6px;break-inside:avoid }
+.toc-inline a { color:var(--text-muted);text-decoration:none;font-size:.92rem;display:block;padding:4px 0;border-left:2px solid transparent;padding-left:10px;transition:all .2s }
+.toc-inline a:hover { color:var(--accent);border-left-color:var(--accent);background:rgba(168,85,247,.05);border-radius:0 6px 6px 0 }
+@media(max-width:640px){ .toc-inline ul { columns:1 } }
+</style>
+
         <p class="highlight-box" style="background: linear-gradient(135deg, rgba(168, 85, 247, 0.12), rgba(59, 130, 246, 0.08)); border-radius: 12px; padding: 20px; margin: 24px 0; border-left: 3px solid var(--accent);">
             <strong>导读：</strong>2026年，AI Agent已从概念验证走向大规模生产部署。本文将系统梳理当前主流Agent框架、核心架构模式、工具调用机制、记忆系统设计以及生产环境最佳实践，帮助开发者快速入门并掌握AI Agent的精髓。
         </p>
 
-        <h2>一、AI Agent时代背景</h2>
+        <h2 id="一ai-agent时代背景">一、AI Agent时代背景</h2>
 
         <p>如果说2023-2025年是大语言模型（LLM）能力竞赛的时代，那么2026年则是<strong>AI Agent</strong>爆发的元年。从单纯的对话助手到能自主规划、执行、反思的智能体，AI正在经历从"工具"到"同事"的范式转变。</p>
 
@@ -344,9 +380,9 @@
             <li>🔍 <strong>研究助理</strong>：文献综述、专利分析、技术调研</li>
         </ul>
 
-        <h2>二、主流Agent框架对比</h2>
+        <h2 id="二主流agent框架对比">二、主流Agent框架对比</h2>
 
-        <h3>2.1 框架全景</h3>
+        <h3 id="21-框架全景">2.1 框架全景</h3>
 
         <p>目前主流的Agent开发框架主要分为以下几类：</p>
 
@@ -360,7 +396,7 @@
             <tr><td>Dify</td><td>低代码平台</td><td>可视化编排、快速原型</td><td>非开发者、快速上线</td></tr>
         </table>
 
-        <h3>2.2 框架选择建议</h3>
+        <h3 id="22-框架选择建议">2.2 框架选择建议</h3>
 
         <div class="highlight-box">
             <h4>💡 选择决策树</h4>
@@ -370,9 +406,9 @@
             <p><strong>如果你在企业环境</strong>：Semantic Kernel 或 Dify 的企业版提供更好的权限管理和审计功能。</p>
         </div>
 
-        <h2>三、核心架构模式</h2>
+        <h2 id="三核心架构模式">三、核心架构模式</h2>
 
-        <h3>3.1 基本架构组件</h3>
+        <h3 id="31-基本架构组件">3.1 基本架构组件</h3>
 
         <p>一个完整的AI Agent通常包含以下核心组件：</p>
 
@@ -388,7 +424,7 @@
 │         (外部世界交互层)                       │
 └─────────────────────────────────────────────┘</code></pre>
 
-        <h3>3.2 规划-执行-反思循环</h3>
+        <h3 id="32-规划-执行-反思循环">3.2 规划-执行-反思循环</h3>
 
         <p>Agent的核心工作模式是 <strong>Plan-Execute-Reflect</strong> 循环：</p>
 
@@ -442,9 +478,9 @@ workflow.add_conditional_edges("reflect", should_continue, {
     "end": END
 })</code></pre>
 
-        <h2>四、工具调用机制</h2>
+        <h2 id="四工具调用机制">四、工具调用机制</h2>
 
-        <h3>4.1 工具注册与发现</h3>
+        <h3 id="41-工具注册与发现">4.1 工具注册与发现</h3>
 
         <p>Agent 通过 Function Calling 机制与外部工具交互。每个工具需要定义清晰的 Schema：</p>
 
@@ -471,7 +507,7 @@ class CalendarTool(BaseModel):
 agent.register_tool(SearchTool, handler=search_handler)
 agent.register_tool(CalendarTool, handler=calendar_handler)</code></pre>
 
-        <h3>4.2 工具调用最佳实践</h3>
+        <h3 id="42-工具调用最佳实践">4.2 工具调用最佳实践</h3>
 
         <div class="highlight-box">
             <h4>🎯 工具设计原则</h4>
@@ -482,9 +518,9 @@ agent.register_tool(CalendarTool, handler=calendar_handler)</code></pre>
             <p><strong>速率限制</strong>：防止Agent陷入无限调用循环</p>
         </div>
 
-        <h2>五、记忆系统设计</h2>
+        <h2 id="五记忆系统设计">五、记忆系统设计</h2>
 
-        <h3>5.1 记忆类型</h3>
+        <h3 id="51-记忆类型">5.1 记忆类型</h3>
 
         <p>AI Agent 的记忆系统通常分为三层：</p>
 
@@ -494,7 +530,7 @@ agent.register_tool(CalendarTool, handler=calendar_handler)</code></pre>
             <li><strong>长期记忆 (Long-term Memory)</strong>：用户偏好、知识库等持久化信息</li>
         </ul>
 
-        <h3>5.2 向量数据库选择</h3>
+        <h3 id="52-向量数据库选择">5.2 向量数据库选择</h3>
 
         <table>
             <tr><th>数据库</th><th>特点</th><th>适用规模</th></tr>
@@ -505,9 +541,9 @@ agent.register_tool(CalendarTool, handler=calendar_handler)</code></pre>
             <tr><td>pgvector</td><td>PostgreSQL 扩展</td><td>已使用PG的团队</td></tr>
         </table>
 
-        <h2>六、生产部署最佳实践</h2>
+        <h2 id="六生产部署最佳实践">六、生产部署最佳实践</h2>
 
-        <h3>6.1 可观测性</h3>
+        <h3 id="61-可观测性">6.1 可观测性</h3>
 
         <p>生产环境的Agent必须具备完善的可观测性：</p>
 
@@ -518,7 +554,7 @@ agent.register_tool(CalendarTool, handler=calendar_handler)</code></pre>
             <li>💾 <strong>成本追踪</strong>：按用户/任务统计API调用成本</li>
         </ul>
 
-        <h3>6.2 安全与防护</h3>
+        <h3 id="62-安全与防护">6.2 安全与防护</h3>
 
         <blockquote>
             "Agent的安全问题本质上是<strong>工具调用的权限控制</strong>问题。"
@@ -534,7 +570,7 @@ agent.register_tool(CalendarTool, handler=calendar_handler)</code></pre>
             <li><strong>审计日志</strong>：所有操作可追溯</li>
         </ol>
 
-        <h3>6.3 性能优化</h3>
+        <h3 id="63-性能优化">6.3 性能优化</h3>
 
         <p>生产环境的Agent性能优化要点：</p>
 
@@ -546,7 +582,7 @@ agent.register_tool(CalendarTool, handler=calendar_handler)</code></pre>
             <li>🗄️ <strong>会话持久化</strong>：长会话使用摘要压缩历史</li>
         </ul>
 
-        <h2>七、2026年趋势展望</h2>
+        <h2 id="七2026年趋势展望">七、2026年趋势展望</h2>
 
         <p>展望未来几个季度，AI Agent领域值得关注的方向：</p>
 
@@ -559,12 +595,12 @@ agent.register_tool(CalendarTool, handler=calendar_handler)</code></pre>
         </ul>
 
         <div class="cta-section">
-            <h3>🚀 开始你的Agent开发之旅</h3>
+            <h3 id="开始你的agent开发之旅">🚀 开始你的Agent开发之旅</h3>
             <p>选择合适的框架，从简单的单Agent开始，逐步演进到复杂的多Agent协作系统</p>
             <a href="https://tool.link.cn" class="cta-btn" target="_blank">查看AI工具推荐 →</a>
         </div>
 
-        <h2>八、总结</h2>
+        <h2 id="八总结">八、总结</h2>
 
         <p>AI Agent 的开发是一个系统工程，涉及架构设计、工具集成、记忆管理、安全防护等多个维度。关键要点：</p>
 
@@ -581,7 +617,7 @@ agent.register_tool(CalendarTool, handler=calendar_handler)</code></pre>
 
     <div class="article-footer">
         <div class="related-articles">
-            <h3>📚 相关文章</h3>
+            <h3 id="相关文章">📚 相关文章</h3>
             <div class="related-list">
                 <a href="https://ai.link.cn/articles/ai-agent-development-guide.html" class="related-card">
                     <h4>AI Agent开发入门指南</h4>

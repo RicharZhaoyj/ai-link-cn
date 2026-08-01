@@ -508,7 +508,7 @@
         </div>
 
         <div class="article-banner">
-            <h3>📋 本文要点</h3>
+            <h3 id="本文要点">📋 本文要点</h3>
             <ul>
                 <li>AI Agent vs 普通大模型调用的本质区别</li>
                 <li>4大主流开发框架对比：LangChain、CrewAI、AutoGPT、OpenAI Agents SDK</li>
@@ -520,7 +520,7 @@
 
         <article class="article-content">
             <section class="section">
-                <h2 class="section-title">一、什么是AI Agent？</h2>
+                <h2 class="section-title" id="一什么是ai-agent">一、什么是AI Agent？</h2>
                 <p>AI Agent（智能体）是大模型从"对话工具"走向"自主执行者"的关键形态。普通的大模型调用是<strong>一问一答</strong>——你给一个输入，模型返回一个输出，整个交互是单轮的、被动的。</p>
                 <p>而AI Agent具备三个核心能力：</p>
                 <ul>
@@ -537,7 +537,7 @@
             </section>
 
             <section class="section">
-                <h2 class="section-title">二、Agent vs Workflow：两个关键概念</h2>
+                <h2 class="section-title" id="二agent-vs-workflow两个关键概念">二、Agent vs Workflow：两个关键概念</h2>
                 <p>在开始动手前，必须分清两个容易混淆的概念：</p>
                 <ul>
                     <li><strong>Workflow（工作流）：</strong>预定义了步骤和分支的LLM调用流水线，每一步做什么、什么时候切换都是写死的。比如"先搜索→再总结→再翻译"。</li>
@@ -548,7 +548,7 @@
             </section>
 
             <section class="section">
-                <h2 class="section-title">三、主流开发框架对比</h2>
+                <h2 class="section-title" id="三主流开发框架对比">三、主流开发框架对比</h2>
                 <p>2026年AI Agent开发框架已经从"百花齐放"收敛为"四强并立"。每个框架都有自己的强项场景：</p>
 
                 <div class="framework-card">
@@ -608,33 +608,33 @@
             </section>
 
             <section class="section">
-                <h2 class="section-title">四、Agent开发5步法</h2>
+                <h2 class="section-title" id="四agent开发5步法">四、Agent开发5步法</h2>
                 <p>无论用哪个框架，构建一个Agent都遵循以下5个核心步骤：</p>
 
-                <h3>第1步：明确Agent的目标与边界</h3>
+                <h3 id="第1步明确agent的目标与边界">第1步：明确Agent的目标与边界</h3>
                 <p>先问自己三个问题：①Agent要解决什么具体问题？②它的输入是什么、输出是什么？③哪些事它能做、哪些事它不能做？</p>
                 <p>错误示范："做一个帮我处理工作的Agent"——太宽泛，无法落地。正确示范："做一个市场调研Agent，输入是一个公司名，输出是一份包含公司业务、竞品、近期动态的Markdown报告"。</p>
 
-                <h3>第2步：设计工具集（Tools）</h3>
+                <h3 id="第2步设计工具集tools">第2步：设计工具集（Tools）</h3>
                 <p>Agent的能力边界由工具决定。常见工具包括：网络搜索（Tavily、SerpAPI）、网页抓取（Firecrawl、Jina Reader）、数据库查询、文件读写、代码执行、API调用、计算器等。</p>
                 <p>设计工具的关键原则：①每个工具职责单一、命名清晰；②工具描述（description）要写得让LLM能准确判断何时使用；③输入输出用Pydantic或JSON Schema严格定义。</p>
 
-                <h3>第3步：编写System Prompt</h3>
+                <h3 id="第3步编写system-prompt">第3步：编写System Prompt</h3>
                 <p>System Prompt是Agent的"角色说明书"。好的System Prompt包含：①角色定位；②任务目标；③可用工具及其使用时机；④输出格式约束；⑤边界与禁止行为；⑥示例（few-shot）。</p>
 
-                <h3>第4步：实现Agent循环</h3>
+                <h3 id="第4步实现agent循环">第4步：实现Agent循环</h3>
                 <p>Agent的核心是"思考-行动-观察"循环（ReAct范式）：LLM思考下一步该做什么→调用工具→观察返回结果→继续思考……直到LLM判断任务完成。</p>
                 <p>实现时要注意：①设置最大迭代次数防止死循环；②对工具调用做超时处理；③错误信息回传给LLM让其自我修正；④关键步骤加入"人在回路"确认。</p>
 
-                <h3>第5步：评估与迭代</h3>
+                <h3 id="第5步评估与迭代">第5步：评估与迭代</h3>
                 <p>Agent开发最大的挑战是评估——同样的输入可能产生不同的执行路径。建议：①准备10-20个测试用例覆盖典型场景；②记录每次执行的完整trace用于调试；③关注"成功率""平均步数""平均token消耗""平均耗时"四个核心指标；④用LLM-as-Judge自动评分。</p>
             </section>
 
             <section class="section">
-                <h2 class="section-title">五、实战案例：用LangChain构建市场调研Agent</h2>
+                <h2 class="section-title" id="五实战案例用langchain构建市场调研agent">五、实战案例：用LangChain构建市场调研Agent</h2>
                 <p>下面我们用LangChain + LangGraph构建一个简化版的市场调研Agent。它接受一个公司名作为输入，自主搜索公司信息、抓取相关网页、生成结构化报告。</p>
 
-                <h3>完整代码</h3>
+                <h3 id="完整代码">完整代码</h3>
                 <pre><code>from typing import Annotated, TypedDict
 from langchain_openai import ChatOpenAI
 from langchain_community.tools.tavily_search import TavilySearchResults
@@ -688,7 +688,7 @@ app = graph.compile()
 result = app.invoke({"messages": [HumanMessage(content="调研一下 Anthropic 这家公司")]})
 print(result["messages"][-1].content)</code></pre>
 
-                <h3>代码解读</h3>
+                <h3 id="代码解读">代码解读</h3>
                 <ol class="step-list">
                     <li><strong>定义工具：</strong>用Tavily搜索API作为Agent的"眼睛"，让它能查最新信息。</li>
                     <li><strong>绑定工具：</strong>通过bind_tools让模型知道有哪些工具可调用、何时调用。</li>
@@ -704,21 +704,21 @@ print(result["messages"][-1].content)</code></pre>
             </section>
 
             <section class="section">
-                <h2 class="section-title">六、常见坑点与最佳实践</h2>
+                <h2 class="section-title" id="六常见坑点与最佳实践">六、常见坑点与最佳实践</h2>
 
-                <h3>坑点1：Agent陷入死循环</h3>
+                <h3 id="坑点1agent陷入死循环">坑点1：Agent陷入死循环</h3>
                 <p>表现：Agent反复调用同一个工具、产生同样的错误、永远不收敛。解决：①设置max_iterations（建议10-20）；②在System Prompt里明确"如果尝试3次仍失败，请直接给出当前已知信息并说明限制"；③用LangGraph的checkpointer保存中间状态便于调试。</p>
 
-                <h3>坑点2：工具描述不清导致误用</h3>
+                <h3 id="坑点2工具描述不清导致误用">坑点2：工具描述不清导致误用</h3>
                 <p>表现：Agent在不该调用工具时调用、或调用了错误的工具。解决：工具的name和description要写得像写给新同事看的SOP——明确"这个工具做什么""什么时候该用""什么时候不该用"。比如"search_news"应描述为"搜索最近7天的新闻，用于获取公司近期动态。当需要历史信息（早于7天）时不要使用此工具"。</p>
 
-                <h3>坑点3：Token爆炸</h3>
+                <h3 id="坑点3token爆炸">坑点3：Token爆炸</h3>
                 <p>表现：长任务跑着跑着上下文超出模型限制。解决：①用summarization定期压缩历史消息；②只把最近N轮对话保留为完整message，更早的压缩为摘要；③工具返回结果要精简，避免返回大段原始HTML。</p>
 
-                <h3>坑点4：评估困难</h3>
+                <h3 id="坑点4评估困难">坑点4：评估困难</h3>
                 <p>表现：改了一个Prompt，不知道是变好还是变坏了。解决：①建立固定的测试集；②用LLM-as-Judge按维度打分（准确性、完整性、格式、可读性）；③记录每次变更的trace，对比同一输入的执行差异。</p>
 
-                <h3>坑点5：忽视安全与成本</h3>
+                <h3 id="坑点5忽视安全与成本">坑点5：忽视安全与成本</h3>
                 <p>表现：Agent自主执行了危险操作（删文件、发邮件）或烧光API预算。解决：①危险工具必须加human-in-the-loop确认；②设置每日token预算上限；③对工具调用做权限分级。</p>
 
                 <div class="highlight-box">
@@ -727,7 +727,7 @@ print(result["messages"][-1].content)</code></pre>
             </section>
 
             <section class="section">
-                <h2 class="section-title">七、进阶方向：从单Agent到多Agent系统</h2>
+                <h2 class="section-title" id="七进阶方向从单agent到多agent系统">七、进阶方向：从单Agent到多Agent系统</h2>
                 <p>当你能熟练构建单Agent后，下一个台阶是多Agent系统（Multi-Agent System）。核心思想是<strong>让多个专精Agent协作完成复杂任务</strong>，类似人类团队的分工。</p>
                 <p>常见的多Agent模式：</p>
                 <ul>
@@ -739,7 +739,7 @@ print(result["messages"][-1].content)</code></pre>
             </section>
 
             <section class="section">
-                <h2 class="section-title">八、总结与学习路径</h2>
+                <h2 class="section-title" id="八总结与学习路径">八、总结与学习路径</h2>
                 <p>AI Agent是2026年大模型应用层最值得投入的方向。掌握Agent开发，你能构建出真正"能干活"的AI应用，而不仅仅是"会聊天"的对话框。</p>
                 <p>推荐的学习路径：</p>
                 <ol class="step-list">
@@ -757,7 +757,7 @@ print(result["messages"][-1].content)</code></pre>
         </article>
 
         <div class="related-articles">
-            <h2 class="related-title">📌 相关推荐</h2>
+            <h2 class="related-title" id="相关推荐">📌 相关推荐</h2>
             <div class="related-list">
                 <a href="/articles/ai-tools-ranking-2026.html" class="related-item">
                     <div class="related-icon">🏆</div>
