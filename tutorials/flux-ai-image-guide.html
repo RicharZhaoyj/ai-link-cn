@@ -25,4 +25,204 @@
 }
 
 body{font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC",sans-serif;background:var(--bg);color:var(--text);line-height:1.8;margin:0;padding:0}
-.container{max-width:1200px;margin:0 auto;padding
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+header{padding:16px 0;border-bottom:1px solid rgba(168,85,247,.2);background:rgba(10,15,26,.98);backdrop-filter:blur(12px);position:sticky;top:0;z-index:100}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.logo{font-size:1.4rem;font-weight:700;color:var(--accent);text-decoration:none}
+.nav-links{display:flex;gap:20px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+.nav-links a{color:var(--text-muted);text-decoration:none;font-weight:500;font-size:.95rem;transition:color .2s}
+.nav-links a:hover{color:var(--accent)}
+
+.progress-bar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent-light));z-index:1000;width:0;transition:width .1s}
+
+.hero{padding:48px 0 32px;text-align:center;background:linear-gradient(180deg,rgba(168,85,247,.08),transparent)}
+.hero h1{font-size:2.2rem;line-height:1.3;margin-bottom:12px}
+.hero h1 span{color:var(--accent)}
+.hero p{font-size:1.05rem;color:var(--text-muted);max-width:600px;margin:0 auto 24px}
+.hero-meta{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;font-size:.9rem;color:var(--text-muted)}
+.hero-meta span{display:flex;align-items:center;gap:6px}
+
+.tutorial-layout{display:grid;grid-template-columns:1fr 280px;gap:32px;padding:32px 0}
+.tutorial-content{background:var(--surface);border-radius:16px;padding:40px;border:1px solid rgba(168,85,247,.1)}
+.tutorial-content h2{font-size:1.6rem;color:var(--text);margin:40px 0 16px;padding-bottom:8px;border-bottom:1px solid rgba(168,85,247,.2)}
+.tutorial-content h2:first-child{margin-top:0}
+.tutorial-content h3{font-size:1.25rem;color:var(--text);margin:28px 0 12px}
+.tutorial-content p{color:var(--text-muted);margin-bottom:16px}
+.tutorial-content ul,.tutorial-content ol{color:var(--text-muted);margin-bottom:16px;padding-left:24px}
+.tutorial-content li{margin-bottom:8px}
+.tutorial-content code{background:var(--surface-2);padding:3px 8px;border-radius:4px;font-size:.9em;color:var(--accent-light)}
+.tutorial-content pre{background:var(--surface-2);padding:20px;border-radius:8px;overflow-x:auto;border:1px solid rgba(168,85,247,.1)}
+.tutorial-content pre code{background:none;padding:0}
+
+.tip-box{background:rgba(34,197,94,.1);border-left:3px solid var(--success);padding:16px;margin:20px 0;border-radius:8px}
+.tip-box strong{color:var(--success)}
+.warning-box{background:rgba(245,158,11,.1);border-left:3px solid var(--warning);padding:16px;margin:20px 0;border-radius:8px}
+.warning-box strong{color:var(--warning)}
+.tool-card{background:var(--surface-2);border-radius:12px;padding:24px;margin:20px 0;border:1px solid rgba(168,85,247,.15)}
+.tool-card h4{font-size:1.1rem;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.tool-card p{font-size:.95rem;margin-bottom:12px}
+
+.comparison-table{width:100%;border-collapse:collapse;margin:24px 0}
+.comparison-table th,.comparison-table td{padding:12px;text-align:left;border-bottom:1px solid rgba(168,85,247,.15)}
+.comparison-table th{background:var(--surface-2);font-weight:600}
+.comparison-table tr:hover td{background:rgba(168,85,247,.05)}
+
+.sidebar{position:sticky;top:80px}
+.toc{background:var(--surface);border-radius:12px;padding:24px;border:1px solid rgba(168,85,247,.1)}
+.toc h4{font-size:1rem;margin-bottom:16px}
+.toc ul{list-style:none;padding:0;margin:0}
+.toc li{margin-bottom:8px}
+.toc a{color:var(--text-muted);text-decoration:none;font-size:.9rem;display:block;padding:6px 12px;border-radius:6px;transition:all .2s}
+.toc a:hover{background:rgba(168,85,247,.1);color:var(--accent)}
+.toc a.active{background:rgba(168,85,247,.15);color:var(--accent)}
+
+footer{padding:40px 0;text-align:center;border-top:1px solid rgba(168,85,247,.1);margin-top:60px}
+footer p{color:var(--text-muted);font-size:.9rem}
+
+@media(max-width:900px){
+    .tutorial-layout{grid-template-columns:1fr}
+    .sidebar{display:none}
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","name":"Flux AI图像生成完整指南 2026","description":"2026年Flux AI图像生成完整指南，深度解析Flux.1 Pro、Flux.1 Dev、Flux.1 Schnell三大模型，包含Prompt技巧、参数详解、ControlNet/LoRA高级应用、商业案例和工具对比","author":{"@type":"Organization","name":"AI.link.cn"},"publisher":{"@type":"Organization","name":"AI.link.cn","url":"https://ai.link.cn"},"datePublished":"2026-08-02","dateModified":"2026-08-02","totalTime":"PT40M","mainEntityOfPage":"https://ai.link.cn/tutorials/flux-ai-image-guide.html","supply":[{"@type":"HowToSupply","name":"Flux.1模型访问账号（Replicate/HuggingFace/ComfyUI等）"}],"step":[{"@type":"HowToStep","position":1,"name":"了解Flux AI系列模型","text":"认识Flux.1 Pro、Dev、Schnell三大模型的定位差异，理解其与Stable Diffusion的核心区别"},{"@type":"HowToStep","position":2,"name":"选择平台快速上手","text":"通过Replicate API、HuggingFace Spaces、ComfyUI或Fal.ai等平台快速体验Flux图像生成"},{"@type":"HowToStep","position":3,"name":"掌握Flux Prompt工程","text":"学习Flux专属提示词写法、权重语法、负向提示和结构化模板"},{"@type":"HowToStep","position":4,"name":"调优核心参数","text":"理解并调整步数、guidance_scale、seed等关键参数以获得最佳效果"},{"@type":"HowToStep","position":5,"name":"进阶高级技巧","text":"应用ControlNet、IP-Adapter、LoRA微调和图像到图像等高级功能"},{"@type":"HowToStep","position":6,"name":"实践商业应用","text":"在电商产品图、营销素材、UI设计等场景中落地Flux生成能力"},{"@type":"HowToStep","position":7,"name":"工具横向对比","text":"对比Flux与Midjourney、DALL-E 3、SDXL的优劣势，选择最适合的工具"},{"@type":"HowToStep","position":8,"name":"常见问题与资源","text":"解决生成质量、速度、部署等常见问题，获取社区资源和进一步学习材料"}]}
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RXRRTBXTJH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-RXRRTBXTJH');
+    </script>
+
+    <!-- Open Graph / Twitter Card -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="AI资讯新闻" />
+    <meta property="og:title" content="Flux AI图像生成完整指南 2026 | Flux.1/Flux Pro深度教程 | AI.link.cn" />
+    <meta property="og:description" content="2026年Flux AI图像生成完整指南，深度解析Flux.1 Pro、Flux.1 Dev、Flux.1 Schnell三大模型，包含Prompt技巧、参数详解、ControlNet/LoRA高级应用、商业案例和工具对比。" />
+    <meta property="og:url" content="https://ai.link.cn/tutorials/flux-ai-image-guide.html" />
+    <meta property="og:image" content="https://ai.link.cn/og-image.jpg" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Flux AI图像生成完整指南 2026 | Flux.1/Flux Pro深度教程 | AI.link.cn" />
+    <meta name="twitter:description" content="2026年Flux AI图像生成完整指南，深度解析Flux.1 Pro、Flux.1 Dev、Flux.1 Schnell三大模型，包含Prompt技巧、参数详解、ControlNet/LoRA高级应用、商业案例和工具对比。" />
+    <meta name="twitter:image" content="https://ai.link.cn/og-image.jpg" />
+
+</head>
+<body>
+<div class="progress-bar" id="progressBar"></div>
+
+<header>
+    <div class="container">
+        <nav class="nav">
+            <a href="../index.html" class="logo">AI.link.cn</a>
+            <ul class="nav-links">
+                <li><a href="https://ai.link.cn">ai.link.cn</a></li>
+                <li><a href="https://tools.link.cn">tools.link.cn</a></li>
+                <li><a href="https://prompts.link.cn">prompts.link.cn</a></li>
+                <li><a href="https://signal.link.cn">signal.link.cn</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="container">
+            <h1><span>Flux AI图像生成</span>完整指南 2026</h1>
+            <p>从Flux.1 Pro到Schnell，深度掌握开源最强图像生成模型的Prompt技巧、参数调优和商业应用</p>
+            <div class="hero-meta">
+                <span>📅 2026-08-02</span>
+                <span>⏱️ 阅读约30分钟</span>
+                <span>🖼️ 图像生成/Flux.1</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="tutorial-layout">
+            <article class="tutorial-content">
+                <h2 id="overview">Flux AI概述</h2>
+                <p>Flux是由Black Forest Labs（由Stable Diffusion原班核心成员Robin Rombach等人创立）推出的新一代图像生成模型系列。2024年8月首次发布后，Flux迅速成为开源图像生成领域的新标杆，在图像质量、文字渲染和人体结构等关键指标上全面超越此前的Stable Diffusion系列。</p>
+                <p>Flux系列基于全新的<strong>混合Transformer架构（Rectified Flow Transformers）</strong>，不同于Stable Diffusion的U-Net架构。这一架构创新使得Flux在相同参数量下能实现更高效的训练和推理，同时显著提升了图像的细节表现力和语义理解能力。简单来说，Flux用更少的步数就能生成比SDXL更精细的图像。</p>
+
+                <h3 id="flux-models">Flux.1三大模型</h3>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>特性</th>
+                            <th>Flux.1 Pro</th>
+                            <th>Flux.1 Dev</th>
+                            <th>Flux.1 Schnell</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>定位</td>
+                            <td>商业旗舰</td>
+                            <td>开源开发</td>
+                            <td>极速推理</td>
+                        </tr>
+                        <tr>
+                            <td>图像质量</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                            <td>⭐⭐⭐⭐</td>
+                            <td>⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td>推理步数</td>
+                            <td>20-50步</td>
+                            <td>20-50步</td>
+                            <td>1-4步</td>
+                        </tr>
+                        <tr>
+                            <td>文字渲染</td>
+                            <td>✅ 优秀</td>
+                            <td>✅ 良好</td>
+                            <td>⚠️ 一般</td>
+                        </tr>
+                        <tr>
+                            <td>开源许可</td>
+                            <td>❌ 商业闭源</td>
+                            <td>✅ 非商业开源</td>
+                            <td>✅ Apache 2.0</td>
+                        </tr>
+                        <tr>
+                            <td>访问方式</td>
+                            <td>API/Replicate</td>
+                            <td>ComfyUI/HF</td>
+                            <td>ComfyUI/HF</td>
+                        </tr>
+                        <tr>
+                            <td>适合场景</td>
+                            <td>商业生产</td>
+                            <td>研究/创作</td>
+                            <td>快速预览</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 id="flux-vs-sd">Flux与Stable Diffusion的核心区别</h3>
+                <p>Flux与Stable Diffusion虽然出自同一团队，但在架构和能力上有本质区别：</p>
+                <ul>
+                    <li><strong>架构变革</strong>：SD使用U-Net+CLIP架构，Flux采用DiT（Diffusion Transformer）+T5-XXL文本编码器。T5-XXL的引入让Flux对长文本Prompt的理解能力大幅提升，不再受限于CLIP的77 token限制。</li>
+                    <li><strong>参数规模</strong>：Flux.1系列为12B参数模型，远超SDXL的6.6B。更多参数意味着更精细的图像细节和更强的概念组合能力。</li>
+                    <li><strong>文字生成</strong>：这是Flux最大的杀手级特性。Stable Diffusion在图像中生成文字几乎是灾难，而Flux.1 Pro能准确渲染较长的英文文本，使其直接可用于海报、Logo等设计场景。</li>
+                    <li><strong>人体结构</strong>：Flux在手部、肢体比例等传统AI痛点上表现显著优于SDXL，减少了"多指""畸形肢体"等常见缺陷。</li>
+                    <li><strong>推理效率</strong>：Schnell版本仅需1-4步即可生成高质量图像，相比SDXL的20-50步，速度提升10倍以上。</li>
+                </ul>
+
+                <div class="tip-box">
+                    <strong>💡 选择建议：</strong>
+                    <ul>
+                        <li><strong>追求极致质量</strong>：使用Flux.1 Pro，通过Replicate或官方API调用</li>
+                        <li><strong>本地部署/研究</strong>：使用Flux.1 Dev，需要24GB+显存的GPU</li>
+                        <li><strong>快速出图/批量生成</strong>：使用Flux.1 Schnell，1-4步极速推理</li>
+                    </ul>
+                </div>
+
+                <h2 id="quickstart">快速开始</h2>
+                <p>Flux不像Midjourney那样有官方Web界面，而是以模型/API的形式提供。你需要选择一个平台来访问Flux。以下是主流接入方式：</p>
+
+                <h3 id
