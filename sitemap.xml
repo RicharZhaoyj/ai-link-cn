@@ -6,7 +6,7 @@
 
     <!-- AI资讯新闻 网站地图 -->
     <!-- 更新时间: 2026-08-03 -->
-    <!-- 共 87 个URL -->
+    <!-- 共 99 个URL -->
 
     <url>
         <loc>https://ai.link.cn/</loc>
@@ -541,5 +541,77 @@
         <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://ai.link.cn/articles/ai-agent-tools-guide.html</loc>
+        <lastmod>2026-08-03</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://ai.link.cn/articles/ai-content-marketing-guide.html</loc>
+        <lastmod>2026-08-03</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://ai.link.cn/articles/ai-image-generation-guide.html</loc>
+        <lastmod>2026-08-03</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://ai.link.cn/articles/ai-automation-tools-guide.html</loc>
+        <lastmod>2026-08-03</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://ai.link.cn/articles/ai-prompt-engineering-guide.html</loc>
+        <lastmod>2026-08-03</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://ai.link.cn/deals/</loc>
+        <lastmod>2026-08-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://ai.link.cn/discover/</loc>
+        <lastmod>2026-08-03</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://ai.link.cn/pages/guides/ai-image-generation-guide.html</loc>
+        <lastmod>2026-08-03</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://ai.link.cn/pages/guides/ai-writing-tools-comparison.html</loc>
+        <lastmod>2026-08-03</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://ai.link.cn/pages/guides/ai-coding-assistants-guide.html</loc>
+        <lastmod>2026-08-03</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://ai.link.cn/pages/best-ai-image-generators.html</loc>
+        <lastmod>2026-08-03</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://ai.link.cn/pages/best-ai-coding-tools.html</loc>
+        <lastmod>2026-08-03</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
     </url>
 </urlset>
