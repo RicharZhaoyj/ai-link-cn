@@ -410,4 +410,220 @@ print(output)</code></pre>
                 <h2 id="advanced">高级技巧</h2>
                 <p>掌握基础生成后，以下高级技巧可以将Flux的能力发挥到极致：</p>
 
-                <h3 id="controlnet">ControlNet
+                <h3 id="controlnet">ControlNet条件控制</h3>
+                <p>ControlNet允许你通过线稿、深度图、姿态图等条件精确控制生成结果，是Flux走向专业生产的关键工具。</p>
+                <ul>
+                    <li><strong>Canny边缘控制</strong>：上传线稿或边缘图，Flux将按线稿结构生成图像。适合将草图转为成品、保持特定轮廓。</li>
+                    <li><strong>Depth深度控制</strong>：通过深度图控制空间结构，适合保持3D场景的空间关系、建筑室内设计。</li>
+                    <li><strong>Pose姿态控制</strong>：使用OpenPose骨架图精确控制人物姿态，解决AI生成人体姿势不可控的问题。</li>
+                    <li><strong>IP-Adapter</strong>：上传参考图片，将参考图的风格/人物迁移到新图像中。非常适合风格一致性要求高的项目。</li>
+                </ul>
+
+                <div class="warning-box">
+                    <strong>⚠️ ControlNet兼容性：</strong>
+                    <p>Flux.1的ControlNet适配器仍在快速迭代中。截至2026年初，Canny和Depth已稳定可用，Pose支持逐步完善。使用ControlNet会增加约30-50%的推理时间和显存占用，建议至少16GB显存。</p>
+                </div>
+
+                <h3 id="ip-adapter">IP-Adapter风格迁移</h3>
+                <p>IP-Adapter是Flux生态中极具价值的功能，它允许你用一张参考图来引导生成，实现风格、角色或氛围的迁移：</p>
+                <ol>
+                    <li><strong>风格迁移</strong>：上传一幅水彩画作为参考，Flux生成的新图将继承水彩风格</li>
+                    <li><strong>角色一致</strong>：上传角色设计图，在不同场景中保持角色外观一致</li>
+                    <li><strong>产品变体</strong>：上传产品图，快速生成不同背景/角度的变体</li>
+                </ol>
+                <p>在ComfyUI中，IP-Adapter通过专用节点接入，需要额外下载约300MB的适配器权重文件。调节IP-Adapter的强度参数（0.0-1.0）可以控制参考图的影响力——0.5左右是风格迁移的最佳范围。</p>
+
+                <h3 id="lora">LoRA微调</h3>
+                <p>LoRA（Low-Rank Adaptation）是最经济高效的方式，让Flux生成特定风格、角色或对象：</p>
+                <ul>
+                    <li><strong>训练数据</strong>：20-30张高质量图片即可训练一个LoRA，远少于全量微调</li>
+                    <li><strong>训练平台</strong>：Fal.ai和Replicate都提供一键LoRA训练服务，无需写代码</li>
+                    <li><strong>训练时间</strong>：约15-30分钟（云端A100），费用约$2-5</li>
+                    <li><strong>LoRA强度</strong>：0.6-0.8为推荐范围，超过1.0可能导致过拟合</li>
+                </ul>
+
+                <div class="tool-card">
+                    <h4>🎯 LoRA应用场景</h4>
+                    <ul>
+                        <li><strong>品牌风格</strong>：用品牌视觉素材训练，确保AI生成内容符合品牌调性</li>
+                        <li><strong>角色设计</strong>：游戏/动画角色一致性维护，避免每次生成外观不同</li>
+                        <li><strong>产品模型</strong>：训练特定产品的LoRA，快速生成不同场景的产品图</li>
+                        <li><strong>艺术风格</strong>：训练特定艺术家风格（需注意版权），实现风格化批量创作</li>
+                    </ul>
+                </div>
+
+                <h3 id="img2img">图像到图像（Img2Img）</h3>
+                <p>图像到图像是Flux最实用的功能之一，允许在已有图像基础上进行修改和增强：</p>
+                <ul>
+                    <li><strong>低denoise重绘（0.2-0.4）</strong>：保留原图大部分内容，仅微调细节。适合修复瑕疵、微调风格、增强细节。</li>
+                    <li><strong>中denoise重绘（0.5-0.7）</strong>：保留构图和主要元素，重新渲染风格和细节。适合风格转换、材质替换。</li>
+                    <li><strong>Inpainting</strong>：选择图像局部区域进行重绘，其余区域保持不变。适合移除/替换物体、修复局部。</li>
+                    <li><strong>Outpainting</strong>：扩展图像边界，生成更大的画面。适合将竖图扩展为横图、补充被裁切的内容。</li>
+                </ul>
+
+                <div class="tip-box">
+                    <strong>💡 Img2Img最佳实践：</strong>
+                    <p>Flux在Img2Img模式下的稳定性优于Stable Diffusion。建议先用低denoise（0.3）试探效果，逐步提高而非一步到位。对于Inpainting，mask区域边界要留出足够的过渡区，避免生成内容与原图产生硬边。</p>
+                </div>
+
+                <h2 id="commercial">商业应用案例</h2>
+                <p>Flux在商业场景中的表现已经达到了生产可用级别，以下是一些典型的应用案例：</p>
+
+                <h3>案例1：电商产品图批量生成</h3>
+                <p><strong>需求</strong>：某跨境电商需为200个SKU生成白底产品图和场景图</p>
+                <p><strong>解决方案</strong>：</p>
+                <ol>
+                    <li>拍摄每个产品1张基础照片</li>
+                    <li>用Flux Img2Img + Inpainting移除原有背景</li>
+                    <li>用Flux生成不同场景背景（家居、户外、办公室等）</li>
+                    <li>如需品牌一致性，训练品牌风格LoRA统一视觉调性</li>
+                </ol>
+                <p><strong>成本</strong>：约$20 API费用 + 2小时人工 vs 传统拍摄$10000+ / 数天周期</p>
+
+                <h3>案例2：营销素材快速制作</h3>
+                <p><strong>需求</strong>：社交媒体运营需要每天产出3-5张不同风格的推广图</p>
+                <p><strong>解决方案</strong>：</p>
+                <ol>
+                    <li>编写5-10个品牌相关的基础Prompt模板</li>
+                    <li>每天更换产品/活动信息、调整风格词和色彩关键词</li>
+                    <li>利用Flux.1 Schnell快速批量生成候选图（每张2秒）</li>
+                    <li>挑选最佳候选，用Flux.1 Dev/Pro重新生成高质量版本</li>
+                </ol>
+                <p><strong>成本</strong>：约$5/天 API费用 vs 外包设计$200-500/天</p>
+
+                <h3>案例3：UI/UX设计辅助</h3>
+                <p><strong>需求</strong>：设计团队需要快速出界面概念图和Icon素材</p>
+                <p><strong>解决方案</strong>：</p>
+                <ol>
+                    <li>用Flux生成界面概念图（"modern dashboard UI with dark theme, data visualization, sidebar navigation"）</li>
+                    <li>用ControlNet + 线稿图控制布局，Flux填充视觉细节</li>
+                    <li>批量生成不同风格的Icon（"minimalist line icon set for [category], consistent style, 64x64 grid"）</li>
+                    <li>用Img2Img在已有设计基础上快速迭代修改方案</li>
+                </ol>
+                <p><strong>成本</strong>：几乎为零（Schnell快速生成） vs 图库购买$500+/月</p>
+
+                <h3>案例4：海报与印刷品设计</h3>
+                <p><strong>需求</strong>：活动海报需要包含特定文字和视觉元素</p>
+                <p><strong>解决方案</strong>：</p>
+                <ol>
+                    <li>利用Flux.1 Pro优秀的文字渲染能力，直接在Prompt中指定文字内容</li>
+                    <li>用结构化Prompt控制文字位置和风格（"text 'SUMMER SALE' at top, bold sans-serif"）</li>
+                    <li>生成后在Photoshop中微调文字位置和排版细节</li>
+                    <li>输出高分辨率（1024x1024或更大）用于印刷</li>
+                </ol>
+                <p><strong>成本</strong>：约$0.1/张 vs 设计师$100-300/张</p>
+
+                <div class="warning-box">
+                    <strong>⚠️ 商业使用授权注意：</strong>
+                    <p>Flux.1 Pro为商业闭源模型，通过API调用可用于商业项目。Flux.1 Dev为非商业开源（非商用许可），商业项目需联系Black Forest Labs获取授权。Flux.1 Schnell为Apache 2.0许可，可自由商用。务必根据项目性质选择正确的模型版本。</p>
+                </div>
+
+                <h2 id="comparison">与其他工具对比</h2>
+                <p>2026年AI图像生成领域群雄逐鹿，Flux如何与Midjourney、DALL-E 3、SDXL等主流工具相比？</p>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>特性</th>
+                            <th>Flux.1 Pro</th>
+                            <th>Midjourney v6</th>
+                            <th>DALL-E 3</th>
+                            <th>SDXL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>图像质量</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                            <td>⭐⭐⭐⭐</td>
+                            <td>⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td>文字渲染</td>
+                            <td>✅ 优秀</td>
+                            <td>⚠️ 一般</td>
+                            <td>✅ 良好</td>
+                            <td>❌ 差</td>
+                        </tr>
+                        <tr>
+                            <td>Prompt理解</td>
+                            <td>非常强</td>
+                            <td>中等</td>
+                            <td>非常强</td>
+                            <td>较弱</td>
+                        </tr>
+                        <tr>
+                            <td>人体结构</td>
+                            <td>优秀</td>
+                            <td>优秀</td>
+                            <td>良好</td>
+                            <td>一般</td>
+                        </tr>
+                        <tr>
+                            <td>可定制性</td>
+                            <td>✅ LoRA/ControlNet</td>
+                            <td>❌ 有限</td>
+                            <td>❌ 无</td>
+                            <td>✅ 全面</td>
+                        </tr>
+                        <tr>
+                            <td>本地部署</td>
+                            <td>✅ Dev/Schnell</td>
+                            <td>❌ 仅云端</td>
+                            <td>❌ 仅API</td>
+                            <td>✅ 完全开源</td>
+                        </tr>
+                        <tr>
+                            <td>价格</td>
+                            <td>$0.003-0.05/张</td>
+                            <td>$10/月起</td>
+                            <td>$0.04/张</td>
+                            <td>免费(需GPU)</td>
+                        </tr>
+                        <tr>
+                            <td>生成速度</td>
+                            <td>2-15秒</td>
+                            <td>30-60秒</td>
+                            <td>10-20秒</td>
+                            <td>5-30秒</td>
+                        </tr>
+                        <tr>
+                            <td>开源</td>
+                            <td>部分(Schnell)</td>
+                            <td>❌</td>
+                            <td>❌</td>
+                            <td>✅ 完全</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="tip-box">
+                    <strong>💡 按场景选择工具：</strong>
+                    <ul>
+                        <li><strong>追求极致美学</strong>：Midjourney v6仍然是最省心的选择，审美风格独特</li>
+                        <li><strong>需要精确控制</strong>：Flux.1 Pro/Dev + ControlNet，可控性最强</li>
+                        <li><strong>文字+图像一体化</strong>：Flux.1 Pro文字渲染最佳，DALL-E 3次之</li>
+                        <li><strong>预算有限/本地部署</strong>：Flux.1 Schnell或SDXL，完全免费</li>
+                        <li><strong>快速原型/头脑风暴</strong>：DALL-E 3（通过ChatGPT），交互最方便</li>
+                        <li><strong>专业工作流/批量生产</strong>：Flux.1 + ComfyUI，自动化程度最高</li>
+                    </ul>
+                </div>
+
+                <h2 id="faq">常见问题与资源</h2>
+
+                <h3 id="faq-quality">生成质量问题</h3>
+                <p><strong>Q：Flux生成的图像出现色彩过饱和怎么办？</strong></p>
+                <p>A：降低guidance_scale到2.5-3.0，或在Prompt中加入"natural colors, subtle tones"等引导词。过饱和通常是引导系数过高导致的。</p>
+
+                <p><strong>Q：文字渲染不准确怎么办？</strong></p>
+                <p>A：确保使用Flux.1 Pro或Dev（Schnell文字能力较弱）。文字用引号包裹，Prompt中明确指定字体风格和位置。短文字（1-3个词）成功率最高，长文字可能需要多次尝试。</p>
+
+                <p><strong>Q：生成的图像有噪点或模糊？</strong></p>
+                <p>A：检查步数是否足够（Dev至少20步）、guidance_scale是否过高、分辨率设置是否正确。如果使用量化模型，尝试切换到更高精度的版本。</p>
+
+                <h3 id="faq-deployment">部署与性能问题</h3>
+                <p><strong>Q：显存不够运行Flux怎么办？</strong></p>
+                <p>A：依次尝试以下方案：(1) 使用NF4量化版本（8-12GB显存）；(2) 使用GGUF量化（6-8GB显存）；(3) 启用ComfyUI的显存优化选项（offload到CPU）；(4) 使用云端API（Replicate/Fal.ai）替代本地部署。</p>
+
+                <p><strong>Q：Flux生成速度太慢？</strong>

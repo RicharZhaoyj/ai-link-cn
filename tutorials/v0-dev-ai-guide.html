@@ -537,4 +537,88 @@ Use a clean light theme with subtle shadows. Make it fully responsive.</code></p
                     <li>将v0与Cursor等开发工具组合使用，构建最适合自己的AI开发工作流</li>
                     <li>v0生成的是高质量起点而非最终产品，仍需开发者审查和完善</li>
                 </ul>
-                <p>现在就访问 <a href="https://v0.dev" target="_blank" rel="noopener">v0.dev</a> 开始你的AI驱动前端开发
+                <p>现在就访问 <a href="https://v0.dev" target="_blank" rel="noopener">v0.dev</a> 开始你的AI驱动前端开发之旅！</p>
+
+                <div class="tip-box">
+                    <strong>📚 延伸阅读：</strong>
+                    <ul>
+                        <li><a href="ai-video-generation-guide.html">AI视频生成工具完整指南</a> - 探索AI在视频创作领域的应用</li>
+                        <li><a href="chatgpt-complete-guide.html">ChatGPT完整指南</a> - 用AI优化Prompt和辅助开发</li>
+                    </ul>
+                </div>
+            </article>
+
+            <aside class="sidebar">
+                <div class="toc">
+                    <h4>目录</h4>
+                    <ul>
+                        <li><a href="#overview">1. v0.dev概述</a></li>
+                        <li><a href="#quickstart">2. 快速开始</a></li>
+                        <li><a href="#register">• 注册与访问</a></li>
+                        <li><a href="#first-gen">• 第一次生成</a></li>
+                        <li><a href="#project-mgmt">• 项目管理</a></li>
+                        <li><a href="#prompts">3. Prompt技巧</a></li>
+                        <li><a href="#prompt-structure">• Prompt结构框架</a></li>
+                        <li><a href="#prompt-iteration">• 迭代修改技巧</a></li>
+                        <li><a href="#prompt-advanced">• 进阶Prompt策略</a></li>
+                        <li><a href="#components">4. 组件定制</a></li>
+                        <li><a href="#modify-components">• 修改生成的组件</a></li>
+                        <li><a href="#shadcn-integration">• shadcn/ui集成</a></li>
+                        <li><a href="#tailwind-styles">• Tailwind样式定制</a></li>
+                        <li><a href="#advanced">5. 高级功能</a></li>
+                        <li><a href="#complex-layout">• 复杂布局</a></li>
+                        <li><a href="#responsive">• 响应式设计</a></li>
+                        <li><a href="#animations">• 动画效果</a></li>
+                        <li><a href="#state-management">• 状态管理</a></li>
+                        <li><a href="#projects">6. 实战项目</a></li>
+                        <li><a href="#landing-page">• 落地页</a></li>
+                        <li><a href="#dashboard">• 仪表盘</a></li>
+                        <li><a href="#ecommerce">• 电商页面</a></li>
+                        <li><a href="#blog-template">• 博客模板</a></li>
+                        <li><a href="#comparison">7. 工具对比</a></li>
+                        <li><a href="#v0-vs-bolt">• v0 vs Bolt.new</a></li>
+                        <li><a href="#v0-vs-cursor">• v0 vs Cursor</a></li>
+                        <li><a href="#best-practices">8. 最佳实践与资源</a></li>
+                        <li><a href="#efficiency-tips">• 开发效率技巧</a></li>
+                        <li><a href="#common-issues">• 常见问题</a></li>
+                        <li><a href="#resources">• 推荐资源</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2026 AI.link.cn - AI工具导航与教程 | 姐妹站点：<a href="https://tools.link.cn">tools.link.cn</a> · <a href="https://prompts.link.cn">prompts.link.cn</a> · <a href="https://signal.link.cn">signal.link.cn</a></p>
+    </div>
+</footer>
+
+<script>
+// 阅读进度条
+window.addEventListener('scroll', () => {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    document.getElementById('progressBar').style.width = scrolled + '%';
+});
+
+// 目录高亮
+const sections = document.querySelectorAll('h2[id], h3[id]');
+const tocLinks = document.querySelectorAll('.toc a');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            tocLinks.forEach(link => link.classList.remove('active'));
+            const activeLink = document.querySelector(`.toc a[href="#${entry.target.id}"]`);
+            if (activeLink) activeLink.classList.add('active');
+        }
+    });
+}, { threshold: 0.3 });
+
+sections.forEach(section => observer.observe(section));
+</script>
+</body>
+</html>
