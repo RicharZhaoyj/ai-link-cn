@@ -225,4 +225,189 @@ footer p{color:var(--text-muted);font-size:.9rem}
                 <h2 id="quickstart">快速开始</h2>
                 <p>Flux不像Midjourney那样有官方Web界面，而是以模型/API的形式提供。你需要选择一个平台来访问Flux。以下是主流接入方式：</p>
 
-                <h3 id
+                <h3 id="platform-replicate">Replicate API</h3>
+                <p>Replicate是最简单的Flux接入方式，无需本地GPU，按次付费。支持所有三个Flux模型，还提供LoRA组合功能。</p>
+                <pre><code># 安装Replicate Python SDK
+pip install replicate
+
+# 设置API Token（在replicate.com获取）
+export REPLICATE_API_TOKEN=r8_xxxxx
+
+# Flux.1 Schnell - 极速生成
+import replicate
+output = replicate.run(
+    "black-forest-labs/flux-schnell",
+    input={
+        "prompt": "A majestic dragon perched on a crystal mountain, fantasy art, detailed scales, volumetric lighting",
+        "num_outputs": 1,
+        "aspect_ratio": "16:9",
+        "output_format": "webp",
+        "output_quality": 90
+    }
+)
+print(output)</code></pre>
+                <p>Replicate的计费按运行时间计算，Flux.1 Schnell约$0.003/张，Flux.1 Pro约$0.05/张，性价比极高。</p>
+
+                <h3 id="platform-huggingface">HuggingFace Spaces</h3>
+                <p>HuggingFace提供免费的Flux体验空间，适合快速试用：</p>
+                <ol>
+                    <li>访问 <a href="https://huggingface.co/spaces?search=flux" target="_blank" rel="noopener">HuggingFace Flux Spaces</a></li>
+                    <li>选择一个Flux.1 Dev或Schnell的Demo空间</li>
+                    <li>输入Prompt，调整参数，点击生成</li>
+                    <li>免费版需要排队，付费Pro账号可跳过队列</li>
+                </ol>
+
+                <div class="warning-box">
+                    <strong>⚠️ HuggingFace免费版限制：</strong>
+                    <p>免费Spaces存在排队等待（可能数分钟）、单次生成限制和较低优先级。如果需要频繁使用，建议使用Replicate API或本地部署。</p>
+                </div>
+
+                <h3 id="platform-comfyui">ComfyUI本地部署</h3>
+                <p>ComfyUI是功能最强大的本地部署方案，支持完整的节点化工作流，可以灵活组合ControlNet、LoRA等组件。</p>
+                <ol>
+                    <li>安装ComfyUI（<code>git clone https://github.com/comfyanonymous/ComfyUI</code>）</li>
+                    <li>下载Flux.1 Dev模型文件（约24GB），放入<code>models/unet/</code>目录</li>
+                    <li>下载T5-XXL文本编码器（约10GB），放入<code>models/text_encoders/</code>目录</li>
+                    <li>下载VAE模型，放入<code>models/vae/</code>目录</li>
+                    <li>启动ComfyUI，加载Flux工作流模板</li>
+                </ol>
+
+                <div class="tool-card">
+                    <h4>🖥️ 显存需求</h4>
+                    <ul>
+                        <li><strong>Flux.1 Dev (FP16)</strong>：约24GB显存（RTX 4090/A100）</li>
+                        <li><strong>Flux.1 Dev (NF4量化)</strong>：约8-12GB显存（RTX 4070/4080）</li>
+                        <li><strong>Flux.1 Schnell</strong>：同Dev，但推理速度快5-10倍</li>
+                        <li><strong>Flux.1 Dev (GGUF量化)</strong>：约6-8GB显存（RTX 3060/4060）</li>
+                    </ul>
+                    <p>量化模型会略微降低画质，但对于大多数应用场景仍然足够优秀。推荐使用NF4量化作为质量和显存的平衡点。</p>
+                </div>
+
+                <h3 id="platform-fal">Fal.ai</h3>
+                <p>Fal.ai是另一个优秀的Flux API平台，提供实时流式生成、LoRA训练和图像编辑功能：</p>
+                <ul>
+                    <li><strong>实时生成</strong>：支持WebSocket流式传输，边生成边预览</li>
+                    <li><strong>LoRA训练</strong>：上传20-30张图片即可训练专属风格LoRA</li>
+                    <li><strong>图像编辑</strong>：支持inpainting和outpainting</li>
+                    <li><strong>定价</strong>：与Replicate相当，部分功能免费试用</li>
+                </ul>
+
+                <div class="tip-box">
+                    <strong>💡 新手推荐路径：</strong>
+                    <p>先在HuggingFace Spaces免费体验 → 满意后用Replicate API做项目 → 有GPU后迁移到ComfyUI本地部署获得最大自由度。</p>
+                </div>
+
+                <h2 id="prompt-engineering">Prompt工程技巧</h2>
+                <p>Flux的文本编码器是T5-XXL，相比Stable Diffusion的CLIP，它能理解更长、更复杂的自然语言描述。这意味着你可以用更接近自然对话的方式来写Prompt，而不需要像SD那样堆砌关键词。</p>
+
+                <h3 id="prompt-structure">结构化Prompt写法</h3>
+                <p>虽然Flux理解自然语言，但结构化写法仍然能帮助获得更可控的结果。推荐以下结构：</p>
+                <pre><code>[主体描述], [动作/状态], [环境/场景], [光影/氛围], [风格/参考], [技术规格]</code></pre>
+
+                <div class="tool-card">
+                    <h4>🎯 高质量Prompt示例</h4>
+                    <p><strong>写实人像：</strong></p>
+                    <pre><code>Portrait of a young woman with freckles and green eyes, soft smile, wearing a linen blouse, standing in a sunlit garden with blooming lavender, golden hour lighting, shallow depth of field, shot on Hasselblad X2D, photorealistic, 8K</code></pre>
+                    <p><strong>概念设计：</strong></p>
+                    <pre><code>Futuristic floating city above the clouds, crystalline architecture with bioluminescent pathways, aerial gardens cascading down the sides, dawn light filtering through transparent buildings, concept art style, highly detailed, ArtStation trending</code></pre>
+                    <p><strong>文字渲染（Flux特长）：</strong></p>
+                    <pre><code>A minimalist movie poster with bold text "BEYOND THE HORIZON" at the top, silhouette of a lone figure standing on a cliff edge overlooking a vast ocean, dramatic sunset sky with orange and purple gradients, clean sans-serif typography, cinematic poster design</code></pre>
+                    <p><strong>产品摄影：</strong></p>
+                    <pre><code>Professional product photo of a matte black wireless headphone on a polished concrete surface, subtle reflection, single dramatic key light from the left, deep shadows, minimalist composition, commercial photography, 4K</code></pre>
+                </div>
+
+                <h3 id="prompt-weight">权重语法</h3>
+                <p>Flux支持通过语法调整特定词汇的权重，实现更精细的控制：</p>
+                <pre><code># 基础权重（ComfyUI中）
+(cat:1.3)               # 增强"猫"的权重
+(blue:0.7)              # 降低"蓝色"的权重
+
+# 嵌套权重
+((detailed fur:1.5))    # 强调毛发细节
+
+# Flux中权重使用的建议
+# 1.0 = 默认权重
+# 1.1-1.3 = 轻微增强，适合微调
+# 1.4-1.8 = 明显增强，适合突出关键元素
+# >2.0 = 过强，可能导致画面失真</code></pre>
+
+                <div class="warning-box">
+                    <strong>⚠️ 权重使用注意：</strong>
+                    <p>Flux对权重的敏感度高于Stable Diffusion。在SD中1.5的权重很常见，但在Flux中1.3就可能有明显效果。建议从1.1-1.2开始微调，避免过度加权导致图像崩坏。</p>
+                </div>
+
+                <h3 id="prompt-negative">负向提示</h3>
+                <p>与Stable Diffusion不同，Flux.1对负向提示（negative prompt）的支持有限。Flux基于Rectified Flow的训练方式使其天然对低质量生成有更强的抵抗力，因此在很多场景下不需要负向提示。</p>
+                <p>如果在ComfyUI中需要使用负向提示，常见做法是：</p>
+                <ul>
+                    <li>使用Flux Guidance节点设置负向引导</li>
+                    <li>使用<code>blurry, low quality, watermark, text</code>等通用负面词</li>
+                    <li>在图像到图像工作流中，通过调整denoise强度来规避不想要的元素</li>
+                </ul>
+
+                <h3 id="prompt-tips">实用Prompt技巧</h3>
+                <ul>
+                    <li><strong>自然语言优先</strong>：Flux理解完整句子，"a cat sitting on a windowsill looking outside on a rainy day"比"cat, windowsill, rain"效果更好</li>
+                    <li><strong>风格引用有效</strong>："in the style of Studio Ghibli"或"ArtStation trending"在Flux中非常有效</li>
+                    <li><strong>指定相机/镜头</strong>："shot on Canon R5, 85mm f/1.4"能显著影响景深和画面质感</li>
+                    <li><strong>文字用引号包裹</strong>：需要渲染文字时，用引号明确标注，如text "HELLO WORLD"</li>
+                    <li><strong>避免矛盾描述</strong>：不要同时要求"minimalist"和"highly detailed intricate patterns"</li>
+                </ul>
+
+                <h2 id="parameters">参数详解</h2>
+                <p>理解Flux的核心参数是获得理想输出的关键。以下是每个重要参数的详细说明：</p>
+
+                <h3 id="param-steps">推理步数（num_inference_steps）</h3>
+                <p>推理步数决定模型去噪的迭代次数。步数越多，细节越精细，但生成越慢。</p>
+                <ul>
+                    <li><strong>Flux.1 Schnell</strong>：设计为1-4步即可出图。4步已是最佳，更多步数不会提升质量。</li>
+                    <li><strong>Flux.1 Dev/Pro</strong>：推荐20-30步。20步足够大多数场景，30步适合极端细节需求。超过50步几乎无额外收益。</li>
+                </ul>
+
+                <div class="tool-card">
+                    <h4>📊 步数与质量关系</h4>
+                    <table class="comparison-table">
+                        <thead>
+                            <tr><th>步数</th><th>质量等级</th><th>适用场景</th><th>耗时参考(Dev)</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1-4</td><td>快速预览</td><td>Schnell专用，批量筛选</td><td>~2秒</td></tr>
+                            <tr><td>10-15</td><td>良好</td><td>日常使用，速度快</td><td>~8秒</td></tr>
+                            <tr><td>20-25</td><td>优秀</td><td>推荐默认值</td><td>~15秒</td></tr>
+                            <tr><td>30-40</td><td>极致</td><td>最终输出、打印</td><td>~25秒</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 id="param-guidance">引导系数（guidance_scale）</h3>
+                <p>引导系数控制图像对Prompt的遵从程度。值越高，输出越严格遵循Prompt但可能显得"过度处理"；值越低，模型自由度越大但可能偏离Prompt。</p>
+                <ul>
+                    <li><strong>Flux.1 Schnell</strong>：通常设为0（无引导），因为Schnell在训练时已内置了引导。</li>
+                    <li><strong>Flux.1 Dev</strong>：推荐3.0-4.0。默认3.5是最佳平衡点。</li>
+                    <li><strong>Flux.1 Pro</strong>：推荐3.0-5.0，具体取决于Prompt复杂度。</li>
+                </ul>
+
+                <div class="tip-box">
+                    <strong>💡 guidance_scale调优技巧：</strong>
+                    <p>简单Prompt（如"a cat"）用3.0-3.5即可；复杂Prompt（长段落+多概念组合）可以提高到4.0-5.0确保模型不遗漏细节。如果发现图像"过于AI化"或色彩过饱和，适当降低guidance_scale到2.5-3.0。</p>
+                </div>
+
+                <h3 id="param-seed">随机种子（seed）</h3>
+                <p>Seed控制生成的随机性。相同Prompt+参数+seed = 完全相同的输出。</p>
+                <ul>
+                    <li><strong>设为-1或random</strong>：每次生成不同结果，用于探索创意</li>
+                    <li><strong>固定seed</strong>：用于复现特定结果或微调Prompt时保持一致性</li>
+                    <li><strong>实用技巧</strong>：找到满意结果后记下seed，后续修改Prompt的小细节（如调整颜色）时保持seed不变，可以直观看到Prompt变化的影响</li>
+                </ul>
+
+                <h3 id="param-other">其他重要参数</h3>
+                <ul>
+                    <li><strong>宽度/高度</strong>：Flux.1原生支持多种分辨率，推荐使用预设比例（1:1、16:9、9:16、4:3、3:4）而非任意尺寸，以获得最佳构图。</li>
+                    <li><strong>输出格式</strong>：webp格式文件更小且质量足够，推荐用于Web；需要无损存档时用png。</li>
+                    <li><strong>denoise强度</strong>（图生图模式）：0.3-0.5轻度修改，0.5-0.7中度修改，0.7-0.9大幅重绘。Flux在低denoise下比SD更稳定。</li>
+                </ul>
+
+                <h2 id="advanced">高级技巧</h2>
+                <p>掌握基础生成后，以下高级技巧可以将Flux的能力发挥到极致：</p>
+
+                <h3 id="controlnet">ControlNet
