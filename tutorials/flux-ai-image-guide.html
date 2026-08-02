@@ -626,4 +626,122 @@ print(output)</code></pre>
                 <p><strong>Q：显存不够运行Flux怎么办？</strong></p>
                 <p>A：依次尝试以下方案：(1) 使用NF4量化版本（8-12GB显存）；(2) 使用GGUF量化（6-8GB显存）；(3) 启用ComfyUI的显存优化选项（offload到CPU）；(4) 使用云端API（Replicate/Fal.ai）替代本地部署。</p>
 
-                <p><strong>Q：Flux生成速度太慢？</strong>
+                <p><strong>Q：Flux生成速度太慢？</strong></p>
+                <p>A：使用Schnell模型（1-4步），启用torch.compile()优化，使用TensorRT加速，或切换到云端API获得A100/H100的推理速度。</p>
+
+                <p><strong>Q：ComfyUI中Flux工作流报错？</strong></p>
+                <p>A：确保ComfyUI更新到最新版本，Flux相关节点包已安装（ComfyUI-FluxTools等），模型文件路径正确，T5-XXL编码器已下载。常见问题是缺少T5编码器或版本不匹配。</p>
+
+                <h3 id="faq-license">授权与合规问题</h3>
+                <p><strong>Q：Flux可以用于商业项目吗？</strong></p>
+                <p>A：Flux.1 Schnell（Apache 2.0）可自由商用；Flux.1 Dev仅限非商业用途，商用需单独授权；Flux.1 Pro通过API调用默认包含商用授权。如果项目有商业性质，请优先使用Pro或Schnell。</p>
+
+                <p><strong>Q：用LoRA训练的模型版权归谁？</strong></p>
+                <p>A：LoRA权重本身属于训练者，但生成图像的版权归属取决于基础模型的许可。使用Flux.1 Schnell生成的图像可自由使用；使用Flux.1 Dev生成的图像在非商业场景下可使用。</p>
+
+                <h3 id="resources">推荐资源</h3>
+                <div class="tool-card">
+                    <h4>📚 学习资源</h4>
+                    <ul>
+                        <li><strong>官方文档</strong>：<a href="https://github.com/black-forest-labs/flux" target="_blank" rel="noopener">Black Forest Labs GitHub</a> - 模型下载和基础文档</li>
+                        <li><strong>ComfyUI工作流</strong>：<a href="https://comfyanonymous.github.io/ComfyUI_examples/flux/" target="_blank" rel="noopener">ComfyUI Flux示例</a> - 官方示例工作流</li>
+                        <li><strong>LoRA训练</strong>：<a href="https://fal.ai/models/fal-ai/flux-lora-fast-training" target="_blank" rel="noopener">Fal.ai LoRA训练</a> - 一键云端训练</li>
+                        <li><strong>CivitAI</strong>：<a href="https://civitai.com/models?flux=1" target="_blank" rel="noopener">CivitAI Flux模型</a> - 社区LoRA和模型分享</li>
+                        <li><strong>Reddit社区</strong>：<a href="https://www.reddit.com/r/LocalLLaMA/" target="_blank" rel="noopener">r/LocalLLaMA</a> - 本地部署讨论和技巧分享</li>
+                    </ul>
+                </div>
+
+                <div class="tool-card">
+                    <h4>🛠️ 工具与平台</h4>
+                    <ul>
+                        <li><strong>Replicate</strong>：<a href="https://replicate.com/black-forest-labs" target="_blank" rel="noopener">replicate.com</a> - 最便捷的API调用</li>
+                        <li><strong>Fal.ai</strong>：<a href="https://fal.ai/models" target="_blank" rel="noopener">fal.ai</a> - 实时生成+LoRA训练</li>
+                        <li><strong>HuggingFace</strong>：<a href="https://huggingface.co/black-forest-labs" target="_blank" rel="noopener">huggingface.co</a> - 模型下载+在线Demo</li>
+                        <li><strong>ComfyUI</strong>：<a href="https://github.com/comfyanonymous/ComfyUI" target="_blank" rel="noopener">GitHub</a> - 最强大的本地工作流</li>
+                        <li><strong>Forge/WebUI</strong>：支持Flux的Stable Diffusion WebUI分支，适合SD用户迁移</li>
+                    </ul>
+                </div>
+
+                <div class="tip-box">
+                    <strong>📚 延伸阅读：</strong>
+                    <ul>
+                        <li><a href="midjourney-complete-guide.html">Midjourney完整指南</a> - 对比理解不同工具的Prompt差异</li>
+                        <li><a href="ai-video-generation-guide.html">AI视频生成指南</a> - 将Flux图像作为视频生成素材</li>
+                        <li><a href="chatgpt-complete-guide.html">ChatGPT完整指南</a> - 用AI辅助优化Flux Prompt</li>
+                    </ul>
+                </div>
+            </article>
+
+            <aside class="sidebar">
+                <div class="toc">
+                    <h4>目录</h4>
+                    <ul>
+                        <li><a href="#overview">Flux AI概述</a></li>
+                        <li><a href="#flux-models">• 三大模型</a></li>
+                        <li><a href="#flux-vs-sd">• 与SD的区别</a></li>
+                        <li><a href="#quickstart">快速开始</a></li>
+                        <li><a href="#platform-replicate">• Replicate</a></li>
+                        <li><a href="#platform-huggingface">• HuggingFace</a></li>
+                        <li><a href="#platform-comfyui">• ComfyUI</a></li>
+                        <li><a href="#platform-fal">• Fal.ai</a></li>
+                        <li><a href="#prompt-engineering">Prompt工程技巧</a></li>
+                        <li><a href="#prompt-structure">• 结构化写法</a></li>
+                        <li><a href="#prompt-weight">• 权重语法</a></li>
+                        <li><a href="#prompt-negative">• 负向提示</a></li>
+                        <li><a href="#prompt-tips">• 实用技巧</a></li>
+                        <li><a href="#parameters">参数详解</a></li>
+                        <li><a href="#param-steps">• 推理步数</a></li>
+                        <li><a href="#param-guidance">• 引导系数</a></li>
+                        <li><a href="#param-seed">• 随机种子</a></li>
+                        <li><a href="#advanced">高级技巧</a></li>
+                        <li><a href="#controlnet">• ControlNet</a></li>
+                        <li><a href="#ip-adapter">• IP-Adapter</a></li>
+                        <li><a href="#lora">• LoRA微调</a></li>
+                        <li><a href="#img2img">• 图生图</a></li>
+                        <li><a href="#commercial">商业应用案例</a></li>
+                        <li><a href="#comparison">与其他工具对比</a></li>
+                        <li><a href="#faq">常见问题与资源</a></li>
+                        <li><a href="#faq-quality">• 质量问题</a></li>
+                        <li><a href="#faq-deployment">• 部署问题</a></li>
+                        <li><a href="#faq-license">• 授权问题</a></li>
+                        <li><a href="#resources">• 推荐资源</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2026 AI.link.cn - AI工具导航与教程 | 姊妹站点：<a href="https://tools.link.cn">tools.link.cn</a> · <a href="https://prompts.link.cn">prompts.link.cn</a> · <a href="https://signal.link.cn">signal.link.cn</a></p>
+    </div>
+</footer>
+
+<script>
+// 阅读进度条
+window.addEventListener('scroll', () => {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    document.getElementById('progressBar').style.width = scrolled + '%';
+});
+
+// 目录高亮
+const sections = document.querySelectorAll('h2[id], h3[id]');
+const tocLinks = document.querySelectorAll('.toc a');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            tocLinks.forEach(link => link.classList.remove('active'));
+            const activeLink = document.querySelector(`.toc a[href="#${entry.target.id}"]`);
+            if (activeLink) activeLink.classList.add('active');
+        }
+    });
+}, { threshold: 0.3 });
+
+sections.forEach(section => observer.observe(section));
+</script>
+</body>
+</html>
