@@ -5,540 +5,540 @@
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
     <!-- AI资讯新闻 网站地图 -->
-    <!-- 更新时间: 2026-08-02 -->
+    <!-- 更新时间: 2026-08-03 -->
     <!-- 共 87 个URL -->
 
     <url>
         <loc>https://ai.link.cn/</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/sitemap.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/articles/ai-agent-development-guide.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/articles/ai-agent-practical-guide-2026.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/articles/ai-coding-tools-guide.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/articles/ai-content-creation-platforms.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/articles/ai-customer-service-tools.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/articles/ai-data-analysis-tools.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/articles/ai-design-tools-guide.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/articles/ai-education-tools-guide.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/articles/ai-expensive-software-alternatives.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/articles/ai-finance-tools-guide.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/articles/ai-healthcare-tools-guide.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/articles/ai-image-tools-free-alternatives.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/articles/ai-july-2026-update.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/articles/ai-legal-tools-guide.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/articles/ai-local-deployment-guide-2026.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/articles/ai-marketing-tools-small-business.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/articles/ai-meeting-tools-guide.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/articles/ai-money-making-guide-2026.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/articles/ai-office-efficiency.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/articles/ai-productivity-guide-2026.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/articles/ai-resume-builder-comparison.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/articles/ai-safety-ethics-guide.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/articles/ai-seo-tools-guide.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/articles/ai-side-hustle-guide.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/articles/ai-student-tools-guide.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/articles/ai-tools-for-students.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/articles/ai-tools-overview.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/articles/ai-tools-ranking-2026.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/articles/ai-translation-tools-guide.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/articles/ai-trends-2026-h2.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/articles/ai-video-tools-guide.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/articles/cursor-vs-copilot-vs-claude-code.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/articles/enterprise-ai-adoption-guide.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/articles/free-ai-tools-collection.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/articles/</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/articles/waic-2026-highlights.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/compare/ai-chatbots-comparison.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/compare/ai-coding-tools-comparison.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/compare/ai-drawing-tools-comparison.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/compare/ai-note-taking-tools-comparison.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/compare/ai-search-tools-comparison.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/compare/ai-video-generation-tools-comparison.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/compare/ai-voice-tools-comparison.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/compare/ai-writing-assistants-comparison.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/compare/ai-writing-tools-comparison.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/compare/chatgpt-vs-claude-vs-gemini.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/compare/</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/compare/midjourney-vs-dalle-vs-stablediffusion.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/pages/tools/autogpt.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/pages/tools/awesomeaitools.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/pages/tools/canva.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/pages/tools/chatgpt.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/pages/tools/cleanlab.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/pages/tools/convertkit.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/pages/tools/funnlp.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/pages/tools/github_copilot.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/pages/tools/grammarly.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/pages/tools/hostinger.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/pages/tools/</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/pages/tools/jasper.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/pages/tools/langflow.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/pages/tools/midjourney.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/pages/tools/mlcourseai.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/pages/tools/mlengineering.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/pages/tools/notion_ai.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/pages/tools/onnx.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/pages/tools/prowritingaid.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/pages/tools/sqltranslator.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/pages/tools/system-prompts-and-models-of-ai-tools.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/pages/tools/systempromptsandmodelsofaitools.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/tutorials/ai-video-generation-guide.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/tutorials/ai-writing-guide.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/tutorials/chatgpt-complete-guide.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/tutorials/claude-complete-guide.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/tutorials/cursor-complete-guide.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/tutorials/dalle3-complete-guide.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/tutorials/devin-ai-complete-guide.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/tutorials/gemini-complete-guide.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/tutorials/github-copilot-guide.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/tutorials/</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/tutorials/midjourney-complete-guide.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/tutorials/notion-ai-complete-guide.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/tutorials/perplexity-complete-guide.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/tutorials/stable-diffusion-complete-guide.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/tutorials/suno-ai-music-guide.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/tutorials/flux-ai-image-guide.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://ai.link.cn/tutorials/v0-dev-ai-guide.html</loc>
-        <lastmod>2026-08-02</lastmod>
+        <lastmod>2026-08-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
