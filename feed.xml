@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>AI资讯新闻</title>
+        <link>https://ai.link.cn/</link>
+        <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
+        <language>zh-CN</language>
+        <lastBuildDate>Sun, 02 Aug 2026 10:32:35 +0800</lastBuildDate>
+        <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
+
+        <item>
+            <title>AI Agent开发入门指南：从零构建你的第一个智能体</title>
+            <link>https://ai.link.cn/articles/ai-agent-development-guide.html</link>
+            <guid isPermaLink="true">https://ai.link.cn/articles/ai-agent-development-guide.html</guid>
+            <description>2026年最系统的AI Agent开发入门指南，介绍AI Agent概念、主流开发框架（LangChain、AutoGPT、CrewAI、OpenAI Agents SDK）、开发步骤与实战案例。</description>
+            <category>文章</category>
+            <pubDate>Fri, 10 Jul 2026 00:00:00 +0800</pubDate>
+        </item>
+
+        <item>
+            <title>2026 AI Agent开发实战：从入门到精通完整路线图</title>
+            <link>https://ai.link.cn/articles/ai-agent-practical-guide-2026.html</link>
+            <guid isPermaLink="true">https://ai.link.cn/articles/ai-agent-practical-guide-2026.html</guid>
+            <description>2026年AI Agent开发实战指南：涵盖主流Agent框架对比（LangChain vs AutoGen vs CrewAI）、核心架构设计、工具调用机制、记忆系统实现、生产部署最佳实践等完整内容。</description>
+            <category>文章</category>
+            <pubDate>Sat, 25 Jul 2026 00:00:00 +0800</pubDate>
+        </item>
+
+        <item>
+            <title>2026年AI编程工具大比拼：10款工具让开发效率提升5倍</title>
+            <link>https://ai.link.cn/articles/ai-coding-tools-guide.html</link>
+            <guid isPermaLink="true">https://ai.link.cn/articles/ai-coding-tools-guide.html</guid>
+            <description>AI编程工具全面评测：代码生成、智能补全、代码审查、Bug修复、文档生成。对比Cursor、GitHub Copilot、Claude Code等10款工具，找到最适合你的开发助手。</description>
+            <category>文章</category>
+            <pubDate>Mon, 27 Jul 2026 00:00:00 +0800</pubDate>
+        </item>
+
+        <item>
+            <title>2026年AI内容创作平台终极指南：从文案到视频一站式解决</title>
+            <link>https://ai.link.cn/articles/ai-content-creation-platforms.html</link>
+            <guid isPermaLink="true">https://ai.link.cn/articles/ai-content-creation-platforms.html</guid>
+            <description>AI内容创作平台全面解析：文案生成、图片制作、视频剪辑、音频合成一站式工具链。让单人团队拥有10人创作能力。</description>
+            <category>文章</category>
+            <pubDate>Sun, 26 Jul 2026 00:00:00 +0800</pubDate>
+        </item>
+
+        <item>
+            <title>2026年AI客服工具全面对比：8款智能客服工具帮你降本增效</title>
+            <link>https://ai.link.cn/articles/ai-customer-service-tools.html</link>
+            <guid isPermaLink="true">https://ai.link.cn/articles/ai-customer-service-tools.html</guid>
+            <description>AI客服工具对比评测：覆盖智能回复、多渠道接入、数据分析、AI质检等8大能力，帮你选对客服系统，降低人力成本50%+。</description>
+            <category>文章</category>
+            <pubDate>Sun, 26 Jul 2026 00:00:00 +0800</pubDate>
+        </item>
+
+        <item>
+            <title>2026年AI数据分析工具选购指南：让数据说话的8款神器</title>
+            <link>https://ai.link.cn/articles/ai-data-analysis-tools.html</link>
+            <guid isPermaLink="true">https://ai.link.cn/articles/ai-data-analysis-tools.html</guid>
+            <description>AI数据分析工具深度评测：从商业智能到预测分析，8款工具让人人都是数据分析师。涵盖Tableau、Power BI、ThoughtSpot、Sisense等主流平台。</description>
+            <category>文章</category>
+            <pubDate>Sun, 26 Jul 2026 00:00:00 +0800</pubDate>
+        </item>
+
+        <item>
+            <title>2026年AI设计工具完全指南：从入门到专业的12款神器</title>
+            <link>https://ai.link.cn/articles/ai-design-tools-guide.html</link>
+            <guid isPermaLink="true">https://ai.link.cn/articles/ai-design-tools-guide.html</guid>
+            <description>AI设计工具大盘点：图像生成、UI设计、视频剪辑、3D建模、品牌设计全覆盖。Midjourney、Canva AI、Figma AI等12款工具对比，设计师效率提升300%。</description>
+            <category>文章</category>
+            <pubDate>Mon, 27 Jul 2026 00:00:00 +0800</pubDate>
+        </item>
+
+        <item>
+            <title>2026年AI教育工具完全指南：10款工具让学习效率提升3倍</title>
+            <link>https://ai.link.cn/articles/ai-education-tools-guide.html</link>
+            <guid isPermaLink="true">https://ai.link.cn/articles/ai-education-tools-guide.html</guid>
+            <description>AI教育工具全面评测：智能学习、语言学习、考试备考、作业辅导、知识管理全覆盖。对比Khanmigo、Duolingo Max、Quizlet Plus等10款工具，找到最适合你的学习助手。</description>
+            <category>文章</category>
+            <pubDate>Tue, 28 Jul 2026 00:00:00 +0800</pubDate>
+        </item>
+
+        <item>
+            <title>用AI替代昂贵软件：10个能帮你每年省$1000+的免费/低价替代方案</title>
+            <link>https://ai.link.cn/articles/ai-expensive-software-alternatives.html</link>
+            <guid isPermaLink="true">https://ai.link.cn/articles/ai-expensive-software-alternatives.html</guid>
+            <description>10款AI软件替代方案，用AI工具替代Adobe、Notion、HubSpot等昂贵软件，每年节省$1000+。含功能对比、迁移指南和常见问题解答。</description>
+            <category>文章</category>
+            <pubDate>Sun, 26 Jul 2026 00:00:00 +0800</pubDate>
+        </item>
+
+        <item>
+            <title>2026年AI金融工具完全指南：8款工具让理财更智能</title>
+            <link>https://ai.link.cn/articles/ai-finance-tools-guide.html</link>
+            <guid isPermaLink="true">https://ai.link.cn/articles/ai-finance-tools-guide.html</guid>
+            <description>AI金融工具全面评测：智能投顾、量化交易、风险控制、财务分析、个人理财全覆盖。对比Betterment、Wealthfront、Kensho等8款工具，让AI成为你的理财助手。</description>
+            <category>文章</category>
+            <pubDate>Tue, 28 Jul 2026 00:00:00 +0800</pubDate>
+        </item>
+
+        <item>
+            <title>2026年AI医疗健康工具完全指南：8款工具守护你的健康</title>
+            <link>https://ai.link.cn/articles/ai-healthcare-tools-guide.html</link>
+            <guid isPermaLink="true">https://ai.link.cn/articles/ai-healthcare-tools-guide.html</guid>
+            <description>AI医疗健康工具全面评测：智能问诊、健康管理、医学影像、心理健康、用药提醒全覆盖。对比Ada Health、WebMD Symptom Checker、Buoy等8款工具，让AI成为你的健康助手。</description>
+            <category>文章</category>
+            <pubDate>Tue, 28 Jul 2026 00:00:00 +0800</pubDate>
+        </item>
+
+        <item>
+            <title>AI绘画工具免费替代方案：不花钱也能玩转AI绘图</title>
+            <link>https://ai.link.cn/articles/ai-image-tools-free-alternatives.html</link>
+            <guid isPermaLink="true">https://ai.link.cn/articles/ai-image-tools-free-alternatives.html</guid>
+            <description>2026年最值得用的免费AI绘画工具盘点：Stable Diffusion WebUI、Leonardo.ai、Bing Image Creator、Playground AI、即梦AI等，含功能对比、使用方法和适用场景。</description>
+            <category>文章</category>
+            <pubDate>Sat, 18 Jul 2026 00:00:00 +0800</pubDate>
+        </item>
+
+        <item>
+            <title>2026年7月AI行业动态：大模型竞赛白热化，AI Agent加速落地</title>
+            <link>https://ai.link.cn/articles/ai-july-2026-update.html</link>
+            <guid isPermaLink="true">https://ai.link.cn/articles/ai-july-2026-update.html</guid>
+            <description>2026年7月AI行业最新动态：大模型竞赛进入白热化阶段，AI Agent加速落地应用，多模态技术突破，开源生态繁荣发展，全球AI监管框架逐步成形。</description>
+            <category>文章</category>
+            <pubDate>Sun, 26 Jul 2026 00:00:00 +0800</pubDate>
+        </item>
+
+        <item>
+            <title>2026年AI法律工具完全指南：7款工具让法律服务触手可及</title>
+            <link>https://ai.link.cn/articles/ai-legal-tools-guide.html</link>
+            <guid isPermaLink="true">https://ai.link.cn/articles/ai-legal-tools-guide.html</guid>
+            <description>AI法律工具全面评测：合同审查、法律咨询、法律文书生成、案例检索、合规检查全覆盖。对比Harvey AI、Casetext、LawGeex等7款工具，让AI成为你的法律顾问。</description>
+            <category>文章</category>
+            <pubDate>Tue, 28 Jul 2026 00:00:00 +0800</pubDate>
+        </item>
+
+        <item>
+            <title>AI大模型本地部署完全指南：从零开始的实践手册</title>
+            <link>https://ai.link.cn/articles/ai-local-deployment-guide-2026.html</link>
+            <guid isPermaLink="true">https://ai.link.cn/articles/ai-local-deployment-guide-2026.html</guid>
+            <description>2026年最详尽的AI大模型本地部署指南，涵盖硬件要求、主流模型推荐（Llama 3.1、Mistral、Qwen2）、部署工具对比（Ollama、LM Studio、vLLM）、详细安装步骤、性能优化与常见问题解决方案。</description>
+            <category>文章</category>
+            <pubDate>Mon, 27 Jul 2026 00:00:00 +0800</pubDate>
+        </item>
+
+        <item>
+            <title>2026年小企业AI营销工具指南：8款省钱又高效的工具</title>
+            <link>https://ai.link.cn/articles/ai-marketing-tools-small-business.html</link>
+            <guid isPermaLink="true">https://ai.link.cn/articles/ai-marketing-tools-small-business.html</guid>
+            <description>小企业用AI营销工具节省成本、提升效率。涵盖文案生成、社交媒体、SEO优化、邮件营销8大类别，附ROI计算与实施建议。</description>
+            <category>文章</category>
+            <pubDate>Sun, 26 Jul 2026 00:00:00 +0800</pubDate>
+        </item>
+
+        <item>
+            <title>2026年AI会议记录工具选购指南：8款工具让会议效率翻倍</title>
+            <link>https://ai.link.cn/articles/ai-meeting-tools-guide.html</link>
+            <guid isPermaLink="true">https://ai.link.cn/articles/ai-meeting-tools-guide.html</guid>
+            <description>AI会议记录工具深度评测：飞书妙记、腾讯会议AI、Otter.ai、Noty.ai等8款工具对比。实时转写、智能摘要、待办提取、多语言支持全覆盖。</description>
+            <category>文章</category>
+            <pubDate>Mon, 27 Jul 2026 00:00:00 +0800</pubDate>
+        </item>
+
+        <item>
+            <title>用AI赚钱的10种实战方法：从副业到年入百万的完整指南</title>
+            <link>https://ai.link.cn/articles/ai-money-making-guide-2026.html</link>
+            <guid isPermaLink="true">https://ai.link.cn/articles/ai-money-making-guide-2026.html</guid>
+            <description>2026年最新AI变现方法盘点。涵盖AI内容创作、AI课程、AI服务、AI投资10个方向，含启动成本、月收入预期、入门指南和真实案例。</description>
+            <category>文章</category>
+            <pubDate>Sun, 26 Jul 2026 00:00:00 +0800</pubDate>
+        </item>
+
+        <item>
+            <title>AI办公效率提升指南：从入门到精通</title>
+            <link>https://ai.link.cn/articles/ai-office-efficiency.html</link>
+            <guid isPermaLink="true">https://ai.link.cn/articles/ai-office-efficiency.html</guid>
+            <description>AI办公效率提升指南：系统讲解文档处理、数据分析、PPT制作、会议纪要、邮件管理、项目管理、AI自动化等场景的实战方法，从入门到精通。</description>
+            <category>文章</category>
+            <pubDate>Thu, 23 Jul 2026 00:00:00 +0800</pubDate>
+        </item>
+
+        <item>
+            <title>AI效率提升指南：2026年用AI工具让工作效率翻倍</title>
+            <link>https://ai.link.cn/articles/ai-productivity-guide-2026.html</link>
+            <guid isPermaLink="true">https://ai.link.cn/articles/ai-productivity-guide-2026.html</guid>
+            <description>2026年最实用的AI效率提升指南，按写作、数据分析、PPT制作、邮件处理、会议纪要、项目管理六大工作场景推荐AI工具和使用技巧，附工作流搭建方法。</description>
+            <category>文章</category>
+            <pubDate>Wed, 15 Jul 2026 00:00:00 +0800</pubDate>
+        </item>
+
+        <item>
+            <title>AI简历生成器大比拼：8款工具实测对比，哪个能帮你拿到面试？</title>
+            <link>https://ai.link.cn/articles/ai-resume-builder-comparison.html</link>
+            <guid isPermaLink="true">https://ai.link.cn/articles/ai-resume-builder-comparison.html</guid>
+            <description>8款AI简历生成器深度评测，对比内容质量、ATS通过率、模板数量、价格，帮你选择最能拿到面试的工具。含实测数据与场景推荐。</description>
+            <category>文章</category>
+            <pubDate>Sun, 26 Jul 2026 00:00:00 +0800</pubDate>
+        </item>
+
+        <item>
+            <title>2026年AI安全与伦理指南：构建负责任AI的未来</title>
+            <link>https://ai.link.cn/articles/ai-safety-ethics-guide.html</link>
+            <guid isPermaLink="true">https://ai.link.cn/articles/ai-safety-ethics-guide.html</guid>
+            <description>2026年AI安全与伦理全面指南：深入解析AI安全核心挑战、全球监管框架、企业安全实践、AI伦理原则及未来趋势，助力构建负责任AI生态。</description>
+            <category>文章</category>
+            <pubDate>Fri, 31 Jul 2026 00:00:00 +0800</pubDate>
+        </item>
+
+        <item>
+            <title>2026年AI SEO工具终极指南：8款工具让你的网站流量暴涨</title>
+            <link>https://ai.link.cn/articles/ai-seo-tools-guide.html</link>
+            <guid isPermaLink="true">https://ai.link.cn/articles/ai-seo-tools-guide.html</guid>
+            <description>AI SEO工具深度评测：关键词研究、内容优化、技术SEO、链接建设一站式解决方案。Surfer SEO、Clearscope、Semrush等8款工具对比，帮你选对工具实现流量翻倍。</description>
+            <category>文章</category>
+            <pubDate>Mon, 27 Jul 2026 00:00:00 +0800</pubDate>
+        </item>
+
+        <item>
+            <title>2026年用AI副业赚钱：8种实操方法</title>
+            <link>https://ai.link.cn/articles/ai-side-hustle-guide.html</link>
+            <guid isPermaLink="true">https://ai.link.cn/articles/ai-side-hustle-guide.html</guid>
+            <description>2026年用AI副业赚钱的8种实操方法：AI写作接单、AI设计、AI翻译、AI课程制作、AI咨询、AI短视频、AI数字人直播、AI电商，含接单渠道与变现技巧。</description>
+            <category>文章</category>
+            <pubDate>Thu, 23 Jul 2026 00:00:00 +0800</pubDate>
+        </item>
+
+        <item>
+            <title>2026年学生必备AI工具清单：15款神器让学习效率翻倍</title>
+            <link>https://ai.link.cn/articles/ai-student-tools-guide.html</link>
+            <guid isPermaLink="true">https://ai.link.cn/articles/ai-student-tools-guide.html</guid>
+            <description>学生用AI工具提升学习效率。涵盖论文写作、笔记整理、语言学习、编程辅助15款免费/低价AI工具，附价格、使用技巧和预算建议。</description>
+            <category>文章</category>
+            <pubDate>Sun, 26 Jul 2026 00:00:00 +0800</pubDate>
+        </item>
+
+        <item>
+            <title>学生党必备AI工具指南：提升学习效率10倍</title>
+            <link>https://ai.link.cn/articles/ai-tools-for-students.html</link>
+            <guid isPermaLink="true">https://ai.link.cn/articles/ai-tools-for-students.html</guid>
+            <description>学生党必备AI工具指南：覆盖学习辅助、论文写作、笔记整理、语言学习、数学解题、编程学习等场景，推荐最适合学生使用的AI工具，让学习效率提升10倍。</description>
+            <category>文章</category>
+            <pubDate>Thu, 23 Jul 2026 00:00:00 +0800</pubDate>
+        </item>
+
+        <item>
+            <title>2026年AI工具大全总览：200+款AI工具分类导航与深度评测</title>
+            <link>https://ai.link.cn/articles/ai-tools-overview.html</link>
+            <guid isPermaLink="true">https://ai.link.cn/articles/ai-tools-overview.html</guid>
+            <description>AI.link.cn权威AI工具总览页：涵盖对话AI、图像生成、视频制作、编程助手、写作工具、SEO营销、翻译、会议等12大类别200+款AI工具。包含深度评测、价格对比、选型指南和使用教程，助你快速找到最适合的AI工具。</description>
+            <category>文章</category>
+            <pubDate>Sun, 02 Aug 2026 00:00:00 +0800</pubDate>
+        </item>
+
+        <item>
+            <title>2026年AI工具排行榜：50款最强AI工具全收录</title>
+            <link>https://ai.link.cn/articles/ai-tools-ranking-2026.html</link>
+            <guid isPermaLink="true">https://ai.link.cn/articles/ai-tools-ranking-2026.html</guid>
+            <description>2026年最值得使用的50款AI工具大全，按对话、编程、绘画、写作、视频、办公六大类别盘点，含功能简评与适用场景，帮你快速找到最适合的AI工具。</description>
+            <category>文章</category>
+            <pubDate>Wed, 22 Jul 2026 00:00:00 +0800</pubDate>
+        </item>
+
+        <item>
+            <title>2026年AI翻译工具对比：8款工具让翻译效率提升10倍</title>
+            <link>https://ai.link.cn/articles/ai-translation-tools-guide.html</link>
+            <guid isPermaLink="true">https://ai.link.cn/articles/ai-translation-tools-guide.html</guid>
+            <description>AI翻译工具深度评测：DeepL、Google Translate、百度翻译等8款工具对比。支持文档翻译、实时语音、多语言字幕，翻译准确率对比与适用场景分析。</description>
+            <category>文章</category>
+            <pubDate>Mon, 27 Jul 2026 00:00:00 +0800</pubDate>
+        </item>
+
+        <item>
+            <title>2026下半年AI行业十大趋势预测</title>
+            <link>https://ai.link.cn/articles/ai-trends-2026-h2.html</link>
+            <guid isPermaLink="true">https://ai.link.cn/articles/ai-trends-2026-h2.html</guid>
+            <description>2026下半年AI行业十大趋势预测：多模态AI、AI Agent爆发、端侧AI崛起、AI监管政策、开源vs闭源、AI芯片竞争等深度解析，前瞻AGI时代的发展方向。</description>
+            <category>文章</category>
+            <pubDate>Thu, 23 Jul 2026 00:00:00 +0800</pubDate>
+        </item>
+
+    </channel>
+</rss>
