@@ -49,14 +49,26 @@ Allow: /
 User-agent: LinkedInBot
 Allow: /
 
-# 禁止某些用户代理（垃圾爬虫）
+# 仅禁止已知垃圾爬虫，放开SEO监控爬虫（AhrefsBot/SEMrushBot用于外链分析）
 User-agent: MJ12bot
 Disallow: /
 
 User-agent: AhrefsBot
-Disallow: /
+Allow: /
+Crawl-delay: 5
 
 User-agent: SEMrushBot
-Disallow: /
+Allow: /
+Crawl-delay: 5
+
+# AI搜索引擎爬虫（提升AI搜索曝光）
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
 # RSS Feed
 # Feed: https://ai.link.cn/feed.xml
