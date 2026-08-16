@@ -915,6 +915,9 @@
                 const s = site.summary;
                 const color = siteColors[siteId];
                 const crosslink = site.crosslink || {};
+                const failedBadge = site.fetch_ok === false
+                    ? `<div style="margin:10px 0 2px;padding:6px 10px;border-radius:8px;background:rgba(239,68,68,.12);color:#fca5a5;font-size:12px;">⚠ ${site.error || 'GA4 数据获取失败'}</div>`
+                    : '';
 
                 html += `
                 <div class="site-card">
@@ -926,6 +929,7 @@
                             <a href="${site.url}" target="_blank">${site.url.replace('https://', '')}</a>
                         </div>
                     </div>
+                    ${failedBadge}
                     <div class="site-metrics">
                         <div class="metric">
                             <div class="metric-label">会话数</div>
@@ -999,9 +1003,12 @@
                 renderSiteCards(data.sites);
 
                 const genTime = new Date(data.generated_at);
-                const mockLabel = data.summary.has_real_data ? '' : ' (模拟数据)';
+                const failed = data.summary.fetch_failed || 0;
+                const statusLabel = failed > 0
+                    ? ` (${failed}个站点获取失败)`
+                    : ' (GA4实时)';
                 document.getElementById('updateTime').textContent =
-                    genTime.toLocaleString('zh-CN') + mockLabel;
+                    genTime.toLocaleString('zh-CN') + statusLabel;
 
                 return data;
             } catch (e) {
