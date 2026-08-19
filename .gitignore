@@ -51,3 +51,5 @@ Thumbs.db
 # Project specific
 market_data_cache/
 config/config.py  # 包含API密钥，不要提交
+.vercel
+.env*
