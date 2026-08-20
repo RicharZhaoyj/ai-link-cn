@@ -1064,13 +1064,15 @@
                 const data = await res.json();
 
                 renderSummary(data.summary);
+                renderGrowthEvents(data.summary);
                 renderSiteCards(data.sites);
 
                 const genTime = new Date(data.generated_at);
                 const failed = data.summary.fetch_failed || 0;
+                const eventFailed = data.summary.events_fetch_failed || 0;
                 const statusLabel = failed > 0
                     ? ` (${failed}个站点获取失败)`
-                    : ' (GA4实时)';
+                    : eventFailed > 0 ? ` (GA4实时 · ${eventFailed}个事件接口失败)` : ' (GA4实时 · 增长事件)';
                 document.getElementById('updateTime').textContent =
                     genTime.toLocaleString('zh-CN') + statusLabel;
 
