@@ -394,6 +394,29 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-RXRRTBXTJH');
+        document.addEventListener('click', function (event) {
+            const link = event.target.closest && event.target.closest('a[href]');
+            if (!link || typeof window.gtag !== 'function') return;
+            let url;
+            try { url = new URL(link.href, window.location.href); } catch (_) { return; }
+            const siteHosts = {
+                'tools.link.cn': 'tools',
+                'tool.link.cn': 'tool',
+                'prompts.link.cn': 'prompts',
+                'signal.link.cn': 'signal'
+            };
+            const destination = siteHosts[url.hostname];
+            if (destination) {
+                const placement = link.closest('.sister-cards-grid') ? 'sister_cards'
+                    : link.closest('.sister-nav') ? 'sister_nav' : 'footer_or_content';
+                window.gtag('event', 'sister_site_click', {
+                    event_category: 'cross_site_growth',
+                    site: 'ai',
+                    destination: destination,
+                    placement: placement
+                });
+            }
+        });
     </script>
     <!-- JSON-LD: WebSite + SearchAction -->
     <script type="application/ld+json">
