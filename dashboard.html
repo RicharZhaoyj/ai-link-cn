@@ -241,6 +241,16 @@
             background: rgba(239, 68, 68, 0.1);
         }
 
+        .growth-events-note {
+            color: var(--text-muted);
+            font-size: 12px;
+            margin: -12px 0 24px;
+        }
+
+        .event-card .summary-value {
+            color: var(--accent-cyan);
+        }
+
         /* Site Cards */
         .section-title {
             font-size: 18px;
@@ -560,6 +570,37 @@
                 <div class="summary-change up">
                     <span>✓</span> 已完成
                 </div>
+            </div>
+        </div>
+
+        <!-- Growth Events -->
+        <h2 class="section-title">增长事件（近7天）</h2>
+        <p class="growth-events-note" id="growthEventsNote">事件从本轮部署后开始累计；暂无数据不代表埋点未接入。</p>
+        <div class="summary-grid" id="growthEvents">
+            <div class="summary-card event-card" data-event-key="affiliate_click">
+                <div class="summary-label">联盟点击</div>
+                <div class="summary-value">--</div>
+                <div class="summary-change"><span>↗</span> GA4事件</div>
+            </div>
+            <div class="summary-card event-card" data-event-key="copy_prompt">
+                <div class="summary-label">复制提示词</div>
+                <div class="summary-value">--</div>
+                <div class="summary-change"><span>⧉</span> GA4事件</div>
+            </div>
+            <div class="summary-card event-card" data-event-key="share_prompt">
+                <div class="summary-label">分享提示词</div>
+                <div class="summary-value">--</div>
+                <div class="summary-change"><span>↗</span> GA4事件</div>
+            </div>
+            <div class="summary-card event-card" data-event-key="copy_share_link">
+                <div class="summary-label">复制分享链接</div>
+                <div class="summary-value">--</div>
+                <div class="summary-change"><span>🔗</span> GA4事件</div>
+            </div>
+            <div class="summary-card event-card" data-event-key="purchase_intent">
+                <div class="summary-label">购买意向</div>
+                <div class="summary-value">--</div>
+                <div class="summary-change"><span>◎</span> GA4事件</div>
             </div>
         </div>
 
@@ -892,6 +933,29 @@
             cards[3].querySelector('.summary-label').textContent = '总浏览量';
             cards[3].querySelector('.summary-change').className = 'summary-change up';
             cards[3].querySelector('.summary-change').innerHTML = '<span>👥</span> ' + formatNumber(summary.total_users || 0) + ' 用户';
+        }
+
+        function renderGrowthEvents(summary) {
+            const events = summary.tracked_events || {};
+            document.querySelectorAll('[data-event-key]').forEach(card => {
+                const eventName = card.dataset.eventKey;
+                const count = Number(events[eventName] || 0);
+                card.querySelector('.summary-value').textContent = formatNumber(count);
+                const status = card.querySelector('.summary-change');
+                status.className = 'summary-change ' + (count > 0 ? 'up' : '');
+                status.innerHTML = count > 0
+                    ? '<span>✓</span> 已发生'
+                    : '<span>·</span> 等待数据';
+            });
+
+            const configured = summary.events_configured || 0;
+            const failed = summary.events_fetch_failed || 0;
+            const note = document.getElementById('growthEventsNote');
+            if (note) {
+                note.textContent = failed > 0
+                    ? `GA4事件接口：${configured}/5 个站点可用，${failed} 个站点获取失败。`
+                    : `GA4事件接口：${configured}/5 个站点可用；当前周期累计 ${formatNumber(summary.total_tracked_events || 0)} 次。`;
+            }
         }
 
         function renderSiteCards(sites) {
