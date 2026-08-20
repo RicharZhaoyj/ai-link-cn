@@ -394,29 +394,6 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-RXRRTBXTJH');
-        document.addEventListener('click', function (event) {
-            const link = event.target.closest && event.target.closest('a[href]');
-            if (!link || typeof window.gtag !== 'function') return;
-            let url;
-            try { url = new URL(link.href, window.location.href); } catch (_) { return; }
-            const siteHosts = {
-                'tools.link.cn': 'tools',
-                'tool.link.cn': 'tool',
-                'prompts.link.cn': 'prompts',
-                'signal.link.cn': 'signal'
-            };
-            const destination = siteHosts[url.hostname];
-            if (destination) {
-                const placement = link.closest('.sister-cards-grid') ? 'sister_cards'
-                    : link.closest('.sister-nav') ? 'sister_nav' : 'footer_or_content';
-                window.gtag('event', 'sister_site_click', {
-                    event_category: 'cross_site_growth',
-                    site: 'ai',
-                    destination: destination,
-                    placement: placement
-                });
-            }
-        });
     </script>
     <!-- JSON-LD: WebSite + SearchAction -->
     <script type="application/ld+json">
@@ -570,32 +547,39 @@
             </div>
             <div class="article-list">
                 <!-- NEWS_PLACEHOLDER_START -->
-                <a href="https://www.qbitai.com/2026/08/475476.html" class="article-item" target="_blank">
+                <a href="https://www.qbitai.com/2026/08/476120.html" class="article-item" target="_blank">
                     <div class="article-content">
-                        <div class="article-meta">2026.08.19 · 技术前沿</div>
-                        <div class="article-title">写2000字提示词，不如先生成3D白模！AI视频创作进入“预演时代”</div>
-                        <div class="article-summary">AI终于能听严格执行运镜需求</div>
+                        <div class="article-meta">2026.08.20 · 技术前沿</div>
+                        <div class="article-title">宇树科技上市首日大涨629%，世界机器人大会里谁是“下一个宇树”？</div>
+                        <div class="article-summary">这几个玩家或可被“押注”</div>
                     </div>
                 </a>
-                <a href="https://www.qbitai.com/2026/08/475460.html" class="article-item" target="_blank">
+                <a href="https://www.qbitai.com/2026/08/476078.html" class="article-item" target="_blank">
                     <div class="article-content">
-                        <div class="article-meta">2026.08.19 · 技术前沿</div>
-                        <div class="article-title">从沙子到会“思考”的智能材料，张朝阳与物理学家刘若微揭秘世界的底层逻辑</div>
-                        <div class="article-summary">“做物理，要敢于提出蠢问题”</div>
+                        <div class="article-meta">2026.08.20 · 技术前沿</div>
+                        <div class="article-title">墨奇亮相WRC：一台机器人长程任务实战背后的“具身大脑”革命</div>
+                        <div class="article-summary">墨奇智能（MORPHI）首次在国内系统亮相，公开展示其新近发布的具身智能模型架构MoRA</div>
                     </div>
                 </a>
-                <a href="https://www.qbitai.com/2026/08/475332.html" class="article-item" target="_blank">
+                <a href="https://www.qbitai.com/2026/08/476075.html" class="article-item" target="_blank">
                     <div class="article-content">
-                        <div class="article-meta">2026.08.19 · 技术前沿</div>
-                        <div class="article-title">AI for Science开始“动手”了：机器人正式走进国家级实验室</div>
-                        <div class="article-summary">源络科技，推动AI for Science走进实验室3.0</div>
+                        <div class="article-meta">2026.08.20 · 技术前沿</div>
+                        <div class="article-title">完美世界2026半年报：《异环》全球流水破20亿 Q3起释放业绩</div>
+                        <div class="article-summary">完美世界今年4月底推出的重磅新游《异环》截至8月18日已取得全球累计流水超20亿元，业绩贡献将在Q3起逐步释放</div>
                     </div>
                 </a>
-                <a href="https://www.qbitai.com/2026/08/475009.html" class="article-item" target="_blank">
+                <a href="https://www.qbitai.com/2026/08/476070.html" class="article-item" target="_blank">
                     <div class="article-content">
-                        <div class="article-meta">2026.08.19 · 技术前沿</div>
-                        <div class="article-title">郭富城换车，30万级顶配华为全家桶</div>
-                        <div class="article-summary">5.3米六座家用SUV</div>
+                        <div class="article-meta">2026.08.20 · 技术前沿</div>
+                        <div class="article-title">华尔街实测8款全球主流Agent：千问办公综合排名第一</div>
+                        <div class="article-summary">成本也正成为Agent商业化需要考虑的重要因素</div>
+                    </div>
+                </a>
+                <a href="https://venturebeat.com/ai/venturebeat-names-rob-strechay-as-its-first-lead-analyst-expanding-its-enterprise-ai-research-push" class="article-item" target="_blank">
+                    <div class="article-content">
+                        <div class="article-meta">2026.08.19 · 企业应用</div>
+                        <div class="article-title">VentureBeat names Rob Strechay as its first Lead Analyst, expanding it...</div>
+                        <div class="article-summary">Rob Strechay, until recently managing director and principal analyst at theCUBE Research, has joined VentureBeat as our ...</div>
                     </div>
                 </a>
                 <a href="https://techcrunch.com/2026/08/12/as-ai-safety-concerns-mount-three-pioneers-make-the-case-for-staying-open/" class="article-item" target="_blank">
@@ -617,13 +601,6 @@
                         <div class="article-meta">2026.04.27 · 全球动态</div>
                         <div class="article-title">Data center demand drives 66% surge in natural gas power plant costs</div>
                         <div class="article-summary">Natural gas power plant costs have nearly doubled in two years and take 23% longer to build as data center electricity d...</div>
-                    </div>
-                </a>
-                <a href="https://venturebeat.com/infrastructure/railway-secures-usd100-million-to-challenge-aws-with-ai-native-cloud" class="article-item" target="_blank">
-                    <div class="article-content">
-                        <div class="article-meta">2026.01.22 · 企业应用</div>
-                        <div class="article-title">Railway secures $100 million to challenge AWS with AI-native cloud inf...</div>
-                        <div class="article-summary">Railway, a San Francisco-based cloud platform that has quietly amassed two million developers without spending a dollar ...</div>
                     </div>
                 </a>
             </div>
