@@ -276,6 +276,33 @@
             margin-bottom: 40px;
         }
 
+        .diagnostic-list {
+            list-style: none;
+            padding: 0;
+            margin: 6px 0 0;
+            display: grid;
+            gap: 5px;
+        }
+
+        .diagnostic-list li {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            line-height: 1.4;
+        }
+
+        .diagnostic-list li span {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .diagnostic-list li strong {
+            color: var(--text-primary);
+            white-space: nowrap;
+            font-weight: 500;
+        }
+
         .site-card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
@@ -838,6 +865,13 @@
             </div>
         </div>
 
+        <!-- Traffic Quality Diagnostics -->
+        <h2 class="section-title">流量质量诊断</h2>
+        <p style="color: var(--text-secondary); margin: -8px 0 18px; font-size: 13px;">
+            按来源、入口页和热门页面拆分近 7 天数据，用于判断哪些流量值得继续投入。
+        </p>
+        <div id="trafficDiagnostics" class="sites-grid"></div>
+
         <!-- GA4 Quick Access -->
         <h2 class="section-title">GA4 快速访问</h2>
         <div class="ga4-section">
@@ -904,6 +938,12 @@
         function formatChange(pct) {
             const sign = pct >= 0 ? '+' : '';
             return sign + pct.toFixed(1) + '%';
+        }
+
+        function escapeHtml(value) {
+            return String(value ?? '').replace(/[&<>"']/g, ch => ({
+                '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+            }[ch]));
         }
 
         function buildChartBars(dailyData, metric) {
@@ -1059,6 +1099,47 @@
             });
         }
 
+        function renderTrafficDiagnostics(sites) {
+            const grid = document.getElementById('trafficDiagnostics');
+            if (!grid) return;
+
+            const siteOrder = ['ai-link-cn', 'signal-crypto', 'tool-link-cn', 'ai-tool-hub', 'prompts-repo'];
+            let html = '';
+            siteOrder.forEach(siteId => {
+                const site = sites[siteId];
+                const breakdown = site && site.breakdowns;
+                if (!site || !breakdown) return;
+
+                const sourceRows = (breakdown.sources || []).slice(0, 3).map(item =>
+                    `<li><span>${escapeHtml(item.source)}</span><strong>${formatNumber(item.sessions)} 会话</strong></li>`
+                ).join('');
+                const landingRows = (breakdown.landing_pages || []).slice(0, 3).map(item =>
+                    `<li><span>${escapeHtml(item.path)}</span><strong>${formatNumber(item.sessions)} · ${formatNumber(item.bounce_rate)}% 跳出</strong></li>`
+                ).join('');
+                const pageRows = (breakdown.pages || []).slice(0, 3).map(item =>
+                    `<li><span>${escapeHtml(item.path)}</span><strong>${formatNumber(item.pageviews)} 浏览</strong></li>`
+                ).join('');
+                const empty = '<li><span style="color:var(--text-muted)">暂无数据</span></li>';
+
+                html += `
+                <div class="site-card">
+                    <div class="site-header">
+                        <div class="site-icon">${site.icon}</div>
+                        <div class="site-info">
+                            <h3>${escapeHtml(site.name)}</h3>
+                            <a href="${escapeHtml(site.url)}" target="_blank">${escapeHtml(site.url.replace('https://', ''))}</a>
+                        </div>
+                    </div>
+                    <div style="display:grid;gap:12px;font-size:12px;color:var(--text-secondary);">
+                        <div><div class="metric-label">主要来源</div><ul class="diagnostic-list">${sourceRows || empty}</ul></div>
+                        <div><div class="metric-label">主要入口页</div><ul class="diagnostic-list">${landingRows || empty}</ul></div>
+                        <div><div class="metric-label">热门页面</div><ul class="diagnostic-list">${pageRows || empty}</ul></div>
+                    </div>
+                </div>`;
+            });
+            grid.innerHTML = html;
+        }
+
         function setLoading(isLoading) {
             const timeEl = document.getElementById('updateTime');
             if (isLoading) {
@@ -1076,6 +1157,7 @@
                 renderSummary(data.summary);
                 renderGrowthEvents(data.summary);
                 renderSiteCards(data.sites);
+                renderTrafficDiagnostics(data.sites);
 
                 const genTime = new Date(data.generated_at);
                 const failed = data.summary.fetch_failed || 0;
