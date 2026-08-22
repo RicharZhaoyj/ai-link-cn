@@ -286,6 +286,53 @@
             font-size: 0.75rem;
         }
         
+        /* Prompt Funnel CTA */
+        .prompt-cta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+            margin-top: 24px;
+            padding: 24px 28px;
+            border: 1px solid rgba(34, 197, 94, 0.35);
+            border-radius: 16px;
+            background: linear-gradient(110deg, rgba(34, 197, 94, 0.12), rgba(168, 85, 247, 0.08));
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .prompt-cta:hover {
+            transform: translateY(-2px);
+            border-color: #22c55e;
+        }
+
+        .prompt-cta-eyebrow {
+            color: #4ade80;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .prompt-cta h3 {
+            font-size: 1.2rem;
+            margin-bottom: 6px;
+        }
+
+        .prompt-cta p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .prompt-cta-action {
+            flex-shrink: 0;
+            color: #86efac;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
         /* News Section */
         .news-section {
             padding: 60px 0;
@@ -491,7 +538,12 @@
                     <div class="sister-card-name">AI工具LTD</div>
                     <div class="sister-card-desc">终身买断授权方案</div>
                 </a>
-                <a href="https://prompts.link.cn" class="sister-card" target="_blank">
+                <a href="https://prompts.link.cn/?utm_source=ailink&utm_medium=homepage&utm_campaign=prompt_funnel&utm_content=homepage_sister_card"
+                   class="sister-card"
+                   data-growth-placement="homepage_sister_card"
+                   target="_blank"
+                   rel="noopener"
+                   onclick="gtag('event', 'sister_site_click', {site: 'prompts', placement: 'homepage_sister_card'});">
                     <div class="sister-card-icon prompts">💬</div>
                     <div class="sister-card-name">AI提示词库</div>
                     <div class="sister-card-desc">免费高质量Prompt</div>
@@ -536,6 +588,19 @@
                     </div>
                 </a>
             </div>
+            <a href="https://prompts.link.cn/?utm_source=ailink&utm_medium=homepage&utm_campaign=prompt_funnel&utm_content=homepage_prompt_cta"
+               class="prompt-cta"
+               data-growth-placement="homepage_prompt_cta"
+               target="_blank"
+               rel="noopener"
+               onclick="gtag('event', 'sister_site_click', {site: 'prompts', placement: 'homepage_prompt_cta'});">
+                <div>
+                    <div class="prompt-cta-eyebrow">AI 工作流资源</div>
+                    <h3>找到能直接复制使用的 Prompt 模板</h3>
+                    <p>从写作、图像生成到编程，按场景快速开始。</p>
+                </div>
+                <span class="prompt-cta-action">浏览提示词 →</span>
+            </a>
         </div>
     </div>
 
