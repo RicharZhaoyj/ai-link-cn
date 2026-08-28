@@ -1,9 +1,14 @@
-name: Update AI News Daily
+name: Update AI News Periodically
 
 on:
   schedule:
-    - cron: '0 8 * * *'
+    # GitHub Actions uses UTC: 00:00/08:00/16:00 UTC = 08:00/16:00/00:00 Beijing.
+    - cron: '0 0,8,16 * * *'
   workflow_dispatch:
+
+concurrency:
+  group: ai-news-update
+  cancel-in-progress: false
 
 permissions:
   contents: write
