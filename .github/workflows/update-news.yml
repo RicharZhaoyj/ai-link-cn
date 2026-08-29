@@ -35,7 +35,7 @@ jobs:
         run: |
           git config user.name "AI News Bot"
           git config user.email "bot@ailink.cn"
-          git add index.html
+          git add index.html sitemap.xml
 
           if git diff --staged --quiet; then
             echo "No changes to commit"

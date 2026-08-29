@@ -203,6 +203,37 @@ def update_articles_in_html(news_list):
     print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M')}] 成功更新 {len(news_list)} 条 AI 新闻，更新日期: {today}")
     return True
 
+def update_homepage_sitemap_lastmod():
+    """同步首页 sitemap 的 lastmod，避免资讯已更新但搜索引擎仍看到旧日期。"""
+    sitemap_path = "sitemap.xml"
+    if not os.path.exists(sitemap_path):
+        print("提示: 未找到 sitemap.xml，跳过首页 lastmod 同步")
+        return False
+
+    with open(sitemap_path, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    today = datetime.now().strftime("%Y-%m-%d")
+    pattern = r"(<loc>https://ai\.link\.cn/</loc>\s*<lastmod>)[^<]+(</lastmod>)"
+    updated_content, replacements = re.subn(
+        pattern,
+        rf"\g<1>{today}\g<2>",
+        content,
+        count=1,
+    )
+
+    if replacements == 0:
+        print("提示: 未找到首页 sitemap 条目，跳过 lastmod 同步")
+        return False
+    if updated_content == content:
+        print(f"首页 sitemap lastmod 已是 {today}")
+        return False
+
+    with open(sitemap_path, "w", encoding="utf-8") as f:
+        f.write(updated_content)
+    print(f"已同步首页 sitemap lastmod: {today}")
+    return True
+
 if __name__ == "__main__":
     print("=" * 60)
     print(f"  AI 新闻更新脚本 - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
@@ -220,6 +251,7 @@ if __name__ == "__main__":
         success = update_articles_in_html(news)
         
         if success:
+            update_homepage_sitemap_lastmod()
             print("\n✅ 更新完成！")
         else:
             print("\n❌ 更新失败")
