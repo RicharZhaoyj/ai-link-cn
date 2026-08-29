@@ -722,7 +722,7 @@
         </div>
 
         <!-- Site Cards -->
-        <h2 class="section-title">站点流量概览</h2>
+        <h2 class="section-title">站点流量概览（近7天，较前7天）</h2>
         <div class="sites-grid">
             <!-- ai.link.cn -->
             <div class="site-card">
@@ -1015,9 +1015,21 @@
             return pct.toFixed(1) + '%';
         }
 
-        function formatChange(pct) {
-            const sign = pct >= 0 ? '+' : '';
-            return sign + pct.toFixed(1) + '%';
+        function formatChange(pct, currentValue, comparisonAvailable = true) {
+            if (!comparisonAvailable) return '待对比';
+            if (pct === null || pct === undefined || Number.isNaN(Number(pct))) {
+                return Number(currentValue || 0) > 0 ? '新增' : '—';
+            }
+            const value = Number(pct);
+            const sign = value > 0 ? '+' : '';
+            return sign + value.toFixed(1) + '%';
+        }
+
+        function changeColor(pct, comparisonAvailable = true) {
+            if (!comparisonAvailable) return 'var(--text-muted)';
+            return pct === null || pct === undefined || Number(pct) >= 0
+                ? 'var(--accent-green)'
+                : 'var(--accent-red)';
         }
 
         function escapeHtml(value) {
@@ -1055,14 +1067,21 @@
             cards[2].querySelector('.summary-value').innerHTML =
                 formatNumber(summary.total_sessions || 0);
             cards[2].querySelector('.summary-label').textContent = '总会话数';
-            cards[2].querySelector('.summary-change').className = 'summary-change up';
-            cards[2].querySelector('.summary-change').innerHTML = '<span>↻</span> 7天';
+            const comparisonAvailable = summary.comparison_available !== false;
+            cards[2].querySelector('.summary-change').className =
+                'summary-change ' + (comparisonAvailable ? 'up' : '');
+            cards[2].querySelector('.summary-change').innerHTML =
+                '<span>↗</span> 较前' + (summary.comparison_period_days || 7) + '天 ' +
+                formatChange(summary.sessions_change, summary.total_sessions, comparisonAvailable);
 
             cards[3].querySelector('.summary-value').innerHTML =
                 formatNumber(summary.total_pageviews || 0);
             cards[3].querySelector('.summary-label').textContent = '总浏览量';
-            cards[3].querySelector('.summary-change').className = 'summary-change up';
-            cards[3].querySelector('.summary-change').innerHTML = '<span>👥</span> ' + formatNumber(summary.total_users || 0) + ' 用户';
+            cards[3].querySelector('.summary-change').className =
+                'summary-change ' + (comparisonAvailable ? 'up' : '');
+            cards[3].querySelector('.summary-change').innerHTML =
+                '<span>👥</span> ' + formatNumber(summary.total_users || 0) + ' 用户 · ' +
+                formatChange(summary.pageviews_change, summary.total_pageviews, comparisonAvailable);
         }
 
         function renderGrowthEvents(summary) {
@@ -1109,6 +1128,7 @@
                 const s = site.summary;
                 const color = siteColors[siteId];
                 const crosslink = site.crosslink || {};
+                const comparisonAvailable = s.comparison_available !== false;
                 const failedBadge = site.fetch_ok === false
                     ? `<div style="margin:10px 0 2px;padding:6px 10px;border-radius:8px;background:rgba(239,68,68,.12);color:#fca5a5;font-size:12px;">⚠ ${site.error || 'GA4 数据获取失败'}</div>`
                     : '';
@@ -1128,18 +1148,26 @@
                         <div class="metric">
                             <div class="metric-label">会话数</div>
                             <div class="metric-value">${formatNumber(s.sessions)}
-                                <span style="font-size:11px; ${s.sessions_change >= 0 ? 'color: var(--accent-green)' : 'color: var(--accent-red)'}; margin-left:8px;">
-                                    ${formatChange(s.sessions_change)}
+                                <span style="font-size:11px; color: ${changeColor(s.sessions_change, comparisonAvailable)}; margin-left:8px;">
+                                    ${formatChange(s.sessions_change, s.sessions, comparisonAvailable)}
                                 </span>
                             </div>
                         </div>
                         <div class="metric">
                             <div class="metric-label">用户数</div>
-                            <div class="metric-value">${formatNumber(s.users)}</div>
+                            <div class="metric-value">${formatNumber(s.users)}
+                                <span style="font-size:11px; color: ${changeColor(s.users_change, comparisonAvailable)}; margin-left:8px;">
+                                    ${formatChange(s.users_change, s.users, comparisonAvailable)}
+                                </span>
+                            </div>
                         </div>
                         <div class="metric">
                             <div class="metric-label">浏览量</div>
-                            <div class="metric-value">${formatNumber(s.pageviews)}</div>
+                            <div class="metric-value">${formatNumber(s.pageviews)}
+                                <span style="font-size:11px; color: ${changeColor(s.pageviews_change, comparisonAvailable)}; margin-left:8px;">
+                                    ${formatChange(s.pageviews_change, s.pageviews, comparisonAvailable)}
+                                </span>
+                            </div>
                         </div>
                         <div class="metric">
                             <div class="metric-label">平均时长</div>
