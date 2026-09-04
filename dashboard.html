@@ -559,7 +559,7 @@
                 <div class="logo">📊</div>
                 <div>
                     <h1 class="header-title">LINK.CN 流量监控面板</h1>
-                    <div class="header-subtitle">5个站点 · 统一监控 · 实时追踪</div>
+                    <div class="header-subtitle">5个站点 · 完整日统计 · 不含今天</div>
                 </div>
             </div>
             <div class="update-time">
@@ -568,40 +568,55 @@
             </div>
         </header>
 
+        <section aria-label="统计周期" style="margin-bottom:24px;">
+            <label for="periodDays">统计范围</label>
+            <select id="periodDays" style="margin:0 16px 8px 8px;padding:8px;border-radius:8px;">
+                <option value="7">完整7天</option>
+                <option value="30">完整30天</option>
+            </select>
+            <label for="endLagDays">截至日期</label>
+            <select id="endLagDays" style="margin:0 0 8px 8px;padding:8px;border-radius:8px;">
+                <option value="1">昨天（可能回补）</option>
+                <option value="2">前天（较稳定）</option>
+            </select>
+            <p id="periodNote" role="status" aria-live="polite" class="growth-events-note">正在读取实际统计日期…</p>
+            <p class="growth-events-note">Asia/Shanghai；GA4近24–48小时数据仍可能回补。用户在各站周期内去重，五站合计未跨站去重；跳出率与平均时长使用周期汇总，不对每日比例取平均。</p>
+        </section>
+
         <!-- Summary Cards -->
         <div class="summary-grid">
             <div class="summary-card">
                 <div class="summary-label">总站点数</div>
                 <div class="summary-value">5</div>
                 <div class="summary-change up">
-                    <span>↗</span> 全部运行中
+                    <span>·</span> 纳入统计（非运行健康检测）
                 </div>
             </div>
             <div class="summary-card">
                 <div class="summary-label">GA4配置</div>
-                <div class="summary-value">5<span style="font-size:16px;color:var(--text-muted)">/5</span></div>
+                <div class="summary-value">—<span style="font-size:16px;color:var(--text-muted)">/5</span></div>
                 <div class="summary-change up">
-                    <span>✓</span> 已配置
+                    <span>·</span> 等待接口数据
                 </div>
             </div>
             <div class="summary-card">
-                <div class="summary-label">自动更新</div>
-                <div class="summary-value">4<span style="font-size:16px;color:var(--text-muted)">/5</span></div>
+                <div class="summary-label">总会话数</div>
+                <div class="summary-value">—</div>
                 <div class="summary-change up">
-                    <span>↻</span> 运行中
+                    <span>·</span> 等待数据
                 </div>
             </div>
             <div class="summary-card">
-                <div class="summary-label">交叉链接</div>
-                <div class="summary-value">100<span style="font-size:16px;color:var(--text-muted)">%</span></div>
+                <div class="summary-label">总浏览量</div>
+                <div class="summary-value">—</div>
                 <div class="summary-change up">
-                    <span>✓</span> 已完成
+                    <span>·</span> 等待数据
                 </div>
             </div>
         </div>
 
         <!-- Growth Events -->
-        <h2 class="section-title">增长事件（近7天）</h2>
+        <h2 class="section-title" id="growthEventsTitle">增长事件（完整7天）</h2>
         <p class="growth-events-note" id="growthEventsNote">事件从本轮部署后开始累计；暂无数据不代表埋点未接入。</p>
         <div class="summary-grid" id="growthEvents">
             <div class="summary-card event-card" data-event-key="affiliate_click">
@@ -737,7 +752,7 @@
         </div>
 
         <!-- Site Cards -->
-        <h2 class="section-title">站点流量概览（近7天，较前7天）</h2>
+        <h2 class="section-title" id="siteOverviewTitle">站点流量概览（完整7天，较前7天）</h2>
         <div class="sites-grid">
             <!-- ai.link.cn -->
             <div class="site-card">
@@ -1033,7 +1048,7 @@
         function formatChange(pct, currentValue, comparisonAvailable = true) {
             if (!comparisonAvailable) return '待对比';
             if (pct === null || pct === undefined || Number.isNaN(Number(pct))) {
-                return Number(currentValue || 0) > 0 ? '新增' : '—';
+                return Number(currentValue || 0) > 0 ? '新增（前期为0）' : '无基数';
             }
             const value = Number(pct);
             const sign = value > 0 ? '+' : '';
@@ -1042,7 +1057,8 @@
 
         function changeColor(pct, comparisonAvailable = true) {
             if (!comparisonAvailable) return 'var(--text-muted)';
-            return pct === null || pct === undefined || Number(pct) >= 0
+            if (pct === null || pct === undefined) return 'var(--text-muted)';
+            return Number(pct) >= 0
                 ? 'var(--accent-green)'
                 : 'var(--accent-red)';
         }
@@ -1070,7 +1086,7 @@
 
             cards[0].querySelector('.summary-value').textContent = summary.total_sites;
             cards[0].querySelector('.summary-change').innerHTML =
-                '<span>↗</span> 全部运行中';
+                '<span>·</span> 纳入统计（非运行健康检测）';
 
             cards[1].querySelector('.summary-value').innerHTML =
                 summary.ga4_configured + '<span style="font-size:16px;color:var(--text-muted)">/5</span>';
@@ -1080,22 +1096,22 @@
                 summary.ga4_configured > 0 ? '<span>✓</span> 已接入' : '<span>⚠</span> 待配置';
 
             cards[2].querySelector('.summary-value').innerHTML =
-                formatNumber(summary.total_sessions || 0);
-            cards[2].querySelector('.summary-label').textContent = '总会话数';
+                summary.has_real_data ? formatNumber(summary.total_sessions || 0) : '—';
+            cards[2].querySelector('.summary-label').textContent = summary.fetch_failed > 0 ? '总会话数（部分/待更新）' : '总会话数';
             const comparisonAvailable = summary.comparison_available !== false;
             cards[2].querySelector('.summary-change').className =
-                'summary-change ' + (comparisonAvailable ? 'up' : '');
+                'summary-change ' + (comparisonAvailable && summary.sessions_change != null ? (summary.sessions_change < 0 ? 'down' : 'up') : '');
             cards[2].querySelector('.summary-change').innerHTML =
-                '<span>↗</span> 较前' + (summary.comparison_period_days || 7) + '天 ' +
+                '<span>' + (summary.sessions_change < 0 ? '↘' : '↗') + '</span> 较前' + (summary.comparison_period_days || 7) + '天 ' +
                 formatChange(summary.sessions_change, summary.total_sessions, comparisonAvailable);
 
             cards[3].querySelector('.summary-value').innerHTML =
-                formatNumber(summary.total_pageviews || 0);
-            cards[3].querySelector('.summary-label').textContent = '总浏览量';
+                summary.has_real_data ? formatNumber(summary.total_pageviews || 0) : '—';
+            cards[3].querySelector('.summary-label').textContent = summary.fetch_failed > 0 ? '总浏览量（部分/待更新）' : '总浏览量';
             cards[3].querySelector('.summary-change').className =
-                'summary-change ' + (comparisonAvailable ? 'up' : '');
+                'summary-change ' + (comparisonAvailable && summary.pageviews_change != null ? (summary.pageviews_change < 0 ? 'down' : 'up') : '');
             cards[3].querySelector('.summary-change').innerHTML =
-                '<span>👥</span> ' + formatNumber(summary.total_users || 0) + ' 用户 · ' +
+                '<span>👥</span> ' + (summary.has_real_data ? formatNumber(summary.total_users || 0) : '—') + ' 五站用户合计 · ' +
                 formatChange(summary.pageviews_change, summary.total_pageviews, comparisonAvailable);
         }
 
@@ -1104,7 +1120,8 @@
             document.querySelectorAll('[data-event-key]').forEach(card => {
                 const eventName = card.dataset.eventKey;
                 const count = Number(events[eventName] || 0);
-                card.querySelector('.summary-value').textContent = formatNumber(count);
+                card.querySelector('.summary-value').textContent = summary.events_fetch_failed > 0
+                    ? (count > 0 ? formatNumber(count) + '（部分）' : '—') : formatNumber(count);
                 const status = card.querySelector('.summary-change');
                 status.className = 'summary-change ' + (count > 0 ? 'up' : '');
                 status.innerHTML = count > 0
@@ -1162,15 +1179,15 @@
                     <div class="site-metrics">
                         <div class="metric">
                             <div class="metric-label">会话数</div>
-                            <div class="metric-value">${formatNumber(s.sessions)}
+                            <div class="metric-value">${site.fetch_ok ? formatNumber(s.sessions) : '—'}
                                 <span style="font-size:11px; color: ${changeColor(s.sessions_change, comparisonAvailable)}; margin-left:8px;">
                                     ${formatChange(s.sessions_change, s.sessions, comparisonAvailable)}
                                 </span>
                             </div>
                         </div>
                         <div class="metric">
-                            <div class="metric-label">用户数</div>
-                            <div class="metric-value">${formatNumber(s.users)}
+                            <div class="metric-label">周期活跃用户</div>
+                            <div class="metric-value">${site.fetch_ok ? formatNumber(s.users) : '—'}
                                 <span style="font-size:11px; color: ${changeColor(s.users_change, comparisonAvailable)}; margin-left:8px;">
                                     ${formatChange(s.users_change, s.users, comparisonAvailable)}
                                 </span>
@@ -1178,7 +1195,7 @@
                         </div>
                         <div class="metric">
                             <div class="metric-label">浏览量</div>
-                            <div class="metric-value">${formatNumber(s.pageviews)}
+                            <div class="metric-value">${site.fetch_ok ? formatNumber(s.pageviews) : '—'}
                                 <span style="font-size:11px; color: ${changeColor(s.pageviews_change, comparisonAvailable)}; margin-left:8px;">
                                     ${formatChange(s.pageviews_change, s.pageviews, comparisonAvailable)}
                                 </span>
@@ -1186,7 +1203,7 @@
                         </div>
                         <div class="metric">
                             <div class="metric-label">平均时长</div>
-                            <div class="metric-value" style="font-size:16px;">${formatDuration(s.avg_duration)}</div>
+                            <div class="metric-value" style="font-size:16px;">${site.fetch_ok && s.sessions > 0 ? formatDuration(s.avg_duration) : '—'}</div>
                         </div>
                     </div>
                     <div class="mini-chart" style="color: ${color};">
@@ -1267,15 +1284,35 @@
             const timeEl = document.getElementById('updateTime');
             if (isLoading) {
                 timeEl.textContent = '加载中...';
+                document.getElementById('periodNote').textContent = '正在加载所选周期；下方暂保留上次结果，请等待日期更新。';
             }
         }
 
+        let requestSequence = 0;
+        let backgroundRefreshTimer;
         async function fetchData() {
+            clearTimeout(backgroundRefreshTimer);
+            const sequence = ++requestSequence;
+            const days = document.getElementById('periodDays').value;
+            const lag = document.getElementById('endLagDays').value;
             setLoading(true);
+            const controller = new AbortController();
+            const requestTimeout = setTimeout(() => controller.abort(), 15000);
             try {
-                const res = await fetch(API_BASE + '/api/traffic?days=7');
+                const res = await fetch(API_BASE + '/api/traffic?days=' + days + '&end_lag_days=' + lag, { signal: controller.signal });
                 if (!res.ok) throw new Error('API error');
                 const data = await res.json();
+                if (sequence !== requestSequence) return null;
+
+                const period = data.period;
+                const periodNote = document.getElementById('periodNote');
+                periodNote.textContent = period
+                    ? '本期 ' + period.current.start_date + ' 至 ' + period.current.end_date +
+                      ' ｜ 对比 ' + period.previous.start_date + ' 至 ' + period.previous.end_date +
+                      ' ｜ ' + (data.refreshing ? '后台刷新中，当前可能仅有部分站点数据' : '已返回 ' + data.summary.ga4_configured + '/5 站数据')
+                    : '统计日期未返回，请检查本地服务版本；暂不将结果视为完整日比较。';
+                document.getElementById('growthEventsTitle').textContent = '增长事件（完整' + days + '天）';
+                document.getElementById('siteOverviewTitle').textContent = '站点流量概览（完整' + days + '天，较前' + days + '天）';
 
                 renderSummary(data.summary);
                 renderGrowthEvents(data.summary);
@@ -1285,17 +1322,30 @@
                 const genTime = new Date(data.generated_at);
                 const failed = data.summary.fetch_failed || 0;
                 const eventFailed = data.summary.events_fetch_failed || 0;
-                const statusLabel = failed > 0
+                const statusLabel = data.refreshing
+                    ? ' (GA4后台刷新中 · 暂无可用对比)'
+                    : failed > 0
                     ? ` (${failed}个站点获取失败)`
-                    : eventFailed > 0 ? ` (GA4实时 · ${eventFailed}个事件接口失败)` : ' (GA4实时 · 增长事件)';
+                    : eventFailed > 0 ? ` (GA4完整日 · ${eventFailed}个事件接口失败)` : ' (GA4完整日 · 数据可能回补)';
                 document.getElementById('updateTime').textContent =
                     genTime.toLocaleString('zh-CN') + statusLabel;
 
+                if (data.refreshing) {
+                    backgroundRefreshTimer = setTimeout(() => {
+                        if (sequence === requestSequence) fetchData();
+                    }, 10000);
+                }
+
                 return data;
             } catch (e) {
+                if (sequence !== requestSequence) return null;
                 console.error('Failed to fetch data:', e);
-                document.getElementById('updateTime').textContent = '加载失败 · 请启动 dashboard_server.py';
+                document.getElementById('updateTime').textContent = e.name === 'AbortError'
+                    ? '请求超时 · GA4正在后台更新，请稍后刷新'
+                    : '加载失败 · 请启动 dashboard_server.py';
                 return null;
+            } finally {
+                clearTimeout(requestTimeout);
             }
         }
 
@@ -1311,6 +1361,8 @@
         setInterval(updateTime, 1000);
 
         fetchData();
+        document.getElementById('periodDays').addEventListener('change', fetchData);
+        document.getElementById('endLagDays').addEventListener('change', fetchData);
         setInterval(fetchData, 5 * 60 * 1000);
     </script>
 </body>
