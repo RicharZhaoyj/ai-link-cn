@@ -1305,6 +1305,9 @@
                 if (sequence !== requestSequence) return null;
 
                 const period = data.period;
+                if (!period || period.includes_today !== false) {
+                    throw new Error('REPORTING_PERIOD_REQUIRED');
+                }
                 const periodNote = document.getElementById('periodNote');
                 periodNote.textContent = period
                     ? '本期 ' + period.current.start_date + ' 至 ' + period.current.end_date +
@@ -1339,6 +1342,11 @@
                 return data;
             } catch (e) {
                 if (sequence !== requestSequence) return null;
+                if (e.message === 'REPORTING_PERIOD_REQUIRED') {
+                    document.getElementById('periodNote').textContent = '本地服务仍是旧统计口径；请重启 dashboard_server.py。暂不展示旧口径环比。';
+                    document.getElementById('updateTime').textContent = '服务需要重启以加载修复';
+                    return null;
+                }
                 console.error('Failed to fetch data:', e);
                 document.getElementById('updateTime').textContent = e.name === 'AbortError'
                     ? '请求超时 · GA4正在后台更新，请稍后刷新'
