@@ -139,15 +139,16 @@ def fetch_news(limit=8):
 
 def update_articles_in_html(news_list):
     """更新 index.html 中的文章列表 - 使用模板文件"""
-    import shutil
-    
-    # 先检查是否有模板文件
+    with open("index.html", "r", encoding="utf-8") as f:
+        existing_content = f.read()
+
+    # 使用模板生成候选首页，但先与当前首页比较，避免仅刷新 sitemap 日期。
     template_path = "index_template.html"
     if os.path.exists(template_path):
-        shutil.copy(template_path, "index.html")
-    
-    with open("index.html", "r", encoding="utf-8") as f:
-        content = f.read()
+        with open(template_path, "r", encoding="utf-8") as f:
+            content = f.read()
+    else:
+        content = existing_content
     
     today = datetime.now().strftime("%Y.%m.%d")
     
@@ -197,9 +198,13 @@ def update_articles_in_html(news_list):
             + content[start_idx + len(start_marker):]
         )
     
+    if new_content == existing_content:
+        print("新闻内容无实质变化，保持 index.html 与 sitemap lastmod 不变")
+        return False
+
     with open("index.html", "w", encoding="utf-8") as f:
         f.write(new_content)
-    
+
     print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M')}] 成功更新 {len(news_list)} 条 AI 新闻，更新日期: {today}")
     return True
 
@@ -248,12 +253,12 @@ if __name__ == "__main__":
             print(f"  {i}. [{item['date_str']}] {item['title'][:50]}...")
         
         print(f"\n正在更新 index.html...")
-        success = update_articles_in_html(news)
-        
-        if success:
+        content_changed = update_articles_in_html(news)
+
+        if content_changed:
             update_homepage_sitemap_lastmod()
             print("\n✅ 更新完成！")
         else:
-            print("\n❌ 更新失败")
+            print("\n✅ RSS 检查完成，无需更新")
     else:
         print("\n❌ 未获取到任何新闻")
