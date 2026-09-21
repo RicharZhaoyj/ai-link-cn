@@ -307,10 +307,12 @@ if __name__ == "__main__":
         
         print(f"\n正在更新 index.html...")
         content_changed = update_articles_in_html(news)
+        feed_changed = update_rss_feed(news)
 
         if content_changed:
             update_homepage_sitemap_lastmod()
-            update_rss_feed(news)
+
+        if content_changed or feed_changed:
             print("\n✅ 更新完成！")
         else:
             print("\n✅ RSS 检查完成，无需更新")
