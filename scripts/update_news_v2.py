@@ -10,8 +10,9 @@ import feedparser
 import os
 import re
 import html
-from datetime import datetime, timedelta
-from email.utils import parsedate_to_datetime
+from datetime import datetime, timedelta, timezone
+from email.utils import format_datetime, parsedate_to_datetime
+from xml.sax.saxutils import escape
 
 RSS_FEEDS = [
     {
@@ -239,6 +240,58 @@ def update_homepage_sitemap_lastmod():
     print(f"已同步首页 sitemap lastmod: {today}")
     return True
 
+def update_rss_feed(news_list):
+    """用本次抓取到的新闻同步 RSS，避免 feed.xml 长期停留在旧内容。"""
+    now = datetime.now().astimezone()
+
+    def rss_date(value):
+        if value.tzinfo is None:
+            value = value.replace(tzinfo=timezone.utc)
+        return format_datetime(value)
+
+    items = []
+    for item in news_list:
+        title = escape(item["title"])
+        link = escape(item["link"])
+        description = escape(item["summary"] or item["title"])
+        category = escape(item["category"])
+        items.append(f"""        <item>
+            <title>{title}</title>
+            <link>{link}</link>
+            <guid isPermaLink=\"true\">{link}</guid>
+            <description>{description}</description>
+            <category>{category}</category>
+            <pubDate>{rss_date(item["date"])}</pubDate>
+        </item>""")
+
+    feed = f"""<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<rss version=\"2.0\" xmlns:atom=\"http://www.w3.org/2005/Atom\">
+    <channel>
+        <title>AI资讯新闻</title>
+        <link>https://ai.link.cn/</link>
+        <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
+        <language>zh-CN</language>
+        <lastBuildDate>{format_datetime(now)}</lastBuildDate>
+        <atom:link href=\"https://ai.link.cn/feed.xml\" rel=\"self\" type=\"application/rss+xml\" />
+
+{chr(10).join(items)}
+    </channel>
+</rss>
+"""
+
+    feed_path = "feed.xml"
+    existing = ""
+    if os.path.exists(feed_path):
+        with open(feed_path, "r", encoding="utf-8") as f:
+            existing = f.read()
+    if feed == existing:
+        return False
+
+    with open(feed_path, "w", encoding="utf-8") as f:
+        f.write(feed)
+    print(f"已同步 RSS feed.xml: {len(news_list)} 条新闻")
+    return True
+
 if __name__ == "__main__":
     print("=" * 60)
     print(f"  AI 新闻更新脚本 - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
@@ -257,6 +310,7 @@ if __name__ == "__main__":
 
         if content_changed:
             update_homepage_sitemap_lastmod()
+            update_rss_feed(news)
             print("\n✅ 更新完成！")
         else:
             print("\n✅ RSS 检查完成，无需更新")
