@@ -5,9 +5,17 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Wed, 23 Sep 2026 19:30:44 +0000</lastBuildDate>
+        <lastBuildDate>Thu, 24 Sep 2026 03:35:23 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
+        <item>
+            <title>成立九年，中科类脑把积累装进Token工厂</title>
+            <link>https://www.qbitai.com/2026/09/496615.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/09/496615.html</guid>
+            <description>成立九年，中科类脑把积累装进Token工厂</description>
+            <category>技术前沿</category>
+            <pubDate>Thu, 24 Sep 2026 00:48:02 +0000</pubDate>
+        </item>
         <item>
             <title>联想亮相阿里云栖大会：联想天禧AI把超级组织落地到端侧</title>
             <link>https://www.qbitai.com/2026/09/496609.html</link>
@@ -31,14 +39,6 @@
             <description>企业AI服务迎来平台化交付时代</description>
             <category>模型发布</category>
             <pubDate>Wed, 23 Sep 2026 09:50:26 +0000</pubDate>
-        </item>
-        <item>
-            <title>达卯科技完成新一轮融资，算电协同核心软件层“稀缺标的”</title>
-            <link>https://www.qbitai.com/2026/09/496494.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/09/496494.html</guid>
-            <description>打造算电协同领域“Windows”级操作系统</description>
-            <category>技术前沿</category>
-            <pubDate>Wed, 23 Sep 2026 09:46:57 +0000</pubDate>
         </item>
         <item>
             <title>As AI safety concerns mount, three pioneers make the case for staying ...</title>
