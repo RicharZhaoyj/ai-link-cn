@@ -5,40 +5,40 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Thu, 24 Sep 2026 03:35:23 +0000</lastBuildDate>
+        <lastBuildDate>Thu, 24 Sep 2026 13:19:26 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
         <item>
-            <title>成立九年，中科类脑把积累装进Token工厂</title>
-            <link>https://www.qbitai.com/2026/09/496615.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/09/496615.html</guid>
-            <description>成立九年，中科类脑把积累装进Token工厂</description>
-            <category>技术前沿</category>
-            <pubDate>Thu, 24 Sep 2026 00:48:02 +0000</pubDate>
-        </item>
-        <item>
-            <title>联想亮相阿里云栖大会：联想天禧AI把超级组织落地到端侧</title>
-            <link>https://www.qbitai.com/2026/09/496609.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/09/496609.html</guid>
-            <description>联想天禧AI携全场景多端产品矩阵亮相阿里云栖大会</description>
-            <category>技术前沿</category>
-            <pubDate>Wed, 23 Sep 2026 10:35:16 +0000</pubDate>
-        </item>
-        <item>
-            <title>让Token生产更高效：异构混推的关键技术演进与创新实践</title>
-            <link>https://www.qbitai.com/2026/09/496578.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/09/496578.html</guid>
-            <description>商汤大装置异构混推创新实践与技术演进</description>
-            <category>技术前沿</category>
-            <pubDate>Wed, 23 Sep 2026 09:56:53 +0000</pubDate>
-        </item>
-        <item>
-            <title>汇智智能发布Hellome：国内首个FDE直连智能体服务平台，把AI交付周期压进“周”</title>
-            <link>https://www.qbitai.com/2026/09/496493.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/09/496493.html</guid>
-            <description>企业AI服务迎来平台化交付时代</description>
+            <title>GPT-6之后，具身智能走向何方？诺因发布GLOW技术报告，给出机器人“一教就会”的答案</title>
+            <link>https://www.qbitai.com/2026/09/496816.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/09/496816.html</guid>
+            <description>人类演示一次，机器人即可实现跨场景任务复用</description>
             <category>模型发布</category>
-            <pubDate>Wed, 23 Sep 2026 09:50:26 +0000</pubDate>
+            <pubDate>Thu, 24 Sep 2026 08:20:12 +0000</pubDate>
+        </item>
+        <item>
+            <title>Stripe Tour 中国首秀：构建 AI 经济基础设施，赋能全球商业增长</title>
+            <link>https://www.qbitai.com/2026/09/496779.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/09/496779.html</guid>
+            <description>Stripe Managed Payments (SMP) 现已全面上线</description>
+            <category>技术前沿</category>
+            <pubDate>Thu, 24 Sep 2026 05:46:10 +0000</pubDate>
+        </item>
+        <item>
+            <title>教机器人干活，光“刷课时”可不够！灵初这次较真数据质量</title>
+            <link>https://www.qbitai.com/2026/09/496778.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/09/496778.html</guid>
+            <description>专治人机动作对不齐</description>
+            <category>技术前沿</category>
+            <pubDate>Thu, 24 Sep 2026 05:45:20 +0000</pubDate>
+        </item>
+        <item>
+            <title>5分钟完成机器人纳管、10秒启动跨集群任务，清华大学联合无问芯穹开源具身智能云原生平台RLark</title>
+            <link>https://www.qbitai.com/2026/09/496767.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/09/496767.html</guid>
+            <description>开源一座具身智能的新“塔台”</description>
+            <category>开源动态</category>
+            <pubDate>Thu, 24 Sep 2026 05:19:55 +0000</pubDate>
         </item>
         <item>
             <title>As AI safety concerns mount, three pioneers make the case for staying ...</title>
