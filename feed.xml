@@ -5,40 +5,40 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Fri, 25 Sep 2026 03:52:18 +0000</lastBuildDate>
+        <lastBuildDate>Fri, 25 Sep 2026 13:19:37 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
         <item>
-            <title>出海Agent“小元AI”入驻腾讯WorkBuddy：找买家写开发信谈生意</title>
-            <link>https://www.qbitai.com/2026/09/496961.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/09/496961.html</guid>
-            <description>懂出海，能记忆，自进化</description>
-            <category>技术前沿</category>
-            <pubDate>Thu, 24 Sep 2026 14:20:14 +0000</pubDate>
+            <title>亮出“中国最强AI芯片”还不够，平头哥又甩出一手开源</title>
+            <link>https://www.qbitai.com/2026/09/497108.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/09/497108.html</guid>
+            <description>大厂造芯，正在从交付芯片，走向更广泛的开放共建阶段。</description>
+            <category>开源动态</category>
+            <pubDate>Fri, 25 Sep 2026 10:00:14 +0000</pubDate>
         </item>
         <item>
-            <title>PCIe显卡被低估了！内核补齐+通信重构，DeepSeek推理吞吐翻近7倍</title>
-            <link>https://www.qbitai.com/2026/09/496925.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/09/496925.html</guid>
-            <description>1.5台6000D跑赢1台B300！</description>
-            <category>技术前沿</category>
-            <pubDate>Thu, 24 Sep 2026 14:17:48 +0000</pubDate>
+            <title>别人忙着卷Code，Kimi抽身反打浏览器插件：网页操作一秒变Skill</title>
+            <link>https://www.qbitai.com/2026/09/497075.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/09/497075.html</guid>
+            <description>Agent的手越伸越长</description>
+            <category>工具发现</category>
+            <pubDate>Fri, 25 Sep 2026 06:20:56 +0000</pubDate>
         </item>
         <item>
-            <title>时隔十年，AI大牛署名新论文</title>
-            <link>https://www.qbitai.com/2026/09/496834.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/09/496834.html</guid>
-            <description>让自动驾驶“走一步想十步”</description>
-            <category>技术前沿</category>
-            <pubDate>Thu, 24 Sep 2026 12:58:55 +0000</pubDate>
+            <title>华为大模型双子星联手创业，要找物理世界的Scaling Law</title>
+            <link>https://www.qbitai.com/2026/09/497070.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/09/497070.html</guid>
+            <description>一场物理世界的基模实验</description>
+            <category>开源动态</category>
+            <pubDate>Fri, 25 Sep 2026 06:14:07 +0000</pubDate>
         </item>
         <item>
-            <title>GPT-6之后，具身智能走向何方？诺因发布GLOW技术报告，给出机器人“一教就会”的答案</title>
-            <link>https://www.qbitai.com/2026/09/496816.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/09/496816.html</guid>
-            <description>人类演示一次，机器人即可实现跨场景任务复用</description>
-            <category>模型发布</category>
-            <pubDate>Thu, 24 Sep 2026 08:20:12 +0000</pubDate>
+            <title>呃…小扎「自研Manus」刚成Meta太子，就塌房了</title>
+            <link>https://www.qbitai.com/2026/09/497060.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/09/497060.html</guid>
+            <description>人工外包团队</description>
+            <category>技术前沿</category>
+            <pubDate>Fri, 25 Sep 2026 06:11:10 +0000</pubDate>
         </item>
         <item>
             <title>As AI safety concerns mount, three pioneers make the case for staying ...</title>
