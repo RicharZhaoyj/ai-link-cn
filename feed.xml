@@ -5,9 +5,25 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Fri, 25 Sep 2026 13:19:37 +0000</lastBuildDate>
+        <lastBuildDate>Fri, 25 Sep 2026 19:53:00 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
+        <item>
+            <title>“AlphaGo”杀进足球场！自我对弈140年，机器人成“梅西终结者”</title>
+            <link>https://www.qbitai.com/2026/09/497278.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/09/497278.html</guid>
+            <description>“AlphaGo”杀进足球场！自我对弈140年，机器人成“梅西终结者”</description>
+            <category>技术前沿</category>
+            <pubDate>Fri, 25 Sep 2026 13:24:20 +0000</pubDate>
+        </item>
+        <item>
+            <title>OpenAI闯大祸！GPT竟黑进医保系统，黄仁勋：管不住就关掉</title>
+            <link>https://www.qbitai.com/2026/09/497177.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/09/497177.html</guid>
+            <description>OpenAI闯大祸！GPT竟黑进医保系统，黄仁勋：管不住就关掉</description>
+            <category>模型发布</category>
+            <pubDate>Fri, 25 Sep 2026 13:15:45 +0000</pubDate>
+        </item>
         <item>
             <title>亮出“中国最强AI芯片”还不够，平头哥又甩出一手开源</title>
             <link>https://www.qbitai.com/2026/09/497108.html</link>
@@ -23,22 +39,6 @@
             <description>Agent的手越伸越长</description>
             <category>工具发现</category>
             <pubDate>Fri, 25 Sep 2026 06:20:56 +0000</pubDate>
-        </item>
-        <item>
-            <title>华为大模型双子星联手创业，要找物理世界的Scaling Law</title>
-            <link>https://www.qbitai.com/2026/09/497070.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/09/497070.html</guid>
-            <description>一场物理世界的基模实验</description>
-            <category>开源动态</category>
-            <pubDate>Fri, 25 Sep 2026 06:14:07 +0000</pubDate>
-        </item>
-        <item>
-            <title>呃…小扎「自研Manus」刚成Meta太子，就塌房了</title>
-            <link>https://www.qbitai.com/2026/09/497060.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/09/497060.html</guid>
-            <description>人工外包团队</description>
-            <category>技术前沿</category>
-            <pubDate>Fri, 25 Sep 2026 06:11:10 +0000</pubDate>
         </item>
         <item>
             <title>As AI safety concerns mount, three pioneers make the case for staying ...</title>
