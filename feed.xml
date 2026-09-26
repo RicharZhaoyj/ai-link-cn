@@ -5,9 +5,41 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Sat, 26 Sep 2026 12:43:15 +0000</lastBuildDate>
+        <lastBuildDate>Sat, 26 Sep 2026 19:04:38 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
+        <item>
+            <title>索辰科技加码世界模型，与战略投资企业美梦空间联合发布具身模型与物理测评标准</title>
+            <link>https://www.qbitai.com/2026/09/498478.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/09/498478.html</guid>
+            <description>“世界模型”开始成为具身智能跨越商业化“奇点”的新叙事。</description>
+            <category>模型发布</category>
+            <pubDate>Sat, 26 Sep 2026 11:49:43 +0000</pubDate>
+        </item>
+        <item>
+            <title>AI开始研究Physical AI：FSD级团队亮出首版模型Simate-beta，空降RoboDojo</title>
+            <link>https://www.qbitai.com/2026/09/498271.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/09/498271.html</guid>
+            <description>Simate将训练、推理与评测全流程接入自研Infra，通过极致的任务编排与资源调度，同时并行推进数十条相互独立的研究路线。</description>
+            <category>开源动态</category>
+            <pubDate>Sat, 26 Sep 2026 09:07:41 +0000</pubDate>
+        </item>
+        <item>
+            <title>笔记本跑7000亿参数GLM！无GPU也行? SSD当显存用火爆GitHub</title>
+            <link>https://www.qbitai.com/2026/09/497624.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/09/497624.html</guid>
+            <description>GitHub现在最火热的大模型开源小蜂鸟Colibrì是个啥？</description>
+            <category>技术前沿</category>
+            <pubDate>Sat, 26 Sep 2026 09:01:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>在云栖大会，我终于看懂了米哈游千亿AI野心</title>
+            <link>https://www.qbitai.com/2026/09/497613.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/09/497613.html</guid>
+            <description>大伟哥：如果做不到，一年两年之后过来打我脸</description>
+            <category>技术前沿</category>
+            <pubDate>Sat, 26 Sep 2026 07:18:05 +0000</pubDate>
+        </item>
         <item>
             <title>As AI safety concerns mount, three pioneers make the case for staying ...</title>
             <link>https://techcrunch.com/2026/08/12/as-ai-safety-concerns-mount-three-pioneers-make-the-case-for-staying-open/</link>
