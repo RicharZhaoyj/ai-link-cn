@@ -5,9 +5,17 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Sun, 27 Sep 2026 04:08:57 +0000</lastBuildDate>
+        <lastBuildDate>Sun, 27 Sep 2026 13:35:08 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
+        <item>
+            <title>啥题啊能干崩OpenAI最强模型训练…</title>
+            <link>https://www.qbitai.com/2026/09/498546.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/09/498546.html</guid>
+            <description>啥题啊能干崩OpenAI最强模型训练…</description>
+            <category>开源动态</category>
+            <pubDate>Sun, 27 Sep 2026 09:44:16 +0000</pubDate>
+        </item>
         <item>
             <title>索辰科技加码世界模型，与战略投资企业美梦空间联合发布具身模型与物理测评标准</title>
             <link>https://www.qbitai.com/2026/09/498478.html</link>
@@ -31,14 +39,6 @@
             <description>GitHub现在最火热的大模型开源小蜂鸟Colibrì是个啥？</description>
             <category>技术前沿</category>
             <pubDate>Sat, 26 Sep 2026 09:01:00 +0000</pubDate>
-        </item>
-        <item>
-            <title>在云栖大会，我终于看懂了米哈游千亿AI野心</title>
-            <link>https://www.qbitai.com/2026/09/497613.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/09/497613.html</guid>
-            <description>大伟哥：如果做不到，一年两年之后过来打我脸</description>
-            <category>技术前沿</category>
-            <pubDate>Sat, 26 Sep 2026 07:18:05 +0000</pubDate>
         </item>
         <item>
             <title>As AI safety concerns mount, three pioneers make the case for staying ...</title>
