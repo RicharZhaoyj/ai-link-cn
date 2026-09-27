@@ -5,9 +5,33 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Sun, 27 Sep 2026 13:35:08 +0000</lastBuildDate>
+        <lastBuildDate>Sun, 27 Sep 2026 19:35:47 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
+        <item>
+            <title>量子AI创业来了一支“清华梦之队”：10亿估值，用量子改造大模型底层</title>
+            <link>https://www.qbitai.com/2026/09/498633.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/09/498633.html</guid>
+            <description>量子AI创业来了一支“清华梦之队”：10亿估值，用量子改造大模型底层</description>
+            <category>开源动态</category>
+            <pubDate>Sun, 27 Sep 2026 14:20:35 +0000</pubDate>
+        </item>
+        <item>
+            <title>量子计算走上桌面！“小盒子”跑通端到端，数据全程不出门</title>
+            <link>https://www.qbitai.com/2026/09/498605.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/09/498605.html</guid>
+            <description>想让开发者“说句话就能跑量子计算”</description>
+            <category>技术前沿</category>
+            <pubDate>Sun, 27 Sep 2026 13:57:57 +0000</pubDate>
+        </item>
+        <item>
+            <title>又快又能打！匿名模型玉兔模型杀上双榜第一，Coding实测全记录</title>
+            <link>https://www.qbitai.com/2026/09/498584.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/09/498584.html</guid>
+            <description>中秋假期文具OpenRouter调用日榜榜首</description>
+            <category>开源动态</category>
+            <pubDate>Sun, 27 Sep 2026 13:40:02 +0000</pubDate>
+        </item>
         <item>
             <title>啥题啊能干崩OpenAI最强模型训练…</title>
             <link>https://www.qbitai.com/2026/09/498546.html</link>
@@ -15,30 +39,6 @@
             <description>啥题啊能干崩OpenAI最强模型训练…</description>
             <category>开源动态</category>
             <pubDate>Sun, 27 Sep 2026 09:44:16 +0000</pubDate>
-        </item>
-        <item>
-            <title>索辰科技加码世界模型，与战略投资企业美梦空间联合发布具身模型与物理测评标准</title>
-            <link>https://www.qbitai.com/2026/09/498478.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/09/498478.html</guid>
-            <description>“世界模型”开始成为具身智能跨越商业化“奇点”的新叙事。</description>
-            <category>模型发布</category>
-            <pubDate>Sat, 26 Sep 2026 11:49:43 +0000</pubDate>
-        </item>
-        <item>
-            <title>AI开始研究Physical AI：FSD级团队亮出首版模型Simate-beta，空降RoboDojo</title>
-            <link>https://www.qbitai.com/2026/09/498271.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/09/498271.html</guid>
-            <description>Simate将训练、推理与评测全流程接入自研Infra，通过极致的任务编排与资源调度，同时并行推进数十条相互独立的研究路线。</description>
-            <category>开源动态</category>
-            <pubDate>Sat, 26 Sep 2026 09:07:41 +0000</pubDate>
-        </item>
-        <item>
-            <title>笔记本跑7000亿参数GLM！无GPU也行? SSD当显存用火爆GitHub</title>
-            <link>https://www.qbitai.com/2026/09/497624.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/09/497624.html</guid>
-            <description>GitHub现在最火热的大模型开源小蜂鸟Colibrì是个啥？</description>
-            <category>技术前沿</category>
-            <pubDate>Sat, 26 Sep 2026 09:01:00 +0000</pubDate>
         </item>
         <item>
             <title>As AI safety concerns mount, three pioneers make the case for staying ...</title>
