@@ -5,9 +5,25 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Mon, 28 Sep 2026 04:10:15 +0000</lastBuildDate>
+        <lastBuildDate>Mon, 28 Sep 2026 16:32:05 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
+        <item>
+            <title>工业创新进入“组队局”，拆解西门子Xcelerator开放生态的赋能链路</title>
+            <link>https://www.qbitai.com/2026/09/498877.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/09/498877.html</guid>
+            <description>工业平台已经卷到帮伙伴拿线索、做Agent、出海了</description>
+            <category>技术前沿</category>
+            <pubDate>Mon, 28 Sep 2026 12:43:53 +0000</pubDate>
+        </item>
+        <item>
+            <title>HC归来，华为正重新定义AIDC基础设施</title>
+            <link>https://www.qbitai.com/2026/09/498787.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/09/498787.html</guid>
+            <description>AI基础设施下一站：算电协同</description>
+            <category>技术前沿</category>
+            <pubDate>Mon, 28 Sep 2026 11:18:27 +0000</pubDate>
+        </item>
         <item>
             <title>量子AI创业来了一支“清华梦之队”：10亿估值，用量子改造大模型底层</title>
             <link>https://www.qbitai.com/2026/09/498633.html</link>
@@ -23,22 +39,6 @@
             <description>想让开发者“说句话就能跑量子计算”</description>
             <category>技术前沿</category>
             <pubDate>Sun, 27 Sep 2026 13:57:57 +0000</pubDate>
-        </item>
-        <item>
-            <title>又快又能打！匿名模型玉兔模型杀上双榜第一，Coding实测全记录</title>
-            <link>https://www.qbitai.com/2026/09/498584.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/09/498584.html</guid>
-            <description>中秋假期文具OpenRouter调用日榜榜首</description>
-            <category>开源动态</category>
-            <pubDate>Sun, 27 Sep 2026 13:40:02 +0000</pubDate>
-        </item>
-        <item>
-            <title>啥题啊能干崩OpenAI最强模型训练…</title>
-            <link>https://www.qbitai.com/2026/09/498546.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/09/498546.html</guid>
-            <description>啥题啊能干崩OpenAI最强模型训练…</description>
-            <category>开源动态</category>
-            <pubDate>Sun, 27 Sep 2026 09:44:16 +0000</pubDate>
         </item>
         <item>
             <title>As AI safety concerns mount, three pioneers make the case for staying ...</title>
