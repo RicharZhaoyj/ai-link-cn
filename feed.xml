@@ -5,9 +5,17 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Mon, 28 Sep 2026 16:32:05 +0000</lastBuildDate>
+        <lastBuildDate>Tue, 29 Sep 2026 04:42:26 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
+        <item>
+            <title>李飞飞创业公司被苏姿丰550亿收购！世界模型最大交易落地</title>
+            <link>https://www.qbitai.com/2026/09/499098.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/09/499098.html</guid>
+            <description>李飞飞将入职AMD首席科学家</description>
+            <category>开源动态</category>
+            <pubDate>Tue, 29 Sep 2026 00:49:30 +0000</pubDate>
+        </item>
         <item>
             <title>工业创新进入“组队局”，拆解西门子Xcelerator开放生态的赋能链路</title>
             <link>https://www.qbitai.com/2026/09/498877.html</link>
@@ -31,14 +39,6 @@
             <description>量子AI创业来了一支“清华梦之队”：10亿估值，用量子改造大模型底层</description>
             <category>开源动态</category>
             <pubDate>Sun, 27 Sep 2026 14:20:35 +0000</pubDate>
-        </item>
-        <item>
-            <title>量子计算走上桌面！“小盒子”跑通端到端，数据全程不出门</title>
-            <link>https://www.qbitai.com/2026/09/498605.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/09/498605.html</guid>
-            <description>想让开发者“说句话就能跑量子计算”</description>
-            <category>技术前沿</category>
-            <pubDate>Sun, 27 Sep 2026 13:57:57 +0000</pubDate>
         </item>
         <item>
             <title>As AI safety concerns mount, three pioneers make the case for staying ...</title>
