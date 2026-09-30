@@ -5,40 +5,40 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Wed, 30 Sep 2026 04:27:04 +0000</lastBuildDate>
+        <lastBuildDate>Wed, 30 Sep 2026 14:41:35 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
         <item>
-            <title>DeepSeek官方开源昇腾基础组件，与昇腾共建高效易用的AI芯片软件生态</title>
-            <link>https://www.qbitai.com/2026/09/499263.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/09/499263.html</guid>
-            <description>DeepSeek官方开源昇腾基础组件，与昇腾共建高效易用的AI芯片软件生态</description>
-            <category>开源动态</category>
-            <pubDate>Wed, 30 Sep 2026 02:53:17 +0000</pubDate>
+            <title>直播回顾：工业AI的下一个机会在哪？</title>
+            <link>https://www.qbitai.com/2026/09/499605.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/09/499605.html</guid>
+            <description>什么样的AI才适合工业现场？企业真正开始做工业AI时，又该从哪里下手？</description>
+            <category>技术前沿</category>
+            <pubDate>Wed, 30 Sep 2026 12:11:24 +0000</pubDate>
         </item>
         <item>
-            <title>OpenAI光速上新GPT-6.1 Sol！一晚上25项更新，都在这里了</title>
-            <link>https://www.qbitai.com/2026/09/499246.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/09/499246.html</guid>
-            <description>今年devday牙膏挤爆</description>
+            <title>Anthropic，你是来给智谱打广告的吧！</title>
+            <link>https://www.qbitai.com/2026/09/499597.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/09/499597.html</guid>
+            <description>实测说GLM-5.3很强</description>
+            <category>技术前沿</category>
+            <pubDate>Wed, 30 Sep 2026 10:04:12 +0000</pubDate>
+        </item>
+        <item>
+            <title>Manus 2.0回来了！给AI配手机号和钱包，还能拉群干活</title>
+            <link>https://www.qbitai.com/2026/09/499592.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/09/499592.html</guid>
+            <description>给Agent配上手机号，再拉个群</description>
+            <category>技术前沿</category>
+            <pubDate>Wed, 30 Sep 2026 07:58:37 +0000</pubDate>
+        </item>
+        <item>
+            <title>刚刚，GPT-6 Astra接上宇树G1，把厨房收拾了！</title>
+            <link>https://www.qbitai.com/2026/09/499493.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/09/499493.html</guid>
+            <description>让GPT把机器人技能当工具调用</description>
             <category>模型发布</category>
-            <pubDate>Tue, 29 Sep 2026 23:01:05 +0000</pubDate>
-        </item>
-        <item>
-            <title>正行创新联合创始人杨宇欣正式亮相：出任总裁，负责全球业务拓展</title>
-            <link>https://www.qbitai.com/2026/09/499239.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/09/499239.html</guid>
-            <description>推动公司具身模型、本体、软件等全栈能力进入更多真实场景</description>
-            <category>技术前沿</category>
-            <pubDate>Tue, 29 Sep 2026 10:56:33 +0000</pubDate>
-        </item>
-        <item>
-            <title>精准揪出RL训练数据Bug，Prompt直出小游戏，IQuest-Q1夯爆了！</title>
-            <link>https://www.qbitai.com/2026/09/499188.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/09/499188.html</guid>
-            <description>精准揪出RL训练数据Bug，Prompt直出小游戏，IQuest-Q1夯爆了！</description>
-            <category>技术前沿</category>
-            <pubDate>Tue, 29 Sep 2026 07:59:46 +0000</pubDate>
+            <pubDate>Wed, 30 Sep 2026 07:54:54 +0000</pubDate>
         </item>
         <item>
             <title>As AI safety concerns mount, three pioneers make the case for staying ...</title>
