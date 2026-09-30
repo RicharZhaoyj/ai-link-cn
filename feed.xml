@@ -5,9 +5,25 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Tue, 29 Sep 2026 20:28:58 +0000</lastBuildDate>
+        <lastBuildDate>Wed, 30 Sep 2026 04:27:04 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
+        <item>
+            <title>DeepSeek官方开源昇腾基础组件，与昇腾共建高效易用的AI芯片软件生态</title>
+            <link>https://www.qbitai.com/2026/09/499263.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/09/499263.html</guid>
+            <description>DeepSeek官方开源昇腾基础组件，与昇腾共建高效易用的AI芯片软件生态</description>
+            <category>开源动态</category>
+            <pubDate>Wed, 30 Sep 2026 02:53:17 +0000</pubDate>
+        </item>
+        <item>
+            <title>OpenAI光速上新GPT-6.1 Sol！一晚上25项更新，都在这里了</title>
+            <link>https://www.qbitai.com/2026/09/499246.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/09/499246.html</guid>
+            <description>今年devday牙膏挤爆</description>
+            <category>模型发布</category>
+            <pubDate>Tue, 29 Sep 2026 23:01:05 +0000</pubDate>
+        </item>
         <item>
             <title>正行创新联合创始人杨宇欣正式亮相：出任总裁，负责全球业务拓展</title>
             <link>https://www.qbitai.com/2026/09/499239.html</link>
@@ -23,22 +39,6 @@
             <description>精准揪出RL训练数据Bug，Prompt直出小游戏，IQuest-Q1夯爆了！</description>
             <category>技术前沿</category>
             <pubDate>Tue, 29 Sep 2026 07:59:46 +0000</pubDate>
-        </item>
-        <item>
-            <title>OpenAI因新模型太强叫停发布</title>
-            <link>https://www.qbitai.com/2026/09/499140.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/09/499140.html</guid>
-            <description>AGI计划暂停。</description>
-            <category>模型发布</category>
-            <pubDate>Tue, 29 Sep 2026 07:49:20 +0000</pubDate>
-        </item>
-        <item>
-            <title>成立一年完成5轮融资，诺因智能再获数亿元，累计超10亿元</title>
-            <link>https://www.qbitai.com/2026/09/499135.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/09/499135.html</guid>
-            <description>诺因从Demo走向家庭</description>
-            <category>技术前沿</category>
-            <pubDate>Tue, 29 Sep 2026 07:10:59 +0000</pubDate>
         </item>
         <item>
             <title>As AI safety concerns mount, three pioneers make the case for staying ...</title>
