@@ -5,9 +5,17 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Wed, 30 Sep 2026 14:41:35 +0000</lastBuildDate>
+        <lastBuildDate>Wed, 30 Sep 2026 20:36:48 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
+        <item>
+            <title>OpenAI推理之父最新访谈！数学只是多智能体时代的开胃菜</title>
+            <link>https://www.qbitai.com/2026/09/499654.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/09/499654.html</guid>
+            <description>千禧年难题的突破，10000个Agent最多占了10%的功劳。</description>
+            <category>技术前沿</category>
+            <pubDate>Wed, 30 Sep 2026 14:03:43 +0000</pubDate>
+        </item>
         <item>
             <title>直播回顾：工业AI的下一个机会在哪？</title>
             <link>https://www.qbitai.com/2026/09/499605.html</link>
@@ -31,14 +39,6 @@
             <description>给Agent配上手机号，再拉个群</description>
             <category>技术前沿</category>
             <pubDate>Wed, 30 Sep 2026 07:58:37 +0000</pubDate>
-        </item>
-        <item>
-            <title>刚刚，GPT-6 Astra接上宇树G1，把厨房收拾了！</title>
-            <link>https://www.qbitai.com/2026/09/499493.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/09/499493.html</guid>
-            <description>让GPT把机器人技能当工具调用</description>
-            <category>模型发布</category>
-            <pubDate>Wed, 30 Sep 2026 07:54:54 +0000</pubDate>
         </item>
         <item>
             <title>As AI safety concerns mount, three pioneers make the case for staying ...</title>
