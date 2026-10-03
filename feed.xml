@@ -5,9 +5,25 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Sat, 03 Oct 2026 04:13:17 +0000</lastBuildDate>
+        <lastBuildDate>Sat, 03 Oct 2026 13:07:08 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
+        <item>
+            <title>DeepSeek扩招！弹性计算团队大量HC，尤其需要资深工程师</title>
+            <link>https://www.qbitai.com/2026/10/501381.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/501381.html</guid>
+            <description>岗位JD甩了篇技术报告</description>
+            <category>技术前沿</category>
+            <pubDate>Sat, 03 Oct 2026 07:54:43 +0000</pubDate>
+        </item>
+        <item>
+            <title>OpenAI安全团队持续地震！负责人离职，三名员工因泄密被开</title>
+            <link>https://www.qbitai.com/2026/10/501368.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/501368.html</guid>
+            <description>又咋啦。。。</description>
+            <category>技术前沿</category>
+            <pubDate>Sat, 03 Oct 2026 04:41:24 +0000</pubDate>
+        </item>
         <item>
             <title>Jev估值100亿美元！创始人Diogo Almeida回答一切</title>
             <link>https://www.qbitai.com/2026/10/500148.html</link>
@@ -23,22 +39,6 @@
             <description>让每一次请求选对模型，让每一次反馈都成为下一次更优、更省的选择</description>
             <category>开源动态</category>
             <pubDate>Fri, 02 Oct 2026 07:34:15 +0000</pubDate>
-        </item>
-        <item>
-            <title>丘成桐新论文致谢了GPT和Claude</title>
-            <link>https://www.qbitai.com/2026/10/499991.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/499991.html</guid>
-            <description>44年前被亲自列入问题清单</description>
-            <category>模型发布</category>
-            <pubDate>Fri, 02 Oct 2026 07:27:03 +0000</pubDate>
-        </item>
-        <item>
-            <title>arXiv最严新规！每人每月最多提交2篇，拒稿不退额度</title>
-            <link>https://www.qbitai.com/2026/10/499958.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/499958.html</guid>
-            <description>换区也没用</description>
-            <category>技术前沿</category>
-            <pubDate>Fri, 02 Oct 2026 06:46:32 +0000</pubDate>
         </item>
         <item>
             <title>As AI safety concerns mount, three pioneers make the case for staying ...</title>
