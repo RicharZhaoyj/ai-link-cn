@@ -5,9 +5,25 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Sun, 04 Oct 2026 04:44:42 +0000</lastBuildDate>
+        <lastBuildDate>Sun, 04 Oct 2026 13:45:59 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
+        <item>
+            <title>AI算力硬合作，马斯克还是更相信中国制造</title>
+            <link>https://www.qbitai.com/2026/10/501605.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/501605.html</guid>
+            <description>一种混搭的可能：英特尔继续供先进工艺，即前端用14A；后端再接台积电，来补工厂运营、良率、封装这些能力。</description>
+            <category>技术前沿</category>
+            <pubDate>Sun, 04 Oct 2026 06:12:22 +0000</pubDate>
+        </item>
+        <item>
+            <title>最火AI岗位FDE：月薪5万，都干这些…</title>
+            <link>https://www.qbitai.com/2026/10/501506.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/501506.html</guid>
+            <description>什么是FDE？它会一直存在吗？</description>
+            <category>技术前沿</category>
+            <pubDate>Sun, 04 Oct 2026 06:05:35 +0000</pubDate>
+        </item>
         <item>
             <title>GPT-6要“吃掉”3D公司？这家公司不到2年ARR翻百倍，破1亿美元</title>
             <link>https://www.qbitai.com/2026/10/501451.html</link>
@@ -23,22 +39,6 @@
             <description>岗位JD甩了篇技术报告</description>
             <category>技术前沿</category>
             <pubDate>Sat, 03 Oct 2026 07:54:43 +0000</pubDate>
-        </item>
-        <item>
-            <title>OpenAI安全团队持续地震！负责人离职，三名员工因泄密被开</title>
-            <link>https://www.qbitai.com/2026/10/501368.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/501368.html</guid>
-            <description>又咋啦。。。</description>
-            <category>技术前沿</category>
-            <pubDate>Sat, 03 Oct 2026 04:41:24 +0000</pubDate>
-        </item>
-        <item>
-            <title>Jev估值100亿美元！创始人Diogo Almeida回答一切</title>
-            <link>https://www.qbitai.com/2026/10/500148.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/500148.html</guid>
-            <description>Jev估值100亿美元！创始人Diogo Almeida回答一切</description>
-            <category>技术前沿</category>
-            <pubDate>Sat, 03 Oct 2026 02:38:19 +0000</pubDate>
         </item>
         <item>
             <title>As AI safety concerns mount, three pioneers make the case for staying ...</title>
