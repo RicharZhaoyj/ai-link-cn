@@ -5,9 +5,25 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Mon, 05 Oct 2026 04:33:00 +0000</lastBuildDate>
+        <lastBuildDate>Mon, 05 Oct 2026 16:52:49 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
+        <item>
+            <title>刚刚，诺贝尔奖颁给光遗传学！</title>
+            <link>https://www.qbitai.com/2026/10/501720.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/501720.html</guid>
+            <description>从绿藻里的光开关，到控制神经元</description>
+            <category>技术前沿</category>
+            <pubDate>Mon, 05 Oct 2026 10:37:01 +0000</pubDate>
+        </item>
+        <item>
+            <title>刚刚，Hinton发了首篇RSI论文</title>
+            <link>https://www.qbitai.com/2026/10/501705.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/501705.html</guid>
+            <description>AI已经开始真正进入「造下一代AI」的流水线</description>
+            <category>技术前沿</category>
+            <pubDate>Mon, 05 Oct 2026 04:42:52 +0000</pubDate>
+        </item>
         <item>
             <title>限时28天！OpenAI承诺没新功能就重置，网友：只想要Opus</title>
             <link>https://www.qbitai.com/2026/10/501700.html</link>
@@ -23,22 +39,6 @@
             <description>一种混搭的可能：英特尔继续供先进工艺，即前端用14A；后端再接台积电，来补工厂运营、良率、封装这些能力。</description>
             <category>技术前沿</category>
             <pubDate>Sun, 04 Oct 2026 06:12:22 +0000</pubDate>
-        </item>
-        <item>
-            <title>最火AI岗位FDE：月薪5万，都干这些…</title>
-            <link>https://www.qbitai.com/2026/10/501506.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/501506.html</guid>
-            <description>什么是FDE？它会一直存在吗？</description>
-            <category>技术前沿</category>
-            <pubDate>Sun, 04 Oct 2026 06:05:35 +0000</pubDate>
-        </item>
-        <item>
-            <title>GPT-6要“吃掉”3D公司？这家公司不到2年ARR翻百倍，破1亿美元</title>
-            <link>https://www.qbitai.com/2026/10/501451.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/501451.html</guid>
-            <description>专业3D模型反而更稀缺了</description>
-            <category>模型发布</category>
-            <pubDate>Sun, 04 Oct 2026 00:53:29 +0000</pubDate>
         </item>
         <item>
             <title>As AI safety concerns mount, three pioneers make the case for staying ...</title>
