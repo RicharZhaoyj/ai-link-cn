@@ -5,9 +5,17 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Sun, 04 Oct 2026 19:16:09 +0000</lastBuildDate>
+        <lastBuildDate>Mon, 05 Oct 2026 04:33:00 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
+        <item>
+            <title>限时28天！OpenAI承诺没新功能就重置，网友：只想要Opus</title>
+            <link>https://www.qbitai.com/2026/10/501700.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/501700.html</guid>
+            <description>有改进就体验，没改进就重置，横竖不亏。</description>
+            <category>技术前沿</category>
+            <pubDate>Mon, 05 Oct 2026 02:50:46 +0000</pubDate>
+        </item>
         <item>
             <title>AI算力硬合作，马斯克还是更相信中国制造</title>
             <link>https://www.qbitai.com/2026/10/501605.html</link>
@@ -31,14 +39,6 @@
             <description>专业3D模型反而更稀缺了</description>
             <category>模型发布</category>
             <pubDate>Sun, 04 Oct 2026 00:53:29 +0000</pubDate>
-        </item>
-        <item>
-            <title>DeepSeek扩招！弹性计算团队大量HC，尤其需要资深工程师</title>
-            <link>https://www.qbitai.com/2026/10/501381.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/501381.html</guid>
-            <description>岗位JD甩了篇技术报告</description>
-            <category>技术前沿</category>
-            <pubDate>Sat, 03 Oct 2026 07:54:43 +0000</pubDate>
         </item>
         <item>
             <title>As AI safety concerns mount, three pioneers make the case for staying ...</title>
