@@ -59,6 +59,8 @@ CATEGORY_NAMES = {
     "工具发现": "工具发现",
 }
 
+MAX_NEWS_AGE_DAYS = 7
+
 def clean_html(raw_html):
     """移除 HTML 标签，提取纯文本"""
     clean = re.compile('<.*?>')
@@ -68,18 +70,21 @@ def clean_html(raw_html):
     return text
 
 def parse_date(date_str):
-    """解析日期字符串"""
+    """保留来源发布时间；日期缺失或无效时不伪造为今天。"""
     try:
         if date_str:
-            # 尝试解析 RFC 2822 格式
             dt = parsedate_to_datetime(date_str)
-            return dt
-    except:
+            if dt.tzinfo is None:
+                dt = dt.replace(tzinfo=timezone.utc)
+            return dt.astimezone(timezone.utc)
+    except (TypeError, ValueError, OverflowError):
         pass
-    return datetime.now()
+    return None
 
-def fetch_news(limit=8):
-    """从多个 RSS 源抓取新闻"""
+def fetch_news(limit=8, now=None):
+    """最新资讯只收录有可靠日期、过去七天内发布的新闻。"""
+    now = now or datetime.now(timezone.utc)
+    cutoff = now - timedelta(days=MAX_NEWS_AGE_DAYS)
     news_list = []
     seen_titles = set()
     
@@ -91,6 +96,10 @@ def fetch_news(limit=8):
             for entry in feed.entries[:4]:
                 title = clean_html(entry.get("title", ""))
                 title = title[:70] + ("..." if len(title) > 70 else "")
+
+                pub_date = parse_date(entry.get("published", ""))
+                if pub_date is None or not cutoff <= pub_date <= now:
+                    continue
                 
                 if title.lower() in seen_titles or len(title) < 10:
                     continue
@@ -98,8 +107,6 @@ def fetch_news(limit=8):
                 
                 summary = clean_html(entry.get("summary", "") or entry.get("description", ""))
                 summary = summary[:120] + ("..." if len(summary) > 120 else "")
-                
-                pub_date = parse_date(entry.get("published", ""))
                 
                 # 智能分类
                 title_lower = title.lower()
