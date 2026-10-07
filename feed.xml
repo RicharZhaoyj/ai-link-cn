@@ -5,7 +5,7 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Tue, 06 Oct 2026 20:49:09 +0000</lastBuildDate>
+        <lastBuildDate>Wed, 07 Oct 2026 01:09:22 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
         <item>
@@ -39,38 +39,6 @@
             <description>从绿藻里的光开关，到控制神经元</description>
             <category>技术前沿</category>
             <pubDate>Mon, 05 Oct 2026 10:37:01 +0000</pubDate>
-        </item>
-        <item>
-            <title>As AI safety concerns mount, three pioneers make the case for staying ...</title>
-            <link>https://techcrunch.com/2026/08/12/as-ai-safety-concerns-mount-three-pioneers-make-the-case-for-staying-open/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/08/12/as-ai-safety-concerns-mount-three-pioneers-make-the-case-for-staying-open/</guid>
-            <description>At Ai4, three of the world's most respected AI experts — Geoffrey Hinton, Fei-Fei Li, and Andrew Ng — debated regulation...</description>
-            <category>全球动态</category>
-            <pubDate>Wed, 12 Aug 2026 17:51:00 +0000</pubDate>
-        </item>
-        <item>
-            <title>Data center demand drives 66% surge in natural gas power plant costs</title>
-            <link>https://techcrunch.com/2026/04/27/data-center-demand-drives-66-surge-in-natural-gas-power-plant-costs/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/04/27/data-center-demand-drives-66-surge-in-natural-gas-power-plant-costs/</guid>
-            <description>Natural gas power plant costs have nearly doubled in two years and take 23% longer to build as data center electricity d...</description>
-            <category>全球动态</category>
-            <pubDate>Mon, 27 Apr 2026 15:27:52 +0000</pubDate>
-        </item>
-        <item>
-            <title>Converge Bio raises $25M, backed by Bessemer and execs from Meta, Open...</title>
-            <link>https://techcrunch.com/2026/01/13/ai-drug-discovery-startup-converge-bio-pulls-in-25m-from-bessemer-and-execs-from-meta-openai-and-wiz/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/01/13/ai-drug-discovery-startup-converge-bio-pulls-in-25m-from-bessemer-and-execs-from-meta-openai-and-wiz/</guid>
-            <description>AI drug discovery startup Converge Bio raised $25 million in a Series A led by Bessemer Venture Partners, with additiona...</description>
-            <category>全球动态</category>
-            <pubDate>Tue, 13 Jan 2026 11:30:00 +0000</pubDate>
-        </item>
-        <item>
-            <title>Meta bought 1 GW of solar this week</title>
-            <link>https://techcrunch.com/2025/10/31/meta-bought-1-gw-of-solar-this-week/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2025/10/31/meta-bought-1-gw-of-solar-this-week/</guid>
-            <description>The social media company inked three deals in the U.S. to power its data centers and offset its carbon footprint.</description>
-            <category>全球动态</category>
-            <pubDate>Fri, 31 Oct 2025 19:26:30 +0000</pubDate>
         </item>
     </channel>
 </rss>
