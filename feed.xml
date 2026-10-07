@@ -5,9 +5,17 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Wed, 07 Oct 2026 01:09:22 +0000</lastBuildDate>
+        <lastBuildDate>Wed, 07 Oct 2026 04:47:30 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
+        <item>
+            <title>OpenAI一夜甩出722篇数学论文！黎曼霍奇BSD全上阵，数学家：读不过来</title>
+            <link>https://www.qbitai.com/2026/10/501749.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/501749.html</guid>
+            <description>三位菲尔兹奖得主：不代表认可</description>
+            <category>技术前沿</category>
+            <pubDate>Wed, 07 Oct 2026 01:05:13 +0000</pubDate>
+        </item>
         <item>
             <title>刚刚，诺贝尔物理奖一人独揽！</title>
             <link>https://www.qbitai.com/2026/10/501746.html</link>
@@ -31,14 +39,6 @@
             <description>OpenAI「疯狂28天」首日，这都发了些啥啊…</description>
             <category>技术前沿</category>
             <pubDate>Tue, 06 Oct 2026 06:45:40 +0000</pubDate>
-        </item>
-        <item>
-            <title>刚刚，诺贝尔奖颁给光遗传学！</title>
-            <link>https://www.qbitai.com/2026/10/501720.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/501720.html</guid>
-            <description>从绿藻里的光开关，到控制神经元</description>
-            <category>技术前沿</category>
-            <pubDate>Mon, 05 Oct 2026 10:37:01 +0000</pubDate>
         </item>
     </channel>
 </rss>
