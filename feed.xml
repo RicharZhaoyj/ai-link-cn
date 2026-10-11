@@ -5,40 +5,40 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Sun, 11 Oct 2026 04:32:00 +0000</lastBuildDate>
+        <lastBuildDate>Sun, 11 Oct 2026 14:43:03 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
         <item>
-            <title>特斯拉FSD，在欧洲被打回原形</title>
-            <link>https://www.qbitai.com/2026/10/502467.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/502467.html</guid>
-            <description>马斯克反而发文道谢？</description>
+            <title>王的猜想，刚刚扩展到四维</title>
+            <link>https://www.qbitai.com/2026/10/502584.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/502584.html</guid>
+            <description>王的猜想，刚刚扩展到四维</description>
             <category>技术前沿</category>
-            <pubDate>Sat, 10 Oct 2026 06:59:02 +0000</pubDate>
+            <pubDate>Sun, 11 Oct 2026 05:23:47 +0000</pubDate>
         </item>
         <item>
-            <title>TRAE终于把Code和Work合并了</title>
-            <link>https://www.qbitai.com/2026/10/502426.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/502426.html</guid>
-            <description>大写的方便</description>
+            <title>硅谷AI现状：谁有算力谁是爹</title>
+            <link>https://www.qbitai.com/2026/10/502585.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/502585.html</guid>
+            <description>马斯克连横A社，硅谷VC开始囤GPU</description>
             <category>技术前沿</category>
-            <pubDate>Fri, 09 Oct 2026 09:19:57 +0000</pubDate>
+            <pubDate>Sun, 11 Oct 2026 05:22:38 +0000</pubDate>
         </item>
         <item>
-            <title>联想天禧自研代码智能体TianxiCode斩获SWE-bench-Live全球第一</title>
-            <link>https://www.qbitai.com/2026/10/502422.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/502422.html</guid>
-            <description>联想天禧AI自主研发的专业代码智能体框架TianxiCode 以71%的问题解决率登顶全球第一名</description>
-            <category>技术前沿</category>
-            <pubDate>Fri, 09 Oct 2026 08:53:08 +0000</pubDate>
+            <title>下架8个月，GPT-4o的拯救行动居然还在继续</title>
+            <link>https://www.qbitai.com/2026/10/502550.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/502550.html</guid>
+            <description>初代4o的API快照进入停用倒计时</description>
+            <category>模型发布</category>
+            <pubDate>Sun, 11 Oct 2026 05:18:04 +0000</pubDate>
         </item>
         <item>
-            <title>0.2秒急停、秒级重规划！因果智能走进真实世界</title>
-            <link>https://www.qbitai.com/2026/10/502411.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/502411.html</guid>
-            <description>这是一台机器人正在关闭微波炉门时，因人手突然插进来而紧急悬停的时间</description>
-            <category>技术前沿</category>
-            <pubDate>Fri, 09 Oct 2026 08:47:34 +0000</pubDate>
+            <title>DeepSeek Bot来了！民间版，DSH装个插件就能用</title>
+            <link>https://www.qbitai.com/2026/10/502544.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/502544.html</guid>
+            <description>Grok Bot我养不起，ds bot不得高低尝尝咸淡？</description>
+            <category>工具发现</category>
+            <pubDate>Sun, 11 Oct 2026 03:27:08 +0000</pubDate>
         </item>
     </channel>
 </rss>
