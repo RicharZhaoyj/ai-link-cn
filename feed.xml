@@ -5,40 +5,40 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Sun, 11 Oct 2026 14:43:03 +0000</lastBuildDate>
+        <lastBuildDate>Mon, 12 Oct 2026 04:47:29 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
         <item>
-            <title>王的猜想，刚刚扩展到四维</title>
-            <link>https://www.qbitai.com/2026/10/502584.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/502584.html</guid>
-            <description>王的猜想，刚刚扩展到四维</description>
-            <category>技术前沿</category>
-            <pubDate>Sun, 11 Oct 2026 05:23:47 +0000</pubDate>
+            <title>智谱新模型，490 tokens/s！</title>
+            <link>https://www.qbitai.com/2026/10/502649.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/502649.html</guid>
+            <description>GLM「速度仙人」来了？</description>
+            <category>开源动态</category>
+            <pubDate>Mon, 12 Oct 2026 02:37:04 +0000</pubDate>
         </item>
         <item>
-            <title>硅谷AI现状：谁有算力谁是爹</title>
-            <link>https://www.qbitai.com/2026/10/502585.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/502585.html</guid>
-            <description>马斯克连横A社，硅谷VC开始囤GPU</description>
-            <category>技术前沿</category>
-            <pubDate>Sun, 11 Oct 2026 05:22:38 +0000</pubDate>
-        </item>
-        <item>
-            <title>下架8个月，GPT-4o的拯救行动居然还在继续</title>
-            <link>https://www.qbitai.com/2026/10/502550.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/502550.html</guid>
-            <description>初代4o的API快照进入停用倒计时</description>
-            <category>模型发布</category>
-            <pubDate>Sun, 11 Oct 2026 05:18:04 +0000</pubDate>
-        </item>
-        <item>
-            <title>DeepSeek Bot来了！民间版，DSH装个插件就能用</title>
-            <link>https://www.qbitai.com/2026/10/502544.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/502544.html</guid>
-            <description>Grok Bot我养不起，ds bot不得高低尝尝咸淡？</description>
+            <title>用不着Ctrl+F了！全新AI论文工具，帮你在原文献里海里捞针</title>
+            <link>https://www.qbitai.com/2026/10/502644.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/502644.html</guid>
+            <description>一套生成论文初稿的多智能体工作流</description>
             <category>工具发现</category>
-            <pubDate>Sun, 11 Oct 2026 03:27:08 +0000</pubDate>
+            <pubDate>Sun, 11 Oct 2026 09:04:31 +0000</pubDate>
+        </item>
+        <item>
+            <title>何恺明团队发布多模态Harness框架</title>
+            <link>https://www.qbitai.com/2026/10/502628.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/502628.html</guid>
+            <description>多模态模型的视觉原生Harness，来了！</description>
+            <category>模型发布</category>
+            <pubDate>Sun, 11 Oct 2026 08:59:06 +0000</pubDate>
+        </item>
+        <item>
+            <title>陶哲轩：数学2.0时代已至！</title>
+            <link>https://www.qbitai.com/2026/10/502594.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/502594.html</guid>
+            <description>陶哲轩：数学2.0时代已至！</description>
+            <category>技术前沿</category>
+            <pubDate>Sun, 11 Oct 2026 07:52:16 +0000</pubDate>
         </item>
     </channel>
 </rss>
