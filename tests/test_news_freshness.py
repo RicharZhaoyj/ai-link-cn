@@ -2,6 +2,7 @@
 
 import importlib.util
 from pathlib import Path
+import re
 import sys
 from types import SimpleNamespace
 import unittest
@@ -68,6 +69,32 @@ class NewsFreshnessTests(unittest.TestCase):
         ])
         self.assertEqual(len(news), 1)
         self.assertEqual(news[0]["date"], self.now - timedelta(hours=1))
+
+
+class FeedRegistryTests(unittest.TestCase):
+    active_urls = [
+        "https://www.qbitai.com/feed",
+        "https://36kr.com/feed",
+        "https://www.zhidx.com/feed",
+        "https://techcrunch.com/tag/artificial-intelligence/feed/",
+        "https://venturebeat.com/category/ai/feed/",
+    ]
+
+    def test_registry_preserves_other_five_sources(self):
+        self.assertEqual([feed["url"] for feed in updater.RSS_FEEDS], self.active_urls)
+
+    def test_fetch_queries_active_sources_not_retired_html_page(self):
+        with patch.object(updater.feedparser, "parse", return_value=SimpleNamespace(entries=[])) as parse:
+            self.assertEqual(updater.fetch_news(now=NewsFreshnessTests.now), [])
+        self.assertEqual([call.args[0] for call in parse.call_args_list], self.active_urls)
+
+    def test_template_and_homepage_source_counts_match_registry(self):
+        root = Path(__file__).parents[1]
+        pattern = r'<div class="hero-stat-num">(\d+)</div>\s*<div class="hero-stat-label">RSS信源</div>'
+        for name in ("index_template.html", "index.html"):
+            with self.subTest(file=name):
+                matches = re.findall(pattern, (root / name).read_text(encoding="utf-8"))
+                self.assertEqual(matches, [str(len(updater.RSS_FEEDS))])
 
 
 if __name__ == "__main__":

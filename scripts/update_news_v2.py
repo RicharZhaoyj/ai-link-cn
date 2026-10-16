@@ -16,11 +16,6 @@ from xml.sax.saxutils import escape
 
 RSS_FEEDS = [
     {
-        "url": "https://www.jiqizhixin.com/rss",
-        "category": "行业动态",
-        "priority": 1
-    },
-    {
         "url": "https://www.qbitai.com/feed",
         "category": "技术前沿",
         "priority": 1
