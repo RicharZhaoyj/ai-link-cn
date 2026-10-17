@@ -5,40 +5,40 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Sat, 17 Oct 2026 03:22:12 +0000</lastBuildDate>
+        <lastBuildDate>Sat, 17 Oct 2026 12:00:33 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
         <item>
-            <title>京东11.11：首日下单用户数同比双位数增长、超百项服务首次全景亮相</title>
-            <link>https://www.qbitai.com/2026/10/503645.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/503645.html</guid>
-            <description>京东11.11已于10月12日晚8点全面开启，首日下单用户数实现同比双位数增长。</description>
+            <title>清华特奖得主AI创业再+1：GeoPT一作入局物理世界模型</title>
+            <link>https://www.qbitai.com/2026/10/503880.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/503880.html</guid>
+            <description>从搭载物理建模能力的世界模型切入</description>
+            <category>开源动态</category>
+            <pubDate>Fri, 16 Oct 2026 12:54:54 +0000</pubDate>
+        </item>
+        <item>
+            <title>从“看懂世界”到“预演下一步”：世界模型与 VLA，如何让机器人拥有真正的“具身大脑”？</title>
+            <link>https://www.qbitai.com/2026/10/503865.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/503865.html</guid>
+            <description>VLA解决“能干”，世界模型解决“想清楚再干”</description>
+            <category>开源动态</category>
+            <pubDate>Fri, 16 Oct 2026 08:12:01 +0000</pubDate>
+        </item>
+        <item>
+            <title>说真话就能拿10万？网易叭哥说重金求“真需求”，不卡专业学历</title>
+            <link>https://www.qbitai.com/2026/10/503861.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/503861.html</guid>
+            <description>网易首个AI原生语音Agent「网易叭哥说」上线 “用户荣誉联创计划”，投入 10 万元征集产品建议</description>
             <category>技术前沿</category>
-            <pubDate>Thu, 15 Oct 2026 10:07:08 +0000</pubDate>
+            <pubDate>Fri, 16 Oct 2026 08:07:33 +0000</pubDate>
         </item>
         <item>
-            <title>库克：苹果智能接入阿里千问大模型，10月底在中国发布测试版本</title>
-            <link>https://www.qbitai.com/2026/10/503640.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/503640.html</guid>
-            <description>Siri AI这次不包括在内</description>
-            <category>模型发布</category>
-            <pubDate>Thu, 15 Oct 2026 09:43:29 +0000</pubDate>
-        </item>
-        <item>
-            <title>量子位智库发布Agent落地报告！拆解企业智能化六大断点，附全链路破局框架</title>
-            <link>https://www.qbitai.com/2026/10/503614.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/503614.html</guid>
-            <description>Agent究竟该如何深入业务毛细血管？</description>
-            <category>模型发布</category>
-            <pubDate>Thu, 15 Oct 2026 08:48:31 +0000</pubDate>
-        </item>
-        <item>
-            <title>2026 TMOT首个AI智能体走进电音现场，让听众成为音乐共创者</title>
-            <link>https://www.qbitai.com/2026/10/503611.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/503611.html</guid>
-            <description>10月17日至18日，顶尖电音节The Magic of Tomorrowland 2026将在上海举行。</description>
-            <category>技术前沿</category>
-            <pubDate>Thu, 15 Oct 2026 08:16:19 +0000</pubDate>
+            <title>霸榜三大基准！优必选 Thinker-WM：多模态统一表征，单模型实现六大能力</title>
+            <link>https://www.qbitai.com/2026/10/503843.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/503843.html</guid>
+            <description>优必选 Thinker-WM在三大公认具身世界模型基准评测中全部拿下第一名</description>
+            <category>开源动态</category>
+            <pubDate>Fri, 16 Oct 2026 08:00:31 +0000</pubDate>
         </item>
     </channel>
 </rss>
