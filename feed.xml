@@ -5,40 +5,40 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Sat, 17 Oct 2026 12:00:33 +0000</lastBuildDate>
+        <lastBuildDate>Sat, 17 Oct 2026 18:14:21 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
         <item>
-            <title>清华特奖得主AI创业再+1：GeoPT一作入局物理世界模型</title>
-            <link>https://www.qbitai.com/2026/10/503880.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/503880.html</guid>
-            <description>从搭载物理建模能力的世界模型切入</description>
-            <category>开源动态</category>
-            <pubDate>Fri, 16 Oct 2026 12:54:54 +0000</pubDate>
+            <title>突发！DeepSeek新模型发布，超级性价比斩杀一切</title>
+            <link>https://www.qbitai.com/2026/10/504067.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/504067.html</guid>
+            <description>新版本V4.1-Flash-1017，还开放了自研搜索API</description>
+            <category>模型发布</category>
+            <pubDate>Sat, 17 Oct 2026 12:21:09 +0000</pubDate>
         </item>
         <item>
-            <title>从“看懂世界”到“预演下一步”：世界模型与 VLA，如何让机器人拥有真正的“具身大脑”？</title>
-            <link>https://www.qbitai.com/2026/10/503865.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/503865.html</guid>
-            <description>VLA解决“能干”，世界模型解决“想清楚再干”</description>
+            <title>智谱新模型，懂法方面全球第一了</title>
+            <link>https://www.qbitai.com/2026/10/503965.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/503965.html</guid>
+            <description>AI的风还是刮到了法律圈</description>
             <category>开源动态</category>
-            <pubDate>Fri, 16 Oct 2026 08:12:01 +0000</pubDate>
+            <pubDate>Sat, 17 Oct 2026 12:13:45 +0000</pubDate>
         </item>
         <item>
-            <title>说真话就能拿10万？网易叭哥说重金求“真需求”，不卡专业学历</title>
-            <link>https://www.qbitai.com/2026/10/503861.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/503861.html</guid>
-            <description>网易首个AI原生语音Agent「网易叭哥说」上线 “用户荣誉联创计划”，投入 10 万元征集产品建议</description>
-            <category>技术前沿</category>
-            <pubDate>Fri, 16 Oct 2026 08:07:33 +0000</pubDate>
+            <title>清华开源！智能体操作系统任务成本降83%，AI记忆可查可改</title>
+            <link>https://www.qbitai.com/2026/10/503935.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/503935.html</guid>
+            <description>整套系统原生支持MCP</description>
+            <category>开源动态</category>
+            <pubDate>Sat, 17 Oct 2026 12:10:35 +0000</pubDate>
         </item>
         <item>
-            <title>霸榜三大基准！优必选 Thinker-WM：多模态统一表征，单模型实现六大能力</title>
-            <link>https://www.qbitai.com/2026/10/503843.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/503843.html</guid>
-            <description>优必选 Thinker-WM在三大公认具身世界模型基准评测中全部拿下第一名</description>
-            <category>开源动态</category>
-            <pubDate>Fri, 16 Oct 2026 08:00:31 +0000</pubDate>
+            <title>Claude半小时解开密码学悬案，学界集体走偏20年</title>
+            <link>https://www.qbitai.com/2026/10/503910.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/503910.html</guid>
+            <description>谜底指向时间</description>
+            <category>模型发布</category>
+            <pubDate>Sat, 17 Oct 2026 12:06:51 +0000</pubDate>
         </item>
     </channel>
 </rss>
