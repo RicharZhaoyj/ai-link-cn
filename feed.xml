@@ -5,40 +5,40 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Mon, 19 Oct 2026 03:39:09 +0000</lastBuildDate>
+        <lastBuildDate>Mon, 19 Oct 2026 15:20:11 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
         <item>
-            <title>突发！DeepSeek新模型发布，超级性价比斩杀一切</title>
-            <link>https://www.qbitai.com/2026/10/504067.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/504067.html</guid>
-            <description>新版本V4.1-Flash-1017，还开放了自研搜索API</description>
-            <category>模型发布</category>
-            <pubDate>Sat, 17 Oct 2026 12:21:09 +0000</pubDate>
-        </item>
-        <item>
-            <title>智谱新模型，懂法方面全球第一了</title>
-            <link>https://www.qbitai.com/2026/10/503965.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/503965.html</guid>
-            <description>AI的风还是刮到了法律圈</description>
+            <title>2026物理AI与世界模型大会医疗健康世界模型分会场在南京举行</title>
+            <link>https://www.qbitai.com/2026/10/504266.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/504266.html</guid>
+            <description>2026年10月19日下午，医疗健康世界模型分会场在南京国际博览中心钟山厅举行</description>
             <category>开源动态</category>
-            <pubDate>Sat, 17 Oct 2026 12:13:45 +0000</pubDate>
+            <pubDate>Mon, 19 Oct 2026 10:27:39 +0000</pubDate>
         </item>
         <item>
-            <title>清华开源！智能体操作系统任务成本降83%，AI记忆可查可改</title>
-            <link>https://www.qbitai.com/2026/10/503935.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/503935.html</guid>
-            <description>整套系统原生支持MCP</description>
-            <category>开源动态</category>
-            <pubDate>Sat, 17 Oct 2026 12:10:35 +0000</pubDate>
+            <title>全栈自研！国产高端互连芯片，稳了!</title>
+            <link>https://www.qbitai.com/2026/10/504225.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/504225.html</guid>
+            <description>六年蛰伏出货80万颗</description>
+            <category>技术前沿</category>
+            <pubDate>Mon, 19 Oct 2026 10:15:19 +0000</pubDate>
         </item>
         <item>
-            <title>Claude半小时解开密码学悬案，学界集体走偏20年</title>
-            <link>https://www.qbitai.com/2026/10/503910.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/503910.html</guid>
-            <description>谜底指向时间</description>
-            <category>模型发布</category>
-            <pubDate>Sat, 17 Oct 2026 12:06:51 +0000</pubDate>
+            <title>AI 开始挑战最复杂的系统：生命</title>
+            <link>https://www.qbitai.com/2026/10/504242.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/504242.html</guid>
+            <description>10 月 17 日，哲源科技发布 WHIRLPO 计算医学平台。</description>
+            <category>技术前沿</category>
+            <pubDate>Mon, 19 Oct 2026 10:04:18 +0000</pubDate>
+        </item>
+        <item>
+            <title>达摩院玄铁出席RISC-V中国峰会，首发车规产品路线图</title>
+            <link>https://www.qbitai.com/2026/10/504238.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/504238.html</guid>
+            <description>10月19日，RISC-V中国峰会在深圳举行。</description>
+            <category>工具发现</category>
+            <pubDate>Mon, 19 Oct 2026 09:56:38 +0000</pubDate>
         </item>
     </channel>
 </rss>
