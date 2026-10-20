@@ -5,40 +5,40 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Tue, 20 Oct 2026 03:49:55 +0000</lastBuildDate>
+        <lastBuildDate>Tue, 20 Oct 2026 13:23:19 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
         <item>
-            <title>VAST开源实时世界模型EdenLive！单消费级显卡、720P超24FPS</title>
-            <link>https://www.qbitai.com/2026/10/504136.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/504136.html</guid>
-            <description>让人人都能自由创造并体验可交互世界</description>
-            <category>开源动态</category>
-            <pubDate>Sun, 18 Oct 2026 11:49:49 +0000</pubDate>
-        </item>
-        <item>
-            <title>突发！DeepSeek新模型发布，超级性价比斩杀一切</title>
-            <link>https://www.qbitai.com/2026/10/504067.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/504067.html</guid>
-            <description>新版本V4.1-Flash-1017，还开放了自研搜索API</description>
+            <title>Claude新模型曝光！能跳出思维定势，修Bug治标又治本</title>
+            <link>https://www.qbitai.com/2026/10/504314.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/504314.html</guid>
+            <description>OpenAI只掏出一个6.1 Terra…</description>
             <category>模型发布</category>
-            <pubDate>Sat, 17 Oct 2026 12:21:09 +0000</pubDate>
+            <pubDate>Tue, 20 Oct 2026 01:09:43 +0000</pubDate>
         </item>
         <item>
-            <title>智谱新模型，懂法方面全球第一了</title>
-            <link>https://www.qbitai.com/2026/10/503965.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/503965.html</guid>
-            <description>AI的风还是刮到了法律圈</description>
-            <category>开源动态</category>
-            <pubDate>Sat, 17 Oct 2026 12:13:45 +0000</pubDate>
+            <title>从百比特芯片到整机交付，这家量子计算公司正将量子算力推向可调用服务</title>
+            <link>https://www.qbitai.com/2026/10/504277.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/504277.html</guid>
+            <description>同步搭建千比特规模量子算力云平台</description>
+            <category>技术前沿</category>
+            <pubDate>Mon, 19 Oct 2026 14:33:26 +0000</pubDate>
         </item>
         <item>
-            <title>清华开源！智能体操作系统任务成本降83%，AI记忆可查可改</title>
-            <link>https://www.qbitai.com/2026/10/503935.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/503935.html</guid>
-            <description>整套系统原生支持MCP</description>
+            <title>通研院孵化的团队，也盯上了RSI</title>
+            <link>https://www.qbitai.com/2026/10/504294.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/504294.html</guid>
+            <description>当AI越来越懂你，如何让智能真正属于你？</description>
+            <category>技术前沿</category>
+            <pubDate>Mon, 19 Oct 2026 14:31:12 +0000</pubDate>
+        </item>
+        <item>
+            <title>2026物理AI与世界模型大会医疗健康世界模型分会场在南京举行</title>
+            <link>https://www.qbitai.com/2026/10/504266.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/504266.html</guid>
+            <description>2026年10月19日下午，医疗健康世界模型分会场在南京国际博览中心钟山厅举行</description>
             <category>开源动态</category>
-            <pubDate>Sat, 17 Oct 2026 12:10:35 +0000</pubDate>
+            <pubDate>Mon, 19 Oct 2026 10:27:39 +0000</pubDate>
         </item>
     </channel>
 </rss>
