@@ -5,40 +5,40 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Wed, 21 Oct 2026 13:31:43 +0000</lastBuildDate>
+        <lastBuildDate>Wed, 21 Oct 2026 19:56:56 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
         <item>
-            <title>多智能体协同重构医疗AI！清华AIR孵化：医生AI分身“坐诊”医院</title>
-            <link>https://www.qbitai.com/2026/10/504734.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/504734.html</guid>
-            <description>医疗AI质变时刻</description>
+            <title>飞书豆包工作AI先锋未来人才大赛：企业正在争抢会用AI做成事的人</title>
+            <link>https://www.qbitai.com/2026/10/504608.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/504608.html</guid>
+            <description>先看真实问题解决力</description>
             <category>技术前沿</category>
-            <pubDate>Wed, 21 Oct 2026 11:30:59 +0000</pubDate>
+            <pubDate>Wed, 21 Oct 2026 02:37:39 +0000</pubDate>
         </item>
         <item>
-            <title>生数科技Motubrain团队将直播Physical AI训练全流程，持续半个月</title>
-            <link>https://www.qbitai.com/2026/10/504730.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/504730.html</guid>
-            <description>10月21日，生数科技世界模型团队正式开启Motubrain 2.0训练全流程公开直播</description>
+            <title>理想宣布：电池自燃报废赔新车！自研6年后有底气了</title>
+            <link>https://www.qbitai.com/2026/10/504551.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/504551.html</guid>
+            <description>电池、电驱、超充一把梭，冬天多跑30公里</description>
             <category>技术前沿</category>
-            <pubDate>Wed, 21 Oct 2026 09:45:22 +0000</pubDate>
+            <pubDate>Wed, 21 Oct 2026 01:04:35 +0000</pubDate>
         </item>
         <item>
-            <title>LeCun押注的世界模型，中国一家清华系公司已经做进了机器人</title>
-            <link>https://www.qbitai.com/2026/10/504653.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/504653.html</guid>
-            <description>世界模型赛道新看点：千诀隐变量可辨识性方向的研究，比LeCun相近工作早一年，不堆画面预测，主打物理规律与跨本体复用。</description>
+            <title>国模Agent第一！MiniMax爆改Flash战力，全时段大肥鱼谷价</title>
+            <link>https://www.qbitai.com/2026/10/504517.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/504517.html</guid>
+            <description>兔皮底下，竟然是MiniMax！</description>
+            <category>技术前沿</category>
+            <pubDate>Tue, 20 Oct 2026 13:29:54 +0000</pubDate>
+        </item>
+        <item>
+            <title>RSI三块关键拼图，MemT 1.0从模型层补上「记忆」</title>
+            <link>https://www.qbitai.com/2026/10/504456.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/504456.html</guid>
+            <description>把记忆原生焊进Transformer</description>
             <category>开源动态</category>
-            <pubDate>Wed, 21 Oct 2026 07:15:05 +0000</pubDate>
-        </item>
-        <item>
-            <title>量智齐飞！4个月9款车落地，轻舟城市NOA击穿10-20万体验天花板</title>
-            <link>https://www.qbitai.com/2026/10/504638.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/504638.html</guid>
-            <description>百万台搭载打底，智驾普及与安全并重</description>
-            <category>技术前沿</category>
-            <pubDate>Wed, 21 Oct 2026 06:40:46 +0000</pubDate>
+            <pubDate>Tue, 20 Oct 2026 12:50:34 +0000</pubDate>
         </item>
     </channel>
 </rss>
