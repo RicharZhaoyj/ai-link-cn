@@ -5,9 +5,25 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Fri, 23 Oct 2026 03:44:54 +0000</lastBuildDate>
+        <lastBuildDate>Fri, 23 Oct 2026 13:08:58 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
+        <item>
+            <title>百度世界2026前瞻：10+重磅分论坛，全面解码AI时代的智能组织进化路径</title>
+            <link>https://www.qbitai.com/2026/10/504901.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/504901.html</guid>
+            <description>10月21日，百度官方公众号发文披露了百度世界2026分论坛的更多议程信息。</description>
+            <category>技术前沿</category>
+            <pubDate>Fri, 23 Oct 2026 07:35:51 +0000</pubDate>
+        </item>
+        <item>
+            <title>又一国产决策模型发布！准确率超过微软和Jev等决策模型</title>
+            <link>https://www.qbitai.com/2026/10/504879.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/504879.html</guid>
+            <description>10月22日，蚂蚁数科正式发布决策模型 LingDT-Decision-1.0。</description>
+            <category>模型发布</category>
+            <pubDate>Thu, 22 Oct 2026 09:07:05 +0000</pubDate>
+        </item>
         <item>
             <title>特斯拉利润腰斩，一夜跌没“通用汽车”！马斯克：FSD在中国也会遥遥领先</title>
             <link>https://www.qbitai.com/2026/10/504841.html</link>
@@ -23,22 +39,6 @@
             <description>中电信人工智能科技有限公司星辰通用人工智能实验室正式发布并开源意图理解专用模型 Xing4.0-29B-Intent</description>
             <category>模型发布</category>
             <pubDate>Thu, 22 Oct 2026 07:11:14 +0000</pubDate>
-        </item>
-        <item>
-            <title>谁在给OpenAI供应具身数据？</title>
-            <link>https://www.qbitai.com/2026/10/504800.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/504800.html</guid>
-            <description>挤进全球Physical AI核心供应链</description>
-            <category>技术前沿</category>
-            <pubDate>Thu, 22 Oct 2026 07:05:59 +0000</pubDate>
-        </item>
-        <item>
-            <title>多智能体协同重构医疗AI！清华AIR孵化：医生AI分身“坐诊”医院</title>
-            <link>https://www.qbitai.com/2026/10/504734.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/504734.html</guid>
-            <description>医疗AI质变时刻</description>
-            <category>技术前沿</category>
-            <pubDate>Wed, 21 Oct 2026 11:30:59 +0000</pubDate>
         </item>
     </channel>
 </rss>
