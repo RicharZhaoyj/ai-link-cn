@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
 AI News Daily Updater - Enhanced Version
+update: 2026-10-26
 - 抓取多个 RSS 源的最新 AI 新闻
 - 使用现有 article-list 样式更新到"最新洞察"区域
 - 自动生成分类标签和简洁摘要
@@ -31,7 +32,7 @@ RSS_FEEDS = [
         "priority": 2
     },
     {
-        "url": "https://techcrunch.com/tag/artificial-intelligence/feed/",
+        "url": "https://techcrunch.com/category/artificial-intelligence/feed/",
         "category": "全球动态",
         "priority": 2
     },

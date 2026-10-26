@@ -1,4 +1,6 @@
-"""Offline regression checks for the latest-news publication window."""
+"""Offline regression checks for the latest-news publication window.
+update: 2026-10-26
+"""
 
 import importlib.util
 from pathlib import Path
@@ -76,7 +78,7 @@ class FeedRegistryTests(unittest.TestCase):
         "https://www.qbitai.com/feed",
         "https://36kr.com/feed",
         "https://www.zhidx.com/feed",
-        "https://techcrunch.com/tag/artificial-intelligence/feed/",
+        "https://techcrunch.com/category/artificial-intelligence/feed/",
         "https://venturebeat.com/category/ai/feed/",
     ]
 
