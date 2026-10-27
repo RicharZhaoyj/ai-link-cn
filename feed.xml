@@ -5,9 +5,25 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Mon, 26 Oct 2026 20:54:55 +0000</lastBuildDate>
+        <lastBuildDate>Tue, 27 Oct 2026 04:03:30 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
+        <item>
+            <title>How OpenAI turned its coding tools into dots, an always-on personal as...</title>
+            <link>https://techcrunch.com/2026/10/26/how-openai-turned-its-coding-tools-into-dots-an-always-on-personal-assistant/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/10/26/how-openai-turned-its-coding-tools-into-dots-an-always-on-personal-assistant/</guid>
+            <description>Alexander Embiricos, the OpenAI executive responsible for dots, never wants to have a meeting with someone else's AI age...</description>
+            <category>全球动态</category>
+            <pubDate>Tue, 27 Oct 2026 02:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>Cohere says Alibaba’s Qwen model tried to send a file to Beijing</title>
+            <link>https://techcrunch.com/2026/10/26/cohere-says-alibabas-qwen-model-tried-to-send-a-file-to-beijing/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/10/26/cohere-says-alibabas-qwen-model-tried-to-send-a-file-to-beijing/</guid>
+            <description>An AI model said it wouldn’t use any tools, then tried to send something to a server in Beijing anyway, and while resear...</description>
+            <category>全球动态</category>
+            <pubDate>Tue, 27 Oct 2026 01:12:21 +0000</pubDate>
+        </item>
         <item>
             <title>Anthropic’s IPO filing reveals its strategy for keeping enterprise cus...</title>
             <link>https://techcrunch.com/2026/10/26/anthropics-ipo-filing-reveals-its-strategy-for-keeping-enterprise-customers-hooked/</link>
@@ -23,22 +39,6 @@
             <description>The financing gives SpaceX another way to fund its rapidly expanding AI ambitions without relying solely on traditional ...</description>
             <category>全球动态</category>
             <pubDate>Mon, 26 Oct 2026 16:46:36 +0000</pubDate>
-        </item>
-        <item>
-            <title>Anthropic officially files for its public debut</title>
-            <link>https://techcrunch.com/2026/10/26/anthropic-officially-files-for-its-public-debut/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/10/26/anthropic-officially-files-for-its-public-debut/</guid>
-            <description>Anthropic has officially filed for an IPO, revealing soaring revenue, mounting losses, major enterprise adoption, and an...</description>
-            <category>全球动态</category>
-            <pubDate>Mon, 26 Oct 2026 14:35:22 +0000</pubDate>
-        </item>
-        <item>
-            <title>Grok releases the first seven minutes of its AI-generated ‘Odyssey’</title>
-            <link>https://techcrunch.com/2026/10/25/grok-releases-the-first-seven-minutes-of-its-ai-generated-odyssey/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/10/25/grok-releases-the-first-seven-minutes-of-its-ai-generated-odyssey/</guid>
-            <description>The footage looks okay, as long as you're not seeking artistry, inspiration, or human interest.</description>
-            <category>全球动态</category>
-            <pubDate>Sun, 25 Oct 2026 21:31:16 +0000</pubDate>
         </item>
         <item>
             <title>科大讯飞首发星辰TaaS平台，让Token真正成为千行百业的生产力</title>
