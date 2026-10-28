@@ -5,9 +5,25 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Wed, 28 Oct 2026 04:29:47 +0000</lastBuildDate>
+        <lastBuildDate>Wed, 28 Oct 2026 14:54:18 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
+        <item>
+            <title>7 days until TechCrunch Founder Summit: Save up to $100 on your pass b...</title>
+            <link>https://techcrunch.com/2026/10/28/7-days-until-techcrunch-founder-summit-save-up-to-100-before-doors-open/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/10/28/7-days-until-techcrunch-founder-summit-save-up-to-100-before-doors-open/</guid>
+            <description>In just 7 days, TechCrunch Founder Summit takes over Boston’s SoWa Power Station on November 4. Your chance to save up t...</description>
+            <category>全球动态</category>
+            <pubDate>Wed, 28 Oct 2026 13:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>Personal Agent走向真实任务，蚂蚁百灵开源 Ling-3.1-flash-1019</title>
+            <link>https://www.qbitai.com/2026/10/505928.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/505928.html</guid>
+            <description>10月28 日，蚂蚁集团旗下百灵大模型正式开源 Ling-3.1-flash-1019。</description>
+            <category>开源动态</category>
+            <pubDate>Wed, 28 Oct 2026 04:04:48 +0000</pubDate>
+        </item>
         <item>
             <title>VCs will make billions on Anthropic’s IPO, but Amazon is set to make m...</title>
             <link>https://techcrunch.com/2026/10/27/vcs-will-make-billions-on-anthropics-ipo-but-amazon-is-set-to-make-much-much-more/</link>
@@ -33,44 +49,28 @@
             <pubDate>Tue, 27 Oct 2026 22:55:41 +0000</pubDate>
         </item>
         <item>
-            <title>Bank of America kindly asks that you don’t share your banking password...</title>
-            <link>https://techcrunch.com/2026/10/27/bank-of-america-kindly-asks-that-you-dont-share-your-banking-password-with-your-ai-assistant/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/10/27/bank-of-america-kindly-asks-that-you-dont-share-your-banking-password-with-your-ai-assistant/</guid>
-            <description>The banking giant reminds customers that "you're responsible for activity" resulting from your AI agents' access.</description>
-            <category>全球动态</category>
-            <pubDate>Tue, 27 Oct 2026 21:44:34 +0000</pubDate>
-        </item>
-        <item>
-            <title>钛动科技发布行业首个Pro-Agent, Navos Pro定义结果导向的AI for Work | TGC 2026科技增长大会</title>
-            <link>https://www.qbitai.com/2026/10/505580.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/505580.html</guid>
-            <description>10 月 23 日，以 “ AI is Profitable ” 为主题的 2026 TGC 科技增长大会于广州召开。</description>
-            <category>模型发布</category>
-            <pubDate>Tue, 27 Oct 2026 03:23:55 +0000</pubDate>
-        </item>
-        <item>
-            <title>刚刚，Anthropic公开335页招股书：史上最大IPO，史上最亏AI公司</title>
-            <link>https://www.qbitai.com/2026/10/505551.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/505551.html</guid>
-            <description>地球最富兄妹俩堂堂来袭！7名联创仍紧握50.1%总投票权</description>
-            <category>技术前沿</category>
-            <pubDate>Mon, 26 Oct 2026 16:06:31 +0000</pubDate>
-        </item>
-        <item>
-            <title>AI时代，一个人能有多大能量？天禧AI × 观猹大会现场实测个人AI跨端协同新体验</title>
-            <link>https://www.qbitai.com/2026/10/505539.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/505539.html</guid>
-            <description>10月23日至25日，以“见证超能发生”为主题的“天禧AI × 观猹大会”在杭州茶叶博览会会议会展中心启幕。</description>
-            <category>技术前沿</category>
-            <pubDate>Mon, 26 Oct 2026 09:46:13 +0000</pubDate>
-        </item>
-        <item>
-            <title>OpenAI开始断网训练最强模型：“安全起见”</title>
-            <link>https://www.qbitai.com/2026/10/505529.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/505529.html</guid>
-            <description>模型开始利用GPU缓存聊天？</description>
+            <title>不藏了！人形机器人全开源动真格，从机械结构一路拆到运动算法</title>
+            <link>https://www.qbitai.com/2026/10/505865.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/505865.html</guid>
+            <description>人形机器人全套图纸开源！从关节到算法，下载就能自己造。</description>
             <category>开源动态</category>
-            <pubDate>Mon, 26 Oct 2026 09:37:57 +0000</pubDate>
+            <pubDate>Tue, 27 Oct 2026 12:57:51 +0000</pubDate>
+        </item>
+        <item>
+            <title>印奇把4D雷达也端到端了</title>
+            <link>https://www.qbitai.com/2026/10/505852.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/505852.html</guid>
+            <description>毫米波雷达，AI算力10TOPS</description>
+            <category>技术前沿</category>
+            <pubDate>Tue, 27 Oct 2026 10:40:12 +0000</pubDate>
+        </item>
+        <item>
+            <title>乔布斯的皮克斯，狂赞中国物理AI数据终端</title>
+            <link>https://www.qbitai.com/2026/10/505830.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/505830.html</guid>
+            <description>顶尖智能汽车玩家的终局，不会停在智能汽车</description>
+            <category>技术前沿</category>
+            <pubDate>Tue, 27 Oct 2026 09:54:51 +0000</pubDate>
         </item>
     </channel>
 </rss>
