@@ -5,16 +5,40 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Wed, 28 Oct 2026 14:54:18 +0000</lastBuildDate>
+        <lastBuildDate>Wed, 28 Oct 2026 20:49:59 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
         <item>
-            <title>7 days until TechCrunch Founder Summit: Save up to $100 on your pass b...</title>
-            <link>https://techcrunch.com/2026/10/28/7-days-until-techcrunch-founder-summit-save-up-to-100-before-doors-open/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/10/28/7-days-until-techcrunch-founder-summit-save-up-to-100-before-doors-open/</guid>
-            <description>In just 7 days, TechCrunch Founder Summit takes over Boston’s SoWa Power Station on November 4. Your chance to save up t...</description>
+            <title>Anthropic just launched tools to show companies what their AI spending...</title>
+            <link>https://techcrunch.com/2026/10/28/anthropic-just-launched-tools-to-show-companies-what-their-ai-spending-is-buying/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/10/28/anthropic-just-launched-tools-to-show-companies-what-their-ai-spending-is-buying/</guid>
+            <description>The frontier lab is lifting the curtain on how users spend money on its models ahead of a planned IPO.</description>
             <category>全球动态</category>
-            <pubDate>Wed, 28 Oct 2026 13:00:00 +0000</pubDate>
+            <pubDate>Wed, 28 Oct 2026 19:19:58 +0000</pubDate>
+        </item>
+        <item>
+            <title>Wiz’s CTO on PHP2Shell and the coming ‘vulnpocalypse’</title>
+            <link>https://techcrunch.com/video/wizs-cto-on-php2shell-and-the-coming-vulnpocalypse/</link>
+            <guid isPermaLink="true">https://techcrunch.com/video/wizs-cto-on-php2shell-and-the-coming-vulnpocalypse/</guid>
+            <description>The PHP scare may have faded from your feed, but the cleanup is far from over. Last week, two critical bugs in the open ...</description>
+            <category>全球动态</category>
+            <pubDate>Wed, 28 Oct 2026 19:05:46 +0000</pubDate>
+        </item>
+        <item>
+            <title>The ‘Vulnpocalypse’ is coming for the internet’s aging code, says Wiz’...</title>
+            <link>https://techcrunch.com/podcast/the-vulnpocalypse-is-coming-for-the-internets-aging-code-says-wizs-cto/</link>
+            <guid isPermaLink="true">https://techcrunch.com/podcast/the-vulnpocalypse-is-coming-for-the-internets-aging-code-says-wizs-cto/</guid>
+            <description>The PHP scare may have faded from your feed, but the cleanup is far from over. Last week, two critical bugs in the open ...</description>
+            <category>全球动态</category>
+            <pubDate>Wed, 28 Oct 2026 18:50:39 +0000</pubDate>
+        </item>
+        <item>
+            <title>Chrome’s AI-powered Autofill can now dig through your Gmail to fill ou...</title>
+            <link>https://techcrunch.com/2026/10/28/chromes-ai-powered-autofill-can-now-dig-through-your-gmail-to-fill-out-forms/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/10/28/chromes-ai-powered-autofill-can-now-dig-through-your-gmail-to-fill-out-forms/</guid>
+            <description>The autofill update lets Chrome pull flight confirmations, tracking info, order details, and other information from your...</description>
+            <category>全球动态</category>
+            <pubDate>Wed, 28 Oct 2026 17:00:00 +0000</pubDate>
         </item>
         <item>
             <title>Personal Agent走向真实任务，蚂蚁百灵开源 Ling-3.1-flash-1019</title>
@@ -23,30 +47,6 @@
             <description>10月28 日，蚂蚁集团旗下百灵大模型正式开源 Ling-3.1-flash-1019。</description>
             <category>开源动态</category>
             <pubDate>Wed, 28 Oct 2026 04:04:48 +0000</pubDate>
-        </item>
-        <item>
-            <title>VCs will make billions on Anthropic’s IPO, but Amazon is set to make m...</title>
-            <link>https://techcrunch.com/2026/10/27/vcs-will-make-billions-on-anthropics-ipo-but-amazon-is-set-to-make-much-much-more/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/10/27/vcs-will-make-billions-on-anthropics-ipo-but-amazon-is-set-to-make-much-much-more/</guid>
-            <description>Massive note conversions reveal the true extent of Amazon's ownership in Anthropic.</description>
-            <category>全球动态</category>
-            <pubDate>Wed, 28 Oct 2026 01:15:28 +0000</pubDate>
-        </item>
-        <item>
-            <title>Parents sue OpenAI, alleging GPT-4o coached their daughter off seizure...</title>
-            <link>https://techcrunch.com/2026/10/27/parents-sue-openai-alleging-gpt-4o-coached-their-daughter-off-seizure-medication/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/10/27/parents-sue-openai-alleging-gpt-4o-coached-their-daughter-off-seizure-medication/</guid>
-            <description>A family is suing OpenAI, saying ChatGPT coached their daughter to quietly taper off her seizure medication and keep it ...</description>
-            <category>模型发布</category>
-            <pubDate>Tue, 27 Oct 2026 23:34:27 +0000</pubDate>
-        </item>
-        <item>
-            <title>The data center boom has an upside: innovation for the US grid</title>
-            <link>https://techcrunch.com/2026/10/27/the-data-center-boom-has-an-upside-innovation-for-the-us-grid/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/10/27/the-data-center-boom-has-an-upside-innovation-for-the-us-grid/</guid>
-            <description>As the AI boom stresses the existing power grid, all sorts of new opportunities for grid modernization are also emerging...</description>
-            <category>全球动态</category>
-            <pubDate>Tue, 27 Oct 2026 22:55:41 +0000</pubDate>
         </item>
         <item>
             <title>不藏了！人形机器人全开源动真格，从机械结构一路拆到运动算法</title>
