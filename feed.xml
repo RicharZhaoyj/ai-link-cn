@@ -5,32 +5,40 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Thu, 29 Oct 2026 14:59:27 +0000</lastBuildDate>
+        <lastBuildDate>Thu, 29 Oct 2026 20:54:48 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
         <item>
-            <title>Wabi, the AI agent that builds mini apps, now valued at $1.25B after l...</title>
-            <link>https://techcrunch.com/2026/10/29/wabi-the-ai-agent-that-builds-mini-apps-now-valued-at-1-25b-after-latest-round/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/10/29/wabi-the-ai-agent-that-builds-mini-apps-now-valued-at-1-25b-after-latest-round/</guid>
-            <description>On Thursday, AI app, Wabi, now describing itself as a "personal agent," said it has raised $55 million at a $1.25 billio...</description>
+            <title>As search traffic dries up, Reddit announces it’s shifting to a logged...</title>
+            <link>https://techcrunch.com/2026/10/29/as-search-traffic-dries-up-reddit-announces-its-shifting-to-a-logged-in-experience/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/10/29/as-search-traffic-dries-up-reddit-announces-its-shifting-to-a-logged-in-experience/</guid>
+            <description>As AI transforms how people find information online, Reddit is rethinking its open-web roots to protect its audience and...</description>
+            <category>全球动态</category>
+            <pubDate>Thu, 29 Oct 2026 20:08:31 +0000</pubDate>
+        </item>
+        <item>
+            <title>Rivian expands joint venture with VW to include AI assistant</title>
+            <link>https://techcrunch.com/2026/10/29/rivian-expands-joint-venture-with-vw-to-include-ai-assistant/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/10/29/rivian-expands-joint-venture-with-vw-to-include-ai-assistant/</guid>
+            <description>Rivian doesn't disclose if the value of its $5.8 billion joint venture will expand as a result.</description>
+            <category>全球动态</category>
+            <pubDate>Thu, 29 Oct 2026 20:05:47 +0000</pubDate>
+        </item>
+        <item>
+            <title>OpenAI-backed Thrive Holdings acquires ADT</title>
+            <link>https://techcrunch.com/2026/10/29/openai-backed-thrive-holdings-acquires-adt/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/10/29/openai-backed-thrive-holdings-acquires-adt/</guid>
+            <description>OpenAI-backed Thrive Holdings is buying ADT in a $15.3 billion deal, with plans to bring AI to the home security busines...</description>
+            <category>全球动态</category>
+            <pubDate>Thu, 29 Oct 2026 19:56:19 +0000</pubDate>
+        </item>
+        <item>
+            <title>Meta quietly launches an AI fashion app called Style Sketch</title>
+            <link>https://techcrunch.com/2026/10/29/meta-quietly-launches-an-ai-fashion-app-called-style-sketch/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/10/29/meta-quietly-launches-an-ai-fashion-app-called-style-sketch/</guid>
+            <description>The app connects to Instagram to build a virtual closet from photos you’ve already shared, or lets you add items manuall...</description>
             <category>工具发现</category>
-            <pubDate>Thu, 29 Oct 2026 14:35:26 +0000</pubDate>
-        </item>
-        <item>
-            <title>Deepgram acquires Pipecat-maker Daily to bolster its voice AI infrastr...</title>
-            <link>https://techcrunch.com/2026/10/29/deepgram-acquires-pipecat-maker-daily-to-bolster-its-voice-ai-infrastructure/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/10/29/deepgram-acquires-pipecat-maker-daily-to-bolster-its-voice-ai-infrastructure/</guid>
-            <description>Deepgram said that it is committed to keep Pipecat open source.</description>
-            <category>全球动态</category>
-            <pubDate>Thu, 29 Oct 2026 13:00:00 +0000</pubDate>
-        </item>
-        <item>
-            <title>Amazon updates Alexa to help you manage shopping lists, subscriptions,...</title>
-            <link>https://techcrunch.com/2026/10/29/amazon-updates-alexa-to-help-you-manage-shopping-lists-subscriptions-and-update-delivery-instructions/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/10/29/amazon-updates-alexa-to-help-you-manage-shopping-lists-subscriptions-and-update-delivery-instructions/</guid>
-            <description>The update allows you to use Alexa to create lists, register them, see what's on them, and add or edit items. You can al...</description>
-            <category>全球动态</category>
-            <pubDate>Thu, 29 Oct 2026 13:00:00 +0000</pubDate>
+            <pubDate>Thu, 29 Oct 2026 19:14:36 +0000</pubDate>
         </item>
         <item>
             <title>文远知行001号员工带队，景烁科技首轮融资数千万美元</title>
@@ -63,14 +71,6 @@
             <description>理想今年最后一场发布会，自研电池芯片全部上车</description>
             <category>技术前沿</category>
             <pubDate>Thu, 29 Oct 2026 00:59:26 +0000</pubDate>
-        </item>
-        <item>
-            <title>Microsoft just shared Azure’s actual revenue in dollars: $33.2 billion</title>
-            <link>https://techcrunch.com/2026/10/28/microsoft-just-shared-azures-actual-revenue-in-dollars-33-2-billion/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/10/28/microsoft-just-shared-azures-actual-revenue-in-dollars-33-2-billion/</guid>
-            <description>Microsoft has never disclosed Azure's quarterly revenue in dollars. But for the first time, we can see just how close it...</description>
-            <category>全球动态</category>
-            <pubDate>Wed, 28 Oct 2026 21:58:32 +0000</pubDate>
         </item>
     </channel>
 </rss>
