@@ -5,9 +5,25 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Thu, 29 Oct 2026 20:54:48 +0000</lastBuildDate>
+        <lastBuildDate>Fri, 30 Oct 2026 04:45:43 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
+        <item>
+            <title>You don’t need to believe in a god to get a religious exemption from u...</title>
+            <link>https://techcrunch.com/2026/10/29/you-dont-need-to-believe-in-a-god-to-get-a-religious-exemption-from-using-ai-at-work/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/10/29/you-dont-need-to-believe-in-a-god-to-get-a-religious-exemption-from-using-ai-at-work/</guid>
+            <description>David Durman, a University of Kentucky administrator, recently earned a religious exemption from using AI in the workpla...</description>
+            <category>全球动态</category>
+            <pubDate>Fri, 30 Oct 2026 01:20:48 +0000</pubDate>
+        </item>
+        <item>
+            <title>AWS will be a $1T business, Jassy says. But first, it will spend big.</title>
+            <link>https://techcrunch.com/2026/10/29/aws-will-be-a-1t-business-jassy-says-but-first-it-will-spend-big/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/10/29/aws-will-be-a-1t-business-jassy-says-but-first-it-will-spend-big/</guid>
+            <description>Amazon wants to be the king of AI cloud computing and become the first $1 trillion revenue business. But to do that it w...</description>
+            <category>全球动态</category>
+            <pubDate>Thu, 29 Oct 2026 23:42:22 +0000</pubDate>
+        </item>
         <item>
             <title>As search traffic dries up, Reddit announces it’s shifting to a logged...</title>
             <link>https://techcrunch.com/2026/10/29/as-search-traffic-dries-up-reddit-announces-its-shifting-to-a-logged-in-experience/</link>
@@ -23,22 +39,6 @@
             <description>Rivian doesn't disclose if the value of its $5.8 billion joint venture will expand as a result.</description>
             <category>全球动态</category>
             <pubDate>Thu, 29 Oct 2026 20:05:47 +0000</pubDate>
-        </item>
-        <item>
-            <title>OpenAI-backed Thrive Holdings acquires ADT</title>
-            <link>https://techcrunch.com/2026/10/29/openai-backed-thrive-holdings-acquires-adt/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/10/29/openai-backed-thrive-holdings-acquires-adt/</guid>
-            <description>OpenAI-backed Thrive Holdings is buying ADT in a $15.3 billion deal, with plans to bring AI to the home security busines...</description>
-            <category>全球动态</category>
-            <pubDate>Thu, 29 Oct 2026 19:56:19 +0000</pubDate>
-        </item>
-        <item>
-            <title>Meta quietly launches an AI fashion app called Style Sketch</title>
-            <link>https://techcrunch.com/2026/10/29/meta-quietly-launches-an-ai-fashion-app-called-style-sketch/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/10/29/meta-quietly-launches-an-ai-fashion-app-called-style-sketch/</guid>
-            <description>The app connects to Instagram to build a virtual closet from photos you’ve already shared, or lets you add items manuall...</description>
-            <category>工具发现</category>
-            <pubDate>Thu, 29 Oct 2026 19:14:36 +0000</pubDate>
         </item>
         <item>
             <title>文远知行001号员工带队，景烁科技首轮融资数千万美元</title>
