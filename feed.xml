@@ -5,9 +5,33 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Fri, 30 Oct 2026 14:52:53 +0000</lastBuildDate>
+        <lastBuildDate>Fri, 30 Oct 2026 20:28:54 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
+        <item>
+            <title>Zest’s new AI agent finds restaurants and books reservations over text</title>
+            <link>https://techcrunch.com/2026/10/30/zests-new-ai-agent-finds-restaurants-and-books-reservations-over-text/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/10/30/zests-new-ai-agent-finds-restaurants-and-books-reservations-over-text/</guid>
+            <description>Can't agree on where to eat? Zest's AI concierge can combine everyone's tastes, put restaurant options to a vote, and ma...</description>
+            <category>全球动态</category>
+            <pubDate>Fri, 30 Oct 2026 17:47:12 +0000</pubDate>
+        </item>
+        <item>
+            <title>Google’s first data center satellite is online and writing poetry</title>
+            <link>https://techcrunch.com/2026/10/30/googles-first-data-center-satellite-is-online-and-writing-poetry/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/10/30/googles-first-data-center-satellite-is-online-and-writing-poetry/</guid>
+            <description>The first TPU in space is running a Google DeepMind Gemma 4 model and writing cheesy poetry.</description>
+            <category>全球动态</category>
+            <pubDate>Fri, 30 Oct 2026 17:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>Theranos whistleblower Tyler Shultz warns that the AI boom is ‘a great...</title>
+            <link>https://techcrunch.com/2026/10/30/theranos-whistleblower-tyler-shultz-warns-that-the-ai-boom-is-a-great-opportunity-to-go-deceive-people/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/10/30/theranos-whistleblower-tyler-shultz-warns-that-the-ai-boom-is-a-great-opportunity-to-go-deceive-people/</guid>
+            <description>The cautionary Theranos tale takes on a new significance in the AI era, when companies that have never turned a profit a...</description>
+            <category>全球动态</category>
+            <pubDate>Fri, 30 Oct 2026 16:03:45 +0000</pubDate>
+        </item>
         <item>
             <title>Skip the small talk: Make game-changing connections at TechCrunch Foun...</title>
             <link>https://techcrunch.com/2026/10/30/skip-the-small-talk-make-game-changing-connections-at-techcrunch-founder-summit-with-braindate/</link>
@@ -15,30 +39,6 @@
             <description>At TechCrunch Founder Summit 2026, happening November 4 at SoWa Power Station in Boston, networking powered by Braindate...</description>
             <category>全球动态</category>
             <pubDate>Fri, 30 Oct 2026 14:00:00 +0000</pubDate>
-        </item>
-        <item>
-            <title>DoorDash said it’s only received ‘several hundred’ orders from AI agen...</title>
-            <link>https://techcrunch.com/2026/10/30/doordash-said-its-only-received-several-hundred-orders-from-ai-agents/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/10/30/doordash-said-its-only-received-several-hundred-orders-from-ai-agents/</guid>
-            <description>DoorDash said that it is open to working with third-party agent makers</description>
-            <category>全球动态</category>
-            <pubDate>Fri, 30 Oct 2026 13:54:25 +0000</pubDate>
-        </item>
-        <item>
-            <title>5 days left: Your last chance to connect, scale, and save at TechCrunc...</title>
-            <link>https://techcrunch.com/2026/10/30/5-days-left-your-last-chance-to-connect-scale-and-save-at-techcrunch-founder-summit-2026/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/10/30/5-days-left-your-last-chance-to-connect-scale-and-save-at-techcrunch-founder-summit-2026/</guid>
-            <description>5 days to save up to $100, plus a second pass for free to TechCrunch Founder Summit 2026 in Boston on November 4. Regist...</description>
-            <category>全球动态</category>
-            <pubDate>Fri, 30 Oct 2026 13:00:00 +0000</pubDate>
-        </item>
-        <item>
-            <title>Can AI data centers be mass-produced like cars? This startup aims to f...</title>
-            <link>https://techcrunch.com/2026/10/30/can-ai-data-centers-be-mass-produced-like-cars-and-online-in-48-hours-this-startup-aims-to-find-out/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/10/30/can-ai-data-centers-be-mass-produced-like-cars-and-online-in-48-hours-this-startup-aims-to-find-out/</guid>
-            <description>Runware is building a factory to turn out prefabricated AI data centers on an assembly line. The real test will be wheth...</description>
-            <category>全球动态</category>
-            <pubDate>Fri, 30 Oct 2026 13:00:00 +0000</pubDate>
         </item>
         <item>
             <title>英伟达团队基于 MiniMax H3 开源视频增强方案，最高支持 4K 重生成</title>
