@@ -5,9 +5,33 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Sat, 31 Oct 2026 04:30:14 +0000</lastBuildDate>
+        <lastBuildDate>Sat, 31 Oct 2026 14:21:59 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
+        <item>
+            <title>你的8G iPad里有12G内存！库克走了但他的刀法追着我砍</title>
+            <link>https://www.qbitai.com/2026/10/506884.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/506884.html</guid>
+            <description>苹果“牛奶倒河里”式操作翻红</description>
+            <category>技术前沿</category>
+            <pubDate>Sat, 31 Oct 2026 05:17:50 +0000</pubDate>
+        </item>
+        <item>
+            <title>世界模型首次指导设计芯片！超大核NPU700TOPS，99%算力可用</title>
+            <link>https://www.qbitai.com/2026/10/506866.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/506866.html</guid>
+            <description>AI算力利用“九九成”</description>
+            <category>开源动态</category>
+            <pubDate>Sat, 31 Oct 2026 05:11:19 +0000</pubDate>
+        </item>
+        <item>
+            <title>刚刚，Claude宣布取消5小时限制！首批Ultra用户已「解封」</title>
+            <link>https://www.qbitai.com/2026/10/506855.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/506855.html</guid>
+            <description>200美元Ultra用户先用</description>
+            <category>模型发布</category>
+            <pubDate>Sat, 31 Oct 2026 05:05:29 +0000</pubDate>
+        </item>
         <item>
             <title>Nvidia weighs playing the cosigner for Nscale’s AI data center in West...</title>
             <link>https://techcrunch.com/2026/10/30/nvidia-weighs-playing-the-cosigner-for-nscales-ai-data-center-in-west-virginia/</link>
@@ -41,36 +65,12 @@
             <pubDate>Fri, 30 Oct 2026 21:52:03 +0000</pubDate>
         </item>
         <item>
-            <title>英伟达团队基于 MiniMax H3 开源视频增强方案，最高支持 4K 重生成</title>
-            <link>https://www.qbitai.com/2026/10/506743.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/506743.html</guid>
-            <description>英伟达与麻省理工学院团队，在 Hugging Face 发布了视频增强项目 Open-H3-Regenerate-2K 的模型权重</description>
+            <title>榜一，拿来吧你！智元这波双模型杀穿多榜榜单</title>
+            <link>https://www.qbitai.com/2026/10/506819.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/506819.html</guid>
+            <description>xs，还要给机器人打绩效</description>
             <category>开源动态</category>
-            <pubDate>Fri, 30 Oct 2026 07:31:11 +0000</pubDate>
-        </item>
-        <item>
-            <title>RSI立大功！国产开源登顶全球第一，1.3B OXR重塑OCR</title>
-            <link>https://www.qbitai.com/2026/10/506686.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/506686.html</guid>
-            <description>解析一切</description>
-            <category>开源动态</category>
-            <pubDate>Fri, 30 Oct 2026 05:52:47 +0000</pubDate>
-        </item>
-        <item>
-            <title>Claude新模型曝光：新Fable，新Opus…</title>
-            <link>https://www.qbitai.com/2026/10/506674.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/506674.html</guid>
-            <description>Claude新模型曝光：新Fable，新Opus…</description>
-            <category>模型发布</category>
-            <pubDate>Fri, 30 Oct 2026 05:50:44 +0000</pubDate>
-        </item>
-        <item>
-            <title>从学习人类到学习机器人同伴，清华大学联合无问芯穹、智元提出具身智能规模化落地新路径</title>
-            <link>https://www.qbitai.com/2026/10/506662.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/506662.html</guid>
-            <description>让机器人成为彼此的“老师”</description>
-            <category>技术前沿</category>
-            <pubDate>Fri, 30 Oct 2026 03:48:04 +0000</pubDate>
+            <pubDate>Fri, 30 Oct 2026 12:58:31 +0000</pubDate>
         </item>
     </channel>
 </rss>
