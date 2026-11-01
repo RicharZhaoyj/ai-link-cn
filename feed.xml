@@ -5,9 +5,41 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Sun, 01 Nov 2026 04:50:40 +0000</lastBuildDate>
+        <lastBuildDate>Sun, 01 Nov 2026 14:47:23 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
+        <item>
+            <title>三年前布局，今年爆火丨西湖大学成立新中心</title>
+            <link>https://www.qbitai.com/2026/11/507076.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/507076.html</guid>
+            <description>西湖世界模型研究中心成立</description>
+            <category>技术前沿</category>
+            <pubDate>Sun, 01 Nov 2026 13:28:10 +0000</pubDate>
+        </item>
+        <item>
+            <title>Claude紧急叫停！暗改Harness禁止逆向游戏</title>
+            <link>https://www.qbitai.com/2026/11/507038.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/507038.html</guid>
+            <description>Claude紧急叫停！暗改Harness禁止逆向游戏</description>
+            <category>模型发布</category>
+            <pubDate>Sun, 01 Nov 2026 13:09:55 +0000</pubDate>
+        </item>
+        <item>
+            <title>清华姚期智团队新作：代数世界模型，让AI像牛顿一样思考</title>
+            <link>https://www.qbitai.com/2026/11/507031.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/507031.html</guid>
+            <description>让AI像牛顿一样思考</description>
+            <category>开源动态</category>
+            <pubDate>Sun, 01 Nov 2026 08:02:37 +0000</pubDate>
+        </item>
+        <item>
+            <title>老牌便利店机器人售货折戟：实验室锤炼上万次，货架前还是摔瓶子</title>
+            <link>https://www.qbitai.com/2026/11/506990.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/506990.html</guid>
+            <description>这事还是想得太简单了</description>
+            <category>技术前沿</category>
+            <pubDate>Sun, 01 Nov 2026 07:50:57 +0000</pubDate>
+        </item>
         <item>
             <title>Apple CEO says the company doesn’t ‘want to ship AI for AI’s sake’</title>
             <link>https://techcrunch.com/2026/10/31/apple-ceo-says-the-company-doesnt-want-to-ship-ai-for-ais-sake/</link>
@@ -39,38 +71,6 @@
             <description>OpenAI’s latest funding round doesn't seem to be living up to expectations.</description>
             <category>全球动态</category>
             <pubDate>Sat, 31 Oct 2026 16:12:55 +0000</pubDate>
-        </item>
-        <item>
-            <title>你的8G iPad里有12G内存！库克走了但他的刀法追着我砍</title>
-            <link>https://www.qbitai.com/2026/10/506884.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/506884.html</guid>
-            <description>苹果“牛奶倒河里”式操作翻红</description>
-            <category>技术前沿</category>
-            <pubDate>Sat, 31 Oct 2026 05:17:50 +0000</pubDate>
-        </item>
-        <item>
-            <title>世界模型首次指导设计芯片！超大核NPU700TOPS，99%算力可用</title>
-            <link>https://www.qbitai.com/2026/10/506866.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/506866.html</guid>
-            <description>AI算力利用“九九成”</description>
-            <category>开源动态</category>
-            <pubDate>Sat, 31 Oct 2026 05:11:19 +0000</pubDate>
-        </item>
-        <item>
-            <title>刚刚，Claude宣布取消5小时限制！首批Ultra用户已「解封」</title>
-            <link>https://www.qbitai.com/2026/10/506855.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/506855.html</guid>
-            <description>200美元Ultra用户先用</description>
-            <category>模型发布</category>
-            <pubDate>Sat, 31 Oct 2026 05:05:29 +0000</pubDate>
-        </item>
-        <item>
-            <title>榜一，拿来吧你！智元这波双模型杀穿多榜榜单</title>
-            <link>https://www.qbitai.com/2026/10/506819.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/506819.html</guid>
-            <description>xs，还要给机器人打绩效</description>
-            <category>开源动态</category>
-            <pubDate>Fri, 30 Oct 2026 12:58:31 +0000</pubDate>
         </item>
     </channel>
 </rss>
