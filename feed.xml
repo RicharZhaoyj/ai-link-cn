@@ -5,9 +5,33 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Sat, 31 Oct 2026 19:45:19 +0000</lastBuildDate>
+        <lastBuildDate>Sun, 01 Nov 2026 04:50:40 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
+        <item>
+            <title>Apple CEO says the company doesn’t ‘want to ship AI for AI’s sake’</title>
+            <link>https://techcrunch.com/2026/10/31/apple-ceo-says-the-company-doesnt-want-to-ship-ai-for-ais-sake/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/10/31/apple-ceo-says-the-company-doesnt-want-to-ship-ai-for-ais-sake/</guid>
+            <description>Apple's new CEO defended the company's current position in the AI landscape.</description>
+            <category>工具发现</category>
+            <pubDate>Sat, 31 Oct 2026 21:41:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>4 days left: How TechCrunch Founder Summit helps you make more useful ...</title>
+            <link>https://techcrunch.com/2026/10/31/4-days-left-how-techcrunch-founder-summit-helps-you-make-more-useful-connections-to-scale/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/10/31/4-days-left-how-techcrunch-founder-summit-helps-you-make-more-useful-connections-to-scale/</guid>
+            <description>On November 4 at Boston’s SoWa Power Station, get ready for a full day packed with meaningful networking opportunities, ...</description>
+            <category>全球动态</category>
+            <pubDate>Sat, 31 Oct 2026 21:36:07 +0000</pubDate>
+        </item>
+        <item>
+            <title>Judge allows NAACP lawsuit over xAI data center pollution to move forw...</title>
+            <link>https://techcrunch.com/2026/10/31/judge-allows-naacp-lawsuit-over-xai-data-center-pollution-to-move-forward/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/10/31/judge-allows-naacp-lawsuit-over-xai-data-center-pollution-to-move-forward/</guid>
+            <description>An NAACP lawsuit accuses the SpaceX-owned AI company of violating the Clean Air Act.</description>
+            <category>全球动态</category>
+            <pubDate>Sat, 31 Oct 2026 21:17:03 +0000</pubDate>
+        </item>
         <item>
             <title>OpenAI reportedly lowers funding target for new round</title>
             <link>https://techcrunch.com/2026/10/31/openai-reportedly-lowers-funding-target-for-new-round/</link>
@@ -15,14 +39,6 @@
             <description>OpenAI’s latest funding round doesn't seem to be living up to expectations.</description>
             <category>全球动态</category>
             <pubDate>Sat, 31 Oct 2026 16:12:55 +0000</pubDate>
-        </item>
-        <item>
-            <title>刚刚，DeepSeek重磅开源：Agent底座架构！</title>
-            <link>https://www.qbitai.com/2026/10/506904.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/10/506904.html</guid>
-            <description>AI已经自己找到Bug并提交PR</description>
-            <category>开源动态</category>
-            <pubDate>Sat, 31 Oct 2026 13:49:44 +0000</pubDate>
         </item>
         <item>
             <title>你的8G iPad里有12G内存！库克走了但他的刀法追着我砍</title>
@@ -49,28 +65,12 @@
             <pubDate>Sat, 31 Oct 2026 05:05:29 +0000</pubDate>
         </item>
         <item>
-            <title>Nvidia weighs playing the cosigner for Nscale’s AI data center in West...</title>
-            <link>https://techcrunch.com/2026/10/30/nvidia-weighs-playing-the-cosigner-for-nscales-ai-data-center-in-west-virginia/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/10/30/nvidia-weighs-playing-the-cosigner-for-nscales-ai-data-center-in-west-virginia/</guid>
-            <description>When investors get nervous about AI spending, it helps to have the chipmaker that sells the chips offer to cosign the lo...</description>
-            <category>全球动态</category>
-            <pubDate>Sat, 31 Oct 2026 01:20:05 +0000</pubDate>
-        </item>
-        <item>
-            <title>Ollie, a privacy-focused AI assistant, is shutting down</title>
-            <link>https://techcrunch.com/2026/10/30/ollie-a-privacy-focused-ai-assistant-is-shutting-down/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/10/30/ollie-a-privacy-focused-ai-assistant-is-shutting-down/</guid>
-            <description>As an increasing number of AI assistants flood the market, the founder of Ollie, an assistant that respected its users' ...</description>
-            <category>全球动态</category>
-            <pubDate>Fri, 30 Oct 2026 22:56:13 +0000</pubDate>
-        </item>
-        <item>
-            <title>Intel’s stock crashes, knocking $12B from government’s stake</title>
-            <link>https://techcrunch.com/2026/10/30/intels-stock-crashes-knocking-12b-from-governments-stake/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/10/30/intels-stock-crashes-knocking-12b-from-governments-stake/</guid>
-            <description>Intel is being hurt by PC sales as the AI industry gobbles memory and other components causing PC prices to rise.</description>
-            <category>全球动态</category>
-            <pubDate>Fri, 30 Oct 2026 21:54:34 +0000</pubDate>
+            <title>榜一，拿来吧你！智元这波双模型杀穿多榜榜单</title>
+            <link>https://www.qbitai.com/2026/10/506819.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/10/506819.html</guid>
+            <description>xs，还要给机器人打绩效</description>
+            <category>开源动态</category>
+            <pubDate>Fri, 30 Oct 2026 12:58:31 +0000</pubDate>
         </item>
     </channel>
 </rss>
