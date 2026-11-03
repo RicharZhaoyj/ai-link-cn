@@ -5,32 +5,40 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Tue, 03 Nov 2026 15:54:21 +0000</lastBuildDate>
+        <lastBuildDate>Tue, 03 Nov 2026 21:33:41 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
         <item>
-            <title>Apple restricts dating apps and AI companions to users 18 and up</title>
-            <link>https://techcrunch.com/2026/11/03/apple-restricts-dating-apps-and-ai-companions-to-users-18-and-up/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/03/apple-restricts-dating-apps-and-ai-companions-to-users-18-and-up/</guid>
-            <description>Apple's new App Store rules will require 18+ ratings for dating apps and AI companions that offer sexual or romantic con...</description>
+            <title>Hiding inside Palantir’s skyrocketing quarter is a foreboding signal</title>
+            <link>https://techcrunch.com/2026/11/03/hiding-inside-palantirs-skyrocketing-quarter-is-a-foreboding-signal/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/03/hiding-inside-palantirs-skyrocketing-quarter-is-a-foreboding-signal/</guid>
+            <description>Palantir delivered such a huge third-quarter earnings report on Monday that its press release even bragged that the numb...</description>
+            <category>全球动态</category>
+            <pubDate>Tue, 03 Nov 2026 21:05:55 +0000</pubDate>
+        </item>
+        <item>
+            <title>AI inference startup Fal doubles its valuation to $16B as demand surge...</title>
+            <link>https://techcrunch.com/2026/11/03/ai-inference-startup-fal-doubles-its-valuation-to-16b-as-demand-surges/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/03/ai-inference-startup-fal-doubles-its-valuation-to-16b-as-demand-surges/</guid>
+            <description>The five-year-old startup raised a $1.3 billion round led by Bessemer.</description>
+            <category>全球动态</category>
+            <pubDate>Tue, 03 Nov 2026 19:34:43 +0000</pubDate>
+        </item>
+        <item>
+            <title>Netflix’s new AI Discover tab helps you find something to watch based ...</title>
+            <link>https://techcrunch.com/2026/11/03/netflixs-new-ai-discover-tab-helps-you-find-something-to-watch-based-on-your-mood/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/03/netflixs-new-ai-discover-tab-helps-you-find-something-to-watch-based-on-your-mood/</guid>
+            <description>The first experimental feature under the tab will allow users to get recommendations based on what they're currently in ...</description>
+            <category>全球动态</category>
+            <pubDate>Tue, 03 Nov 2026 18:42:16 +0000</pubDate>
+        </item>
+        <item>
+            <title>Anthropic is still grappling with the economics of compute</title>
+            <link>https://techcrunch.com/2026/11/03/anthropic-is-still-grappling-with-the-economics-of-compute/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/03/anthropic-is-still-grappling-with-the-economics-of-compute/</guid>
+            <description>At a moment when Anthropic's compute margins should be getting better, they’re getting worse.</description>
             <category>工具发现</category>
-            <pubDate>Tue, 03 Nov 2026 15:38:27 +0000</pubDate>
-        </item>
-        <item>
-            <title>The TechCrunch Founder Summit agenda is only half the reason to be in ...</title>
-            <link>https://techcrunch.com/2026/11/03/the-techcrunch-founder-summit-agenda-is-only-half-the-reason-to-be-in-boston-on-nov-4/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/03/the-techcrunch-founder-summit-agenda-is-only-half-the-reason-to-be-in-boston-on-nov-4/</guid>
-            <description>On Nov. 4, TechCrunch Founder Summit 2026 brings founders and VCs to Boston's SoWa Power Station for practical insights ...</description>
-            <category>全球动态</category>
-            <pubDate>Tue, 03 Nov 2026 14:30:00 +0000</pubDate>
-        </item>
-        <item>
-            <title>Tomorrow: TechCrunch Founder Summit takes over Boston and when pass ra...</title>
-            <link>https://techcrunch.com/2026/11/03/tomorrow-techcrunch-founder-summit-takes-over-boston-and-when-pass-rates-increase/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/03/tomorrow-techcrunch-founder-summit-takes-over-boston-and-when-pass-rates-increase/</guid>
-            <description>Secure your TechCrunch Founder Summit pass savings before prices increase tomorrow at 9 a.m. ET. Save up to $100 on your...</description>
-            <category>全球动态</category>
-            <pubDate>Tue, 03 Nov 2026 14:00:00 +0000</pubDate>
+            <pubDate>Tue, 03 Nov 2026 17:07:01 +0000</pubDate>
         </item>
         <item>
             <title>机器人干活，AI当厂长！这家巨头要造下一代自主智能仓</title>
@@ -55,14 +63,6 @@
             <description>AI的下一程是生产力系统之争</description>
             <category>开源动态</category>
             <pubDate>Tue, 03 Nov 2026 11:13:49 +0000</pubDate>
-        </item>
-        <item>
-            <title>Apple Watch’s AI features for rewinding and recapping conversations be...</title>
-            <link>https://techcrunch.com/2026/11/02/apple-watchs-ai-features-for-rewinding-and-recapping-conversations-begin-beta-testing/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/02/apple-watchs-ai-features-for-rewinding-and-recapping-conversations-begin-beta-testing/</guid>
-            <description>Now in beta: Apple's new Audio Intelligence features can help you remember what someone said or take notes on conversati...</description>
-            <category>工具发现</category>
-            <pubDate>Tue, 03 Nov 2026 07:20:00 +0000</pubDate>
         </item>
         <item>
             <title>纯语音Personal Agent来了！或许，这就是乔布斯心中的Siri</title>
