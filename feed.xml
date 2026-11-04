@@ -5,40 +5,48 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Tue, 03 Nov 2026 21:33:41 +0000</lastBuildDate>
+        <lastBuildDate>Wed, 04 Nov 2026 05:12:43 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
+        <item>
+            <title>让Agent首次拥有“视听双流记忆”：openJiuwen Agent-Memory看懂长视频，关键事件一个不落</title>
+            <link>https://www.qbitai.com/2026/11/507533.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/507533.html</guid>
+            <description>长视频记忆精度飙升，问答时延最高降97%</description>
+            <category>技术前沿</category>
+            <pubDate>Wed, 04 Nov 2026 02:49:02 +0000</pubDate>
+        </item>
+        <item>
+            <title>Anthropic is working on a system to prove AI models’ identity</title>
+            <link>https://techcrunch.com/2026/11/03/anthropic-is-working-on-a-system-to-prove-ai-models-identity/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/03/anthropic-is-working-on-a-system-to-prove-ai-models-identity/</guid>
+            <description>Called FlashProve, the system would let anyone check that an AI response really came from the model it claims to be from...</description>
+            <category>全球动态</category>
+            <pubDate>Tue, 03 Nov 2026 22:41:03 +0000</pubDate>
+        </item>
+        <item>
+            <title>Data centers are turning to old jet engines as the wait for power grow...</title>
+            <link>https://techcrunch.com/2026/11/03/data-centers-are-turning-to-old-jet-engines-as-the-wait-for-power-grows/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/03/data-centers-are-turning-to-old-jet-engines-as-the-wait-for-power-grows/</guid>
+            <description>The years-long wait for access to the grid and new turbines is causing data center builders to turn to an unusual, less-...</description>
+            <category>全球动态</category>
+            <pubDate>Tue, 03 Nov 2026 22:19:53 +0000</pubDate>
+        </item>
+        <item>
+            <title>Ted Schlein’s Ballistic Ventures seeks $490M for new funds amid AI-dri...</title>
+            <link>https://techcrunch.com/2026/11/03/ted-schleins-ballistic-ventures-seeks-490m-for-new-funds-amid-ai-driven-cybersecurity-boom/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/03/ted-schleins-ballistic-ventures-seeks-490m-for-new-funds-amid-ai-driven-cybersecurity-boom/</guid>
+            <description>Cybersecurity-focused Ballistic Ventures is seeking to raise $360 million for a new flagship fund and another $130 milli...</description>
+            <category>全球动态</category>
+            <pubDate>Tue, 03 Nov 2026 21:43:08 +0000</pubDate>
+        </item>
         <item>
             <title>Hiding inside Palantir’s skyrocketing quarter is a foreboding signal</title>
             <link>https://techcrunch.com/2026/11/03/hiding-inside-palantirs-skyrocketing-quarter-is-a-foreboding-signal/</link>
             <guid isPermaLink="true">https://techcrunch.com/2026/11/03/hiding-inside-palantirs-skyrocketing-quarter-is-a-foreboding-signal/</guid>
-            <description>Palantir delivered such a huge third-quarter earnings report on Monday that its press release even bragged that the numb...</description>
+            <description>Palantir's U.S. commercial revenue surpassed U.S. government revenue for the first time ever.</description>
             <category>全球动态</category>
             <pubDate>Tue, 03 Nov 2026 21:05:55 +0000</pubDate>
-        </item>
-        <item>
-            <title>AI inference startup Fal doubles its valuation to $16B as demand surge...</title>
-            <link>https://techcrunch.com/2026/11/03/ai-inference-startup-fal-doubles-its-valuation-to-16b-as-demand-surges/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/03/ai-inference-startup-fal-doubles-its-valuation-to-16b-as-demand-surges/</guid>
-            <description>The five-year-old startup raised a $1.3 billion round led by Bessemer.</description>
-            <category>全球动态</category>
-            <pubDate>Tue, 03 Nov 2026 19:34:43 +0000</pubDate>
-        </item>
-        <item>
-            <title>Netflix’s new AI Discover tab helps you find something to watch based ...</title>
-            <link>https://techcrunch.com/2026/11/03/netflixs-new-ai-discover-tab-helps-you-find-something-to-watch-based-on-your-mood/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/03/netflixs-new-ai-discover-tab-helps-you-find-something-to-watch-based-on-your-mood/</guid>
-            <description>The first experimental feature under the tab will allow users to get recommendations based on what they're currently in ...</description>
-            <category>全球动态</category>
-            <pubDate>Tue, 03 Nov 2026 18:42:16 +0000</pubDate>
-        </item>
-        <item>
-            <title>Anthropic is still grappling with the economics of compute</title>
-            <link>https://techcrunch.com/2026/11/03/anthropic-is-still-grappling-with-the-economics-of-compute/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/03/anthropic-is-still-grappling-with-the-economics-of-compute/</guid>
-            <description>At a moment when Anthropic's compute margins should be getting better, they’re getting worse.</description>
-            <category>工具发现</category>
-            <pubDate>Tue, 03 Nov 2026 17:07:01 +0000</pubDate>
         </item>
         <item>
             <title>机器人干活，AI当厂长！这家巨头要造下一代自主智能仓</title>
@@ -63,14 +71,6 @@
             <description>AI的下一程是生产力系统之争</description>
             <category>开源动态</category>
             <pubDate>Tue, 03 Nov 2026 11:13:49 +0000</pubDate>
-        </item>
-        <item>
-            <title>纯语音Personal Agent来了！或许，这就是乔布斯心中的Siri</title>
-            <link>https://www.qbitai.com/2026/11/507419.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/11/507419.html</guid>
-            <description>终于，有了一个可以触摸的起点</description>
-            <category>技术前沿</category>
-            <pubDate>Tue, 03 Nov 2026 06:55:30 +0000</pubDate>
         </item>
     </channel>
 </rss>
