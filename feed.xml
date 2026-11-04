@@ -5,9 +5,41 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Wed, 04 Nov 2026 05:12:43 +0000</lastBuildDate>
+        <lastBuildDate>Wed, 04 Nov 2026 15:59:27 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
+        <item>
+            <title>TechCrunch Founder Summit 2026: Doors open at 9 a.m. ET in Boston</title>
+            <link>https://techcrunch.com/2026/11/04/techcrunch-founder-summit-2026-todays-the-day/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/04/techcrunch-founder-summit-2026-todays-the-day/</guid>
+            <description>Today is the day to join TechCrunch Founder Summit 2026 in Boston's SoWa Power Station. Register now to join this founde...</description>
+            <category>全球动态</category>
+            <pubDate>Wed, 04 Nov 2026 13:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>不靠堆砌数据，让机器人看懂真实物理世界 | 招商局狮子山实验室发布「驭物™ Lion-ER-35B-A3B」具身推理模型</title>
+            <link>https://www.qbitai.com/2026/11/507586.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/507586.html</guid>
+            <description>仅激活3B参数，十项基准全线提升！</description>
+            <category>模型发布</category>
+            <pubDate>Wed, 04 Nov 2026 10:08:38 +0000</pubDate>
+        </item>
+        <item>
+            <title>超维动力全栈矩阵亮相2026香港金融科技周，具身智能硬科技引爆全场</title>
+            <link>https://www.qbitai.com/2026/11/507574.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/507574.html</guid>
+            <description>一场别开生面的具身智能科技盛宴</description>
+            <category>技术前沿</category>
+            <pubDate>Wed, 04 Nov 2026 08:59:57 +0000</pubDate>
+        </item>
+        <item>
+            <title>虎鲸文娱“鲸锐AI”平台正式上线，AI视频单分钟成本节省30%以上</title>
+            <link>https://www.qbitai.com/2026/11/507567.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/507567.html</guid>
+            <description>11月4日，虎鲸文娱集团打造的行业首个AI影视制作与管理平台“鲸锐AI”正式上线。</description>
+            <category>技术前沿</category>
+            <pubDate>Wed, 04 Nov 2026 08:49:12 +0000</pubDate>
+        </item>
         <item>
             <title>让Agent首次拥有“视听双流记忆”：openJiuwen Agent-Memory看懂长视频，关键事件一个不落</title>
             <link>https://www.qbitai.com/2026/11/507533.html</link>
@@ -39,38 +71,6 @@
             <description>Cybersecurity-focused Ballistic Ventures is seeking to raise $360 million for a new flagship fund and another $130 milli...</description>
             <category>全球动态</category>
             <pubDate>Tue, 03 Nov 2026 21:43:08 +0000</pubDate>
-        </item>
-        <item>
-            <title>Hiding inside Palantir’s skyrocketing quarter is a foreboding signal</title>
-            <link>https://techcrunch.com/2026/11/03/hiding-inside-palantirs-skyrocketing-quarter-is-a-foreboding-signal/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/03/hiding-inside-palantirs-skyrocketing-quarter-is-a-foreboding-signal/</guid>
-            <description>Palantir's U.S. commercial revenue surpassed U.S. government revenue for the first time ever.</description>
-            <category>全球动态</category>
-            <pubDate>Tue, 03 Nov 2026 21:05:55 +0000</pubDate>
-        </item>
-        <item>
-            <title>机器人干活，AI当厂长！这家巨头要造下一代自主智能仓</title>
-            <link>https://www.qbitai.com/2026/11/507507.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/11/507507.html</guid>
-            <description>AI接管调度运营，仓库越干越聪明</description>
-            <category>技术前沿</category>
-            <pubDate>Tue, 03 Nov 2026 13:57:11 +0000</pubDate>
-        </item>
-        <item>
-            <title>智己LS8纯电版背后：8年研发底盘，两大厂联合开发电池</title>
-            <link>https://www.qbitai.com/2026/11/507473.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/11/507473.html</guid>
-            <description>两位CTO，关起门来吵架</description>
-            <category>技术前沿</category>
-            <pubDate>Tue, 03 Nov 2026 12:57:35 +0000</pubDate>
-        </item>
-        <item>
-            <title>模型谁都买得到，拉开差距的是AI生产力系统</title>
-            <link>https://www.qbitai.com/2026/11/507448.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/11/507448.html</guid>
-            <description>AI的下一程是生产力系统之争</description>
-            <category>开源动态</category>
-            <pubDate>Tue, 03 Nov 2026 11:13:49 +0000</pubDate>
         </item>
     </channel>
 </rss>
