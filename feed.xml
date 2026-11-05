@@ -5,64 +5,64 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Thu, 05 Nov 2026 05:34:07 +0000</lastBuildDate>
+        <lastBuildDate>Thu, 05 Nov 2026 16:14:21 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
         <item>
-            <title>基于本体+知识+Harness+Datat Agent的智能体完整落地链路！</title>
-            <link>https://www.qbitai.com/2026/11/507696.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/11/507696.html</guid>
-            <description>Data + AI 技术实践巡展 · 上海站</description>
-            <category>技术前沿</category>
-            <pubDate>Thu, 05 Nov 2026 02:01:51 +0000</pubDate>
+            <title>Dropbox acquires Tigris Data for $350M to bolster its AI infrastructur...</title>
+            <link>https://techcrunch.com/2026/11/05/dropbox-acquires-tigris-data-for-350m-to-bolster-its-ai-iinfrastructure/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/05/dropbox-acquires-tigris-data-for-350m-to-bolster-its-ai-iinfrastructure/</guid>
+            <description>The deal is expected to support the development of DBX Agent Cloud, a new storage platform aimed at developers building ...</description>
+            <category>全球动态</category>
+            <pubDate>Thu, 05 Nov 2026 15:19:05 +0000</pubDate>
         </item>
         <item>
-            <title>GPT-Image-2.6全量上线！直出GIF和SVG，6.2 Astra也现身了</title>
-            <link>https://www.qbitai.com/2026/11/507707.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/11/507707.html</guid>
-            <description>最快6秒出图</description>
+            <title>Aina’s smart ring has a screen, a joystick and a mic so you can talk t...</title>
+            <link>https://techcrunch.com/2026/11/05/ainas-smart-ring-has-a-screen-a-joystick-and-a-mic-so-you-can-talk-to-ai-agents/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/05/ainas-smart-ring-has-a-screen-a-joystick-and-a-mic-so-you-can-talk-to-ai-agents/</guid>
+            <description>Aina's ring can also take calls and help you dictate notes on your Mac.</description>
+            <category>全球动态</category>
+            <pubDate>Thu, 05 Nov 2026 14:42:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>Box taps Nvidia’s Nemotron for new agent-first content retrieval syste...</title>
+            <link>https://techcrunch.com/2026/11/05/box-taps-nvidias-nemotron-for-new-agent-first-content-retrieval-system/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/05/box-taps-nvidias-nemotron-for-new-agent-first-content-retrieval-system/</guid>
+            <description>The system can supposedly answer queries four times faster, with 20% fewer errors and 90% fewer tokens used.</description>
+            <category>全球动态</category>
+            <pubDate>Thu, 05 Nov 2026 14:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>A YC startup is putting $1M behind five unsolved materials science pro...</title>
+            <link>https://techcrunch.com/2026/11/05/a-yc-startup-is-putting-1m-behind-five-unsolved-materials-science-problems-for-ai/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/05/a-yc-startup-is-putting-1m-behind-five-unsolved-materials-science-problems-for-ai/</guid>
+            <description>Discovered Materials, a months-old YC startup that uses AI to find chip materials, is offering $200,000 for each solutio...</description>
+            <category>全球动态</category>
+            <pubDate>Thu, 05 Nov 2026 13:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>百度开源文心5.5 Flash Base，多基准测试刷新同尺寸模型 SOTA</title>
+            <link>https://www.qbitai.com/2026/11/507787.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/507787.html</guid>
+            <description>11月5日，百度正式开源最新基座模型文心5.5 Flash Base</description>
+            <category>开源动态</category>
+            <pubDate>Thu, 05 Nov 2026 07:15:13 +0000</pubDate>
+        </item>
+        <item>
+            <title>MIT神作被锤：Astra爆改Qwen权重？就吹吧！</title>
+            <link>https://www.qbitai.com/2026/11/507782.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/507782.html</guid>
+            <description>spaCy作者长文炮轰</description>
+            <category>技术前沿</category>
+            <pubDate>Thu, 05 Nov 2026 07:10:56 +0000</pubDate>
+        </item>
+        <item>
+            <title>以“真实工作”检验机器人价值，XROGO在CeMAT ASIA发布机器人到岗计划</title>
+            <link>https://www.qbitai.com/2026/11/507767.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/507767.html</guid>
+            <description>像雇人一样雇机器人</description>
             <category>模型发布</category>
-            <pubDate>Thu, 05 Nov 2026 01:59:37 +0000</pubDate>
-        </item>
-        <item>
-            <title>Linux内核被挖出948个漏洞！OpenAI花120万美元找到的</title>
-            <link>https://www.qbitai.com/2026/11/507697.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/11/507697.html</guid>
-            <description>被轰成筛子了…</description>
-            <category>技术前沿</category>
-            <pubDate>Thu, 05 Nov 2026 01:54:44 +0000</pubDate>
-        </item>
-        <item>
-            <title>Apple is reportedly cutting budgets for its internal AI usage</title>
-            <link>https://techcrunch.com/2026/11/04/apple-is-reportedly-cutting-budgets-for-its-internal-ai-usage/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/04/apple-is-reportedly-cutting-budgets-for-its-internal-ai-usage/</guid>
-            <description>The company is said to be significantly dropping the amount it's spending on AI for its engineering teams.</description>
-            <category>工具发现</category>
-            <pubDate>Thu, 05 Nov 2026 01:26:22 +0000</pubDate>
-        </item>
-        <item>
-            <title>After the midterms, a bigger clash over data centers could be coming</title>
-            <link>https://techcrunch.com/2026/11/04/after-the-midterms-a-bigger-clash-over-data-centers-could-be-coming/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/04/after-the-midterms-a-bigger-clash-over-data-centers-could-be-coming/</guid>
-            <description>Data center opposition crossed party lines in Tuesday’s midterms.</description>
-            <category>全球动态</category>
-            <pubDate>Thu, 05 Nov 2026 01:02:14 +0000</pubDate>
-        </item>
-        <item>
-            <title>AI PACs spent millions trying to shape Congress — here’s how they fare...</title>
-            <link>https://techcrunch.com/2026/11/04/ai-pacs-spent-millions-trying-to-shape-congress-heres-how-they-fared/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/04/ai-pacs-spent-millions-trying-to-shape-congress-heres-how-they-fared/</guid>
-            <description>AI industry PACs spent millions influencing the 2026 midterms, with mixed results. Political groups are already looking ...</description>
-            <category>全球动态</category>
-            <pubDate>Wed, 04 Nov 2026 22:45:09 +0000</pubDate>
-        </item>
-        <item>
-            <title>Nothing CEO says company’s mysterious AI-first device is dropping next...</title>
-            <link>https://techcrunch.com/2026/11/04/nothing-ceo-says-companys-mysterious-ai-first-device-is-dropping-next-month/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/04/nothing-ceo-says-companys-mysterious-ai-first-device-is-dropping-next-month/</guid>
-            <description>While it's not yet clear what kind of product the smartphone startup is cooking up, Nothing's CEO said the product is de...</description>
-            <category>全球动态</category>
-            <pubDate>Wed, 04 Nov 2026 22:13:16 +0000</pubDate>
+            <pubDate>Thu, 05 Nov 2026 05:25:37 +0000</pubDate>
         </item>
     </channel>
 </rss>
