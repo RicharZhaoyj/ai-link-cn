@@ -5,64 +5,72 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Fri, 06 Nov 2026 05:31:20 +0000</lastBuildDate>
+        <lastBuildDate>Fri, 06 Nov 2026 15:44:06 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
         <item>
-            <title>Airbnb says it’s launching an AI travel agent in the first half of 202...</title>
-            <link>https://techcrunch.com/2026/11/05/airbnb-says-its-launching-an-ai-travel-agent-in-the-first-half-of-2027/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/05/airbnb-says-its-launching-an-ai-travel-agent-in-the-first-half-of-2027/</guid>
-            <description>Airbnb says its upcoming AI agent will help travelers plan trips, compare options, manage bookings, and get assistance t...</description>
+            <title>After blocking Muse, Amazon now lets users text Alexa to help them sho...</title>
+            <link>https://techcrunch.com/2026/11/06/after-blocking-muse-amazon-now-lets-users-text-alexa-to-help-them-shop/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/06/after-blocking-muse-amazon-now-lets-users-text-alexa-to-help-them-shop/</guid>
+            <description>Amazon said that the feature will roll out to millions of users in coming weeks.</description>
             <category>全球动态</category>
-            <pubDate>Thu, 05 Nov 2026 22:40:55 +0000</pubDate>
+            <pubDate>Fri, 06 Nov 2026 14:10:00 +0000</pubDate>
         </item>
         <item>
-            <title>Meta says US users can now video chat with their Muse AI avatar</title>
-            <link>https://techcrunch.com/2026/11/05/meta-says-us-users-can-now-video-chat-with-their-muse-ai-avatar/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/05/meta-says-us-users-can-now-video-chat-with-their-muse-ai-avatar/</guid>
-            <description>Meta's AI agent can now take calls as a customizable animated avatar, ahead of the launch of a Tamagotchi-like wearable ...</description>
+            <title>Underdog shows off a 32MB speech model in new demo</title>
+            <link>https://techcrunch.com/2026/11/06/underdog-shows-off-a-32mb-speech-model-in-new-demo/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/06/underdog-shows-off-a-32mb-speech-model-in-new-demo/</guid>
+            <description>Despite its small size, Underdog's new model can generate both speech and music.</description>
             <category>全球动态</category>
-            <pubDate>Thu, 05 Nov 2026 19:48:28 +0000</pubDate>
+            <pubDate>Fri, 06 Nov 2026 13:02:16 +0000</pubDate>
         </item>
         <item>
-            <title>Meta warns that election backlash against data centers could make AI e...</title>
-            <link>https://techcrunch.com/2026/11/05/metas-warns-that-election-backlash-against-data-centers-could-make-ai-expansion-harder/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/05/metas-warns-that-election-backlash-against-data-centers-could-make-ai-expansion-harder/</guid>
-            <description>Meta warns that growing political opposition to data centers could threaten future AI investments, as communities push b...</description>
+            <title>Physicl raises $10M to make the digital world real enough for robots</title>
+            <link>https://techcrunch.com/2026/11/06/physicl-raises-10m-to-make-the-digital-world-real-enough-for-robots/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/06/physicl-raises-10m-to-make-the-digital-world-real-enough-for-robots/</guid>
+            <description>Physicl is trying to solve the sim-to-real gap with a pipeline originally built to market goods online.</description>
             <category>全球动态</category>
-            <pubDate>Thu, 05 Nov 2026 19:12:39 +0000</pubDate>
+            <pubDate>Fri, 06 Nov 2026 13:00:00 +0000</pubDate>
         </item>
         <item>
-            <title>OpenAI released a new cybersecurity model. Is that enough?</title>
-            <link>https://techcrunch.com/2026/11/05/openai-released-a-new-cybersecurity-model-is-that-enough/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/05/openai-released-a-new-cybersecurity-model-is-that-enough/</guid>
-            <description>OpenAI's newest cybersecurity model comes out as AI labs face scrutiny of their work to protect digital infrastructure.</description>
-            <category>全球动态</category>
-            <pubDate>Thu, 05 Nov 2026 19:06:12 +0000</pubDate>
-        </item>
-        <item>
-            <title>百度开源文心5.5 Flash Base，多基准测试刷新同尺寸模型 SOTA</title>
-            <link>https://www.qbitai.com/2026/11/507787.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/11/507787.html</guid>
-            <description>11月5日，百度正式开源最新基座模型文心5.5 Flash Base</description>
-            <category>开源动态</category>
-            <pubDate>Thu, 05 Nov 2026 07:15:13 +0000</pubDate>
-        </item>
-        <item>
-            <title>MIT神作被锤：Astra爆改Qwen权重？就吹吧！</title>
-            <link>https://www.qbitai.com/2026/11/507782.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/11/507782.html</guid>
-            <description>spaCy作者长文炮轰</description>
+            <title>DeepSeek带火稀疏计算，国产芯片公司加速突围：这家公司又融近10亿</title>
+            <link>https://www.qbitai.com/2026/11/508155.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/508155.html</guid>
+            <description>Q3营收实现数倍增长</description>
             <category>技术前沿</category>
-            <pubDate>Thu, 05 Nov 2026 07:10:56 +0000</pubDate>
+            <pubDate>Fri, 06 Nov 2026 07:00:29 +0000</pubDate>
         </item>
         <item>
-            <title>以“真实工作”检验机器人价值，XROGO在CeMAT ASIA发布机器人到岗计划</title>
-            <link>https://www.qbitai.com/2026/11/507767.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/11/507767.html</guid>
-            <description>像雇人一样雇机器人</description>
-            <category>模型发布</category>
-            <pubDate>Thu, 05 Nov 2026 05:25:37 +0000</pubDate>
+            <title>一边赛博修仙，一边卖家电！AI短剧开始冲双11业绩了？</title>
+            <link>https://www.qbitai.com/2026/11/508118.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/508118.html</guid>
+            <description>挑战商业视频的高难度场景</description>
+            <category>技术前沿</category>
+            <pubDate>Fri, 06 Nov 2026 06:54:17 +0000</pubDate>
+        </item>
+        <item>
+            <title>从RSI、Agent、Physical AI到整个系统栈，2026 奇点智能技术大会最新日程公布！</title>
+            <link>https://www.qbitai.com/2026/11/508143.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/508143.html</guid>
+            <description>11 月 20—21 日，2026 奇点智能技术大会将在北京万达文华酒店举行。</description>
+            <category>技术前沿</category>
+            <pubDate>Fri, 06 Nov 2026 06:43:14 +0000</pubDate>
+        </item>
+        <item>
+            <title>Palo Alto Networks in talks to buy AI agent security startup Clutch fo...</title>
+            <link>https://techcrunch.com/2026/11/05/palo-alto-networks-in-talks-to-buy-ai-agent-security-startup-clutch-for-500m/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/05/palo-alto-networks-in-talks-to-buy-ai-agent-security-startup-clutch-for-500m/</guid>
+            <description>Clutch, backed by Lightspeed and SignalFire, was last valued at $85 million, according to a source.</description>
+            <category>全球动态</category>
+            <pubDate>Fri, 06 Nov 2026 06:28:32 +0000</pubDate>
+        </item>
+        <item>
+            <title>99.4%登顶全球第一！这个中国AI师承世界冠军</title>
+            <link>https://www.qbitai.com/2026/11/508107.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/508107.html</guid>
+            <description>一举刷新「AI安全世界杯」CyberGym世界纪录</description>
+            <category>技术前沿</category>
+            <pubDate>Fri, 06 Nov 2026 05:01:47 +0000</pubDate>
         </item>
     </channel>
 </rss>
