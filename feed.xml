@@ -5,40 +5,40 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Thu, 05 Nov 2026 16:14:21 +0000</lastBuildDate>
+        <lastBuildDate>Fri, 06 Nov 2026 05:31:20 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
         <item>
-            <title>Dropbox acquires Tigris Data for $350M to bolster its AI infrastructur...</title>
-            <link>https://techcrunch.com/2026/11/05/dropbox-acquires-tigris-data-for-350m-to-bolster-its-ai-iinfrastructure/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/05/dropbox-acquires-tigris-data-for-350m-to-bolster-its-ai-iinfrastructure/</guid>
-            <description>The deal is expected to support the development of DBX Agent Cloud, a new storage platform aimed at developers building ...</description>
+            <title>Airbnb says it’s launching an AI travel agent in the first half of 202...</title>
+            <link>https://techcrunch.com/2026/11/05/airbnb-says-its-launching-an-ai-travel-agent-in-the-first-half-of-2027/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/05/airbnb-says-its-launching-an-ai-travel-agent-in-the-first-half-of-2027/</guid>
+            <description>Airbnb says its upcoming AI agent will help travelers plan trips, compare options, manage bookings, and get assistance t...</description>
             <category>全球动态</category>
-            <pubDate>Thu, 05 Nov 2026 15:19:05 +0000</pubDate>
+            <pubDate>Thu, 05 Nov 2026 22:40:55 +0000</pubDate>
         </item>
         <item>
-            <title>Aina’s smart ring has a screen, a joystick and a mic so you can talk t...</title>
-            <link>https://techcrunch.com/2026/11/05/ainas-smart-ring-has-a-screen-a-joystick-and-a-mic-so-you-can-talk-to-ai-agents/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/05/ainas-smart-ring-has-a-screen-a-joystick-and-a-mic-so-you-can-talk-to-ai-agents/</guid>
-            <description>Aina's ring can also take calls and help you dictate notes on your Mac.</description>
+            <title>Meta says US users can now video chat with their Muse AI avatar</title>
+            <link>https://techcrunch.com/2026/11/05/meta-says-us-users-can-now-video-chat-with-their-muse-ai-avatar/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/05/meta-says-us-users-can-now-video-chat-with-their-muse-ai-avatar/</guid>
+            <description>Meta's AI agent can now take calls as a customizable animated avatar, ahead of the launch of a Tamagotchi-like wearable ...</description>
             <category>全球动态</category>
-            <pubDate>Thu, 05 Nov 2026 14:42:00 +0000</pubDate>
+            <pubDate>Thu, 05 Nov 2026 19:48:28 +0000</pubDate>
         </item>
         <item>
-            <title>Box taps Nvidia’s Nemotron for new agent-first content retrieval syste...</title>
-            <link>https://techcrunch.com/2026/11/05/box-taps-nvidias-nemotron-for-new-agent-first-content-retrieval-system/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/05/box-taps-nvidias-nemotron-for-new-agent-first-content-retrieval-system/</guid>
-            <description>The system can supposedly answer queries four times faster, with 20% fewer errors and 90% fewer tokens used.</description>
+            <title>Meta warns that election backlash against data centers could make AI e...</title>
+            <link>https://techcrunch.com/2026/11/05/metas-warns-that-election-backlash-against-data-centers-could-make-ai-expansion-harder/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/05/metas-warns-that-election-backlash-against-data-centers-could-make-ai-expansion-harder/</guid>
+            <description>Meta warns that growing political opposition to data centers could threaten future AI investments, as communities push b...</description>
             <category>全球动态</category>
-            <pubDate>Thu, 05 Nov 2026 14:00:00 +0000</pubDate>
+            <pubDate>Thu, 05 Nov 2026 19:12:39 +0000</pubDate>
         </item>
         <item>
-            <title>A YC startup is putting $1M behind five unsolved materials science pro...</title>
-            <link>https://techcrunch.com/2026/11/05/a-yc-startup-is-putting-1m-behind-five-unsolved-materials-science-problems-for-ai/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/05/a-yc-startup-is-putting-1m-behind-five-unsolved-materials-science-problems-for-ai/</guid>
-            <description>Discovered Materials, a months-old YC startup that uses AI to find chip materials, is offering $200,000 for each solutio...</description>
+            <title>OpenAI released a new cybersecurity model. Is that enough?</title>
+            <link>https://techcrunch.com/2026/11/05/openai-released-a-new-cybersecurity-model-is-that-enough/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/05/openai-released-a-new-cybersecurity-model-is-that-enough/</guid>
+            <description>OpenAI's newest cybersecurity model comes out as AI labs face scrutiny of their work to protect digital infrastructure.</description>
             <category>全球动态</category>
-            <pubDate>Thu, 05 Nov 2026 13:00:00 +0000</pubDate>
+            <pubDate>Thu, 05 Nov 2026 19:06:12 +0000</pubDate>
         </item>
         <item>
             <title>百度开源文心5.5 Flash Base，多基准测试刷新同尺寸模型 SOTA</title>
