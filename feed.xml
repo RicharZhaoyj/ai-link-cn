@@ -5,9 +5,41 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Sat, 07 Nov 2026 04:59:20 +0000</lastBuildDate>
+        <lastBuildDate>Sat, 07 Nov 2026 14:43:47 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
+        <item>
+            <title>GitHub不堪重负！OpenAI收购替代品，A社原地自研，马斯克也要搞</title>
+            <link>https://www.qbitai.com/2026/11/508449.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/508449.html</guid>
+            <description>AI写代码太快，基础设施跟不上了</description>
+            <category>技术前沿</category>
+            <pubDate>Sat, 07 Nov 2026 09:38:56 +0000</pubDate>
+        </item>
+        <item>
+            <title>OpenAI新融资到账110亿美元，不及原计划一半</title>
+            <link>https://www.qbitai.com/2026/11/508344.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/508344.html</guid>
+            <description>融资缩水，硅谷投资人也谨慎了</description>
+            <category>技术前沿</category>
+            <pubDate>Sat, 07 Nov 2026 08:11:25 +0000</pubDate>
+        </item>
+        <item>
+            <title>为了去AI味，人类开始主动写烂文章了……</title>
+            <link>https://www.qbitai.com/2026/11/508330.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/508330.html</guid>
+            <description>需要说明的是，这并不意味着不会说人话就一定是人，也不意味着说人话的就一定不是AI.......</description>
+            <category>技术前沿</category>
+            <pubDate>Sat, 07 Nov 2026 07:59:28 +0000</pubDate>
+        </item>
+        <item>
+            <title>抢跑DeepSeek！硅谷华人把下一代Agent Harness造出来了！？</title>
+            <link>https://www.qbitai.com/2026/11/508264.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/508264.html</guid>
+            <description>苦单Session久矣，两大Agent玩家不谋而合。</description>
+            <category>技术前沿</category>
+            <pubDate>Sat, 07 Nov 2026 05:01:17 +0000</pubDate>
+        </item>
         <item>
             <title>Crusoe sells troubled Wyoming data center project to Google</title>
             <link>https://techcrunch.com/2026/11/06/crusoe-sells-troubled-wyoming-data-center-project-to-google/</link>
@@ -39,38 +71,6 @@
             <description>Meta's Muse agents continue to get new features and integrations. Spaces promises to be a new way to interact with the A...</description>
             <category>全球动态</category>
             <pubDate>Fri, 06 Nov 2026 18:44:20 +0000</pubDate>
-        </item>
-        <item>
-            <title>DeepSeek带火稀疏计算，国产芯片公司加速突围：这家公司又融近10亿</title>
-            <link>https://www.qbitai.com/2026/11/508155.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/11/508155.html</guid>
-            <description>Q3营收实现数倍增长</description>
-            <category>技术前沿</category>
-            <pubDate>Fri, 06 Nov 2026 07:00:29 +0000</pubDate>
-        </item>
-        <item>
-            <title>一边赛博修仙，一边卖家电！AI短剧开始冲双11业绩了？</title>
-            <link>https://www.qbitai.com/2026/11/508118.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/11/508118.html</guid>
-            <description>挑战商业视频的高难度场景</description>
-            <category>技术前沿</category>
-            <pubDate>Fri, 06 Nov 2026 06:54:17 +0000</pubDate>
-        </item>
-        <item>
-            <title>从RSI、Agent、Physical AI到整个系统栈，2026 奇点智能技术大会最新日程公布！</title>
-            <link>https://www.qbitai.com/2026/11/508143.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/11/508143.html</guid>
-            <description>11 月 20—21 日，2026 奇点智能技术大会将在北京万达文华酒店举行。</description>
-            <category>技术前沿</category>
-            <pubDate>Fri, 06 Nov 2026 06:43:14 +0000</pubDate>
-        </item>
-        <item>
-            <title>99.4%登顶全球第一！这个中国AI师承世界冠军</title>
-            <link>https://www.qbitai.com/2026/11/508107.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/11/508107.html</guid>
-            <description>一举刷新「AI安全世界杯」CyberGym世界纪录</description>
-            <category>技术前沿</category>
-            <pubDate>Fri, 06 Nov 2026 05:01:47 +0000</pubDate>
         </item>
     </channel>
 </rss>
