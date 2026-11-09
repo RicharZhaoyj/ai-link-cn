@@ -5,9 +5,17 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Sun, 08 Nov 2026 20:14:52 +0000</lastBuildDate>
+        <lastBuildDate>Mon, 09 Nov 2026 05:01:49 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
+        <item>
+            <title>Nvidia will investigate CEO Jensen Huang’s relationship with possible ...</title>
+            <link>https://techcrunch.com/2026/11/08/nvidia-says-its-investigating-ceo-jensen-huangs-relationship-with-possible-chinese-spy/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/08/nvidia-says-its-investigating-ceo-jensen-huangs-relationship-with-possible-chinese-spy/</guid>
+            <description>In a memo to the company, Huang admitted that he had an affair.</description>
+            <category>全球动态</category>
+            <pubDate>Sun, 08 Nov 2026 21:00:11 +0000</pubDate>
+        </item>
         <item>
             <title>资本正在撤离“世界模型”</title>
             <link>https://www.qbitai.com/2026/11/508466.html</link>
@@ -63,14 +71,6 @@
             <description>The deal highlights the challenges of developing massive AI data centers.</description>
             <category>全球动态</category>
             <pubDate>Sat, 07 Nov 2026 01:40:28 +0000</pubDate>
-        </item>
-        <item>
-            <title>OpenAI reportedly raises an additional $11 billion at a $1.25 trillion...</title>
-            <link>https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/</guid>
-            <description>OpenAI has reportedly raised an additional $11 billion as part of a funding round that hasn't closed yet but is expected...</description>
-            <category>全球动态</category>
-            <pubDate>Fri, 06 Nov 2026 22:53:46 +0000</pubDate>
         </item>
     </channel>
 </rss>
