@@ -5,32 +5,40 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Wed, 11 Nov 2026 15:54:32 +0000</lastBuildDate>
+        <lastBuildDate>Wed, 11 Nov 2026 22:31:05 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
         <item>
-            <title>Databricks’ new AI agent tells CEO Ali Ghodsi the unvarnished truth</title>
-            <link>https://techcrunch.com/2026/11/11/databricks-new-ai-agent-tells-ceo-ali-ghodsi-the-unvarnished-truth/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/11/databricks-new-ai-agent-tells-ceo-ali-ghodsi-the-unvarnished-truth/</guid>
-            <description>At 12,000 employees, AI Ghodsi is the first to admit that he can't know everyone and that they are unlikely to confess t...</description>
+            <title>Why the data center you dread might never even be built</title>
+            <link>https://techcrunch.com/video/why-the-data-center-you-dread-might-never-even-be-built/</link>
+            <guid isPermaLink="true">https://techcrunch.com/video/why-the-data-center-you-dread-might-never-even-be-built/</guid>
+            <description>The data center boom is running into serious real-world obstacles, from widespread local opposition and permitting delay...</description>
             <category>全球动态</category>
-            <pubDate>Wed, 11 Nov 2026 15:00:00 +0000</pubDate>
+            <pubDate>Wed, 11 Nov 2026 20:15:15 +0000</pubDate>
         </item>
         <item>
-            <title>Plurai wants to help AI agents work better using the same approach tha...</title>
-            <link>https://techcrunch.com/2026/11/11/plurai-wants-to-help-ai-agents-work-better-using-the-same-approach-that-helped-get-self-driving-cars-to-roads/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/11/plurai-wants-to-help-ai-agents-work-better-using-the-same-approach-that-helped-get-self-driving-cars-to-roads/</guid>
-            <description>Like the end-to-end models trained to drive cars, AI agents are probabilistic systems operating in unpredictable environ...</description>
-            <category>工具发现</category>
-            <pubDate>Wed, 11 Nov 2026 14:00:00 +0000</pubDate>
+            <title>Meta is losing its longtime head of infrastructure</title>
+            <link>https://techcrunch.com/2026/11/11/meta-is-losing-its-longtime-head-of-infrastructure/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/11/meta-is-losing-its-longtime-head-of-infrastructure/</guid>
+            <description>Santosh Janardhan, who originally joined the company in 2009, will be stepping down from his role.</description>
+            <category>全球动态</category>
+            <pubDate>Wed, 11 Nov 2026 20:12:01 +0000</pubDate>
         </item>
         <item>
-            <title>Nvidia’s crisis has corporate governance experts reaching for the popc...</title>
-            <link>https://techcrunch.com/2026/11/10/nvidias-crisis-has-corporate-governance-experts-reaching-for-the-popcorn/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/10/nvidias-crisis-has-corporate-governance-experts-reaching-for-the-popcorn/</guid>
-            <description>The governance experts we talked to say nobody has seen anything like what's unfolding right now.</description>
+            <title>How backlash and red tape continue to slow data centers post-Blue Wave</title>
+            <link>https://techcrunch.com/podcast/how-backlash-and-red-tape-continue-to-slow-data-centers-post-blue-wave/</link>
+            <guid isPermaLink="true">https://techcrunch.com/podcast/how-backlash-and-red-tape-continue-to-slow-data-centers-post-blue-wave/</guid>
+            <description>The data center boom is running into serious real-world obstacles, from widespread local opposition and permitting delay...</description>
             <category>全球动态</category>
-            <pubDate>Wed, 11 Nov 2026 07:30:51 +0000</pubDate>
+            <pubDate>Wed, 11 Nov 2026 20:02:14 +0000</pubDate>
+        </item>
+        <item>
+            <title>CoreWeave turns to customer prepayments, shorter contracts to fund AI ...</title>
+            <link>https://techcrunch.com/2026/11/11/coreweave-turns-to-customer-prepayments-shorter-contracts-to-fund-ai-growth/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/11/coreweave-turns-to-customer-prepayments-shorter-contracts-to-fund-ai-growth/</guid>
+            <description>CoreWeave is increasingly asking customers to pay upfront, borrowing against specific contracts, and even looking to sho...</description>
+            <category>全球动态</category>
+            <pubDate>Wed, 11 Nov 2026 19:54:00 +0000</pubDate>
         </item>
         <item>
             <title>双11直播间爆改AI秀场，罗永浩上手TRAE，秒变AI Coding的大众嘴替</title>
@@ -63,14 +71,6 @@
             <description>L4无人化作业走向规模交付</description>
             <category>技术前沿</category>
             <pubDate>Wed, 11 Nov 2026 03:43:31 +0000</pubDate>
-        </item>
-        <item>
-            <title>OpenAI acquires Odessia, travel startup created by Sonder founder</title>
-            <link>https://techcrunch.com/2026/11/10/openai-acquires-odessia-travel-startup-created-by-sonder-founder/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/10/openai-acquires-odessia-travel-startup-created-by-sonder-founder/</guid>
-            <description>OpenAI has not yet said what its plans are for the future of travel. But Sonder founder Francis Davidson is a well-known...</description>
-            <category>全球动态</category>
-            <pubDate>Tue, 10 Nov 2026 21:08:52 +0000</pubDate>
         </item>
     </channel>
 </rss>
