@@ -5,9 +5,41 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Sat, 14 Nov 2026 05:20:52 +0000</lastBuildDate>
+        <lastBuildDate>Sat, 14 Nov 2026 14:50:15 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
+        <item>
+            <title>英伟达上演“奥特曼2.0”，员工集体请愿：让老黄回家！</title>
+            <link>https://www.qbitai.com/2026/11/510297.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/510297.html</guid>
+            <description>马斯克也签名了</description>
+            <category>技术前沿</category>
+            <pubDate>Sat, 14 Nov 2026 10:08:08 +0000</pubDate>
+        </item>
+        <item>
+            <title>「史上最严」湿实验预测基准发布！推理拉满、算力翻5倍也白搭</title>
+            <link>https://www.qbitai.com/2026/11/510232.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/510232.html</guid>
+            <description>斯坦福、哈佛、康奈尔……十余家顶尖团队齐坐一桌了</description>
+            <category>模型发布</category>
+            <pubDate>Sat, 14 Nov 2026 09:58:22 +0000</pubDate>
+        </item>
+        <item>
+            <title>程序员集体沉迷折纸飞机！最长滞空31.2秒</title>
+            <link>https://www.qbitai.com/2026/11/510150.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/510150.html</guid>
+            <description>童年的纸飞机，现在终于飞回我手里～</description>
+            <category>技术前沿</category>
+            <pubDate>Sat, 14 Nov 2026 09:48:34 +0000</pubDate>
+        </item>
+        <item>
+            <title>绿电进Token出！联想重新定义词元工厂</title>
+            <link>https://www.qbitai.com/2026/11/510094.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/510094.html</guid>
+            <description>年产2000万亿Token，成本狂降70%</description>
+            <category>技术前沿</category>
+            <pubDate>Sat, 14 Nov 2026 09:41:02 +0000</pubDate>
+        </item>
         <item>
             <title>Jensen Huang’s departure blasts big hole in AI startup funding, VCs an...</title>
             <link>https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/</link>
@@ -39,38 +71,6 @@
             <description>ChatGPT Wallet lets AI agents shop and check out on users' behalf, starting with a limited rollout to U.S. Pro subscribe...</description>
             <category>模型发布</category>
             <pubDate>Fri, 13 Nov 2026 16:00:12 +0000</pubDate>
-        </item>
-        <item>
-            <title>黄仁勋辞职，英伟达33年首换帅，市值蒸发超3万亿</title>
-            <link>https://www.qbitai.com/2026/11/509995.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/11/509995.html</guid>
-            <description>一个时代结束了</description>
-            <category>技术前沿</category>
-            <pubDate>Fri, 13 Nov 2026 09:02:39 +0000</pubDate>
-        </item>
-        <item>
-            <title>MEET2027含金量再加码：AI4S/量子计算/AI Infra…第二批嘉宾强势来袭！</title>
-            <link>https://www.qbitai.com/2026/11/509827.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/11/509827.html</guid>
-            <description>12.9 北京，来MEET2027现场</description>
-            <category>技术前沿</category>
-            <pubDate>Fri, 13 Nov 2026 07:51:08 +0000</pubDate>
-        </item>
-        <item>
-            <title>中国AI突破复杂肺癌诊疗！中美医疗圈集体坐不住了</title>
-            <link>https://www.qbitai.com/2026/11/509796.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/11/509796.html</guid>
-            <description>250名国内顶尖三甲医院医生联合评测</description>
-            <category>技术前沿</category>
-            <pubDate>Fri, 13 Nov 2026 07:43:03 +0000</pubDate>
-        </item>
-        <item>
-            <title>比亚迪第1900万辆新能源汽车下线，科技新奢旗舰SUV方程豹钛9开启预订</title>
-            <link>https://www.qbitai.com/2026/11/509730.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/11/509730.html</guid>
-            <description>比亚迪第1900万辆新能源汽车在西安工厂正式下线</description>
-            <category>技术前沿</category>
-            <pubDate>Fri, 13 Nov 2026 07:17:54 +0000</pubDate>
         </item>
     </channel>
 </rss>
