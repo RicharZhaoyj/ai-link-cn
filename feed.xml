@@ -5,9 +5,25 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Sat, 14 Nov 2026 14:50:15 +0000</lastBuildDate>
+        <lastBuildDate>Sat, 14 Nov 2026 20:28:31 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
+        <item>
+            <title>The AI graveyard: a running list of projects and startups that didn’t ...</title>
+            <link>https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/</guid>
+            <description>From Apple's repeatedly delayed Siri AI to OpenAI's messy "super app" launch, here's a look at the AI projects that shut...</description>
+            <category>全球动态</category>
+            <pubDate>Sat, 14 Nov 2026 17:30:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>Asian governments react to Nvidia CEO Jensen Huang’s exit</title>
+            <link>https://techcrunch.com/2026/11/14/asian-governments-react-to-nvidia-ceo-jensen-huangs-exit/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/14/asian-governments-react-to-nvidia-ceo-jensen-huangs-exit/</guid>
+            <description>Some governments moved to confirm chip supply commitments, while others are monitoring the impact on local projects or a...</description>
+            <category>全球动态</category>
+            <pubDate>Sat, 14 Nov 2026 16:34:15 +0000</pubDate>
+        </item>
         <item>
             <title>英伟达上演“奥特曼2.0”，员工集体请愿：让老黄回家！</title>
             <link>https://www.qbitai.com/2026/11/510297.html</link>
@@ -55,22 +71,6 @@
             <description>LangChain now claims 7,000 customers of its model and platform agnostic agent management tool LangSmith.</description>
             <category>全球动态</category>
             <pubDate>Fri, 13 Nov 2026 19:37:57 +0000</pubDate>
-        </item>
-        <item>
-            <title>Export-banned Nvidia chips are behind China’s most powerful AI models ...</title>
-            <link>https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen/</guid>
-            <description>New research shows the most advanced AI models from China were trained on banned Nvidia chips.</description>
-            <category>全球动态</category>
-            <pubDate>Fri, 13 Nov 2026 18:40:30 +0000</pubDate>
-        </item>
-        <item>
-            <title>ChatGPT’s new Wallet lets AI agents shop and check out for you</title>
-            <link>https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/</guid>
-            <description>ChatGPT Wallet lets AI agents shop and check out on users' behalf, starting with a limited rollout to U.S. Pro subscribe...</description>
-            <category>模型发布</category>
-            <pubDate>Fri, 13 Nov 2026 16:00:12 +0000</pubDate>
         </item>
     </channel>
 </rss>
