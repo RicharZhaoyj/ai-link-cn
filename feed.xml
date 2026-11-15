@@ -5,9 +5,17 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Sun, 15 Nov 2026 15:25:35 +0000</lastBuildDate>
+        <lastBuildDate>Sun, 15 Nov 2026 20:51:31 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
+        <item>
+            <title>SNL gathers all the tech tycoons for a lesson in dating and spycraft</title>
+            <link>https://techcrunch.com/2026/11/15/snl-gathers-all-the-tech-tycoons-for-a-lesson-in-dating-and-spycraft/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/15/snl-gathers-all-the-tech-tycoons-for-a-lesson-in-dating-and-spycraft/</guid>
+            <description>While awkward, creepy tech executives have become a recurring theme on Saturday Night Live, this week’s episode gave the...</description>
+            <category>全球动态</category>
+            <pubDate>Sun, 15 Nov 2026 20:20:57 +0000</pubDate>
+        </item>
         <item>
             <title>Where was Nvidia’s security team?</title>
             <link>https://techcrunch.com/2026/11/14/where-was-nvidias-security-team/</link>
@@ -31,14 +39,6 @@
             <description>From Apple's repeatedly delayed Siri AI to OpenAI's messy "super app" launch, here's a look at the AI projects that shut...</description>
             <category>全球动态</category>
             <pubDate>Sat, 14 Nov 2026 17:30:00 +0000</pubDate>
-        </item>
-        <item>
-            <title>Asian governments react to Nvidia CEO Jensen Huang’s exit</title>
-            <link>https://techcrunch.com/2026/11/14/asian-governments-react-to-nvidia-ceo-jensen-huangs-exit/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/14/asian-governments-react-to-nvidia-ceo-jensen-huangs-exit/</guid>
-            <description>Some governments moved to confirm chip supply commitments, while others are monitoring the impact on local projects or a...</description>
-            <category>全球动态</category>
-            <pubDate>Sat, 14 Nov 2026 16:34:15 +0000</pubDate>
         </item>
         <item>
             <title>英伟达上演“奥特曼2.0”，员工集体请愿：让老黄回家！</title>
