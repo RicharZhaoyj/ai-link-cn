@@ -5,9 +5,25 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Sat, 14 Nov 2026 20:28:31 +0000</lastBuildDate>
+        <lastBuildDate>Sun, 15 Nov 2026 05:16:38 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
+        <item>
+            <title>Where was Nvidia’s security team?</title>
+            <link>https://techcrunch.com/2026/11/14/where-was-nvidias-security-team/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/14/where-was-nvidias-security-team/</guid>
+            <description>Nvidia’s security chief quietly left in August, and now that CEO Jensen Huang has stepped down over his relationships, i...</description>
+            <category>全球动态</category>
+            <pubDate>Sun, 15 Nov 2026 00:08:07 +0000</pubDate>
+        </item>
+        <item>
+            <title>Elon Musk, other tech execs sign petition calling on Nvidia to reinsta...</title>
+            <link>https://techcrunch.com/2026/11/14/elon-musk-other-tech-execs-sign-petition-calling-on-nvidia-to-reinstate-jensen-huang/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/14/elon-musk-other-tech-execs-sign-petition-calling-on-nvidia-to-reinstate-jensen-huang/</guid>
+            <description>The petition had attracted more than 115,000 signatures as of Saturday afternoon.</description>
+            <category>全球动态</category>
+            <pubDate>Sat, 14 Nov 2026 21:41:22 +0000</pubDate>
+        </item>
         <item>
             <title>The AI graveyard: a running list of projects and startups that didn’t ...</title>
             <link>https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/</link>
@@ -55,22 +71,6 @@
             <description>年产2000万亿Token，成本狂降70%</description>
             <category>技术前沿</category>
             <pubDate>Sat, 14 Nov 2026 09:41:02 +0000</pubDate>
-        </item>
-        <item>
-            <title>Jensen Huang’s departure blasts big hole in AI startup funding, VCs an...</title>
-            <link>https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/</guid>
-            <description>Nvidia poured tens of billions into AI startups under Huang. Without him at the helm, founders and VCs are bracing for s...</description>
-            <category>全球动态</category>
-            <pubDate>Fri, 13 Nov 2026 22:43:00 +0000</pubDate>
-        </item>
-        <item>
-            <title>AI agent startup LangChain hits $3B valuation</title>
-            <link>https://techcrunch.com/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation/</guid>
-            <description>LangChain now claims 7,000 customers of its model and platform agnostic agent management tool LangSmith.</description>
-            <category>全球动态</category>
-            <pubDate>Fri, 13 Nov 2026 19:37:57 +0000</pubDate>
         </item>
     </channel>
 </rss>
