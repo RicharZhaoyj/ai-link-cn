@@ -5,9 +5,33 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Sun, 15 Nov 2026 20:51:31 +0000</lastBuildDate>
+        <lastBuildDate>Mon, 16 Nov 2026 05:14:34 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
+        <item>
+            <title>Apple launches new app to study how people use AI for health</title>
+            <link>https://techcrunch.com/2026/11/15/apple-launches-new-app-to-study-how-people-use-ai-for-health/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/15/apple-launches-new-app-to-study-how-people-use-ai-for-health/</guid>
+            <description>Apple's new app for a study will answer everyday medical questions</description>
+            <category>工具发现</category>
+            <pubDate>Mon, 16 Nov 2026 01:30:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>Indian chip startup Bharat Semi lands $24M seed round as it eyes globa...</title>
+            <link>https://techcrunch.com/2026/11/15/indian-chip-startup-bharat-semi-lands-24m-seed-round-as-it-eyes-global-ai-sensor-market/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/15/indian-chip-startup-bharat-semi-lands-24m-seed-round-as-it-eyes-global-ai-sensor-market/</guid>
+            <description>Bharat Semi says it has secured design wins for its AI-enabled sensor technology with companies including General Atomic...</description>
+            <category>全球动态</category>
+            <pubDate>Sun, 15 Nov 2026 23:30:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>Is bad news for Jensen Huang also bad news for the AI industry?</title>
+            <link>https://techcrunch.com/2026/11/15/is-bad-news-for-jensen-huang-also-bad-news-for-the-ai-industry/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/15/is-bad-news-for-jensen-huang-also-bad-news-for-the-ai-industry/</guid>
+            <description>"Jensen is Nvidia, right? And so much of this economy is riding on Nvidia."</description>
+            <category>全球动态</category>
+            <pubDate>Sun, 15 Nov 2026 21:56:35 +0000</pubDate>
+        </item>
         <item>
             <title>SNL gathers all the tech tycoons for a lesson in dating and spycraft</title>
             <link>https://techcrunch.com/2026/11/15/snl-gathers-all-the-tech-tycoons-for-a-lesson-in-dating-and-spycraft/</link>
@@ -15,30 +39,6 @@
             <description>While awkward, creepy tech executives have become a recurring theme on Saturday Night Live, this week’s episode gave the...</description>
             <category>全球动态</category>
             <pubDate>Sun, 15 Nov 2026 20:20:57 +0000</pubDate>
-        </item>
-        <item>
-            <title>Where was Nvidia’s security team?</title>
-            <link>https://techcrunch.com/2026/11/14/where-was-nvidias-security-team/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/14/where-was-nvidias-security-team/</guid>
-            <description>Nvidia’s security chief quietly left in August, and now that CEO Jensen Huang has stepped down over his relationships, i...</description>
-            <category>全球动态</category>
-            <pubDate>Sun, 15 Nov 2026 00:08:07 +0000</pubDate>
-        </item>
-        <item>
-            <title>Elon Musk, other tech execs sign petition calling on Nvidia to reinsta...</title>
-            <link>https://techcrunch.com/2026/11/14/elon-musk-other-tech-execs-sign-petition-calling-on-nvidia-to-reinstate-jensen-huang/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/14/elon-musk-other-tech-execs-sign-petition-calling-on-nvidia-to-reinstate-jensen-huang/</guid>
-            <description>The petition had attracted more than 115,000 signatures as of Saturday afternoon.</description>
-            <category>全球动态</category>
-            <pubDate>Sat, 14 Nov 2026 21:41:22 +0000</pubDate>
-        </item>
-        <item>
-            <title>The AI graveyard: a running list of projects and startups that didn’t ...</title>
-            <link>https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/</guid>
-            <description>From Apple's repeatedly delayed Siri AI to OpenAI's messy "super app" launch, here's a look at the AI projects that shut...</description>
-            <category>全球动态</category>
-            <pubDate>Sat, 14 Nov 2026 17:30:00 +0000</pubDate>
         </item>
         <item>
             <title>英伟达上演“奥特曼2.0”，员工集体请愿：让老黄回家！</title>
