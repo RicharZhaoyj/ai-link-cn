@@ -5,72 +5,64 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Wed, 18 Nov 2026 16:59:07 +0000</lastBuildDate>
+        <lastBuildDate>Thu, 19 Nov 2026 06:21:18 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
         <item>
-            <title>OpenAI CEO Sam Altman says it’s ‘hard to imagine the AI industry witho...</title>
-            <link>https://techcrunch.com/2026/11/18/openai-ceo-sam-altman-says-its-hard-to-imagine-the-ai-industry-without-jensen/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/18/openai-ceo-sam-altman-says-its-hard-to-imagine-the-ai-industry-without-jensen/</guid>
-            <description>Nvidia founder and former CEO Jensen Huang stepped down last week amid several scandals, including an affair with an all...</description>
-            <category>全球动态</category>
-            <pubDate>Wed, 18 Nov 2026 16:14:09 +0000</pubDate>
-        </item>
-        <item>
-            <title>Nvidia clarifies when it will — and won’t — keep financing neoclouds</title>
-            <link>https://techcrunch.com/2026/11/18/nvidia-clarifies-when-it-will-and-wont-keep-financing-neoclouds/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/18/nvidia-clarifies-when-it-will-and-wont-keep-financing-neoclouds/</guid>
-            <description>If Nvidia is backstopping a data center loan, it won't be on the hook unless the neocould has independent financing and ...</description>
-            <category>全球动态</category>
-            <pubDate>Wed, 18 Nov 2026 13:00:00 +0000</pubDate>
-        </item>
-        <item>
-            <title>Felicis leads $7.5M bet on Unsiloed AI to make enterprise documents us...</title>
-            <link>https://techcrunch.com/2026/11/18/felicis-leads-7-5m-bet-on-unsiloed-ai-to-make-enterprise-documents-usable-by-ai-agents/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/18/felicis-leads-7-5m-bet-on-unsiloed-ai-to-make-enterprise-documents-usable-by-ai-agents/</guid>
-            <description>With a team of just seven, Unsiloed AI plans to compete with tech giants and specialized startups in the crowded AI docu...</description>
-            <category>全球动态</category>
-            <pubDate>Wed, 18 Nov 2026 12:00:00 +0000</pubDate>
-        </item>
-        <item>
-            <title>India’s Humyn Labs raises $47M to feed U.S. robotics companies the dat...</title>
-            <link>https://techcrunch.com/2026/11/18/accel-backs-indias-humyn-labs-to-supply-training-data-needed-by-u-s-robotics-ai-developers/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/18/accel-backs-indias-humyn-labs-to-supply-training-data-needed-by-u-s-robotics-ai-developers/</guid>
-            <description>Founded in February, Humyn Labs competes with startups including Mecka AI and XDOF, with about 90% of its revenue coming...</description>
-            <category>全球动态</category>
-            <pubDate>Wed, 18 Nov 2026 11:30:00 +0000</pubDate>
-        </item>
-        <item>
-            <title>Gemini新模型Neon箭在弦上，网友：遍历元素周期表？</title>
-            <link>https://www.qbitai.com/2026/11/510922.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/11/510922.html</guid>
-            <description>氖人寻味！</description>
-            <category>模型发布</category>
-            <pubDate>Wed, 18 Nov 2026 09:41:55 +0000</pubDate>
-        </item>
-        <item>
-            <title>GPT-6.2难产！OpenAI怕了</title>
-            <link>https://www.qbitai.com/2026/11/510914.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/11/510914.html</guid>
-            <description>OpenAI也终于活成了2022年谷歌的样子</description>
-            <category>模型发布</category>
-            <pubDate>Wed, 18 Nov 2026 07:53:29 +0000</pubDate>
-        </item>
-        <item>
-            <title>全球首个医疗健康AI独立评测与分析平台InclusionMed正式上线</title>
-            <link>https://www.qbitai.com/2026/11/510916.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/11/510916.html</guid>
-            <description>近日，全球首个医疗健康 AI 独立评测与分析平台InclusionMed 正式上线</description>
+            <title>AI基建大潮方兴未艾，联想集团最佳财季诞生！</title>
+            <link>https://www.qbitai.com/2026/11/511088.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/511088.html</guid>
+            <description>全球AI生态链领先企业联想集团今日公布截至2026/27财年第二季度业绩</description>
             <category>技术前沿</category>
-            <pubDate>Wed, 18 Nov 2026 07:24:50 +0000</pubDate>
+            <pubDate>Thu, 19 Nov 2026 04:51:31 +0000</pubDate>
         </item>
         <item>
-            <title>思维链一作Jason Wei离职！怎么去Meta待一年都跑路</title>
-            <link>https://www.qbitai.com/2026/11/510811.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/11/510811.html</guid>
-            <description>入职Meta刚满一年出头，竟然直接提桶跑路了！</description>
+            <title>安谋科技深度解析Arm Cortex-M42，发布“星辰100e”AIoT原型平台，助力打造AI性能更强的嵌入式设计</title>
+            <link>https://www.qbitai.com/2026/11/511079.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/511079.html</guid>
+            <description>11月18日，安谋科技（中国）有限公司举办Arm® Cortex®-M CPU新品说明会</description>
+            <category>模型发布</category>
+            <pubDate>Thu, 19 Nov 2026 04:02:39 +0000</pubDate>
+        </item>
+        <item>
+            <title>范式下场做基模了！国产算力全链路训练，双模型同步亮相</title>
+            <link>https://www.qbitai.com/2026/11/511071.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/511071.html</guid>
+            <description>语言模型单张3090卡即可运行</description>
+            <category>开源动态</category>
+            <pubDate>Thu, 19 Nov 2026 03:01:45 +0000</pubDate>
+        </item>
+        <item>
+            <title>Microsoft CEO Satya Nadella explains why he asked 60K employees to qui...</title>
+            <link>https://techcrunch.com/2026/11/18/microsoft-ceo-satya-nadella-explains-why-he-asked-60k-employees-to-quit/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/18/microsoft-ceo-satya-nadella-explains-why-he-asked-60k-employees-to-quit/</guid>
+            <description>Microsoft CEO Satya Nadella explained why he offered buyouts to 60,000 of his employees in October, essentially urging t...</description>
+            <category>全球动态</category>
+            <pubDate>Thu, 19 Nov 2026 00:42:56 +0000</pubDate>
+        </item>
+        <item>
+            <title>初中毕业烘焙师，1 人搓出单集千万播放科幻剧，中国AI长片杀疯了！</title>
+            <link>https://www.qbitai.com/2026/11/510947.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/510947.html</guid>
+            <description>国产AI工具实现「一个人就是一个剧组」</description>
             <category>技术前沿</category>
-            <pubDate>Wed, 18 Nov 2026 04:49:51 +0000</pubDate>
+            <pubDate>Thu, 19 Nov 2026 00:26:40 +0000</pubDate>
+        </item>
+        <item>
+            <title>Amidst fears of AI cyberattacks, Satya Nadella says lots of critical i...</title>
+            <link>https://techcrunch.com/2026/11/18/amidst-fears-of-ai-cyberattacks-satya-nadella-says-lots-of-critical-infrastructure-is-unpatchable/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/18/amidst-fears-of-ai-cyberattacks-satya-nadella-says-lots-of-critical-infrastructure-is-unpatchable/</guid>
+            <description>The Microsoft CEO downplayed the recent Outlook outage while noting that AI was causing both opportunities and new chall...</description>
+            <category>全球动态</category>
+            <pubDate>Wed, 18 Nov 2026 23:45:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>Elon Musk says ousting Jensen Huang is like ‘kicking Michael Jordan of...</title>
+            <link>https://techcrunch.com/2026/11/18/elon-musk-says-ousting-jensen-huang-is-like-kicking-michael-jordan-off-your-team/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/18/elon-musk-says-ousting-jensen-huang-is-like-kicking-michael-jordan-off-your-team/</guid>
+            <description>“I don’t think [Huang is] disloyal to the United States," Musk said.</description>
+            <category>全球动态</category>
+            <pubDate>Wed, 18 Nov 2026 23:25:17 +0000</pubDate>
         </item>
     </channel>
 </rss>
