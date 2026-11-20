@@ -5,16 +5,56 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Fri, 20 Nov 2026 06:05:53 +0000</lastBuildDate>
+        <lastBuildDate>Fri, 20 Nov 2026 16:46:03 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
         <item>
-            <title>具身机器人进入真机时代，华为云CloudRobo开始组队发力了</title>
-            <link>https://www.qbitai.com/2026/11/511426.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/11/511426.html</guid>
-            <description>一批卡可以轮流服务多家公司，一次适配也能让更多团队受益。算力不必家家从头买，工程上的坑也不用家家重新踩。</description>
+            <title>The fallout from Nvidia’s Jensen Huang scandal continues</title>
+            <link>https://techcrunch.com/podcast/the-fallout-from-nvidias-jensen-huang-scandal-continues/</link>
+            <guid isPermaLink="true">https://techcrunch.com/podcast/the-fallout-from-nvidias-jensen-huang-scandal-continues/</guid>
+            <description>In the midst of dealing with the fallout from its ouster of CEO Jensen Huang, Nvidia delivered its latest earnings repor...</description>
+            <category>全球动态</category>
+            <pubDate>Fri, 20 Nov 2026 14:55:44 +0000</pubDate>
+        </item>
+        <item>
+            <title>Six AI-powered gadgets that could make your home office smarter</title>
+            <link>https://techcrunch.com/2026/11/20/6-ai-powered-gadgets-that-could-make-your-home-office-smarter/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/20/6-ai-powered-gadgets-that-could-make-your-home-office-smarter/</guid>
+            <description>From notetakers to webcams, here are six AI-powered gadgets to upgrade your workspace.</description>
+            <category>全球动态</category>
+            <pubDate>Fri, 20 Nov 2026 14:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>美国AI音乐巨头进军视频生成，底层模型来自中国MiniMax</title>
+            <link>https://www.qbitai.com/2026/11/511722.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/511722.html</guid>
+            <description>美国AI音乐平台Suno宣布推出视觉创作工具Visuals</description>
+            <category>开源动态</category>
+            <pubDate>Fri, 20 Nov 2026 12:18:01 +0000</pubDate>
+        </item>
+        <item>
+            <title>给万卡国产芯装个“超级外挂”！清华团队要造最强国产Token工厂</title>
+            <link>https://www.qbitai.com/2026/11/511679.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/511679.html</guid>
+            <description>联合华为昇腾，五年冲刺十万卡</description>
             <category>技术前沿</category>
-            <pubDate>Fri, 20 Nov 2026 01:07:38 +0000</pubDate>
+            <pubDate>Fri, 20 Nov 2026 08:59:15 +0000</pubDate>
+        </item>
+        <item>
+            <title>昇腾算力训出了双榜SOTA的具身世界模型，华为云这次想把整套底座开放出来</title>
+            <link>https://www.qbitai.com/2026/11/511610.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/511610.html</guid>
+            <description>国产算力的成熟，把具身竞争维度从「芯片有多强」，拉入了一个比拼训练效率、数据规模、部署成本和场景落地速度的多维战场。</description>
+            <category>开源动态</category>
+            <pubDate>Fri, 20 Nov 2026 08:04:58 +0000</pubDate>
+        </item>
+        <item>
+            <title>新浪新闻·2026探索大会在京举行 虚实交融共探智能时代共生新图景</title>
+            <link>https://www.qbitai.com/2026/11/511603.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/511603.html</guid>
+            <description>11月19日，由微博与新浪新闻联合主办的“新浪新闻·2026探索大会”在北京举办。</description>
+            <category>技术前沿</category>
+            <pubDate>Fri, 20 Nov 2026 06:16:06 +0000</pubDate>
         </item>
         <item>
             <title>Apple may be developing its own AI agent that runs your Mac</title>
@@ -31,46 +71,6 @@
             <description>At the upgraded $83/share IPO price, Anthropic's seven founders each pocketed $280 million, while the company nabbed nea...</description>
             <category>全球动态</category>
             <pubDate>Fri, 20 Nov 2026 00:43:50 +0000</pubDate>
-        </item>
-        <item>
-            <title>Meta’s new Muse Charm device may cost $300</title>
-            <link>https://techcrunch.com/2026/11/19/metas-new-muse-charm-device-may-cost-300/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/19/metas-new-muse-charm-device-may-cost-300/</guid>
-            <description>Meta hasn't denied the reporting from The Information, saying only that it will "have more to share soon" about its upco...</description>
-            <category>全球动态</category>
-            <pubDate>Thu, 19 Nov 2026 21:58:06 +0000</pubDate>
-        </item>
-        <item>
-            <title>These tech outages are giving Y2K, AI agent style</title>
-            <link>https://techcrunch.com/2026/11/19/these-tech-outages-are-giving-y2k-ai-agent-style/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/19/these-tech-outages-are-giving-y2k-ai-agent-style/</guid>
-            <description>Are the recent outages in the airline booking systems, banking platforms, and productivity platforms really a coincidenc...</description>
-            <category>全球动态</category>
-            <pubDate>Thu, 19 Nov 2026 21:42:31 +0000</pubDate>
-        </item>
-        <item>
-            <title>影视飓风、Manus、影石、OPPO……极客公园创新大会 2027 嘉宾阵容更新！</title>
-            <link>https://www.qbitai.com/2026/11/511258.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/11/511258.html</guid>
-            <description>「Revaluation 价值，另有答案」</description>
-            <category>技术前沿</category>
-            <pubDate>Thu, 19 Nov 2026 08:43:10 +0000</pubDate>
-        </item>
-        <item>
-            <title>GTA6刷屏！零AI纯手搓的3A大作玩一个少一个了</title>
-            <link>https://www.qbitai.com/2026/11/511180.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/11/511180.html</guid>
-            <description>媒体均分登顶历史第一，细节多到爆炸</description>
-            <category>技术前沿</category>
-            <pubDate>Thu, 19 Nov 2026 08:18:30 +0000</pubDate>
-        </item>
-        <item>
-            <title>SenseNova U1 Pro获Design Arena双榜中国第一、全球第六</title>
-            <link>https://www.qbitai.com/2026/11/511179.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/11/511179.html</guid>
-            <description>商汤科技日日新 SenseNova U1 Pro 在图片生成与图片编辑两大榜单中均登顶中国第一</description>
-            <category>技术前沿</category>
-            <pubDate>Thu, 19 Nov 2026 08:10:19 +0000</pubDate>
         </item>
     </channel>
 </rss>
