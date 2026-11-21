@@ -5,9 +5,33 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Fri, 20 Nov 2026 16:46:03 +0000</lastBuildDate>
+        <lastBuildDate>Sat, 21 Nov 2026 05:57:44 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
+        <item>
+            <title>Daniel Ek backs AI researcher’s fusion power startup. Here’s what they...</title>
+            <link>https://techcrunch.com/2026/11/20/daniel-ek-backs-ai-researchers-fusion-power-startup-heres-what-theyre-building/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/20/daniel-ek-backs-ai-researchers-fusion-power-startup-heres-what-theyre-building/</guid>
+            <description>Spotify founder Daniel Ek is backing Europa Fusion, a fusion power startup founded by an AI researcher. Here's what the ...</description>
+            <category>全球动态</category>
+            <pubDate>Fri, 20 Nov 2026 19:53:41 +0000</pubDate>
+        </item>
+        <item>
+            <title>AI claimed a solution to the 167-year-old Riemann hypothesis — and a h...</title>
+            <link>https://techcrunch.com/2026/11/20/ai-claimed-a-solution-to-the-167-year-old-riemann-hypothesis-and-a-human-did-too/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/20/ai-claimed-a-solution-to-the-167-year-old-riemann-hypothesis-and-a-human-did-too/</guid>
+            <description>Mathematicians are having their minds blown by the latest AI-driven result — and there's a competing human solution, too...</description>
+            <category>全球动态</category>
+            <pubDate>Fri, 20 Nov 2026 19:32:08 +0000</pubDate>
+        </item>
+        <item>
+            <title>Chips can survive the space environment — can their financing?</title>
+            <link>https://techcrunch.com/2026/11/20/chips-can-survive-the-space-environment-can-their-financing/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/20/chips-can-survive-the-space-environment-can-their-financing/</guid>
+            <description>Lenders don't want SpaceX shooting their collateral into orbit. What does that mean for space data centers writ large?</description>
+            <category>全球动态</category>
+            <pubDate>Fri, 20 Nov 2026 17:40:01 +0000</pubDate>
+        </item>
         <item>
             <title>The fallout from Nvidia’s Jensen Huang scandal continues</title>
             <link>https://techcrunch.com/podcast/the-fallout-from-nvidias-jensen-huang-scandal-continues/</link>
@@ -15,30 +39,6 @@
             <description>In the midst of dealing with the fallout from its ouster of CEO Jensen Huang, Nvidia delivered its latest earnings repor...</description>
             <category>全球动态</category>
             <pubDate>Fri, 20 Nov 2026 14:55:44 +0000</pubDate>
-        </item>
-        <item>
-            <title>Six AI-powered gadgets that could make your home office smarter</title>
-            <link>https://techcrunch.com/2026/11/20/6-ai-powered-gadgets-that-could-make-your-home-office-smarter/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/20/6-ai-powered-gadgets-that-could-make-your-home-office-smarter/</guid>
-            <description>From notetakers to webcams, here are six AI-powered gadgets to upgrade your workspace.</description>
-            <category>全球动态</category>
-            <pubDate>Fri, 20 Nov 2026 14:00:00 +0000</pubDate>
-        </item>
-        <item>
-            <title>美国AI音乐巨头进军视频生成，底层模型来自中国MiniMax</title>
-            <link>https://www.qbitai.com/2026/11/511722.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/11/511722.html</guid>
-            <description>美国AI音乐平台Suno宣布推出视觉创作工具Visuals</description>
-            <category>开源动态</category>
-            <pubDate>Fri, 20 Nov 2026 12:18:01 +0000</pubDate>
-        </item>
-        <item>
-            <title>给万卡国产芯装个“超级外挂”！清华团队要造最强国产Token工厂</title>
-            <link>https://www.qbitai.com/2026/11/511679.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/11/511679.html</guid>
-            <description>联合华为昇腾，五年冲刺十万卡</description>
-            <category>技术前沿</category>
-            <pubDate>Fri, 20 Nov 2026 08:59:15 +0000</pubDate>
         </item>
         <item>
             <title>昇腾算力训出了双榜SOTA的具身世界模型，华为云这次想把整套底座开放出来</title>
@@ -57,20 +57,20 @@
             <pubDate>Fri, 20 Nov 2026 06:16:06 +0000</pubDate>
         </item>
         <item>
-            <title>Apple may be developing its own AI agent that runs your Mac</title>
-            <link>https://techcrunch.com/2026/11/19/apple-may-be-developing-its-own-ai-agent-that-runs-your-mac/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/19/apple-may-be-developing-its-own-ai-agent-that-runs-your-mac/</guid>
-            <description>The iPhone maker appears to be building agents that can compete with the likes of Meta Muse, Instinct, Claude, and OpenA...</description>
-            <category>工具发现</category>
-            <pubDate>Fri, 20 Nov 2026 00:56:01 +0000</pubDate>
+            <title>双系统决策+双层自进化，Agnes让Agent效率最高提速14倍，成本骤降至1/27！</title>
+            <link>https://www.qbitai.com/2026/11/511582.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/511582.html</guid>
+            <description>已开源Agnes Harness</description>
+            <category>技术前沿</category>
+            <pubDate>Fri, 20 Nov 2026 05:24:11 +0000</pubDate>
         </item>
         <item>
-            <title>Anthropic’s 7 founders cashed out nearly $2B in record-breaking IPO</title>
-            <link>https://techcrunch.com/2026/11/19/anthropics-7-founders-cashed-out-nearly-2b-in-record-breaking-ipo/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/19/anthropics-7-founders-cashed-out-nearly-2b-in-record-breaking-ipo/</guid>
-            <description>At the upgraded $83/share IPO price, Anthropic's seven founders each pocketed $280 million, while the company nabbed nea...</description>
-            <category>全球动态</category>
-            <pubDate>Fri, 20 Nov 2026 00:43:50 +0000</pubDate>
+            <title>具身机器人进入真机时代，华为云CloudRobo开始组队发力了</title>
+            <link>https://www.qbitai.com/2026/11/511426.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/511426.html</guid>
+            <description>一批卡可以轮流服务多家公司，一次适配也能让更多团队受益。算力不必家家从头买，工程上的坑也不用家家重新踩。</description>
+            <category>技术前沿</category>
+            <pubDate>Fri, 20 Nov 2026 01:07:38 +0000</pubDate>
         </item>
     </channel>
 </rss>
