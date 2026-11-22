@@ -5,9 +5,25 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Sun, 22 Nov 2026 15:59:21 +0000</lastBuildDate>
+        <lastBuildDate>Sun, 22 Nov 2026 21:40:57 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
+        <item>
+            <title>OpenAI’s chief scientist has thoughts on how to limit AI development</title>
+            <link>https://techcrunch.com/2026/11/22/openais-chief-scientist-has-thoughts-on-how-to-limit-ai-development/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/22/openais-chief-scientist-has-thoughts-on-how-to-limit-ai-development/</guid>
+            <description>To establish a speed limit on AI development, you need to agree on how to measure speed.</description>
+            <category>全球动态</category>
+            <pubDate>Sun, 22 Nov 2026 21:14:07 +0000</pubDate>
+        </item>
+        <item>
+            <title>Why data centers are at the center of the Big Tech backlash</title>
+            <link>https://techcrunch.com/2026/11/22/why-data-centers-are-at-the-center-of-the-big-tech-backlash/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/22/why-data-centers-are-at-the-center-of-the-big-tech-backlash/</guid>
+            <description>Journalist Paris Marx unpacks his new book "Hyperscale."</description>
+            <category>全球动态</category>
+            <pubDate>Sun, 22 Nov 2026 18:08:43 +0000</pubDate>
+        </item>
         <item>
             <title>Nature：糖尿病大鼠成功恢复正常血糖！用电刺激迷走神经控糖</title>
             <link>https://www.qbitai.com/2026/11/511904.html</link>
@@ -39,22 +55,6 @@
             <description>We got two very different pictures of Nvidia — the company’s latest earnings report vs. the tech executives loudly calli...</description>
             <category>全球动态</category>
             <pubDate>Sat, 21 Nov 2026 21:07:42 +0000</pubDate>
-        </item>
-        <item>
-            <title>Here are the top AI agents that can live in your text messages</title>
-            <link>https://techcrunch.com/2026/11/21/all-the-ai-agents-that-can-live-in-your-text-messages/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/21/all-the-ai-agents-that-can-live-in-your-text-messages/</guid>
-            <description>We created a list of the most notable AI agents that can live in your text messages, from general assistants to agents d...</description>
-            <category>全球动态</category>
-            <pubDate>Sat, 21 Nov 2026 17:00:00 +0000</pubDate>
-        </item>
-        <item>
-            <title>Is selling an AI version of your face to this microdrama startup the f...</title>
-            <link>https://techcrunch.com/2026/11/21/is-selling-an-ai-version-of-your-face-to-this-microdrama-startup-the-future-of-hollywood/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/21/is-selling-an-ai-version-of-your-face-to-this-microdrama-startup-the-future-of-hollywood/</guid>
-            <description>An actor has licensed his face to a microdrama startup — in a trend that's already popular in China. Experts question th...</description>
-            <category>全球动态</category>
-            <pubDate>Sat, 21 Nov 2026 16:00:00 +0000</pubDate>
         </item>
         <item>
             <title>AI给乐队现场搓MV，这是黑客松还是音乐节啊</title>
