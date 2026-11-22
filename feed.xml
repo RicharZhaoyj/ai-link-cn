@@ -5,9 +5,25 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Sun, 22 Nov 2026 05:32:25 +0000</lastBuildDate>
+        <lastBuildDate>Sun, 22 Nov 2026 15:59:21 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
+        <item>
+            <title>Nature：糖尿病大鼠成功恢复正常血糖！用电刺激迷走神经控糖</title>
+            <link>https://www.qbitai.com/2026/11/511904.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/511904.html</guid>
+            <description>用葡萄糖发电控制血糖。</description>
+            <category>技术前沿</category>
+            <pubDate>Sun, 22 Nov 2026 06:21:47 +0000</pubDate>
+        </item>
+        <item>
+            <title>A社数学家用Claude又证明另一千禧难题，逼出一份写了12年的940页纯人类手稿</title>
+            <link>https://www.qbitai.com/2026/11/511870.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/511870.html</guid>
+            <description>A社数学家用Claude又证明另一千禧难题，逼出一份写了12年的940页纯人类手稿</description>
+            <category>模型发布</category>
+            <pubDate>Sun, 22 Nov 2026 06:03:54 +0000</pubDate>
+        </item>
         <item>
             <title>Signal restricts mobile screenshots as it confronts ‘existential threa...</title>
             <link>https://techcrunch.com/2026/11/21/signal-restricts-mobile-screenshots-as-it-confronts-existential-threat-of-ai-surveillance/</link>
@@ -41,36 +57,20 @@
             <pubDate>Sat, 21 Nov 2026 16:00:00 +0000</pubDate>
         </item>
         <item>
-            <title>GPT-6.2 Astra再次暴击具身模型：16项任务成功率较GPT-6 Astra翻倍</title>
-            <link>https://www.qbitai.com/2026/11/511779.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/11/511779.html</guid>
-            <description>还实现可变形物体操控全球首通</description>
-            <category>模型发布</category>
-            <pubDate>Sat, 21 Nov 2026 06:35:59 +0000</pubDate>
-        </item>
-        <item>
-            <title>刚刚，DeepSeek V1作者创业项目曝光：开源Agent</title>
-            <link>https://www.qbitai.com/2026/11/511570.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/11/511570.html</guid>
-            <description>专为本地部署而生</description>
-            <category>开源动态</category>
-            <pubDate>Sat, 21 Nov 2026 06:32:31 +0000</pubDate>
-        </item>
-        <item>
-            <title>姚顺雨和混元团队上Reddit答网友，Hy小模型已进路线图</title>
-            <link>https://www.qbitai.com/2026/11/511757.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/11/511757.html</guid>
-            <description>还透露了不少训练背后的秘诀</description>
-            <category>开源动态</category>
-            <pubDate>Sat, 21 Nov 2026 06:30:55 +0000</pubDate>
-        </item>
-        <item>
-            <title>米哈游发了个VLA论文</title>
-            <link>https://www.qbitai.com/2026/11/511740.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/11/511740.html</guid>
-            <description>8B参数，50小时自主运行</description>
+            <title>AI给乐队现场搓MV，这是黑客松还是音乐节啊</title>
+            <link>https://www.qbitai.com/2026/11/511855.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/511855.html</guid>
+            <description>AI给乐队现场搓MV，这是黑客松还是音乐节啊</description>
             <category>技术前沿</category>
-            <pubDate>Fri, 20 Nov 2026 16:25:26 +0000</pubDate>
+            <pubDate>Sat, 21 Nov 2026 14:14:09 +0000</pubDate>
+        </item>
+        <item>
+            <title>中国计算，走出新的登峰之路</title>
+            <link>https://www.qbitai.com/2026/11/511849.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/511849.html</guid>
+            <description>中国计算，走出新的登峰之路</description>
+            <category>技术前沿</category>
+            <pubDate>Sat, 21 Nov 2026 14:09:59 +0000</pubDate>
         </item>
     </channel>
 </rss>
