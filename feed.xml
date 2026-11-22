@@ -5,9 +5,17 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Sat, 21 Nov 2026 21:31:11 +0000</lastBuildDate>
+        <lastBuildDate>Sun, 22 Nov 2026 05:32:25 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
+        <item>
+            <title>Signal restricts mobile screenshots as it confronts ‘existential threa...</title>
+            <link>https://techcrunch.com/2026/11/21/signal-restricts-mobile-screenshots-as-it-confronts-existential-threat-of-ai-surveillance/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/21/signal-restricts-mobile-screenshots-as-it-confronts-existential-threat-of-ai-surveillance/</guid>
+            <description>Signal is limiting users' ability to take screenshots in both its Android and iOS apps.</description>
+            <category>全球动态</category>
+            <pubDate>Sat, 21 Nov 2026 21:37:10 +0000</pubDate>
+        </item>
         <item>
             <title>A tale of two Nvidias</title>
             <link>https://techcrunch.com/2026/11/21/a-tale-of-two-nvidias/</link>
@@ -55,14 +63,6 @@
             <description>还透露了不少训练背后的秘诀</description>
             <category>开源动态</category>
             <pubDate>Sat, 21 Nov 2026 06:30:55 +0000</pubDate>
-        </item>
-        <item>
-            <title>Daniel Ek backs AI researcher’s fusion power startup. Here’s what they...</title>
-            <link>https://techcrunch.com/2026/11/20/daniel-ek-backs-ai-researchers-fusion-power-startup-heres-what-theyre-building/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/20/daniel-ek-backs-ai-researchers-fusion-power-startup-heres-what-theyre-building/</guid>
-            <description>Spotify founder Daniel Ek is backing Europa Fusion, a fusion power startup founded by an AI researcher. Here's what the ...</description>
-            <category>全球动态</category>
-            <pubDate>Fri, 20 Nov 2026 19:53:41 +0000</pubDate>
         </item>
         <item>
             <title>米哈游发了个VLA论文</title>
