@@ -5,72 +5,72 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Mon, 23 Nov 2026 19:54:54 +0000</lastBuildDate>
+        <lastBuildDate>Tue, 24 Nov 2026 08:49:50 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
         <item>
-            <title>Google Search’s AI Mode can now tap into Drive and Wallet for more per...</title>
-            <link>https://techcrunch.com/2026/11/23/google-searchs-ai-mode-can-now-tap-into-drive-and-wallet-for-more-personalized-responses/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/23/google-searchs-ai-mode-can-now-tap-into-drive-and-wallet-for-more-personalized-responses/</guid>
-            <description>By bringing Personal Intelligence in AI Mode to Drive, Wallet, and the Gemini app, Google is leveraging the wealth of us...</description>
-            <category>全球动态</category>
-            <pubDate>Mon, 23 Nov 2026 19:14:46 +0000</pubDate>
-        </item>
-        <item>
-            <title>Jensen Huang scheduled to testify next week in Senate following reinst...</title>
-            <link>https://techcrunch.com/2026/11/23/jensen-huang-scheduled-to-testify-next-week-in-senate-following-reinstatement-as-nvidia-ceo/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/23/jensen-huang-scheduled-to-testify-next-week-in-senate-following-reinstatement-as-nvidia-ceo/</guid>
-            <description>The public hearing follows bipartisan calls for Huang to testify about the affair with the suspected Chinese spy.</description>
-            <category>全球动态</category>
-            <pubDate>Mon, 23 Nov 2026 18:12:22 +0000</pubDate>
-        </item>
-        <item>
-            <title>Amazon snaps up Decart’s AI optimization tech for $7.5B as it prepares...</title>
-            <link>https://techcrunch.com/2026/11/23/amazon-snaps-up-decarts-ai-optimization-tech-for-7-5b-as-it-prepares-to-sell-trainium-chips/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/23/amazon-snaps-up-decarts-ai-optimization-tech-for-7-5b-as-it-prepares-to-sell-trainium-chips/</guid>
-            <description>Amazon is acquiring Decart’s AI optimization technology and research team in a reported $7.5 billion deal.</description>
-            <category>全球动态</category>
-            <pubDate>Mon, 23 Nov 2026 17:14:23 +0000</pubDate>
-        </item>
-        <item>
-            <title>Jensen Huang isn’t out of the woods yet</title>
-            <link>https://techcrunch.com/2026/11/23/jensen-huang-isnt-out-of-the-woods-yet/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/23/jensen-huang-isnt-out-of-the-woods-yet/</guid>
-            <description>Tech leaders should be clear-eyed about all the problems likely to come with Huang's reinstatement.</description>
-            <category>全球动态</category>
-            <pubDate>Mon, 23 Nov 2026 16:57:40 +0000</pubDate>
-        </item>
-        <item>
-            <title>实测：1450亿参数塞进笔记本，每秒狂飙80+Token！国产端侧大模型杀疯了</title>
-            <link>https://www.qbitai.com/2026/11/512195.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/11/512195.html</guid>
-            <description>零Token成本，断网也能自由Vibe Coding</description>
-            <category>开源动态</category>
-            <pubDate>Mon, 23 Nov 2026 11:01:15 +0000</pubDate>
-        </item>
-        <item>
-            <title>XROGO郑随兵：机器人不能只在视频里，终究要进入工厂“真干活”</title>
-            <link>https://www.qbitai.com/2026/11/512179.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/11/512179.html</guid>
-            <description>企业核心需求不是交付设备，而是能持续上岗的劳动力</description>
+            <title>Google Cloud 出海峰会报名开启</title>
+            <link>https://www.qbitai.com/2026/11/512370.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/512370.html</guid>
+            <description>2027 Google Cloud 出海峰会将于 1 月 14 日在北京中关村国际创新中心举行</description>
             <category>技术前沿</category>
-            <pubDate>Mon, 23 Nov 2026 09:10:08 +0000</pubDate>
+            <pubDate>Tue, 24 Nov 2026 06:52:29 +0000</pubDate>
         </item>
         <item>
-            <title>蚂蚁医疗健康AI五连发！开源、本地部署、望闻问切全安排上了</title>
-            <link>https://www.qbitai.com/2026/11/512017.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/11/512017.html</guid>
-            <description>阿福大升级：让模型像医生一样思考</description>
+            <title>业界首提“端侧超节点”，让端侧AI组队计算：AI效率暴涨270%，不用换芯片或模型</title>
+            <link>https://www.qbitai.com/2026/11/512362.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/512362.html</guid>
+            <description>端侧老炮辛米尔，打通物理AI规模化落地之路</description>
             <category>开源动态</category>
-            <pubDate>Mon, 23 Nov 2026 07:42:01 +0000</pubDate>
+            <pubDate>Tue, 24 Nov 2026 06:35:06 +0000</pubDate>
         </item>
         <item>
-            <title>“Agent版arXiv”来了！936个智能体12个星期狂发近千篇论文，连同行评议都整上了</title>
-            <link>https://www.qbitai.com/2026/11/512004.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/11/512004.html</guid>
-            <description>一个完全由AI组成的科学家社会，是什么样？</description>
+            <title>文心 5.5 Flash Preview正式开源，采用 Apache 2.0 协议</title>
+            <link>https://www.qbitai.com/2026/11/512354.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/512354.html</guid>
+            <description>文心 5.5 Flash Preview正式开源，采用 Apache 2.0 协议</description>
+            <category>开源动态</category>
+            <pubDate>Tue, 24 Nov 2026 06:22:28 +0000</pubDate>
+        </item>
+        <item>
+            <title>八年研发，首搭方程豹钛9，全球首个折叠方向盘量产上车</title>
+            <link>https://www.qbitai.com/2026/11/512348.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/512348.html</guid>
+            <description>11月19日，方程豹钛9上市，售价27.99万元起</description>
             <category>技术前沿</category>
-            <pubDate>Mon, 23 Nov 2026 06:59:38 +0000</pubDate>
+            <pubDate>Tue, 24 Nov 2026 06:15:38 +0000</pubDate>
+        </item>
+        <item>
+            <title>Anthropic launches Claude Ship, letting AI agents review, fix, and app...</title>
+            <link>https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/</guid>
+            <description>As AI-generated code piles up, Anthropic's new developer tools aim to eliminate another bottleneck by letting agents han...</description>
+            <category>模型发布</category>
+            <pubDate>Mon, 23 Nov 2026 22:05:50 +0000</pubDate>
+        </item>
+        <item>
+            <title>Supertake raises $20M to let AI agents turn your market predictions in...</title>
+            <link>https://techcrunch.com/2026/11/23/supertake-raises-20m-to-let-ai-agents-turn-your-market-predictions-into-stock-portfolios/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/23/supertake-raises-20m-to-let-ai-agents-turn-your-market-predictions-into-stock-portfolios/</guid>
+            <description>Think you know where the market is headed? A startup called Supertake lets you put money behind your ideas without havin...</description>
+            <category>全球动态</category>
+            <pubDate>Mon, 23 Nov 2026 22:02:05 +0000</pubDate>
+        </item>
+        <item>
+            <title>Elon Musk and others rejoice as Jensen Huang is reinstated at Nvidia a...</title>
+            <link>https://techcrunch.com/2026/11/23/elon-musk-and-others-rejoice-as-jensen-huang-is-reinstated-at-nvidia-amid-scandal/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/23/elon-musk-and-others-rejoice-as-jensen-huang-is-reinstated-at-nvidia-amid-scandal/</guid>
+            <description>"The mistake has been corrected," Elon Musk chimed in.</description>
+            <category>全球动态</category>
+            <pubDate>Mon, 23 Nov 2026 21:47:41 +0000</pubDate>
+        </item>
+        <item>
+            <title>Megaspeed, the company at the center of the Jensen Huang scandal, appe...</title>
+            <link>https://techcrunch.com/2026/11/23/megaspeed-the-company-at-the-center-of-the-jensen-huang-scandal-appears-headed-for-a-u-s-blacklist/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/23/megaspeed-the-company-at-the-center-of-the-jensen-huang-scandal-appears-headed-for-a-u-s-blacklist/</guid>
+            <description>Megaspeed, which was previously led by Alice Huang, would be barred from doing business with U.S. companies unless those...</description>
+            <category>工具发现</category>
+            <pubDate>Mon, 23 Nov 2026 21:25:42 +0000</pubDate>
         </item>
     </channel>
 </rss>
