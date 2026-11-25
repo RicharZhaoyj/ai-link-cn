@@ -5,9 +5,41 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Tue, 24 Nov 2026 08:49:50 +0000</lastBuildDate>
+        <lastBuildDate>Wed, 25 Nov 2026 00:25:11 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
+        <item>
+            <title>Yale’s Sonnenfeld: Nvidia is a ‘detriment’ to U.S. industrial might — ...</title>
+            <link>https://techcrunch.com/2026/11/24/yales-sonnenfeld-nvidia-is-a-detriment-to-u-s-industrial-might-not-a-champion/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/24/yales-sonnenfeld-nvidia-is-a-detriment-to-u-s-industrial-might-not-a-champion/</guid>
+            <description>Yale's Jeffrey Sonnenfeld warns that what the market cheered Monday, Jensen Huang's White House–backed return as Nvidia'...</description>
+            <category>全球动态</category>
+            <pubDate>Wed, 25 Nov 2026 00:12:02 +0000</pubDate>
+        </item>
+        <item>
+            <title>Jensen Huang still thinks a succession plan creates unnecessary hierar...</title>
+            <link>https://techcrunch.com/2026/11/24/jensen-huang-still-thinks-a-succession-plan-creates-unnecessary-hierarchy/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/24/jensen-huang-still-thinks-a-succession-plan-creates-unnecessary-hierarchy/</guid>
+            <description>It's a remarkable stance for a company that spent the last two weeks finding out what happens without its founder.</description>
+            <category>全球动态</category>
+            <pubDate>Tue, 24 Nov 2026 22:27:52 +0000</pubDate>
+        </item>
+        <item>
+            <title>In all-hands meeting, Jensen Huang thanks White House and says he’s in...</title>
+            <link>https://techcrunch.com/2026/11/24/in-all-hands-meeting-jensen-huang-thanks-white-house-and-says-hes-in-therapy/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/24/in-all-hands-meeting-jensen-huang-thanks-white-house-and-says-hes-in-therapy/</guid>
+            <description>The Nvidia founder apologized to his staff on Tuesday and said he was grateful for a second chance to lead the company.</description>
+            <category>全球动态</category>
+            <pubDate>Tue, 24 Nov 2026 21:48:27 +0000</pubDate>
+        </item>
+        <item>
+            <title>Even the best AI agents struggle with everyday life</title>
+            <link>https://techcrunch.com/2026/11/24/even-the-best-ai-agents-struggle-with-everyday-life/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/24/even-the-best-ai-agents-struggle-with-everyday-life/</guid>
+            <description>As millions embrace personal AI assistants, a new benchmark reveals that even the most advanced AI models struggle to co...</description>
+            <category>全球动态</category>
+            <pubDate>Tue, 24 Nov 2026 21:33:29 +0000</pubDate>
+        </item>
         <item>
             <title>Google Cloud 出海峰会报名开启</title>
             <link>https://www.qbitai.com/2026/11/512370.html</link>
@@ -39,38 +71,6 @@
             <description>11月19日，方程豹钛9上市，售价27.99万元起</description>
             <category>技术前沿</category>
             <pubDate>Tue, 24 Nov 2026 06:15:38 +0000</pubDate>
-        </item>
-        <item>
-            <title>Anthropic launches Claude Ship, letting AI agents review, fix, and app...</title>
-            <link>https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/</guid>
-            <description>As AI-generated code piles up, Anthropic's new developer tools aim to eliminate another bottleneck by letting agents han...</description>
-            <category>模型发布</category>
-            <pubDate>Mon, 23 Nov 2026 22:05:50 +0000</pubDate>
-        </item>
-        <item>
-            <title>Supertake raises $20M to let AI agents turn your market predictions in...</title>
-            <link>https://techcrunch.com/2026/11/23/supertake-raises-20m-to-let-ai-agents-turn-your-market-predictions-into-stock-portfolios/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/23/supertake-raises-20m-to-let-ai-agents-turn-your-market-predictions-into-stock-portfolios/</guid>
-            <description>Think you know where the market is headed? A startup called Supertake lets you put money behind your ideas without havin...</description>
-            <category>全球动态</category>
-            <pubDate>Mon, 23 Nov 2026 22:02:05 +0000</pubDate>
-        </item>
-        <item>
-            <title>Elon Musk and others rejoice as Jensen Huang is reinstated at Nvidia a...</title>
-            <link>https://techcrunch.com/2026/11/23/elon-musk-and-others-rejoice-as-jensen-huang-is-reinstated-at-nvidia-amid-scandal/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/23/elon-musk-and-others-rejoice-as-jensen-huang-is-reinstated-at-nvidia-amid-scandal/</guid>
-            <description>"The mistake has been corrected," Elon Musk chimed in.</description>
-            <category>全球动态</category>
-            <pubDate>Mon, 23 Nov 2026 21:47:41 +0000</pubDate>
-        </item>
-        <item>
-            <title>Megaspeed, the company at the center of the Jensen Huang scandal, appe...</title>
-            <link>https://techcrunch.com/2026/11/23/megaspeed-the-company-at-the-center-of-the-jensen-huang-scandal-appears-headed-for-a-u-s-blacklist/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/23/megaspeed-the-company-at-the-center-of-the-jensen-huang-scandal-appears-headed-for-a-u-s-blacklist/</guid>
-            <description>Megaspeed, which was previously led by Alice Huang, would be barred from doing business with U.S. companies unless those...</description>
-            <category>工具发现</category>
-            <pubDate>Mon, 23 Nov 2026 21:25:42 +0000</pubDate>
         </item>
     </channel>
 </rss>
