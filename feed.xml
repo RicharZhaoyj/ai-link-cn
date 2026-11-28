@@ -5,40 +5,48 @@
         <link>https://ai.link.cn/</link>
         <description>最新AI工具资讯、AI对比评测、AI使用指南</description>
         <language>zh-CN</language>
-        <lastBuildDate>Sat, 28 Nov 2026 06:43:03 +0000</lastBuildDate>
+        <lastBuildDate>Sat, 28 Nov 2026 16:45:23 +0000</lastBuildDate>
         <atom:link href="https://ai.link.cn/feed.xml" rel="self" type="application/rss+xml" />
 
         <item>
-            <title>人形机器人开发者集合！众擎开放大小脑，10亿产业级生态支持计划也来了</title>
-            <link>https://www.qbitai.com/2026/11/513352.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/11/513352.html</guid>
-            <description>一支团队在真机上验证的成果，可以成为下一支团队继续开发的起点。</description>
+            <title>200亿美元…史上最贵AI自媒体</title>
+            <link>https://www.qbitai.com/2026/11/513577.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/513577.html</guid>
+            <description>这可能是有史以来，ROI（投资回报率）最高的个人博客。</description>
             <category>技术前沿</category>
-            <pubDate>Fri, 27 Nov 2026 14:07:33 +0000</pubDate>
+            <pubDate>Sat, 28 Nov 2026 14:38:56 +0000</pubDate>
         </item>
         <item>
-            <title>全国首批首家！商汤大装置获Token工厂智算能力最高评级</title>
-            <link>https://www.qbitai.com/2026/11/513346.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/11/513346.html</guid>
-            <description>商汤大装置Token工厂获得中国信通院Token工厂智算能力评估“全栈服务型·领先级”评级认证</description>
-            <category>技术前沿</category>
-            <pubDate>Fri, 27 Nov 2026 11:18:24 +0000</pubDate>
+            <title>谷歌Tibo亲授Gemini 4 Neon内部打开方式！第一步：删光旧规则</title>
+            <link>https://www.qbitai.com/2026/11/513555.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/513555.html</guid>
+            <description>这两天转投Gemini的有福了！</description>
+            <category>模型发布</category>
+            <pubDate>Sat, 28 Nov 2026 14:29:15 +0000</pubDate>
         </item>
         <item>
-            <title>韦东奕再获大奖！攻克近140年数学难题，获两位院士共同提名</title>
-            <link>https://www.qbitai.com/2026/11/513320.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/11/513320.html</guid>
-            <description>淡泊名利，实至名归🎉</description>
-            <category>技术前沿</category>
-            <pubDate>Fri, 27 Nov 2026 07:39:18 +0000</pubDate>
+            <title>刚刚，8192张昇腾训出285B大模型！权重开源，32页训练手册全公开</title>
+            <link>https://www.qbitai.com/2026/11/513535.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/513535.html</guid>
+            <description>国产芯片训千亿大模型，终于有人把施工图纸摊开了</description>
+            <category>开源动态</category>
+            <pubDate>Sat, 28 Nov 2026 14:12:50 +0000</pubDate>
         </item>
         <item>
-            <title>DeepSeek APP突然更新账单，网友：要收费了？</title>
-            <link>https://www.qbitai.com/2026/11/513305.html</link>
-            <guid isPermaLink="true">https://www.qbitai.com/2026/11/513305.html</guid>
-            <description>网页App双端亮出聊天账单</description>
-            <category>工具发现</category>
-            <pubDate>Fri, 27 Nov 2026 07:29:10 +0000</pubDate>
+            <title>Sakana AI’s CEO says its homegrown models are about more than Japan’s ...</title>
+            <link>https://techcrunch.com/2026/11/28/sakana-ais-ceo-says-its-homegrown-models-are-about-more-than-japans-national-security/</link>
+            <guid isPermaLink="true">https://techcrunch.com/2026/11/28/sakana-ais-ceo-says-its-homegrown-models-are-about-more-than-japans-national-security/</guid>
+            <description>Sakana AI aims to strengthen Japan’s industrial competitiveness with homegrown AI models.</description>
+            <category>全球动态</category>
+            <pubDate>Sat, 28 Nov 2026 14:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>xAI联创张国栋戴自航创业，90天搓出互联网时光机</title>
+            <link>https://www.qbitai.com/2026/11/513507.html</link>
+            <guid isPermaLink="true">https://www.qbitai.com/2026/11/513507.html</guid>
+            <description>这还只是热身</description>
+            <category>技术前沿</category>
+            <pubDate>Sat, 28 Nov 2026 12:53:02 +0000</pubDate>
         </item>
         <item>
             <title>Nvidia hits pause on chip shipments to Southeast Asia</title>
@@ -63,14 +71,6 @@
             <description>The credit rating agency may lower Nvidia's credit rating to AA-, the fourth-highest rating.</description>
             <category>全球动态</category>
             <pubDate>Wed, 25 Nov 2026 22:44:32 +0000</pubDate>
-        </item>
-        <item>
-            <title>OpenAI says heavy ChatGPT users may hit limits sooner as it merges Cha...</title>
-            <link>https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work/</link>
-            <guid isPermaLink="true">https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work/</guid>
-            <description>OpenAI will introduce a single usage meter across ChatGPT as it combines the Chat and Work experiences.</description>
-            <category>模型发布</category>
-            <pubDate>Wed, 25 Nov 2026 20:03:27 +0000</pubDate>
         </item>
     </channel>
 </rss>
